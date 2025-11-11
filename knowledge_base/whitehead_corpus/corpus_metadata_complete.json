@@ -1,0 +1,64 @@
+{
+  "description": "Complete DAE-GOV knowledge corpus",
+  "created": "2025-11-10",
+  "purpose": "Foundation for trauma-informed organizational intelligence",
+  "components": {
+    "i_ching": "BAGUA foundation for Vector35D dimensions 25-32",
+    "process_and_reality": "Whitehead's complete process philosophy",
+    "wordsworth_poetry": "Prehension, feeling, and poetic intelligence",
+    "whitehead_texts": "The Concept of Nature + process philosophy excerpts",
+    "synthetic_conversations": "30 trauma-informed organizational scenarios"
+  },
+  "statistics": {
+    "i_ching_downloaded": true,
+    "i_ching_excerpts": 4,
+    "process_and_reality": true,
+    "poetry": true,
+    "total_texts": 15,
+    "total_size": 1888405,
+    "process_and_reality_size": 1209102,
+    "poetry_size": 237024
+  },
+  "i_ching_sources": [
+    {
+      "title": "The I Ching or Book of Changes (Richard Wilhelm translation)",
+      "year": 1899,
+      "source": "Project Gutenberg (if available)",
+      "url": null,
+      "gutenberg_id": null,
+      "description": "Classic Wilhelm/Baynes translation of the I Ching",
+      "relevance": "BAGUA foundation, eight trigrams, creative/receptive forces"
+    },
+    {
+      "title": "The I Ching (James Legge translation)",
+      "year": 1882,
+      "source": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/cache/epub/9224/pg9224.txt",
+      "gutenberg_id": 9224,
+      "description": "James Legge's translation (public domain)",
+      "relevance": "BAGUA octagon, hexagram transformations, Heaven/Earth/Fire/Water/etc"
+    }
+  ],
+  "i_ching_excerpts": [
+    {
+      "title": "The Eight Trigrams - Philosophical Foundation",
+      "source": "I Ching - Educational Compilation",
+      "relevance": "Direct mapping to Vector35D dimensions 25-32, BAGUA modulation"
+    },
+    {
+      "title": "Dynamic Complementarity - Yin and Yang",
+      "source": "I Ching - Educational Compilation",
+      "relevance": "Organism navigation strategy, bifurcation point detection"
+    },
+    {
+      "title": "Hexagram Transformations - Lines of Change",
+      "source": "I Ching - Educational Compilation",
+      "relevance": "Kairos detection, phase transitions, convergence dynamics"
+    },
+    {
+      "title": "The Sequence of Hexagrams - Dialectical Unfolding",
+      "source": "I Ching - Educational Compilation",
+      "relevance": "Neo4j transformation paths, organic pattern emergence"
+    }
+  ]
+}

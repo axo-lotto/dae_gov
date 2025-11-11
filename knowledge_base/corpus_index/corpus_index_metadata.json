@@ -1,0 +1,31 @@
+{
+  "created": "2025-11-10",
+  "description": "Complete DAE-GOV knowledge corpus index",
+  "statistics": {
+    "sources_loaded": 45,
+    "total_chunks": 5048,
+    "chunks_by_category": {
+      "process_philosophy": 22,
+      "whitehead_general": 1083,
+      "i_ching_bagua": 116,
+      "whitehead_process": 3282,
+      "poetry": 515,
+      "burnout_spiral": 5,
+      "toxic_productivity": 5,
+      "psychological_safety": 5,
+      "witnessing_presence": 5,
+      "sustainable_rhythm": 5,
+      "scapegoat_dynamics": 5
+    },
+    "total_chars_indexed": 1890288,
+    "faiss_vectors": 4984
+  },
+  "chunk_size": 500,
+  "overlap": 100,
+  "sources": {
+    "i_ching_bagua": "I Ching + BAGUA excerpts (for Vector35D dims 25-32)",
+    "whitehead_process": "Process and Reality + The Concept of Nature",
+    "process_philosophy": "7 process philosophy excerpts (prehension, concrescence, etc.)",
+    "synthetic_conversations": "30 trauma-informed organizational scenarios"
+  }
+}

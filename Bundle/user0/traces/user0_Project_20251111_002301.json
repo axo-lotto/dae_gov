@@ -1,0 +1,15 @@
+{
+  "trace_id": "user0_Project_20251111_002301",
+  "user_id": "user0",
+  "trace_type": "Project",
+  "title": "Restore team autonomy initiative",
+  "content": "Multi-month project to redistribute decision-making power to team level.",
+  "created_at": "2025-11-11T00:23:01.208633",
+  "updated_at": "2025-11-11T00:23:01.208634",
+  "conversation_id": null,
+  "tags": [
+    "autonomy",
+    "initiative"
+  ],
+  "properties": {}
+}

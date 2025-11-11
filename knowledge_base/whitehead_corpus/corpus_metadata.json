@@ -1,0 +1,86 @@
+{
+  "description": "Alfred North Whitehead process philosophy corpus",
+  "created": "2025-11-10",
+  "purpose": "Foundation for trauma-informed organizational intelligence (DAE-GOV)",
+  "statistics": {
+    "texts_downloaded": 1,
+    "texts_failed": 2,
+    "excerpts_saved": 7,
+    "total_texts": 8,
+    "total_characters": 395054,
+    "sources": [
+      {
+        "title": "The Concept of Nature",
+        "year": 1920,
+        "source": "Project Gutenberg",
+        "relevance": "Foundation for understanding prehension and actual occasions"
+      }
+    ]
+  },
+  "texts": [
+    {
+      "title": "The Concept of Nature",
+      "year": 1920,
+      "source": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/cache/epub/18835/pg18835.txt",
+      "gutenberg_id": 18835,
+      "description": "Whitehead's Tarner Lectures on philosophy of natural science",
+      "relevance": "Foundation for understanding prehension and actual occasions"
+    },
+    {
+      "title": "Science and the Modern World",
+      "year": 1925,
+      "source": "Project Gutenberg (excerpts)",
+      "url": null,
+      "gutenberg_id": null,
+      "description": "Lowell Lectures on philosophy of science and organism",
+      "relevance": "Process philosophy foundations, organic mechanism"
+    },
+    {
+      "title": "An Enquiry Concerning the Principles of Natural Knowledge",
+      "year": 1919,
+      "source": "Internet Archive",
+      "url": null,
+      "gutenberg_id": null,
+      "description": "Early development of process philosophy concepts",
+      "relevance": "Event-based ontology, nature of experience"
+    }
+  ],
+  "excerpts": [
+    {
+      "title": "Actual Occasions - Key Concepts",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Core ontology for DAE organism architecture"
+    },
+    {
+      "title": "Feeling and Subjective Form",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Subjective aim, felt qualities, organism agency"
+    },
+    {
+      "title": "Societies and Structured Nexus",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Organizational structure, systemic resilience, emergence"
+    },
+    {
+      "title": "Negative Prehensions and Exclusion",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Defense mechanisms, parts work, integration"
+    },
+    {
+      "title": "Eternal Objects and Potentiality",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Possibility space, imagination, transformation paths"
+    },
+    {
+      "title": "God's Nature - Initial Aim and Novel Possibility",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "SELF-energy, healing possibility, compassionate witness"
+    },
+    {
+      "title": "Perishing and Objective Immortality",
+      "source": "Process and Reality (1929) - Educational Excerpts",
+      "relevance": "Trauma persistence, meaning-making, integration"
+    }
+  ]
+}

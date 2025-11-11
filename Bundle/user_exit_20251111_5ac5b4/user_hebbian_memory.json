@@ -1,0 +1,18 @@
+{
+  "r_matrix": {
+    "LISTENING_EMPATHY": 0.0,
+    "LISTENING_WISDOM": 0.0,
+    "LISTENING_AUTHENTICITY": 0.0,
+    "LISTENING_PRESENCE": 0.0,
+    "EMPATHY_WISDOM": 0.0,
+    "EMPATHY_AUTHENTICITY": 0.0,
+    "EMPATHY_PRESENCE": 0.0,
+    "WISDOM_AUTHENTICITY": 0.0,
+    "WISDOM_PRESENCE": 0.0,
+    "AUTHENTICITY_PRESENCE": 0.0
+  },
+  "value_mappings": {},
+  "update_count": 0,
+  "last_updated": "2025-11-11T06:34:38.563690",
+  "description": "User-specific Hebbian coupling patterns (which organs co-activate successfully)"
+}

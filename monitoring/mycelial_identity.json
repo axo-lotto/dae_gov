@@ -1,0 +1,27 @@
+{
+  "dominant_lure": "exploration",
+  "satisfaction_level": 0.5,
+  "aim_stability": 0.5,
+  "temporal_horizon": 1.0,
+  "active_projects": [],
+  "recent_insights": [],
+  "exploration_quality": "exploration",
+  "total_traces": 0,
+  "transformation_patterns_learned": 0,
+  "r_matrix_updates": 10,
+  "epoch_count": 0,
+  "archetypal_balance": {
+    "coherence": 0.7,
+    "connection": 0.6,
+    "creativity": 0.8,
+    "stability": 0.5,
+    "transcendence": 0.4,
+    "embodiment": 0.6,
+    "meaning": 0.7,
+    "beauty": 0.5,
+    "truth": 0.6,
+    "freedom": 0.7,
+    "ground_truth_alignment": 0.5
+  },
+  "last_updated": "2025-11-11T06:34:46.639427"
+}

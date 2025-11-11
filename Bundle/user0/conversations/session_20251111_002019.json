@@ -1,0 +1,71 @@
+{
+  "session_id": "session_20251111_002019",
+  "user_id": "user0",
+  "start_time": "2025-11-11T00:20:19.039183",
+  "end_time": "2025-11-11T00:20:19.039947",
+  "turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2025-11-11T00:20:19.039506",
+      "user_input": "Test input 0",
+      "response": "Test response 0",
+      "gate_decision": "GREETING",
+      "polyvagal_state": "ventral",
+      "self_energy": 0.8,
+      "knowledge_used": 0,
+      "conversational_organs": {
+        "curiosity_triggered": false,
+        "r_matrix_updates": 10
+      },
+      "avg_coherence": 0.75
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2025-11-11T00:20:19.039677",
+      "user_input": "Test input 1",
+      "response": "Test response 1",
+      "gate_decision": "RESPOND",
+      "polyvagal_state": "ventral",
+      "self_energy": 0.8,
+      "knowledge_used": 1,
+      "conversational_organs": {
+        "curiosity_triggered": false,
+        "r_matrix_updates": 11
+      },
+      "avg_coherence": 0.75
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2025-11-11T00:20:19.039822",
+      "user_input": "Test input 2",
+      "response": "Test response 2",
+      "gate_decision": "RESPOND",
+      "polyvagal_state": "ventral",
+      "self_energy": 0.8,
+      "knowledge_used": 1,
+      "conversational_organs": {
+        "curiosity_triggered": true,
+        "r_matrix_updates": 12
+      },
+      "avg_coherence": 0.75
+    }
+  ],
+  "metrics": {
+    "total_turns": 3,
+    "greetings": 1,
+    "curiosity_triggers": 0,
+    "knowledge_retrievals": 2,
+    "polyvagal_states": {
+      "ventral": 3,
+      "sympathetic": 0,
+      "dorsal": 0
+    },
+    "coherences": [
+      0.75,
+      0.75,
+      0.75
+    ]
+  },
+  "r_matrix_end": 13,
+  "r_matrix_delta": 0
+}

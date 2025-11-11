@@ -1,0 +1,16 @@
+{
+  "user_token": "test_user_20251111_055e2a",
+  "human_name": "Test User",
+  "created_at": "2025-11-11T01:46:25.839270",
+  "total_sessions": 1,
+  "total_traces": 0,
+  "dominant_lure_history": [],
+  "satisfaction_trajectory": [],
+  "user_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a",
+  "traces_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/traces",
+  "transformation_patterns_path": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/transformation_patterns.json",
+  "epoch_log_path": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/epoch_training_log.json",
+  "hebbian_memory_path": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/user_hebbian_memory.json",
+  "identity_trajectory_path": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/identity_trajectory.json",
+  "neo4j_subgraph_path": "/Users/daedalea/Desktop/DAE_HYPHAE_1/Bundle/user_test_user_20251111_055e2a/neo4j_subgraph_export.json"
+}

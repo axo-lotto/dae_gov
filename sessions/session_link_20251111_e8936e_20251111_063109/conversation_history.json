@@ -1,0 +1,29 @@
+[
+  {
+    "user": "Hello there",
+    "organism_analysis": {
+      "gate_decision": "GREETING",
+      "conversational_family": "greeting",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.95,
+      "self_energy": 0.8,
+      "dominant_c": "connectedness",
+      "ofel_energy": 0.1,
+      "aggregate_coherence": 0.95
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "Hello! I'm glad you're here. What brings you to this conversation today?",
+      "decision_path": [
+        [
+          "GATE_0",
+          "GREETING"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.95
+    },
+    "timestamp": "2025-11-11T06:31:23.447329"
+  }
+]

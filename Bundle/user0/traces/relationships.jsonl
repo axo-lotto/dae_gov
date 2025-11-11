@@ -1,0 +1,5 @@
+{"from_trace_id": "user0_Note_20251111_002301", "to_trace_id": "user0_Insight_20251111_002301", "rel_type": "DERIVES_FROM", "strength": 1.0, "created_at": "2025-11-11T00:23:01.208757", "properties": {}}
+{"from_trace_id": "user0_Insight_20251111_002301", "to_trace_id": "user0_Project_20251111_002301", "rel_type": "CONTRIBUTES_TO", "strength": 1.0, "created_at": "2025-11-11T00:23:01.208867", "properties": {}}
+{"from_trace_id": "user0_Note_20251111_004019", "to_trace_id": "user0_Insight_20251111_004019", "rel_type": "DERIVES_FROM", "strength": 0.9, "created_at": "2025-11-11T00:40:19.293276", "properties": {}}
+{"from_trace_id": "user0_Note_20251111_004048", "to_trace_id": "user0_Insight_20251111_004048", "rel_type": "DERIVES_FROM", "strength": 0.9, "created_at": "2025-11-11T00:40:48.235896", "properties": {}}
+{"from_trace_id": "user0_Note_20251111_004332", "to_trace_id": "user0_Insight_20251111_004332", "rel_type": "DERIVES_FROM", "strength": 0.9, "created_at": "2025-11-11T00:43:32.594256", "properties": {}}

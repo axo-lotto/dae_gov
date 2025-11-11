@@ -1,0 +1,171 @@
+[
+  {
+    "user": "Hello there, i am feeling sad because my name is exit",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.228358674372686,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.5750760231180579,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.5835867437268597
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "wordsworth_selected_poems",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "response_text": "Can we pause and feel into this together?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.5835867437268597
+    },
+    "timestamp": "2025-11-11T06:35:02.779179"
+  },
+  {
+    "user": "i feel bad",
+    "organism_analysis": {
+      "polyvagal_state": "sympathetic",
+      "polyvagal_confidence": 0.34874617005998654,
+      "self_energy": 0.5,
+      "dominant_c": "unknown",
+      "gate_decision": "CLARIFY",
+      "ofel_energy": 0.32999999999999996,
+      "conversational_family": "grounding",
+      "aggregate_coherence": 0.0
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "polyvagal": {
+        "dominant_state": "sympathetic",
+        "confidence": 0.34874617005998654
+      },
+      "self_energy": {
+        "self_energy_level": 0.5,
+        "confidence": 0.0,
+        "dominant_c": "unknown",
+        "cs_activation": {}
+      },
+      "ofel": {
+        "ofel_energy": 0.32999999999999996
+      },
+      "decision": "CLARIFY",
+      "conversational_family": "grounding",
+      "aggregate_coherence": 0.0,
+      "satisfaction": 0.7,
+      "card_scale": "moderate",
+      "response_text": "I'm not quite following. Can you say more about what's happening?"
+    },
+    "timestamp": "2025-11-11T06:35:10.910365"
+  },
+  {
+    "user": "how are you?",
+    "organism_analysis": {
+      "gate_decision": "GREETING",
+      "conversational_family": "greeting",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.95,
+      "self_energy": 0.8,
+      "dominant_c": "connectedness",
+      "ofel_energy": 0.1,
+      "aggregate_coherence": 0.95
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "I appreciate you asking. I'm here and present with you. More importantly - how are YOU doing?",
+      "decision_path": [
+        [
+          "GATE_0",
+          "GREETING"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.95
+    },
+    "timestamp": "2025-11-11T06:35:54.600324"
+  },
+  {
+    "user": "well i was feeling a little down today",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.228358674372686,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.5750760231180579,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.5835867437268597
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "wordsworth_selected_poems",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "response_text": "What do you sense when you bring your awareness to this?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.5835867437268597
+    },
+    "timestamp": "2025-11-11T06:36:13.612850"
+  },
+  {
+    "user": "y",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.1,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "feeling_and_subjective_form",
+      "feeling_and_subjective_form",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation"
+    ],
+    "cascade_state": {
+      "response_text": "Can you say more about that?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T06:36:28.965546"
+  }
+]

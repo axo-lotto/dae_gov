@@ -1,0 +1,12 @@
+{
+  "trajectory": [
+    {
+      "timestamp": "2025-11-11T01:46:25.840637",
+      "session_id": "session_test_user_20251111_055e2a_20251111_014625",
+      "satisfaction": 0.8,
+      "energy": 0.6,
+      "dominant_lure": "connection",
+      "kairos_count": 0
+    }
+  ]
+}

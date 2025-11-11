@@ -1,0 +1,110 @@
+[
+  {
+    "user": "hello there! my name is link",
+    "organism_analysis": {
+      "gate_decision": "GREETING",
+      "conversational_family": "greeting",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.75,
+      "self_energy": 0.8,
+      "dominant_c": "connectedness",
+      "ofel_energy": 0.1,
+      "aggregate_coherence": 0.75
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "Good to see you! I'm here and present. What's on your mind?",
+      "decision_path": [
+        [
+          "GATE_0",
+          "GREETING"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.75
+    },
+    "timestamp": "2025-11-11T02:06:21.967359"
+  },
+  {
+    "user": "y",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "What's important about that for you?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T02:06:34.910219"
+  },
+  {
+    "user": "I was feeling overwhelmed at work",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.5750760231180579,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.5835867437268597
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "Let's stay with this - what's present right here?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.5835867437268597
+    },
+    "timestamp": "2025-11-11T02:07:12.906882"
+  },
+  {
+    "user": "do you know what a superject is?",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.61,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.7
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "Can you say more about that?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.7
+    },
+    "timestamp": "2025-11-11T02:08:30.323222"
+  }
+]

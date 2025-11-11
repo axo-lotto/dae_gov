@@ -1,0 +1,36 @@
+{
+  "Note\u2192Insight": {
+    "from_type": "Note",
+    "to_type": "Insight",
+    "satisfaction_delta": 0.22075,
+    "energy_delta": 0.5,
+    "organ_deltas": {
+      "LISTENING": -0.30000000000000004,
+      "EMPATHY": 0.09999999999999998,
+      "WISDOM": 0.25,
+      "AUTHENTICITY": 0.0,
+      "PRESENCE": -0.050000000000000044
+    },
+    "sample_count": 6,
+    "confidence": 0.6,
+    "vector_similarity": 0.9623054858680032,
+    "last_updated": 1762818930.382967
+  },
+  "Insight\u2192Note": {
+    "from_type": "Insight",
+    "to_type": "Note",
+    "satisfaction_delta": -0.22075,
+    "energy_delta": -0.5,
+    "organ_deltas": {
+      "LISTENING": 0.30000000000000004,
+      "EMPATHY": -0.09999999999999998,
+      "WISDOM": -0.25,
+      "AUTHENTICITY": 0.0,
+      "PRESENCE": 0.050000000000000044
+    },
+    "sample_count": 3,
+    "confidence": 0.3,
+    "vector_similarity": 0.962305485868003,
+    "last_updated": 1762818930.383042
+  }
+}

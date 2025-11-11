@@ -1,0 +1,228 @@
+{
+  "tasks": {},
+  "global_stats": {
+    "total_tasks": 0,
+    "total_clusters": 0
+  },
+  "0d3d703e": {
+    "NDAM": 1.0,
+    "SANS": 1.0,
+    "BOND": 1.0,
+    "RNX": 1.0,
+    "EO": 1.0,
+    "CARD": 1.0,
+    "sample_count": 0,
+    "mean_accuracy": 0.0,
+    "grid_transformations": [
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "0d3d703e"
+      },
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "0d3d703e"
+      },
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "0d3d703e"
+      },
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "0d3d703e"
+      }
+    ],
+    "consensus_grid_transformation": {
+      "source_shape": [
+        3,
+        3
+      ],
+      "target_shape": [
+        3,
+        3
+      ],
+      "scale_h": 1.0,
+      "scale_w": 1.0,
+      "transformation_type": "identity",
+      "sample_count": 4,
+      "total_samples": 4
+    }
+  },
+  "a79310a0": {
+    "NDAM": 1.0,
+    "SANS": 1.0,
+    "BOND": 1.0,
+    "RNX": 1.0,
+    "EO": 1.0,
+    "CARD": 1.0,
+    "sample_count": 0,
+    "mean_accuracy": 0.0,
+    "grid_transformations": [
+      {
+        "source_shape": [
+          5,
+          5
+        ],
+        "target_shape": [
+          5,
+          5
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "a79310a0"
+      },
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "a79310a0"
+      },
+      {
+        "source_shape": [
+          5,
+          5
+        ],
+        "target_shape": [
+          5,
+          5
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "a79310a0"
+      }
+    ],
+    "consensus_grid_transformation": {
+      "source_shape": [
+        4,
+        4
+      ],
+      "target_shape": [
+        4,
+        4
+      ],
+      "scale_h": 1.0,
+      "scale_w": 1.0,
+      "transformation_type": "identity",
+      "sample_count": 3,
+      "total_samples": 3
+    }
+  },
+  "9dfd6313": {
+    "NDAM": 1.0,
+    "SANS": 1.0,
+    "BOND": 1.0,
+    "RNX": 1.0,
+    "EO": 1.0,
+    "CARD": 1.0,
+    "sample_count": 0,
+    "mean_accuracy": 0.0,
+    "grid_transformations": [
+      {
+        "source_shape": [
+          3,
+          3
+        ],
+        "target_shape": [
+          3,
+          3
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "9dfd6313"
+      },
+      {
+        "source_shape": [
+          4,
+          4
+        ],
+        "target_shape": [
+          4,
+          4
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "9dfd6313"
+      },
+      {
+        "source_shape": [
+          5,
+          5
+        ],
+        "target_shape": [
+          5,
+          5
+        ],
+        "scale_h": 1.0,
+        "scale_w": 1.0,
+        "transformation_type": "identity",
+        "task_id": "9dfd6313"
+      }
+    ],
+    "consensus_grid_transformation": {
+      "source_shape": [
+        4,
+        4
+      ],
+      "target_shape": [
+        4,
+        4
+      ],
+      "scale_h": 1.0,
+      "scale_w": 1.0,
+      "transformation_type": "identity",
+      "sample_count": 3,
+      "total_samples": 3
+    }
+  }
+}

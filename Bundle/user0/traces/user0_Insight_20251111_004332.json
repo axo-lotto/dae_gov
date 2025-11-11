@@ -1,0 +1,87 @@
+{
+  "trace_id": "user0_Insight_20251111_004332",
+  "user_id": "user0",
+  "trace_type": "Insight",
+  "title": "Interruptions signal lack of psychological safety",
+  "content": "The frequent interruptions may indicate low psychological safety - people don't feel secure enough to speak without being challenged.",
+  "created_at": "2025-11-11T00:43:32.596565",
+  "updated_at": "2025-11-11T00:43:32.596566",
+  "conversation_id": null,
+  "tags": [
+    "meetings",
+    "psychological_safety",
+    "insight"
+  ],
+  "properties": {},
+  "vector_signature": {
+    "dimensions": [
+      0.5,
+      0.6,
+      0.75,
+      0.5,
+      0.7,
+      0.7505499999999999,
+      0.8,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "felt_properties": {
+      "prehension_intensity": 0.8,
+      "satisfaction_level": 0.7505499999999999,
+      "concrescence_phase": 0.0,
+      "subjective_aim": 0.0,
+      "archetypal_lure": 0.0,
+      "lake_joy": 0.0,
+      "confidence_score": 0.5,
+      "learning_gradient": 0.0
+    }
+  },
+  "felt_state": null,
+  "epoch_metadata": {
+    "felt_state_7d": [
+      0.5,
+      0.6,
+      0.75,
+      0.5,
+      0.7,
+      0.7505499999999999,
+      0.8
+    ],
+    "organ_coherences": {
+      "LISTENING": 0.5,
+      "EMPATHY": 0.6,
+      "WISDOM": 0.75,
+      "AUTHENTICITY": 0.5,
+      "PRESENCE": 0.7
+    },
+    "satisfaction": 0.7505499999999999,
+    "energy": 0.8
+  },
+  "transformation_learned_from": null
+}

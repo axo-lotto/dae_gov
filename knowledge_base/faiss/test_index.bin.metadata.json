@@ -1,0 +1,54 @@
+{
+  "total_vectors": 5,
+  "conversations_indexed": [
+    "test_conv_001"
+  ],
+  "dimension": 384,
+  "vectors": [
+    {
+      "vector_id": "test_conv_001_0",
+      "text": "Test sentence 0: This is a governance conversation about strategy.",
+      "source": "test",
+      "conversation_id": "test_conv_001",
+      "timestamp": "2025-11-10T16:27:07.171549",
+      "chunk_id": "test_0_0_0_0",
+      "position": 0
+    },
+    {
+      "vector_id": "test_conv_001_1",
+      "text": "Test sentence 1: This is a governance conversation about leadership.",
+      "source": "test",
+      "conversation_id": "test_conv_001",
+      "timestamp": "2025-11-10T16:27:07.171549",
+      "chunk_id": "test_0_0_1_0",
+      "position": 1
+    },
+    {
+      "vector_id": "test_conv_001_2",
+      "text": "Test sentence 2: This is a governance conversation about trauma.",
+      "source": "test",
+      "conversation_id": "test_conv_001",
+      "timestamp": "2025-11-10T16:27:07.171549",
+      "chunk_id": "test_0_0_2_0",
+      "position": 2
+    },
+    {
+      "vector_id": "test_conv_001_3",
+      "text": "Test sentence 3: This is a governance conversation about culture.",
+      "source": "test",
+      "conversation_id": "test_conv_001",
+      "timestamp": "2025-11-10T16:27:07.171549",
+      "chunk_id": "test_0_0_3_0",
+      "position": 3
+    },
+    {
+      "vector_id": "test_conv_001_4",
+      "text": "Test sentence 4: This is a governance conversation about burnout.",
+      "source": "test",
+      "conversation_id": "test_conv_001",
+      "timestamp": "2025-11-10T16:27:07.171549",
+      "chunk_id": "test_0_0_4_0",
+      "position": 4
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "trace_id": "user0_Insight_20251111_002301",
+  "user_id": "user0",
+  "trace_type": "Insight",
+  "title": "Burnout correlates with lack of agency",
+  "content": "Pattern: teams with highest burnout also have least decision-making autonomy.",
+  "created_at": "2025-11-11T00:23:01.208481",
+  "updated_at": "2025-11-11T00:23:01.208482",
+  "conversation_id": null,
+  "tags": [
+    "burnout",
+    "agency",
+    "pattern"
+  ],
+  "properties": {}
+}

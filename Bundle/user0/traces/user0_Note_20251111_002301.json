@@ -1,0 +1,15 @@
+{
+  "trace_id": "user0_Note_20251111_002301",
+  "user_id": "user0",
+  "trace_type": "Note",
+  "title": "Team burnout observation",
+  "content": "Noticed increasing burnout signals in team standup. Members reporting exhaustion.",
+  "created_at": "2025-11-11T00:23:01.208252",
+  "updated_at": "2025-11-11T00:23:01.208254",
+  "conversation_id": null,
+  "tags": [
+    "burnout",
+    "team_health"
+  ],
+  "properties": {}
+}
