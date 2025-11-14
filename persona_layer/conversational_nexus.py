@@ -102,43 +102,200 @@ class ConversationalNexus:
         # Curiosity question templates
         self._init_question_templates()
 
+        # Template effectiveness tracking (Week 2 - Hebbian Phrase Learning)
+        self._init_template_effectiveness()
+
     def _init_question_templates(self):
-        """Initialize curiosity question templates for each organ."""
+        """
+        Initialize curiosity question templates for each organ (Week 2 - Template Expansion).
+
+        Expanded from 5 → 30 per organ for richer self-feeding loop variation.
+        Templates grouped by therapeutic function within each organ.
+        """
         self.question_templates = {
             'LISTENING': [
+                # Core exploration (original 5)
                 "Can you say more about that?",
                 "What else comes up when you think about this?",
                 "I'm curious - what's that like for you?",
                 "Help me understand what you mean by that.",
-                "What's important about that for you?"
+                "What's important about that for you?",
+
+                # Ground truth hunger (specificity seeking)
+                "What exactly do you mean when you say that?",
+                "Can you give me a specific example?",
+                "Tell me about a time when this happened.",
+                "What are the concrete details you're noticing?",
+                "Walk me through what that looks like in practice.",
+
+                # Deepening inquiry
+                "What draws your attention most strongly here?",
+                "If I were experiencing this, what would I notice first?",
+                "What's the story behind that?",
+                "How long has this been present for you?",
+                "What makes this worth talking about right now?",
+
+                # Relational inquiry
+                "Who else is part of this picture?",
+                "What would someone close to you say about this?",
+                "How does this show up in your relationships?",
+                "What do others notice when this is happening?",
+                "Who understands this part of your experience?",
+
+                # Temporal inquiry
+                "When did you first become aware of this?",
+                "How has this changed over time?",
+                "What was different before this started?",
+                "Where do you imagine this leading?",
+                "What comes next in this story?"
             ],
+
             'EMPATHY': [
+                # Core feeling (original 5)
                 "How does that feel for you?",
                 "What emotions are present as you share this?",
                 "What's the felt sense of that?",
                 "I'm sensing something here - what's alive for you right now?",
-                "What does your heart say about this?"
+                "What does your heart say about this?",
+
+                # Somatic tracking
+                "Where do you feel that in your body?",
+                "What physical sensations come with this?",
+                "If this feeling had a shape or texture, what would it be?",
+                "What temperature is this emotion - warm, cool, hot?",
+                "How heavy or light does this feel?",
+
+                # Emotional depth
+                "What's beneath that first emotion?",
+                "Are there other feelings layered underneath?",
+                "What emotion would surprise you to find here?",
+                "If this feeling could speak, what would it say?",
+                "What does this feeling need from you?",
+
+                # Compassionate presence
+                "What would it be like to be gentle with yourself about this?",
+                "Can we make room for all of what you're feeling?",
+                "What kindness wants to meet this part of you?",
+                "How are you taking care of yourself while holding this?",
+                "What would compassion say to you right now?",
+
+                # Relational attunement
+                "What do you imagine I'm feeling as I hear this?",
+                "How does it feel to share this with me?",
+                "What do you need from me as we talk about this?",
+                "Is there something you're hesitant to let me see?",
+                "What would feel most supportive right now?"
             ],
+
             'WISDOM': [
+                # Core pattern recognition (original 5)
                 "What sense are you making of this?",
                 "What patterns do you notice here?",
                 "How does this fit with your larger understanding?",
                 "What's the bigger picture you're seeing?",
-                "What does this tell you about yourself/the situation?"
+                "What does this tell you about yourself/the situation?",
+
+                # Systems thinking
+                "What are the invisible forces at play here?",
+                "How do the parts of this system interact?",
+                "What would shift if one element changed?",
+                "What's the ecology of this situation?",
+                "Where are the feedback loops?",
+
+                # Developmental perspective
+                "How has your understanding of this evolved?",
+                "What did you believe about this before?",
+                "What are you learning as you sit with this?",
+                "How is this growing you?",
+                "What wisdom is emerging through this experience?",
+
+                # Archetypal inquiry
+                "What ancient story does this remind you of?",
+                "What metaphor captures this?",
+                "If this were a season, which would it be?",
+                "What natural process mirrors what you're experiencing?",
+                "What does the I Ching or Tarot suggest about this?",
+
+                # Integration
+                "How does this connect to your purpose?",
+                "What does your wisest self know about this?",
+                "What truth is trying to emerge?",
+                "How might this serve your becoming?",
+                "What does this situation want to teach you?"
             ],
+
             'AUTHENTICITY': [
+                # Core truth-seeking (original 5)
                 "What's really true for you here?",
                 "What are you not saying that wants to be said?",
                 "What would it be like to be completely honest about this?",
                 "What's underneath that?",
-                "If you could speak from your deepest truth, what would you say?"
+                "If you could speak from your deepest truth, what would you say?",
+
+                # Edge exploration
+                "What's the scary part of being fully honest about this?",
+                "What truth are you protecting me from?",
+                "What would you say if there were no consequences?",
+                "What part of this feels forbidden to acknowledge?",
+                "What are you afraid I'll think if you tell the whole truth?",
+
+                # Voice reclamation
+                "Whose voice am I hearing when you say that?",
+                "What would YOUR voice say, not the voice you learned?",
+                "If you spoke as your truest self, what tone would you use?",
+                "What words have you been silencing?",
+                "What wants to be shouted that you've been whispering?",
+
+                # Integrity alignment
+                "How does this sit with your values?",
+                "Where are you betraying yourself in this?",
+                "What boundary wants to be set?",
+                "What 'no' needs to be spoken?",
+                "What 'yes' have you been afraid to claim?",
+
+                # Shadow integration
+                "What part of this are you ashamed to admit?",
+                "What do you judge in yourself here?",
+                "What would it be like to own the disowned part?",
+                "What truth lives in the shadow of this story?",
+                "What are you refusing to see about yourself?"
             ],
+
             'PRESENCE': [
+                # Core somatic awareness (original 5)
                 "What are you noticing right now, in this moment?",
                 "Can we pause and feel into this together?",
                 "What's happening in your body as we talk about this?",
                 "Let's stay with this - what's present right here?",
-                "What do you sense when you bring your awareness to this?"
+                "What do you sense when you bring your awareness to this?",
+
+                # Breath and grounding
+                "What's your breath doing right now?",
+                "Can you feel your feet on the ground?",
+                "What happens when you exhale fully?",
+                "Where do you feel most settled in your body?",
+                "What anchors you to this present moment?",
+
+                # Sensory awareness
+                "What do you see when you look around right now?",
+                "What sounds are in the background of this conversation?",
+                "What's the quality of light in your space?",
+                "What textures are touching your skin?",
+                "What do you smell in this moment?",
+
+                # Spaciousness
+                "What happens if we slow down for a moment?",
+                "Can we make room for silence here?",
+                "What emerges in the pause?",
+                "What's between the words we're speaking?",
+                "What does the stillness hold?",
+
+                # Kairos awareness
+                "What makes this the right time to be speaking about this?",
+                "What's ripe right now?",
+                "What's this moment asking of you?",
+                "What's trying to happen here and now?",
+                "How is now different from five minutes ago?"
             ]
         }
 

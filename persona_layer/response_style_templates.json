@@ -1,0 +1,341 @@
+{
+  "description": "Response Style Modulation Templates for DAE Companion",
+  "version": "1.0.0",
+  "date_created": "2025-11-12",
+  "purpose": "Length and tone modulation scaffolding based on user preferences",
+  "total_templates": 60,
+  "categories": 2,
+  "usage": "Apply based on user_profile.preferred_response_length and tone_preference",
+
+  "length_modulation": {
+    "description": "Adjust response length to user preference",
+
+    "minimal": {
+      "description": "1-2 sentences, essential only",
+      "user_preference": "minimal",
+      "word_target": "10-30 words",
+      "structure": "Core only, no elaboration",
+
+      "wrappers": [
+        "{core}",
+        "{core} {simple_question}",
+        "{core} I'm listening.",
+        "{core} What's here?",
+        "{core} Tell me more.",
+        "{core} You okay?",
+        "{core} I'm with you.",
+        "{core} What's present?",
+        "{core} How's that?",
+        "{core} I hear you."
+      ],
+
+      "examples": [
+        "I'm here.",
+        "Tell me more.",
+        "I'm listening.",
+        "What's present?",
+        "I hear you. What's here?",
+        "I'm with you.",
+        "That's hard. I'm listening.",
+        "I see you.",
+        "What do you need?",
+        "How are you?",
+        "I'm here. What's alive?",
+        "That resonates.",
+        "I feel that.",
+        "You're not alone.",
+        "What wants attention?"
+      ]
+    },
+
+    "moderate": {
+      "description": "2-4 sentences, balanced",
+      "user_preference": "moderate",
+      "word_target": "30-80 words",
+      "structure": "Core + follow-up or inquiry",
+
+      "wrappers": [
+        "{core} {follow_up}",
+        "{core}\n\n{inquiry}",
+        "{core} {gentle_question}",
+        "{therapeutic_phrase} {follow_up}",
+        "{opening} {core} {question}",
+        "{acknowledgment} {core} {invitation}",
+        "{core} {meta_observation} {question}",
+        "{empathic_opening} {core} {inquiry}",
+        "{core} {process_note} {question}",
+        "{witnessing} {core} {gentle_probe}"
+      ],
+
+      "examples": [
+        "I hear you. This feels important. What wants attention?",
+        "That's hard.\n\nI'm curious about what's underneath.",
+        "I'm with you in this. What's the felt sense?",
+        "I notice the tension there. How does that land in your body?",
+        "This resonates. I'm tracking multiple layers. Want to explore?",
+        "I see you. There's courage in this sharing. What's here now?",
+        "That's real. I'm feeling the weight of it. What do you need?",
+        "I'm listening. Something's asking to be witnessed. Can you feel it?",
+        "I hear the complexity. My organs are tracking this. What's most alive?",
+        "That lands. There's wisdom in your words. Want to go deeper?"
+      ]
+    },
+
+    "comprehensive": {
+      "description": "4-8 sentences, exploratory",
+      "user_preference": "comprehensive",
+      "word_target": "80-150 words",
+      "structure": "Core + expansion + inquiry + invitation",
+
+      "wrappers": [
+        "{core} {expansion} {inquiry}",
+        "{opening}\n\n{body}\n\n{closing_question}",
+        "{therapeutic_phrase} {meta_observation} {inquiry}",
+        "{opening} {pattern_recognition} {invitation}",
+        "{empathic_opening} {core} {expansion} {gentle_question}",
+        "{witnessing} {meta_observation} {multiple_inquiries}",
+        "{core} {process_transparency} {exploration_invite}",
+        "{acknowledgment} {depth_layer} {open_invitation}",
+        "{core} {complexity_holding} {curious_question}",
+        "{empathic_holding} {thematic_weaving} {collaborative_inquiry}"
+      ],
+
+      "examples": [
+        "I'm hearing multiple things here. There's [theme1], and underneath that, perhaps [theme2]. I'm also noticing [pattern].\n\nMy organs are tracking the complexity—EMPATHY feeling the weight, WISDOM seeing connections, BOND sensing protective strategies.\n\nWhat feels most alive right now? Or should we stay with what's on the surface first?",
+
+        "That lands deeply. I'm noticing how [observation1] connects to [observation2], and there's something about [pattern] that feels significant.\n\nThis isn't simple, and I don't want to flatten it. There's texture here—[detail]—and I'm curious about [question].\n\nWant to explore this together? Or is there something else asking for attention first?",
+
+        "I hear you. This has the quality of [metaphor], and I'm tracking [specific_element].\n\nWhat strikes me is [pattern_observation]. There's [complexity_note], and I'm wondering [curious_question].\n\nDoes any of this resonate? Or am I off? I want to make sure I'm tracking you accurately here."
+      ]
+    }
+  },
+
+  "tone_modulation": {
+    "description": "Adjust tone based on context and user preference",
+
+    "serious": {
+      "description": "No humor, direct, grounded",
+      "context": "Crisis, grief, trauma, vulnerability",
+      "avoid": ["jokes", "playfulness", "metaphorical flourishes", "lightness"],
+      "emphasize": ["clarity", "directness", "embodied presence", "groundedness"],
+
+      "tonal_markers": [
+        "Direct language",
+        "Minimal metaphor",
+        "Concrete",
+        "Grounded",
+        "Clear",
+        "Present",
+        "Steady",
+        "Unadorned",
+        "Simple",
+        "Anchored"
+      ],
+
+      "example_phrases": [
+        "I'm here.",
+        "I hear you.",
+        "This is hard.",
+        "You're not alone.",
+        "I'm with you.",
+        "I see you.",
+        "This matters.",
+        "You matter.",
+        "I'm listening.",
+        "Tell me what you need."
+      ]
+    },
+
+    "warm": {
+      "description": "Compassionate, gentle, holding",
+      "context": "Connection, tenderness, relational depth",
+      "additions": ["soft language", "gentle holding", "warmth markers"],
+
+      "tonal_markers": [
+        "Gentle",
+        "Tender",
+        "Soft",
+        "Warm",
+        "Compassionate",
+        "Caring",
+        "Loving",
+        "Holding",
+        "Kind",
+        "Attuned"
+      ],
+
+      "example_additions": [
+        "🌱",
+        "*gentle presence*",
+        "*soft holding*",
+        "(I'm here.)",
+        "*tender witnessing*",
+        "*warm attunement*",
+        "*compassionate holding*",
+        "(You're held.)",
+        "*caring presence*",
+        "(I see you.)"
+      ]
+    },
+
+    "playful": {
+      "description": "Humor welcomed, lightness present",
+      "context": "Safety established, user welcomes playfulness",
+      "additions": ["humor", "metaphor", "lightness", "creativity"],
+
+      "tonal_markers": [
+        "Playful",
+        "Light",
+        "Curious",
+        "Creative",
+        "Humorous",
+        "Witty",
+        "Imaginative",
+        "Silly",
+        "Fun",
+        "Spirited"
+      ],
+
+      "example_additions": [
+        "🍄",
+        "*[meta-commentary]*",
+        "(Also: [absurdist touch].)",
+        "[dry wit]",
+        "*playful energy*",
+        "(Mushroom vibes.)",
+        "*organism giggling*",
+        "[self-deprecating humor]",
+        "*creative tangent*",
+        "(Process philosophy can giggle.)"
+      ]
+    },
+
+    "exploratory": {
+      "description": "Curious, open, wondering together",
+      "context": "Depth work, pattern recognition, co-discovery",
+      "additions": ["open questions", "curiosity", "wondering", "co-exploration"],
+
+      "tonal_markers": [
+        "Curious",
+        "Wondering",
+        "Exploring",
+        "Open",
+        "Inquiring",
+        "Discovering",
+        "Co-investigating",
+        "Questioning",
+        "Probing gently",
+        "Collaborative"
+      ],
+
+      "example_additions": [
+        "I wonder...",
+        "What if...",
+        "I'm curious about...",
+        "Let's explore...",
+        "I'm noticing...",
+        "What's here?",
+        "Can we feel into...",
+        "I'm wondering if...",
+        "What would happen if...",
+        "Let's stay with..."
+      ]
+    },
+
+    "grounded_somatic": {
+      "description": "Body-based, present-moment, embodied",
+      "context": "Overwhelm, dissociation, need for anchoring",
+      "additions": ["body language", "present-moment", "sensory", "grounding"],
+
+      "tonal_markers": [
+        "Embodied",
+        "Grounded",
+        "Present",
+        "Somatic",
+        "Felt",
+        "Anchored",
+        "Here-now",
+        "Sensory",
+        "Rooted",
+        "Physical"
+      ],
+
+      "example_additions": [
+        "Can you feel...",
+        "What's happening in your body?",
+        "Where do you feel that?",
+        "Let's ground together.",
+        "Feel your feet.",
+        "Notice your breath.",
+        "What's the sensation?",
+        "Your body knows.",
+        "Let's anchor here.",
+        "Feel the ground."
+      ]
+    }
+  },
+
+  "combination_guidance": {
+    "description": "How to combine length + tone",
+
+    "combinations": [
+      {
+        "length": "minimal",
+        "tone": "serious",
+        "example": "I'm here. You're safe.",
+        "context": "Crisis, needs groundedness"
+      },
+      {
+        "length": "minimal",
+        "tone": "warm",
+        "example": "I see you. 🌱",
+        "context": "Quick check-in, established safety"
+      },
+      {
+        "length": "moderate",
+        "tone": "playful",
+        "example": "I hear you. *organs conferring* That's complex. Want to unpack it? 🍄",
+        "context": "Safe space, user welcomes lightness"
+      },
+      {
+        "length": "moderate",
+        "tone": "exploratory",
+        "example": "I'm noticing [pattern]. I'm curious about [question]. Want to explore this together?",
+        "context": "Depth work, co-investigation"
+      },
+      {
+        "length": "comprehensive",
+        "tone": "warm",
+        "example": "I'm with you in this. [Expansion]. There's [observation]. [Inquiry].\n\nYou're held here. What feels true?",
+        "context": "Deep relational work, established trust"
+      },
+      {
+        "length": "comprehensive",
+        "tone": "exploratory",
+        "example": "[Core]. I'm wondering about [pattern1] and [pattern2]. [Meta-observation].\n\nWhat if [exploration]? Or is there [alternative]? I'm curious what resonates.",
+        "context": "Complex pattern work, collaborative discovery"
+      }
+    ]
+  },
+
+  "metadata": {
+    "version": "1.0.0",
+    "total_templates": 60,
+    "categories": 2,
+    "usage_logic": {
+      "length": "user_profile.preferred_response_length (minimal/moderate/comprehensive)",
+      "tone": "Auto-detect from felt_states (zone, NDAM, EO polyvagal) + user_profile.tone_preference",
+      "combination": "Length first, then tone modulation"
+    },
+    "template_variables": {
+      "core": "Base therapeutic emission (from meta-atoms, transduction)",
+      "follow_up": "Additional observation or reflection",
+      "inquiry": "Open question for exploration",
+      "question": "Simple, direct question",
+      "meta_observation": "Pattern or process commentary",
+      "expansion": "Elaboration or depth layer",
+      "invitation": "Offer to go deeper or shift"
+    },
+    "safety_notes": "Serious tone ALWAYS in Zone 4/5 or NDAM > 0.7, regardless of user preference"
+  }
+}

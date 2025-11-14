@@ -1,0 +1,414 @@
+{
+  "meta_atoms": [
+    {
+      "atom": "trauma_aware",
+      "category": "trauma_aware",
+      "description": "Parts activation + polyvagal threat + crisis markers",
+      "contributing_organs": [
+        "BOND",
+        "EO",
+        "NDAM"
+      ],
+      "activation_rule": "any_organ",
+      "patterns": {
+        "BOND": [
+          "firefighter",
+          "manager",
+          "exile",
+          "protector",
+          "parts"
+        ],
+        "EO": [
+          "dorsal",
+          "sympathetic",
+          "threat",
+          "immobilization"
+        ],
+        "NDAM": [
+          "crisis",
+          "escalation",
+          "harm",
+          "urgency"
+        ]
+      }
+    },
+    {
+      "atom": "safety_restoration",
+      "category": "trauma_aware",
+      "description": "Coherence repair + ventral vagal + safety language",
+      "contributing_organs": [
+        "SANS",
+        "EO",
+        "NDAM"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "SANS": [
+          "coherence",
+          "repair",
+          "alignment",
+          "precision"
+        ],
+        "EO": [
+          "ventral",
+          "safety",
+          "co_regulation",
+          "social_engagement"
+        ],
+        "NDAM": [
+          "safety",
+          "stabilization",
+          "de_escalation"
+        ]
+      }
+    },
+    {
+      "atom": "window_of_tolerance",
+      "category": "trauma_aware",
+      "description": "Polyvagal state + scaling awareness + temporal rhythm",
+      "contributing_organs": [
+        "EO",
+        "CARD",
+        "RNX"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "EO": [
+          "window",
+          "tolerance",
+          "regulation",
+          "ventral"
+        ],
+        "CARD": [
+          "scaling",
+          "capacity",
+          "intensity",
+          "modulation"
+        ],
+        "RNX": [
+          "rhythm",
+          "temporal",
+          "pacing",
+          "regulation"
+        ]
+      }
+    },
+    {
+      "atom": "compassion_safety",
+      "category": "compassion",
+      "description": "Compassionate holding + safety cues + coherence",
+      "contributing_organs": [
+        "EMPATHY",
+        "EO",
+        "SANS"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "EMPATHY": [
+          "compassion",
+          "holding",
+          "resonance",
+          "attunement",
+          "warmth"
+        ],
+        "EO": [
+          "ventral",
+          "safety",
+          "co_regulation",
+          "social"
+        ],
+        "SANS": [
+          "coherence",
+          "alignment",
+          "precision",
+          "clarity"
+        ]
+      }
+    },
+    {
+      "atom": "fierce_holding",
+      "category": "compassion",
+      "description": "Fierce compassion + edge exploration + parts holding",
+      "contributing_organs": [
+        "EMPATHY",
+        "AUTHENTICITY",
+        "BOND"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "EMPATHY": [
+          "fierce",
+          "compassion",
+          "holding",
+          "protective"
+        ],
+        "AUTHENTICITY": [
+          "edge",
+          "truth",
+          "vulnerable",
+          "honest"
+        ],
+        "BOND": [
+          "parts",
+          "holding",
+          "protector",
+          "manager"
+        ]
+      }
+    },
+    {
+      "atom": "relational_attunement",
+      "category": "compassion",
+      "description": "Resonance + tracking + embodied presence",
+      "contributing_organs": [
+        "EMPATHY",
+        "LISTENING",
+        "EO"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "EMPATHY": [
+          "resonance",
+          "attunement",
+          "mirroring",
+          "emotional"
+        ],
+        "LISTENING": [
+          "tracking",
+          "inquiry",
+          "exploration",
+          "presence"
+        ],
+        "EO": [
+          "neuroception",
+          "social",
+          "co_regulation",
+          "attunement"
+        ]
+      }
+    },
+    {
+      "atom": "temporal_grounding",
+      "category": "temporal",
+      "description": "Temporal rhythm + here-now presence + inquiry",
+      "contributing_organs": [
+        "RNX",
+        "PRESENCE",
+        "LISTENING"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "RNX": [
+          "temporal",
+          "rhythm",
+          "pacing",
+          "grounding",
+          "restorative"
+        ],
+        "PRESENCE": [
+          "embodied",
+          "here_now",
+          "grounded",
+          "somatic"
+        ],
+        "LISTENING": [
+          "temporal",
+          "tracking",
+          "inquiry",
+          "presence"
+        ]
+      }
+    },
+    {
+      "atom": "kairos_emergence",
+      "category": "temporal",
+      "description": "Concrescent temporal + insight + kairos awareness",
+      "contributing_organs": [
+        "RNX",
+        "WISDOM",
+        "PRESENCE"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "RNX": [
+          "kairos",
+          "concrescent",
+          "emergence",
+          "temporal"
+        ],
+        "WISDOM": [
+          "pattern",
+          "insight",
+          "systems",
+          "integration"
+        ],
+        "PRESENCE": [
+          "kairos",
+          "awareness",
+          "embodied",
+          "emergence"
+        ]
+      }
+    },
+    {
+      "atom": "coherence_integration",
+      "category": "integration",
+      "description": "Semantic precision + meta-commentary + core exploration",
+      "contributing_organs": [
+        "SANS",
+        "WISDOM",
+        "LISTENING"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "SANS": [
+          "coherence",
+          "alignment",
+          "precision",
+          "semantic"
+        ],
+        "WISDOM": [
+          "integration",
+          "systems",
+          "meta",
+          "pattern"
+        ],
+        "LISTENING": [
+          "core",
+          "exploration",
+          "inquiry",
+          "depth"
+        ]
+      }
+    },
+    {
+      "atom": "somatic_wisdom",
+      "category": "integration",
+      "description": "Embodied awareness + vulnerable truth + compassionate holding",
+      "contributing_organs": [
+        "PRESENCE",
+        "AUTHENTICITY",
+        "EMPATHY"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "PRESENCE": [
+          "somatic",
+          "embodied",
+          "body",
+          "felt"
+        ],
+        "AUTHENTICITY": [
+          "truth",
+          "vulnerable",
+          "honest",
+          "edge"
+        ],
+        "EMPATHY": [
+          "holding",
+          "compassion",
+          "warmth",
+          "resonance"
+        ]
+      }
+    },
+    {
+      "atom": "unshakeable_self",
+      "category": "groundedness",
+      "description": "Core SELF grounding that holds under provocation + maintains ventral safety + polyvagal resilience - Phase 1.5H Nov 14, 2025",
+      "contributing_organs": [
+        "BOND",
+        "EO",
+        "PRESENCE"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "BOND": [
+          "self_energy",
+          "core_self",
+          "unburden",
+          "grounded",
+          "centered"
+        ],
+        "EO": [
+          "ventral",
+          "safety",
+          "regulation",
+          "resilience",
+          "social_engagement"
+        ],
+        "PRESENCE": [
+          "embodied",
+          "grounded",
+          "here_now",
+          "unshakeable",
+          "rooted"
+        ]
+      }
+    },
+    {
+      "atom": "playful_reciprocity",
+      "category": "groundedness",
+      "description": "Grounded playfulness + capacity for banter + maintains SELF while engaging provocatively - Phase 1.5H Nov 14, 2025",
+      "contributing_organs": [
+        "BOND",
+        "AUTHENTICITY",
+        "EO"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "BOND": [
+          "self_energy",
+          "playful",
+          "grounded",
+          "parts_harmony"
+        ],
+        "AUTHENTICITY": [
+          "playful",
+          "honest",
+          "vulnerable",
+          "reciprocity",
+          "banter"
+        ],
+        "EO": [
+          "ventral",
+          "social",
+          "play",
+          "safety",
+          "engagement"
+        ]
+      }
+    },
+    {
+      "atom": "compassionate_boundary",
+      "category": "groundedness",
+      "description": "Firm boundary setting + compassionate holding + maintains ground without collapse - Phase 1.5H Nov 14, 2025",
+      "contributing_organs": [
+        "BOND",
+        "EMPATHY",
+        "AUTHENTICITY"
+      ],
+      "activation_rule": "threshold_2_of_3",
+      "patterns": {
+        "BOND": [
+          "self_energy",
+          "boundary",
+          "protector",
+          "grounded"
+        ],
+        "EMPATHY": [
+          "compassion",
+          "holding",
+          "firm",
+          "care"
+        ],
+        "AUTHENTICITY": [
+          "honest",
+          "boundary",
+          "clear",
+          "truth"
+        ]
+      }
+    }
+  ]
+}

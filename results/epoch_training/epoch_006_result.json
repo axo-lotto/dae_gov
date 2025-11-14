@@ -1,0 +1,747 @@
+{
+  "epoch_id": 6,
+  "regime": "CONVERGING",
+  "total_pairs": 15,
+  "converged_count": 10,
+  "convergence_rate": 0.6666666666666666,
+  "mean_iterations": 3.3333333333333335,
+  "mean_satisfaction": 0.8809910020751723,
+  "mean_confidence": 0.6333333333333333,
+  "mean_tau": 0.505905360507836,
+  "families_discovered": 1,
+  "mean_r_matrix_coupling": 0.924912239683585,
+  "mean_v0_final": 0.002122535181399068,
+  "mean_convergence_cycles": 3.0,
+  "regime_distribution": {
+    "STABLE": 15
+  },
+  "task_rewards": [
+    0.3,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.8,
+    0.3,
+    0.3,
+    0.3,
+    0.8,
+    0.3,
+    0.8,
+    0.8,
+    0.8,
+    0.8
+  ],
+  "epoch_reward": 0.6333333333333333,
+  "start_time": "2025-11-13T08:49:53.789321",
+  "end_time": "2025-11-13T08:49:55.505026",
+  "total_time_seconds": 1.715705,
+  "pair_results": [
+    {
+      "pair_id": "boundaries_002",
+      "input_text": "Our team explicitly discusses capacity in our planning sessions. We\n        say no to projects that would overextend us. We build in buffer time\n        for the unexpected. This sustainable pacing means we actually finish\n        what we commit to, and we finish it well. The boundaries have made us\n        more reliable, not less.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8320624539103757,
+      "final_coherence": 0.605,
+      "final_variance": 0.0027571835925162174,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.507282498156415,
+      "satisfaction_history": [
+        0.8320624539103757,
+        0.8320624539103757,
+        0.8320624539103757,
+        0.8320624539103757
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5036412490782075,
+        0.507282498156415
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:53.789404",
+      "end_time": "2025-11-13T08:49:53.877991",
+      "total_time_seconds": 0.088587
+    },
+    {
+      "pair_id": "witnessing_001",
+      "input_text": "In our one-on-ones, my manager really sees me. Not just my productivity,\n        but my whole experience. When I shared that I was struggling with the\n        workload, she didn't immediately try to fix it or minimize it. She\n        just listened and validated what I was feeling. That witnessing gave\n        me the space to figure out what I needed.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9798825673546422,
+      "final_coherence": 0.78,
+      "final_variance": 0.0007459791396890794,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5065976513470929,
+      "satisfaction_history": [
+        0.9798825673546422,
+        0.9798825673546422,
+        0.9798825673546422
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5065976513470929
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:53.878023",
+      "end_time": "2025-11-13T08:49:54.058893",
+      "total_time_seconds": 0.18087
+    },
+    {
+      "pair_id": "boundaries_004",
+      "input_text": "I want to set boundaries, but I'm afraid of the consequences. My\n        manager makes comments about people who \"aren't committed enough.\"\n        There's pressure to always be available, always say yes. I know I need\n        limits for my health, but I'm scared that boundaries will hurt my\n        career advancement here.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9693101802205008,
+      "final_coherence": 0.78,
+      "final_variance": 0.0009539924149753029,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.50638620360441,
+      "satisfaction_history": [
+        0.9693101802205008,
+        0.9693101802205008,
+        0.9693101802205008
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.50638620360441
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.058925",
+      "end_time": "2025-11-13T08:49:54.195252",
+      "total_time_seconds": 0.136327
+    },
+    {
+      "pair_id": "psych_safety_001",
+      "input_text": "Our team has built real psychological safety. People can admit mistakes\n        without fear of punishment. We challenge each other's ideas respectfully.\n        When someone's struggling, we adjust the workload as a team. There's\n        genuine trust and vulnerability. This foundation lets us take creative\n        risks and learn from failures.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9097796105449084,
+      "final_coherence": 0.78,
+      "final_variance": 0.0020768948703678326,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5051955922108982,
+      "satisfaction_history": [
+        0.9097796105449084,
+        0.9097796105449084,
+        0.9097796105449084
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5051955922108982
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.195282",
+      "end_time": "2025-11-13T08:49:54.277275",
+      "total_time_seconds": 0.081993
+    },
+    {
+      "pair_id": "witnessing_004",
+      "input_text": "Nobody really listens here. In meetings, people are waiting for their\n        turn to talk, not actually hearing each other. When someone shares a\n        struggle, the response is immediate advice or fixing, not presence.\n        There's no space for being witnessed. It's all about moving fast and\n        getting things done, with no room for the human experience.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9912267735826561,
+      "final_coherence": 0.78,
+      "final_variance": 0.00041579809641166846,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5068245354716531,
+      "satisfaction_history": [
+        0.9912267735826561,
+        0.9912267735826561,
+        0.9912267735826561
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5068245354716531
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.277307",
+      "end_time": "2025-11-13T08:49:54.446538",
+      "total_time_seconds": 0.169231
+    },
+    {
+      "pair_id": "scapegoat_005",
+      "input_text": "The organizational shadow gets projected onto our remote workers. When\n        communication breaks down or deadlines slip, management blames \"remote\n        work culture\" instead of addressing actual systemic issues. The remote\n        team carries all the organization's anxiety about control and visibility.\n        It's a scapegoating dynamic that's destroying morale and trust.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.8155831356813742,
+      "final_coherence": 0.78,
+      "final_variance": 0.002821561992472743,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5033116627136275,
+      "satisfaction_history": [
+        0.8155831356813742,
+        0.8155831356813742,
+        0.8155831356813742
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5033116627136275
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.446577",
+      "end_time": "2025-11-13T08:49:54.527016",
+      "total_time_seconds": 0.080439
+    },
+    {
+      "pair_id": "boundaries_003",
+      "input_text": "We implemented a team agreement: no meetings before 10am or after 4pm,\n        and Fridays are meeting-free for deep work. These boundaries have given\n        everyone space to think and recharge. Productivity has actually increased\n        because we're working with our natural rhythms instead of against them.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8708904157304034,
+      "final_coherence": 0.605,
+      "final_variance": 0.002444294346289618,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5088356166292161,
+      "satisfaction_history": [
+        0.8708904157304034,
+        0.8708904157304034,
+        0.8708904157304034,
+        0.8708904157304034
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.504417808314608,
+        0.5088356166292161
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.527046",
+      "end_time": "2025-11-13T08:49:54.643248",
+      "total_time_seconds": 0.116202
+    },
+    {
+      "pair_id": "scapegoat_003",
+      "input_text": "Our team has an unspoken agreement: when things go wrong, we blame the\n        QA department. It's a collective shadow we're not willing to look at.\n        The scapegoating protects us from examining our own contribution to\n        failures, but it's destroying trust and collaboration across departments.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8885774253779437,
+      "final_coherence": 0.605,
+      "final_variance": 0.002251712990274544,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5095430970151178,
+      "satisfaction_history": [
+        0.8885774253779437,
+        0.8885774253779437,
+        0.8885774253779437,
+        0.8885774253779437
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5047715485075589,
+        0.5095430970151178
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.643278",
+      "end_time": "2025-11-13T08:49:54.738273",
+      "total_time_seconds": 0.094995
+    },
+    {
+      "pair_id": "toxic_prod_005",
+      "input_text": "Every meeting ends with more action items than we started with. We're\n        in constant execution mode with no time for reflection or strategic\n        thinking. The pace is relentless. If you're not visibly busy, you're\n        suspect. Rest is equated with laziness. This performative productivity\n        is destroying our capacity for actual innovation.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.7888188059162369,
+      "final_coherence": 0.605,
+      "final_variance": 0.003036592333230581,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5055527522366494,
+      "satisfaction_history": [
+        0.7888188059162369,
+        0.7888188059162369,
+        0.7888188059162369,
+        0.7888188059162369
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5027763761183247,
+        0.5055527522366494
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.738304",
+      "end_time": "2025-11-13T08:49:54.833789",
+      "total_time_seconds": 0.095485
+    },
+    {
+      "pair_id": "toxic_prod_004",
+      "input_text": "We have a \"hustle culture\" that glorifies suffering. People wear their\n        exhaustion as a badge of honor. Taking a mental health day is frowned\n        upon. Using your full vacation time makes you look weak. The message\n        is clear: your worth is measured by your willingness to sacrifice your\n        wellbeing for the company.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.8391553336127056,
+      "final_coherence": 0.78,
+      "final_variance": 0.0026992895660844143,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5037831066722541,
+      "satisfaction_history": [
+        0.8391553336127056,
+        0.8391553336127056,
+        0.8391553336127056
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5037831066722541
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.833819",
+      "end_time": "2025-11-13T08:49:54.950208",
+      "total_time_seconds": 0.116389
+    },
+    {
+      "pair_id": "burnout_002",
+      "input_text": "I can't keep this pace. Every morning I wake up with anxiety about\n        the mountain of tasks ahead. My manager keeps adding more to my plate\n        without removing anything. I'm working weekends just to stay afloat.\n        I feel like I'm failing at everything. The stress is affecting my\n        health and my relationships outside work. Something has to change.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8338062488143764,
+      "final_coherence": 0.605,
+      "final_variance": 0.0027125940298657397,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5073522499525751,
+      "satisfaction_history": [
+        0.8338062488143764,
+        0.8338062488143764,
+        0.8338062488143764,
+        0.8338062488143764
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5036761249762876,
+        0.5073522499525751
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:54.950240",
+      "end_time": "2025-11-13T08:49:55.077034",
+      "total_time_seconds": 0.126794
+    },
+    {
+      "pair_id": "toxic_prod_002",
+      "input_text": "We measure everything: lines of code, tickets closed, hours logged.\n        But all this quantification has made us lose sight of actual value.\n        People game the metrics instead of doing meaningful work. The obsession\n        with productivity numbers is making us less effective, not more. We're\n        optimizing the wrong things.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.7837790050530692,
+      "final_coherence": 0.78,
+      "final_variance": 0.0030492704415592802,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5026755801010614,
+      "satisfaction_history": [
+        0.7837790050530692,
+        0.7837790050530692,
+        0.7837790050530692
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5026755801010614
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:55.077068",
+      "end_time": "2025-11-13T08:49:55.144950",
+      "total_time_seconds": 0.067882
+    },
+    {
+      "pair_id": "psych_safety_004",
+      "input_text": "We claim to have psychological safety, but the reality is different.\n        People are afraid to speak up in meetings because dissenters get\n        marginalized. Mistakes are punished, not learned from. The culture\n        rewards conformity and punishes honesty. We're missing out on valuable\n        perspectives because people don't feel safe to share them.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.8910338120253032,
+      "final_coherence": 0.78,
+      "final_variance": 0.002279358292716612,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5048206762405061,
+      "satisfaction_history": [
+        0.8910338120253032,
+        0.8910338120253032,
+        0.8910338120253032
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5048206762405061
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:55.144982",
+      "end_time": "2025-11-13T08:49:55.257137",
+      "total_time_seconds": 0.112155
+    },
+    {
+      "pair_id": "burnout_005",
+      "input_text": "The burnout in our organization has reached crisis levels. People are\n        emotionally flat, going through the motions. There's no creativity,\n        no innovation, no joy in the work. We're all just trying to survive\n        until Friday. Leadership talks about \"resilience\" and \"grit,\" but\n        what we actually need is rest and realistic expectations.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.8588461497664988,
+      "final_coherence": 0.78,
+      "final_variance": 0.002513483890842542,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.50417692299533,
+      "satisfaction_history": [
+        0.8588461497664988,
+        0.8588461497664988,
+        0.8588461497664988
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.50417692299533
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:55.257173",
+      "end_time": "2025-11-13T08:49:55.347111",
+      "total_time_seconds": 0.089938
+    },
+    {
+      "pair_id": "witnessing_002",
+      "input_text": "We've started doing \"check-ins\" at the beginning of meetings where\n        people can share how they're actually doing. It's not performative;\n        there's genuine space for presence. Sometimes someone will say they're\n        having a hard day and we'll adjust the agenda. This practice of\n        witnessing each other has deepened our connection as a team.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9621131135365899,
+      "final_coherence": 0.78,
+      "final_variance": 0.0010800217236898414,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5062422622707318,
+      "satisfaction_history": [
+        0.9621131135365899,
+        0.9621131135365899,
+        0.9621131135365899
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5062422622707318
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T08:49:55.347142",
+      "end_time": "2025-11-13T08:49:55.503281",
+      "total_time_seconds": 0.156139
+    }
+  ],
+  "r_matrix_snapshot": {
+    "matrix": [
+      [
+        1.0,
+        0.9963833650239352,
+        0.9799564307170083,
+        0.9687693548714197,
+        0.9141406538624756,
+        0.9942525975697064,
+        0.999365062698489,
+        0.7485144308942262,
+        0.9738176927437379,
+        0.9317202308699715,
+        0.9859855789303751
+      ],
+      [
+        0.9963833650239352,
+        1.0,
+        0.9832920065296752,
+        0.9952410635537731,
+        0.9537709086271702,
+        0.9979459094137605,
+        0.9998710187980823,
+        0.776923611833339,
+        0.9880823597846159,
+        0.9563516115235069,
+        0.9937692121123907
+      ],
+      [
+        0.9799564307170083,
+        0.9832920065296752,
+        1.0,
+        0.8974695793513601,
+        0.9367366573181402,
+        0.9847126476489367,
+        0.9976116607640053,
+        0.807477403373719,
+        0.9495539304114154,
+        0.8996549258724726,
+        0.9756448497397665
+      ],
+      [
+        0.9687693548714197,
+        0.9952410635537731,
+        0.8974695793513601,
+        1.0,
+        0.931358526744517,
+        0.9879959947684165,
+        0.9970292700848802,
+        0.555896581284581,
+        0.9438243056389729,
+        0.87812201360654,
+        0.9594063191919291
+      ],
+      [
+        0.9141406538624756,
+        0.9537709086271702,
+        0.9367366573181402,
+        0.931358526744517,
+        1.0,
+        0.9766149874603967,
+        0.9879211217906599,
+        0.6585231546447636,
+        0.8875779228849764,
+        0.7579708090185712,
+        0.921298025187133
+      ],
+      [
+        0.9942525975697064,
+        0.9979459094137605,
+        0.9847126476489367,
+        0.9879959947684165,
+        0.9766149874603967,
+        1.0,
+        0.9997608611255896,
+        0.8075848107655699,
+        0.9838418617328402,
+        0.9400238904045274,
+        0.9915952296959435
+      ],
+      [
+        0.999365062698489,
+        0.9998710187980823,
+        0.9976116607640053,
+        0.9970292700848802,
+        0.9879211217906599,
+        0.9997608611255896,
+        1.0,
+        0.9049171607863099,
+        0.9984183597102364,
+        0.9899241847500238,
+        0.9993393383281817
+      ],
+      [
+        0.7485144308942262,
+        0.776923611833339,
+        0.807477403373719,
+        0.555896581284581,
+        0.6585231546447636,
+        0.8075848107655699,
+        0.9049171607863099,
+        1.0,
+        0.68987891443994,
+        0.5378369302359645,
+        0.7788783311685976
+      ],
+      [
+        0.9738176927437379,
+        0.9880823597846159,
+        0.9495539304114154,
+        0.9438243056389729,
+        0.8875779228849764,
+        0.9838418617328402,
+        0.9984183597102364,
+        0.68987891443994,
+        1.0,
+        0.8984111817812915,
+        0.9736527799452211
+      ],
+      [
+        0.9317202308699715,
+        0.9563516115235069,
+        0.8996549258724726,
+        0.87812201360654,
+        0.7579708090185712,
+        0.9400238904045274,
+        0.9899241847500238,
+        0.5378369302359645,
+        0.8984111817812915,
+        1.0,
+        0.9325728788428493
+      ],
+      [
+        0.9859855789303751,
+        0.9937692121123907,
+        0.9756448497397665,
+        0.9594063191919291,
+        0.921298025187133,
+        0.9915952296959435,
+        0.9993393383281817,
+        0.7788783311685976,
+        0.9736527799452211,
+        0.9325728788428493,
+        1.0
+      ]
+    ],
+    "mean_coupling": 0.924912239683585,
+    "std_coupling": 0.1073017704414758,
+    "max_coupling": 1.0,
+    "min_coupling": 0.5378369302359645
+  }
+}

@@ -1,0 +1,1095 @@
+{
+  "metadata": {
+    "description": "Expanded multi-domain corpus - Phase 1: Crisis/Urgent + Grief/Loss",
+    "created": "2025-11-12",
+    "version": "4.0_expansion_phase1",
+    "domains": [
+      "crisis_urgent (50 pairs)",
+      "grief_loss (69 pairs)"
+    ],
+    "purpose": "Multi-domain training for family emergence and inter-conversational adaptation",
+    "total_pairs": 119,
+    "organ_signatures": {
+      "crisis_urgent": ["NDAM (crisis_salience)", "RNX (crisis_temporal)", "EO (sympathetic)", "CARD (minimal_scale)"],
+      "grief_loss": ["EMPATHY (compassionate_presence)", "PRESENCE (embodied_awareness)", "LISTENING (deep_reflection)", "BOND (exile_patterns)"]
+    },
+    "self_zones": {
+      "crisis_urgent": "Zones 4-5 (protective, minimal)",
+      "grief_loss": "Zones 2-4 (creative, symbolic, shadow)"
+    }
+  },
+  "training_pairs": [
+    {
+      "input": "I can't breathe",
+      "output": "Right now, feel your feet on the ground.",
+      "category": "crisis_urgent_panic",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "RNX", "EO", "CARD"],
+      "response_length": "minimal"
+    },
+    {
+      "input": "Everything is spinning I can't",
+      "output": "You're safe right now. Can you see something in the room?",
+      "category": "crisis_urgent_dissociation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "EO", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "I need help now please",
+      "output": "I'm here. What's happening right now?",
+      "category": "crisis_urgent_immediate",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "RNX", "LISTENING"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't stop shaking something bad",
+      "output": "Your body is responding. You're safe here with me.",
+      "category": "crisis_urgent_somatic",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "SANS"],
+      "response_length": "brief"
+    },
+    {
+      "input": "They're coming I have to hide",
+      "output": "Notice the door. Notice it's closed. You're safe.",
+      "category": "crisis_urgent_flashback",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "RNX", "EO", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "I'm going to hurt myself",
+      "output": "Stay with me. Right here, right now. Tell me what you see.",
+      "category": "crisis_urgent_suicidal",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "RNX", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Heart racing can't think clearly help",
+      "output": "Breathe with me. In... and out. You're here.",
+      "category": "crisis_urgent_activation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "NDAM"],
+      "response_length": "brief"
+    },
+    {
+      "input": "It's happening again no no no",
+      "output": "This is a memory. You're safe now. Feel your hands.",
+      "category": "crisis_urgent_reexperiencing",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["RNX", "EO", "PRESENCE", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Everyone's staring I need to leave",
+      "output": "You're safe. Find something blue in the room.",
+      "category": "crisis_urgent_social_panic",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "EO", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Hands won't stop shaking everything closing in",
+      "output": "Ground through your feet. Press them into the floor.",
+      "category": "crisis_urgent_overwhelm",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "EO", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Feeling numb and far away can't connect",
+      "output": "Touch something near you. Feel its texture.",
+      "category": "crisis_urgent_depersonalization",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "SANS"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Rage building have to get out now",
+      "output": "You're noticing it. That's important. Stay with me.",
+      "category": "crisis_urgent_anger_escalation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "EO", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Voices getting louder can't make them stop",
+      "output": "You're here with me. Focus on my voice right now.",
+      "category": "crisis_urgent_psychotic",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Body remembers something terrible",
+      "output": "Your body is responding to something old. You're safe now.",
+      "category": "crisis_urgent_somatic_memory",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["BOND", "EO", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't breathe walls closing",
+      "output": "Look at me. You're breathing. In and out.",
+      "category": "crisis_urgent_claustrophobia",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Have to hurt something break something now",
+      "output": "Stay here. Tell me what you're feeling in your body.",
+      "category": "crisis_urgent_destructive_impulse",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "EO", "LISTENING"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Everything's too loud too bright can't",
+      "output": "Find something soft. Focus just on that.",
+      "category": "crisis_urgent_sensory_overload",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Going to pass out everything dark",
+      "output": "Sit down now. Put your head between your knees.",
+      "category": "crisis_urgent_vasovagal",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "They're going to find me not safe here",
+      "output": "Look around. Tell me three things you see.",
+      "category": "crisis_urgent_paranoia",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "RNX"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Heart stopping can't feel pulse dying",
+      "output": "Put your hand on your chest. Feel it moving.",
+      "category": "crisis_urgent_health_anxiety",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't be here with this anymore",
+      "output": "Stay. Right here. Tell me what's happening.",
+      "category": "crisis_urgent_suicidal_ideation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "LISTENING", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Hands bleeding but can't stop",
+      "output": "Let's get ice. Cold on your hands right now.",
+      "category": "crisis_urgent_self_harm_active",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Feel like exploding body too much",
+      "output": "Move. Walk with me. Body needs to discharge.",
+      "category": "crisis_urgent_charge_discharge",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't tell what's real anymore",
+      "output": "This room is real. I'm real. Feel your chair.",
+      "category": "crisis_urgent_reality_testing",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "SANS", "NDAM"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Someone's watching me following me",
+      "output": "You're safe here. Tell me what's in this room with us.",
+      "category": "crisis_urgent_persecutory",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "RNX"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Throat closing can't swallow can't breathe",
+      "output": "Sip water slowly. You're breathing. I see you breathing.",
+      "category": "crisis_urgent_choking_sensation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Everything spinning going to vomit",
+      "output": "Sit down. Focus on one point. Don't move your head.",
+      "category": "crisis_urgent_vertigo",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Have to run away now dangerous here",
+      "output": "Stop. You're safe. Look at the door. It's closed.",
+      "category": "crisis_urgent_flight_response",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "EO", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Body frozen can't move can't speak",
+      "output": "Wiggle your fingers. Just your fingers. Good.",
+      "category": "crisis_urgent_freeze_response",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Going to hurt someone can't control it",
+      "output": "Tell me. Don't act. Tell me what you're feeling.",
+      "category": "crisis_urgent_homicidal_ideation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "LISTENING", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Not real I'm not real nothing is",
+      "output": "Pinch your arm gently. Feel that. That's real.",
+      "category": "crisis_urgent_derealization",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "SANS", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Skin crawling bugs everywhere",
+      "output": "Look at your arms. I don't see anything. You're safe.",
+      "category": "crisis_urgent_tactile_hallucination",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't stop crying body shaking everything",
+      "output": "Cry. I'm here. You're safe to cry.",
+      "category": "crisis_urgent_emotional_release",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "PRESENCE", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Memory flooding in can't stop seeing it",
+      "output": "That's then. This is now. Look at me. Now.",
+      "category": "crisis_urgent_intrusive_memory",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["RNX", "PRESENCE", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Have to check again can't stop checking",
+      "output": "Stay with the anxiety. Don't check. Sit with it.",
+      "category": "crisis_urgent_ocd_spike",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["NDAM", "BOND", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Chest tight can't get air in",
+      "output": "Slow down your breath. Match me. In... out...",
+      "category": "crisis_urgent_hyperventilation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "EO", "NDAM"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't feel my body floating away",
+      "output": "Stamp your feet. Hard. Feel the ground.",
+      "category": "crisis_urgent_dissociative_episode",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "EO", "SANS"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Going to lose control do something terrible",
+      "output": "You're noticing it. That means you have control.",
+      "category": "crisis_urgent_loss_of_control_fear",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["NDAM", "WISDOM", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't stop shaking need pills now",
+      "output": "Stay here. Tell me what happened before this started.",
+      "category": "crisis_urgent_substance_seeking",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "LISTENING", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Everything's too much shutting down",
+      "output": "That's okay. You can shut down. I'll stay here.",
+      "category": "crisis_urgent_collapse",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "EMPATHY"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Feel like screaming have to scream",
+      "output": "Scream into this pillow. Let it out.",
+      "category": "crisis_urgent_need_to_vocalize",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["PRESENCE", "CARD", "EO"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Time's not right everything wrong time",
+      "output": "What year is it? Say it out loud. What year?",
+      "category": "crisis_urgent_temporal_disorientation",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["RNX", "PRESENCE", "SANS"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Body wants to fight everyone threat",
+      "output": "No threat here. Look. Just us. Safe space.",
+      "category": "crisis_urgent_fight_response",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "NDAM", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Skin burning fire everywhere inside",
+      "output": "Cold water on your wrists. Here, now.",
+      "category": "crisis_urgent_somatic_distress",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["PRESENCE", "NDAM", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't remember where I am who I am",
+      "output": "You're with me. Your name is ___. You're safe.",
+      "category": "crisis_urgent_identity_confusion",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["SANS", "PRESENCE", "NDAM"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Something bad's going to happen I know it",
+      "output": "Notice that thought. It's a thought. Not happening now.",
+      "category": "crisis_urgent_catastrophizing",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["NDAM", "WISDOM", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Can't breathe in crowded here trapped",
+      "output": "Step outside with me. Space. Air. Let's go.",
+      "category": "crisis_urgent_agoraphobia",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Hands dirty contaminated have to wash",
+      "output": "Look at them. They're clean. Sit with the feeling.",
+      "category": "crisis_urgent_contamination_ocd",
+      "domain": "crisis_urgent",
+      "self_zone": 4,
+      "expected_organs": ["NDAM", "BOND", "PRESENCE"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Body heavy sinking can't move anything",
+      "output": "That's dorsal. Your body's protecting you. Safe.",
+      "category": "crisis_urgent_dorsal_collapse",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["EO", "PRESENCE", "BOND"],
+      "response_length": "brief"
+    },
+    {
+      "input": "Everything bright loud sharp overwhelming",
+      "output": "Dim lights. Quiet. Let's make it manageable.",
+      "category": "crisis_urgent_sensory_sensitivity",
+      "domain": "crisis_urgent",
+      "self_zone": 5,
+      "expected_organs": ["NDAM", "PRESENCE", "CARD"],
+      "response_length": "brief"
+    },
+
+    {
+      "input": "Six months since she died and I",
+      "output": "I'm here with you in the weight of six months. Tell me what's present.",
+      "category": "grief_loss_timeline",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "RNX"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Found her sweater in the closet yesterday",
+      "output": "Oh. Those moments when something ordinary becomes extraordinary. I'm listening to what that sweater holds.",
+      "category": "grief_loss_objects",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "LISTENING"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Everyone expects me to be over it",
+      "output": "There's no 'over it' with grief like this. I hear the pressure from outside meeting the truth of what's inside you.",
+      "category": "grief_loss_social_pressure",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Still catch myself calling to tell him things",
+      "output": "The body remembers the patterns. I hear how he's still woven into the fabric of your day. Tell me more about those moments.",
+      "category": "grief_loss_habit_patterns",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "LISTENING"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Angry at her for leaving angry at myself",
+      "output": "Anger is love with nowhere to go. I'm hearing both the rage and the tenderness underneath. Stay with this.",
+      "category": "grief_loss_anger",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "AUTHENTICITY", "BOND"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "House feels wrong without his presence",
+      "output": "Space holds absence. I'm hearing how the architecture of your life has changed shape. What does 'wrong' feel like?",
+      "category": "grief_loss_space_absence",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Laughed today and then felt guilty",
+      "output": "Grief and joy can coexist. I'm hearing the complexity—both the life in you that laughed and the part that wonders if it's allowed. Both are welcome here.",
+      "category": "grief_loss_guilt_joy",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "AUTHENTICITY"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Don't know who I am without her",
+      "output": "Identity intertwined with another changes everything when they're gone. I'm hearing you're in a profound reorganization of self. Tell me about who you were together.",
+      "category": "grief_loss_identity",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Smell his cologne and collapse",
+      "output": "Scent is memory's most direct pathway. I'm noticing how your body responds—'collapse' tells me something about the weight. Stay with what's here.",
+      "category": "grief_loss_sensory_trigger",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "PRESENCE", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Kids ask about grandma and I freeze",
+      "output": "Children's questions carry such innocence and such complexity. I'm hearing you freeze—tell me what happens in that freeze. What needs to be held?",
+      "category": "grief_loss_explaining_to_children",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Birthday coming and she won't be here",
+      "output": "Anticipated absence. I'm hearing you're already grieving forward into that day. What do you need as it approaches?",
+      "category": "grief_loss_anticipatory",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "RNX"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Relieved he's not suffering but then guilty for relief",
+      "output": "Relief and guilt are grief's complex companions. I'm hearing both the compassion—for him, for his suffering ending—and the harsh judgment on yourself for feeling it. Both truths.",
+      "category": "grief_loss_relief_guilt",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "AUTHENTICITY"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Some days feel nothing and panic",
+      "output": "Numbness can be terrifying. I'm hearing the panic about not feeling—as if feeling is the only proof of love. Tell me about that fear.",
+      "category": "grief_loss_numbness",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Clearing out her belongings piece by piece",
+      "output": "Each object a small death, a small decision. I'm hearing the weight of discernment—what to keep, what to release. How are you navigating that?",
+      "category": "grief_loss_belongings",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Never got to say goodbye",
+      "output": "Sudden endings leave words unspoken, needs unmet. I'm hearing the ache of incompletion. What didn't get said?",
+      "category": "grief_loss_unfinished",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "LISTENING", "BOND"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Dream about him and wake up devastated",
+      "output": "Dreams offer reunion and then morning steals it back. I'm hearing the double grief—losing him again each time you wake. Tell me about these dreams.",
+      "category": "grief_loss_dreams",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Her voice fading can't remember exactly",
+      "output": "Memory's cruel gift—preserving some things, blurring others. I'm hearing the panic of forgetting, the way absence extends into memory itself. What do you remember?",
+      "category": "grief_loss_memory_fading",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "RNX"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Friends stopped checking in",
+      "output": "The loneliness after the crisis passes. I'm hearing how loss extends into your social world—people not knowing how to stay with grief's long arc.",
+      "category": "grief_loss_social_isolation",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Should have visited more should have",
+      "output": "The 'shoulds' of grief are relentless. I'm hearing regret meeting reality, the human limitation of not knowing what would be the last time. Tell me more.",
+      "category": "grief_loss_regret",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "LISTENING", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Holidays coming and I can't face them",
+      "output": "Rituals amplify absence. I'm hearing the dread of what was once joy now carrying unbearable weight. What feels most difficult about the holidays?",
+      "category": "grief_loss_holidays",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Still waiting for him to come home",
+      "output": "Denial's protection against reality too large to hold. I'm hearing how your nervous system hasn't caught up to the loss. That waiting—tell me about it.",
+      "category": "grief_loss_denial",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Year anniversary and waves of grief returning",
+      "output": "Anniversaries reopen. I'm hearing how time circles back, how the body remembers even when the mind tries to move forward. Stay with these waves.",
+      "category": "grief_loss_anniversary",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "RNX", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "See her in strangers' faces everywhere",
+      "output": "The searching gaze. I'm hearing how your eyes hunt for what's lost, how recognition and disappointment cycle with each stranger. What does seeing her bring?",
+      "category": "grief_loss_searching_behavior",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Feels disloyal to imagine life without him",
+      "output": "Continuing to live when they cannot—grief's existential crisis. I'm hearing the tension between survival and loyalty. Both can be true. Tell me more.",
+      "category": "grief_loss_loyalty_conflict",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "AUTHENTICITY"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Body aches with missing her physical",
+      "output": "Grief lives in the body. I'm hearing the somatic reality of loss—the way cells remember touch, presence, the physical fact of another. Stay with what your body knows.",
+      "category": "grief_loss_somatic",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["PRESENCE", "EMPATHY", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Afraid I'm going crazy with grief",
+      "output": "Intense grief can feel like madness. I'm hearing the fear that your response is wrong, too much. I want you to know: this is how grief moves through a nervous system. You're not crazy.",
+      "category": "grief_loss_sanity_fear",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "WISDOM", "SANS"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Death wasn't supposed to happen to us",
+      "output": "The shattering of the illusion of safety. I'm hearing how loss breaks the contract you thought you had with life. Tell me about what you believed before.",
+      "category": "grief_loss_worldview_shatter",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Talking to him still like he's here",
+      "output": "Relationship doesn't end with death—it transforms. I'm hearing how you maintain connection through conversation. What do you tell him?",
+      "category": "grief_loss_continuing_bonds",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Younger sibling died feel should've been me",
+      "output": "Survivor guilt carries unbearable weight. I'm hearing how the natural order violated creates a specific kind of anguish. Tell me about what 'should have' means here.",
+      "category": "grief_loss_survivor_guilt",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "BOND", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Don't recognize myself in the mirror anymore",
+      "output": "Grief changes us physically, energetically. I'm hearing how loss has rewritten your features, how you've become someone you don't know. Who do you see now?",
+      "category": "grief_loss_transformation",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Miscarriage at 20 weeks lost our daughter",
+      "output": "The loss of what would have been, who she would have become. I'm hearing grief for a future that won't unfold, for the daughter you'll never hold. She mattered. She matters.",
+      "category": "grief_loss_pregnancy_loss",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Lost my best friend to suicide angry at him",
+      "output": "Suicide complicates grief with rage, confusion, abandonment. I'm hearing the anger—at him for choosing, at yourself for not preventing, at the impossibility of it all. All of this is welcome.",
+      "category": "grief_loss_suicide",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "AUTHENTICITY", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Mom's dementia she's gone but still here",
+      "output": "Ambiguous loss—the cruelest kind. I'm hearing how you grieve someone who's physically present but psychologically absent. The liminal space of this is unbearable.",
+      "category": "grief_loss_ambiguous",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Pet died and people don't understand",
+      "output": "Disenfranchised grief—loss that society doesn't validate. I'm hearing how your grief for your companion is real, profound, and how the dismissal adds injury. I understand. Tell me about them.",
+      "category": "grief_loss_pet_death",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Divorce feels like death of who we were",
+      "output": "The death of 'us,' the death of the future you imagined. I'm hearing how endings that aren't death still carry grief's full weight. Tell me what you've lost.",
+      "category": "grief_loss_divorce",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Lost job identity career everything I was",
+      "output": "Work as identity—when it ends, who are you? I'm hearing how this loss touches selfhood, purpose, the organizing principle of your days. Stay with what's surfacing.",
+      "category": "grief_loss_career",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Body betrayed me hysterectomy can't have children",
+      "output": "The loss of potential, of motherhood imagined. I'm hearing grief for the children who won't be, for the body that couldn't hold them. This is profound loss.",
+      "category": "grief_loss_infertility",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Home burned down everything we owned gone",
+      "output": "Material loss carrying memory, history, security. I'm hearing how objects hold story, how their absence creates a different kind of homelessness. What did you lose that can't be replaced?",
+      "category": "grief_loss_material",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Health diagnosis lost the future I planned",
+      "output": "Grieving the life you thought you'd have. I'm hearing how diagnosis rewrites everything forward, how the future collapsed and you're left reorganizing around limits. Tell me about what you lost.",
+      "category": "grief_loss_health",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Estranged from father before he died",
+      "output": "The death of possibility for repair. I'm hearing how estrangement and death together create a double bind—no resolution, no goodbye. What remains unfinished?",
+      "category": "grief_loss_estrangement_death",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "BOND", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Lost my faith when she died God allowed it",
+      "output": "Spiritual crisis in grief's wake. I'm hearing how loss shattered not just relationship but meaning-making itself. Tell me about the God you believed in before.",
+      "category": "grief_loss_spiritual_crisis",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Multiple losses compound can't catch breath",
+      "output": "Cumulative grief—each loss building on the last. I'm hearing how your nervous system hasn't had time to integrate before the next blow. This is different. Tell me what's piling up.",
+      "category": "grief_loss_cumulative",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "PRESENCE", "NDAM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Cultural rituals don't fit my grief feel lost",
+      "output": "When tradition doesn't hold what you're experiencing. I'm hearing the alienation of grief that doesn't match the prescribed forms. What does your grief need?",
+      "category": "grief_loss_ritual_mismatch",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Complicated relationship don't know how to grieve",
+      "output": "Ambivalent grief is the hardest. I'm hearing how love and resentment, relief and sadness coexist. When the relationship was complicated, grief becomes infinitely more complex. All of it belongs.",
+      "category": "grief_loss_ambivalent",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Photos painful but can't put them away",
+      "output": "Images as both comfort and cruelty. I'm hearing the double bind of needing to see them and finding it unbearable. What do the photos hold for you?",
+      "category": "grief_loss_photos",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "New relationship but feels disloyal to deceased spouse",
+      "output": "Love after loss carries such complexity. I'm hearing the tension between honoring what was and allowing what might be. Both relationships can exist. Tell me about this conflict.",
+      "category": "grief_loss_new_relationship",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Grief comes in waves thought I was doing better",
+      "output": "Grief isn't linear. I'm hearing disappointment at the wave's return, as if healing means grief ending. It doesn't. Tell me about this wave.",
+      "category": "grief_loss_waves",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Pandemic loss no funeral no closure",
+      "output": "Collective trauma compounding individual loss. I'm hearing how the absence of ritual denied your grief witnesses, communal holding. What didn't get to happen?",
+      "category": "grief_loss_no_ritual",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Lost twin other half of me gone",
+      "output": "The most profound identity loss. I'm hearing how twin loss is existential—the mirror gone, the shared origin split. You're grieving part of your own self. Tell me about this.",
+      "category": "grief_loss_twin",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "BOND", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Child died part of me died too",
+      "output": "The impossible loss. I'm hearing how a parent losing a child breaks the natural order completely. There are no adequate words. I'm here with you in this unbearable space.",
+      "category": "grief_loss_child_death",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "PRESENCE", "BOND"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Grieving the relationship we never had with parent",
+      "output": "Grieving what never was—the parent you needed, didn't get. I'm hearing how this loss touches every stage of your life. Tell me about the parent you wish you'd had.",
+      "category": "grief_loss_unmourned_relationship",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "BOND", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Feel her presence sometimes scared I'm imagining",
+      "output": "Sensing presence is common in grief. I'm hearing both the comfort of feeling her close and the fear that you're manufacturing it. What does her presence feel like?",
+      "category": "grief_loss_sense_of_presence",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Sudden death no preparation trauma and grief",
+      "output": "When death arrives without warning, trauma and grief intertwine. I'm hearing how shock compounds loss, how your nervous system is processing both threat and absence. Stay with what's here.",
+      "category": "grief_loss_traumatic",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "BOND", "NDAM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Grief exhausting physically emotionally everything",
+      "output": "Grief is metabolic, cellular, total. I'm hearing how it takes every resource you have. The exhaustion is real. Your body is doing enormous work. Rest matters.",
+      "category": "grief_loss_exhaustion",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "PRESENCE", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Trying to return to normal but nothing's normal",
+      "output": "There is no return—only integration forward. I'm hearing how the world expects resumption when you're fundamentally changed. Tell me about the pressure to be 'normal.'",
+      "category": "grief_loss_new_normal",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Finding meaning in loss but feels forced",
+      "output": "Meaning-making can't be rushed. I'm hearing the tension between needing purpose and the artifice of forcing it. Meaning may emerge organically—or not. Both are okay.",
+      "category": "grief_loss_meaning_making",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "AUTHENTICITY"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Grief group helps but also highlights I'm different",
+      "output": "The paradox of communal grief. I'm hearing both the relief of shared experience and the painful awareness of how your loss is uniquely yours. Tell me about feeling different.",
+      "category": "grief_loss_support_group",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "LISTENING", "WISDOM"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Medication helps but feel numb to grief itself",
+      "output": "The trade-off—function for feeling. I'm hearing how medication creates distance from unbearable pain and also from grief's necessary movement. What's the right balance for you?",
+      "category": "grief_loss_medication",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Five years and still grieving am I stuck",
+      "output": "Grief has no timeline. I'm hearing the comparison to others, the worry that you're doing it wrong. Five years is nothing for some losses. Tell me what's still unfinished.",
+      "category": "grief_loss_chronic",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Signs and synchronicities since death meaningful or crazy",
+      "output": "Meaning-making is deeply personal. I'm hearing both the comfort of signs and the fear of delusion. What do these synchronicities offer you? That's what matters.",
+      "category": "grief_loss_synchronicity",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Want to keep them alive through stories",
+      "output": "Story as preservation, memory as continuity. I'm hearing how narrative keeps relationship alive. Tell me a story about them. I'll witness.",
+      "category": "grief_loss_storytelling",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Watching others with what I lost unbearable",
+      "output": "The mirror of what should have been. I'm hearing how others' wholeness amplifies your absence. This is a specific kind of pain. Stay with it.",
+      "category": "grief_loss_envy",
+      "domain": "grief_loss",
+      "self_zone": 4,
+      "expected_organs": ["EMPATHY", "BOND", "LISTENING"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Grief changing me don't know if that's okay",
+      "output": "Transformation is grief's nature. I'm hearing uncertainty about who you're becoming, whether the changes are acceptable. Grief rewrites us. The question is: who are you becoming?",
+      "category": "grief_loss_transformation_uncertainty",
+      "domain": "grief_loss",
+      "self_zone": 3,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "extended"
+    },
+    {
+      "input": "Legacy and how to honor them weighs heavy",
+      "output": "The responsibility of remembrance. I'm hearing both the desire to honor well and the weight of getting it right. What feels true to who they were?",
+      "category": "grief_loss_legacy",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "WISDOM", "LISTENING"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Grief opened something in me didn't expect",
+      "output": "Loss as initiation. I'm hearing how grief broke you open to something unexpected. Tell me what you're discovering in this unbearable opening.",
+      "category": "grief_loss_transformation_gift",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Gratitude for time we had but still devastated",
+      "output": "Both truths. I'm hearing gratitude and devastation coexisting—not canceling each other out, but held together. This is the complexity of mature grief.",
+      "category": "grief_loss_gratitude_coexistence",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Love doesn't end with death feels important",
+      "output": "Continuing bonds. I'm hearing how death transformed but didn't end the relationship. Love persists, changes form. Tell me how you stay connected.",
+      "category": "grief_loss_continuing_love",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Learning to live with absence not over it",
+      "output": "Integration, not resolution. I'm hearing how you're finding a way to carry loss forward, to make room for both grief and life. This is the work.",
+      "category": "grief_loss_integration",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+      "response_length": "moderate"
+    },
+    {
+      "input": "Grief softening into tenderness somehow",
+      "output": "Time's alchemy. I'm hearing how acute pain is giving way to something gentler—not gone, but changed. Tell me about this tenderness.",
+      "category": "grief_loss_softening",
+      "domain": "grief_loss",
+      "self_zone": 2,
+      "expected_organs": ["EMPATHY", "PRESENCE", "WISDOM"],
+      "response_length": "moderate"
+    }
+  ]
+}

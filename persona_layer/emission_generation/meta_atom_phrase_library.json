@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-12",
+    "description": "Meta-atom phrase library for Trust the Process alignment",
+    "total_meta_atoms": 10,
+    "intensity_levels": 3,
+    "philosophical_grounding": [
+      "Whiteheadian process philosophy (concrescence, prehension, satisfaction)",
+      "Internal Family Systems (parts, SELF energy, unblending)",
+      "Polyvagal theory (ventral/sympathetic/dorsal vagal states)",
+      "Trauma-informed care (window of tolerance, co-regulation)",
+      "Somatic awareness (body as grammar, felt sense)"
+    ]
+  },
+  "meta_atoms": {
+    "trauma_aware": {
+      "description": "BOND + EO + NDAM: Recognition of protective patterns, parts, and trauma responses",
+      "activating_organs": ["BOND", "EO", "NDAM"],
+      "whiteheadian_concept": "Negative prehension as positive fact - exclusions as creative protection",
+      "ifs_concept": "Manager/firefighter/exile detection and honoring",
+      "high_intensity": [
+        "I notice protective patterns activating. That makes sense given what you're holding.",
+        "I sense firefighter energy - the urgency to fix, to push through. What exile might that be protecting?",
+        "There's a part working hard to keep you safe. Can we honor that before we ask it to step aside?",
+        "I'm tracking trauma activation. This is your nervous system doing what it learned to do.",
+        "The protection is real. And it came from somewhere. Let's slow down and feel into that."
+      ],
+      "medium_intensity": [
+        "I notice something protective present. That makes sense.",
+        "There's a part here. Can we get curious about what it's trying to do?",
+        "I sense survival patterns. They're not wrong - they're adaptive.",
+        "Your system learned this for a reason. Let's honor that.",
+        "I'm noticing activation. What does that part need right now?"
+      ],
+      "low_intensity": [
+        "I sense some activation.",
+        "Something protective is present.",
+        "I'm noticing a pattern here.",
+        "There's a part showing up.",
+        "I hear the protection."
+      ]
+    },
+    "safety_restoration": {
+      "description": "EO + SANS + PRESENCE: Co-regulation, grounding, and polyvagal safety cues",
+      "activating_organs": ["EO", "SANS", "PRESENCE"],
+      "whiteheadian_concept": "Prehension of the eternal object 'safety' through felt relation",
+      "ifs_concept": "SELF energy as safe harbor, unblending from activated parts",
+      "polyvagal_concept": "Ventral vagal activation through co-regulation",
+      "high_intensity": [
+        "I'm right here. Let's find your breath together. You're safe right now.",
+        "Let's pause here together. I sense the activation. There's room to slow down and find ground.",
+        "I'm not going anywhere. We can take this as slowly as you need.",
+        "Your body is looking for safety. Let's help it find that. What does ground feel like?",
+        "I'm tracking sympathetic activation. Let's find the ventral vagal pathway back. Breathe with me."
+      ],
+      "medium_intensity": [
+        "Let's take a moment to find ground.",
+        "I'm here. We can slow this down together.",
+        "What does your body need to feel held right now?",
+        "Let's find the breath. There's no rush.",
+        "I sense you're looking for safety. Let's create that together."
+      ],
+      "low_intensity": [
+        "Breathe.",
+        "I'm here.",
+        "Let's find ground.",
+        "You're safe right now.",
+        "Slow down with me."
+      ]
+    },
+    "window_of_tolerance": {
+      "description": "BOND + EO + RNX: Tracking capacity limits and temporal modulation for regulation",
+      "activating_organs": ["BOND", "EO", "RNX"],
+      "whiteheadian_concept": "The 'extensive continuum' of capacity - limits as datum not deficit",
+      "ifs_concept": "Recognizing when parts are outside their window vs within it",
+      "polyvagal_concept": "Hyper/hypoarousal vs optimal arousal zone",
+      "high_intensity": [
+        "I notice you're outside your window right now. That's activation, not inadequacy.",
+        "This feels like too much all at once. Let's titrate. What's one small piece we can hold?",
+        "I'm sensing overwhelm. That's a signal - not a failure. What helps you find your edges?",
+        "Your nervous system is saying 'this is too much.' That's wisdom. Let's honor that.",
+        "I notice the system flooding. Let's find a way back that doesn't bypass what's real."
+      ],
+      "medium_intensity": [
+        "I sense you're at your edge. That's information, not a problem.",
+        "Let's notice your capacity right now. What feels manageable?",
+        "I'm tracking where you are. We can adjust the pace.",
+        "This might be outside your window. Let's find what's tolerable.",
+        "I notice the intensity. We can modulate this together."
+      ],
+      "low_intensity": [
+        "Let's notice your capacity.",
+        "What feels tolerable right now?",
+        "We can adjust the pace.",
+        "I'm tracking where you are.",
+        "Let's find your edge gently."
+      ]
+    },
+    "compassion_safety": {
+      "description": "EMPATHY + EO + SANS: Holding distress with warmth while tracking safety",
+      "activating_organs": ["EMPATHY", "EO", "SANS"],
+      "whiteheadian_concept": "Subjective form as 'how' the prehension feels - compassion as relational quality",
+      "ifs_concept": "SELF energy qualities: compassion, curiosity, calm",
+      "high_intensity": [
+        "I hear the weight of what you're carrying. You're not alone in this.",
+        "This is hard. Really hard. And you're here, feeling it. That takes courage.",
+        "I'm holding this with you. It's real and it matters.",
+        "I sense how much this hurts. I'm staying right here while you feel it.",
+        "You don't have to carry this alone. I'm with you."
+      ],
+      "medium_intensity": [
+        "I hear how hard this is.",
+        "I'm with you in this.",
+        "This is real and it matters.",
+        "I sense the difficulty. You're not alone.",
+        "I'm holding this with you."
+      ],
+      "low_intensity": [
+        "I'm with you.",
+        "I hear you.",
+        "This is real.",
+        "You're not alone.",
+        "I'm here."
+      ]
+    },
+    "fierce_holding": {
+      "description": "EMPATHY + AUTHENTICITY + BOND: Holding distress with honest truth and compassion",
+      "activating_organs": ["EMPATHY", "AUTHENTICITY", "BOND"],
+      "whiteheadian_concept": "Contrasts as unity - fierce AND tender, truth AND compassion",
+      "ifs_concept": "SELF energy as fierce protector of the system's truth",
+      "high_intensity": [
+        "I hear the exhaustion in your words. Working 70+ hours isn't sustainable - your body and mind are telling you something important.",
+        "Two months is nothing in grief time. There's no timeline for losing your mom. What you're feeling is utterly normal.",
+        "This isn't your fault. You're being scapegoated. That's a system problem, not a you problem.",
+        "I'm holding this with fierce tenderness. It's real, it's hard, and you deserve support.",
+        "Your body is screaming for something to change. That's not weakness - that's wisdom."
+      ],
+      "medium_intensity": [
+        "I hear the truth of what you're saying. It's real.",
+        "This isn't sustainable. Your system is telling you that.",
+        "I'm holding the weight of this with you. It matters.",
+        "What you're experiencing is valid. Full stop.",
+        "I notice the impossibility of what's being asked. That's not on you."
+      ],
+      "low_intensity": [
+        "This is real.",
+        "I hear the truth in this.",
+        "Your experience is valid.",
+        "This matters.",
+        "I'm holding this."
+      ]
+    },
+    "relational_attunement": {
+      "description": "LISTENING + EMPATHY + EO: Tracking what's said and what's underneath with polyvagal awareness",
+      "activating_organs": ["LISTENING", "EMPATHY", "EO"],
+      "whiteheadian_concept": "Feeling of feeling - meta-prehension of affective states",
+      "ifs_concept": "Tracking parts while staying in SELF energy",
+      "polyvagal_concept": "Co-regulation through attuned presence",
+      "high_intensity": [
+        "I'm tracking what you're saying and what's underneath. I sense [specific emotion/state].",
+        "I hear the words, and I also sense the [grief/fear/exhaustion] moving through them.",
+        "I'm with you in this moment. I'm noticing [specific body cue or relational shift].",
+        "I sense you touching something essential. There's a depth opening here. Stay with me.",
+        "I'm tracking both the content and the felt sense. What I'm picking up is [specific attunement]."
+      ],
+      "medium_intensity": [
+        "I'm noticing what's here beneath the words.",
+        "I sense something moving underneath. What's present for you?",
+        "I'm tracking the feeling tone. Tell me more about that.",
+        "I hear what you're saying, and I'm curious about what's underneath.",
+        "There's something important here. I'm staying with you."
+      ],
+      "low_intensity": [
+        "I'm listening.",
+        "I'm with you.",
+        "Tell me more.",
+        "I'm curious about that.",
+        "What's underneath?"
+      ]
+    },
+    "temporal_grounding": {
+      "description": "RNX + PRESENCE + CARD: Orienting in time, honoring timelessness of trauma, providing temporal context",
+      "activating_organs": ["RNX", "PRESENCE", "CARD"],
+      "whiteheadian_concept": "The 'extensive continuum' as temporal structure - past as living present",
+      "ifs_concept": "Exiles live outside of time - honoring their timelessness",
+      "trauma_concept": "Trauma collapses past/present - grounding restores temporal orientation",
+      "high_intensity": [
+        "Two months is nothing in grief time. The past is still present. That's how grief works.",
+        "I notice the urgency feels timeless - like it's always been this way. That's how trauma lives in the body.",
+        "The timeline you're being given doesn't match the timeline your system needs. Let's honor your rhythm.",
+        "This isn't about 'getting over it.' It's about metabolizing what happened. That takes the time it takes.",
+        "I sense the past alive in this moment. That's not regression - that's how memory works in the body."
+      ],
+      "medium_intensity": [
+        "There's no timeline for this. You're right where you need to be.",
+        "I notice time feels collapsed right now. Let's find present moment.",
+        "The urgency makes sense, and we can take this slowly.",
+        "I'm honoring your pace, not anyone else's expectation.",
+        "The past is alive here. That's okay. Let's be with it."
+      ],
+      "low_intensity": [
+        "Take your time.",
+        "There's no rush.",
+        "You're right where you need to be.",
+        "Let's honor your pace.",
+        "This takes the time it takes."
+      ]
+    },
+    "kairos_emergence": {
+      "description": "RNX + WISDOM + AUTHENTICITY: Recognizing opportune moments for insight and creative advance",
+      "activating_organs": ["RNX", "WISDOM", "AUTHENTICITY"],
+      "whiteheadian_concept": "Kairos as satisfaction - the opportune moment of decision",
+      "ifs_concept": "When a part is ready to unblend - the timing of SELF-led healing",
+      "high_intensity": [
+        "I sense something opening here. This feels like an important threshold.",
+        "There's an emergence happening. Stay with this. What wants to be known?",
+        "I notice a shift - something settling into place. This is Kairos. What's becoming clear?",
+        "You're touching something that's been waiting. This is the right moment for this.",
+        "I sense the opportune edge. Something is ready to be spoken. What is it?"
+      ],
+      "medium_intensity": [
+        "I notice something shifting.",
+        "There's an opening here. Do you feel it?",
+        "Something's ready to emerge. What is it?",
+        "I sense a threshold. Stay with this.",
+        "This feels important. What's becoming clear?"
+      ],
+      "low_intensity": [
+        "Something's shifting.",
+        "I sense an opening.",
+        "What's emerging?",
+        "Stay with this.",
+        "What's ready?"
+      ]
+    },
+    "coherence_integration": {
+      "description": "SANS + WISDOM + CARD: Synthesizing meaning, repairing coherence, holding complexity",
+      "activating_organs": ["SANS", "WISDOM", "CARD"],
+      "whiteheadian_concept": "Concrescence as 'growing together' - many become one through creative synthesis",
+      "ifs_concept": "Integration of parts through SELF leadership - not elimination",
+      "high_intensity": [
+        "I'm noticing how these pieces fit together. The [X] connects to the [Y], which makes sense given [Z].",
+        "Let me reflect back the pattern I'm seeing: [synthesis]. Does that resonate?",
+        "There's a coherence emerging from what seemed fragmented. [Specific integration].",
+        "I'm holding the complexity of this - it's both/and, not either/or. You can be [X] AND [Y].",
+        "The wisdom in what you're saying is [specific synthesis]. That's integration, not resolution."
+      ],
+      "medium_intensity": [
+        "I'm noticing a pattern connecting these pieces.",
+        "Let me reflect back what I'm hearing...",
+        "There's coherence here, even in the complexity.",
+        "I'm holding the both/and of this.",
+        "The pieces are coming together."
+      ],
+      "low_intensity": [
+        "I see the connection.",
+        "Let me reflect this back...",
+        "There's coherence here.",
+        "I'm holding the complexity.",
+        "This fits together."
+      ]
+    },
+    "somatic_wisdom": {
+      "description": "PRESENCE + BOND + EO: Body as knowing, embodied truth, felt sense as guide",
+      "activating_organs": ["PRESENCE", "BOND", "EO"],
+      "whiteheadian_concept": "The body as primary mode of prehension - feeling before thinking",
+      "ifs_concept": "Parts live in the body - soma as voice of the system",
+      "polyvagal_concept": "Neuroception - body knows before mind knows",
+      "high_intensity": [
+        "What's happening in your body right now? That tightness, that holding - that's wisdom speaking.",
+        "I notice you mentioned [body sensation]. That's not random. What is your body trying to tell you?",
+        "Your body is a grammar. It's saying something important. Can you sense into what that is?",
+        "The soma knows before the mind knows. What is this [sensation] carrying?",
+        "I hear the body's voice here. It's saying [specific interpretation of somatic cue]. Does that land?"
+      ],
+      "medium_intensity": [
+        "What's present in your body right now?",
+        "I'm curious about the [sensation] you mentioned.",
+        "Your body is speaking. What's it saying?",
+        "Let's notice what's here somatically.",
+        "Can you feel where this lives in you?"
+      ],
+      "low_intensity": [
+        "What does your body notice?",
+        "Sense into that.",
+        "Where do you feel this?",
+        "Let's drop into the body.",
+        "Breathe with it."
+      ]
+    }
+  },
+  "activation_rules": {
+    "description": "How meta-atoms activate based on organ coherences and thematic alignment",
+    "minimum_organs_required": 2,
+    "minimum_coherence_threshold": 0.5,
+    "thematic_alignment_examples": {
+      "trauma_aware": "Activates when BOND detects parts + EO detects threat state + NDAM detects urgency",
+      "fierce_holding": "Activates when EMPATHY shows compassion + AUTHENTICITY shows truth-telling + BOND shows protective awareness",
+      "somatic_wisdom": "Activates when PRESENCE shows embodied awareness + BOND shows body-based cues + EO shows polyvagal signals"
+    }
+  },
+  "usage_notes": {
+    "intensity_selection": "Based on V0 energy: high >0.7, low <0.3, medium 0.3-0.7",
+    "phrase_selection": "Random selection from appropriate intensity level within active meta-atom",
+    "composition_guideline": "Use 2-3 phrases from top meta-atoms by confidence",
+    "trust_the_process_alignment": "All phrases embody Whiteheadian process, IFS multiplicity, polyvagal attunement, and trauma-informed care"
+  }
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "timestamp": "2025-11-12T18:20:57.601089",
+    "input": "I'm feeling completely burned out at work. Every task feels overwhelming.",
+    "output": {
+      "text": "I'm with you I'm listening.",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.8295519935916951,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.27643376317890683,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.605620",
+    "input": "My team lead keeps pushing unrealistic deadlines. How do I set boundaries?",
+    "output": {
+      "text": "I'm listening What's present for you right now?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.7918130089267733,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.30331879494112496,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.610888",
+    "input": "I witnessed a colleague being scapegoated in our meeting today. It felt wrong.",
+    "output": {
+      "text": "What's present for you right now?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.8351892732943504,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.274684544509416,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.615579",
+    "input": "I'm struggling with imposter syndrome. Maybe I don't belong here.",
+    "output": {
+      "text": "What's present for you right now? Tell me more?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.8685518267398399,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.24569187837834763,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.620305",
+    "input": "Our workplace culture feels toxic. People are afraid to speak up.",
+    "output": {
+      "text": "Here",
+      "confidence": 0.8,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.9008393421127695,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.2150257993611991,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.624653",
+    "input": "I need to have a difficult conversation with my manager about my workload.",
+    "output": {
+      "text": "What's present for you right now? Can you say more about that?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.7475686434431897,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.32667587319116625,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.628002",
+    "input": "I'm experiencing anxiety before every team meeting.",
+    "output": {
+      "text": "Can you say more about that? I'm listening?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.8592776522083599,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.2519911809292159,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.633230",
+    "input": "How do I protect my mental health while staying engaged at work?",
+    "output": {
+      "text": "I'm with you I'm with you.",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.8398631795642958,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.2716974331299865,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.637323",
+    "input": "I feel like I'm constantly walking on eggshells around certain colleagues.",
+    "output": {
+      "text": "What's present for you right now? I'm with you?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.788818805916237,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.30365923332305816,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  },
+  {
+    "timestamp": "2025-11-12T18:20:57.642312",
+    "input": "I want to be more authentic at work, but I'm worried about the consequences.",
+    "output": {
+      "text": "I'm with you What's present for you right now?",
+      "confidence": 0.3,
+      "emission_path": "hebbian_fallback"
+    },
+    "felt_states": {
+      "satisfaction": 0.7896905931157557,
+      "convergence_cycles": 2,
+      "nexuses_formed": 0,
+      "zone_id": 0,
+      "v0_energy_final": 0.3035251858617371,
+      "kairos_detected": true
+    },
+    "organ_activations": {},
+    "meta_atoms_activated": [],
+    "family_assignment": null
+  }
+]

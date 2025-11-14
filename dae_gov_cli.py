@@ -29,7 +29,7 @@ from pathlib import Path
 from datetime import datetime
 import json
 import numpy as np
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 
 # Add project to path
 sys.path.insert(0, str(Path(__file__).parent))
@@ -506,10 +506,19 @@ class DAEGovCLI:
         # Pre-search knowledge base to compute appetition
         knowledge_pre_search = self.search_knowledge(user_input, k=5)
         knowledge_available = len(knowledge_pre_search) > 0
-        knowledge_relevance = np.mean([k.get('score', 0.0) for k in knowledge_pre_search]) if knowledge_available else 0.0
+        # FIX: search_knowledge returns 'similarity' not 'score'
+        knowledge_relevance = np.mean([k.get('similarity', 0.0) for k in knowledge_pre_search]) if knowledge_available else 0.0
 
         # CONVERSATIONAL ORGANS LAYER: Process through 5 organs with curiosity triggering
         conversational_analysis = self._process_conversational_organs(user_input)
+
+        # DEBUG: Show knowledge search results
+        print(f"\n[DEBUG APPETITION INPUTS]")
+        print(f"   Knowledge available: {knowledge_available}")
+        print(f"   Knowledge count: {len(knowledge_pre_search)}")
+        print(f"   Knowledge relevance (avg similarity): {knowledge_relevance:.3f}")
+        if knowledge_pre_search:
+            print(f"   Individual similarities: {[k.get('similarity', 0.0) for k in knowledge_pre_search]}")
 
         # Compute organism's appetition to provide substantive answer
         appetition_result = self._compute_appetition_to_answer(
@@ -518,6 +527,16 @@ class DAEGovCLI:
             conversational_analysis=conversational_analysis
         )
 
+        # DEBUG: Show appetition calculation breakdown
+        print(f"\n[DEBUG APPETITION CALCULATION]")
+        print(f"   Components:")
+        print(f"     Knowledge contrib (0.4 × {knowledge_relevance:.3f}): {appetition_result['components']['knowledge_contribution']:.3f}")
+        print(f"     Coherence contrib (0.3 × {appetition_result['mean_coherence']:.3f}): {appetition_result['components']['coherence_contribution']:.3f}")
+        print(f"     Energy contrib (0.2 × {1-appetition_result['organism_energy']:.3f}): {appetition_result['components']['energy_contribution']:.3f}")
+        print(f"     Resonance contrib (0.1 × {appetition_result['resonance']:.3f}): {appetition_result['components']['resonance_contribution']:.3f}")
+        print(f"   TOTAL APPETITION: {appetition_result['appetition_to_answer']:.3f}")
+        print(f"   Threshold: 0.600")
+
         # If organism has strong appetition AND knowledge available → ANSWER
         if appetition_result['appetition_to_answer'] > 0.6 and knowledge_available:
             print(f"\n✨ [APPETITION TO ANSWER: {appetition_result['appetition_to_answer']:.2f}]")
@@ -525,18 +544,139 @@ class DAEGovCLI:
             print(f"   Coherence: {appetition_result['mean_coherence']:.2f}")
             print(f"   Energy: {appetition_result['organism_energy']:.2f}\n")
 
-            # Generate substantive response using knowledge
-            response = self._generate_knowledge_response(
+            # NEW: Determine if query needs V0 energy descent (deep synthesis)
+            query_complexity = self._compute_query_complexity(user_input)
+            use_deep_synthesis = (
+                query_complexity > 0.5 or                      # Complex query
+                len(knowledge_pre_search) > 3 or               # Many sources
+                appetition_result['appetition_to_answer'] > 0.8  # Very high appetition
+            )
+
+            if use_deep_synthesis:
+                # V0 ENERGY PATH: Iterative deep synthesis
+                print(f"🌀 [V0 ENERGY DESCENT: Deep synthesis initiated]")
+                print(f"   Complexity: {query_complexity:.2f}")
+                print(f"   Max cycles: 5\n")
+
+                v0_result = self._v0_energy_descent_for_synthesis(
+                    user_input=user_input,
+                    knowledge=knowledge_pre_search,
+                    conversational_analysis=conversational_analysis,
+                    appetition_result=appetition_result,
+                    max_cycles=5
+                )
+
+                print(f"\n🎯 [V0 CONVERGENCE]")
+                print(f"   Cycles: {v0_result['cycles']}")
+                print(f"   Final Energy: {v0_result['final_energy']:.3f}")
+                print(f"   Final Satisfaction: {v0_result['final_satisfaction']:.3f}")
+                print(f"   Kairos: {'✓' if v0_result['kairos_achieved'] else '✗'}\n")
+
+                response = v0_result['synthesis_text']
+                decision_path = [('APPETITION_GATE', 'V0_DEEP_SYNTHESIS')]
+
+            else:
+                # FAST PATH: Quick knowledge response (existing)
+                print(f"⚡ [FAST PATH: Quick knowledge response]\n")
+
+                response = self._generate_knowledge_response(
+                    user_input=user_input,
+                    knowledge=knowledge_pre_search,
+                    conversational_analysis=conversational_analysis,
+                    appetition_result=appetition_result
+                )
+
+                decision_path = [('APPETITION_GATE', 'SUBSTANTIVE_ANSWER')]
+
+            # === SELF-FEEDING LOOP: Evaluate own response before returning ===
+            draft_result = {
+                'cascade_state': {
+                    'response_text': response,
+                    'decision_path': decision_path,
+                    'safety_level': None,
+                    'self_led': True,
+                    'organ_coherence': appetition_result['mean_coherence']
+                },
+                'knowledge_context': knowledge_pre_search,
+                'organism_analysis': {
+                    'gate_decision': 'APPETITION_ANSWER',
+                    'appetition_to_answer': appetition_result['appetition_to_answer'],
+                    'knowledge_sources': len(knowledge_pre_search),
+                    'mean_coherence': appetition_result['mean_coherence']
+                },
+                'conversational_organs': conversational_analysis,
+                'appetition_result': appetition_result
+            }
+
+            # Compute self-satisfaction (Phase 1 - Self-Feeding Loop)
+            self_satisfaction, satisfaction_components = self._compute_self_satisfaction(draft_result)
+
+            print(f"🔍 [SELF-SATISFACTION: {self_satisfaction:.3f}]")
+            print(f"   Components: coherence={satisfaction_components['coherence']:.2f}, "
+                  f"appetition={satisfaction_components['appetition']:.2f}, "
+                  f"spontaneity={satisfaction_components['spontaneity']:.2f}")
+            print(f"   Threshold: 0.75 (current implementation: observe only)\n")
+
+            # === SELF-FEEDING ITERATION LOOP (Phase 1B) ===
+            # If unsatisfied, iterate with template variation (up to 3 attempts)
+            max_iterations = 3
+            iteration_count = 1
+
+            while self_satisfaction < 0.75 and iteration_count < max_iterations:
+                print(f"⚠️  [ITERATION {iteration_count + 1}: Self-satisfaction below threshold]")
+
+                # Backward pass: Identify weak component and get adjustment strategy
+                adjusted_weights = self._backward_pass_adjust_organs(
+                    draft_result,
+                    self_satisfaction,
+                    satisfaction_components
+                )
+
+                # Vary the template based on weak component
+                # (Simplified for Phase 1 - template selection mode)
+                # In Phase 2 (Pure Emission), this will be full organ re-processing
+                response = self._vary_template_response(
+                    original_response=response,
+                    adjusted_weights=adjusted_weights,
+                    decision_path=decision_path,
+                    conversational_analysis=conversational_analysis,
+                    user_input=user_input
+                )
+
+                # Re-evaluate satisfaction with new response
+                draft_result['cascade_state']['response_text'] = response
+                self_satisfaction, satisfaction_components = self._compute_self_satisfaction(draft_result)
+
+                print(f"🔍 [SELF-SATISFACTION: {self_satisfaction:.3f}]")
+                print(f"   Components: coherence={satisfaction_components['coherence']:.2f}, "
+                      f"appetition={satisfaction_components['appetition']:.2f}, "
+                      f"spontaneity={satisfaction_components['spontaneity']:.2f}\n")
+
+                iteration_count += 1
+
+            # Log final iteration result
+            if iteration_count > 1:
+                if self_satisfaction >= 0.75:
+                    print(f"✅ [SATISFACTION ACHIEVED after {iteration_count} iterations]\n")
+                else:
+                    print(f"⚠️  [MAX ITERATIONS REACHED - Proceeding with best attempt]\n")
+
+            # === DUAL VALIDATION TRACKING (Phase 1B) ===
+            # Track self-satisfaction for learning calibration
+            # Note: User feedback will be captured on next turn (if provided)
+            self._track_dual_validation(
                 user_input=user_input,
-                knowledge=knowledge_pre_search,
-                conversational_analysis=conversational_analysis,
-                appetition_result=appetition_result
+                response=response,
+                self_satisfaction=self_satisfaction,
+                satisfaction_components=satisfaction_components,
+                iteration_count=iteration_count,
+                user_feedback=None  # Will be updated on next interaction
             )
 
             return {
                 'cascade_state': {
                     'response_text': response,
-                    'decision_path': [('APPETITION_GATE', 'SUBSTANTIVE_ANSWER')],
+                    'decision_path': decision_path,
                     'safety_level': None,
                     'self_led': True,
                     'organ_coherence': appetition_result['mean_coherence']
@@ -552,7 +692,8 @@ class DAEGovCLI:
                     'self_energy': 0.85,
                     'dominant_c': 'wisdom',
                     'ofel_energy': appetition_result['organism_energy'],
-                    'aggregate_coherence': appetition_result['mean_coherence']
+                    'aggregate_coherence': appetition_result['mean_coherence'],
+                    'self_satisfaction': self_satisfaction  # NEW: Track satisfaction
                 },
                 'conversational_organs': conversational_analysis,
                 'timestamp': datetime.now().isoformat()
@@ -1610,6 +1751,872 @@ class DAEGovCLI:
             response_parts.append(
                 "\n\n🌱 I'm curious what drew you to ask about this right now?"
             )
+
+        return "".join(response_parts)
+
+    def _compute_self_satisfaction(self, draft_result: Dict) -> Tuple[float, Dict[str, float]]:
+        """
+        Compute organism's OWN satisfaction with draft response (Phase 1 - Self-Feeding Loop).
+
+        This is the "loss function" analog - but inverted (higher = better).
+        Organism evaluates its own response quality BEFORE showing to user.
+
+        Components (weighted):
+        1. Organ coherence (30%): Are organs confident in their processing?
+        2. Appetition alignment (25%): Did we satisfy our own drive to answer/ask?
+        3. Knowledge grounding (20%): Is response grounded in knowledge base?
+        4. Spontaneity score (15%): Is response creative or template-bound?
+        5. Ground truth hunger (10%): Did we ask for user's specific truth if needed?
+
+        Returns:
+            satisfaction: 0.0-1.0 (higher = more satisfied with draft)
+            components: Dict with individual component scores (for backward pass)
+        """
+        # Extract components from draft result
+        conversational_analysis = draft_result.get('conversational_organs', {})
+        appetition_result = draft_result.get('appetition_result', {})
+        response_text = draft_result.get('cascade_state', {}).get('response_text', '')
+        knowledge_context = draft_result.get('knowledge_context', [])
+
+        # === 1. ORGAN COHERENCE (30%) ===
+        organ_coherences = []
+        organ_results = conversational_analysis.get('organ_results', {})
+        for organ_name, organ_result in organ_results.items():
+            if hasattr(organ_result, 'coherence'):
+                organ_coherences.append(organ_result.coherence)
+
+        coherence_satisfaction = float(np.mean(organ_coherences)) if organ_coherences else 0.5
+
+        # === 2. APPETITION ALIGNMENT (25%) ===
+        # Did we satisfy our own drive?
+        appetition = appetition_result.get('appetition_to_answer', 0.5)
+        knowledge_available = len(knowledge_context) > 0
+
+        if appetition > 0.6 and knowledge_available:
+            # High appetition + knowledge → should have answered substantively
+            appetition_alignment = 1.0 if len(response_text) > 200 else 0.6
+        elif appetition <= 0.6:
+            # Low appetition → should have asked curious question
+            appetition_alignment = 1.0 if '?' in response_text else 0.5
+        else:
+            appetition_alignment = 0.7
+
+        # === 3. KNOWLEDGE GROUNDING (20%) ===
+        # Is response grounded in knowledge base?
+        if knowledge_available and len(knowledge_context) > 0:
+            # Simple heuristic: check if response mentions knowledge sources
+            knowledge_grounding = 0.9 if len(response_text) > 100 else 0.6
+        else:
+            knowledge_grounding = 0.6  # Neutral if no knowledge available
+
+        # === 4. SPONTANEITY SCORE (15%) ===
+        # Is response creative or template-bound?
+        spontaneity = self._compute_spontaneity_score(response_text)
+
+        # === 5. GROUND TRUTH HUNGER SATISFIED (10%) ===
+        # Did we ask for user's specific truth if needed?
+        ground_truth_hunger = appetition_result.get('knowledge_relevance', 0.5)
+        if ground_truth_hunger < 0.5:
+            # Low knowledge relevance → should have asked for specificity
+            specificity_words = ['your', 'specific', 'feel like', 'image', 'flavor', 'texture']
+            hunger_satisfied = 1.0 if any(word in response_text.lower() for word in specificity_words) else 0.4
+        else:
+            hunger_satisfied = 0.7  # Neutral if knowledge sufficient
+
+        # === WEIGHTED SUM ===
+        self_satisfaction = (
+            0.30 * coherence_satisfaction +
+            0.25 * appetition_alignment +
+            0.20 * knowledge_grounding +
+            0.15 * spontaneity +
+            0.10 * hunger_satisfied
+        )
+
+        # === COMPONENT BREAKDOWN (for backward pass) ===
+        components = {
+            'coherence': coherence_satisfaction,
+            'appetition': appetition_alignment,
+            'knowledge': knowledge_grounding,
+            'spontaneity': spontaneity,
+            'hunger': hunger_satisfied
+        }
+
+        return float(np.clip(self_satisfaction, 0.0, 1.0)), components
+
+    def _compute_spontaneity_score(self, response_text: str) -> float:
+        """
+        Estimate spontaneity/creativity of response.
+
+        High spontaneity indicators:
+        - Uses poetic structure (haiku, line breaks)
+        - Novel metaphors
+        - Questions that open space
+        - Variety in sentence structure
+
+        Low spontaneity indicators:
+        - Template phrases ("I hear that...")
+        - Predictable structure
+        - Generic language
+
+        Returns:
+            spontaneity: 0.0-1.0 (higher = more spontaneous/creative)
+        """
+        score = 0.5  # Base score
+
+        # Check for poetic elements (multi-line structure)
+        if '\n' in response_text and len(response_text.split('\n')) >= 3:
+            score += 0.2  # Multi-line = possibly poetic
+
+        # Check for haiku structure (rough heuristic - 3 lines)
+        lines = response_text.split('\n')
+        if len(lines) == 3 and all(len(line.split()) <= 10 for line in lines):
+            score += 0.3  # Could be haiku
+
+        # Check for metaphor indicators
+        metaphor_words = ['like', 'as if', 'mountain', 'river', 'seed', 'ocean', 'tree', 'frozen', 'spring']
+        if any(word in response_text.lower() for word in metaphor_words):
+            score += 0.1
+
+        # Check for ground truth demands (spontaneous specificity seeking)
+        specificity_words = ['your', 'specific', 'flavor', 'image', 'temperature', 'color', 'texture']
+        if any(word in response_text.lower() for word in specificity_words):
+            score += 0.1
+
+        # Penalize template phrases (predictable, not spontaneous)
+        template_phrases = ['I hear that', 'It sounds like', 'What I\'m noticing', 'Can you say more']
+        if any(phrase in response_text for phrase in template_phrases):
+            score -= 0.2
+
+        return float(np.clip(score, 0.0, 1.0))
+
+    def _backward_pass_adjust_organs(
+        self,
+        draft_result: Dict,
+        self_satisfaction: float,
+        satisfaction_components: Dict
+    ) -> Dict[str, float]:
+        """
+        Backward pass: Adjust organ weights based on self-satisfaction gradient (Phase 1B - Self-Feeding Loop).
+
+        Analogous to LLM backpropagation, but using felt satisfaction instead of external gradients.
+
+        Strategy:
+        1. Identify weakest component (lowest satisfaction contributor)
+        2. Boost corresponding organ(s) to improve that component
+        3. Return adjusted weights for re-processing
+
+        Organ mapping to satisfaction components:
+        - LISTENING → Ground truth hunger (seeking specificity)
+        - EMPATHY → Appetition alignment (drive satisfaction)
+        - WISDOM → Knowledge grounding (evidence-based)
+        - AUTHENTICITY → Spontaneity (creativity, novel responses)
+        - PRESENCE → Organ coherence (confidence in processing)
+
+        Args:
+            draft_result: The draft response result
+            self_satisfaction: Overall satisfaction score (0.0-1.0)
+            satisfaction_components: Dict with individual component scores
+
+        Returns:
+            adjusted_weights: Dict[organ_name, weight_multiplier]
+                              (1.0 = no change, >1.0 = boost, <1.0 = reduce)
+        """
+        # Extract component scores (from self_satisfaction function)
+        coherence_satisfaction = satisfaction_components.get('coherence', 0.5)
+        appetition_alignment = satisfaction_components.get('appetition', 0.5)
+        knowledge_grounding = satisfaction_components.get('knowledge', 0.5)
+        spontaneity = satisfaction_components.get('spontaneity', 0.5)
+        hunger_satisfied = satisfaction_components.get('hunger', 0.5)
+
+        # Identify weakest component (needs most improvement)
+        component_scores = {
+            'coherence': (coherence_satisfaction, 'PRESENCE'),
+            'appetition': (appetition_alignment, 'EMPATHY'),
+            'knowledge': (knowledge_grounding, 'WISDOM'),
+            'spontaneity': (spontaneity, 'AUTHENTICITY'),
+            'hunger': (hunger_satisfied, 'LISTENING')
+        }
+
+        # Sort by score (ascending - weakest first)
+        sorted_components = sorted(component_scores.items(), key=lambda x: x[1][0])
+        weakest_component, (weakest_score, primary_organ) = sorted_components[0]
+
+        # Initialize adjustment weights (default: no change)
+        adjusted_weights = {
+            'LISTENING': 1.0,
+            'EMPATHY': 1.0,
+            'WISDOM': 1.0,
+            'AUTHENTICITY': 1.0,
+            'PRESENCE': 1.0
+        }
+
+        # === ADJUSTMENT STRATEGY (Based on Weakest Component) ===
+
+        # Compute boost amount (inversely proportional to weakness)
+        # Weaker component → larger boost
+        boost_amount = 1.0 + (1.0 - weakest_score) * 0.5  # Max boost: 1.5×
+
+        if weakest_component == 'coherence':
+            # Low coherence → Boost PRESENCE (grounding, attunement)
+            adjusted_weights['PRESENCE'] = boost_amount
+            print(f"   🔧 Adjusting: Boost PRESENCE {boost_amount:.2f}× (improve coherence)")
+
+        elif weakest_component == 'appetition':
+            # Low appetition alignment → Boost EMPATHY (drive satisfaction)
+            adjusted_weights['EMPATHY'] = boost_amount
+            print(f"   🔧 Adjusting: Boost EMPATHY {boost_amount:.2f}× (improve appetition)")
+
+        elif weakest_component == 'knowledge':
+            # Low knowledge grounding → Boost WISDOM (knowledge integration)
+            adjusted_weights['WISDOM'] = boost_amount
+            print(f"   🔧 Adjusting: Boost WISDOM {boost_amount:.2f}× (improve knowledge)")
+
+        elif weakest_component == 'spontaneity':
+            # Low spontaneity → Boost AUTHENTICITY (creativity, novelty)
+            adjusted_weights['AUTHENTICITY'] = boost_amount
+            # Also slightly boost LISTENING (encourage ground truth demands)
+            adjusted_weights['LISTENING'] = 1.0 + (1.0 - weakest_score) * 0.2
+            print(f"   🔧 Adjusting: Boost AUTHENTICITY {boost_amount:.2f}× + LISTENING 1.{int((1.0 - weakest_score) * 20):02d}× (improve spontaneity)")
+
+        elif weakest_component == 'hunger':
+            # Low ground truth hunger → Boost LISTENING (specificity seeking)
+            adjusted_weights['LISTENING'] = boost_amount
+            print(f"   🔧 Adjusting: Boost LISTENING {boost_amount:.2f}× (improve hunger)")
+
+        # === ADDITIONAL ADJUSTMENTS (Secondary Weak Components) ===
+
+        # If TWO components are weak (< 0.6), adjust both
+        if len([c for c in sorted_components[:2] if c[1][0] < 0.6]) == 2:
+            second_component, (second_score, second_organ) = sorted_components[1]
+            secondary_boost = 1.0 + (1.0 - second_score) * 0.25  # Smaller boost
+            adjusted_weights[second_organ] = max(adjusted_weights[second_organ], secondary_boost)
+            print(f"   🔧 Secondary: Boost {second_organ} {secondary_boost:.2f}× (improve {second_component})")
+
+        return adjusted_weights
+
+    def _vary_template_response(
+        self,
+        original_response: str,
+        adjusted_weights: Dict[str, float],
+        decision_path: List,
+        conversational_analysis: Dict,
+        user_input: str
+    ) -> str:
+        """
+        Vary the template response based on adjusted organ weights (Phase 1B - Self-Feeding Loop).
+
+        This is Phase 1 (Selection mode) - we vary template selection based on weak components.
+        In Phase 2 (Emission mode), this becomes full compositional regeneration.
+
+        Strategy:
+        - If AUTHENTICITY boosted → Add creative variation (metaphors, specificity)
+        - If LISTENING boosted → Add ground truth demands (your, specific, what flavor)
+        - If WISDOM boosted → Add knowledge references
+        - If EMPATHY boosted → Add compassionate framing
+        - If PRESENCE boosted → Add sensory grounding
+
+        Args:
+            original_response: The initial response text
+            adjusted_weights: Dict of organ weight multipliers
+            decision_path: Response generation path
+            conversational_analysis: Organ analysis results
+            user_input: Original user input
+
+        Returns:
+            varied_response: Modified response text
+        """
+        response = original_response
+
+        # Find the most boosted organ (highest weight > 1.0)
+        boosted_organ = max(adjusted_weights.items(), key=lambda x: x[1])
+        organ_name, boost_amount = boosted_organ
+
+        if boost_amount <= 1.0:
+            # No boost needed - return original
+            return response
+
+        # === AUTHENTICITY BOOST → Add creative spontaneity ===
+        if organ_name == 'AUTHENTICITY' and boost_amount > 1.0:
+            # Add metaphoric or specific variation
+            if '?' in response:
+                # Transform generic question into specific one
+                response = response.replace("Can you say more about that?",
+                                           "What does that feel like for you - heavy, light, tangled, frozen?")
+                response = response.replace("What's going on?",
+                                           "What's the texture of this moment for you - rough, smooth, jagged?")
+                response = response.replace("Tell me more",
+                                           "What specific image or flavor captures this feeling?")
+            else:
+                # Add poetic touch to statements
+                if not any(word in response.lower() for word in ['like', 'as if', 'mountain', 'river', 'ocean']):
+                    response += "\n\nLike a river finding its course, perhaps."
+
+        # === LISTENING BOOST → Add ground truth hunger ===
+        elif organ_name == 'LISTENING' and boost_amount > 1.0:
+            # Add specificity demands
+            if '?' not in response:
+                response += "\n\nWhat's YOUR specific experience of this - not the concept, but the felt sense?"
+            else:
+                # Make existing question more specific
+                response = response.replace("?", " - in your body, in your experience?")
+
+        # === WISDOM BOOST → Add knowledge depth ===
+        elif organ_name == 'WISDOM' and boost_amount > 1.0:
+            # Reference knowledge or patterns (simplified - Phase 1)
+            response += "\n\nThis connects to deeper patterns of meaning and understanding."
+
+        # === EMPATHY BOOST → Add compassionate framing ===
+        elif organ_name == 'EMPATHY' and boost_amount > 1.0:
+            # Add compassionate acknowledgment
+            if "?" in response:
+                response = "I sense there's something important here. " + response
+            else:
+                response = "I'm with you in this. " + response
+
+        # === PRESENCE BOOST → Add sensory grounding ===
+        elif organ_name == 'PRESENCE' and boost_amount > 1.0:
+            # Add present-moment grounding
+            response += "\n\nRight now, in this moment."
+
+        return response
+
+    def _track_dual_validation(
+        self,
+        user_input: str,
+        response: str,
+        self_satisfaction: float,
+        satisfaction_components: Dict[str, float],
+        iteration_count: int,
+        user_feedback: Optional[str] = None
+    ) -> None:
+        """
+        Track dual validation learning: self-satisfaction vs user feedback (Phase 1B - Self-Feeding Loop).
+
+        This creates a learning matrix that compares organism's self-evaluation
+        with actual user satisfaction, enabling calibration over time.
+
+        Dual Validation Matrix:
+        ┌─────────────────────┬──────────────────┬──────────────────┐
+        │                     │ User Satisfied   │ User Unsatisfied │
+        ├─────────────────────┼──────────────────┼──────────────────┤
+        │ High Self-Sat       │ ✅ Aligned       │ ⚠️ Overconfident │
+        │ (≥0.75)             │                  │                  │
+        ├─────────────────────┼──────────────────┼──────────────────┤
+        │ Low Self-Sat        │ ⚠️ Underconfident│ ✅ Aligned       │
+        │ (<0.75)             │                  │                  │
+        └─────────────────────┴──────────────────┴──────────────────┘
+
+        Args:
+            user_input: User's question/statement
+            response: Organism's final response
+            self_satisfaction: Organism's satisfaction score
+            satisfaction_components: Component breakdown
+            iteration_count: Number of iterations taken
+            user_feedback: Optional explicit user feedback
+        """
+        # Load or initialize dual validation history
+        dual_validation_file = Path("dual_validation_history.json")
+
+        if dual_validation_file.exists():
+            with open(dual_validation_file, 'r') as f:
+                history = json.load(f)
+        else:
+            history = {
+                'total_exchanges': 0,
+                'aligned_high': 0,      # High self-sat + user satisfied
+                'aligned_low': 0,       # Low self-sat + user unsatisfied
+                'overconfident': 0,     # High self-sat + user unsatisfied
+                'underconfident': 0,    # Low self-sat + user satisfied
+                'exchanges': []
+            }
+
+        # Record this exchange
+        exchange = {
+            'timestamp': datetime.now().isoformat(),
+            'user_input': user_input[:200],  # Truncate for storage
+            'response': response[:200],
+            'self_satisfaction': self_satisfaction,
+            'components': satisfaction_components,
+            'iteration_count': iteration_count,
+            'user_feedback': user_feedback,
+            'satisfaction_category': 'high' if self_satisfaction >= 0.75 else 'low'
+        }
+
+        # If we have explicit user feedback, categorize the alignment
+        if user_feedback:
+            user_satisfied = self._infer_user_satisfaction(user_feedback)
+            exchange['user_satisfied'] = user_satisfied
+
+            # Update alignment matrix
+            if self_satisfaction >= 0.75 and user_satisfied:
+                history['aligned_high'] += 1
+                exchange['alignment'] = 'aligned_high'
+            elif self_satisfaction < 0.75 and not user_satisfied:
+                history['aligned_low'] += 1
+                exchange['alignment'] = 'aligned_low'
+            elif self_satisfaction >= 0.75 and not user_satisfied:
+                history['overconfident'] += 1
+                exchange['alignment'] = 'overconfident'
+            elif self_satisfaction < 0.75 and user_satisfied:
+                history['underconfident'] += 1
+                exchange['alignment'] = 'underconfident'
+
+        history['total_exchanges'] += 1
+        history['exchanges'].append(exchange)
+
+        # Keep only last 100 exchanges to limit file size
+        if len(history['exchanges']) > 100:
+            history['exchanges'] = history['exchanges'][-100:]
+
+        # Save updated history
+        with open(dual_validation_file, 'w') as f:
+            json.dump(history, f, indent=2)
+
+    def _infer_user_satisfaction(self, user_feedback: str) -> bool:
+        """
+        Infer user satisfaction from their feedback text (simple heuristic).
+
+        Positive indicators: "yes", "thank you", "helpful", "that makes sense", "I see"
+        Negative indicators: "no", "not really", "confused", "I don't understand"
+
+        Returns:
+            satisfied: True if user seems satisfied, False otherwise
+        """
+        feedback_lower = user_feedback.lower()
+
+        # Positive indicators
+        positive_words = ['yes', 'thank', 'helpful', 'makes sense', 'i see',
+                         'that helps', 'good', 'appreciate', 'clear']
+        # Negative indicators
+        negative_words = ['no', 'not really', 'confused', 'don\'t understand',
+                         'not helpful', 'unclear', 'missed', 'wrong']
+
+        positive_count = sum(1 for word in positive_words if word in feedback_lower)
+        negative_count = sum(1 for word in negative_words if word in feedback_lower)
+
+        # Default to satisfied if unclear (optimistic bias)
+        return positive_count > negative_count
+
+    def _v0_energy_descent_for_synthesis(
+        self,
+        user_input: str,
+        knowledge: List[Dict],
+        conversational_analysis: Dict,
+        appetition_result: Dict,
+        max_cycles: int = 5
+    ) -> Dict:
+        """
+        Perform V0 energy descent for deep knowledge synthesis.
+
+        Implements DAE 3.0-style iterative concrescence for conversational responses.
+
+        Whiteheadian Formula:
+            E_v0 = α(1-S) + β·ΔE + γ(1-A) + δ(1-R) + ζ·φ(I)
+
+        Convergence (Kairos Moment):
+            S ∈ [0.45, 0.70] AND ΔE < 0.05
+
+        Args:
+            user_input: User's question
+            knowledge: Pre-searched knowledge base results (k=5)
+            conversational_analysis: Organ activation results
+            appetition_result: Computed appetition scores
+            max_cycles: Maximum energy descent cycles (default 5)
+
+        Returns:
+            {
+                'synthesis_text': str,          # Final deep synthesis
+                'final_energy': float,          # Final E value
+                'final_satisfaction': float,    # Final S value
+                'cycles': int,                  # Cycles to convergence
+                'kairos_achieved': bool,        # True if converged
+                'synthesis_trajectory': List    # Energy/satisfaction per cycle
+            }
+        """
+        # Initialize energy and satisfaction
+        E = 1.0  # Maximum uncertainty
+        S = 0.0  # No satisfaction
+        synthesis_state = self._initialize_synthesis_state(knowledge)
+        trajectory = []
+        E_prev = E
+
+        for cycle in range(max_cycles):
+            # Compute V0 energy components (DAE 3.0 formula)
+            # α = 0.40 (satisfaction weight)
+            E_satisfaction = 0.40 * (1 - S)
+
+            # β = 0.25 (delta energy weight)
+            E_delta = 0.25 * abs(E - E_prev)
+
+            # γ = 0.15 (appetition weight)
+            E_appetition = 0.15 * (1 - appetition_result['appetition_to_answer'])
+
+            # δ = 0.10 (relevance weight)
+            E_relevance = 0.10 * (1 - appetition_result['knowledge_relevance'])
+
+            # ζ = 0.10 (complexity weight)
+            E_complexity = 0.10 * self._compute_query_complexity(user_input)
+
+            # Total energy
+            E_new = E_satisfaction + E_delta + E_appetition + E_relevance + E_complexity
+            E_new = max(0.0, min(2.0, E_new))  # Clamp to reasonable range
+
+            # Deepen synthesis (organs integrate knowledge iteratively)
+            synthesis_state = self._deepen_synthesis(
+                synthesis_state=synthesis_state,
+                knowledge=knowledge,
+                conversational_analysis=conversational_analysis,
+                cycle=cycle
+            )
+
+            # Update satisfaction (coherence of synthesis)
+            S = self._compute_synthesis_satisfaction(synthesis_state)
+
+            # Record trajectory
+            trajectory.append({
+                'cycle': cycle,
+                'energy': E_new,
+                'satisfaction': S,
+                'delta_energy': abs(E_new - E),
+                'synthesis_depth': len(synthesis_state.get('integrated_concepts', []))
+            })
+
+            # Check Kairos moment (convergence)
+            kairos_window = (0.45 <= S <= 0.70)
+            converged = abs(E_new - E) < 0.05
+
+            if kairos_window and converged:
+                # Insight achieved!
+                return {
+                    'synthesis_text': self._generate_deep_synthesis(synthesis_state),
+                    'final_energy': E_new,
+                    'final_satisfaction': S,
+                    'cycles': cycle + 1,
+                    'kairos_achieved': True,
+                    'synthesis_trajectory': trajectory
+                }
+
+            # Update for next cycle
+            E_prev = E
+            E = E_new
+
+        # Max cycles reached (still return best synthesis)
+        return {
+            'synthesis_text': self._generate_deep_synthesis(synthesis_state),
+            'final_energy': E,
+            'final_satisfaction': S,
+            'cycles': max_cycles,
+            'kairos_achieved': False,
+            'synthesis_trajectory': trajectory
+        }
+
+    def _initialize_synthesis_state(self, knowledge: List[Dict]) -> Dict:
+        """
+        Initialize synthesis state with knowledge sources.
+
+        Args:
+            knowledge: Knowledge base search results
+
+        Returns:
+            Synthesis state dictionary
+        """
+        return {
+            'knowledge_sources': knowledge,
+            'key_concepts': [],
+            'connections': [],
+            'integrated_concepts': [],
+            'wisdom_perspective': None,
+            'felt_grounding': None,
+            'empathetic_framing': None
+        }
+
+    def _compute_query_complexity(self, user_input: str) -> float:
+        """
+        Compute query complexity score (0.0 to 1.0).
+
+        Factors:
+        - Question marks (multiple questions)
+        - Philosophical terms
+        - Abstract concepts
+        - Length
+
+        Args:
+            user_input: User's question
+
+        Returns:
+            Complexity score (0.0 = simple, 1.0 = very complex)
+        """
+        complexity = 0.0
+        text_lower = user_input.lower()
+
+        # Multiple questions (+0.2)
+        question_marks = text_lower.count('?')
+        if question_marks > 1:
+            complexity += 0.2
+
+        # Philosophical/abstract terms (+0.1 each, max 0.4)
+        philosophical_terms = [
+            'why', 'how', 'meaning', 'purpose', 'nature', 'essence',
+            'relationship', 'understanding', 'wisdom', 'truth', 'being',
+            'becoming', 'process', 'actual', 'potential', 'experience'
+        ]
+        term_count = sum(1 for term in philosophical_terms if term in text_lower)
+        complexity += min(0.4, term_count * 0.1)
+
+        # Length (+0.2 if > 100 chars)
+        if len(user_input) > 100:
+            complexity += 0.2
+
+        # Conjunctions indicating multi-part questions (+0.2)
+        conjunctions = [' and ', ' or ', ' but ', ' however ', ' yet ']
+        if any(conj in text_lower for conj in conjunctions):
+            complexity += 0.2
+
+        return min(1.0, complexity)
+
+    def _deepen_synthesis(
+        self,
+        synthesis_state: Dict,
+        knowledge: List[Dict],
+        conversational_analysis: Dict,
+        cycle: int
+    ) -> Dict:
+        """
+        Iteratively deepen knowledge synthesis across cycles.
+
+        Cycle 0: Extract key concepts from top 3 sources
+        Cycle 1: Find cross-concept connections
+        Cycle 2+: Integrate with organ guidance (WISDOM, AUTHENTICITY, EMPATHY)
+
+        Args:
+            synthesis_state: Current synthesis state
+            knowledge: Knowledge base results
+            conversational_analysis: Organ processing results
+            cycle: Current cycle number
+
+        Returns:
+            Updated synthesis state
+        """
+        if cycle == 0:
+            # Cycle 0: Extract key concepts
+            top_knowledge = sorted(knowledge, key=lambda k: k.get('score', 0.0), reverse=True)[:3]
+            concepts = []
+
+            for item in top_knowledge:
+                text = item['text']
+                # Extract key phrases (simple heuristic: noun phrases, capitalized terms)
+                words = text.split()
+                for i, word in enumerate(words):
+                    if word[0].isupper() and i > 0:  # Capitalized mid-sentence
+                        if i + 1 < len(words) and words[i+1][0].isupper():
+                            concepts.append(f"{word} {words[i+1]}")
+                        else:
+                            concepts.append(word)
+
+            synthesis_state['key_concepts'] = list(set(concepts))[:10]  # Top 10 unique
+
+        elif cycle == 1:
+            # Cycle 1: Find connections between concepts
+            synthesis_state['connections'] = self._find_cross_concept_connections(
+                synthesis_state['key_concepts'],
+                knowledge
+            )
+
+        else:
+            # Cycle 2+: Integrate with organ guidance
+            organ_results = conversational_analysis.get('organ_results', {})
+
+            if 'WISDOM' in organ_results and organ_results['WISDOM'].coherence > 0.5:
+                synthesis_state['wisdom_perspective'] = self._add_wisdom_perspective(
+                    synthesis_state,
+                    organ_results['WISDOM']
+                )
+
+            if 'AUTHENTICITY' in organ_results and organ_results['AUTHENTICITY'].coherence > 0.5:
+                synthesis_state['felt_grounding'] = self._add_felt_grounding(
+                    synthesis_state,
+                    organ_results['AUTHENTICITY']
+                )
+
+            if 'EMPATHY' in organ_results and organ_results['EMPATHY'].coherence > 0.5:
+                synthesis_state['empathetic_framing'] = self._add_empathetic_framing(
+                    synthesis_state,
+                    organ_results['EMPATHY']
+                )
+
+            # Integrate all perspectives
+            synthesis_state['integrated_concepts'] = self._assess_integration(synthesis_state)
+
+        return synthesis_state
+
+    def _find_cross_concept_connections(self, concepts: List[str], knowledge: List[Dict]) -> List[str]:
+        """
+        Find connections between key concepts by analyzing knowledge sources.
+
+        Args:
+            concepts: List of key concepts
+            knowledge: Knowledge base results
+
+        Returns:
+            List of connection descriptions
+        """
+        connections = []
+
+        # Check which concepts co-occur in knowledge sources
+        for i, concept1 in enumerate(concepts):
+            for concept2 in concepts[i+1:]:
+                for item in knowledge:
+                    text = item['text']
+                    if concept1.lower() in text.lower() and concept2.lower() in text.lower():
+                        connections.append(f"{concept1} ⇔ {concept2}")
+                        break
+
+        return connections[:5]  # Top 5 connections
+
+    def _add_wisdom_perspective(self, synthesis_state: Dict, wisdom_organ) -> str:
+        """
+        Add WISDOM organ perspective to synthesis.
+
+        Args:
+            synthesis_state: Current synthesis state
+            wisdom_organ: WISDOM organ result
+
+        Returns:
+            Wisdom perspective text
+        """
+        # WISDOM sees patterns, larger context
+        if synthesis_state['connections']:
+            return f"These patterns reveal a deeper coherence about {synthesis_state['connections'][0]}."
+        else:
+            return "This points to fundamental questions about understanding itself."
+
+    def _add_felt_grounding(self, synthesis_state: Dict, authenticity_organ) -> str:
+        """
+        Add AUTHENTICITY (felt sense) grounding to synthesis.
+
+        Args:
+            synthesis_state: Current synthesis state
+            authenticity_organ: AUTHENTICITY organ result
+
+        Returns:
+            Felt grounding text
+        """
+        # AUTHENTICITY grounds in somatic/felt experience
+        if synthesis_state['key_concepts']:
+            concept = synthesis_state['key_concepts'][0]
+            return f"There's a felt quality to {concept} that goes beyond intellectual understanding."
+        else:
+            return "This resonates at a level deeper than words."
+
+    def _add_empathetic_framing(self, synthesis_state: Dict, empathy_organ) -> str:
+        """
+        Add EMPATHY organ framing to synthesis.
+
+        Args:
+            synthesis_state: Current synthesis state
+            empathy_organ: EMPATHY organ result
+
+        Returns:
+            Empathetic framing text
+        """
+        # EMPATHY attunes to why this question matters to the user
+        return "I sense this question touches something important for you."
+
+    def _assess_integration(self, synthesis_state: Dict) -> List[str]:
+        """
+        Assess how well synthesis has integrated across perspectives.
+
+        Args:
+            synthesis_state: Current synthesis state
+
+        Returns:
+            List of integrated concept descriptions
+        """
+        integrated = []
+
+        # Combine key concepts with connections
+        for concept in synthesis_state['key_concepts'][:3]:
+            integrated.append(concept)
+
+        # Add connections
+        for connection in synthesis_state['connections'][:2]:
+            integrated.append(connection)
+
+        return integrated
+
+    def _compute_synthesis_satisfaction(self, synthesis_state: Dict) -> float:
+        """
+        Compute satisfaction (coherence) of current synthesis.
+
+        Satisfaction increases as:
+        - More concepts extracted
+        - More connections found
+        - More organ perspectives integrated
+
+        Args:
+            synthesis_state: Current synthesis state
+
+        Returns:
+            Satisfaction score (0.0 to 1.0)
+        """
+        S = 0.0
+
+        # Concepts extracted (up to 0.3)
+        concept_count = len(synthesis_state['key_concepts'])
+        S += min(0.3, concept_count * 0.03)
+
+        # Connections found (up to 0.3)
+        connection_count = len(synthesis_state['connections'])
+        S += min(0.3, connection_count * 0.06)
+
+        # Organ perspectives integrated (up to 0.4)
+        perspective_count = sum([
+            1 if synthesis_state['wisdom_perspective'] else 0,
+            1 if synthesis_state['felt_grounding'] else 0,
+            1 if synthesis_state['empathetic_framing'] else 0
+        ])
+        S += min(0.4, perspective_count * 0.13)
+
+        return min(1.0, S)
+
+    def _generate_deep_synthesis(self, synthesis_state: Dict) -> str:
+        """
+        Generate final deep synthesis response from synthesis state.
+
+        Args:
+            synthesis_state: Completed synthesis state
+
+        Returns:
+            Deep synthesis response text
+        """
+        response_parts = []
+
+        # 1. Opening (warm, present)
+        response_parts.append("Yes, I've been sitting with this question, and here's what emerges:\n")
+
+        # 2. Knowledge synthesis (from concepts and connections)
+        if synthesis_state['key_concepts']:
+            response_parts.append("\n**Core Understanding:**\n")
+            for i, concept in enumerate(synthesis_state['key_concepts'][:3], 1):
+                response_parts.append(f"{i}. {concept}\n")
+
+        # 3. Connections (if found)
+        if synthesis_state['connections']:
+            response_parts.append(f"\n**Interconnections:**\n")
+            response_parts.append(f"What strikes me is how these ideas relate: {', '.join(synthesis_state['connections'][:3])}.\n")
+
+        # 4. Organ perspectives (depth layers)
+        if synthesis_state['wisdom_perspective']:
+            response_parts.append(f"\n🔍 {synthesis_state['wisdom_perspective']}\n")
+
+        if synthesis_state['felt_grounding']:
+            response_parts.append(f"\n🌱 {synthesis_state['felt_grounding']}\n")
+
+        if synthesis_state['empathetic_framing']:
+            response_parts.append(f"\n💚 {synthesis_state['empathetic_framing']}\n")
+
+        # 5. Invitation (continued exploration)
+        response_parts.append("\nDoes this resonate with where you're heading? I'm curious what drew you to ask about this.")
 
         return "".join(response_parts)
 

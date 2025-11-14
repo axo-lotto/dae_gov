@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-12",
+    "description": "Activation rules for meta-atoms based on organ pattern detection",
+    "philosophy": "Meta-atoms emerge when 2+ organs detect thematically aligned patterns"
+  },
+  "activation_rules": {
+    "trauma_aware": {
+      "description": "Recognition of protective patterns, parts, and trauma responses",
+      "participating_organs": ["BOND", "EO", "NDAM"],
+      "activation_conditions": {
+        "BOND": {
+          "required_atoms": ["firefighter_parts", "exile_patterns", "manager_parts"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "EO": {
+          "required_atoms": ["sympathetic", "dorsal_vagal"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "NDAM": {
+          "required_atoms": ["crisis_salience", "urgency_detection"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "safety_restoration": {
+      "description": "Co-regulation, grounding, and polyvagal safety cues",
+      "participating_organs": ["EO", "SANS", "PRESENCE"],
+      "activation_conditions": {
+        "EO": {
+          "required_atoms": ["ventral_vagal"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "SANS": {
+          "required_atoms": ["coherence_repair", "semantic_alignment"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "PRESENCE": {
+          "required_atoms": ["embodied_awareness", "grounded_holding", "here_and_now"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "window_of_tolerance": {
+      "description": "Tracking capacity limits and temporal modulation",
+      "participating_organs": ["BOND", "EO", "RNX"],
+      "activation_conditions": {
+        "BOND": {
+          "required_atoms": ["parts_awareness", "self_energy"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "EO": {
+          "required_atoms": ["ventral_vagal", "sympathetic", "dorsal_vagal"],
+          "threshold": 0.4,
+          "logic": "any"
+        },
+        "RNX": {
+          "required_atoms": ["crisis_temporal", "restorative_temporal"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "compassion_safety": {
+      "description": "Holding distress with warmth while tracking safety",
+      "participating_organs": ["EMPATHY", "EO", "SANS"],
+      "activation_conditions": {
+        "EMPATHY": {
+          "required_atoms": ["compassionate_presence", "emotional_resonance", "holding_capacity"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "EO": {
+          "required_atoms": ["ventral_vagal"],
+          "threshold": 0.4,
+          "logic": "any"
+        },
+        "SANS": {
+          "required_atoms": ["coherence_repair"],
+          "threshold": 0.4,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "fierce_holding": {
+      "description": "Holding distress with honest truth and compassion",
+      "participating_organs": ["EMPATHY", "AUTHENTICITY", "BOND"],
+      "activation_conditions": {
+        "EMPATHY": {
+          "required_atoms": ["compassionate_presence", "emotional_resonance"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "AUTHENTICITY": {
+          "required_atoms": ["honest_truth", "vulnerability_sharing", "authentic_expression"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "BOND": {
+          "required_atoms": ["self_energy", "parts_awareness"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "relational_attunement": {
+      "description": "Tracking what's said and what's underneath",
+      "participating_organs": ["LISTENING", "EMPATHY", "EO"],
+      "activation_conditions": {
+        "LISTENING": {
+          "required_atoms": ["deep_listening", "core_exploration", "temporal_inquiry"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "EMPATHY": {
+          "required_atoms": ["emotional_resonance", "attunement_precision"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "EO": {
+          "required_atoms": ["ventral_vagal", "sympathetic", "dorsal_vagal"],
+          "threshold": 0.4,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "temporal_grounding": {
+      "description": "Orienting in time, honoring timelessness of trauma",
+      "participating_organs": ["RNX", "PRESENCE", "CARD"],
+      "activation_conditions": {
+        "RNX": {
+          "required_atoms": ["restorative_temporal", "symbolic_pull", "concrescent_rhythm"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "PRESENCE": {
+          "required_atoms": ["here_and_now", "grounded_holding"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "CARD": {
+          "required_atoms": ["moderate_scale", "comprehensive_scale"],
+          "threshold": 0.4,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "kairos_emergence": {
+      "description": "Recognizing opportune moments for insight",
+      "participating_organs": ["RNX", "WISDOM", "AUTHENTICITY"],
+      "activation_conditions": {
+        "RNX": {
+          "required_atoms": ["symbolic_pull", "concrescent_rhythm"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "WISDOM": {
+          "required_atoms": ["pattern_recognition", "systems_thinking", "integrative_synthesis"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "AUTHENTICITY": {
+          "required_atoms": ["honest_truth", "authentic_expression"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "coherence_integration": {
+      "description": "Synthesizing meaning, repairing coherence",
+      "participating_organs": ["SANS", "WISDOM", "CARD"],
+      "activation_conditions": {
+        "SANS": {
+          "required_atoms": ["coherence_repair", "semantic_alignment", "integration_capacity"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "WISDOM": {
+          "required_atoms": ["pattern_recognition", "integrative_synthesis"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "CARD": {
+          "required_atoms": ["moderate_scale", "comprehensive_scale", "detailed_response"],
+          "threshold": 0.5,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    },
+    "somatic_wisdom": {
+      "description": "Body as knowing, embodied truth, felt sense",
+      "participating_organs": ["PRESENCE", "BOND", "EO"],
+      "activation_conditions": {
+        "PRESENCE": {
+          "required_atoms": ["embodied_awareness", "somatic_attunement", "body_wisdom"],
+          "threshold": 0.6,
+          "logic": "any"
+        },
+        "BOND": {
+          "required_atoms": ["parts_awareness", "self_energy"],
+          "threshold": 0.5,
+          "logic": "any"
+        },
+        "EO": {
+          "required_atoms": ["ventral_vagal", "sympathetic", "dorsal_vagal"],
+          "threshold": 0.4,
+          "logic": "any"
+        }
+      },
+      "minimum_organs": 2,
+      "confidence_formula": "mean"
+    }
+  },
+  "usage_notes": {
+    "activation_logic": "Meta-atom activates when minimum_organs meet their conditions",
+    "confidence_calculation": "Mean of participating organ activations",
+    "normalization": "Meta-atom activations are normalized (0.0-1.0) for semantic field integration",
+    "threshold_rationale": "Lower thresholds (0.4-0.5) for modulating organs (EO, CARD), higher (0.6) for primary detection"
+  }
+}

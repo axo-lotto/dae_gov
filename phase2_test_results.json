@@ -1,0 +1,215 @@
+{
+  "summary": {
+    "passed": 8,
+    "failed": 2,
+    "total": 10,
+    "pass_rate": 0.8,
+    "mean_nexuses": 2.4,
+    "mean_confidence": 0.4554330766963882,
+    "mean_cycles": 3.0,
+    "mean_v0_final": 0.1720573844786166,
+    "meta_atoms_found": [
+      "temporal_grounding",
+      "somatic_wisdom",
+      "kairos_emergence",
+      "compassion_safety",
+      "window_of_tolerance",
+      "trauma_aware",
+      "coherence_integration",
+      "safety_restoration",
+      "fierce_holding",
+      "relational_attunement"
+    ]
+  },
+  "results": [
+    {
+      "name": "Trauma Awareness (Crisis)",
+      "nexuses": 1,
+      "confidence": 0.5743188001462631,
+      "cycles": 3,
+      "v0_final": 0.18210670270576818,
+      "satisfaction": 0.8971239846564061,
+      "kairos": false,
+      "meta_atoms": [
+        "trauma_aware",
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Safety Restoration (Calming)",
+      "nexuses": 1,
+      "confidence": 0.5884551264981738,
+      "cycles": 3,
+      "v0_final": 0.20211767052516208,
+      "satisfaction": 0.8744089462510726,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "coherence_integration",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Compassion + Presence",
+      "nexuses": 3,
+      "confidence": 0.46613970376139324,
+      "cycles": 3,
+      "v0_final": 0.17335622436315162,
+      "satisfaction": 0.9062300422762953,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "compassion_safety",
+        "coherence_integration",
+        "fierce_holding",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Truth-Telling + Vulnerability",
+      "nexuses": 0,
+      "confidence": 0.3,
+      "cycles": 3,
+      "v0_final": 0.22842349506095208,
+      "satisfaction": 0.841141842071247,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence"
+      ],
+      "path": "hebbian",
+      "passed": false
+    },
+    {
+      "name": "Complex Reasoning (Integration)",
+      "nexuses": 5,
+      "confidence": 0.4715961402370876,
+      "cycles": 3,
+      "v0_final": 0.12428277885206544,
+      "satisfaction": 0.9490225398431462,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "compassion_safety",
+        "trauma_aware",
+        "coherence_integration",
+        "fierce_holding",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Window of Tolerance (Regulated)",
+      "nexuses": 3,
+      "confidence": 0.4608019222313555,
+      "cycles": 3,
+      "v0_final": 0.1423143861638772,
+      "satisfaction": 0.9385394456058003,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "compassion_safety",
+        "window_of_tolerance",
+        "coherence_integration",
+        "safety_restoration",
+        "fierce_holding",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Kairos Moment (Threshold)",
+      "nexuses": 5,
+      "confidence": 0.4600424700262303,
+      "cycles": 3,
+      "v0_final": 0.14312677369635246,
+      "satisfaction": 0.9345548153586662,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "compassion_safety",
+        "coherence_integration",
+        "fierce_holding",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Somatic Wisdom",
+      "nexuses": 0,
+      "confidence": 0.3,
+      "cycles": 3,
+      "v0_final": 0.22808959106584095,
+      "satisfaction": 0.8434475988593546,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence"
+      ],
+      "path": "hebbian",
+      "passed": false
+    },
+    {
+      "name": "Multiple Threads (Dense)",
+      "nexuses": 3,
+      "confidence": 0.46803688156964546,
+      "cycles": 3,
+      "v0_final": 0.1556152075676084,
+      "satisfaction": 0.9228341301860755,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "trauma_aware",
+        "coherence_integration",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    },
+    {
+      "name": "Fierce Holding (Boundaries)",
+      "nexuses": 3,
+      "confidence": 0.4649397224937326,
+      "cycles": 3,
+      "v0_final": 0.1411410147853876,
+      "satisfaction": 0.9382332177140799,
+      "kairos": false,
+      "meta_atoms": [
+        "temporal_grounding",
+        "somatic_wisdom",
+        "kairos_emergence",
+        "compassion_safety",
+        "coherence_integration",
+        "fierce_holding",
+        "relational_attunement"
+      ],
+      "path": "intersection",
+      "passed": true
+    }
+  ]
+}

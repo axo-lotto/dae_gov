@@ -1,0 +1,137 @@
+[
+  {
+    "user": "How does Whitehead's concept of actual occasions relate to",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.24715177646857694,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "feeling_and_subjective_form",
+      "feeling_and_subjective_form",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation"
+    ],
+    "cascade_state": {
+      "response_text": "Help me understand what you mean by that.",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T07:20:44.367371"
+  },
+  {
+    "user": "how are you?",
+    "organism_analysis": {
+      "gate_decision": "GREETING",
+      "conversational_family": "greeting",
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.95,
+      "self_energy": 0.8,
+      "dominant_c": "connectedness",
+      "ofel_energy": 0.1,
+      "aggregate_coherence": 0.95
+    },
+    "knowledge_used": [],
+    "cascade_state": {
+      "response_text": "I'm here and ready to listen. What's alive for you right now?",
+      "decision_path": [
+        [
+          "GATE_0",
+          "GREETING"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.95
+    },
+    "timestamp": "2025-11-11T07:21:01.736091"
+  },
+  {
+    "user": "i feel sad",
+    "organism_analysis": {
+      "polyvagal_state": "dorsal",
+      "polyvagal_confidence": 0.34818790392154686,
+      "self_energy": 0.5,
+      "dominant_c": "unknown",
+      "gate_decision": "CONTAIN",
+      "ofel_energy": 0.43,
+      "conversational_family": "crisis",
+      "aggregate_coherence": 0.0
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "polyvagal": {
+        "dominant_state": "dorsal",
+        "confidence": 0.34818790392154686
+      },
+      "self_energy": {
+        "self_energy_level": 0.5,
+        "confidence": 0.0,
+        "dominant_c": "unknown",
+        "cs_activation": {}
+      },
+      "ofel": {
+        "ofel_energy": 0.43
+      },
+      "decision": "CONTAIN",
+      "conversational_family": "crisis",
+      "aggregate_coherence": 0.0,
+      "satisfaction": 0.7,
+      "card_scale": "moderate",
+      "response_text": "I'm noticing intensity here. Let's pause and ground before going deeper."
+    },
+    "timestamp": "2025-11-11T07:21:11.772255"
+  },
+  {
+    "user": "what should i do?",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.5,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "feeling_and_subjective_form",
+      "feeling_and_subjective_form",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation"
+    ],
+    "cascade_state": {
+      "response_text": "I'm curious - what's that like for you?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T07:21:33.555751"
+  }
+]

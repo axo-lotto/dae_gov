@@ -1,0 +1,29 @@
+[
+  {
+    "epoch": 1,
+    "pairs_trained": 30,
+    "mean_confidence": 0.3,
+    "mean_nexus_count": 0.06666666666666667,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.33089160859411465,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 2,
+    "pairs_trained": 30,
+    "mean_confidence": 0.3,
+    "mean_nexus_count": 0.06666666666666667,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.33089160859411465,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 3,
+    "pairs_trained": 30,
+    "mean_confidence": 0.3,
+    "mean_nexus_count": 0.06666666666666667,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.33089160859411465,
+    "mean_v0_cycles": 0.0
+  }
+]

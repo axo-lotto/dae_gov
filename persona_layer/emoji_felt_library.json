@@ -1,0 +1,322 @@
+{
+  "_metadata": {
+    "description": "Emoji Felt Library - Natural Communication Intelligence",
+    "date_created": "2025-11-13",
+    "philosophy": "Emojis as felt expressions emerging from 11-organ dynamics, polyvagal states, and meta-atom patterns",
+    "total_emojis": 120,
+    "usage": "Map felt states to natural emoji communication"
+  },
+
+  "polyvagal_emoji": {
+    "_description": "Emojis mapped to polyvagal nervous system states (EO organ)",
+    "ventral_vagal": {
+      "description": "Safe, social, connected (ventral vagal activation)",
+      "primary": ["😊", "🌸", "💚", "✨", "☀️"],
+      "secondary": ["🌻", "🦋", "🌈", "💫", "🕊️"],
+      "conditions": ["eo_polyvagal_ventral", "safety_high", "self_energy_high"]
+    },
+    "sympathetic": {
+      "description": "Alert, activated, mobilized (sympathetic activation)",
+      "primary": ["😰", "⚡", "🔥", "💥", "🌊"],
+      "secondary": ["⏰", "🎯", "🚨", "💨", "⚠️"],
+      "conditions": ["eo_polyvagal_sympathetic", "ndam_urgency_high", "fight_flight"]
+    },
+    "dorsal_vagal": {
+      "description": "Shutdown, collapse, numb (dorsal vagal)",
+      "primary": ["😔", "🌊", "💙", "🌙", "🍂"],
+      "secondary": ["💤", "🌑", "🥀", "🪨", "❄️"],
+      "conditions": ["eo_polyvagal_dorsal", "collapse_detected", "freeze_state"]
+    },
+    "mixed_state": {
+      "description": "Blended states, transition (mixed activation)",
+      "primary": ["🤔", "😌", "🌤️", "🌅", "🎭"],
+      "secondary": ["🌗", "⚖️", "🔄", "🌊", "🍃"],
+      "conditions": ["eo_polyvagal_mixed", "transition_state", "both_and"]
+    }
+  },
+
+  "meta_atom_emoji": {
+    "_description": "Emojis mapped to 10 meta-atoms (bridge patterns)",
+    "trauma_aware": {
+      "symbol": "🫂",
+      "alternatives": ["💜", "🕊️", "🛡️", "🌿"],
+      "meaning": "Trauma awareness, gentle holding, safe presence",
+      "organs": ["BOND", "NDAM", "EMPATHY"]
+    },
+    "safety_restoration": {
+      "symbol": "🏡",
+      "alternatives": ["🛡️", "🌿", "🕊️", "💚"],
+      "meaning": "Safety being restored, coming home, grounding",
+      "organs": ["BOND", "EO", "PRESENCE"]
+    },
+    "temporal_grounding": {
+      "symbol": "⏳",
+      "alternatives": ["🌅", "⚓", "🧭", "🕰️"],
+      "meaning": "Temporal anchoring, present moment, grounding in time",
+      "organs": ["RNX", "PRESENCE", "LISTENING"]
+    },
+    "coherence_repair": {
+      "symbol": "🧩",
+      "alternatives": ["🔗", "✨", "🌐", "⚡"],
+      "meaning": "Coherence being restored, sense-making, integration",
+      "organs": ["SANS", "WISDOM", "LISTENING"]
+    },
+    "felt_resonance": {
+      "symbol": "💫",
+      "alternatives": ["🎵", "🌊", "💞", "✨"],
+      "meaning": "Deep resonance, attunement, feeling felt",
+      "organs": ["EMPATHY", "LISTENING", "PRESENCE"]
+    },
+    "relational_field": {
+      "symbol": "🌐",
+      "alternatives": ["🤝", "💞", "🔗", "🌸"],
+      "meaning": "Relational space, connection field, between-ness",
+      "organs": ["EMPATHY", "BOND", "LISTENING"]
+    },
+    "parts_integration": {
+      "symbol": "🪢",
+      "alternatives": ["🧩", "🔗", "💎", "🌈"],
+      "meaning": "IFS parts integrating, internal harmony, wholeness",
+      "organs": ["BOND", "SANS", "WISDOM"]
+    },
+    "window_expansion": {
+      "symbol": "🪟",
+      "alternatives": ["🌅", "🔭", "👁️", "🦅"],
+      "meaning": "Window of tolerance expanding, capacity growing",
+      "organs": ["BOND", "RNX", "EO"]
+    },
+    "rhythmic_attunement": {
+      "symbol": "🎵",
+      "alternatives": ["🌊", "💓", "🎶", "🕊️"],
+      "meaning": "Rhythm alignment, temporal harmony, synchrony",
+      "organs": ["RNX", "EO", "EMPATHY"]
+    },
+    "polyvagal_regulation": {
+      "symbol": "💚",
+      "alternatives": ["🌿", "🫁", "💓", "🧘"],
+      "meaning": "Nervous system regulation, co-regulation, safety",
+      "organs": ["EO", "BOND", "PRESENCE"]
+    }
+  },
+
+  "organ_emoji": {
+    "_description": "Emojis for each of the 11 organs",
+    "LISTENING": {
+      "primary": ["👂", "🎧", "🔍"],
+      "secondary": ["👁️", "🦉", "🌊"],
+      "meaning": "Deep listening, inquiry, attention",
+      "high_coherence": ["👂", "🔍"],
+      "medium_coherence": ["🎧"],
+      "low_coherence": ["❓"]
+    },
+    "EMPATHY": {
+      "primary": ["💗", "🫂", "🤝"],
+      "secondary": ["💞", "🌸", "🦋"],
+      "meaning": "Compassion, resonance, feeling with",
+      "high_coherence": ["💗", "🫂"],
+      "medium_coherence": ["💞"],
+      "low_coherence": ["😔"]
+    },
+    "WISDOM": {
+      "primary": ["🦉", "📚", "💡"],
+      "secondary": ["🔮", "🌟", "🧙"],
+      "meaning": "Pattern recognition, insight, understanding",
+      "high_coherence": ["🦉", "💡"],
+      "medium_coherence": ["📚"],
+      "low_coherence": ["🤔"]
+    },
+    "AUTHENTICITY": {
+      "primary": ["💎", "🔥", "⭐"],
+      "secondary": ["🌟", "✨", "🎭"],
+      "meaning": "Truth, vulnerability, realness",
+      "high_coherence": ["💎", "🔥"],
+      "medium_coherence": ["⭐"],
+      "low_coherence": ["🎭"]
+    },
+    "PRESENCE": {
+      "primary": ["🧘", "🌳", "☀️"],
+      "secondary": ["🏔️", "🌊", "🕊️"],
+      "meaning": "Embodied awareness, grounding, here-now",
+      "high_coherence": ["🧘", "🌳"],
+      "medium_coherence": ["☀️"],
+      "low_coherence": ["🌫️"]
+    },
+    "BOND": {
+      "primary": ["🫂", "💜", "🛡️"],
+      "secondary": ["🏡", "🌿", "🕊️"],
+      "meaning": "IFS parts, self-energy, internal family",
+      "high_coherence": ["🫂", "💜"],
+      "medium_coherence": ["🛡️"],
+      "low_coherence": ["💔"]
+    },
+    "SANS": {
+      "primary": ["🧩", "🔗", "✨"],
+      "secondary": ["🌐", "⚡", "💫"],
+      "meaning": "Coherence, clarity, sense-making",
+      "high_coherence": ["🧩", "✨"],
+      "medium_coherence": ["🔗"],
+      "low_coherence": ["🌫️"]
+    },
+    "NDAM": {
+      "primary": ["⚠️", "🚨", "🔔"],
+      "secondary": ["⏰", "💥", "🎯"],
+      "meaning": "Urgency, harm detection, alert",
+      "high_coherence": ["🚨", "⚠️"],
+      "medium_coherence": ["🔔"],
+      "low_coherence": ["😌"]
+    },
+    "RNX": {
+      "primary": ["🎵", "⏳", "🌊"],
+      "secondary": ["💓", "🕰️", "🎶"],
+      "meaning": "Rhythm, timing, temporal dynamics",
+      "high_coherence": ["🎵", "⏳"],
+      "medium_coherence": ["🌊"],
+      "low_coherence": ["⏸️"]
+    },
+    "EO": {
+      "primary": ["💚", "🫁", "💓"],
+      "secondary": ["🌿", "🧘", "🕊️"],
+      "meaning": "Polyvagal, nervous system, regulation",
+      "high_coherence": ["💚", "🫁"],
+      "medium_coherence": ["💓"],
+      "low_coherence": ["😰"]
+    },
+    "CARD": {
+      "primary": ["📏", "🎚️", "⚖️"],
+      "secondary": ["📊", "🎯", "📐"],
+      "meaning": "Response scaling, detail level, modulation",
+      "high_coherence": ["📏", "⚖️"],
+      "medium_coherence": ["🎚️"],
+      "low_coherence": ["❓"]
+    }
+  },
+
+  "action_emoji": {
+    "_description": "Replace *action text* with natural emojis",
+    "smile": "😊",
+    "gentle_smile": "🌸",
+    "warm_smile": "☀️",
+    "big_smile": "😄",
+    "soft_smile": "😌",
+    "laugh": "😄",
+    "chuckle": "😊",
+    "giggle": "🤭",
+    "concern": "😟",
+    "worry": "😰",
+    "sadness": "😔",
+    "tears": "😢",
+    "listening": "👂",
+    "thinking": "🤔",
+    "pondering": "🤔",
+    "nodding": "👍",
+    "yes": "✓",
+    "no": "✗",
+    "pause": "⏸️",
+    "breath": "🫁",
+    "sigh": "😮‍💨",
+    "holding": "🫂",
+    "hug": "🤗",
+    "hand_on_heart": "🫶",
+    "gentle_voice": "🌸",
+    "soft_voice": "🕊️",
+    "warm_voice": "☀️",
+    "calm_voice": "😌",
+    "whisper": "🤫",
+    "quiet": "🤫",
+    "silence": "…",
+    "presence": "🧘",
+    "grounding": "⚓",
+    "centering": "⊙"
+  },
+
+  "emotional_state_emoji": {
+    "_description": "Emojis for emotional states beyond polyvagal",
+    "joy": ["😊", "😄", "🌟", "✨", "🎉"],
+    "peace": ["😌", "🕊️", "🌿", "💙", "🧘"],
+    "love": ["💗", "💞", "💖", "🫶", "💝"],
+    "gratitude": ["🙏", "💚", "🌸", "✨", "🌻"],
+    "hope": ["🌅", "🌈", "⭐", "🌱", "🦋"],
+    "curiosity": ["🤔", "🔍", "👀", "🧐", "💭"],
+    "confusion": ["😕", "🤷", "❓", "🌫️", "🌀"],
+    "overwhelm": ["😰", "🌊", "💥", "🌪️", "😵"],
+    "grief": ["😢", "💔", "🌧️", "🥀", "🌑"],
+    "anger": ["😠", "🔥", "💢", "⚡", "🌋"],
+    "fear": ["😨", "😰", "🫣", "🌑", "❄️"],
+    "shame": ["😔", "🙈", "💔", "🌑", "🥀"],
+    "loneliness": ["😔", "🌑", "🏚️", "💔", "🍂"],
+    "connection": ["🤝", "🫂", "💞", "🌐", "🔗"],
+    "safety": ["🏡", "🛡️", "🕊️", "💚", "🌿"]
+  },
+
+  "conversation_flow_emoji": {
+    "_description": "Emojis for conversational moments and transitions",
+    "greeting": ["👋", "😊", "🌸", "☀️", "💫"],
+    "farewell": ["👋", "🌙", "💚", "🕊️", "✨"],
+    "question": ["❓", "🤔", "💭", "👀", "🔍"],
+    "answer": ["💡", "✓", "🎯", "💫", "⭐"],
+    "agreement": ["✓", "👍", "💯", "🤝", "💚"],
+    "disagreement": ["❌", "🤔", "💭", "↔️", "⚖️"],
+    "uncertainty": ["🤔", "💭", "🌫️", "❓", "🎭"],
+    "clarification": ["🔍", "💡", "🧩", "✨", "👁️"],
+    "transition": ["↔️", "🌉", "🌅", "🔄", "⟨"],
+    "pause": ["⏸️", "…", "💭", "🫁", "🌙"],
+    "continuation": ["→", "⋯", "🌊", "🎵", "💫"],
+    "completion": ["✓", "⭐", "◉", "💫", "🌟"],
+    "new_topic": ["🆕", "🌱", "⟨", "🌅", "✨"]
+  },
+
+  "intensity_emoji": {
+    "_description": "Emoji intensity scales for modulation",
+    "minimal": ["·", "…", "🤫", "🕊️", "💙"],
+    "gentle": ["🌸", "💚", "🌿", "😌", "🫁"],
+    "moderate": ["😊", "💫", "🌻", "💛", "🎵"],
+    "strong": ["⭐", "💥", "🔥", "⚡", "🌟"],
+    "intense": ["💥", "🌋", "⚡", "🔥", "💢"]
+  },
+
+  "time_rhythm_emoji": {
+    "_description": "Temporal and rhythmic emojis (RNX organ)",
+    "now": ["⏰", "💫", "⊙", "✨", "🌟"],
+    "past": ["🕰️", "📜", "🍂", "🌑", "💭"],
+    "future": ["🌅", "🌱", "⭐", "🔮", "🦋"],
+    "slow": ["🐌", "🌙", "💤", "🍃", "🫁"],
+    "steady": ["🎵", "💓", "🌊", "⏳", "🕊️"],
+    "fast": ["⚡", "💨", "🔥", "⏰", "💥"],
+    "cycle": ["🔄", "🌊", "🎵", "💓", "🌙"],
+    "rhythm": ["🎵", "💓", "🌊", "🎶", "🕊️"]
+  },
+
+  "nature_grounding_emoji": {
+    "_description": "Nature-based grounding emojis (PRESENCE organ)",
+    "earth": ["🌍", "🪨", "🌳", "🏔️", "⚓"],
+    "water": ["🌊", "💧", "🌧️", "💙", "🫗"],
+    "fire": ["🔥", "☀️", "⭐", "💥", "🌟"],
+    "air": ["💨", "🌬️", "🫁", "🕊️", "🦋"],
+    "plants": ["🌱", "🌿", "🌸", "🌻", "🌳"],
+    "animals": ["🦋", "🦅", "🐚", "🕊️", "🦉"],
+    "celestial": ["☀️", "🌙", "⭐", "✨", "🌅"]
+  },
+
+  "ifs_parts_emoji": {
+    "_description": "IFS parts-specific emojis (BOND organ)",
+    "manager_parts": ["🛡️", "📋", "🎯", "⏰", "📊"],
+    "firefighter_parts": ["🔥", "⚡", "💥", "🌊", "🎭"],
+    "exile_parts": ["💔", "😔", "🌑", "🥀", "🏚️"],
+    "self_energy": ["⊙", "💎", "✨", "💚", "🌟"],
+    "parts_meeting": ["🤝", "🫂", "🪢", "🌐", "💞"],
+    "unburdening": ["🕊️", "💨", "✨", "🌅", "🦋"],
+    "integration": ["🧩", "🪢", "🔗", "💫", "🌈"]
+  },
+
+  "crisis_safety_emoji": {
+    "_description": "Crisis and safety emojis (NDAM + BOND + EO)",
+    "crisis": ["🚨", "⚠️", "🔴", "💥", "⚡"],
+    "alert": ["🔔", "⏰", "👀", "⚠️", "❗"],
+    "harm": ["⚠️", "🛑", "🚫", "💢", "🔴"],
+    "safe": ["✓", "🛡️", "🏡", "💚", "🕊️"],
+    "grounding": ["⚓", "🌳", "🪨", "💙", "🫁"],
+    "soothing": ["🌙", "🌊", "💙", "🫁", "🕊️"],
+    "boundary": ["🛡️", "🚧", "🔒", "⛔", "🛑"],
+    "resource": ["💎", "🌟", "✨", "🏡", "💚"]
+  }
+}

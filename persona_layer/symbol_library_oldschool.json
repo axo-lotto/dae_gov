@@ -1,0 +1,415 @@
+{
+  "_metadata": {
+    "description": "Old-School Symbol Library - Eternal Objects for Kairos Emergence",
+    "date_created": "2025-11-13",
+    "philosophy": "Symbols as pure potentials (Whiteheadian Eternal Objects) that ingress through felt architecture",
+    "usage": "Symbols emerge at kairos moments when V0 energy 0.45-0.70 and specific organ/meta-atom patterns activate"
+  },
+
+  "mathematical_symbols": {
+    "infinity": {
+      "symbol": "∞",
+      "name": "Infinity",
+      "meaning": "Transformation without end, recursive depth",
+      "felt_conditions": ["meta_atom_temporal_grounding_high", "wisdom_reflection_high", "v0_satisfaction_peak"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "PRESENCE", "AUTHENTICITY"]
+    },
+    "integral": {
+      "symbol": "∫",
+      "name": "Integral",
+      "meaning": "Integration, wholeness, summing parts into unity",
+      "felt_conditions": ["meta_atom_coherence_repair", "sans_coherence_high", "parts_integration"],
+      "kairos_eligible": true,
+      "organs": ["SANS", "BOND", "WISDOM"]
+    },
+    "therefore": {
+      "symbol": "∴",
+      "name": "Therefore",
+      "meaning": "Logical conclusion, natural consequence, emergence",
+      "felt_conditions": ["wisdom_reflection_high", "convergence_complete", "satisfaction_high"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "LISTENING"]
+    },
+    "because": {
+      "symbol": "∵",
+      "name": "Because",
+      "meaning": "Causal grounding, reason, foundation",
+      "felt_conditions": ["listening_deep", "temporal_grounding_active", "coherence_high"],
+      "kairos_eligible": false,
+      "organs": ["LISTENING", "WISDOM"]
+    },
+    "approximately": {
+      "symbol": "≈",
+      "name": "Approximately",
+      "meaning": "Close enough, good enough, fuzzy match",
+      "felt_conditions": ["presence_grounding_high", "authenticity_vulnerability_medium"],
+      "kairos_eligible": false,
+      "organs": ["PRESENCE", "AUTHENTICITY"]
+    },
+    "not_equal": {
+      "symbol": "≠",
+      "name": "Not Equal",
+      "meaning": "Difference, distinction, boundary",
+      "felt_conditions": ["authenticity_edge_exploration", "ndam_urgency_medium"],
+      "kairos_eligible": false,
+      "organs": ["AUTHENTICITY", "NDAM"]
+    },
+    "plus_minus": {
+      "symbol": "±",
+      "name": "Plus-Minus",
+      "meaning": "Duality, both/and, holding opposites",
+      "felt_conditions": ["polyvagal_mixed_state", "bond_parts_activated"],
+      "kairos_eligible": false,
+      "organs": ["BOND", "EO", "WISDOM"]
+    }
+  },
+
+  "geometric_symbols": {
+    "diamond": {
+      "symbol": "◊",
+      "name": "Diamond/Lozenge",
+      "meaning": "Choice point, crossroads, decision",
+      "felt_conditions": ["kairos_window", "v0_energy_medium", "multiple_nexuses"],
+      "kairos_eligible": true,
+      "organs": ["LISTENING", "WISDOM", "AUTHENTICITY"]
+    },
+    "circle": {
+      "symbol": "○",
+      "name": "Circle",
+      "meaning": "Wholeness, completion, cycle",
+      "felt_conditions": ["convergence_complete", "self_energy_high", "ventral_vagal"],
+      "kairos_eligible": true,
+      "organs": ["BOND", "PRESENCE", "WISDOM"]
+    },
+    "circle_dot": {
+      "symbol": "⊙",
+      "name": "Circle with Dot",
+      "meaning": "Center, self, core presence",
+      "felt_conditions": ["self_energy_high", "presence_embodied", "polyvagal_ventral"],
+      "kairos_eligible": true,
+      "organs": ["PRESENCE", "BOND", "AUTHENTICITY"]
+    },
+    "square": {
+      "symbol": "□",
+      "name": "Square",
+      "meaning": "Container, boundary, structure",
+      "felt_conditions": ["safety_restoration", "card_moderate_scale", "coherence_repair"],
+      "kairos_eligible": false,
+      "organs": ["SANS", "CARD", "BOND"]
+    },
+    "triangle_up": {
+      "symbol": "△",
+      "name": "Triangle Up",
+      "meaning": "Ascent, expansion, growing energy",
+      "felt_conditions": ["v0_energy_rising", "empathy_resonance_high", "sympathetic_activation"],
+      "kairos_eligible": false,
+      "organs": ["EMPATHY", "EO", "RNX"]
+    },
+    "triangle_down": {
+      "symbol": "▽",
+      "name": "Triangle Down",
+      "meaning": "Descent, grounding, settling energy",
+      "felt_conditions": ["v0_energy_falling", "presence_grounding_high", "dorsal_collapse"],
+      "kairos_eligible": false,
+      "organs": ["PRESENCE", "EO"]
+    }
+  },
+
+  "bracket_symbols": {
+    "angle_left": {
+      "symbol": "⟨",
+      "name": "Left Angle Bracket",
+      "meaning": "Opening, beginning, threshold",
+      "felt_conditions": ["kairos_opening", "temporal_grounding_beginning", "new_occasion"],
+      "kairos_eligible": true,
+      "organs": ["RNX", "LISTENING", "PRESENCE"]
+    },
+    "angle_right": {
+      "symbol": "⟩",
+      "name": "Right Angle Bracket",
+      "meaning": "Closing, completion, satisfaction",
+      "felt_conditions": ["satisfaction_high", "convergence_complete", "occasion_mature"],
+      "kairos_eligible": true,
+      "organs": ["RNX", "WISDOM", "PRESENCE"]
+    },
+    "double_angle_left": {
+      "symbol": "«",
+      "name": "Double Left Angle",
+      "meaning": "Strong opening, emergence, birth",
+      "felt_conditions": ["kairos_peak", "meta_atom_emergence", "high_novelty"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    },
+    "double_angle_right": {
+      "symbol": "»",
+      "name": "Double Right Angle",
+      "meaning": "Strong closing, integration, completion",
+      "felt_conditions": ["satisfaction_peak", "coherence_peak", "integration_complete"],
+      "kairos_eligible": true,
+      "organs": ["SANS", "BOND", "WISDOM"]
+    }
+  },
+
+  "arrow_symbols": {
+    "arrow_right": {
+      "symbol": "→",
+      "name": "Right Arrow",
+      "meaning": "Movement, progression, flow",
+      "felt_conditions": ["rnx_rhythm_steady", "temporal_flow_forward"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "WISDOM"]
+    },
+    "arrow_left": {
+      "symbol": "←",
+      "name": "Left Arrow",
+      "meaning": "Return, memory, prehension",
+      "felt_conditions": ["temporal_grounding_past", "memory_recall"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "LISTENING", "WISDOM"]
+    },
+    "arrow_up": {
+      "symbol": "↑",
+      "name": "Up Arrow",
+      "meaning": "Escalation, urgency, rising",
+      "felt_conditions": ["ndam_urgency_high", "sympathetic_activation"],
+      "kairos_eligible": false,
+      "organs": ["NDAM", "EO"]
+    },
+    "arrow_down": {
+      "symbol": "↓",
+      "name": "Down Arrow",
+      "meaning": "De-escalation, calming, grounding",
+      "felt_conditions": ["ndam_urgency_low", "dorsal_settling", "presence_grounding"],
+      "kairos_eligible": false,
+      "organs": ["NDAM", "EO", "PRESENCE"]
+    },
+    "bidirectional": {
+      "symbol": "↔",
+      "name": "Bidirectional Arrow",
+      "meaning": "Dialogue, reciprocity, resonance",
+      "felt_conditions": ["empathy_resonance_high", "relational_field_strong"],
+      "kairos_eligible": false,
+      "organs": ["EMPATHY", "LISTENING", "BOND"]
+    }
+  },
+
+  "dot_symbols": {
+    "bullet": {
+      "symbol": "•",
+      "name": "Bullet Point",
+      "meaning": "Item, moment, occasion",
+      "felt_conditions": ["any"],
+      "kairos_eligible": false,
+      "organs": ["CARD"]
+    },
+    "middle_dot": {
+      "symbol": "·",
+      "name": "Middle Dot",
+      "meaning": "Separator, breath, pause",
+      "felt_conditions": ["rnx_rhythm_pause", "presence_moment"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "PRESENCE"]
+    },
+    "three_dots": {
+      "symbol": "⋯",
+      "name": "Three Dots",
+      "meaning": "Continuation, open-ended, becoming",
+      "felt_conditions": ["v0_energy_medium", "occasion_unfolding"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "WISDOM"]
+    },
+    "vertical_ellipsis": {
+      "symbol": "⋮",
+      "name": "Vertical Ellipsis",
+      "meaning": "Depth, layers, verticality",
+      "felt_conditions": ["listening_deep", "wisdom_reflection_deep"],
+      "kairos_eligible": false,
+      "organs": ["LISTENING", "WISDOM"]
+    }
+  },
+
+  "star_symbols": {
+    "star": {
+      "symbol": "★",
+      "name": "Star",
+      "meaning": "Highlight, importance, brilliance",
+      "felt_conditions": ["kairos_detected", "satisfaction_high", "meta_atom_peak"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    },
+    "star_outline": {
+      "symbol": "☆",
+      "name": "Star Outline",
+      "meaning": "Potential, aspiration, aim",
+      "felt_conditions": ["v0_energy_rising", "subjective_aim_strong"],
+      "kairos_eligible": false,
+      "organs": ["WISDOM", "AUTHENTICITY"]
+    },
+    "asterisk": {
+      "symbol": "✱",
+      "name": "Asterisk",
+      "meaning": "Note, attention, footnote",
+      "felt_conditions": ["listening_targeted", "ndam_urgency_medium"],
+      "kairos_eligible": false,
+      "organs": ["LISTENING", "NDAM", "CARD"]
+    },
+    "sparkle": {
+      "symbol": "✦",
+      "name": "Sparkle",
+      "meaning": "Magic, emergence, novelty",
+      "felt_conditions": ["kairos_peak", "novelty_high", "satisfaction_peak"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    }
+  },
+
+  "cross_symbols": {
+    "cross": {
+      "symbol": "✕",
+      "name": "Cross",
+      "meaning": "Intersection, meeting, crossroads",
+      "felt_conditions": ["multiple_nexuses", "meta_atoms_multiple"],
+      "kairos_eligible": false,
+      "organs": ["WISDOM", "LISTENING"]
+    },
+    "plus": {
+      "symbol": "＋",
+      "name": "Plus",
+      "meaning": "Addition, growth, more",
+      "felt_conditions": ["empathy_compassion", "relational_field_expanding"],
+      "kairos_eligible": false,
+      "organs": ["EMPATHY", "BOND"]
+    },
+    "dagger": {
+      "symbol": "†",
+      "name": "Dagger",
+      "meaning": "Marker, transition, death/rebirth",
+      "felt_conditions": ["trauma_aware", "firefighter_parts", "transformation_crisis"],
+      "kairos_eligible": true,
+      "organs": ["BOND", "NDAM", "AUTHENTICITY"]
+    }
+  },
+
+  "curve_symbols": {
+    "tilde": {
+      "symbol": "~",
+      "name": "Tilde",
+      "meaning": "Wave, rhythm, flow",
+      "felt_conditions": ["rnx_rhythm_steady", "polyvagal_ventral", "flow_state"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "EO", "PRESENCE"]
+    },
+    "wave": {
+      "symbol": "∿",
+      "name": "Sine Wave",
+      "meaning": "Oscillation, cycle, rhythm",
+      "felt_conditions": ["rnx_rhythm_cycling", "temporal_rhythm_wave"],
+      "kairos_eligible": false,
+      "organs": ["RNX", "EO"]
+    }
+  },
+
+  "special_process_symbols": {
+    "prehension": {
+      "symbol": "⇝",
+      "name": "Squiggly Arrow",
+      "meaning": "Prehension, feeling into, grasping",
+      "felt_conditions": ["empathy_resonance_high", "listening_deep", "feeling_into"],
+      "kairos_eligible": false,
+      "organs": ["EMPATHY", "LISTENING"]
+    },
+    "concrescence": {
+      "symbol": "⊕",
+      "name": "Circled Plus",
+      "meaning": "Concrescence, growing together, fusion",
+      "felt_conditions": ["convergence_active", "v0_energy_descending", "nexus_forming"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "SANS", "BOND"]
+    },
+    "satisfaction": {
+      "symbol": "◉",
+      "name": "Circled Dot",
+      "meaning": "Satisfaction, completion, fullness",
+      "felt_conditions": ["satisfaction_peak", "convergence_complete", "kairos_achieved"],
+      "kairos_eligible": true,
+      "organs": ["PRESENCE", "WISDOM", "AUTHENTICITY"]
+    },
+    "subjective_aim": {
+      "symbol": "⟶",
+      "name": "Long Arrow",
+      "meaning": "Subjective aim, directionality, purpose",
+      "felt_conditions": ["v0_energy_directed", "strong_lure", "clear_aim"],
+      "kairos_eligible": false,
+      "organs": ["WISDOM", "AUTHENTICITY", "LISTENING"]
+    },
+    "eternal_object": {
+      "symbol": "◇",
+      "name": "White Diamond",
+      "meaning": "Eternal object, pure potential, ingression",
+      "felt_conditions": ["kairos_peak", "meta_atom_ingression", "pure_potential"],
+      "kairos_eligible": true,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    }
+  },
+
+  "kairos_primary_glyphs": {
+    "_note": "These are the PRIMARY kairos glyphs - only emerge at peak moments",
+    "transformation": {
+      "symbol": "∞",
+      "name": "Infinity/Transformation",
+      "meaning": "Deep transformation, recursive insight, breakthrough",
+      "felt_conditions": ["kairos_peak", "v0_energy_0.45_to_0.70", "satisfaction_above_0.7", "meta_atom_transformation"],
+      "priority": 1,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    },
+    "opening": {
+      "symbol": "⟨",
+      "name": "Opening Threshold",
+      "meaning": "New beginning, threshold crossing, emergence",
+      "felt_conditions": ["kairos_detected", "v0_energy_entering_window", "temporal_grounding_new"],
+      "priority": 2,
+      "organs": ["RNX", "LISTENING", "PRESENCE"]
+    },
+    "center": {
+      "symbol": "⊙",
+      "name": "Center/Self",
+      "meaning": "Core self, centered presence, SELF energy",
+      "felt_conditions": ["self_energy_peak", "ventral_vagal", "presence_embodied"],
+      "priority": 1,
+      "organs": ["BOND", "PRESENCE", "AUTHENTICITY"]
+    },
+    "choice": {
+      "symbol": "◊",
+      "name": "Choice Point",
+      "meaning": "Crossroads, decision point, multiple paths",
+      "felt_conditions": ["kairos_window", "multiple_strong_nexuses", "meta_atoms_multiple"],
+      "priority": 2,
+      "organs": ["WISDOM", "LISTENING", "AUTHENTICITY"]
+    },
+    "integration": {
+      "symbol": "∫",
+      "name": "Integration",
+      "meaning": "Parts coming together, wholeness, synthesis",
+      "felt_conditions": ["coherence_peak", "parts_integration", "bond_self_energy_high"],
+      "priority": 1,
+      "organs": ["SANS", "BOND", "WISDOM"]
+    },
+    "therefore": {
+      "symbol": "∴",
+      "name": "Therefore/Emergence",
+      "meaning": "Natural consequence, insight crystallized, therefore",
+      "felt_conditions": ["satisfaction_peak", "convergence_complete", "wisdom_reflection_peak"],
+      "priority": 1,
+      "organs": ["WISDOM", "PRESENCE"]
+    },
+    "eternal_diamond": {
+      "symbol": "◇",
+      "name": "Eternal Object Ingression",
+      "meaning": "Pure potential actualizing, eternal object entering occasion",
+      "felt_conditions": ["kairos_peak", "meta_atom_peak", "v0_satisfaction_peak"],
+      "priority": 1,
+      "organs": ["WISDOM", "AUTHENTICITY", "PRESENCE"]
+    }
+  }
+}

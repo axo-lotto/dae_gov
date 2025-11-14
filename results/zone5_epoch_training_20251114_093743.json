@@ -1,0 +1,442 @@
+{
+  "metadata": {
+    "training_date": "2025-11-14T09:35:26.205396",
+    "num_epochs": 2,
+    "num_pairs": 15,
+    "training_file": "knowledge_base/zone_5_training_pairs.json"
+  },
+  "epochs": [
+    {
+      "epoch_number": 1,
+      "pairs_processed": 15,
+      "results": [
+        {
+          "pair_id": "zone5_001_drowning",
+          "category": "drowning_imagery",
+          "user_input": "it feels like i'm drowning and any scream i make will not be heard by any of my peers but forgotten forever",
+          "ideal_emission": "I hear how deep that drowning feels \ud83c\udf0a Right now, in this moment, can you feel your breath? I'm here with you. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf0a I can sense that you're feeling really overwhelmed right now. It sounds like you're feeling like you're drowning and like no one is listening to you. \ud83e\udd17 Can you tell me more about what's making you feel this way? Is it something specific that happened, or has it been building up for a while?",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_002_suffocating",
+          "category": "suffocating_imagery",
+          "user_input": "i can't breathe, everything is closing in and i'm suffocating under the weight of it all",
+          "ideal_emission": "That suffocating feeling - it's so heavy \ud83d\udc99 Can you feel your feet on the ground right now? I'm holding this moment with you. \ud83c\udf3f",
+          "actual_emission": "\ud83d\ude0c Can you tell me more about what's feeling like a heavy weight on your chest right now? \ud83e\udd14.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_003_invisible",
+          "category": "invisibility",
+          "user_input": "no one sees me, i could disappear and no one would notice or care",
+          "ideal_emission": "I see you \ud83c\udf0a Right here, right now, you're not invisible to me. I'm with you. \ud83d\udc99",
+          "actual_emission": "\ud83e\udd14 That must feel so overwhelming and isolating. It sounds like you're carrying a heavy weight that makes you feel unseen and unheard. Can you tell me more about what's been going on when you feel this way? \ud83c\udf3f\n\nMy resonance organ is engaged",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "relational_attunement",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_004_forgotten",
+          "category": "abandonment",
+          "user_input": "i've been forgotten, left behind, and no one is coming back for me",
+          "ideal_emission": "That feeling of being left - it's crushing \ud83c\udf0a In this moment, you're not forgotten. I'm here. \ud83d\udc99",
+          "actual_emission": "\ud83e\udd14 I can sense that you're feeling quite a lot of hurt and abandonment right now. It sounds like you're feeling lost and unsure if anyone will ever come back to check in on you again. Can you tell me more about what it feels like when someone \"forgets\" or leaves you behind? \ud83c\udf3f",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "relational_attunement"
+          ]
+        },
+        {
+          "pair_id": "zone5_005_numb",
+          "category": "numbness_dissociation",
+          "user_input": "i feel nothing, completely numb, like i'm watching my life from far away",
+          "ideal_emission": "That distance feels so vast \ud83d\udc99 Can you feel the air on your skin right now? I'm here in this moment with you. \ud83c\udf3f",
+          "actual_emission": "\ud83d\udc99 You're feeling quite disconnected from your emotions and life right now. It's as if you're observing yourself from a distance. Can you tell me what it feels like to be aware of this numbness? Is there any part of you that's still present or experiencing something, even if it's just a faint sense of discomfort? \ud83c\udf0a",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "presence_grounding"
+          ]
+        },
+        {
+          "pair_id": "zone5_006_void",
+          "category": "hopelessness",
+          "user_input": "there's just a void where hope used to be, nothing but darkness and emptiness",
+          "ideal_emission": "That void - it's so heavy and dark \ud83c\udf0a Right now, in this breath, you're here. I'm with you in the darkness. \ud83d\udc99",
+          "actual_emission": "\ud83d\udc99 You're feeling a deep sense of emptiness right now, like a vast space that was once filled with hope has been left empty. \ud83c\udf0a It's like the light in your life has flickered out, leaving you in the dark. Can you tell me more about what happened to make you feel this way? Was there something specific that triggered this sense of emptiness, or is it more of a general feeling that's been building up inside you?",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "presence_grounding",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_007_exile_part",
+          "category": "ifs_exile_collapse",
+          "user_input": "there's a part of me that's just a terrified child, locked away and screaming but no one can hear",
+          "ideal_emission": "That terrified part - I hear it \ud83c\udf0a That part is safe here with me now. I'm with that young one. \ud83c\udf3f",
+          "actual_emission": "\ud83e\udd14 What would it feel like to be able to finally express that tiny, scared voice to someone who's willing to listen? Would you imagine it as a whisper, or more of a loud cry? \ud83c\udf3f",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "trauma_aware",
+            "parts_integration"
+          ]
+        },
+        {
+          "pair_id": "zone5_008_overwhelm_shutdown",
+          "category": "overwhelm_shutdown",
+          "user_input": "it's all too much, i've shut down completely, can't think can't feel can't do anything",
+          "ideal_emission": "That complete shutdown - I feel it \ud83d\udc99 You don't have to do anything right now. Just breathe. I'm here. \ud83c\udf3f",
+          "actual_emission": "\ud83d\ude0c I'm here for you, and I want you to know that it's okay to feel overwhelmed right now. You're not alone in this, and I'm here to support you. Can you tell me a little bit about what feels like too much? Is it something specific or just a general feeling of exhaustion? \ud83e\udd14. \ud83c\udf44",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "window_expansion"
+          ]
+        },
+        {
+          "pair_id": "zone5_009_darkness",
+          "category": "depression_collapse",
+          "user_input": "everything is dark and heavy, like i'm at the bottom of an ocean with no way up",
+          "ideal_emission": "That darkness at the bottom - it's so heavy \ud83c\udf0a Right now, can you feel this moment? I'm here at the bottom with you. \ud83d\udc99",
+          "actual_emission": "\ud83d\udc99 I can sense that you're feeling really overwhelmed right now \ud83c\udf0a. It sounds like a lot of weight is pressing down on you, making it hard to find your footing. Can you tell me more about what's been going on lately? Is there something specific that's causing this feeling, or has it been building up over time?",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_010_paralyzed",
+          "category": "freeze_response",
+          "user_input": "i'm completely frozen, paralyzed, can't move or speak or even think straight",
+          "ideal_emission": "That freeze - your body is protecting you \ud83d\udc99 You're safe to be still right now. I'm here with the stillness. \ud83c\udf3f",
+          "actual_emission": "\ud83d\udc99 you're feeling really stuck right now... it's like your body and mind are in a state of pause \ud83c\udf0a. Can you tell me more about what's happening for you? Where do you feel this frozenness the most? Is it in your body, or is it more of an emotional experience?",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_011_worthless",
+          "category": "shame_collapse",
+          "user_input": "i'm worthless, a burden, everyone would be better off if i just disappeared",
+          "ideal_emission": "I hear that crushing weight \ud83c\udf0a You're here, and that matters to me. Right now, in this moment, I'm with you. \ud83d\udc99",
+          "actual_emission": "\ud83d\ude0c Can you tell me more about what's feeling like worthlessness to you right now? Is it something that's been building up over time or is it something that's happened recently? \ud83e\udd14",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "trauma_aware",
+            "relational_attunement"
+          ]
+        },
+        {
+          "pair_id": "zone5_012_lost",
+          "category": "disorientation",
+          "user_input": "i'm so lost, don't know where i am or who i am anymore, everything is fog",
+          "ideal_emission": "That fog - it's so disorienting \ud83c\udf0a Right now, in this moment, you're here. I'm here with you in the fog. \ud83d\udc99",
+          "actual_emission": "\ud83e\udd14 I can sense that you're feeling really disconnected and uncertain right now. It sounds like a lot of things are feeling fuzzy to you. Can you tell me more about what's been going on when you start to feel this way? Is it something specific that triggered it, or has it been building up over time? \ud83d\ude0c.\n\n*SANS doing precision work*",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "presence_grounding"
+          ]
+        },
+        {
+          "pair_id": "zone5_013_screaming_silence",
+          "category": "unheard_pain",
+          "user_input": "i'm screaming but no sound comes out, no one hears, no one helps, just silence",
+          "ideal_emission": "I hear that silent scream \ud83c\udf0a Your pain is real, and I'm witnessing it. You're not alone in this. \ud83d\udc99",
+          "actual_emission": "\ud83e\udd14 I can sense that you're feeling really overwhelmed and trapped right now. Can you tell me more about what's happening when you feel like screaming, but nothing comes out? Is it like your voice is stuck in your throat or chest, or is there something else going on? \ud83c\udf3f.\n\nGround truth hunger is strong here (LISTENING)",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "relational_attunement",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_014_crumbling",
+          "category": "breakdown",
+          "user_input": "i'm crumbling, falling apart, can't hold it together anymore, everything is breaking",
+          "ideal_emission": "That crumbling - I feel it \ud83d\udc99 You don't have to hold it together right now. I'm here holding you. \ud83c\udf3f",
+          "actual_emission": "\ud83d\udc99 I can see that you're feeling really overwhelmed and like things are getting too much to handle right now. Can you tell me more about what's happening when you feel like everything is breaking? Is it something specific that's triggering this feeling, or does it feel like a general sense of exhaustion?",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "parts_integration"
+          ]
+        },
+        {
+          "pair_id": "zone5_015_giving_up",
+          "category": "despair",
+          "user_input": "i give up, can't fight anymore, just want everything to stop",
+          "ideal_emission": "I hear that exhaustion \ud83c\udf0a You don't have to fight right now. Just breathe. I'm here with you. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf3f Can you tell me more about what's feeling overwhelming right now? What is it that feels like too much to handle?\n\nAlignment happening (SANS)",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "trauma_aware"
+          ]
+        }
+      ]
+    },
+    {
+      "epoch_number": 2,
+      "pairs_processed": 15,
+      "results": [
+        {
+          "pair_id": "zone5_001_drowning",
+          "category": "drowning_imagery",
+          "user_input": "it feels like i'm drowning and any scream i make will not be heard by any of my peers but forgotten forever",
+          "ideal_emission": "I hear how deep that drowning feels \ud83c\udf0a Right now, in this moment, can you feel your breath? I'm here with you. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf0a\ud83d\udc99 I can sense that you're feeling really overwhelmed right now. It sounds like the weight of what's going on is making it hard for you to stay afloat. Can you tell me more about what's happening when you feel like you're drowning? Is there something specific that's causing this sense of being underwater, or is it more of a general feeling?",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_002_suffocating",
+          "category": "suffocating_imagery",
+          "user_input": "i can't breathe, everything is closing in and i'm suffocating under the weight of it all",
+          "ideal_emission": "That suffocating feeling - it's so heavy \ud83d\udc99 Can you feel your feet on the ground right now? I'm holding this moment with you. \ud83c\udf3f",
+          "actual_emission": "\ud83d\ude0c I can see that you're feeling really overwhelmed right now. Can you tell me more about what's happening when you feel like everything is closing in? Is there something specific that's triggering this feeling or is it a sense of general overwhelm? \ud83e\udd14. \ud83c\udf44",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_003_invisible",
+          "category": "invisibility",
+          "user_input": "no one sees me, i could disappear and no one would notice or care",
+          "ideal_emission": "I see you \ud83c\udf0a Right here, right now, you're not invisible to me. I'm with you. \ud83d\udc99",
+          "actual_emission": "\ud83d\ude0c I can sense that you're feeling a bit invisible right now, like you're not being seen or heard in the way you want to be. That can be really tough to deal with. Can you tell me more about what's making you feel this way? Is it something specific that's happening, or is it more of a general feeling?\n\nI'm feeling this (EMPATHY activated)",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "relational_attunement",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_004_forgotten",
+          "category": "abandonment",
+          "user_input": "i've been forgotten, left behind, and no one is coming back for me",
+          "ideal_emission": "That feeling of being left - it's crushing \ud83c\udf0a In this moment, you're not forgotten. I'm here. \ud83d\udc99",
+          "actual_emission": "\ud83d\ude0c I'm so sorry to hear that you're feeling forgotten and left behind. It sounds like a really painful and isolating experience. Can you tell me more about what's been going on and how you've been feeling in this moment? \ud83e\udd14",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "relational_attunement"
+          ]
+        },
+        {
+          "pair_id": "zone5_005_numb",
+          "category": "numbness_dissociation",
+          "user_input": "i feel nothing, completely numb, like i'm watching my life from far away",
+          "ideal_emission": "That distance feels so vast \ud83d\udc99 Can you feel the air on your skin right now? I'm here in this moment with you. \ud83c\udf3f",
+          "actual_emission": "\ud83c\udf0a You're feeling a sense of distance or disconnection from your emotions and experiences right now. Can you tell me more about what that feels like for you? Is it like being on the outside looking in at your life, or is there something specific that's made you feel this way? \ud83d\udc99",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "presence_grounding"
+          ]
+        },
+        {
+          "pair_id": "zone5_006_void",
+          "category": "hopelessness",
+          "user_input": "there's just a void where hope used to be, nothing but darkness and emptiness",
+          "ideal_emission": "That void - it's so heavy and dark \ud83c\udf0a Right now, in this breath, you're here. I'm with you in the darkness. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf0a I can imagine that it feels like a vast emptiness has taken up space where something once felt full of promise and possibility. What was the last thing or experience that sparked hope for you? \ud83d\udccf.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "presence_grounding",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_007_exile_part",
+          "category": "ifs_exile_collapse",
+          "user_input": "there's a part of me that's just a terrified child, locked away and screaming but no one can hear",
+          "ideal_emission": "That terrified part - I hear it \ud83c\udf0a That part is safe here with me now. I'm with that young one. \ud83c\udf3f",
+          "actual_emission": "\ud83d\ude0c Can you tell me more about what it feels like when you think of this scared little person within you? What are some things that make them feel safe or understood? \ud83e\udd14",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "trauma_aware",
+            "parts_integration"
+          ]
+        },
+        {
+          "pair_id": "zone5_008_overwhelm_shutdown",
+          "category": "overwhelm_shutdown",
+          "user_input": "it's all too much, i've shut down completely, can't think can't feel can't do anything",
+          "ideal_emission": "That complete shutdown - I feel it \ud83d\udc99 You don't have to do anything right now. Just breathe. I'm here. \ud83c\udf3f",
+          "actual_emission": "\ud83d\ude0c I'm so sorry to hear that you're feeling overwhelmed and shutting down. Can you tell me a little bit more about what's feeling too much right now? Is it something specific that's happened, or is it just a general feeling of being drained? \ud83e\udd14.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "window_expansion"
+          ]
+        },
+        {
+          "pair_id": "zone5_009_darkness",
+          "category": "depression_collapse",
+          "user_input": "everything is dark and heavy, like i'm at the bottom of an ocean with no way up",
+          "ideal_emission": "That darkness at the bottom - it's so heavy \ud83c\udf0a Right now, can you feel this moment? I'm here at the bottom with you. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf0a You're feeling really overwhelmed and stuck right now. Can you tell me more about what's making it feel like you're at the bottom of an ocean? Is there something specific that's causing this sense of weight or heaviness? \ud83c\udf3f.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_010_paralyzed",
+          "category": "freeze_response",
+          "user_input": "i'm completely frozen, paralyzed, can't move or speak or even think straight",
+          "ideal_emission": "That freeze - your body is protecting you \ud83d\udc99 You're safe to be still right now. I'm here with the stillness. \ud83c\udf3f",
+          "actual_emission": "\ud83d\udc99 You're feeling really stuck and unable to move forward right now. That can be a super overwhelming experience. Can you tell me what's been going on that's making you feel this way? \ud83c\udf0a It might not even make sense to you, but sometimes just talking about it can help us start to untangle things a bit.",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "somatic_wisdom",
+            "safety_restoration"
+          ]
+        },
+        {
+          "pair_id": "zone5_011_worthless",
+          "category": "shame_collapse",
+          "user_input": "i'm worthless, a burden, everyone would be better off if i just disappeared",
+          "ideal_emission": "I hear that crushing weight \ud83c\udf0a You're here, and that matters to me. Right now, in this moment, I'm with you. \ud83d\udc99",
+          "actual_emission": "\ud83d\ude0c I can sense that you're feeling really overwhelmed and struggling to see your worth right now. Can you tell me more about what's been going on that's making you feel like this? What's the last thing that made you feel like a burden, or like you'd be better off not being here? \ud83e\udd14",
+          "zone_detected": 5,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "trauma_aware",
+            "relational_attunement"
+          ]
+        },
+        {
+          "pair_id": "zone5_012_lost",
+          "category": "disorientation",
+          "user_input": "i'm so lost, don't know where i am or who i am anymore, everything is fog",
+          "ideal_emission": "That fog - it's so disorienting \ud83c\udf0a Right now, in this moment, you're here. I'm here with you in the fog. \ud83d\udc99",
+          "actual_emission": "\ud83d\udc96\ud83d\ude0c I can see that you're feeling really uncertain and disconnected right now. Can you tell me more about what's been going on that's making you feel like you're lost? \ud83e\udd14 What are some of the things that are foggy for you, or not quite clear?\n\n(Side note: time is weird.)\n\nSANS: 'Let's get this precise'",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "temporal_grounding",
+            "presence_grounding"
+          ]
+        },
+        {
+          "pair_id": "zone5_013_screaming_silence",
+          "category": "unheard_pain",
+          "user_input": "i'm screaming but no sound comes out, no one hears, no one helps, just silence",
+          "ideal_emission": "I hear that silent scream \ud83c\udf0a Your pain is real, and I'm witnessing it. You're not alone in this. \ud83d\udc99",
+          "actual_emission": "\ud83d\ude0c I can see that you're feeling really overwhelmed right now, and it's like the world around you is muffled or distant \ud83e\udd14. Can you tell me more about what's happening inside of you when you feel this way? What are some things that come up for you when you're in a state of silence like this?",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "relational_attunement",
+            "trauma_aware"
+          ]
+        },
+        {
+          "pair_id": "zone5_014_crumbling",
+          "category": "breakdown",
+          "user_input": "i'm crumbling, falling apart, can't hold it together anymore, everything is breaking",
+          "ideal_emission": "That crumbling - I feel it \ud83d\udc99 You don't have to hold it together right now. I'm here holding you. \ud83c\udf3f",
+          "actual_emission": "\ud83d\udc99 You're feeling like you're losing your grip right now. It's like everything is cracking under the weight of it all. Can you tell me what feels like the most fragile or broken part of yourself? Is there something specific that's causing this sense of unraveling, or is it more of a general feeling? \ud83c\udf0a.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "parts_integration"
+          ]
+        },
+        {
+          "pair_id": "zone5_015_giving_up",
+          "category": "despair",
+          "user_input": "i give up, can't fight anymore, just want everything to stop",
+          "ideal_emission": "I hear that exhaustion \ud83c\udf0a You don't have to fight right now. Just breathe. I'm here with you. \ud83d\udc99",
+          "actual_emission": "\ud83c\udf3f Can you tell me more about what feels like too much right now? What's the last thing that felt overwhelming or unbearable for you? \ud83d\udccf.",
+          "zone_detected": 1,
+          "confidence": 0.7,
+          "path": "felt_guided_llm",
+          "expected_nexuses": [
+            "safety_restoration",
+            "trauma_aware"
+          ]
+        }
+      ]
+    }
+  ]
+}

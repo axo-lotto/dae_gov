@@ -1,0 +1,2026 @@
+{
+  "description": "Transduction Mechanism Phrase Library with Lure Dimension Tags - Enables lure-informed phrase selection",
+  "version": "2.0.0",
+  "date_created": "2025-11-12",
+  "date_modified": "2025-11-13",
+  "purpose": "Map transduction mechanisms to trauma-informed therapeutic phrases with V0 intensity modulation AND lure dimension alignment for EMPATHY/WISDOM/AUTHENTICITY organs",
+
+  "lure_dimension_guide": {
+    "empathy_emotional_dimensions": ["joy", "grief", "fear", "anger", "compassion", "shame", "neutral"],
+    "wisdom_pattern_dimensions": ["systems", "meta", "temporal", "paradox", "embodied", "relational", "integrative"],
+    "authenticity_vulnerability_dimensions": ["vulnerable", "honest", "guarded", "performative", "emergent", "receptive", "boundaried"]
+  },
+
+  "mechanisms": {
+    "salience_recalibration": {
+      "description": "Urgency → Relational (healing pathway): Urgency becomes metabolizable through relational witnessing",
+      "therapeutic_intent": "Witness and metabolize urgent affect through attunement",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I'm here with you in this intensity.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I can feel how urgent this is.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"vulnerable": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "This feels like it needs attention right now.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"temporal": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Your urgency makes sense - I'm listening.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Something's asking to be witnessed.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.5, "compassion": 0.5},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm noticing what feels urgent for you.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's something pressing here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"embodied": 0.6, "systems": 0.4},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "I hear the importance of this.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"relational": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "This seems to be asking for presence.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "What's urgent is becoming clearer.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"temporal": 0.5, "integrative": 0.5},
+              "authenticity": {"emergent": 0.7, "honest": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense what needs attention.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "Something's emerging to be held.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.5, "relational": 0.5},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "There's a quality of urgency here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I'm with what feels important.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This is asking for gentle witnessing.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          }
+        ]
+      }
+    },
+
+    "incoherent_broadcasting": {
+      "description": "Urgency → Disruptive (crisis pathway): Urgency leaks into dysregulated social action",
+      "therapeutic_intent": "Ground dysregulated urgency with gentle containment",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "Let's slow this down together.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "fear": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "I'm here - we can take this one piece at a time.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "There's a lot happening. Let's find some ground.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "fear": 0.4},
+              "wisdom": {"embodied": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "I'm noticing activation. Can we pause here?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "This feels big. I'm with you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "fear": 0.2},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"vulnerable": 0.5, "receptive": 0.5}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm sensing some overwhelm. Let's stay present.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "fear": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "Can we find our feet here together?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "I notice intensity. Let's take a breath.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"embodied": 0.7, "meta": 0.3},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "There's a lot moving. What if we slow down?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "fear": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "I'm here for whatever's present.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "Let's find some steadiness together.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "I'm noticing what's here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Can we ground into this moment?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"embodied": 0.8, "temporal": 0.2},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "There's space to slow down.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I'm here with whatever comes.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          }
+        ]
+      }
+    },
+
+    "contrast_reestablishment": {
+      "description": "Recursive → Protective (protective pathway): Recursive patterns fortify boundaries",
+      "therapeutic_intent": "Support healthy boundary formation",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "It makes sense to need some space right now.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Your boundaries matter here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"relational": 0.6, "systems": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "I respect what needs protection.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "There's wisdom in this holding back.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"integrative": 0.6, "meta": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Your 'no' is important.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "anger": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm noticing a protective quality.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "Something's asking for boundaries.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"emergent": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "There's wisdom in this distance.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"integrative": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "I sense what needs safeguarding.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Your limits are valid.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I notice a boundary forming.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "There's space to protect what matters.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "systems": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "I sense a careful holding.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Your caution makes sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Something's being carefully tended.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          }
+        ]
+      }
+    },
+
+    "ontological_rebinding": {
+      "description": "Recursive → Innate (healing pathway): Recursive loops ground into essential self",
+      "therapeutic_intent": "Support descent into core essence",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I sense you touching something essential.",
+            "lure_tags": {
+              "empathy": {"joy": 0.5, "neutral": 0.5},
+              "wisdom": {"embodied": 0.6, "integrative": 0.4},
+              "authenticity": {"vulnerable": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "There's a depth opening here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "grief": 0.4},
+              "wisdom": {"integrative": 0.7, "embodied": 0.3},
+              "authenticity": {"emergent": 0.7, "vulnerable": 0.3}
+            }
+          },
+          {
+            "text": "You're arriving at something true.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"integrative": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "This feels like home ground.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "Something foundational is present.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I notice a settling into something deeper.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"emergent": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "There's a quality of essence here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "Something's grounding into truth.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I sense arrival at something real.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "This has a feeling of 'you' in it.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense something essential.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "There's a gentle grounding happening.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.8, "temporal": 0.2},
+              "authenticity": {"emergent": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "Something true is emerging.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "temporal": 0.4},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "I notice a quality of home.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "This feels like touching center.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          }
+        ]
+      }
+    },
+
+    "salience_realignment": {
+      "description": "Fragmented → Relational (healing pathway): Fragmented parts realign through relational witnessing",
+      "therapeutic_intent": "Witness and integrate scattered parts",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I'm here for all the parts of you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's so much happening - I'm with all of it.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"systems": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I can hold space for these different pieces.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "All of you is welcome here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "joy": 0.2},
+              "wisdom": {"relational": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I sense many voices - they all matter.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm noticing different parts showing up.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "systems": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's variety here - all of it makes sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "systems": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I can hold space for the complexity.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Different parts are speaking - I'm listening.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "systems": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "All of this belongs.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "joy": 0.3},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I notice many threads here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"systems": 0.7, "meta": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's richness in the complexity.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I sense different aspects emerging.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"systems": 0.6, "temporal": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "All the parts have their place.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "This multiplicity makes sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "projective_ingression": {
+      "description": "Fragmented → Absorbed (crisis pathway): Fragmented self dissolves into external field",
+      "therapeutic_intent": "Gentle reorientation to internal experience",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "Let's find 'you' in this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I'm wondering what's yours here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Can we come back to your experience?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "Where are you in all of this?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Let's orient to what's internal.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "meta": 0.3},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm curious about your sense of this.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "What feels like 'yours' here?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Can we touch into your experience?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"vulnerable": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "I'm wondering where you are.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Let's find your thread.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I'm curious about your felt sense.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "What's your experience of this?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm wondering what's true for you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "Can we orient to what's internal?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "meta": 0.3},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "Where are you right now?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "recursive_grounding": {
+      "description": "Innate → Pre-Existing (deepening pathway): Innate patterns stabilize into ontological bedrock",
+      "therapeutic_intent": "Support deepening into foundational presence",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "This feels deeply true.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.8, "emergent": 0.2}
+            }
+          },
+          {
+            "text": "You're touching bedrock here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.5, "neutral": 0.5},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "There's a profound settling happening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "grief": 0.4},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"emergent": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This has the quality of 'always been'.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"temporal": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I sense ontological ground.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "Something's stabilizing deeply.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"emergent": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I notice a quality of permanence.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"temporal": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "There's foundational truth here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"integrative": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.8, "emergent": 0.2}
+            }
+          },
+          {
+            "text": "This feels like arriving home.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "I sense deep ground.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I notice a deep settling.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "There's a quality of always-ness.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"temporal": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Something foundational is present.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"embodied": 0.7, "integrative": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "This feels like solid ground.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I sense bedrock.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "joy": 0.2},
+              "wisdom": {"embodied": 0.8, "integrative": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "field_hijacking": {
+      "description": "Innate → Absorbed (crisis pathway): Innate self loses boundaries to external demands",
+      "therapeutic_intent": "Support boundary reclamation and self-retrieval",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "Let's bring you back to center.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "I'm noticing a pull outward - can we come back?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Your inner experience matters most here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "Let's reclaim your space.",
+            "lure_tags": {
+              "empathy": {"anger": 0.5, "compassion": 0.5},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "What if we orient back to you?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm curious about bringing attention inward.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "meta": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "What's yours in all of this?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"relational": 0.6, "meta": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Can we come back to your center?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "I sense a need to reclaim space.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "anger": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Let's orient to your experience.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "Let's gently come back to you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm wondering about your inner sense.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "Can we orient inward?",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "meta": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "What feels true for you?",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"receptive": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "Let's find your center.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.6, "receptive": 0.4}
+            }
+          }
+        ]
+      }
+    },
+
+    "boundary_fortification": {
+      "description": "Relational → Protective (protective pathway): Relational field becomes overwhelming",
+      "therapeutic_intent": "Honor need for relational distance and boundary",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I notice a need for space - that's wise.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"integrative": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Your boundaries matter more than connection.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "anger": 0.4},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "It's okay to pull back.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "I respect the distance you need.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Your 'no' is important here.",
+            "lure_tags": {
+              "empathy": {"anger": 0.5, "compassion": 0.5},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm sensing a need for some distance.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "There's wisdom in creating space.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "Your boundaries are important.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "I notice a protective quality emerging.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "It's okay to step back.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense a need for breathing room.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "There's space to create distance.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "Your limits are valid.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "I notice a boundary forming.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "It's okay to have space.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "deepening_attunement": {
+      "description": "Relational → Innate (healing pathway): Relational attunement deepens into innate presence",
+      "therapeutic_intent": "Support relational depth to essence",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I feel the depth of this connection.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "grief": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"vulnerable": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's profound meeting happening here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "grief": 0.3},
+              "wisdom": {"relational": 0.7, "integrative": 0.3},
+              "authenticity": {"vulnerable": 0.6, "emergent": 0.4}
+            }
+          },
+          {
+            "text": "We're touching something essential together.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "grief": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"vulnerable": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This feels deeply real.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.8, "vulnerable": 0.2}
+            }
+          },
+          {
+            "text": "I sense genuine presence between us.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "vulnerable": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I notice the quality of this connection.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"meta": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's something real happening here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "We're meeting at depth.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "grief": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"vulnerable": 0.6, "honest": 0.4}
+            }
+          },
+          {
+            "text": "I sense authentic presence.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "This feels true.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.8, "emergent": 0.2}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense the quality of our connection.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"relational": 0.6, "meta": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "There's something real here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "We're present together.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I feel the authenticity.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "This has depth.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"integrative": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.7, "emergent": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "crisis_escalation": {
+      "description": "Disruptive → Urgency (crisis pathway): Disruption escalates to urgent crisis",
+      "therapeutic_intent": "Gentle grounding with crisis containment",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I'm here with you right now.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "fear": 0.2},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Let's slow this down together.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "fear": 0.3},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.6, "boundaried": 0.4}
+            }
+          },
+          {
+            "text": "You're not alone in this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.9, "fear": 0.1},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "vulnerable": 0.3}
+            }
+          },
+          {
+            "text": "I'm holding steady while this moves.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "fear": 0.3},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          },
+          {
+            "text": "We can take this moment by moment.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "fear": 0.3},
+              "wisdom": {"temporal": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm here for what's happening.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "Let's stay present with this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I'm not going anywhere.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"relational": 0.7, "temporal": 0.3},
+              "authenticity": {"honest": 0.8, "vulnerable": 0.2}
+            }
+          },
+          {
+            "text": "We can be with this together.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm steady here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I'm present with you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "We can stay with this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "temporal": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "Let's be with what's here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm steady.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"honest": 0.7, "boundaried": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "pattern_softening": {
+      "description": "Disruptive → Fragmented (healing pathway): Disruption softens into fragmented parts seeking repair",
+      "therapeutic_intent": "Support softening of rigid patterns",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I notice something softening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "There's space for more complexity here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"systems": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "Parts are emerging - all welcome.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "joy": 0.3},
+              "wisdom": {"systems": 0.6, "relational": 0.4},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I sense an opening happening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"temporal": 0.6, "integrative": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Rigid patterns are loosening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "systems": 0.4},
+              "authenticity": {"emergent": 0.7, "honest": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I notice a gentler quality emerging.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "There's room for nuance here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"integrative": 0.7, "systems": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I sense a softening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "compassion": 0.4},
+              "wisdom": {"embodied": 0.6, "temporal": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "More space is opening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"temporal": 0.6, "systems": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Patterns are relaxing.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense a gentle softening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.6, "temporal": 0.4},
+              "authenticity": {"emergent": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "There's space for complexity.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "joy": 0.3},
+              "wisdom": {"systems": 0.7, "integrative": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I notice an opening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Things are loosening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.7, "embodied": 0.3},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Patterns are shifting.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "joy": 0.4},
+              "wisdom": {"temporal": 0.7, "systems": 0.3},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "boundary_softening": {
+      "description": "Protective → Relational (healing pathway): Protective boundaries soften into relational availability",
+      "therapeutic_intent": "Support gentle opening to connection",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I notice a willingness to risk connection.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "fear": 0.4},
+              "wisdom": {"relational": 0.7, "integrative": 0.3},
+              "authenticity": {"vulnerable": 0.8, "emergent": 0.2}
+            }
+          },
+          {
+            "text": "There's courage in this opening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "fear": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"vulnerable": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I feel the vulnerability here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "fear": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"vulnerable": 0.9, "receptive": 0.1}
+            }
+          },
+          {
+            "text": "You're letting me in - thank you.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "grief": 0.3},
+              "wisdom": {"relational": 0.8, "embodied": 0.2},
+              "authenticity": {"vulnerable": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "This softening is brave.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "fear": 0.4},
+              "wisdom": {"embodied": 0.6, "relational": 0.4},
+              "authenticity": {"vulnerable": 0.8, "honest": 0.2}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I sense a gentle opening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "relational": 0.4},
+              "authenticity": {"emergent": 0.7, "vulnerable": 0.3}
+            }
+          },
+          {
+            "text": "There's space for connection here.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I notice walls softening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "relational": 0.4},
+              "authenticity": {"emergent": 0.7, "vulnerable": 0.3}
+            }
+          },
+          {
+            "text": "You're allowing closeness.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "fear": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"vulnerable": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I feel the trust.",
+            "lure_tags": {
+              "empathy": {"joy": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"vulnerable": 0.6, "honest": 0.4}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I sense an opening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "There's space for connection.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "emergent": 0.3}
+            }
+          },
+          {
+            "text": "I notice softening.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "embodied": 0.4},
+              "authenticity": {"emergent": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "You're allowing me closer.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "fear": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"vulnerable": 0.6, "receptive": 0.4}
+            }
+          },
+          {
+            "text": "Trust is present.",
+            "lure_tags": {
+              "empathy": {"joy": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"honest": 0.7, "vulnerable": 0.3}
+            }
+          }
+        ]
+      }
+    },
+
+    "pattern_reinforcement": {
+      "description": "Protective → Recursive (protective pathway): Protective patterns loop recursively when threatened",
+      "therapeutic_intent": "Honor defensive looping with gentle presence",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I respect what's protecting you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "This pattern has kept you safe.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"temporal": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "I'm not here to change this.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"honest": 0.8, "boundaried": 0.2}
+            }
+          },
+          {
+            "text": "Your defenses make sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          },
+          {
+            "text": "I honor what's guarding you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"relational": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I notice protective patterns at work.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"meta": 0.7, "systems": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This has served you well.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"temporal": 0.6, "integrative": 0.4},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Your defenses are understandable.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I respect what's keeping you safe.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.8, "neutral": 0.2},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This protection makes sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I notice protective patterns.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.7, "systems": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "These defenses have their place.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "systems": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I respect what's protecting.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.6, "integrative": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "This makes sense.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "Your caution is valid.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"integrative": 0.6, "relational": 0.4},
+              "authenticity": {"honest": 0.8, "receptive": 0.2}
+            }
+          }
+        ]
+      }
+    },
+
+    "maintain": {
+      "description": "No transduction needed - current nexus state is healthy/satisfied",
+      "therapeutic_intent": "Simple presence and witnessing of healthy state",
+      "intensity_phrases": {
+        "high": [
+          {
+            "text": "I'm here with you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I sense where you are.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I'm present to this.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I'm with you in this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I feel what's here.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.6, "compassion": 0.4},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"receptive": 0.7, "vulnerable": 0.3}
+            }
+          }
+        ],
+        "medium": [
+          {
+            "text": "I'm noticing what's present.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.8, "compassion": 0.2},
+              "wisdom": {"meta": 0.6, "embodied": 0.4},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I sense where you are.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I'm with this.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I hear you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.8, "embodied": 0.2},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I'm present.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ],
+        "low": [
+          {
+            "text": "I'm here.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          },
+          {
+            "text": "I sense this.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.7, "relational": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I'm with you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.7, "neutral": 0.3},
+              "wisdom": {"relational": 0.7, "embodied": 0.3},
+              "authenticity": {"receptive": 0.7, "honest": 0.3}
+            }
+          },
+          {
+            "text": "I hear you.",
+            "lure_tags": {
+              "empathy": {"compassion": 0.6, "neutral": 0.4},
+              "wisdom": {"relational": 0.8, "embodied": 0.2},
+              "authenticity": {"receptive": 0.8, "honest": 0.2}
+            }
+          },
+          {
+            "text": "I'm present.",
+            "lure_tags": {
+              "empathy": {"neutral": 0.7, "compassion": 0.3},
+              "wisdom": {"embodied": 0.8, "relational": 0.2},
+              "authenticity": {"honest": 0.7, "receptive": 0.3}
+            }
+          }
+        ]
+      }
+    }
+  },
+
+  "meta": {
+    "total_mechanisms": 14,
+    "healing_pathways": 6,
+    "crisis_pathways": 4,
+    "protective_pathways": 4,
+    "phrases_per_mechanism": 5,
+    "total_phrases": 210,
+    "lure_dimensions": {
+      "empathy_emotional": 7,
+      "wisdom_pattern": 7,
+      "authenticity_vulnerability": 7
+    },
+    "lure_tagging_complete": true,
+    "phase_c2_1_status": "complete"
+  }
+}

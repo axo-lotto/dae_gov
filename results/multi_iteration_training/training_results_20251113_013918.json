@@ -1,0 +1,123 @@
+{
+  "timestamp": "20251113_013918",
+  "total_pairs": 3,
+  "initial_tau": 0.5,
+  "max_iterations": 4,
+  "satisfaction_target": 0.75,
+  "results": [
+    {
+      "pair_id": "overwhelm_1",
+      "input_text": "I'm feeling overwhelmed right now.",
+      "converged": true,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "HALT",
+      "final_satisfaction": 0.9029066003529614,
+      "final_coherence": 0.78,
+      "final_variance": 0.002162686649192331,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.5030581320070592,
+      "satisfaction_history": [
+        0.9029066003529614,
+        0.9029066003529614,
+        0.9029066003529614
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5030581320070592
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T01:39:18.666662",
+      "end_time": "2025-11-13T01:39:18.678360",
+      "total_time_seconds": 0.011698
+    },
+    {
+      "pair_id": "safety_1",
+      "input_text": "This conversation feels really safe.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8438377014044882,
+      "final_coherence": 0.605,
+      "final_variance": 0.002720293417546411,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5037535080561795,
+      "satisfaction_history": [
+        0.8438377014044882,
+        0.8438377014044882,
+        0.8438377014044882,
+        0.8438377014044882
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5018767540280897,
+        0.5037535080561795
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T01:39:18.678375",
+      "end_time": "2025-11-13T01:39:18.692048",
+      "total_time_seconds": 0.013673
+    },
+    {
+      "pair_id": "boundary_1",
+      "input_text": "I need some space to process.",
+      "converged": false,
+      "iterations": 4,
+      "converged_at": 4,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.7888188059162369,
+      "final_coherence": 0.605,
+      "final_variance": 0.003036592333230581,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.5015527522366494,
+      "satisfaction_history": [
+        0.7888188059162369,
+        0.7888188059162369,
+        0.7888188059162369,
+        0.7888188059162369
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.5,
+        0.5,
+        0.5,
+        0.5007763761183247,
+        0.5015527522366494
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T01:39:18.692062",
+      "end_time": "2025-11-13T01:39:18.703859",
+      "total_time_seconds": 0.011797
+    }
+  ]
+}

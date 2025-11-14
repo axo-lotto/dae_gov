@@ -1,0 +1,13 @@
+{
+  "epoch_id": 3,
+  "task_count": 10,
+  "success_count": 10,
+  "success_rate": 1.0,
+  "mean_satisfaction": 0.8886250495433726,
+  "mean_confidence": 0.65,
+  "mean_v0_final": 0.21441035966747327,
+  "mean_convergence_cycles": 2.2,
+  "families_discovered": 0,
+  "epoch_reward": 0.86,
+  "timestamp": "2025-11-12T23:24:18.337098"
+}

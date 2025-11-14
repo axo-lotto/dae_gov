@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "epoch": 2,
+    "timestamp": "2025-11-13T21:00:25.971074",
+    "num_pairs": 102,
+    "learning_threshold": 0.3,
+    "phase2_enabled": true
+  },
+  "summary": {
+    "success_rate": 1.0,
+    "families_discovered": 1,
+    "total_families": 1,
+    "mature_families": 0,
+    "hebbian_patterns": 272,
+    "pairs_learned_from": 102
+  },
+  "learning_stats": {
+    "pairs_processed": 102,
+    "pairs_learned_from": 102,
+    "learning_rate": 1.0,
+    "hebbian_enabled": true,
+    "phase5_enabled": true,
+    "hebbian_patterns": 272,
+    "hebbian_success_count": 250,
+    "hebbian_failure_count": 12,
+    "organic_families": 1,
+    "mature_families": 0
+  },
+  "results": [
+    {
+      "pair_id": "burnout_001",
+      "category": "burnout_spiral",
+      "input_satisfaction": 0.8605933957782061,
+      "output_satisfaction": 0.8423524538153249,
+      "satisfaction_delta": -0.018240941962881285,
+      "learned": 

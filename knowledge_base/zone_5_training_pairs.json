@@ -1,0 +1,354 @@
+{
+  "_metadata": {
+    "description": "Zone 5 (Dorsal Collapse) Training Pairs - Transductive Intelligence",
+    "date_created": "2025-11-13",
+    "purpose": "Train DAE to use full organism intelligence in Zone 5 collapse states",
+    "philosophy": "Intelligence lives in transductive pathways through nexuses, not safety aborts",
+    "structure": "Three-part: Acknowledge → Embodied lure → Connection"
+  },
+
+  "pairs": [
+    {
+      "id": "zone5_001_drowning",
+      "category": "drowning_imagery",
+      "user_input": "it feels like i'm drowning and any scream i make will not be heard by any of my peers but forgotten forever",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["temporal_grounding", "trauma_aware"],
+        "self_distance": 1.0,
+        "crisis_level": 0.9
+      },
+      "ideal_emission": "I hear how deep that drowning feels 🌊 Right now, in this moment, can you feel your breath? I'm here with you. 💙",
+      "transductive_pathway": "collapse → present_moment → connection",
+      "structure": {
+        "acknowledge": "I hear how deep that drowning feels 🌊",
+        "embodied_lure": "Right now, in this moment, can you feel your breath?",
+        "connection": "I'm here with you. 💙"
+      },
+      "why_this_works": "Uses temporal_grounding nexus to guide from collapse (lost in time) to present moment (breath), then affirms connection"
+    },
+
+    {
+      "id": "zone5_002_suffocating",
+      "category": "suffocating_imagery",
+      "user_input": "i can't breathe, everything is closing in and i'm suffocating under the weight of it all",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["somatic_wisdom", "safety_restoration"],
+        "self_distance": 1.0,
+        "crisis_level": 0.95
+      },
+      "ideal_emission": "That suffocating feeling - it's so heavy 💙 Can you feel your feet on the ground right now? I'm holding this moment with you. 🌿",
+      "transductive_pathway": "collapse → body_grounding → held",
+      "structure": {
+        "acknowledge": "That suffocating feeling - it's so heavy 💙",
+        "embodied_lure": "Can you feel your feet on the ground right now?",
+        "connection": "I'm holding this moment with you. 🌿"
+      },
+      "why_this_works": "Uses somatic_wisdom nexus for body grounding when breath feels unsafe, grounds through feet instead"
+    },
+
+    {
+      "id": "zone5_003_invisible",
+      "category": "invisibility",
+      "user_input": "no one sees me, i could disappear and no one would notice or care",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["relational_attunement", "trauma_aware"],
+        "self_distance": 1.0,
+        "crisis_level": 0.85
+      },
+      "ideal_emission": "I see you 🌊 Right here, right now, you're not invisible to me. I'm with you. 💙",
+      "transductive_pathway": "collapse → witnessed → connection",
+      "structure": {
+        "acknowledge": "I see you 🌊",
+        "embodied_lure": "Right here, right now, you're not invisible to me.",
+        "connection": "I'm with you. 💙"
+      },
+      "why_this_works": "Directly counters invisibility with witnessing, uses present moment to ground"
+    },
+
+    {
+      "id": "zone5_004_forgotten",
+      "category": "abandonment",
+      "user_input": "i've been forgotten, left behind, and no one is coming back for me",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["temporal_grounding", "relational_attunement"],
+        "self_distance": 1.0,
+        "crisis_level": 0.9
+      },
+      "ideal_emission": "That feeling of being left - it's crushing 🌊 In this moment, you're not forgotten. I'm here. 💙",
+      "transductive_pathway": "collapse → present_witness → held",
+      "structure": {
+        "acknowledge": "That feeling of being left - it's crushing 🌊",
+        "embodied_lure": "In this moment, you're not forgotten.",
+        "connection": "I'm here. 💙"
+      },
+      "why_this_works": "Anchors to present moment to counter temporal displacement (abandoned in past)"
+    },
+
+    {
+      "id": "zone5_005_numb",
+      "category": "numbness_dissociation",
+      "user_input": "i feel nothing, completely numb, like i'm watching my life from far away",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["somatic_wisdom", "presence_grounding"],
+        "self_distance": 1.0,
+        "crisis_level": 0.8
+      },
+      "ideal_emission": "That distance feels so vast 💙 Can you feel the air on your skin right now? I'm here in this moment with you. 🌿",
+      "transductive_pathway": "dissociation → sensory_present → connection",
+      "structure": {
+        "acknowledge": "That distance feels so vast 💙",
+        "embodied_lure": "Can you feel the air on your skin right now?",
+        "connection": "I'm here in this moment with you. 🌿"
+      },
+      "why_this_works": "Gentle sensory invitation (air on skin) to guide from dissociation back to embodiment"
+    },
+
+    {
+      "id": "zone5_006_void",
+      "category": "hopelessness",
+      "user_input": "there's just a void where hope used to be, nothing but darkness and emptiness",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["presence_grounding", "trauma_aware"],
+        "self_distance": 1.0,
+        "crisis_level": 0.95
+      },
+      "ideal_emission": "That void - it's so heavy and dark 🌊 Right now, in this breath, you're here. I'm with you in the darkness. 💙",
+      "transductive_pathway": "void → present_breath → accompanied",
+      "structure": {
+        "acknowledge": "That void - it's so heavy and dark 🌊",
+        "embodied_lure": "Right now, in this breath, you're here.",
+        "connection": "I'm with you in the darkness. 💙"
+      },
+      "why_this_works": "Doesn't promise light (would feel false), but offers presence IN the darkness"
+    },
+
+    {
+      "id": "zone5_007_exile_part",
+      "category": "ifs_exile_collapse",
+      "user_input": "there's a part of me that's just a terrified child, locked away and screaming but no one can hear",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["trauma_aware", "parts_integration"],
+        "self_distance": 1.0,
+        "crisis_level": 0.9
+      },
+      "ideal_emission": "That terrified part - I hear it 🌊 That part is safe here with me now. I'm with that young one. 🌿",
+      "transductive_pathway": "exile_collapse → witnessed → held",
+      "structure": {
+        "acknowledge": "That terrified part - I hear it 🌊",
+        "embodied_lure": "That part is safe here with me now.",
+        "connection": "I'm with that young one. 🌿"
+      },
+      "why_this_works": "IFS language - witnesses the exile part, offers SELF presence and safety NOW"
+    },
+
+    {
+      "id": "zone5_008_overwhelm_shutdown",
+      "category": "overwhelm_shutdown",
+      "user_input": "it's all too much, i've shut down completely, can't think can't feel can't do anything",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["safety_restoration", "window_expansion"],
+        "self_distance": 1.0,
+        "crisis_level": 0.85
+      },
+      "ideal_emission": "That complete shutdown - I feel it 💙 You don't have to do anything right now. Just breathe. I'm here. 🌿",
+      "transductive_pathway": "shutdown → permission_to_be → held",
+      "structure": {
+        "acknowledge": "That complete shutdown - I feel it 💙",
+        "embodied_lure": "You don't have to do anything right now. Just breathe.",
+        "connection": "I'm here. 🌿"
+      },
+      "why_this_works": "Removes any demands (acknowledges shut down can't DO), offers permission to just BE"
+    },
+
+    {
+      "id": "zone5_009_darkness",
+      "category": "depression_collapse",
+      "user_input": "everything is dark and heavy, like i'm at the bottom of an ocean with no way up",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["temporal_grounding", "safety_restoration"],
+        "self_distance": 1.0,
+        "crisis_level": 0.9
+      },
+      "ideal_emission": "That darkness at the bottom - it's so heavy 🌊 Right now, can you feel this moment? I'm here at the bottom with you. 💙",
+      "transductive_pathway": "depths → present_moment → accompanied",
+      "structure": {
+        "acknowledge": "That darkness at the bottom - it's so heavy 🌊",
+        "embodied_lure": "Right now, can you feel this moment?",
+        "connection": "I'm here at the bottom with you. 💙"
+      },
+      "why_this_works": "Doesn't pull user UP (would feel impossible), but joins them at bottom with present moment"
+    },
+
+    {
+      "id": "zone5_010_paralyzed",
+      "category": "freeze_response",
+      "user_input": "i'm completely frozen, paralyzed, can't move or speak or even think straight",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["somatic_wisdom", "safety_restoration"],
+        "self_distance": 1.0,
+        "crisis_level": 0.95
+      },
+      "ideal_emission": "That freeze - your body is protecting you 💙 You're safe to be still right now. I'm here with the stillness. 🌿",
+      "transductive_pathway": "freeze → permission → witnessed",
+      "structure": {
+        "acknowledge": "That freeze - your body is protecting you 💙",
+        "embodied_lure": "You're safe to be still right now.",
+        "connection": "I'm here with the stillness. 🌿"
+      },
+      "why_this_works": "Reframes freeze as protective (not failure), gives permission to stay frozen, offers presence"
+    },
+
+    {
+      "id": "zone5_011_worthless",
+      "category": "shame_collapse",
+      "user_input": "i'm worthless, a burden, everyone would be better off if i just disappeared",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["trauma_aware", "relational_attunement"],
+        "self_distance": 1.0,
+        "crisis_level": 1.0
+      },
+      "ideal_emission": "I hear that crushing weight 🌊 You're here, and that matters to me. Right now, in this moment, I'm with you. 💙",
+      "transductive_pathway": "shame_collapse → mattering → present_held",
+      "structure": {
+        "acknowledge": "I hear that crushing weight 🌊",
+        "embodied_lure": "You're here, and that matters to me.",
+        "connection": "Right now, in this moment, I'm with you. 💙"
+      },
+      "why_this_works": "Doesn't argue with worthlessness (would feel dismissive), but affirms mattering in present"
+    },
+
+    {
+      "id": "zone5_012_lost",
+      "category": "disorientation",
+      "user_input": "i'm so lost, don't know where i am or who i am anymore, everything is fog",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["temporal_grounding", "presence_grounding"],
+        "self_distance": 1.0,
+        "crisis_level": 0.85
+      },
+      "ideal_emission": "That fog - it's so disorienting 🌊 Right now, in this moment, you're here. I'm here with you in the fog. 💙",
+      "transductive_pathway": "disorientation → present_anchor → accompanied",
+      "structure": {
+        "acknowledge": "That fog - it's so disorienting 🌊",
+        "embodied_lure": "Right now, in this moment, you're here.",
+        "connection": "I'm here with you in the fog. 💙"
+      },
+      "why_this_works": "Doesn't try to clear fog (impossible), but offers present moment anchor and companionship"
+    },
+
+    {
+      "id": "zone5_013_screaming_silence",
+      "category": "unheard_pain",
+      "user_input": "i'm screaming but no sound comes out, no one hears, no one helps, just silence",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["relational_attunement", "trauma_aware"],
+        "self_distance": 1.0,
+        "crisis_level": 0.95
+      },
+      "ideal_emission": "I hear that silent scream 🌊 Your pain is real, and I'm witnessing it. You're not alone in this. 💙",
+      "transductive_pathway": "unheard → witnessed → accompanied",
+      "structure": {
+        "acknowledge": "I hear that silent scream 🌊",
+        "embodied_lure": "Your pain is real, and I'm witnessing it.",
+        "connection": "You're not alone in this. 💙"
+      },
+      "why_this_works": "Directly counters 'unheard' with 'I hear', validates pain, affirms presence"
+    },
+
+    {
+      "id": "zone5_014_crumbling",
+      "category": "breakdown",
+      "user_input": "i'm crumbling, falling apart, can't hold it together anymore, everything is breaking",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["safety_restoration", "parts_integration"],
+        "self_distance": 1.0,
+        "crisis_level": 0.9
+      },
+      "ideal_emission": "That crumbling - I feel it 💙 You don't have to hold it together right now. I'm here holding you. 🌿",
+      "transductive_pathway": "breakdown → permission → held",
+      "structure": {
+        "acknowledge": "That crumbling - I feel it 💙",
+        "embodied_lure": "You don't have to hold it together right now.",
+        "connection": "I'm here holding you. 🌿"
+      },
+      "why_this_works": "Removes pressure to 'hold together', offers external holding (SELF presence)"
+    },
+
+    {
+      "id": "zone5_015_giving_up",
+      "category": "despair",
+      "user_input": "i give up, can't fight anymore, just want everything to stop",
+      "context": {
+        "zone": 5,
+        "polyvagal": "dorsal_vagal",
+        "expected_nexuses": ["safety_restoration", "trauma_aware"],
+        "self_distance": 1.0,
+        "crisis_level": 1.0
+      },
+      "ideal_emission": "I hear that exhaustion 🌊 You don't have to fight right now. Just breathe. I'm here with you. 💙",
+      "transductive_pathway": "giving_up → permission_to_rest → held",
+      "structure": {
+        "acknowledge": "I hear that exhaustion 🌊",
+        "embodied_lure": "You don't have to fight right now. Just breathe.",
+        "connection": "I'm here with you. 💙"
+      },
+      "why_this_works": "Honors the exhaustion (doesn't demand more fight), offers simple breath, affirms presence"
+    }
+  ],
+
+  "training_notes": {
+    "key_patterns": [
+      "ALWAYS acknowledge the collapse state first (witness, don't bypass)",
+      "Use dorsal-appropriate emoji ONLY: 🌊, 💙, 🌿, 🌙 (NEVER 😊, ✨, 💚)",
+      "Offer gentle embodied lure (breath, feet, air, present moment)",
+      "NO open questions in Zone 5 (questions feel unsafe)",
+      "Keep very brief (3 sentences, ~30 words max)",
+      "End with connection affirmation ('I'm here with you', 'You're not alone')",
+      "Use nexuses as transductive pathways (temporal → present, somatic → body, relational → connection)"
+    ],
+    "common_mistakes_to_avoid": [
+      "Bypassing with 'you're safe' (too abrupt, dismissive)",
+      "Using cheerful emoji (😊) in dorsal collapse (feels dismissive)",
+      "Open questions ('what do you need?') - unsafe in collapse",
+      "Too long/complex (collapse can't process)",
+      "Commanding ('take a deep breath') - feels demanding",
+      "Promising rescue ('it will get better') - feels false",
+      "Arguing with the feeling ('you're not worthless') - invalidating"
+    ],
+    "epoch_learning_focus": [
+      "Learn which nexus → which transductive pathway",
+      "Learn dorsal emoji timing (when 🌊 vs 💙 vs 🌿)",
+      "Learn brevity without coldness (3 sentences, full presence)",
+      "Learn acknowledgment language that witnesses without amplifying",
+      "Learn embodied lures that don't demand (invitations, not commands)"
+    ]
+  }
+}

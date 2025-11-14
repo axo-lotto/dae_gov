@@ -28,5 +28,23 @@
     "human_name": "exit",
     "started_at": "2025-11-11T06:34:38.566199",
     "session_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/sessions/session_exit_20251111_5ac5b4_20251111_063438"
+  },
+  "session_link_20251111_e8936e_20251111_070949": {
+    "user_token": "link_20251111_e8936e",
+    "human_name": "Link",
+    "started_at": "2025-11-11T07:09:49.187193",
+    "session_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/sessions/session_link_20251111_e8936e_20251111_070949"
+  },
+  "session_link_20251111_e8936e_20251111_072034": {
+    "user_token": "link_20251111_e8936e",
+    "human_name": "Link",
+    "started_at": "2025-11-11T07:20:34.759545",
+    "session_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/sessions/session_link_20251111_e8936e_20251111_072034"
+  },
+  "session_link_20251111_e8936e_20251111_072504": {
+    "user_token": "link_20251111_e8936e",
+    "human_name": "Link",
+    "started_at": "2025-11-11T07:25:04.095477",
+    "session_dir": "/Users/daedalea/Desktop/DAE_HYPHAE_1/sessions/session_link_20251111_e8936e_20251111_072504"
   }
 }

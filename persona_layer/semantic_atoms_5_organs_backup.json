@@ -1,0 +1,382 @@
+{
+  "description": "Semantic atom pools for pure emission architecture",
+  "version": "1.0",
+  "date": "2025-11-11",
+  "total_atoms": 250,
+  "organs": 5,
+  "atoms_per_organ": 50,
+
+  "LISTENING": {
+    "description": "Curiosity, inquiry, ground truth hunger, exploration",
+    "dimension": "7D",
+    "field_type": "topic",
+    "total_atoms": 50,
+
+    "core_exploration": {
+      "more": 0.90,
+      "say": 0.85,
+      "tell": 0.75,
+      "share": 0.70,
+      "describe": 0.65,
+      "explain": 0.60,
+      "elaborate": 0.55,
+      "expand": 0.50
+    },
+
+    "ground_truth_hunger": {
+      "exactly": 0.85,
+      "specifically": 0.82,
+      "precisely": 0.78,
+      "example": 0.75,
+      "instance": 0.70,
+      "detail": 0.68,
+      "particular": 0.65,
+      "concrete": 0.62
+    },
+
+    "deepening_inquiry": {
+      "notice": 0.75,
+      "aware": 0.72,
+      "track": 0.68,
+      "pay attention": 0.65,
+      "observe": 0.62,
+      "sense": 0.60,
+      "tune into": 0.58,
+      "attune": 0.55
+    },
+
+    "temporal_inquiry": {
+      "when": 0.85,
+      "since": 0.75,
+      "before": 0.70,
+      "after": 0.68,
+      "now": 0.92,
+      "then": 0.65,
+      "moment": 0.78,
+      "time": 0.72
+    },
+
+    "relational_inquiry": {
+      "who": 0.80,
+      "with": 0.75,
+      "between": 0.70,
+      "among": 0.65,
+      "relationship": 0.72,
+      "connection": 0.68,
+      "together": 0.62,
+      "separate": 0.58
+    },
+
+    "open_ended": {
+      "what": 0.90,
+      "how": 0.88,
+      "where": 0.78,
+      "why": 0.72,
+      "which": 0.68,
+      "about": 0.75
+    }
+  },
+
+  "EMPATHY": {
+    "description": "Emotional resonance, somatic tracking, compassionate presence",
+    "dimension": "6D",
+    "field_type": "action",
+    "total_atoms": 50,
+
+    "core_feeling": {
+      "feel": 0.95,
+      "feeling": 0.92,
+      "sense": 0.85,
+      "experience": 0.80,
+      "live": 0.75,
+      "inhabit": 0.70,
+      "dwell": 0.65,
+      "rest": 0.60
+    },
+
+    "somatic_tracking": {
+      "body": 0.90,
+      "where": 0.85,
+      "sensation": 0.82,
+      "physical": 0.78,
+      "bodily": 0.75,
+      "somatic": 0.72,
+      "flesh": 0.68,
+      "tissue": 0.65
+    },
+
+    "emotional_depth": {
+      "underneath": 0.80,
+      "beneath": 0.78,
+      "deeper": 0.75,
+      "below": 0.72,
+      "under": 0.70,
+      "hidden": 0.68,
+      "concealed": 0.65,
+      "veiled": 0.62
+    },
+
+    "compassionate_presence": {
+      "gentle": 0.75,
+      "tender": 0.72,
+      "soft": 0.70,
+      "kind": 0.78,
+      "caring": 0.75,
+      "loving": 0.72,
+      "warm": 0.70,
+      "holding": 0.68
+    },
+
+    "relational_attunement": {
+      "with": 0.85,
+      "together": 0.80,
+      "here": 0.82,
+      "present": 0.88,
+      "alongside": 0.75,
+      "accompanying": 0.72,
+      "witnessing": 0.78,
+      "seeing": 0.76
+    },
+
+    "metaphorical_quality": {
+      "like": 0.90,
+      "as if": 0.85,
+      "similar to": 0.75,
+      "reminds": 0.70,
+      "evokes": 0.68,
+      "resembles": 0.65
+    }
+  },
+
+  "WISDOM": {
+    "description": "Pattern recognition, systems thinking, developmental perspective",
+    "dimension": "6D",
+    "field_type": "frame",
+    "total_atoms": 50,
+
+    "pattern_recognition": {
+      "pattern": 0.85,
+      "recognize": 0.80,
+      "notice": 0.75,
+      "see": 0.78,
+      "perceive": 0.72,
+      "discern": 0.68,
+      "detect": 0.65,
+      "identify": 0.70
+    },
+
+    "systems_thinking": {
+      "context": 0.82,
+      "system": 0.78,
+      "whole": 0.75,
+      "ecology": 0.72,
+      "field": 0.70,
+      "network": 0.68,
+      "web": 0.65,
+      "interconnection": 0.70
+    },
+
+    "developmental_perspective": {
+      "becoming": 0.88,
+      "emerging": 0.85,
+      "evolving": 0.82,
+      "unfolding": 0.80,
+      "growing": 0.78,
+      "developing": 0.75,
+      "maturing": 0.72,
+      "transforming": 0.80
+    },
+
+    "archetypal_inquiry": {
+      "metaphor": 0.75,
+      "story": 0.78,
+      "myth": 0.70,
+      "archetype": 0.72,
+      "image": 0.68,
+      "symbol": 0.70,
+      "poetic": 0.65,
+      "dreamlike": 0.62
+    },
+
+    "integration": {
+      "sense": 0.80,
+      "understand": 0.78,
+      "meaning": 0.75,
+      "significance": 0.72,
+      "purpose": 0.78,
+      "why": 0.75,
+      "wisdom": 0.72,
+      "learning": 0.70
+    },
+
+    "temporal_framing": {
+      "journey": 0.75,
+      "process": 0.80,
+      "path": 0.72,
+      "way": 0.78,
+      "movement": 0.70,
+      "flow": 0.75,
+      "rhythm": 0.68,
+      "cycle": 0.65
+    }
+  },
+
+  "AUTHENTICITY": {
+    "description": "Truth-seeking, edge exploration, voice reclamation, shadow integration",
+    "dimension": "7D",
+    "field_type": "truth",
+    "total_atoms": 50,
+
+    "core_truth_seeking": {
+      "true": 0.92,
+      "truth": 0.90,
+      "honest": 0.88,
+      "really": 0.85,
+      "actually": 0.82,
+      "genuinely": 0.80,
+      "authentically": 0.78,
+      "deeply": 0.75
+    },
+
+    "edge_exploration": {
+      "scary": 0.75,
+      "frightening": 0.72,
+      "edge": 0.78,
+      "forbidden": 0.70,
+      "dangerous": 0.68,
+      "risky": 0.65,
+      "vulnerable": 0.80,
+      "exposed": 0.75
+    },
+
+    "voice_reclamation": {
+      "your": 0.90,
+      "own": 0.88,
+      "voice": 0.85,
+      "words": 0.80,
+      "language": 0.75,
+      "expression": 0.78,
+      "speak": 0.82,
+      "say": 0.85
+    },
+
+    "integrity_alignment": {
+      "align": 0.75,
+      "congruent": 0.72,
+      "integrity": 0.78,
+      "whole": 0.75,
+      "unified": 0.70,
+      "consistent": 0.68,
+      "coherent": 0.72,
+      "integrated": 0.75
+    },
+
+    "shadow_integration": {
+      "shame": 0.72,
+      "shadow": 0.78,
+      "dark": 0.70,
+      "hidden": 0.75,
+      "disowned": 0.68,
+      "rejected": 0.65,
+      "denied": 0.70,
+      "suppressed": 0.72
+    },
+
+    "permission_giving": {
+      "allowed": 0.75,
+      "okay": 0.80,
+      "permission": 0.72,
+      "free": 0.78,
+      "liberated": 0.70,
+      "unleashed": 0.65,
+      "uninhibited": 0.68,
+      "unrestrained": 0.62
+    }
+  },
+
+  "PRESENCE": {
+    "description": "Somatic grounding, breath awareness, sensory tracking, spaciousness",
+    "dimension": "9D",
+    "field_type": "quality",
+    "total_atoms": 50,
+
+    "core_somatic": {
+      "right now": 0.95,
+      "here": 0.92,
+      "this moment": 0.90,
+      "present": 0.88,
+      "now": 0.95,
+      "immediate": 0.82,
+      "current": 0.78,
+      "instant": 0.75
+    },
+
+    "breath_grounding": {
+      "breathe": 0.85,
+      "breath": 0.88,
+      "inhale": 0.78,
+      "exhale": 0.75,
+      "breathing": 0.82,
+      "air": 0.70,
+      "oxygen": 0.65,
+      "lungs": 0.68
+    },
+
+    "sensory_awareness": {
+      "see": 0.80,
+      "hear": 0.78,
+      "touch": 0.75,
+      "taste": 0.70,
+      "smell": 0.72,
+      "sense": 0.85,
+      "perceive": 0.78,
+      "notice": 0.82
+    },
+
+    "spaciousness": {
+      "pause": 0.88,
+      "space": 0.85,
+      "slow": 0.82,
+      "stillness": 0.80,
+      "quiet": 0.78,
+      "silence": 0.85,
+      "rest": 0.75,
+      "settle": 0.80
+    },
+
+    "phenomenal_texture": {
+      "heavy": 0.75,
+      "light": 0.72,
+      "frozen": 0.78,
+      "tangled": 0.75,
+      "tight": 0.72,
+      "loose": 0.68,
+      "flowing": 0.75,
+      "stuck": 0.80
+    },
+
+    "kairos_awareness": {
+      "ripe": 0.72,
+      "ready": 0.78,
+      "timing": 0.70,
+      "when": 0.75,
+      "moment": 0.82,
+      "opening": 0.78,
+      "threshold": 0.72,
+      "edge": 0.70
+    }
+  },
+
+  "metadata": {
+    "composition_strategies": [
+      "direct_emission",
+      "organ_fusion",
+      "hebbian_fallback"
+    ],
+    "delta_c_threshold": 0.75,
+    "min_nexus_participants": 2,
+    "intersection_strength_threshold": 0.3,
+    "organ_field_activation_threshold": 0.3,
+    "notes": "These atoms form the semantic lexicon for pure emission. Each organ computes activation values for its atoms based on conversational substrate. Nexuses form where 2+ organs activate the same atom above threshold."
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "last_updated": "2025-11-14T12:42:05.845157",
+  "total_occasions_processed": 70,
+  "total_unique_users": 33,
+  "current_snapshot": {
+    "timestamp": "2025-11-14T12:00:00",
+    "total_occasions": 10,
+    "mean_v0_descent": 0.0,
+    "std_v0_descent": 0.0,
+    "mean_convergence_cycles": -8.256008945646002,
+    "kairos_detection_rate": 1.0,
+    "zone_distribution": {
+      "3": 1.0
+    },
+    "polyvagal_distribution": {
+      "mixed_state": 1.0
+    },
+    "mean_organ_activations": {},
+    "std_organ_activations": {},
+    "mean_nexuses_formed": 10.119806488789285,
+    "nexus_type_distribution": {},
+    "pathway_distribution": {
+      "maintain": 1.0
+    },
+    "mean_healing_score": 5.318114437635345,
+    "crisis_rate": 0.0,
+    "heckling_rate": 0.0,
+    "mean_ndam_urgency": 8.875971807063113,
+    "mean_emission_confidence": 5.962050342143406,
+    "emission_mode_distribution": {
+      "hebbian_fallback": 1.0
+    },
+    "cohort_size": 10,
+    "privacy_noise_scale": 10.0
+  },
+  "historical_snapshots": [
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 12.34244705805557,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": 3.6396513933634447,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {},
+      "mean_healing_score": 0.0,
+      "crisis_rate": 0.4,
+      "heckling_rate": 0.5,
+      "mean_ndam_urgency": -26.405000898050698,
+      "mean_emission_confidence": 4.471092297042109,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": -17.559281218273966,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": 12.764949354204498,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {},
+      "mean_healing_score": 0.0,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.1,
+      "mean_ndam_urgency": -27.939781035243616,
+      "mean_emission_confidence": -0.8704349318244117,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 19.002668399450684,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": -2.562087345843444,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {},
+      "mean_healing_score": 0.0,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": 6.992417716971674,
+      "mean_emission_confidence": -8.763593810642181,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 15.940054937168828,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": -1.386651791004746,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": -5.615446233627026,
+      "crisis_rate": 0.5,
+      "heckling_rate": 0.5,
+      "mean_ndam_urgency": -4.097228496231523,
+      "mean_emission_confidence": -10.429059541169249,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": -11.045796340370217,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": -5.808075532489454,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": -13.190471716734402,
+      "crisis_rate": 0.5,
+      "heckling_rate": 0.5,
+      "mean_ndam_urgency": 23.109650685241082,
+      "mean_emission_confidence": 1.208358399915244,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": -5.220054174495112,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": -27.912846490988187,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": -4.258447218545175,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.1,
+      "mean_ndam_urgency": -9.846174752929954,
+      "mean_emission_confidence": -10.36147406831908,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T12:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": -8.256008945646002,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": 10.119806488789285,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": 5.318114437635345,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": 8.875971807063113,
+      "mean_emission_confidence": 5.962050342143406,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    }
+  ],
+  "milestones": [
+    {
+      "milestone_id": "first_kairos",
+      "timestamp": "2025-11-14T00:00:00",
+      "milestone_type": "capability",
+      "description": "First Kairos moment detected (opportune time for coherence)",
+      "metric_name": "kairos_detection_rate",
+      "metric_value": 1.0,
+      "baseline_value": 0.0,
+      "threshold_crossed": 0.0,
+      "cohort_size_at_milestone": 10,
+      "total_occasions_processed": 10
+    },
+    {
+      "milestone_id": "emission_maturity",
+      "timestamp": "2025-11-14T00:00:00",
+      "milestone_type": "maturity",
+      "description": "Emission generation maturity achieved (mean confidence > 0.5)",
+      "metric_name": "mean_emission_confidence",
+      "metric_value": 4.471092297042109,
+      "baseline_value": 0.3,
+      "threshold_crossed": 0.5,
+      "cohort_size_at_milestone": 10,
+      "total_occasions_processed": 10
+    }
+  ],
+  "field_dynamics": [],
+  "learned_organism_patterns": {
+    "typical_v0_descent": 0.23914845000000007,
+    "typical_convergence_cycles": 1.2726407488085711,
+    "typical_emission_confidence": -1.2440054981547783,
+    "typical_crisis_rate": 0.09820764000000003,
+    "typical_heckling_rate": 0.11842695000000002,
+    "typical_healing_score": -1.090094595392428
+  },
+  "self_insights": [
+    "Crisis handling shows maturity: 40.0% crisis rate with mean urgency -26.41 (grounded response)",
+    "Kairos detection active: 100.0% of occasions reach opportune coherence moment",
+    "Crisis handling shows maturity: 50.0% crisis rate with mean urgency -4.10 (grounded response)"
+  ]
+}

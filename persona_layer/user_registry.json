@@ -1,0 +1,47 @@
+{
+  "user_20251113_133354": {
+    "user_id": "user_20251113_133354",
+    "username": "Alice",
+    "created_at": "2025-11-13T13:33:54.131910",
+    "total_sessions": 1,
+    "total_turns": 10,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_133354_state.json"
+  },
+  "user_20251113_133625": {
+    "user_id": "user_20251113_133625",
+    "username": "Joe",
+    "created_at": "2025-11-13T13:36:25.496517",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_133625_state.json"
+  },
+  "user_20251113_133920": {
+    "user_id": "user_20251113_133920",
+    "username": "TestUser",
+    "created_at": "2025-11-13T13:39:20.174775",
+    "total_sessions": 2,
+    "total_turns": 6,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_133920_state.json"
+  },
+  "user_20251113_143117": {
+    "user_id": "user_20251113_143117",
+    "username": "Emi",
+    "created_at": "2025-11-13T14:31:17.336687",
+    "total_sessions": 7,
+    "total_turns": 32,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_143117_state.json"
+  },
+  "user_20251113_232232": {
+    "user_id": "user_20251113_232232",
+    "username": "Jason",
+    "created_at": "2025-11-13T23:22:32.438093",
+    "total_sessions": 2,
+    "total_turns": 5,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_232232_state.json"
+  }
+}

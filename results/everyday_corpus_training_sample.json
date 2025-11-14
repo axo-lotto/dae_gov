@@ -1,0 +1,255 @@
+{
+  "timestamp": "2025-11-13 15:37:43",
+  "pairs_trained": 30,
+  "elapsed_seconds": 8.272381782531738,
+  "results": [
+    {
+      "pair_id": "burnout_001",
+      "category": "burnout_spiral",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "burnout_002",
+      "category": "burnout_spiral",
+      "strategy": null,
+      "confidence": 0.7192792463279961,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "burnout_003",
+      "category": "burnout_spiral",
+      "strategy": null,
+      "confidence": 0.7492851476875974,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "burnout_004",
+      "category": "burnout_spiral",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "burnout_005",
+      "category": "burnout_spiral",
+      "strategy": null,
+      "confidence": 0.6937881986466592,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "toxic_prod_001",
+      "category": "toxic_productivity",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "toxic_prod_002",
+      "category": "toxic_productivity",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "toxic_prod_003",
+      "category": "toxic_productivity",
+      "strategy": null,
+      "confidence": 0.7192035314803177,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "toxic_prod_004",
+      "category": "toxic_productivity",
+      "strategy": null,
+      "confidence": 0.7041974516246038,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "toxic_prod_005",
+      "category": "toxic_productivity",
+      "strategy": null,
+      "confidence": 0.3,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "psych_safety_001",
+      "category": "psychological_safety",
+      "strategy": null,
+      "confidence": 0.6972767833145318,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "psych_safety_002",
+      "category": "psychological_safety",
+      "strategy": null,
+      "confidence": 0.7239775418650344,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "psych_safety_003",
+      "category": "psychological_safety",
+      "strategy": null,
+      "confidence": 0.7305877587940196,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "psych_safety_004",
+      "category": "psychological_safety",
+      "strategy": null,
+      "confidence": 0.7029671484275442,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "psych_safety_005",
+      "category": "psychological_safety",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "witnessing_001",
+      "category": "witnessing_presence",
+      "strategy": null,
+      "confidence": 0.7230404314576959,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "witnessing_002",
+      "category": "witnessing_presence",
+      "strategy": null,
+      "confidence": 0.7404442102222513,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "witnessing_003",
+      "category": "witnessing_presence",
+      "strategy": null,
+      "confidence": 0.7429748385386623,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "witnessing_004",
+      "category": "witnessing_presence",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "witnessing_005",
+      "category": "witnessing_presence",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "boundaries_001",
+      "category": "sustainable_rhythm",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "boundaries_002",
+      "category": "sustainable_rhythm",
+      "strategy": null,
+      "confidence": 0.7115142424448412,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "boundaries_003",
+      "category": "sustainable_rhythm",
+      "strategy": null,
+      "confidence": 0.6875723725261937,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "boundaries_004",
+      "category": "sustainable_rhythm",
+      "strategy": null,
+      "confidence": 0.7192217813954201,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "boundaries_005",
+      "category": "sustainable_rhythm",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "scapegoat_001",
+      "category": "scapegoat_dynamics",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "scapegoat_002",
+      "category": "scapegoat_dynamics",
+      "strategy": null,
+      "confidence": 0.7198727160464887,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "scapegoat_003",
+      "category": "scapegoat_dynamics",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "scapegoat_004",
+      "category": "scapegoat_dynamics",
+      "strategy": null,
+      "confidence": 0.7223974319211423,
+      "nexuses": 0,
+      "zone": null
+    },
+    {
+      "pair_id": "scapegoat_005",
+      "category": "scapegoat_dynamics",
+      "strategy": null,
+      "confidence": 0.8,
+      "nexuses": 0,
+      "zone": null
+    }
+  ],
+  "aggregate": {
+    "strategies": {
+      "null": 30
+    },
+    "mean_confidence": 0.7369200277573669,
+    "mean_nexuses": 0.0,
+    "organic_rate": 0.0
+  }
+}

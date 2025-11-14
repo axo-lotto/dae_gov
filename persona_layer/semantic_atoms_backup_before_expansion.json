@@ -1,0 +1,807 @@
+{
+  "description": "Semantic atom pools for full 11-organ emission architecture",
+  "version": "2.0",
+  "date": "2025-11-11",
+  "total_atoms": 550,
+  "organs": 11,
+  "atoms_per_organ": 50,
+  "integration_status": "Phase 1 - All 11 organs wired for emission",
+  "LISTENING": {
+    "description": "Curiosity, inquiry, ground truth hunger, exploration",
+    "dimension": "7D",
+    "field_type": "topic",
+    "total_atoms": 50,
+    "core_exploration": {
+      "more": 0.9,
+      "say": 0.85,
+      "tell": 0.75,
+      "share": 0.7,
+      "describe": 0.65,
+      "explain": 0.6,
+      "elaborate": 0.55,
+      "expand": 0.5
+    },
+    "ground_truth_hunger": {
+      "exactly": 0.85,
+      "specifically": 0.82,
+      "precisely": 0.78,
+      "example": 0.75,
+      "instance": 0.7,
+      "detail": 0.68,
+      "particular": 0.65,
+      "concrete": 0.62
+    },
+    "deepening_inquiry": {
+      "notice": 0.75,
+      "aware": 0.72,
+      "track": 0.68,
+      "pay attention": 0.65,
+      "observe": 0.62,
+      "sense": 0.6,
+      "tune into": 0.58,
+      "attune": 0.55
+    },
+    "temporal_inquiry": {
+      "when": 0.85,
+      "since": 0.75,
+      "before": 0.7,
+      "after": 0.68,
+      "now": 0.92,
+      "then": 0.65,
+      "moment": 0.78,
+      "time": 0.72
+    },
+    "relational_inquiry": {
+      "who": 0.8,
+      "with": 0.75,
+      "between": 0.7,
+      "among": 0.65,
+      "relationship": 0.72,
+      "connection": 0.68,
+      "together": 0.62,
+      "separate": 0.58
+    },
+    "open_ended": {
+      "what": 0.9,
+      "how": 0.88,
+      "where": 0.78,
+      "why": 0.72,
+      "which": 0.68,
+      "about": 0.75
+    }
+  },
+  "EMPATHY": {
+    "description": "Emotional resonance, somatic tracking, compassionate presence",
+    "dimension": "6D",
+    "field_type": "action",
+    "total_atoms": 50,
+    "core_feeling": {
+      "feel": 0.95,
+      "feeling": 0.92,
+      "sense": 0.85,
+      "experience": 0.8,
+      "live": 0.75,
+      "inhabit": 0.7,
+      "dwell": 0.65,
+      "rest": 0.6
+    },
+    "somatic_tracking": {
+      "body": 0.9,
+      "where": 0.85,
+      "sensation": 0.82,
+      "physical": 0.78,
+      "bodily": 0.75,
+      "somatic": 0.72,
+      "flesh": 0.68,
+      "tissue": 0.65
+    },
+    "emotional_depth": {
+      "underneath": 0.8,
+      "beneath": 0.78,
+      "deeper": 0.75,
+      "below": 0.72,
+      "under": 0.7,
+      "hidden": 0.68,
+      "concealed": 0.65,
+      "veiled": 0.62
+    },
+    "compassionate_presence": {
+      "gentle": 0.75,
+      "tender": 0.72,
+      "soft": 0.7,
+      "kind": 0.78,
+      "caring": 0.75,
+      "loving": 0.72,
+      "warm": 0.7,
+      "holding": 0.68
+    },
+    "relational_attunement": {
+      "with": 0.85,
+      "together": 0.8,
+      "here": 0.82,
+      "present": 0.88,
+      "alongside": 0.75,
+      "accompanying": 0.72,
+      "witnessing": 0.78,
+      "seeing": 0.76
+    },
+    "metaphorical_quality": {
+      "like": 0.9,
+      "as if": 0.85,
+      "similar to": 0.75,
+      "reminds": 0.7,
+      "evokes": 0.68,
+      "resembles": 0.65
+    }
+  },
+  "WISDOM": {
+    "description": "Pattern recognition, systems thinking, developmental perspective",
+    "dimension": "6D",
+    "field_type": "frame",
+    "total_atoms": 50,
+    "pattern_recognition": {
+      "pattern": 0.85,
+      "recognize": 0.8,
+      "notice": 0.75,
+      "see": 0.78,
+      "perceive": 0.72,
+      "discern": 0.68,
+      "detect": 0.65,
+      "identify": 0.7
+    },
+    "systems_thinking": {
+      "context": 0.82,
+      "system": 0.78,
+      "whole": 0.75,
+      "ecology": 0.72,
+      "field": 0.7,
+      "network": 0.68,
+      "web": 0.65,
+      "interconnection": 0.7
+    },
+    "developmental_perspective": {
+      "becoming": 0.88,
+      "emerging": 0.85,
+      "evolving": 0.82,
+      "unfolding": 0.8,
+      "growing": 0.78,
+      "developing": 0.75,
+      "maturing": 0.72,
+      "transforming": 0.8
+    },
+    "archetypal_inquiry": {
+      "metaphor": 0.75,
+      "story": 0.78,
+      "myth": 0.7,
+      "archetype": 0.72,
+      "image": 0.68,
+      "symbol": 0.7,
+      "poetic": 0.65,
+      "dreamlike": 0.62
+    },
+    "integration": {
+      "sense": 0.8,
+      "understand": 0.78,
+      "meaning": 0.75,
+      "significance": 0.72,
+      "purpose": 0.78,
+      "why": 0.75,
+      "wisdom": 0.72,
+      "learning": 0.7
+    },
+    "temporal_framing": {
+      "journey": 0.75,
+      "process": 0.8,
+      "path": 0.72,
+      "way": 0.78,
+      "movement": 0.7,
+      "flow": 0.75,
+      "rhythm": 0.68,
+      "cycle": 0.65
+    }
+  },
+  "AUTHENTICITY": {
+    "description": "Truth-seeking, edge exploration, voice reclamation, shadow integration",
+    "dimension": "7D",
+    "field_type": "truth",
+    "total_atoms": 50,
+    "core_truth_seeking": {
+      "true": 0.92,
+      "truth": 0.9,
+      "honest": 0.88,
+      "really": 0.85,
+      "actually": 0.82,
+      "genuinely": 0.8,
+      "authentically": 0.78,
+      "deeply": 0.75
+    },
+    "edge_exploration": {
+      "scary": 0.75,
+      "frightening": 0.72,
+      "edge": 0.78,
+      "forbidden": 0.7,
+      "dangerous": 0.68,
+      "risky": 0.65,
+      "vulnerable": 0.8,
+      "exposed": 0.75
+    },
+    "voice_reclamation": {
+      "your": 0.9,
+      "own": 0.88,
+      "voice": 0.85,
+      "words": 0.8,
+      "language": 0.75,
+      "expression": 0.78,
+      "speak": 0.82,
+      "say": 0.85
+    },
+    "integrity_alignment": {
+      "align": 0.75,
+      "congruent": 0.72,
+      "integrity": 0.78,
+      "whole": 0.75,
+      "unified": 0.7,
+      "consistent": 0.68,
+      "coherent": 0.72,
+      "integrated": 0.75
+    },
+    "shadow_integration": {
+      "shame": 0.72,
+      "shadow": 0.78,
+      "dark": 0.7,
+      "hidden": 0.75,
+      "disowned": 0.68,
+      "rejected": 0.65,
+      "denied": 0.7,
+      "suppressed": 0.72
+    },
+    "permission_giving": {
+      "allowed": 0.75,
+      "okay": 0.8,
+      "permission": 0.72,
+      "free": 0.78,
+      "liberated": 0.7,
+      "unleashed": 0.65,
+      "uninhibited": 0.68,
+      "unrestrained": 0.62
+    }
+  },
+  "PRESENCE": {
+    "description": "Somatic grounding, breath awareness, sensory tracking, spaciousness",
+    "dimension": "9D",
+    "field_type": "quality",
+    "total_atoms": 50,
+    "core_somatic": {
+      "right now": 0.95,
+      "here": 0.92,
+      "this moment": 0.9,
+      "present": 0.88,
+      "now": 0.95,
+      "immediate": 0.82,
+      "current": 0.78,
+      "instant": 0.75
+    },
+    "breath_grounding": {
+      "breathe": 0.85,
+      "breath": 0.88,
+      "inhale": 0.78,
+      "exhale": 0.75,
+      "breathing": 0.82,
+      "air": 0.7,
+      "oxygen": 0.65,
+      "lungs": 0.68
+    },
+    "sensory_awareness": {
+      "see": 0.8,
+      "hear": 0.78,
+      "touch": 0.75,
+      "taste": 0.7,
+      "smell": 0.72,
+      "sense": 0.85,
+      "perceive": 0.78,
+      "notice": 0.82
+    },
+    "spaciousness": {
+      "pause": 0.88,
+      "space": 0.85,
+      "slow": 0.82,
+      "stillness": 0.8,
+      "quiet": 0.78,
+      "silence": 0.85,
+      "rest": 0.75,
+      "settle": 0.8
+    },
+    "phenomenal_texture": {
+      "heavy": 0.75,
+      "light": 0.72,
+      "frozen": 0.78,
+      "tangled": 0.75,
+      "tight": 0.72,
+      "loose": 0.68,
+      "flowing": 0.75,
+      "stuck": 0.8
+    },
+    "kairos_awareness": {
+      "ripe": 0.72,
+      "ready": 0.78,
+      "timing": 0.7,
+      "when": 0.75,
+      "moment": 0.82,
+      "opening": 0.78,
+      "threshold": 0.72,
+      "edge": 0.7
+    }
+  },
+  "BOND": {
+    "description": "IFS trauma/parts detection, SELF-energy tracking, protective system awareness",
+    "dimension": "8D",
+    "field_type": "parts_landscape",
+    "total_atoms": 50,
+    "manager_parts": {
+      "control": 0.85,
+      "manage": 0.82,
+      "plan": 0.75,
+      "organize": 0.72,
+      "structure": 0.7,
+      "responsible": 0.78,
+      "careful": 0.75,
+      "cautious": 0.72
+    },
+    "firefighter_parts": {
+      "escape": 0.8,
+      "numb": 0.85,
+      "distract": 0.78,
+      "avoid": 0.82,
+      "dissociate": 0.75,
+      "zone out": 0.72,
+      "binge": 0.7,
+      "compulsive": 0.68
+    },
+    "exile_parts": {
+      "abandoned": 0.88,
+      "rejected": 0.85,
+      "worthless": 0.82,
+      "alone": 0.8,
+      "unwanted": 0.78,
+      "small": 0.75,
+      "helpless": 0.82,
+      "stuck": 0.78
+    },
+    "SELF_energy": {
+      "calm": 0.92,
+      "curious": 0.9,
+      "compassionate": 0.88,
+      "connected": 0.85,
+      "confident": 0.82,
+      "clear": 0.88,
+      "creative": 0.8,
+      "courageous": 0.78
+    },
+    "protector_activation": {
+      "protect": 0.85,
+      "guard": 0.82,
+      "defend": 0.8,
+      "shield": 0.78,
+      "safe": 0.88,
+      "unsafe": 0.9,
+      "threatened": 0.85,
+      "danger": 0.82
+    },
+    "unburdening": {
+      "release": 0.8,
+      "let go": 0.85,
+      "unload": 0.72,
+      "unburden": 0.75,
+      "free": 0.82,
+      "liberate": 0.78,
+      "dissolve": 0.7,
+      "transform": 0.75
+    },
+    "witnessing": {
+      "see": 0.88,
+      "witness": 0.9,
+      "acknowledge": 0.85,
+      "recognize": 0.82,
+      "validate": 0.8,
+      "hear": 0.85,
+      "understand": 0.78,
+      "accept": 0.82
+    }
+  },
+  "SANS": {
+    "description": "Semantic coherence tracking, ambiguity detection, clarity monitoring",
+    "dimension": "5D",
+    "field_type": "semantic_texture",
+    "total_atoms": 50,
+    "high_coherence": {
+      "clear": 0.92,
+      "specific": 0.88,
+      "precise": 0.85,
+      "exact": 0.82,
+      "definite": 0.8,
+      "concrete": 0.85,
+      "particular": 0.78,
+      "explicit": 0.82
+    },
+    "low_coherence": {
+      "vague": 0.9,
+      "unclear": 0.88,
+      "ambiguous": 0.85,
+      "fuzzy": 0.8,
+      "confused": 0.82,
+      "uncertain": 0.78,
+      "indistinct": 0.75,
+      "nebulous": 0.72
+    },
+    "semantic_precision": {
+      "exactly": 0.88,
+      "specifically": 0.85,
+      "particularly": 0.82,
+      "distinctly": 0.78,
+      "uniquely": 0.75,
+      "separately": 0.72,
+      "individually": 0.7,
+      "singly": 0.68
+    },
+    "meaning_drift": {
+      "sort of": 0.85,
+      "kind of": 0.88,
+      "maybe": 0.82,
+      "somewhat": 0.8,
+      "possibly": 0.78,
+      "perhaps": 0.75,
+      "might": 0.82,
+      "could": 0.8
+    },
+    "referential_tracking": {
+      "this": 0.9,
+      "that": 0.88,
+      "these": 0.85,
+      "those": 0.82,
+      "it": 0.85,
+      "they": 0.8,
+      "which": 0.78,
+      "what": 0.82
+    },
+    "meta_linguistic": {
+      "mean": 0.88,
+      "meaning": 0.9,
+      "sense": 0.85,
+      "word": 0.82,
+      "phrase": 0.78,
+      "language": 0.8,
+      "communicate": 0.75,
+      "express": 0.78
+    },
+    "coherence_repair": {
+      "clarify": 0.9,
+      "specify": 0.88,
+      "define": 0.85,
+      "disambiguate": 0.82,
+      "distinguish": 0.78,
+      "differentiate": 0.75,
+      "articulate": 0.8,
+      "elucidate": 0.72
+    }
+  },
+  "NDAM": {
+    "description": "Urgency/crisis detection, escalation monitoring, immediate need awareness",
+    "dimension": "4D",
+    "field_type": "urgency_gradient",
+    "total_atoms": 50,
+    "crisis_markers": {
+      "crisis": 0.95,
+      "emergency": 0.92,
+      "urgent": 0.9,
+      "critical": 0.88,
+      "immediate": 0.92,
+      "now": 0.95,
+      "help": 0.9,
+      "rescue": 0.85
+    },
+    "escalation_signals": {
+      "worse": 0.88,
+      "escalating": 0.85,
+      "intensifying": 0.82,
+      "increasing": 0.8,
+      "mounting": 0.78,
+      "growing": 0.75,
+      "spiraling": 0.85,
+      "accelerating": 0.82
+    },
+    "harm_indicators": {
+      "hurt": 0.9,
+      "harm": 0.92,
+      "damage": 0.88,
+      "destroy": 0.85,
+      "injure": 0.82,
+      "wound": 0.8,
+      "kill": 0.95,
+      "die": 0.95
+    },
+    "safety_language": {
+      "safe": 0.9,
+      "safety": 0.92,
+      "secure": 0.85,
+      "protected": 0.82,
+      "shelter": 0.78,
+      "refuge": 0.75,
+      "haven": 0.72,
+      "sanctuary": 0.7
+    },
+    "resource_deficit": {
+      "can't": 0.85,
+      "unable": 0.82,
+      "impossible": 0.88,
+      "stuck": 0.8,
+      "trapped": 0.85,
+      "overwhelmed": 0.9,
+      "exhausted": 0.82,
+      "depleted": 0.8
+    },
+    "boundary_violations": {
+      "violate": 0.88,
+      "intrude": 0.85,
+      "invade": 0.82,
+      "force": 0.9,
+      "coerce": 0.85,
+      "pressure": 0.82,
+      "push": 0.78,
+      "demand": 0.8
+    },
+    "containment_needs": {
+      "contain": 0.82,
+      "hold": 0.85,
+      "stabilize": 0.88,
+      "ground": 0.9,
+      "anchor": 0.85,
+      "steady": 0.8,
+      "calm": 0.88,
+      "soothe": 0.85
+    }
+  },
+  "RNX": {
+    "description": "Temporal pattern detection, rhythm tracking, phase awareness",
+    "dimension": "6D",
+    "field_type": "temporal_landscape",
+    "total_atoms": 50,
+    "crisis_temporal": {
+      "sudden": 0.9,
+      "abrupt": 0.85,
+      "shock": 0.88,
+      "rupture": 0.82,
+      "break": 0.8,
+      "collapse": 0.85,
+      "crash": 0.82,
+      "explode": 0.78
+    },
+    "concrescent_temporal": {
+      "forming": 0.85,
+      "shaping": 0.82,
+      "coalescing": 0.78,
+      "gathering": 0.8,
+      "converging": 0.75,
+      "crystallizing": 0.72,
+      "solidifying": 0.7,
+      "coming together": 0.85
+    },
+    "restorative_temporal": {
+      "healing": 0.9,
+      "recovering": 0.88,
+      "restoring": 0.85,
+      "regenerating": 0.82,
+      "renewing": 0.8,
+      "rebuilding": 0.78,
+      "mending": 0.82,
+      "repairing": 0.8
+    },
+    "symbolic_pull": {
+      "meaningful": 0.85,
+      "significant": 0.88,
+      "profound": 0.82,
+      "deep": 0.8,
+      "archetypal": 0.75,
+      "mythic": 0.72,
+      "sacred": 0.78,
+      "numinous": 0.7
+    },
+    "rhythm_markers": {
+      "rhythm": 0.88,
+      "pattern": 0.85,
+      "cycle": 0.82,
+      "wave": 0.8,
+      "pulse": 0.85,
+      "beat": 0.78,
+      "tempo": 0.75,
+      "cadence": 0.72
+    },
+    "phase_transitions": {
+      "transition": 0.88,
+      "shift": 0.9,
+      "change": 0.85,
+      "transform": 0.82,
+      "move": 0.8,
+      "evolve": 0.78,
+      "develop": 0.75,
+      "progress": 0.78
+    },
+    "temporal_anchors": {
+      "before": 0.85,
+      "after": 0.85,
+      "during": 0.82,
+      "while": 0.8,
+      "when": 0.88,
+      "then": 0.78,
+      "until": 0.75,
+      "since": 0.8
+    }
+  },
+  "EO": {
+    "description": "Polyvagal state detection, safety/threat tracking, connection monitoring",
+    "dimension": "7D",
+    "field_type": "nervous_system_landscape",
+    "total_atoms": 50,
+    "ventral_vagal": {
+      "safe": 0.95,
+      "connected": 0.92,
+      "engaged": 0.88,
+      "present": 0.9,
+      "relaxed": 0.85,
+      "open": 0.88,
+      "receptive": 0.85,
+      "attuned": 0.82
+    },
+    "sympathetic_activation": {
+      "fight": 0.9,
+      "flee": 0.9,
+      "anxious": 0.88,
+      "panicked": 0.85,
+      "racing": 0.82,
+      "agitated": 0.85,
+      "mobilized": 0.8,
+      "activated": 0.82
+    },
+    "dorsal_vagal": {
+      "shutdown": 0.92,
+      "collapse": 0.9,
+      "freeze": 0.88,
+      "numb": 0.9,
+      "dissociate": 0.88,
+      "immobilized": 0.85,
+      "disconnected": 0.82,
+      "zoned out": 0.8
+    },
+    "co_regulation": {
+      "together": 0.88,
+      "with": 0.9,
+      "alongside": 0.85,
+      "mutual": 0.82,
+      "shared": 0.85,
+      "reciprocal": 0.78,
+      "responsive": 0.82,
+      "attuned": 0.85
+    },
+    "neuroception": {
+      "sense": 0.9,
+      "feel": 0.92,
+      "detect": 0.85,
+      "perceive": 0.82,
+      "notice": 0.88,
+      "aware": 0.85,
+      "read": 0.8,
+      "intuition": 0.78
+    },
+    "safety_cues": {
+      "smile": 0.88,
+      "warmth": 0.9,
+      "softness": 0.85,
+      "gentleness": 0.82,
+      "kindness": 0.88,
+      "welcome": 0.85,
+      "invitation": 0.8,
+      "openness": 0.82
+    },
+    "threat_cues": {
+      "danger": 0.92,
+      "threat": 0.95,
+      "hostile": 0.88,
+      "aggressive": 0.9,
+      "harsh": 0.85,
+      "sharp": 0.82,
+      "cold": 0.8,
+      "rejecting": 0.85
+    }
+  },
+  "CARD": {
+    "description": "Response scaling calibration, contextual detail modulation, length targeting",
+    "dimension": "5D",
+    "field_type": "response_modulation",
+    "total_atoms": 50,
+    "minimal_scale": {
+      "brief": 0.92,
+      "short": 0.9,
+      "quick": 0.88,
+      "concise": 0.85,
+      "terse": 0.82,
+      "succinct": 0.8,
+      "minimal": 0.88,
+      "compact": 0.78
+    },
+    "moderate_scale": {
+      "moderate": 0.85,
+      "balanced": 0.88,
+      "proportionate": 0.8,
+      "adequate": 0.78,
+      "sufficient": 0.82,
+      "appropriate": 0.85,
+      "fitting": 0.8,
+      "suitable": 0.78
+    },
+    "detailed_scale": {
+      "detailed": 0.9,
+      "thorough": 0.88,
+      "comprehensive": 0.85,
+      "extensive": 0.82,
+      "elaborate": 0.85,
+      "in-depth": 0.88,
+      "full": 0.8,
+      "complete": 0.82
+    },
+    "urgency_modulation": {
+      "urgent": 0.88,
+      "immediate": 0.9,
+      "pressing": 0.85,
+      "critical": 0.88,
+      "time-sensitive": 0.82,
+      "priority": 0.8,
+      "now": 0.92,
+      "quickly": 0.85
+    },
+    "complexity_tracking": {
+      "simple": 0.85,
+      "complex": 0.88,
+      "complicated": 0.82,
+      "intricate": 0.78,
+      "nuanced": 0.85,
+      "multifaceted": 0.8,
+      "layered": 0.82,
+      "sophisticated": 0.75
+    },
+    "capacity_signals": {
+      "capacity": 0.82,
+      "bandwidth": 0.78,
+      "energy": 0.85,
+      "resources": 0.88,
+      "able": 0.8,
+      "can": 0.82,
+      "manage": 0.78,
+      "handle": 0.8
+    },
+    "pacing_markers": {
+      "pace": 0.85,
+      "speed": 0.8,
+      "slow": 0.88,
+      "gradual": 0.82,
+      "step-by-step": 0.85,
+      "incremental": 0.78,
+      "progressive": 0.75,
+      "steady": 0.82
+    }
+  },
+  "metadata": {
+    "composition_strategies": [
+      "direct_emission",
+      "organ_fusion",
+      "hebbian_fallback",
+      "trauma_modulation",
+      "polyvagal_gating"
+    ],
+    "delta_c_threshold": 0.75,
+    "min_nexus_participants": 2,
+    "intersection_strength_threshold": 0.3,
+    "organ_field_activation_threshold": 0.3,
+    "r_matrix_size": "11x11",
+    "hebbian_coupling_path": "TSK/conversational_hebbian_memory.json",
+    "notes": "Full 11-organ semantic lexicon for entity-native emission. BOND/SANS/NDAM/RNX/EO/CARD atoms aligned with organ keyword implementations for trauma-aware, contextually-calibrated response generation. Nexuses form where 2+ organs activate the same atom above threshold, weighted by 11x11 Hebbian R-matrix coupling."
+  }
+}

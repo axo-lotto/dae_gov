@@ -1,0 +1,78 @@
+{
+  "metadata": {
+    "training_date": "2025-11-13T20:38:44.979776",
+    "corpus_path": "knowledge_base/conversational_training_pairs_expanded.json",
+    "num_pairs": 102,
+    "processing_events": 204,
+    "similarity_threshold_target": 0.65,
+    "variance_amplification_target": 2.0,
+    "learning_threshold": 0.45,
+    "reset_families": true
+  },
+  "performance": {
+    "total_time_seconds": 15.193978071212769,
+    "mean_pair_time_seconds": 0.14894870683258654,
+    "pairs_per_minute": 402.82323543391374
+  },
+  "final_state": {
+    "total_families": 0,
+    "total_conversations": 0
+  },
+  "discovery_milestones": [
+    {
+      "pair": 10,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 20,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 30,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 40,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 50,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 60,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 70,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 80,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 90,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 100,
+      "total_families": 0,
+      "total_conversations": 0
+    },
+    {
+      "pair": 102,
+      "total_families": 0,
+      "total_conversations": 0
+    }
+  ]
+}

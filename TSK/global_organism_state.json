@@ -1,8 +1,8 @@
 {
-  "global_confidence": 0.275,
+  "global_confidence": 0.15714285714285714,
   "total_successes": 1,
-  "total_sessions": 4,
-  "success_rate": 0.25,
+  "total_sessions": 7,
+  "success_rate": 0.14285714285714285,
   "archetypal_lure_distribution": {},
   "universal_transformation_patterns": {},
   "collective_hebbian_memory": {},

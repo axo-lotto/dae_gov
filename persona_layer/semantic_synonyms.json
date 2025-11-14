@@ -1,0 +1,83 @@
+{
+  "description": "Semantic synonym groups for nexus intersection",
+  "version": "1.0",
+  "date": "2025-11-13",
+  "purpose": "Maps related semantic atoms to canonical forms to increase nexus formation rate",
+  "synonym_groups": [
+    {
+      "canonical": "sense",
+      "category": "perception",
+      "synonyms": ["feel", "notice", "aware", "perceive", "detect", "track", "attune", "recognize"]
+    },
+    {
+      "canonical": "overwhelmed",
+      "category": "emotional_state",
+      "synonyms": ["too much", "flooded", "inundated", "swamped", "drowning", "overloaded", "saturated"]
+    },
+    {
+      "canonical": "safety",
+      "category": "regulation",
+      "synonyms": ["safe", "secure", "grounded", "held", "protected", "stable", "anchored", "contained"]
+    },
+    {
+      "canonical": "presence",
+      "category": "quality",
+      "synonyms": ["present", "here", "now", "embodied", "grounded", "awareness", "attention", "mindful"]
+    },
+    {
+      "canonical": "connection",
+      "category": "relational",
+      "synonyms": ["connected", "together", "with", "relation", "bond", "link", "resonance", "attunement"]
+    },
+    {
+      "canonical": "feeling",
+      "category": "experience",
+      "synonyms": ["feel", "sense", "emotion", "experience", "affect", "sentiment", "mood"]
+    },
+    {
+      "canonical": "space",
+      "category": "boundary",
+      "synonyms": ["space", "room", "distance", "boundary", "separation", "pause", "gap"]
+    },
+    {
+      "canonical": "hold",
+      "category": "support",
+      "synonyms": ["hold", "holding", "contain", "support", "carry", "embrace", "cradle"]
+    },
+    {
+      "canonical": "wisdom",
+      "category": "insight",
+      "synonyms": ["wisdom", "insight", "understanding", "knowing", "clarity", "awareness", "recognition"]
+    },
+    {
+      "canonical": "pattern",
+      "category": "structure",
+      "synonyms": ["pattern", "structure", "system", "dynamic", "process", "flow", "rhythm"]
+    },
+    {
+      "canonical": "trust",
+      "category": "relational",
+      "synonyms": ["trust", "faith", "confidence", "reliance", "belief", "security"]
+    },
+    {
+      "canonical": "curious",
+      "category": "inquiry",
+      "synonyms": ["curious", "wonder", "inquiry", "question", "explore", "investigate", "discover"]
+    },
+    {
+      "canonical": "authentic",
+      "category": "quality",
+      "synonyms": ["authentic", "genuine", "real", "true", "honest", "sincere", "vulnerable"]
+    },
+    {
+      "canonical": "compassion",
+      "category": "quality",
+      "synonyms": ["compassion", "kindness", "care", "warmth", "tenderness", "gentleness", "love"]
+    },
+    {
+      "canonical": "energy",
+      "category": "vitality",
+      "synonyms": ["energy", "vitality", "aliveness", "vigor", "strength", "power", "force"]
+    }
+  ]
+}

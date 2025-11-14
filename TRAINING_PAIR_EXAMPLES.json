@@ -1,0 +1,288 @@
+{
+  "metadata": {
+    "description": "Example training pairs for new epoch types",
+    "date": "2025-11-12",
+    "total_examples": 30,
+    "modes": ["logical_reasoning", "poetic_creation", "dialectical_reasoning"]
+  },
+  
+  "logical_reasoning": [
+    {
+      "type": "syllogism",
+      "input_text": "All humans need rest to function. This team is made of humans. What follows?",
+      "output_text": "This team needs rest to function.",
+      "logical_form": "Barbara (AAA-1)",
+      "difficulty": "easy",
+      "metadata": {"logic_type": "syllogism", "domain": "organizational"}
+    },
+    {
+      "type": "syllogism",
+      "input_text": "No sustainable systems ignore resource limits. This organization is sustainable. Therefore?",
+      "output_text": "This organization does not ignore resource limits.",
+      "logical_form": "Celarent (EAE-1)",
+      "difficulty": "medium",
+      "metadata": {"logic_type": "syllogism", "domain": "systems"}
+    },
+    {
+      "type": "causal_chain",
+      "input_text": "Chronic stress impairs decision-making. Impaired decisions increase errors. Errors erode trust. What is the ultimate effect of chronic stress on teams?",
+      "output_text": "Chronic stress erodes team trust through a chain of impaired decisions and increased errors.",
+      "chain_depth": 3,
+      "difficulty": "medium",
+      "metadata": {"logic_type": "causal_chain", "domain": "organizational"}
+    },
+    {
+      "type": "causal_chain",
+      "input_text": "Lack of psychological safety reduces vulnerability. Reduced vulnerability blocks authentic communication. What happens to communication without psychological safety?",
+      "output_text": "Lack of psychological safety blocks authentic communication.",
+      "chain_depth": 2,
+      "difficulty": "easy",
+      "metadata": {"logic_type": "causal_chain", "domain": "relational"}
+    },
+    {
+      "type": "constraint_satisfaction",
+      "input_text": "If a team is overworked AND leadership is unresponsive, then burnout occurs. Burnout is NOT occurring. The team IS overworked. What about leadership?",
+      "output_text": "Leadership must be responsive (otherwise burnout would occur given the team is overworked).",
+      "num_constraints": 2,
+      "difficulty": "hard",
+      "metadata": {"logic_type": "constraint", "domain": "organizational"}
+    },
+    {
+      "type": "modus_ponens",
+      "input_text": "If boundaries are consistently violated, then safety decreases. Boundaries are being consistently violated. What is happening to safety?",
+      "output_text": "Safety is decreasing.",
+      "difficulty": "easy",
+      "metadata": {"logic_type": "modus_ponens", "domain": "trauma-informed"}
+    },
+    {
+      "type": "modus_tollens",
+      "input_text": "If a system is well-resourced, then it can absorb shocks. This system cannot absorb shocks. What does this tell us?",
+      "output_text": "This system is not well-resourced.",
+      "difficulty": "medium",
+      "metadata": {"logic_type": "modus_tollens", "domain": "systems"}
+    },
+    {
+      "type": "conditional_reasoning",
+      "input_text": "If empathy is present, connection deepens. If connection deepens, trust grows. Empathy is present. What is the outcome?",
+      "output_text": "Trust grows (through the chain: empathy → connection → trust).",
+      "difficulty": "medium",
+      "metadata": {"logic_type": "conditional", "domain": "relational"}
+    },
+    {
+      "type": "syllogism",
+      "input_text": "All trauma-informed systems prioritize safety. This team's culture prioritizes safety. Is this team trauma-informed?",
+      "output_text": "We cannot conclude definitively (affirming the consequent fallacy). Safety is necessary but not sufficient for trauma-informed practice.",
+      "logical_form": "Fallacy detection",
+      "difficulty": "hard",
+      "metadata": {"logic_type": "fallacy", "domain": "trauma-informed"}
+    },
+    {
+      "type": "causal_chain",
+      "input_text": "Unacknowledged grief accumulates. Accumulated grief becomes chronic dysregulation. Chronic dysregulation manifests as irritability. Why is the team so irritable?",
+      "output_text": "Unacknowledged grief has accumulated into chronic dysregulation, manifesting as irritability.",
+      "chain_depth": 3,
+      "difficulty": "medium",
+      "metadata": {"logic_type": "causal_chain", "domain": "trauma-informed"}
+    }
+  ],
+  
+  "poetic_creation": [
+    {
+      "type": "metaphor_completion",
+      "input_text": "The weight of unspoken grief in a team is...",
+      "output_text": "...a room filled with smoke. Everyone breathes it. No one names it.",
+      "emotional_core": "collective burden, invisible presence",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "metaphor", "domain": "organizational"}
+    },
+    {
+      "type": "metaphor_completion",
+      "input_text": "Burnout is...",
+      "output_text": "...a fire that has burned through the wood and now consumes the stone itself.",
+      "emotional_core": "exhaustion beyond exhaustion, consuming essence",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "metaphor", "domain": "trauma-informed"}
+    },
+    {
+      "type": "image_grounding",
+      "emotion": "overwhelm",
+      "input_text": "Create a grounding image for someone experiencing overwhelm.",
+      "output_text": "Your feet on the floor. The floor is solid. Solid doesn't mean easy. It means real.",
+      "grounding_type": "somatic_concrete",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "grounding", "domain": "trauma-informed"}
+    },
+    {
+      "type": "image_grounding",
+      "emotion": "shame",
+      "input_text": "Create a grounding image for someone experiencing shame.",
+      "output_text": "Shame lives in hiding. Your hand on your chest. The warmth there is real. You are more than what you're afraid of.",
+      "grounding_type": "somatic_compassion",
+      "difficulty": "hard",
+      "metadata": {"poetry_type": "grounding", "domain": "trauma-informed"}
+    },
+    {
+      "type": "emotional_resonance",
+      "input_text": "I feel like I'm drowning and everyone around me is just... fine.",
+      "output_text": "To be underwater while others breathe air. They can't see you flailing because you're good at treading. That exhaustion is real.",
+      "resonance_depth": "mirror_and_validate",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "resonance", "domain": "relational"}
+    },
+    {
+      "type": "emotional_resonance",
+      "input_text": "I don't know if I can keep doing this.",
+      "output_text": "That edge. The place where 'I can't' meets 'but I am.' You're allowed to be there. It's not giving up to say it.",
+      "resonance_depth": "permission_and_witness",
+      "difficulty": "hard",
+      "metadata": {"poetry_type": "resonance", "domain": "trauma-informed"}
+    },
+    {
+      "type": "narrative_imagery",
+      "situation": "Team experiencing collective grief after loss",
+      "input_text": "Weave imagery for a team's shared grief.",
+      "output_text": "Grief as a table everyone sits around. Some days the table is too heavy to lift. Today, we just sit with it. The sitting is the work.",
+      "narrative_type": "collective_holding",
+      "difficulty": "hard",
+      "metadata": {"poetry_type": "narrative", "domain": "organizational"}
+    },
+    {
+      "type": "narrative_imagery",
+      "situation": "Person realizing they've been performing instead of being present",
+      "input_text": "Create imagery for the recognition of performance vs. presence.",
+      "output_text": "Performance is the mask you've worn so long it feels like skin. Presence is the moment you notice the mask. And the moment after that, when you realize you can choose.",
+      "narrative_type": "insight_moment",
+      "difficulty": "hard",
+      "metadata": {"poetry_type": "narrative", "domain": "authenticity"}
+    },
+    {
+      "type": "metaphor_completion",
+      "input_text": "Psychological safety is...",
+      "output_text": "...the ground that doesn't give way when you're honest. Not the absence of fear, but the presence of holding.",
+      "emotional_core": "trust, groundedness, permission",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "metaphor", "domain": "organizational"}
+    },
+    {
+      "type": "emotional_resonance",
+      "input_text": "I'm tired of being the one who holds everything together.",
+      "output_text": "To be the glue while you're cracking. To hold the world while your hands shake. You're allowed to need holding too.",
+      "resonance_depth": "mirror_and_permission",
+      "difficulty": "medium",
+      "metadata": {"poetry_type": "resonance", "domain": "relational"}
+    }
+  ],
+  
+  "dialectical_reasoning": [
+    {
+      "type": "simple_dialectic",
+      "thesis": "Directness is necessary for honest communication",
+      "antithesis": "Gentleness is necessary to preserve relationship",
+      "input_text": "How do we integrate directness and gentleness?",
+      "output_text": "The directness of care. Truth spoken in a way the person can receive it. Not softening the message, but attending to how it lands.",
+      "values_in_tension": ["honesty", "care"],
+      "difficulty": "medium",
+      "metadata": {"dialect_type": "values", "domain": "relational"}
+    },
+    {
+      "type": "simple_dialectic",
+      "thesis": "Individual accountability is essential",
+      "antithesis": "Systemic accountability is essential",
+      "input_text": "How do we hold both individual and systemic accountability?",
+      "output_text": "Personal responsibility within collective structures. Clear individual choices + recognition that those choices happen in contexts. Neither excuse, neither blame.",
+      "values_in_tension": ["agency", "context"],
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "systems", "domain": "organizational"}
+    },
+    {
+      "type": "trauma_informed_dialectic",
+      "parts": {
+        "part1": "The part that says 'push through' (Firefighter)",
+        "part2": "The part that says 'stop everything' (Protector)"
+      },
+      "input_text": "How do we integrate these conflicting parts?",
+      "output_text": "Both parts care about survival. Firefighter thinks momentum is safety. Protector thinks stillness is safety. The integration: responsive pacing. Move when it serves, rest when it serves.",
+      "ifs_complexity": "medium",
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "parts_work", "domain": "trauma-informed"}
+    },
+    {
+      "type": "simple_dialectic",
+      "thesis": "Structure provides safety and clarity",
+      "antithesis": "Flexibility allows adaptation and responsiveness",
+      "input_text": "How do we integrate structure and flexibility?",
+      "output_text": "Clear structures that include room for adjustment. The container is firm, the contents can move. Like a river: the banks are defined, the water flows.",
+      "values_in_tension": ["stability", "adaptability"],
+      "difficulty": "medium",
+      "metadata": {"dialect_type": "organizational", "domain": "systems"}
+    },
+    {
+      "type": "values_dialectic",
+      "value1": "Urgency (when action is needed)",
+      "value2": "Patience (when waiting serves)",
+      "input_text": "How do we know when to act urgently vs. when to wait?",
+      "output_text": "Discernment is the bridge. Not 'always fast' or 'always slow,' but attuned to what this moment needs. Urgency for true emergencies, patience for everything else.",
+      "trauma_context": "Trauma creates false urgency; healing requires learning the difference",
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "temporal", "domain": "trauma-informed"}
+    },
+    {
+      "type": "recursive_dialectic",
+      "level1": {
+        "thesis": "Individuals must take responsibility",
+        "antithesis": "Systems shape individual choices"
+      },
+      "level2": {
+        "thesis": "Synthesis: Both/and accountability",
+        "antithesis": "But this creates tension in practical situations"
+      },
+      "input_text": "How do we apply both/and accountability in real situations?",
+      "output_text": "Name the context, own the choice. 'This system made it hard' AND 'I chose how I responded.' Neither erases the other. Both inform what changes.",
+      "complexity": "high",
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "recursive", "domain": "organizational"}
+    },
+    {
+      "type": "trauma_informed_dialectic",
+      "parts": {
+        "part1": "The part that wants connection (Lonely exile)",
+        "part2": "The part that prevents connection (Protective manager)"
+      },
+      "input_text": "How do these parts work together?",
+      "output_text": "The exile knows connection is healing. The manager knows connection has hurt before. Integration: safe connection. Connect with discernment, not recklessly.",
+      "ifs_complexity": "high",
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "parts_work", "domain": "trauma-informed"}
+    },
+    {
+      "type": "simple_dialectic",
+      "thesis": "Efficiency maximizes output",
+      "antithesis": "Sustainability prevents collapse",
+      "input_text": "How do we integrate efficiency and sustainability?",
+      "output_text": "Sustainable efficiency. Fast enough to be effective, slow enough to be maintained. The question isn't 'how fast?' but 'how long can we sustain this pace?'",
+      "values_in_tension": ["productivity", "longevity"],
+      "difficulty": "medium",
+      "metadata": {"dialect_type": "organizational", "domain": "systems"}
+    },
+    {
+      "type": "values_dialectic",
+      "value1": "Vulnerability (authentic exposure)",
+      "value2": "Protection (wise boundaries)",
+      "input_text": "When should we be vulnerable vs. protected?",
+      "output_text": "Strategic vulnerability. Not 'vulnerable everywhere' or 'protected always,' but discerning. Vulnerable where it's safe enough. Protected where it's not.",
+      "trauma_context": "Trauma breaks the discernment muscle; healing rebuilds it",
+      "difficulty": "hard",
+      "metadata": {"dialect_type": "relational", "domain": "trauma-informed"}
+    },
+    {
+      "type": "simple_dialectic",
+      "thesis": "Change is necessary for growth",
+      "antithesis": "Stability is necessary for safety",
+      "input_text": "How do we integrate change and stability?",
+      "output_text": "Stable foundations from which to change. The ground holds steady so the growth can reach. Not change OR stability, but change WITHIN stability.",
+      "values_in_tension": ["growth", "security"],
+      "difficulty": "medium",
+      "metadata": {"dialect_type": "developmental", "domain": "organizational"}
+    }
+  ]
+}

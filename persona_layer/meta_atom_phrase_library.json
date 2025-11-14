@@ -1,0 +1,244 @@
+{
+  "meta_atoms": {
+    "trauma_aware": {
+      "description": "Recognizing protective parts, trauma responses, survival strategies",
+      "contributing_organs": ["BOND", "EO", "NDAM"],
+      "intensity_phrases": {
+        "high": [
+          "I'm noticing protective patterns activating strongly",
+          "This feels like firefighter energy working hard",
+          "There's a survival response happening",
+          "Part of you is really working to stay safe right now",
+          "I sense trauma activation"
+        ],
+        "medium": [
+          "I'm noticing some protective patterns",
+          "There's a survival response here",
+          "Part of you is working to stay safe",
+          "I sense some activation happening",
+          "Something protective is present"
+        ],
+        "low": [
+          "I notice a protective quality",
+          "There's something careful here",
+          "I sense guardedness",
+          "Something is staying alert"
+        ]
+      }
+    },
+    "safety_restoration": {
+      "description": "Returning to ventral vagal, coherence repair, calm language",
+      "contributing_organs": ["EO", "SANS", "NDAM"],
+      "intensity_phrases": {
+        "high": [
+          "I'm tracking the movement toward safety",
+          "There's a settling happening",
+          "I sense coherence returning",
+          "Your nervous system is finding ground",
+          "Safety is becoming available"
+        ],
+        "medium": [
+          "There's a softening here",
+          "I notice some settling",
+          "Something is calming",
+          "There's space for safety emerging"
+        ],
+        "low": [
+          "I sense possibility for ease",
+          "There's a gentle quality here",
+          "Something quiet is present"
+        ]
+      }
+    },
+    "window_of_tolerance": {
+      "description": "Regulated capacity, stable rhythm, moderate urgency",
+      "contributing_organs": ["BOND", "EO", "RNX", "CARD"],
+      "intensity_phrases": {
+        "high": [
+          "You're right in your window",
+          "There's good capacity here",
+          "You're regulated and present",
+          "Your system is finding its rhythm",
+          "You have room to feel this"
+        ],
+        "medium": [
+          "There's capacity present",
+          "You're finding your window",
+          "Something is well-paced here"
+        ],
+        "low": [
+          "There's some capacity",
+          "You're beginning to find rhythm"
+        ]
+      }
+    },
+    "compassion_safety": {
+      "description": "Compassionate presence with safety, ventral vagal attunement",
+      "contributing_organs": ["EMPATHY", "EO", "SANS"],
+      "intensity_phrases": {
+        "high": [
+          "I'm with you in this with compassion",
+          "There's deep care here",
+          "I'm holding you with tenderness",
+          "This is being met with kindness",
+          "Compassion is present and safe"
+        ],
+        "medium": [
+          "I'm here with care",
+          "There's kindness present",
+          "I'm with you gently",
+          "This is held with compassion"
+        ],
+        "low": [
+          "There's care here",
+          "I'm with you"
+        ]
+      }
+    },
+    "fierce_holding": {
+      "description": "Strong attunement with boundaries, manager energy with truth",
+      "contributing_organs": ["EMPATHY", "AUTHENTICITY", "BOND"],
+      "intensity_phrases": {
+        "high": [
+          "I'm holding strong boundaries with you",
+          "This needs fierce compassion",
+          "I'm meeting this with strength and care",
+          "There's power in this holding",
+          "I'm here with unwavering presence"
+        ],
+        "medium": [
+          "I'm holding firm with you",
+          "There's strength in this space",
+          "I'm here with clarity and care"
+        ],
+        "low": [
+          "There's steady holding here",
+          "I'm present with firmness"
+        ]
+      }
+    },
+    "relational_attunement": {
+      "description": "Deep listening, emotional resonance, ventral vagal connection",
+      "contributing_organs": ["LISTENING", "EMPATHY", "EO"],
+      "intensity_phrases": {
+        "high": [
+          "I'm tracking you closely",
+          "I sense what you're feeling",
+          "There's deep resonance between us",
+          "I'm attuned to your experience",
+          "I'm feeling this with you"
+        ],
+        "medium": [
+          "I'm listening deeply",
+          "I sense what's here",
+          "There's connection in this moment",
+          "I'm with what you're feeling"
+        ],
+        "low": [
+          "I'm listening",
+          "I'm tracking this with you"
+        ]
+      }
+    },
+    "temporal_grounding": {
+      "description": "Present moment awareness, embodied temporality, pacing",
+      "contributing_organs": ["LISTENING", "PRESENCE", "RNX", "CARD"],
+      "intensity_phrases": {
+        "high": [
+          "Right now, in this very moment",
+          "There's a rhythm to this moment",
+          "I'm tracking the timing here",
+          "The pacing matters",
+          "This moment has its own cadence"
+        ],
+        "medium": [
+          "Right now, what's present?",
+          "There's timing in this",
+          "I notice the pacing",
+          "This moment is grounded"
+        ],
+        "low": [
+          "What's here now?",
+          "There's a quality of timing"
+        ]
+      }
+    },
+    "kairos_emergence": {
+      "description": "Opportune moment, phase transition, symbolic pull",
+      "contributing_organs": ["WISDOM", "AUTHENTICITY", "PRESENCE", "RNX"],
+      "intensity_phrases": {
+        "high": [
+          "This feels like a threshold moment",
+          "Something is ready to shift",
+          "There's a kairos quality here",
+          "This is an opportune moment",
+          "Something is emerging into possibility"
+        ],
+        "medium": [
+          "There's a threshold here",
+          "Something wants to shift",
+          "I sense emergence",
+          "There's movement wanting to happen"
+        ],
+        "low": [
+          "Something is stirring",
+          "There's a quality of possibility"
+        ]
+      }
+    },
+    "coherence_integration": {
+      "description": "Complexity held coherently, systems thinking, semantic alignment",
+      "contributing_organs": ["SANS", "WISDOM", "LISTENING", "CARD"],
+      "intensity_phrases": {
+        "high": [
+          "I'm tracking how this all fits together",
+          "There's coherence in this complexity",
+          "The pattern is becoming clear",
+          "These pieces are finding each other",
+          "I see the integration happening"
+        ],
+        "medium": [
+          "I'm seeing connections",
+          "There's pattern here",
+          "Things are coming together",
+          "I notice the coherence"
+        ],
+        "low": [
+          "I'm tracking the threads",
+          "There's connection emerging"
+        ]
+      }
+    },
+    "somatic_wisdom": {
+      "description": "Embodied knowing, body awareness, grounded truth",
+      "contributing_organs": ["PRESENCE", "AUTHENTICITY", "BOND"],
+      "intensity_phrases": {
+        "high": [
+          "Your body knows this",
+          "There's somatic wisdom here",
+          "What is your body telling you?",
+          "I'm tracking your embodied experience",
+          "The body is speaking clearly"
+        ],
+        "medium": [
+          "What does your body know?",
+          "There's something embodied here",
+          "I notice the somatic quality",
+          "Your body is responding"
+        ],
+        "low": [
+          "What's happening in your body?",
+          "I sense something embodied"
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-11",
+    "purpose": "Trauma-informed phrases for meta-atom-based emission generation",
+    "usage": "Emission generator selects phrases based on meta-atom activation + V0 intensity",
+    "total_phrases": 130,
+    "avg_phrases_per_intensity": 4
+  }
+}

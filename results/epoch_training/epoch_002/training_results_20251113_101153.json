@@ -1,0 +1,189 @@
+{
+  "timestamp": "20251113_101153",
+  "total_pairs": 5,
+  "initial_tau": 0.3,
+  "max_iterations": 3,
+  "satisfaction_target": 0.55,
+  "results": [
+    {
+      "pair_id": "psych_safety_003",
+      "input_text": "We recently implemented \"fail forward\" sessions where people share\n        projects that didn't work out and what they learned. At first people\n        were nervous, but now it's one of our most valuable practices. The\n        vulnerability has built deep trust. We're learning faster because\n        we're not hiding our mistakes.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.9481560350319942,
+      "final_coherence": 0.78,
+      "final_variance": 0.002263374194698518,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.30796312070063986,
+      "satisfaction_history": [
+        0.9481560350319942,
+        0.9481560350319942,
+        0.9481560350319942
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30796312070063986
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.687886",
+      "end_time": "2025-11-13T10:11:52.784883",
+      "total_time_seconds": 0.096997
+    },
+    {
+      "pair_id": "psych_safety_004",
+      "input_text": "We claim to have psychological safety, but the reality is different.\n        People are afraid to speak up in meetings because dissenters get\n        marginalized. Mistakes are punished, not learned from. The culture\n        rewards conformity and punishes honesty. We're missing out on valuable\n        perspectives because people don't feel safe to share them.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8552065550211464,
+      "final_coherence": 0.78,
+      "final_variance": 0.003028794029393727,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3061041311004229,
+      "satisfaction_history": [
+        0.8552065550211464,
+        0.8552065550211464,
+        0.8552065550211464
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3061041311004229
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.784916",
+      "end_time": "2025-11-13T10:11:52.884491",
+      "total_time_seconds": 0.099575
+    },
+    {
+      "pair_id": "psych_safety_002",
+      "input_text": "In our retrospectives, people actually tell the truth about what's not\n        working. Leadership listens without getting defensive. We've created\n        space for difficult conversations. When there's conflict, we work\n        through it instead of avoiding it. The safety to be honest has made\n        us so much more effective.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8652967298149806,
+      "final_coherence": 0.78,
+      "final_variance": 0.003091719493154678,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3063059345962996,
+      "satisfaction_history": [
+        0.8652967298149806,
+        0.8652967298149806,
+        0.8652967298149806
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3063059345962996
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.884525",
+      "end_time": "2025-11-13T10:11:52.979987",
+      "total_time_seconds": 0.095462
+    },
+    {
+      "pair_id": "witnessing_004",
+      "input_text": "Nobody really listens here. In meetings, people are waiting for their\n        turn to talk, not actually hearing each other. When someone shares a\n        struggle, the response is immediate advice or fixing, not presence.\n        There's no space for being witnessed. It's all about moving fast and\n        getting things done, with no room for the human experience.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.9534591265331028,
+      "final_coherence": 0.78,
+      "final_variance": 0.0022057571151493935,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.30806918253066207,
+      "satisfaction_history": [
+        0.9534591265331028,
+        0.9534591265331028,
+        0.9534591265331028
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30806918253066207
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.980024",
+      "end_time": "2025-11-13T10:11:53.098382",
+      "total_time_seconds": 0.118358
+    },
+    {
+      "pair_id": "psych_safety_001",
+      "input_text": "Our team has built real psychological safety. People can admit mistakes\n        without fear of punishment. We challenge each other's ideas respectfully.\n        When someone's struggling, we adjust the workload as a team. There's\n        genuine trust and vulnerability. This foundation lets us take creative\n        risks and learn from failures.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8603010560821672,
+      "final_coherence": 0.78,
+      "final_variance": 0.0032159029879068584,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.30620602112164336,
+      "satisfaction_history": [
+        0.8603010560821672,
+        0.8603010560821672,
+        0.8603010560821672
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30620602112164336
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.098420",
+      "end_time": "2025-11-13T10:11:53.198733",
+      "total_time_seconds": 0.100313
+    }
+  ]
+}

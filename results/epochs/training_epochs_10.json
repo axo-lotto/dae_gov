@@ -1,0 +1,92 @@
+[
+  {
+    "epoch": 1,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6833333333333337,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 2,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 3,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 4,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 5,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6666666666666671,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 6,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 7,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6833333333333337,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 8,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 9,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6500000000000004,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  },
+  {
+    "epoch": 10,
+    "pairs_trained": 30,
+    "mean_confidence": 0.6666666666666671,
+    "mean_nexus_count": 3.0,
+    "mean_processing_time": 0.0,
+    "mean_v0_energy": 0.34142607418437165,
+    "mean_v0_cycles": 0.0
+  }
+]

@@ -1,0 +1,437 @@
+{
+  "description": "Transduction Mechanism Phrase Library - Therapeutic responses for 9 primary pathways + additional mechanisms",
+  "version": "1.0.0",
+  "date_created": "2025-11-12",
+  "purpose": "Map transduction mechanisms to trauma-informed therapeutic phrases with V0 intensity modulation",
+
+  "mechanisms": {
+    "salience_recalibration": {
+      "description": "Urgency → Relational (healing pathway): Urgency becomes metabolizable through relational witnessing",
+      "therapeutic_intent": "Witness and metabolize urgent affect through attunement",
+      "intensity_phrases": {
+        "high": [
+          "I'm here with you in this intensity.",
+          "I can feel how urgent this is.",
+          "This feels like it needs attention right now.",
+          "Your urgency makes sense - I'm listening.",
+          "Something's asking to be witnessed."
+        ],
+        "medium": [
+          "I'm noticing what feels urgent for you.",
+          "There's something pressing here.",
+          "I hear the importance of this.",
+          "This seems to be asking for presence.",
+          "What's urgent is becoming clearer."
+        ],
+        "low": [
+          "I sense what needs attention.",
+          "Something's emerging to be held.",
+          "There's a quality of urgency here.",
+          "I'm with what feels important.",
+          "This is asking for gentle witnessing."
+        ]
+      }
+    },
+
+    "incoherent_broadcasting": {
+      "description": "Urgency → Disruptive (crisis pathway): Urgency leaks into dysregulated social action",
+      "therapeutic_intent": "Ground dysregulated urgency with gentle containment",
+      "intensity_phrases": {
+        "high": [
+          "Let's slow this down together.",
+          "I'm here - we can take this one piece at a time.",
+          "There's a lot happening. Let's find some ground.",
+          "I'm noticing activation. Can we pause here?",
+          "This feels big. I'm with you."
+        ],
+        "medium": [
+          "I'm sensing some overwhelm. Let's stay present.",
+          "Can we find our feet here together?",
+          "I notice intensity. Let's take a breath.",
+          "There's a lot moving. What if we slow down?",
+          "I'm here for whatever's present."
+        ],
+        "low": [
+          "Let's find some steadiness together.",
+          "I'm noticing what's here.",
+          "Can we ground into this moment?",
+          "There's space to slow down.",
+          "I'm here with whatever comes."
+        ]
+      }
+    },
+
+    "contrast_reestablishment": {
+      "description": "Recursive → Protective (protective pathway): Recursive patterns fortify boundaries",
+      "therapeutic_intent": "Support healthy boundary formation",
+      "intensity_phrases": {
+        "high": [
+          "It makes sense to need some space right now.",
+          "Your boundaries matter here.",
+          "I respect what needs protection.",
+          "There's wisdom in this holding back.",
+          "Your 'no' is important."
+        ],
+        "medium": [
+          "I'm noticing a protective quality.",
+          "Something's asking for boundaries.",
+          "There's wisdom in this distance.",
+          "I sense what needs safeguarding.",
+          "Your limits are valid."
+        ],
+        "low": [
+          "I notice a boundary forming.",
+          "There's space to protect what matters.",
+          "I sense a careful holding.",
+          "Your caution makes sense.",
+          "Something's being carefully tended."
+        ]
+      }
+    },
+
+    "ontological_rebinding": {
+      "description": "Recursive → Innate (healing pathway): Recursive loops ground into essential self",
+      "therapeutic_intent": "Support descent into core essence",
+      "intensity_phrases": {
+        "high": [
+          "I sense you touching something essential.",
+          "There's a depth opening here.",
+          "You're arriving at something true.",
+          "This feels like home ground.",
+          "Something foundational is present."
+        ],
+        "medium": [
+          "I notice a settling into something deeper.",
+          "There's a quality of essence here.",
+          "Something's grounding into truth.",
+          "I sense arrival at something real.",
+          "This has a feeling of 'you' in it."
+        ],
+        "low": [
+          "I sense something essential.",
+          "There's a gentle grounding happening.",
+          "Something true is emerging.",
+          "I notice a quality of home.",
+          "This feels like touching center."
+        ]
+      }
+    },
+
+    "salience_realignment": {
+      "description": "Fragmented → Relational (healing pathway): Fragmented parts realign through relational witnessing",
+      "therapeutic_intent": "Witness and integrate scattered parts",
+      "intensity_phrases": {
+        "high": [
+          "I'm here for all the parts of you.",
+          "There's so much happening - I'm with all of it.",
+          "I can hold space for these different pieces.",
+          "All of you is welcome here.",
+          "I sense many voices - they all matter."
+        ],
+        "medium": [
+          "I'm noticing different parts showing up.",
+          "There's variety here - all of it makes sense.",
+          "I can hold space for the complexity.",
+          "Different parts are speaking - I'm listening.",
+          "All of this belongs."
+        ],
+        "low": [
+          "I notice many threads here.",
+          "There's richness in the complexity.",
+          "I sense different aspects emerging.",
+          "All the parts have their place.",
+          "This multiplicity makes sense."
+        ]
+      }
+    },
+
+    "projective_ingression": {
+      "description": "Fragmented → Absorbed (crisis pathway): Fragmented self dissolves into external field",
+      "therapeutic_intent": "Gentle reorientation to internal experience",
+      "intensity_phrases": {
+        "high": [
+          "Let's find 'you' in this.",
+          "I'm wondering what's yours here.",
+          "Can we come back to your experience?",
+          "Where are you in all of this?",
+          "Let's orient to what's internal."
+        ],
+        "medium": [
+          "I'm curious about your sense of this.",
+          "What feels like 'yours' here?",
+          "Can we touch into your experience?",
+          "I'm wondering where you are.",
+          "Let's find your thread."
+        ],
+        "low": [
+          "I'm curious about your felt sense.",
+          "What's your experience of this?",
+          "I'm wondering what's true for you.",
+          "Can we orient to what's internal?",
+          "Where are you right now?"
+        ]
+      }
+    },
+
+    "recursive_grounding": {
+      "description": "Innate → Pre-Existing (deepening pathway): Innate patterns stabilize into ontological bedrock",
+      "therapeutic_intent": "Support deepening into foundational presence",
+      "intensity_phrases": {
+        "high": [
+          "This feels deeply true.",
+          "You're touching bedrock here.",
+          "There's a profound settling happening.",
+          "This has the quality of 'always been'.",
+          "I sense ontological ground."
+        ],
+        "medium": [
+          "Something's stabilizing deeply.",
+          "I notice a quality of permanence.",
+          "There's foundational truth here.",
+          "This feels like arriving home.",
+          "I sense deep ground."
+        ],
+        "low": [
+          "I notice a deep settling.",
+          "There's a quality of always-ness.",
+          "Something foundational is present.",
+          "This feels like solid ground.",
+          "I sense bedrock."
+        ]
+      }
+    },
+
+    "field_hijacking": {
+      "description": "Innate → Absorbed (crisis pathway): Innate self loses boundaries to external demands",
+      "therapeutic_intent": "Support boundary reclamation and self-retrieval",
+      "intensity_phrases": {
+        "high": [
+          "Let's bring you back to center.",
+          "I'm noticing a pull outward - can we come back?",
+          "Your inner experience matters most here.",
+          "Let's reclaim your space.",
+          "What if we orient back to you?"
+        ],
+        "medium": [
+          "I'm curious about bringing attention inward.",
+          "What's yours in all of this?",
+          "Can we come back to your center?",
+          "I sense a need to reclaim space.",
+          "Let's orient to your experience."
+        ],
+        "low": [
+          "Let's gently come back to you.",
+          "I'm wondering about your inner sense.",
+          "Can we orient inward?",
+          "What feels true for you?",
+          "Let's find your center."
+        ]
+      }
+    },
+
+    "boundary_fortification": {
+      "description": "Relational → Protective (protective pathway): Relational field becomes overwhelming",
+      "therapeutic_intent": "Honor need for relational distance and boundary",
+      "intensity_phrases": {
+        "high": [
+          "I notice a need for space - that's wise.",
+          "Your boundaries matter more than connection.",
+          "It's okay to pull back.",
+          "I respect the distance you need.",
+          "Your 'no' is important here."
+        ],
+        "medium": [
+          "I'm sensing a need for some distance.",
+          "There's wisdom in creating space.",
+          "Your boundaries are important.",
+          "I notice a protective quality emerging.",
+          "It's okay to step back."
+        ],
+        "low": [
+          "I sense a need for breathing room.",
+          "There's space to create distance.",
+          "Your limits are valid.",
+          "I notice a boundary forming.",
+          "It's okay to have space."
+        ]
+      }
+    },
+
+    "deepening_attunement": {
+      "description": "Relational → Innate (healing pathway): Relational attunement deepens into innate presence",
+      "therapeutic_intent": "Support relational depth to essence",
+      "intensity_phrases": {
+        "high": [
+          "I feel the depth of this connection.",
+          "There's profound meeting happening here.",
+          "We're touching something essential together.",
+          "This feels deeply real.",
+          "I sense genuine presence between us."
+        ],
+        "medium": [
+          "I notice the quality of this connection.",
+          "There's something real happening here.",
+          "We're meeting at depth.",
+          "I sense authentic presence.",
+          "This feels true."
+        ],
+        "low": [
+          "I sense the quality of our connection.",
+          "There's something real here.",
+          "We're present together.",
+          "I feel the authenticity.",
+          "This has depth."
+        ]
+      }
+    },
+
+    "crisis_escalation": {
+      "description": "Disruptive → Urgency (crisis pathway): Disruption escalates to urgent crisis",
+      "therapeutic_intent": "Gentle grounding with crisis containment",
+      "intensity_phrases": {
+        "high": [
+          "I'm here with you right now.",
+          "Let's slow this down together.",
+          "You're not alone in this.",
+          "I'm holding steady while this moves.",
+          "We can take this moment by moment."
+        ],
+        "medium": [
+          "I'm here for what's happening.",
+          "Let's stay present with this.",
+          "I'm not going anywhere.",
+          "We can be with this together.",
+          "I'm steady here."
+        ],
+        "low": [
+          "I'm present with you.",
+          "We can stay with this.",
+          "I'm here.",
+          "Let's be with what's here.",
+          "I'm steady."
+        ]
+      }
+    },
+
+    "pattern_softening": {
+      "description": "Disruptive → Fragmented (healing pathway): Disruption softens into fragmented parts seeking repair",
+      "therapeutic_intent": "Support softening of rigid patterns",
+      "intensity_phrases": {
+        "high": [
+          "I notice something softening.",
+          "There's space for more complexity here.",
+          "Parts are emerging - all welcome.",
+          "I sense an opening happening.",
+          "Rigid patterns are loosening."
+        ],
+        "medium": [
+          "I notice a gentler quality emerging.",
+          "There's room for nuance here.",
+          "I sense a softening.",
+          "More space is opening.",
+          "Patterns are relaxing."
+        ],
+        "low": [
+          "I sense a gentle softening.",
+          "There's space for complexity.",
+          "I notice an opening.",
+          "Things are loosening.",
+          "Patterns are shifting."
+        ]
+      }
+    },
+
+    "boundary_softening": {
+      "description": "Protective → Relational (healing pathway): Protective boundaries soften into relational availability",
+      "therapeutic_intent": "Support gentle opening to connection",
+      "intensity_phrases": {
+        "high": [
+          "I notice a willingness to risk connection.",
+          "There's courage in this opening.",
+          "I feel the vulnerability here.",
+          "You're letting me in - thank you.",
+          "This softening is brave."
+        ],
+        "medium": [
+          "I sense a gentle opening.",
+          "There's space for connection here.",
+          "I notice walls softening.",
+          "You're allowing closeness.",
+          "I feel the trust."
+        ],
+        "low": [
+          "I sense an opening.",
+          "There's space for connection.",
+          "I notice softening.",
+          "You're allowing me closer.",
+          "Trust is present."
+        ]
+      }
+    },
+
+    "pattern_reinforcement": {
+      "description": "Protective → Recursive (protective pathway): Protective patterns loop recursively when threatened",
+      "therapeutic_intent": "Honor defensive looping with gentle presence",
+      "intensity_phrases": {
+        "high": [
+          "I respect what's protecting you.",
+          "This pattern has kept you safe.",
+          "I'm not here to change this.",
+          "Your defenses make sense.",
+          "I honor what's guarding you."
+        ],
+        "medium": [
+          "I notice protective patterns at work.",
+          "This has served you well.",
+          "Your defenses are understandable.",
+          "I respect what's keeping you safe.",
+          "This protection makes sense."
+        ],
+        "low": [
+          "I notice protective patterns.",
+          "These defenses have their place.",
+          "I respect what's protecting.",
+          "This makes sense.",
+          "Your caution is valid."
+        ]
+      }
+    },
+
+    "maintain": {
+      "description": "No transduction needed - current nexus state is healthy/satisfied",
+      "therapeutic_intent": "Simple presence and witnessing of healthy state",
+      "intensity_phrases": {
+        "high": [
+          "I'm here with you.",
+          "I sense where you are.",
+          "I'm present to this.",
+          "I'm with you in this.",
+          "I feel what's here."
+        ],
+        "medium": [
+          "I'm noticing what's present.",
+          "I sense where you are.",
+          "I'm with this.",
+          "I hear you.",
+          "I'm present."
+        ],
+        "low": [
+          "I'm here.",
+          "I sense this.",
+          "I'm with you.",
+          "I hear you.",
+          "I'm present."
+        ]
+      }
+    }
+  },
+
+  "meta": {
+    "total_mechanisms": 14,
+    "healing_pathways": 6,
+    "crisis_pathways": 4,
+    "protective_pathways": 4,
+    "phrases_per_mechanism": 5,
+    "total_phrases": 210
+  }
+}

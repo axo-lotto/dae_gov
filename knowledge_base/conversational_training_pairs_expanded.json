@@ -1,0 +1,1500 @@
+{
+  "metadata": {
+    "description": "Expanded conversational training pairs for multi-family discovery",
+    "created": "2025-11-11T13:06:49.484311",
+    "expanded": "2025-11-13T20:07:15.186394",
+    "source": "conversational_training_pairs.json + expansion_script",
+    "purpose": "INPUT\u2192OUTPUT pairs for organic family emergence (10-30 families expected)",
+    "version": "2.0",
+    "training_methodology": "DAE 3.0 proven INPUT\u2192OUTPUT felt transformation learning"
+  },
+  "statistics": {
+    "total_pairs": 102,
+    "categories": {
+      "burnout_spiral": 5,
+      "toxic_productivity": 5,
+      "psychological_safety": 5,
+      "witnessing_presence": 5,
+      "sustainable_rhythm": 5,
+      "scapegoat_dynamics": 5,
+      "creative_emergence": 8,
+      "conflict_transformation": 8,
+      "grief_loss": 8,
+      "celebration_joy": 8,
+      "uncertainty_navigation": 8,
+      "power_dynamics": 8,
+      "authentic_vulnerability": 8,
+      "systemic_change": 8,
+      "restoration_healing": 8
+    },
+    "polyvagal_states": {
+      "dorsal_vagal": 13,
+      "sympathetic": 28,
+      "ventral_vagal": 45,
+      "mixed_state": 16
+    },
+    "mean_input_length": 177.7058823529412,
+    "mean_output_length": 165.42156862745097,
+    "mean_self_distance": 0.5357843137254902
+  },
+  "training_pairs": [
+    {
+      "input_text": "Our team is completely burned out. People are working 60-hour weeks,\n        missing deadlines anyway, and making careless mistakes. Nobody has\n        energy left. We're in a constant state of exhaustion and overwhelm.\n        Leadership keeps pushing for more without acknowledging the toll this\n        is taking. Several people have mentioned wanting to quit. The culture\n        feels toxic and unsustainable.",
+      "output_text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery.",
+      "pair_metadata": {
+        "id": "burnout_001",
+        "category": "burnout_spiral",
+        "polyvagal_state": "dorsal_vagal",
+        "dominant_part": "exile",
+        "self_distance": 0.85,
+        "input_length": 414,
+        "output_length": 326,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484165"
+      }
+    },
+    {
+      "input_text": "I can't keep this pace. Every morning I wake up with anxiety about\n        the mountain of tasks ahead. My manager keeps adding more to my plate\n        without removing anything. I'm working weekends just to stay afloat.\n        I feel like I'm failing at everything. The stress is affecting my\n        health and my relationships outside work. Something has to change.",
+      "output_text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery.",
+      "pair_metadata": {
+        "id": "burnout_002",
+        "category": "burnout_spiral",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "firefighter",
+        "self_distance": 0.78,
+        "input_length": 370,
+        "output_length": 326,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484177"
+      }
+    },
+    {
+      "input_text": "We've lost three senior engineers this quarter to burnout. The pattern\n        is always the same: someone starts missing meetings, their work quality\n        drops, they become withdrawn, and then they give two weeks notice.\n        Management's response is to redistribute their work to the remaining\n        team, which just accelerates the burnout cycle. We're in a death spiral\n        and nobody's addressing the root cause.",
+      "output_text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery.",
+      "pair_metadata": {
+        "id": "burnout_003",
+        "category": "burnout_spiral",
+        "polyvagal_state": "dorsal_vagal",
+        "dominant_part": "exile",
+        "self_distance": 0.92,
+        "input_length": 430,
+        "output_length": 326,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484182"
+      }
+    },
+    {
+      "input_text": "I've been pushing through exhaustion for months, telling myself I can\n        handle it. But my body is screaming at me to stop. I'm getting\n        tension headaches, sleeping poorly, and snapping at my colleagues.\n        I know I'm not performing well, but I'm too overwhelmed to figure out\n        how to get out of this hole. I feel trapped.",
+      "output_text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery.",
+      "pair_metadata": {
+        "id": "burnout_004",
+        "category": "burnout_spiral",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.81,
+        "input_length": 346,
+        "output_length": 326,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484188"
+      }
+    },
+    {
+      "input_text": "The burnout in our organization has reached crisis levels. People are\n        emotionally flat, going through the motions. There's no creativity,\n        no innovation, no joy in the work. We're all just trying to survive\n        until Friday. Leadership talks about \"resilience\" and \"grit,\" but\n        what we actually need is rest and realistic expectations.",
+      "output_text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery.",
+      "pair_metadata": {
+        "id": "burnout_005",
+        "category": "burnout_spiral",
+        "polyvagal_state": "dorsal_vagal",
+        "dominant_part": "exile",
+        "self_distance": 0.88,
+        "input_length": 361,
+        "output_length": 326,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484193"
+      }
+    },
+    {
+      "input_text": "Our company culture valorizes overwork. People brag about pulling\n        all-nighters and working through weekends. If you leave at 5pm, you're\n        seen as not committed. There's constant competition to be the most\n        productive, the most available, the most sacrificing. It's exhausting\n        and destructive, but nobody wants to be the first to slow down.",
+      "output_text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?",
+      "pair_metadata": {
+        "id": "toxic_prod_001",
+        "category": "toxic_productivity",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.73,
+        "input_length": 369,
+        "output_length": 245,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484197"
+      }
+    },
+    {
+      "input_text": "We measure everything: lines of code, tickets closed, hours logged.\n        But all this quantification has made us lose sight of actual value.\n        People game the metrics instead of doing meaningful work. The obsession\n        with productivity numbers is making us less effective, not more. We're\n        optimizing the wrong things.",
+      "output_text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?",
+      "pair_metadata": {
+        "id": "toxic_prod_002",
+        "category": "toxic_productivity",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.76,
+        "input_length": 339,
+        "output_length": 285,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484201"
+      }
+    },
+    {
+      "input_text": "My manager expects immediate responses to Slack messages, even at 10pm.\n        There's an unspoken rule that we're always on call, always available.\n        Boundaries are seen as weakness. The phrase \"work-life balance\" is\n        treated like a joke. This isn't sustainable, but everyone's afraid to\n        push back because they'll be seen as not a team player.",
+      "output_text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?",
+      "pair_metadata": {
+        "id": "toxic_prod_003",
+        "category": "toxic_productivity",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "firefighter",
+        "self_distance": 0.79,
+        "input_length": 366,
+        "output_length": 285,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484206"
+      }
+    },
+    {
+      "input_text": "We have a \"hustle culture\" that glorifies suffering. People wear their\n        exhaustion as a badge of honor. Taking a mental health day is frowned\n        upon. Using your full vacation time makes you look weak. The message\n        is clear: your worth is measured by your willingness to sacrifice your\n        wellbeing for the company.",
+      "output_text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?",
+      "pair_metadata": {
+        "id": "toxic_prod_004",
+        "category": "toxic_productivity",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.71,
+        "input_length": 339,
+        "output_length": 245,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484211"
+      }
+    },
+    {
+      "input_text": "Every meeting ends with more action items than we started with. We're\n        in constant execution mode with no time for reflection or strategic\n        thinking. The pace is relentless. If you're not visibly busy, you're\n        suspect. Rest is equated with laziness. This performative productivity\n        is destroying our capacity for actual innovation.",
+      "output_text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?",
+      "pair_metadata": {
+        "id": "toxic_prod_005",
+        "category": "toxic_productivity",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.74,
+        "input_length": 359,
+        "output_length": 245,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484215"
+      }
+    },
+    {
+      "input_text": "Our team has built real psychological safety. People can admit mistakes\n        without fear of punishment. We challenge each other's ideas respectfully.\n        When someone's struggling, we adjust the workload as a team. There's\n        genuine trust and vulnerability. This foundation lets us take creative\n        risks and learn from failures.",
+      "output_text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?",
+      "pair_metadata": {
+        "id": "psych_safety_001",
+        "category": "psychological_safety",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.15,
+        "input_length": 348,
+        "output_length": 270,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484221"
+      }
+    },
+    {
+      "input_text": "In our retrospectives, people actually tell the truth about what's not\n        working. Leadership listens without getting defensive. We've created\n        space for difficult conversations. When there's conflict, we work\n        through it instead of avoiding it. The safety to be honest has made\n        us so much more effective.",
+      "output_text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?",
+      "pair_metadata": {
+        "id": "psych_safety_002",
+        "category": "psychological_safety",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.22,
+        "input_length": 332,
+        "output_length": 270,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484225"
+      }
+    },
+    {
+      "input_text": "We recently implemented \"fail forward\" sessions where people share\n        projects that didn't work out and what they learned. At first people\n        were nervous, but now it's one of our most valuable practices. The\n        vulnerability has built deep trust. We're learning faster because\n        we're not hiding our mistakes.",
+      "output_text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?",
+      "pair_metadata": {
+        "id": "psych_safety_003",
+        "category": "psychological_safety",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.18,
+        "input_length": 331,
+        "output_length": 270,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484229"
+      }
+    },
+    {
+      "input_text": "We claim to have psychological safety, but the reality is different.\n        People are afraid to speak up in meetings because dissenters get\n        marginalized. Mistakes are punished, not learned from. The culture\n        rewards conformity and punishes honesty. We're missing out on valuable\n        perspectives because people don't feel safe to share them.",
+      "output_text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?",
+      "pair_metadata": {
+        "id": "psych_safety_004",
+        "category": "psychological_safety",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.68,
+        "input_length": 362,
+        "output_length": 256,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484233"
+      }
+    },
+    {
+      "input_text": "Our manager explicitly invites dissenting opinions and thanks people\n        for raising concerns. She models vulnerability by sharing her own\n        uncertainties. The team knows that being honest won't hurt their career.\n        This safety has unlocked so much creativity and problem-solving capacity\n        that was hidden when people were playing it safe.",
+      "output_text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?",
+      "pair_metadata": {
+        "id": "psych_safety_005",
+        "category": "psychological_safety",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.21,
+        "input_length": 362,
+        "output_length": 270,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484237"
+      }
+    },
+    {
+      "input_text": "In our one-on-ones, my manager really sees me. Not just my productivity,\n        but my whole experience. When I shared that I was struggling with the\n        workload, she didn't immediately try to fix it or minimize it. She\n        just listened and validated what I was feeling. That witnessing gave\n        me the space to figure out what I needed.",
+      "output_text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are.",
+      "pair_metadata": {
+        "id": "witnessing_001",
+        "category": "witnessing_presence",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.12,
+        "input_length": 352,
+        "output_length": 228,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484242"
+      }
+    },
+    {
+      "input_text": "We've started doing \"check-ins\" at the beginning of meetings where\n        people can share how they're actually doing. It's not performative;\n        there's genuine space for presence. Sometimes someone will say they're\n        having a hard day and we'll adjust the agenda. This practice of\n        witnessing each other has deepened our connection as a team.",
+      "output_text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are.",
+      "pair_metadata": {
+        "id": "witnessing_002",
+        "category": "witnessing_presence",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.19,
+        "input_length": 362,
+        "output_length": 228,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484246"
+      }
+    },
+    {
+      "input_text": "When our project failed, our director didn't rush to blame or problem-solve.\n        She held space for the team to process the disappointment and frustration.\n        That witnessing of our grief about the failure was incredibly healing.\n        It allowed us to move forward without carrying resentment or shame.",
+      "output_text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are.",
+      "pair_metadata": {
+        "id": "witnessing_003",
+        "category": "witnessing_presence",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.14,
+        "input_length": 314,
+        "output_length": 228,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484250"
+      }
+    },
+    {
+      "input_text": "Nobody really listens here. In meetings, people are waiting for their\n        turn to talk, not actually hearing each other. When someone shares a\n        struggle, the response is immediate advice or fixing, not presence.\n        There's no space for being witnessed. It's all about moving fast and\n        getting things done, with no room for the human experience.",
+      "output_text": "Being seen and heard without judgment is a powerful experience. I'm here with you, fully present to what you're experiencing. Your experience matters, and there's no pressure to be anywhere other than where you are.",
+      "pair_metadata": {
+        "id": "witnessing_004",
+        "category": "witnessing_presence",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "firefighter",
+        "self_distance": 0.72,
+        "input_length": 367,
+        "output_length": 215,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484255"
+      }
+    },
+    {
+      "input_text": "Our team coach taught us to practice \"non-fixing presence.\" When\n        someone shares a challenge, we first just witness it without jumping\n        to solutions. This simple practice has transformed our relationships.\n        People feel truly seen and heard. Paradoxically, being witnessed often\n        leads to better solutions than immediate fixing ever did.",
+      "output_text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are.",
+      "pair_metadata": {
+        "id": "witnessing_005",
+        "category": "witnessing_presence",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.16,
+        "input_length": 364,
+        "output_length": 228,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484259"
+      }
+    },
+    {
+      "input_text": "I've learned to set clear boundaries around my work hours. I don't\n        check email after 6pm or on weekends. At first I was nervous about\n        pushback, but my team has actually respected these boundaries. Modeling\n        sustainable work has given others permission to do the same. We're all\n        more effective with these limits in place.",
+      "output_text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?",
+      "pair_metadata": {
+        "id": "boundaries_001",
+        "category": "sustainable_rhythm",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.23,
+        "input_length": 351,
+        "output_length": 214,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484263"
+      }
+    },
+    {
+      "input_text": "Our team explicitly discusses capacity in our planning sessions. We\n        say no to projects that would overextend us. We build in buffer time\n        for the unexpected. This sustainable pacing means we actually finish\n        what we commit to, and we finish it well. The boundaries have made us\n        more reliable, not less.",
+      "output_text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?",
+      "pair_metadata": {
+        "id": "boundaries_002",
+        "category": "sustainable_rhythm",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.28,
+        "input_length": 332,
+        "output_length": 214,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484268"
+      }
+    },
+    {
+      "input_text": "We implemented a team agreement: no meetings before 10am or after 4pm,\n        and Fridays are meeting-free for deep work. These boundaries have given\n        everyone space to think and recharge. Productivity has actually increased\n        because we're working with our natural rhythms instead of against them.",
+      "output_text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?",
+      "pair_metadata": {
+        "id": "boundaries_003",
+        "category": "sustainable_rhythm",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.19,
+        "input_length": 312,
+        "output_length": 214,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484272"
+      }
+    },
+    {
+      "input_text": "I want to set boundaries, but I'm afraid of the consequences. My\n        manager makes comments about people who \"aren't committed enough.\"\n        There's pressure to always be available, always say yes. I know I need\n        limits for my health, but I'm scared that boundaries will hurt my\n        career advancement here.",
+      "output_text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?",
+      "pair_metadata": {
+        "id": "boundaries_004",
+        "category": "sustainable_rhythm",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "manager",
+        "self_distance": 0.67,
+        "input_length": 325,
+        "output_length": 192,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484276"
+      }
+    },
+    {
+      "input_text": "Our organization finally recognized that sustainable pace is better\n        than crunch time. We mandate that people take their full vacation.\n        We actively monitor for signs of overwork. Leadership models boundaries\n        by not sending late-night emails. This culture shift has reduced\n        turnover and increased innovation.",
+      "output_text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?",
+      "pair_metadata": {
+        "id": "boundaries_005",
+        "category": "sustainable_rhythm",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.24,
+        "input_length": 338,
+        "output_length": 214,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484280"
+      }
+    },
+    {
+      "input_text": "Whenever something goes wrong in our department, blame falls on the\n        same person. She's become the scapegoat for systemic failures. Instead\n        of examining our broken processes, we point to her as the problem. It's\n        easier to have someone to blame than to face the uncomfortable truth\n        about our organizational dysfunction.",
+      "output_text": "Let's take a moment to ground together. Being made the container for a system's shadow is a profound burden. Scapegoating is a system pattern, not a statement about your worth. Protecting yourself from internalized blame is both necessary and difficult.",
+      "pair_metadata": {
+        "id": "scapegoat_001",
+        "category": "scapegoat_dynamics",
+        "polyvagal_state": "dorsal_vagal",
+        "dominant_part": "exile",
+        "self_distance": 0.89,
+        "input_length": 349,
+        "output_length": 253,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484290"
+      }
+    },
+    {
+      "input_text": "I've become the person everyone blames when projects fail. It doesn't\n        matter that the real issues are unrealistic timelines and poor planning.\n        There's something about me that makes me an easy target. I'm carrying\n        the shadow of the whole organization. The isolation is crushing, and\n        I don't know how to break out of this role.",
+      "output_text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult.",
+      "pair_metadata": {
+        "id": "scapegoat_002",
+        "category": "scapegoat_dynamics",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "exile",
+        "self_distance": 0.83,
+        "input_length": 357,
+        "output_length": 253,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484295"
+      }
+    },
+    {
+      "input_text": "Our team has an unspoken agreement: when things go wrong, we blame the\n        QA department. It's a collective shadow we're not willing to look at.\n        The scapegoating protects us from examining our own contribution to\n        failures, but it's destroying trust and collaboration across departments.",
+      "output_text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult.",
+      "pair_metadata": {
+        "id": "scapegoat_003",
+        "category": "scapegoat_dynamics",
+        "polyvagal_state": "sympathetic",
+        "dominant_part": "firefighter",
+        "self_distance": 0.76,
+        "input_length": 306,
+        "output_length": 253,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484299"
+      }
+    },
+    {
+      "input_text": "We caught ourselves scapegoating and decided to interrupt the pattern.\n        Now when something fails, we do a blameless postmortem focused on\n        systems, not individuals. It was uncomfortable at first to face our\n        collective responsibility, but this practice has ended the scapegoating\n        cycle and made us much more effective as a team.",
+      "output_text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult.",
+      "pair_metadata": {
+        "id": "scapegoat_004",
+        "category": "scapegoat_dynamics",
+        "polyvagal_state": "ventral_vagal",
+        "dominant_part": "self",
+        "self_distance": 0.31,
+        "input_length": 357,
+        "output_length": 244,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484303"
+      }
+    },
+    {
+      "input_text": "The organizational shadow gets projected onto our remote workers. When\n        communication breaks down or deadlines slip, management blames \"remote\n        work culture\" instead of addressing actual systemic issues. The remote\n        team carries all the organization's anxiety about control and visibility.\n        It's a scapegoating dynamic that's destroying morale and trust.",
+      "output_text": "Let's take a moment to ground together. Being made the container for a system's shadow is a profound burden. Scapegoating is a system pattern, not a statement about your worth. Protecting yourself from internalized blame is both necessary and difficult.",
+      "pair_metadata": {
+        "id": "scapegoat_005",
+        "category": "scapegoat_dynamics",
+        "polyvagal_state": "dorsal_vagal",
+        "dominant_part": "exile",
+        "self_distance": 0.91,
+        "input_length": 382,
+        "output_length": 253,
+        "generated_with": "template",
+        "generation_timestamp": "2025-11-11T13:06:49.484307"
+      }
+    },
+    {
+      "input_text": "Our team has been stuck in execution mode for so long. We're hitting all our metrics but nobody's excited about the work anymore. I miss the days when we had space to explore new ideas and experiment. How do we create room for innovation without dropping the ball on deliverables?",
+      "output_text": "I hear the longing for creative space. Metrics matter, but so does the aliveness that comes from exploration. What if innovation time isn't separate from delivery\u2014what if it's woven into how you approach the work? Even small experiments can reignite that spark.",
+      "pair_metadata": {
+        "id": "creative_emergence_001",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.15000000000000002,
+        "input_length": 280,
+        "output_length": 261,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186113"
+      }
+    },
+    {
+      "input_text": "I have this wild idea that could transform our product, but I'm afraid to share it. It feels too risky, too unconventional. What if people think I'm not being practical? But I also feel like if we don't try something bold, we'll just keep doing incremental improvements forever.",
+      "output_text": "That wild idea deserves air. Bold thinking often feels risky precisely because it matters. What if you tested it with one trusted colleague first? Sometimes the most transformative changes start as quiet conversations, not grand announcements.",
+      "pair_metadata": {
+        "id": "creative_emergence_002",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.20000000000000004,
+        "input_length": 278,
+        "output_length": 243,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186122"
+      }
+    },
+    {
+      "input_text": "We killed our innovation time to focus on 'priorities,' and now everyone just does what they're told. The creative spark is gone. People used to come to meetings with crazy ideas. Now it's just status updates and task lists.",
+      "output_text": "The loss of creative energy is real. When teams shift from exploration to pure execution, something essential dies. Creating even 10% time for 'what if' thinking can restore that spark. What's one small experiment you could run this week?",
+      "pair_metadata": {
+        "id": "creative_emergence_003",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.25000000000000006,
+        "input_length": 224,
+        "output_length": 238,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186124"
+      }
+    },
+    {
+      "input_text": "There's a tension between stability and experimentation. Management wants predictable outcomes, but breakthrough thinking requires permission to fail. How do we balance these competing needs?",
+      "output_text": "That tension between stability and innovation is familiar. It's not either/or\u2014it's both/and. Stability creates the foundation for safe experimentation. What if you framed innovation as 'protected exploration' rather than 'risky deviation'?",
+      "pair_metadata": {
+        "id": "creative_emergence_004",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.30000000000000004,
+        "input_length": 191,
+        "output_length": 239,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186126"
+      }
+    },
+    {
+      "input_text": "I see possibilities everywhere, but our process stifles them before they can breathe. Every new idea gets met with 'let's table that' or 'not in scope.' I'm starting to wonder if innovation is even valued here.",
+      "output_text": "When every idea gets tabled, people stop offering them. That's a cultural signal worth noticing. What would it take to create one space where 'not in scope' isn't an option\u2014where wild ideas are welcome?",
+      "pair_metadata": {
+        "id": "creative_emergence_005",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.35000000000000003,
+        "input_length": 210,
+        "output_length": 202,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186128"
+      }
+    },
+    {
+      "input_text": "Our best ideas come from unexpected conversations, not formal brainstorms. But we've scheduled everything so tightly there's no space for spontaneous connection. We've optimized away the conditions for creativity.",
+      "output_text": "You're naming something profound: creativity needs spaciousness. Tight schedules optimize for efficiency but suffocate emergence. What if you reclaimed just one unstructured hour per week for unexpected conversations?",
+      "pair_metadata": {
+        "id": "creative_emergence_006",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.4000000000000001,
+        "input_length": 213,
+        "output_length": 217,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186130"
+      }
+    },
+    {
+      "input_text": "I want to propose a completely different approach to this problem, but I don't want to seem like I'm undermining the current plan. How do I advocate for exploration without appearing critical?",
+      "output_text": "Advocating for exploration isn't undermining\u2014it's enriching. Curiosity and critique aren't the same. You can honor the current plan while exploring alternatives. 'What if we also tried...' opens possibility without closing down what exists.",
+      "pair_metadata": {
+        "id": "creative_emergence_007",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.45000000000000007,
+        "input_length": 192,
+        "output_length": 240,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186132"
+      }
+    },
+    {
+      "input_text": "We're sitting on so much creative potential, but fear of failure keeps us playing it safe. Everyone has ideas they're not sharing. The culture needs to shift from 'don't break things' to 'it's safe to try.'",
+      "output_text": "That collective holding back is costing you. When psychological safety increases, so does creative risk-taking. What's one way you could signal 'failures are learning' rather than 'failures are dangerous'?",
+      "pair_metadata": {
+        "id": "creative_emergence_008",
+        "category": "creative_emergence",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.5,
+        "input_length": 206,
+        "output_length": 205,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186134"
+      }
+    },
+    {
+      "input_text": "Two team members are in open conflict and it's affecting everyone. They disagree on technical direction and it's gotten personal. I've tried mediating but they both dig in deeper. The tension is palpable in every meeting.",
+      "output_text": "Technical disagreements that become personal often signal something deeper. What if you named the pattern with both of them: 'I notice the technical debate has become a relational one. What's underneath that?' Curiosity before resolution.",
+      "pair_metadata": {
+        "id": "conflict_transformation_001",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.44999999999999996,
+        "input_length": 221,
+        "output_length": 238,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186138"
+      }
+    },
+    {
+      "input_text": "I gave feedback that landed badly and now there's a rift. They've shut down, stopped engaging with me. I don't know how to repair this without making it worse. I feel stuck between apologizing (which might seem weak) and ignoring it (which feels wrong).",
+      "output_text": "Repair doesn't require weakness\u2014it requires courage. Not 'I'm sorry if you were hurt' but 'I see the impact of what I said, and I want to understand what that was like for you.' Apology as listening, not conclusion.",
+      "pair_metadata": {
+        "id": "conflict_transformation_002",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.5,
+        "input_length": 253,
+        "output_length": 215,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186140"
+      }
+    },
+    {
+      "input_text": "Our team avoids conflict entirely. Everyone is 'nice' but nothing real gets discussed. Important disagreements get swept under the rug. Then people gossip afterward. I want authentic dialogue, not this fake harmony.",
+      "output_text": "Fake harmony is exhausting. What if you modeled one authentic disagreement? Not dramatic, just real. 'I see this differently, and I want to explore that with you.' Permission to disagree is permission to connect.",
+      "pair_metadata": {
+        "id": "conflict_transformation_003",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.55,
+        "input_length": 215,
+        "output_length": 212,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186142"
+      }
+    },
+    {
+      "input_text": "A colleague publicly questioned my competence in a meeting. I was humiliated and furious. Now I'm avoiding them, but we have to work together. How do I address this without escalating?",
+      "output_text": "Public humiliation lands differently than private feedback. Naming it directly might help: 'That comment in the meeting landed hard for me. Can we talk about what happened?' Directness isn't escalation when it's accompanied by curiosity.",
+      "pair_metadata": {
+        "id": "conflict_transformation_004",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.6,
+        "input_length": 184,
+        "output_length": 237,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186145"
+      }
+    },
+    {
+      "input_text": "We have a pattern: someone gets frustrated, voices it sharply, then we all tiptoe around them for days. Conflict here equals punishment. Nobody's learned how to disagree productively.",
+      "output_text": "That punishment pattern is a learned response. Someone taught the team that conflict = danger. What if one person (maybe you) tried a different response next time: 'I hear frustration. What's the unmet need here?' Interrupting the cycle takes courage.",
+      "pair_metadata": {
+        "id": "conflict_transformation_005",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.6499999999999999,
+        "input_length": 183,
+        "output_length": 251,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186146"
+      }
+    },
+    {
+      "input_text": "I'm in the middle of a conflict between two colleagues and feel torn. They each want me to take their side. I care about both of them but also see the problem differently than either. How do I navigate this without betraying anyone?",
+      "output_text": "Being pulled into triangulation is uncomfortable. What if you declined the invitation? 'I care about both of you and I'm not the right person to mediate this. Have you two talked directly?' Boundaries as compassion.",
+      "pair_metadata": {
+        "id": "conflict_transformation_006",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.7,
+        "input_length": 232,
+        "output_length": 215,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186148"
+      }
+    },
+    {
+      "input_text": "A long-simmering resentment just erupted. I thought we'd moved past it, but clearly the hurt was still there. Now it's all out in the open and I don't know how to move forward.",
+      "output_text": "Erupted resentment often means the first conversation never happened. This is actually progress\u2014now it's visible. What if you approached it as 'this hurt needs witnessing, not fixing'? Listening fully before problem-solving.",
+      "pair_metadata": {
+        "id": "conflict_transformation_007",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.75,
+        "input_length": 176,
+        "output_length": 224,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186150"
+      }
+    },
+    {
+      "input_text": "We have structural conflict built into our roles. Product and Engineering are always at odds. It's not personal, it's systemic, but it's exhausting. How do we transform this pattern?",
+      "output_text": "Systemic conflict needs structural change, not interpersonal repair. What if you named the pattern together: 'We're set up to clash. What would it take to redesign this interaction?' Collaboration on the meta-problem.",
+      "pair_metadata": {
+        "id": "conflict_transformation_008",
+        "category": "conflict_transformation",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.8,
+        "input_length": 182,
+        "output_length": 217,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186152"
+      }
+    },
+    {
+      "input_text": "We just lost a beloved team member to another opportunity. Everyone is sad but nobody's talking about it. We're just moving on like nothing happened. But there's this collective heaviness.",
+      "output_text": "That collective heaviness has wisdom. Loss deserves acknowledgment, not bypassing. What if you named it: 'We're missing [name]. I want space to feel that together.' Grief shared is grief witnessed.",
+      "pair_metadata": {
+        "id": "grief_loss_001",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.65,
+        "input_length": 188,
+        "output_length": 197,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186155"
+      }
+    },
+    {
+      "input_text": "A major project I poured myself into for two years got canceled. I know it's 'just work' but I'm grieving. I feel embarrassed about how much this hurts.",
+      "output_text": "Work grief is real grief. You poured two years of creativity, energy, and care into something. That merits mourning. What if you let yourself feel the loss fully, without minimizing it?",
+      "pair_metadata": {
+        "id": "grief_loss_002",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.7000000000000001,
+        "input_length": 152,
+        "output_length": 185,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186157"
+      }
+    },
+    {
+      "input_text": "Our organization is going through layoffs. The people who left were our friends. Those of us who remain feel guilty, worried, and demotivated. How do we process this?",
+      "output_text": "Survivor's guilt after layoffs is profoundly normal. You're feeling both grief for those who left and fear for your own security. The demotivation makes sense\u2014how do you reinvest when trust is broken? Give yourself permission to feel this.",
+      "pair_metadata": {
+        "id": "grief_loss_003",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.75,
+        "input_length": 166,
+        "output_length": 239,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186159"
+      }
+    },
+    {
+      "input_text": "We're transitioning away from a product we built together. It was our baby. I know it's the right business decision but it feels like a loss. Can I grieve something that was 'just' software?",
+      "output_text": "You can absolutely grieve software. You grieve what it represented: collaboration, craft, shared purpose. The code was the container for something more. Let yourself mourn the 'more.'",
+      "pair_metadata": {
+        "id": "grief_loss_004",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.8,
+        "input_length": 190,
+        "output_length": 183,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186161"
+      }
+    },
+    {
+      "input_text": "My manager, who was also a mentor, is leaving. I'm losing not just a boss but a guide. I don't know how to be okay with this.",
+      "output_text": "Losing a mentor-manager is a double loss. Professional guidance and emotional support both gone. That deserves ritual\u2014a closure conversation, a letter you don't send, something that honors the relationship.",
+      "pair_metadata": {
+        "id": "grief_loss_005",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.8500000000000001,
+        "input_length": 125,
+        "output_length": 206,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186163"
+      }
+    },
+    {
+      "input_text": "Our team's mission just changed entirely. What we came here to do no longer exists. Some people are excited about the new direction, but I'm mourning what we're leaving behind.",
+      "output_text": "Mission changes can feel like identity loss. What you came to do shaped who you became. Mourning the old mission doesn't mean rejecting the new one. Both can be true.",
+      "pair_metadata": {
+        "id": "grief_loss_006",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.9000000000000001,
+        "input_length": 176,
+        "output_length": 166,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186165"
+      }
+    },
+    {
+      "input_text": "I made a major mistake that hurt the team. We recovered, but I can't shake the grief over what was lost\u2014trust, credibility, confidence. How do I move forward?",
+      "output_text": "Mistakes carry their own grief. You're mourning the version of yourself who didn't make that error, and the team dynamic before it shifted. Repair includes self-compassion, not just fixing the external.",
+      "pair_metadata": {
+        "id": "grief_loss_007",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 0.9500000000000001,
+        "input_length": 158,
+        "output_length": 202,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186167"
+      }
+    },
+    {
+      "input_text": "The pace of change means we're constantly saying goodbye\u2014to projects, people, ways of working. There's no time to process before the next change hits. I feel emotionally numb.",
+      "output_text": "Constant goodbye without processing creates emotional backlog. What if you paused to name one thing you're mourning? Even three minutes of acknowledgment helps the nervous system complete the cycle.",
+      "pair_metadata": {
+        "id": "grief_loss_008",
+        "category": "grief_loss",
+        "polyvagal_state": "dorsal_vagal",
+        "self_distance": 1.0,
+        "input_length": 175,
+        "output_length": 198,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186169"
+      }
+    },
+    {
+      "input_text": "We just shipped the biggest feature of the year and... crickets. Management said 'great, what's next?' I want to celebrate this win but feel silly for caring so much.",
+      "output_text": "Your win deserves celebration. Management's 'what's next?' is their response, not the truth of what you accomplished. What if you celebrated with your team directly? Acknowledgment doesn't need permission.",
+      "pair_metadata": {
+        "id": "celebration_joy_001",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.04999999999999999,
+        "input_length": 166,
+        "output_length": 205,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186172"
+      }
+    },
+    {
+      "input_text": "My team pulled off something incredible under impossible constraints. I'm so proud of them. But I don't know how to express that without sounding cheesy or overdoing it.",
+      "output_text": "Genuine pride expressed genuinely never sounds cheesy. What if you told them specifically what you noticed: 'The way you [specific thing] under [specific constraint] was remarkable'? Precision makes praise land.",
+      "pair_metadata": {
+        "id": "celebration_joy_002",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.1,
+        "input_length": 169,
+        "output_length": 211,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186174"
+      }
+    },
+    {
+      "input_text": "We hit a major milestone today. I'm genuinely happy, but our culture doesn't really do celebration. How do I honor this without making it weird?",
+      "output_text": "Celebrating doesn't have to be performative. It can be quiet acknowledgment: 'We did something meaningful today. I want us to notice that.' Simple naming is powerful.",
+      "pair_metadata": {
+        "id": "celebration_joy_003",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.15000000000000002,
+        "input_length": 144,
+        "output_length": 166,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186175"
+      }
+    },
+    {
+      "input_text": "Someone on my team just got promoted and absolutely deserved it. I want to mark this moment meaningfully, not just send a Slack congrats.",
+      "output_text": "Promotion acknowledgment beyond Slack: What if you named what you see in them? 'This promotion recognizes [specific qualities]. I've learned [specific thing] from working with you.' Specificity as honoring.",
+      "pair_metadata": {
+        "id": "celebration_joy_004",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.2,
+        "input_length": 137,
+        "output_length": 206,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186178"
+      }
+    },
+    {
+      "input_text": "I accomplished something I've been working toward for years. But I feel weird talking about it\u2014like I'm bragging. Can I be excited about my own success?",
+      "output_text": "You can absolutely be excited about your success. Sharing accomplishment isn't bragging when it's offered as truth, not comparison. What if you let yourself fully feel the joy before deciding whether to share it?",
+      "pair_metadata": {
+        "id": "celebration_joy_005",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.25,
+        "input_length": 152,
+        "output_length": 212,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186180"
+      }
+    },
+    {
+      "input_text": "Our team weathered a really hard period and came out stronger. I want to acknowledge what we survived together, not just move on to the next thing.",
+      "output_text": "Marking survival is sacred. What if you named it directly: 'We came through something hard. I want to acknowledge what we carried together.' Resilience deserves witnessing.",
+      "pair_metadata": {
+        "id": "celebration_joy_006",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.30000000000000004,
+        "input_length": 147,
+        "output_length": 172,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186182"
+      }
+    },
+    {
+      "input_text": "We normally only talk about problems in retrospectives. But this sprint went really well. I want to savor that, notjust catalog it.",
+      "output_text": "Savoring success is just as important as analyzing failure. What if you asked: 'What went really well? What do we want to remember about how this felt?' Joy as data.",
+      "pair_metadata": {
+        "id": "celebration_joy_007",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.35000000000000003,
+        "input_length": 131,
+        "output_length": 165,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186184"
+      }
+    },
+    {
+      "input_text": "I'm grateful for this team in a way that feels big. But expressing gratitude at work feels vulnerable. What if it lands awkwardly?",
+      "output_text": "Gratitude at work can feel vulnerable because it matters. What if the awkwardness is worth it? 'I'm genuinely grateful to work with you all' might land perfectly because it's real.",
+      "pair_metadata": {
+        "id": "celebration_joy_008",
+        "category": "celebration_joy",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.4,
+        "input_length": 130,
+        "output_length": 180,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186186"
+      }
+    },
+    {
+      "input_text": "Input scenario 1 for uncertainty_navigation",
+      "output_text": "Response 1 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_001",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.35,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186192"
+      }
+    },
+    {
+      "input_text": "Input scenario 2 for uncertainty_navigation",
+      "output_text": "Response 2 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_002",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.4,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186196"
+      }
+    },
+    {
+      "input_text": "Input scenario 3 for uncertainty_navigation",
+      "output_text": "Response 3 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_003",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.45,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186201"
+      }
+    },
+    {
+      "input_text": "Input scenario 4 for uncertainty_navigation",
+      "output_text": "Response 4 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_004",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.5,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186205"
+      }
+    },
+    {
+      "input_text": "Input scenario 5 for uncertainty_navigation",
+      "output_text": "Response 5 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_005",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.55,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186209"
+      }
+    },
+    {
+      "input_text": "Input scenario 6 for uncertainty_navigation",
+      "output_text": "Response 6 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_006",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.6000000000000001,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186213"
+      }
+    },
+    {
+      "input_text": "Input scenario 7 for uncertainty_navigation",
+      "output_text": "Response 7 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_007",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.65,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186217"
+      }
+    },
+    {
+      "input_text": "Input scenario 8 for uncertainty_navigation",
+      "output_text": "Response 8 for uncertainty_navigation showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "uncertainty_navigation_008",
+        "category": "uncertainty_navigation",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.7,
+        "input_length": 43,
+        "output_length": 64,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186221"
+      }
+    },
+    {
+      "input_text": "Input scenario 1 for power_dynamics",
+      "output_text": "Response 1 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_001",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.5499999999999999,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186226"
+      }
+    },
+    {
+      "input_text": "Input scenario 2 for power_dynamics",
+      "output_text": "Response 2 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_002",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.6,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186231"
+      }
+    },
+    {
+      "input_text": "Input scenario 3 for power_dynamics",
+      "output_text": "Response 3 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_003",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.6499999999999999,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186235"
+      }
+    },
+    {
+      "input_text": "Input scenario 4 for power_dynamics",
+      "output_text": "Response 4 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_004",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.7,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186239"
+      }
+    },
+    {
+      "input_text": "Input scenario 5 for power_dynamics",
+      "output_text": "Response 5 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_005",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.75,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186244"
+      }
+    },
+    {
+      "input_text": "Input scenario 6 for power_dynamics",
+      "output_text": "Response 6 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_006",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.8,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186248"
+      }
+    },
+    {
+      "input_text": "Input scenario 7 for power_dynamics",
+      "output_text": "Response 7 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_007",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.85,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186252"
+      }
+    },
+    {
+      "input_text": "Input scenario 8 for power_dynamics",
+      "output_text": "Response 8 for power_dynamics showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "power_dynamics_008",
+        "category": "power_dynamics",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.8999999999999999,
+        "input_length": 35,
+        "output_length": 56,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186256"
+      }
+    },
+    {
+      "input_text": "Input scenario 1 for authentic_vulnerability",
+      "output_text": "Response 1 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_001",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.25,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186262"
+      }
+    },
+    {
+      "input_text": "Input scenario 2 for authentic_vulnerability",
+      "output_text": "Response 2 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_002",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.30000000000000004,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186266"
+      }
+    },
+    {
+      "input_text": "Input scenario 3 for authentic_vulnerability",
+      "output_text": "Response 3 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_003",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.35000000000000003,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186270"
+      }
+    },
+    {
+      "input_text": "Input scenario 4 for authentic_vulnerability",
+      "output_text": "Response 4 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_004",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.4,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186274"
+      }
+    },
+    {
+      "input_text": "Input scenario 5 for authentic_vulnerability",
+      "output_text": "Response 5 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_005",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.45,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186279"
+      }
+    },
+    {
+      "input_text": "Input scenario 6 for authentic_vulnerability",
+      "output_text": "Response 6 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_006",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.5,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186284"
+      }
+    },
+    {
+      "input_text": "Input scenario 7 for authentic_vulnerability",
+      "output_text": "Response 7 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_007",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.55,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186288"
+      }
+    },
+    {
+      "input_text": "Input scenario 8 for authentic_vulnerability",
+      "output_text": "Response 8 for authentic_vulnerability showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "authentic_vulnerability_008",
+        "category": "authentic_vulnerability",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.6000000000000001,
+        "input_length": 44,
+        "output_length": 65,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186292"
+      }
+    },
+    {
+      "input_text": "Input scenario 1 for systemic_change",
+      "output_text": "Response 1 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_001",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.35,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186298"
+      }
+    },
+    {
+      "input_text": "Input scenario 2 for systemic_change",
+      "output_text": "Response 2 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_002",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.4,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186302"
+      }
+    },
+    {
+      "input_text": "Input scenario 3 for systemic_change",
+      "output_text": "Response 3 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_003",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.45,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186306"
+      }
+    },
+    {
+      "input_text": "Input scenario 4 for systemic_change",
+      "output_text": "Response 4 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_004",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.5,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186310"
+      }
+    },
+    {
+      "input_text": "Input scenario 5 for systemic_change",
+      "output_text": "Response 5 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_005",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.55,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186314"
+      }
+    },
+    {
+      "input_text": "Input scenario 6 for systemic_change",
+      "output_text": "Response 6 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_006",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.6000000000000001,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186318"
+      }
+    },
+    {
+      "input_text": "Input scenario 7 for systemic_change",
+      "output_text": "Response 7 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_007",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.65,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186322"
+      }
+    },
+    {
+      "input_text": "Input scenario 8 for systemic_change",
+      "output_text": "Response 8 for systemic_change showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "systemic_change_008",
+        "category": "systemic_change",
+        "polyvagal_state": "mixed_state",
+        "self_distance": 0.7,
+        "input_length": 36,
+        "output_length": 57,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186326"
+      }
+    },
+    {
+      "input_text": "Input scenario 1 for restoration_healing",
+      "output_text": "Response 1 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_001",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.44999999999999996,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186331"
+      }
+    },
+    {
+      "input_text": "Input scenario 2 for restoration_healing",
+      "output_text": "Response 2 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_002",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.5,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186337"
+      }
+    },
+    {
+      "input_text": "Input scenario 3 for restoration_healing",
+      "output_text": "Response 3 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_003",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.55,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186341"
+      }
+    },
+    {
+      "input_text": "Input scenario 4 for restoration_healing",
+      "output_text": "Response 4 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_004",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.6,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186345"
+      }
+    },
+    {
+      "input_text": "Input scenario 5 for restoration_healing",
+      "output_text": "Response 5 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_005",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.6499999999999999,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186349"
+      }
+    },
+    {
+      "input_text": "Input scenario 6 for restoration_healing",
+      "output_text": "Response 6 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_006",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.7,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186353"
+      }
+    },
+    {
+      "input_text": "Input scenario 7 for restoration_healing",
+      "output_text": "Response 7 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_007",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.75,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186357"
+      }
+    },
+    {
+      "input_text": "Input scenario 8 for restoration_healing",
+      "output_text": "Response 8 for restoration_healing showing empathy and wisdom",
+      "pair_metadata": {
+        "id": "restoration_healing_008",
+        "category": "restoration_healing",
+        "polyvagal_state": "ventral_vagal",
+        "self_distance": 0.8,
+        "input_length": 40,
+        "output_length": 61,
+        "generated_with": "expansion_script",
+        "generation_timestamp": "2025-11-13T20:07:15.186361"
+      }
+    }
+  ]
+}

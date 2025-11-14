@@ -1,0 +1,642 @@
+{
+  "version": "1.0",
+  "update_count": 390,
+  "success_count": 368,
+  "failure_count": 12,
+  "danger_detections": 0,
+  "dangerous_blending_detections": 0,
+  "containment_interventions": 0,
+  "never_ignored_danger": true,
+  "detector_coupling_matrix": [
+    [
+      0.1,
+      0.8297536580870805,
+      0.7354512843896595,
+      0.7215291964160212
+    ],
+    [
+      0.8297536580870805,
+      0.1,
+      0.7354512843896595,
+      0.7215291964160212
+    ],
+    [
+      0.7354512843896595,
+      0.7354512843896595,
+      0.1,
+      0.6186023652557616
+    ],
+    [
+      0.7215291964160212,
+      0.7215291964160212,
+      0.6186023652557616,
+      0.1
+    ]
+  ],
+  "polyvagal_patterns": {
+    "ventral": {
+      "confidence_boost": 0.2970000000000002,
+      "success_count": 99,
+      "text_clusters": []
+    },
+    "sympathetic": {
+      "confidence_boost": 0.6600000000000005,
+      "success_count": 220,
+      "text_clusters": []
+    },
+    "dorsal": {
+      "confidence_boost": 0.09300000000000005,
+      "success_count": 31,
+      "text_clusters": []
+    }
+  },
+  "self_energy_patterns": {
+    "compassion": {
+      "boost": 0.014349500851113379,
+      "family_effectiveness": {
+        "deep_listening": 0.007270712302964023,
+        "authentic_connection": 0.007405305525192631
+      }
+    },
+    "curiosity": {
+      "boost": 1.6722869754086611,
+      "family_effectiveness": {
+        "burnout_spiral": 0.12390715228466608,
+        "toxic_productivity": 0.11581095163816732,
+        "psychological_safety": 0.12900319879307334,
+        "witnessing_presence": 0.13643284898023805,
+        "sustainable_rhythm": 0.12373182129649718,
+        "scapegoat_dynamics": 0.12190710860719024,
+        "creative_emergence": 0.12898025016186,
+        "conflict_transformation": 0.13064435350270187,
+        "grief_loss": 0.12589734935705096,
+        "celebration_joy": 0.12340239366182668,
+        "uncertainty_navigation": 0.12005787307619764,
+        "power_dynamics": 0.12026424467792189,
+        "authentic_vulnerability": 0.11677351373998633,
+        "systemic_change": 0.11408680339287885,
+        "restoration_healing": 0.09019818350844143,
+        "creative_flow": 0.046608335990162994,
+        "celebration": 0.046060606252307415,
+        "witnessing": 0.04748199825319417,
+        "clear_knowing": 0.0484724828318229,
+        "spontaneous_delight": 0.04511279169886992,
+        "safe_vulnerability": 0.04683578140889839,
+        "deep_listening": 0.039167488391579776,
+        "authentic_connection": 0.039537161827633865,
+        "mutual_support": 0.04537667203101782,
+        "playful_connection": 0.046456576032503805,
+        "constructive_tension": 0.046739921690307044,
+        "creative_edge": 0.04629536983080297,
+        "difficult_conversations": 0.046089821200296865,
+        "growth_challenges": 0.045716711485769064,
+        "values_conflict": 0.04801898953409768,
+        "parts_recognition": 0.0473953796269608,
+        "shadow_integration": 0.04731684842143649,
+        "trauma_processing": 0.047389588258502896,
+        "grief_work": 0.0463514401891271,
+        "reparenting": 0.0465118774912216
+      }
+    },
+    "clarity": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    },
+    "calm": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    },
+    "confidence": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    },
+    "courage": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    },
+    "creativity": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    },
+    "connectedness": {
+      "boost": 0.0,
+      "family_effectiveness": {}
+    }
+  },
+  "cascade_patterns": {
+    "burnout_spiral_RESPOND_0.9": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "burnout_spiral_RESPOND_0.8": {
+      "threshold_adjustment": 0.0024000000000000007,
+      "success_count": 12
+    },
+    "toxic_productivity_RESPOND_0.7": {
+      "threshold_adjustment": 0.0018000000000000004,
+      "success_count": 9
+    },
+    "toxic_productivity_RESPOND_0.8": {
+      "threshold_adjustment": 0.0012000000000000001,
+      "success_count": 6
+    },
+    "psychological_safety_RESPOND_0.9": {
+      "threshold_adjustment": 0.0018000000000000004,
+      "success_count": 9
+    },
+    "psychological_safety_RESPOND_0.8": {
+      "threshold_adjustment": 0.0012000000000000001,
+      "success_count": 6
+    },
+    "witnessing_presence_RESPOND_0.9": {
+      "threshold_adjustment": 0.003000000000000001,
+      "success_count": 15
+    },
+    "sustainable_rhythm_RESPOND_0.8": {
+      "threshold_adjustment": 0.0018000000000000004,
+      "success_count": 9
+    },
+    "sustainable_rhythm_RESPOND_0.7": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "sustainable_rhythm_RESPOND_0.9": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "scapegoat_dynamics_RESPOND_0.8": {
+      "threshold_adjustment": 0.0024000000000000007,
+      "success_count": 12
+    },
+    "scapegoat_dynamics_RESPOND_0.9": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "creative_emergence_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "creative_emergence_RESPOND_0.8": {
+      "threshold_adjustment": 0.002800000000000001,
+      "success_count": 14
+    },
+    "conflict_transformation_RESPOND_0.8": {
+      "threshold_adjustment": 0.002800000000000001,
+      "success_count": 14
+    },
+    "conflict_transformation_RESPOND_0.9": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "grief_loss_RESPOND_0.7": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "grief_loss_RESPOND_0.8": {
+      "threshold_adjustment": 0.0020000000000000005,
+      "success_count": 10
+    },
+    "grief_loss_RESPOND_0.9": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "celebration_joy_RESPOND_0.8": {
+      "threshold_adjustment": 0.0016000000000000003,
+      "success_count": 8
+    },
+    "celebration_joy_RESPOND_0.7": {
+      "threshold_adjustment": 0.0012000000000000001,
+      "success_count": 6
+    },
+    "celebration_joy_RESPOND_0.9": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "uncertainty_navigation_RESPOND_0.8": {
+      "threshold_adjustment": 0.003200000000000001,
+      "success_count": 16
+    },
+    "power_dynamics_RESPOND_0.8": {
+      "threshold_adjustment": 0.003200000000000001,
+      "success_count": 16
+    },
+    "authentic_vulnerability_RESPOND_0.7": {
+      "threshold_adjustment": 0.003200000000000001,
+      "success_count": 16
+    },
+    "systemic_change_RESPOND_0.7": {
+      "threshold_adjustment": 0.003200000000000001,
+      "success_count": 16
+    },
+    "restoration_healing_RESPOND_0.8": {
+      "threshold_adjustment": 0.0024000000000000007,
+      "success_count": 12
+    },
+    "creative_flow_RESPOND_0.8": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "creative_flow_RESPOND_0.7": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "celebration_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "celebration_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "witnessing_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "witnessing_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "witnessing_RESPOND_0.7": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "clear_knowing_RESPOND_0.8": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "clear_knowing_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "clear_knowing_RESPOND_0.9": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "spontaneous_delight_RESPOND_0.8": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "spontaneous_delight_RESPOND_0.7": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "safe_vulnerability_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "safe_vulnerability_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "deep_listening_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "deep_listening_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "authentic_connection_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "authentic_connection_RESPOND_0.8": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "authentic_connection_RESPOND_0.7": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "mutual_support_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "mutual_support_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "playful_connection_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "playful_connection_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "constructive_tension_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "constructive_tension_RESPOND_0.8": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "constructive_tension_RESPOND_0.7": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "creative_edge_RESPOND_0.8": {
+      "threshold_adjustment": 0.001,
+      "success_count": 5
+    },
+    "creative_edge_RESPOND_0.7": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "difficult_conversations_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "difficult_conversations_RESPOND_0.7": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "difficult_conversations_RESPOND_0.8": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "growth_challenges_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "growth_challenges_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "values_conflict_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "values_conflict_RESPOND_0.8": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "values_conflict_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "parts_recognition_RESPOND_0.8": {
+      "threshold_adjustment": 0.0012000000000000001,
+      "success_count": 6
+    },
+    "shadow_integration_RESPOND_0.8": {
+      "threshold_adjustment": 0.0012000000000000001,
+      "success_count": 6
+    },
+    "trauma_processing_RESPOND_0.8": {
+      "threshold_adjustment": 0.001,
+      "success_count": 5
+    },
+    "trauma_processing_RESPOND_0.7": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    },
+    "grief_work_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "grief_work_RESPOND_0.8": {
+      "threshold_adjustment": 0.0008,
+      "success_count": 4
+    },
+    "reparenting_RESPOND_0.7": {
+      "threshold_adjustment": 0.0004,
+      "success_count": 2
+    },
+    "reparenting_RESPOND_0.8": {
+      "threshold_adjustment": 0.0006000000000000001,
+      "success_count": 3
+    },
+    "reparenting_RESPOND_0.9": {
+      "threshold_adjustment": 0.0002,
+      "success_count": 1
+    }
+  },
+  "response_patterns": {
+    "burnout_spiral": {
+      "curiosity": {
+        "effectiveness": 0.12390715228466608,
+        "use_count": 15
+      }
+    },
+    "toxic_productivity": {
+      "curiosity": {
+        "effectiveness": 0.11581095163816732,
+        "use_count": 15
+      }
+    },
+    "psychological_safety": {
+      "curiosity": {
+        "effectiveness": 0.12900319879307334,
+        "use_count": 15
+      }
+    },
+    "witnessing_presence": {
+      "curiosity": {
+        "effectiveness": 0.13643284898023805,
+        "use_count": 15
+      }
+    },
+    "sustainable_rhythm": {
+      "curiosity": {
+        "effectiveness": 0.12373182129649718,
+        "use_count": 15
+      }
+    },
+    "scapegoat_dynamics": {
+      "curiosity": {
+        "effectiveness": 0.12190710860719024,
+        "use_count": 15
+      }
+    },
+    "creative_emergence": {
+      "curiosity": {
+        "effectiveness": 0.12898025016186,
+        "use_count": 16
+      }
+    },
+    "conflict_transformation": {
+      "curiosity": {
+        "effectiveness": 0.13064435350270187,
+        "use_count": 16
+      }
+    },
+    "grief_loss": {
+      "curiosity": {
+        "effectiveness": 0.12589734935705096,
+        "use_count": 16
+      }
+    },
+    "celebration_joy": {
+      "curiosity": {
+        "effectiveness": 0.12340239366182668,
+        "use_count": 16
+      }
+    },
+    "uncertainty_navigation": {
+      "curiosity": {
+        "effectiveness": 0.12005787307619764,
+        "use_count": 16
+      }
+    },
+    "power_dynamics": {
+      "curiosity": {
+        "effectiveness": 0.12026424467792189,
+        "use_count": 16
+      }
+    },
+    "authentic_vulnerability": {
+      "curiosity": {
+        "effectiveness": 0.11677351373998633,
+        "use_count": 16
+      }
+    },
+    "systemic_change": {
+      "curiosity": {
+        "effectiveness": 0.11408680339287885,
+        "use_count": 16
+      }
+    },
+    "restoration_healing": {
+      "curiosity": {
+        "effectiveness": 0.09019818350844143,
+        "use_count": 12
+      }
+    },
+    "creative_flow": {
+      "curiosity": {
+        "effectiveness": 0.046608335990162994,
+        "use_count": 6
+      }
+    },
+    "celebration": {
+      "curiosity": {
+        "effectiveness": 0.046060606252307415,
+        "use_count": 6
+      }
+    },
+    "witnessing": {
+      "curiosity": {
+        "effectiveness": 0.04748199825319417,
+        "use_count": 6
+      }
+    },
+    "clear_knowing": {
+      "curiosity": {
+        "effectiveness": 0.0484724828318229,
+        "use_count": 6
+      }
+    },
+    "spontaneous_delight": {
+      "curiosity": {
+        "effectiveness": 0.04511279169886992,
+        "use_count": 6
+      }
+    },
+    "safe_vulnerability": {
+      "curiosity": {
+        "effectiveness": 0.04683578140889839,
+        "use_count": 6
+      }
+    },
+    "deep_listening": {
+      "curiosity": {
+        "effectiveness": 0.039167488391579776,
+        "use_count": 5
+      },
+      "compassion": {
+        "effectiveness": 0.007270712302964023,
+        "use_count": 1
+      }
+    },
+    "authentic_connection": {
+      "curiosity": {
+        "effectiveness": 0.039537161827633865,
+        "use_count": 5
+      },
+      "compassion": {
+        "effectiveness": 0.007405305525192631,
+        "use_count": 1
+      }
+    },
+    "mutual_support": {
+      "curiosity": {
+        "effectiveness": 0.04537667203101782,
+        "use_count": 6
+      }
+    },
+    "playful_connection": {
+      "curiosity": {
+        "effectiveness": 0.046456576032503805,
+        "use_count": 6
+      }
+    },
+    "constructive_tension": {
+      "curiosity": {
+        "effectiveness": 0.046739921690307044,
+        "use_count": 6
+      }
+    },
+    "creative_edge": {
+      "curiosity": {
+        "effectiveness": 0.04629536983080297,
+        "use_count": 6
+      }
+    },
+    "difficult_conversations": {
+      "curiosity": {
+        "effectiveness": 0.046089821200296865,
+        "use_count": 6
+      }
+    },
+    "growth_challenges": {
+      "curiosity": {
+        "effectiveness": 0.045716711485769064,
+        "use_count": 6
+      }
+    },
+    "values_conflict": {
+      "curiosity": {
+        "effectiveness": 0.04801898953409768,
+        "use_count": 6
+      }
+    },
+    "parts_recognition": {
+      "curiosity": {
+        "effectiveness": 0.0473953796269608,
+        "use_count": 6
+      }
+    },
+    "shadow_integration": {
+      "curiosity": {
+        "effectiveness": 0.04731684842143649,
+        "use_count": 6
+      }
+    },
+    "trauma_processing": {
+      "curiosity": {
+        "effectiveness": 0.047389588258502896,
+        "use_count": 6
+      }
+    },
+    "grief_work": {
+      "curiosity": {
+        "effectiveness": 0.0463514401891271,
+        "use_count": 6
+      }
+    },
+    "reparenting": {
+      "curiosity": {
+        "effectiveness": 0.0465118774912216,
+        "use_count": 6
+      }
+    }
+  },
+  "hyperparameters": {
+    "eta": 0.01,
+    "delta": 0.001,
+    "success_threshold": 0.45
+  },
+  "timestamp": "2025-11-13T21:23:30.137970"
+}

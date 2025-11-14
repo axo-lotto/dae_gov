@@ -1,0 +1,70 @@
+[
+  {
+    "user": "explain whitehead concept of actual ocassions",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.3013367621711862,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "response_text": "What's important about that for you?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T07:25:23.162512"
+  },
+  {
+    "user": "i want to feel better",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.46940774630883025,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.5980000000000001,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.66
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "response_text": "What do you sense when you bring your awareness to this?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.66
+    },
+    "timestamp": "2025-11-11T07:25:39.674241"
+  }
+]

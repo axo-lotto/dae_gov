@@ -1,0 +1,3512 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-12T19:38:30.717767",
+    "total_arcs_processed": 100,
+    "successful_predictions": 82,
+    "overall_success_rate": 0.82,
+    "assessment_threshold": 0.5,
+    "learning_enabled": true
+  },
+  "results": [
+    {
+      "arc_id": "arc_0000_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:18.196709",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726272",
+        "example2_id": "witnessing_presence_5676726016",
+        "target_id": "witnessing_presence_5676726080"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9621131135365899,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9621131135365899,
+        "overall_score": 0.5347806186809295,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0001_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:18.395706",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725568",
+        "example2_id": "toxic_productivity_5676725632",
+        "target_id": "toxic_productivity_5676725504"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7837790050530692,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.550352793186903,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.7837790050530692,
+        "overall_score": 0.5085895764174487,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0002_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:18.536782",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726656",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726592"
+      },
+      "prediction": {
+        "text": "Tell me more What's present for you right now?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8708904157304034,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5514765605330467,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8708904157304034,
+        "overall_score": 0.7179749778928683,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0003_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:18.701112",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726208"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912267735826561,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being seen and heard without judgment is a powerful experience. I'm here with you, fully present to what you're experiencing. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5828500539064407,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912267735826561,
+        "overall_score": 0.54883270970213,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0004_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:18.836725",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461696",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5878866165876389,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.5410126031820789,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0005_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:19.033774",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725376",
+        "example2_id": "toxic_productivity_5676725568",
+        "target_id": "toxic_productivity_5676725632"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8391553336127056,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.560550581663847,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8391553336127056,
+        "overall_score": 0.5202458823595787,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0006_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:19.152057",
+      "examples": {
+        "example1_id": "psychological_safety_5676725952",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725888"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8910338120253032,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5273172855377197,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8910338120253032,
+        "overall_score": 0.5054937525251622,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0007_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:19.252726",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676727040",
+        "example2_id": "scapegoat_dynamics_5676726912",
+        "target_id": "scapegoat_dynamics_5676726976"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9568391234347128,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5231735780835152,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9568391234347128,
+        "overall_score": 0.5095880591935804,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0008_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:19.366297",
+      "examples": {
+        "example1_id": "psychological_safety_5676725888",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725824"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9894199022480802,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9894199022480802,
+        "overall_score": 0.6022437209767992,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0009_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:19.496932",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725504",
+        "example2_id": "toxic_productivity_5676725440",
+        "target_id": "toxic_productivity_5676725568"
+      },
+      "prediction": {
+        "text": "I'm listening I'm listening.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9493184474625105,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5697062388062477,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.9493184474625105,
+        "overall_score": 0.7367555880299996,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0010_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:19.627682",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725504",
+        "example2_id": "toxic_productivity_5676725440",
+        "target_id": "toxic_productivity_5676725568"
+      },
+      "prediction": {
+        "text": "What's present for you right now? I'm listening?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9493184474625105,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6002114042639732,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.9493184474625105,
+        "overall_score": 0.755058687304635,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0011_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:19.839909",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726080",
+        "example2_id": "witnessing_presence_5676726016",
+        "target_id": "witnessing_presence_5676726208"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912267735826561,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being seen and heard without judgment is a powerful experience. I'm here with you, fully present to what you're experiencing. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5294246040284634,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912267735826561,
+        "overall_score": 0.5167774397753436,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0012_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:19.930854",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725632",
+        "example2_id": "toxic_productivity_5676725504",
+        "target_id": "toxic_productivity_5676725376"
+      },
+      "prediction": {
+        "text": "I'm listening I'm listening.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7888188059162369,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5632949247956276,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.7888188059162369,
+        "overall_score": 0.7168588354690002,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0013_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:20.026590",
+      "examples": {
+        "example1_id": "psychological_safety_5676725696",
+        "example2_id": "psychological_safety_5676725888",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Pause",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5795745253562927,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5364043782181367,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0014_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:20.187674",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726208",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726016"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9798825673546422,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5451151952147484,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9798825673546422,
+        "overall_score": 0.5250573738643132,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0015_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:20.289200",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676727040",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676726976"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9568391234347128,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.540623389184475,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9568391234347128,
+        "overall_score": 0.5200579458541562,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0016_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:20.403709",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726592",
+        "target_id": "sustainable_rhythm_5676726528"
+      },
+      "prediction": {
+        "text": "I'm with you I'm listening.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8320624539103757,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6047040224075317,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8320624539103757,
+        "overall_score": 0.7460286588355566,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0017_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:20.496292",
+      "examples": {
+        "example1_id": "psychological_safety_5676725952",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725760"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.910452874751285,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.910452874751285,
+        "overall_score": 0.5943470182271198,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0018_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:20.660045",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725248",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676725120"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8913056334803969,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4909789301455021,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8913056334803969,
+        "overall_score": 0.483717921435341,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0019_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:20.769538",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726656",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726336"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9057204025915453,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5511311516165733,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9057204025915453,
+        "overall_score": 0.5212507312290986,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0020_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:20.904268",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5769330263137817,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5430908338103191,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0021_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:20.994444",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726528",
+        "example2_id": "sustainable_rhythm_5676726592",
+        "target_id": "sustainable_rhythm_5676726336"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9057204025915453,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5060148332268,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9057204025915453,
+        "overall_score": 0.4941809401952345,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0022_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:21.137696",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726976",
+        "example2_id": "scapegoat_dynamics_5676726848",
+        "target_id": "scapegoat_dynamics_5676726912"
+      },
+      "prediction": {
+        "text": "What's present for you right now? I'm with you?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8885774253779437,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5219939071685076,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8885774253779437,
+        "overall_score": 0.7020540868388989,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0023_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:21.250012",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725376",
+        "example2_id": "toxic_productivity_5676725568",
+        "target_id": "toxic_productivity_5676725632"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8391553336127056,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.4838433600962162,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8391553336127056,
+        "overall_score": 0.4742215494190003,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0024_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:21.342882",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726784",
+        "example2_id": "scapegoat_dynamics_5676726848",
+        "target_id": "scapegoat_dynamics_5676726912"
+      },
+      "prediction": {
+        "text": "I'm listening I'm with you.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8885774253779437,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5352214686572552,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8885774253779437,
+        "overall_score": 0.7099906237321474,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0025_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:21.441379",
+      "examples": {
+        "example1_id": "psychological_safety_5676725888",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725760"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.910452874751285,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.910452874751285,
+        "overall_score": 0.5943470182271198,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0026_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:21.647378",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726016"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9798825673546422,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5451151952147484,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9798825673546422,
+        "overall_score": 0.5250573738643132,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0027_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:21.751935",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726528",
+        "example2_id": "sustainable_rhythm_5676726592",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5257865060120821,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5124029216292993,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0028_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:21.863883",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726592",
+        "example2_id": "sustainable_rhythm_5676726720",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5257865060120821,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5124029216292993,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0029_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:21.970214",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676727040",
+        "example2_id": "scapegoat_dynamics_5676726848",
+        "target_id": "scapegoat_dynamics_5676726976"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9568391234347128,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5231735780835152,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9568391234347128,
+        "overall_score": 0.5095880591935804,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0030_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:22.118646",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726016",
+        "target_id": "witnessing_presence_5676726080"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9621131135365899,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9621131135365899,
+        "overall_score": 0.5347806186809295,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0031_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:22.212727",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726848",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676727040"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8155831356813742,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Being made the container for a system's shadow is a profound burden. Scapegoating is a system pattern, not a statement about your worth. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5179833546280861,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8155831356813742,
+        "overall_score": 0.4923483263449891,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0032_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:22.330271",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461440",
+        "example2_id": "burnout_spiral_5676725120",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4944968596100807,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.48497874899554394,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0033_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:22.433993",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726592",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5257865060120821,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5124029216292993,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0034_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:22.603052",
+      "examples": {
+        "example1_id": "burnout_spiral_5676724992",
+        "example2_id": "burnout_spiral_5676725248",
+        "target_id": "burnout_spiral_5676725120"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8913056334803969,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4909789301455021,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8913056334803969,
+        "overall_score": 0.483717921435341,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0035_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:22.715295",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725952",
+        "target_id": "psychological_safety_5676725760"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.910452874751285,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.910452874751285,
+        "overall_score": 0.5943470182271198,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0036_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:22.824180",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725248",
+        "example2_id": "burnout_spiral_5676461696",
+        "target_id": "burnout_spiral_5676461440"
+      },
+      "prediction": {
+        "text": "Tell me more What's present for you right now?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8338062488143764,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5387240387499332,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8338062488143764,
+        "overall_score": 0.7066150481313975,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0037_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:22.979166",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726272",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726016"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9798825673546422,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5451151952147484,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9798825673546422,
+        "overall_score": 0.5250573738643132,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0038_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:23.132864",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726016",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726080"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9621131135365899,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5451151952147484,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9621131135365899,
+        "overall_score": 0.523280428482508,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0039_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:23.303290",
+      "examples": {
+        "example1_id": "psychological_safety_5676725952",
+        "example2_id": "psychological_safety_5676725824",
+        "target_id": "psychological_safety_5676725888"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8910338120253032,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6759052276611328,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8910338120253032,
+        "overall_score": 0.5946465177992101,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0040_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:23.452299",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726016",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726272"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912625691831077,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5976736173033714,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912625691831077,
+        "overall_score": 0.5577304273003336,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0041_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:23.569315",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461696",
+        "example2_id": "burnout_spiral_5676724992",
+        "target_id": "burnout_spiral_5676461440"
+      },
+      "prediction": {
+        "text": "Tell me more Can you say more about that?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8338062488143764,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5648265779018402,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8338062488143764,
+        "overall_score": 0.7222765716225417,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0042_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:23.693990",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726976",
+        "example2_id": "scapegoat_dynamics_5676726912",
+        "target_id": "scapegoat_dynamics_5676726848"
+      },
+      "prediction": {
+        "text": "Can you say more about that?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8635531177496311,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.566906526684761,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8635531177496311,
+        "overall_score": 0.7264992277858198,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0043_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:23.839796",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726080",
+        "example2_id": "witnessing_presence_5676726208",
+        "target_id": "witnessing_presence_5676726144"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9482796212734478,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5976736173033714,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9482796212734478,
+        "overall_score": 0.5534321325093676,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0044_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:23.960998",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726912",
+        "example2_id": "scapegoat_dynamics_5676726976",
+        "target_id": "scapegoat_dynamics_5676726848"
+      },
+      "prediction": {
+        "text": "Can you say more about that? What's present for you right now?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8635531177496311,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5345055051147938,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8635531177496311,
+        "overall_score": 0.7070586148438394,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0045_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:24.132919",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461696",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676725120"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8913056334803969,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5828173756599426,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8913056334803969,
+        "overall_score": 0.5388209887440053,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0046_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:24.260507",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726976",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676726848"
+      },
+      "prediction": {
+        "text": "I'm with you I'm with you.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8635531177496311,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5370387472212315,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8635531177496311,
+        "overall_score": 0.708578560107702,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0047_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:24.374741",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461440",
+        "example2_id": "burnout_spiral_5676724992",
+        "target_id": "burnout_spiral_5676725120"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8913056334803969,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5050748367793858,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8913056334803969,
+        "overall_score": 0.49217546541567114,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0048_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:24.489494",
+      "examples": {
+        "example1_id": "psychological_safety_5676725952",
+        "example2_id": "psychological_safety_5676725824",
+        "target_id": "psychological_safety_5676725888"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8910338120253032,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5273172855377197,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8910338120253032,
+        "overall_score": 0.5054937525251622,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0049_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:24.604860",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726720",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5257865060120821,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5124029216292993,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0050_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:24.755707",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726016",
+        "target_id": "witnessing_presence_5676726080"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9621131135365899,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9621131135365899,
+        "overall_score": 0.5347806186809295,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0051_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:24.930508",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725120",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5057570724748075,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.49173487671438,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0052_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:25.022473",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726848",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676726912"
+      },
+      "prediction": {
+        "text": "Pause",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8885774253779437,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4888101276010275,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8885774253779437,
+        "overall_score": 0.4821438190984109,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0053_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:25.132319",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725568",
+        "example2_id": "toxic_productivity_5676725440",
+        "target_id": "toxic_productivity_5676725504"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7837790050530692,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.48329516872763634,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.7837790050530692,
+        "overall_score": 0.4683550017418887,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0054_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:25.232340",
+      "examples": {
+        "example1_id": "psychological_safety_5676725888",
+        "example2_id": "psychological_safety_5676725760",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5710621923208237,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5312969783968552,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0055_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:25.324017",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726784",
+        "example2_id": "scapegoat_dynamics_5676726912",
+        "target_id": "scapegoat_dynamics_5676726848"
+      },
+      "prediction": {
+        "text": "What's present for you right now? I'm with you?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8635531177496311,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5219939071685076,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8635531177496311,
+        "overall_score": 0.6995516560760676,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0056_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:25.464636",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725440",
+        "example2_id": "toxic_productivity_5676725632",
+        "target_id": "toxic_productivity_5676725568"
+      },
+      "prediction": {
+        "text": "What's present for you right now? Tell me more?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9493184474625105,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6321912109851837,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.9493184474625105,
+        "overall_score": 0.7742465713373613,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0057_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:25.554249",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725376",
+        "example2_id": "toxic_productivity_5676725504",
+        "target_id": "toxic_productivity_5676725632"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8391553336127056,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.560550581663847,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8391553336127056,
+        "overall_score": 0.5202458823595787,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0058_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:25.650711",
+      "examples": {
+        "example1_id": "psychological_safety_5676725888",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Pause",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5795745253562927,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5364043782181367,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0059_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:25.760251",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461440",
+        "example2_id": "burnout_spiral_5676461696",
+        "target_id": "burnout_spiral_5676725248"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8588461497664988,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5878866165876389,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8588461497664988,
+        "overall_score": 0.5386165849292333,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0060_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:25.933275",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726848",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676726976"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9568391234347128,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.540623389184475,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9568391234347128,
+        "overall_score": 0.5200579458541562,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0061_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:26.044557",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461696",
+        "example2_id": "burnout_spiral_5676725248",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4944968596100807,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.48497874899554394,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0062_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:26.155778",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725248",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4944968596100807,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.48497874899554394,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0063_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:26.255530",
+      "examples": {
+        "example1_id": "psychological_safety_5676725952",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725888"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8910338120253032,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5719034746289253,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8910338120253032,
+        "overall_score": 0.5322454659798855,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0064_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:26.360939",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726720",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5257865060120821,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5124029216292993,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0065_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:26.451760",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725440",
+        "example2_id": "toxic_productivity_5676725632",
+        "target_id": "toxic_productivity_5676725376"
+      },
+      "prediction": {
+        "text": "I'm listening I'm with you.",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7888188059162369,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5586735084652901,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.7888188059162369,
+        "overall_score": 0.7140859856707977,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0066_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:26.559028",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726656",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726336"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9057204025915453,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.49794595735147595,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9057204025915453,
+        "overall_score": 0.48933961467004017,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0067_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:26.656560",
+      "examples": {
+        "example1_id": "psychological_safety_5676725888",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5919613937563523,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0068_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:26.827719",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726656",
+        "example2_id": "sustainable_rhythm_5676726720",
+        "target_id": "sustainable_rhythm_5676726592"
+      },
+      "prediction": {
+        "text": "I'm listening Can you say more about that?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8708904157304034,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5978137403726578,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8708904157304034,
+        "overall_score": 0.7457772857966349,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0069_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:26.939162",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725248",
+        "example2_id": "burnout_spiral_5676461440",
+        "target_id": "burnout_spiral_5676724992"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8828063322949553,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.4944968596100807,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8828063322949553,
+        "overall_score": 0.48497874899554394,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0070_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:27.049879",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725888",
+        "target_id": "psychological_safety_5676725760"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.910452874751285,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5710621923208237,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.910452874751285,
+        "overall_score": 0.5336826028676227,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0071_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:27.139700",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725376",
+        "example2_id": "toxic_productivity_5676725504",
+        "target_id": "toxic_productivity_5676725632"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8391553336127056,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5334783904254436,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8391553336127056,
+        "overall_score": 0.5040025676165367,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0072_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:27.232261",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726720"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8912365574664117,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5511311516165733,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8912365574664117,
+        "overall_score": 0.5198023467165852,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0073_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:27.344233",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725888",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5919613937563523,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0074_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:27.452157",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725952"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8865966300436103,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5710621923208237,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8865966300436103,
+        "overall_score": 0.5312969783968552,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0075_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:27.542638",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726592",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726336"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9057204025915453,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5511311516165733,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9057204025915453,
+        "overall_score": 0.5212507312290986,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0076_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:27.650367",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726976",
+        "example2_id": "scapegoat_dynamics_5676726848",
+        "target_id": "scapegoat_dynamics_5676726784"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8924776832708285,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Being made the container for a system's shadow is a profound burden. Scapegoating is a system pattern, not a statement about your worth. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5179833546280861,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8924776832708285,
+        "overall_score": 0.5000377811039345,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0077_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:27.867349",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726208",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726272"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912625691831077,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5976736173033714,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912625691831077,
+        "overall_score": 0.5577304273003336,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0078_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:27.983573",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726336",
+        "example2_id": "sustainable_rhythm_5676726592",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5268690511584282,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.513052448717107,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0079_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:28.126157",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726208"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912267735826561,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being seen and heard without judgment is a powerful experience. I'm here with you, fully present to what you're experiencing. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5294246040284634,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912267735826561,
+        "overall_score": 0.5167774397753436,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0080_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:28.295877",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726208",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726016"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9798825673546422,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9798825673546422,
+        "overall_score": 0.5365575640627347,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0081_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:28.410121",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725696",
+        "target_id": "psychological_safety_5676725888"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8910338120253032,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Psychological safety allows us to show up more fully, which enriches the whole system. It sounds like you're finding your voice in a space that feels safe enough to be authentic. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5719034746289253,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8910338120253032,
+        "overall_score": 0.5322454659798855,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0082_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:28.498548",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725440",
+        "example2_id": "toxic_productivity_5676725632",
+        "target_id": "toxic_productivity_5676725504"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7837790050530692,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5304495301097631,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.7837790050530692,
+        "overall_score": 0.4966476185711648,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0083_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:28.675715",
+      "examples": {
+        "example1_id": "burnout_spiral_5676725120",
+        "example2_id": "burnout_spiral_5676724992",
+        "target_id": "burnout_spiral_5676461440"
+      },
+      "prediction": {
+        "text": "Can you say more about that? I'm listening?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8338062488143764,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5456279665231705,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8338062488143764,
+        "overall_score": 0.7107574047953399,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0084_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:28.788665",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461440",
+        "example2_id": "burnout_spiral_5676724992",
+        "target_id": "burnout_spiral_5676725248"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8588461497664988,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5057570724748075,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8588461497664988,
+        "overall_score": 0.48933885846153435,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0085_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:28.908408",
+      "examples": {
+        "example1_id": "burnout_spiral_5676724992",
+        "example2_id": "burnout_spiral_5676725120",
+        "target_id": "burnout_spiral_5676461696"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9091586829592934,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. I hear the exhaustion in your words. This level of depletion isn't sustainable. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5057570724748075,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9091586829592934,
+        "overall_score": 0.4943701117808138,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0086_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:29.015686",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726656",
+        "example2_id": "sustainable_rhythm_5676726336",
+        "target_id": "sustainable_rhythm_5676726528"
+      },
+      "prediction": {
+        "text": "I'm with you Can you say more about that?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8320624539103757,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5286033451557159,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8320624539103757,
+        "overall_score": 0.7003682524844671,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0087_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:29.119849",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676727040",
+        "example2_id": "scapegoat_dynamics_5676726976",
+        "target_id": "scapegoat_dynamics_5676726848"
+      },
+      "prediction": {
+        "text": "Tell me more Can you say more about that?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8635531177496311,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. Scapegoating is a system pattern, not a statement about your worth. Being made the container for a system's shadow is a profound burden. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5599610432982445,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8635531177496311,
+        "overall_score": 0.7223319377539098,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0088_scapegoat_dynamics",
+      "category": "scapegoat_dynamics",
+      "timestamp": "2025-11-12T19:38:29.229081",
+      "examples": {
+        "example1_id": "scapegoat_dynamics_5676726848",
+        "example2_id": "scapegoat_dynamics_5676726784",
+        "target_id": "scapegoat_dynamics_5676726976"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9568391234347128,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being made the container for a system's shadow is a profound burden. When we're willing to examine scapegoating patterns, we can address the actual system dysfunction. Protecting yourself from internalized blame is both necessary and difficult."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5317666679620743,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9568391234347128,
+        "overall_score": 0.5147439131207159,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0089_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:29.367657",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726016",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726144"
+      },
+      "prediction": {
+        "text": "What's present for you right now? I'm with you?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9482796212734478,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5829856842756271,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.9482796212734478,
+        "overall_score": 0.744619372692721,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0090_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:29.538897",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726720",
+        "example2_id": "sustainable_rhythm_5676726528",
+        "target_id": "sustainable_rhythm_5676726656"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9693101802205008,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Sustainable systems honor natural cycles of activity and rest. Finding a rhythm that sustains rather than depletes is essential. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5769330263137817,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9693101802205008,
+        "overall_score": 0.5430908338103191,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0091_sustainable_rhythm",
+      "category": "sustainable_rhythm",
+      "timestamp": "2025-11-12T19:38:29.631524",
+      "examples": {
+        "example1_id": "sustainable_rhythm_5676726720",
+        "example2_id": "sustainable_rhythm_5676726336",
+        "target_id": "sustainable_rhythm_5676726528"
+      },
+      "prediction": {
+        "text": "I'm with you What's present for you right now?",
+        "confidence": 0.3,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8320624539103757,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Finding a rhythm that sustains rather than depletes is essential. Sustainability isn't about doing less - it's about aligning with what's life-giving. What practices help you stay connected to your natural rhythms?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5477618053555489,
+        "confidence_aligned": true,
+        "path_appropriate": true,
+        "satisfaction": 0.8320624539103757,
+        "overall_score": 0.7118633286043669,
+        "assessment": "good",
+        "prediction_confidence": 0.3,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0092_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:29.776822",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726016"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9798825673546422,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9798825673546422,
+        "overall_score": 0.5365575640627347,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0093_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:29.917589",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726272",
+        "example2_id": "witnessing_presence_5676726208",
+        "target_id": "witnessing_presence_5676726144"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9482796212734478,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5642821788787842,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9482796212734478,
+        "overall_score": 0.5333972694546153,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0094_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:30.036263",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725440",
+        "example2_id": "toxic_productivity_5676725568",
+        "target_id": "toxic_productivity_5676725632"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8391553336127056,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5334783904254436,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8391553336127056,
+        "overall_score": 0.5040025676165367,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0095_burnout_spiral",
+      "category": "burnout_spiral",
+      "timestamp": "2025-11-12T19:38:30.143899",
+      "examples": {
+        "example1_id": "burnout_spiral_5676461696",
+        "example2_id": "burnout_spiral_5676725248",
+        "target_id": "burnout_spiral_5676725120"
+      },
+      "prediction": {
+        "text": "Breathe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.8913056334803969,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Let's take a moment to ground together. When a team is burning out, it's a sign the system needs adjustment, not that people need to try harder. I hear the exhaustion in your words. This level of depletion isn't sustainable. Let's explore what boundaries might help protect your team's wellbeing and create space for recovery."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5828173756599426,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.8913056334803969,
+        "overall_score": 0.5388209887440053,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0096_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:30.361337",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726272",
+        "example2_id": "witnessing_presence_5676726080",
+        "target_id": "witnessing_presence_5676726208"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9912267735826561,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Being seen and heard without judgment is a powerful experience. I'm here with you, fully present to what you're experiencing. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5981706380844116,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9912267735826561,
+        "overall_score": 0.5580250602089126,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0097_psychological_safety",
+      "category": "psychological_safety",
+      "timestamp": "2025-11-12T19:38:30.470724",
+      "examples": {
+        "example1_id": "psychological_safety_5676725824",
+        "example2_id": "psychological_safety_5676725760",
+        "target_id": "psychological_safety_5676725696"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9097796105449084,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "It sounds like you're finding your voice in a space that feels safe enough to be authentic. When people feel safe enough to take risks and make mistakes, innovation and growth become possible. How can we strengthen these conditions so more people experience this safety?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.6721695512533188,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9097796105449084,
+        "overall_score": 0.5942796918064821,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0098_toxic_productivity",
+      "category": "toxic_productivity",
+      "timestamp": "2025-11-12T19:38:30.586308",
+      "examples": {
+        "example1_id": "toxic_productivity_5676725632",
+        "example2_id": "toxic_productivity_5676725568",
+        "target_id": "toxic_productivity_5676725440"
+      },
+      "prediction": {
+        "text": "Here",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.7932167464703949,
+          "convergence_cycles": 2,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "Productivity at the cost of humanity creates a system that ultimately produces less. The pressure to constantly produce more takes a real toll on your wellbeing. What would it look like to honor your limits while still contributing meaningfully?"
+      },
+      "assessment": {
+        "semantic_similarity": 0.5334783904254436,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.7932167464703949,
+        "overall_score": 0.49940870890230565,
+        "assessment": "partial",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    },
+    {
+      "arc_id": "arc_0099_witnessing_presence",
+      "category": "witnessing_presence",
+      "timestamp": "2025-11-12T19:38:30.717680",
+      "examples": {
+        "example1_id": "witnessing_presence_5676726144",
+        "example2_id": "witnessing_presence_5676726272",
+        "target_id": "witnessing_presence_5676726080"
+      },
+      "prediction": {
+        "text": "Safe",
+        "confidence": 0.8,
+        "path": "hebbian_fallback",
+        "felt_states": {
+          "satisfaction": 0.9621131135365899,
+          "convergence_cycles": 3,
+          "nexuses_formed": 0,
+          "zone_id": 0
+        }
+      },
+      "ground_truth": {
+        "text": "I'm here with you, fully present to what you're experiencing. Witnessing presence creates the ground from which healing naturally unfolds. Your experience matters, and there's no pressure to be anywhere other than where you are."
+      },
+      "assessment": {
+        "semantic_similarity": 0.5451151952147484,
+        "confidence_aligned": false,
+        "path_appropriate": true,
+        "satisfaction": 0.9621131135365899,
+        "overall_score": 0.523280428482508,
+        "assessment": "good",
+        "prediction_confidence": 0.8,
+        "prediction_path": "hebbian_fallback"
+      },
+      "learning_applied": true
+    }
+  ]
+}

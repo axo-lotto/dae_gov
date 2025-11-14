@@ -68,6 +68,13 @@ class SANSResult:
     occasions_processed: int = 0
     comparisons_made: int = 0
 
+    # 🆕 PHASE 1: Entity-native emission support
+    atom_activations: Dict[str, float] = field(default_factory=dict)  # Direct atom activation for emission
+    felt_vector: Optional['np.ndarray'] = None  # Future: 7D felt vector for full entity-native
+
+    # 🆕 PHASE C3: Embedding-based lure field (Nov 13, 2025)
+    coherence_lure_field: Dict[str, float] = field(default_factory=dict)
+
 
 class SANSTextCore:
     """
@@ -99,6 +106,18 @@ class SANSTextCore:
         """
         self.config = config or DEFAULT_SANS_CONFIG
 
+        # 🆕 PHASE 1: Entity-native support
+        self.organ_name = "SANS"
+        self.semantic_atoms = self._load_semantic_atoms()
+
+        # 🆕 PHASE 2: Load shared meta-atoms for nexus formation
+        self.meta_atoms_config = self._load_shared_meta_atoms()
+
+        # 🆕 PHASE C3: Embedding-based lure computation (Nov 13, 2025)
+        self.embedding_coordinator = None  # Lazy-loaded
+        self.lure_prototypes = None  # Lazy-loaded
+        self.use_embedding_lures = True  # Enable embedding-based lures
+
         # Pattern detection history (for learning)
         self.pattern_history: List[SemanticPattern] = []
 
@@ -111,6 +130,253 @@ class SANSTextCore:
         print(f"   Similarity threshold: {self.config.similarity_threshold}")
         print(f"   Embedding dim: {self.config.embedding_dim}")
         print(f"   FAISS enabled: {self.config.faiss_enabled}")
+
+    # ========================================================================
+    # 🆕 PHASE 1: ENTITY-NATIVE ATOM ACTIVATION
+    # ========================================================================
+
+    def _load_semantic_atoms(self) -> List[str]:
+        """Load SANS semantic atoms from semantic_atoms.json."""
+        import json
+        import os
+
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        atoms_path = os.path.join(current_dir, '..', '..', '..', '..',
+                                  'persona_layer', 'semantic_atoms.json')
+
+        try:
+            with open(atoms_path, 'r') as f:
+                all_atoms = json.load(f)
+
+            if self.organ_name not in all_atoms:
+                return []
+
+            metadata_keys = {'description', 'dimension', 'field_type', 'total_atoms'}
+            organ_data = all_atoms[self.organ_name]
+            atom_names = [k for k in organ_data.keys() if k not in metadata_keys]
+
+            return atom_names
+        except Exception as e:
+            print(f"Warning: Could not load semantic atoms for {self.organ_name}: {e}")
+            return []
+
+    def _load_shared_meta_atoms(self) -> Optional[Dict]:
+        """
+        🆕 PHASE 2: Load shared meta-atoms for nexus formation.
+
+        SANS contributes to 3 meta-atoms:
+        - safety_restoration (SANS, EO, NDAM)
+        - compassion_safety (EMPATHY, EO, SANS)
+        - coherence_integration (SANS, WISDOM, LISTENING)
+        """
+        import json
+        import os
+        from typing import Optional, Dict
+
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        meta_atoms_path = os.path.join(current_dir, '..', '..', '..', '..',
+                                       'persona_layer', 'shared_meta_atoms.json')
+
+        try:
+            with open(meta_atoms_path, 'r') as f:
+                meta_atoms_data = json.load(f)
+
+            relevant_meta_atoms = [
+                ma for ma in meta_atoms_data['meta_atoms']
+                if self.organ_name in ma['contributing_organs']
+            ]
+
+            return {
+                'meta_atoms': relevant_meta_atoms,
+                'count': len(relevant_meta_atoms)
+            }
+        except Exception as e:
+            return None
+
+    def _compute_atom_activations(
+        self,
+        patterns: List[SemanticPattern],
+        coherence: float,
+        lure: float
+    ) -> Dict[str, float]:
+        """
+        🆕 PHASE 1: DIRECT atom activation computation (bypasses semantic_field_extractor!)
+
+        Maps SANS pattern types → semantic atoms:
+        - exact_repetition (sim ≥0.95) → high_coherence
+        - parts_language_consistency (sim ≥0.85) → semantic_precision
+        - reenactment_pattern (sim ≥0.80) → referential_tracking
+        - thematic_resonance (sim ≥0.75) → meta_linguistic
+        - semantic_echo (sim ≥0.70) → meaning_drift (moderate similarity)
+        - conceptual_affinity (sim <0.70) → low_coherence
+
+        Special atoms:
+        - coherence_repair: Activated when mean_similarity is improving (high lure)
+        """
+        if not patterns:
+            return {}
+
+        atom_activations = {}
+
+        # Pattern type → atom mapping
+        pattern_to_atom = {
+            'exact_repetition': 'high_coherence',
+            'parts_language_consistency': 'semantic_precision',
+            'reenactment_pattern': 'referential_tracking',
+            'thematic_resonance': 'meta_linguistic',
+            'semantic_echo': 'meaning_drift',
+            'conceptual_affinity': 'low_coherence'
+        }
+
+        for pattern in patterns:
+            # Direct pattern type mapping
+            atom = pattern_to_atom.get(pattern.pattern_type)
+            if atom:
+                # Base activation from pattern strength and confidence
+                base_activation = pattern.similarity_score * pattern.confidence
+                activation = base_activation * coherence
+                atom_activations[atom] = atom_activations.get(atom, 0.0) + activation
+
+        # Special case: coherence_repair
+        # High lure indicates improving semantic coherence (organism drawn toward it)
+        if lure > 0.6:
+            coherence_repair_activation = lure * coherence
+            atom_activations['coherence_repair'] = coherence_repair_activation
+
+        # Apply lure weighting
+        lure_weight = 0.5 + 0.5 * lure
+        for atom in atom_activations:
+            atom_activations[atom] *= lure_weight
+
+        # Normalize to [0.0, 1.0]
+        if atom_activations:
+            max_activation = max(atom_activations.values())
+            if max_activation > 1.0:
+                for atom in atom_activations:
+                    atom_activations[atom] /= max_activation
+
+        # 🆕 PHASE 2: Add meta-atom activations (for nexus formation)
+        if self.meta_atoms_config:
+            meta_activations = self._activate_meta_atoms(patterns, coherence, lure)
+            atom_activations.update(meta_activations)
+
+        return atom_activations
+
+    def _activate_meta_atoms(
+        self,
+        patterns: List[SemanticPattern],
+        coherence: float,
+        lure: float
+    ) -> Dict[str, float]:
+        """
+        🆕 PHASE 2: Activate shared meta-atoms for nexus formation.
+
+        SANS contributes to 3 meta-atoms:
+        1. safety_restoration (SANS, EO, NDAM) - High coherence + coherence repair
+        2. compassion_safety (EMPATHY, EO, SANS) - Semantic precision + alignment
+        3. coherence_integration (SANS, WISDOM, LISTENING) - High coherence + meta-linguistic
+        """
+        if not self.meta_atoms_config or not patterns:
+            return {}
+
+        meta_activations = {}
+        import numpy as np
+
+        # Get patterns by type
+        high_coherence_patterns = [p for p in patterns if p.pattern_type in ['exact_repetition', 'parts_language_consistency']]
+        precision_patterns = [p for p in patterns if p.pattern_type == 'parts_language_consistency']
+        meta_ling_patterns = [p for p in patterns if p.pattern_type == 'thematic_resonance']
+
+        # Calculate mean similarity for coherence metrics
+        mean_similarity = np.mean([p.similarity_score for p in patterns]) if patterns else 0.0
+
+        for meta_atom in self.meta_atoms_config['meta_atoms']:
+            atom_name = meta_atom['atom']
+
+            # 1. safety_restoration: High coherence + coherence repair (improving)
+            if atom_name == 'safety_restoration':
+                if high_coherence_patterns and lure > 0.5:
+                    # Safety = coherent semantic field + improving
+                    coherence_strength = sum(p.similarity_score * p.confidence for p in high_coherence_patterns) / len(high_coherence_patterns)
+                    repair_boost = (lure - 0.5) * 0.5  # Boost from improving coherence
+                    activation = (coherence_strength + repair_boost) * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+            # 2. compassion_safety: Semantic precision + alignment
+            elif atom_name == 'compassion_safety':
+                if precision_patterns and mean_similarity > 0.75:
+                    # Compassion safety = precise semantic alignment
+                    precision_strength = sum(p.similarity_score * p.confidence for p in precision_patterns) / len(precision_patterns)
+                    alignment_factor = (mean_similarity - 0.75) / 0.25  # Normalize above threshold
+                    activation = precision_strength * alignment_factor * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+            # 3. coherence_integration: High coherence + meta-linguistic patterns
+            elif atom_name == 'coherence_integration':
+                if high_coherence_patterns or meta_ling_patterns:
+                    # Integration = systemic coherence + thematic resonance
+                    integration_patterns = high_coherence_patterns + meta_ling_patterns
+                    integration_strength = sum(p.similarity_score * p.confidence for p in integration_patterns) / len(integration_patterns)
+                    activation = integration_strength * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+        return meta_activations
+
+    # ========================================================================
+    # 🆕 PHASE C3: EMBEDDING-BASED LURE COMPUTATION (Nov 13, 2025)
+    # ========================================================================
+
+    def _ensure_embedding_coordinator(self):
+        """Lazy-load embedding coordinator."""
+        if self.embedding_coordinator is None:
+            from persona_layer.embedding_coordinator import EmbeddingCoordinator
+            self.embedding_coordinator = EmbeddingCoordinator()
+
+    def _load_lure_prototypes(self) -> Dict[str, np.ndarray]:
+        """Load SANS lure prototypes from JSON."""
+        if self.lure_prototypes is not None:
+            return self.lure_prototypes
+
+        import json
+        from pathlib import Path
+
+        # Navigate from organs/modular/sans/core/ up to project root, then to persona_layer
+        prototype_path = Path(__file__).parent.parent.parent.parent.parent / 'persona_layer' / 'lure_prototypes.json'
+
+        with open(prototype_path, 'r') as f:
+            data = json.load(f)
+
+        category = data['prototypes']['sans_coherence']
+        self.lure_prototypes = {
+            dim: np.array(proto['embedding'])
+            for dim, proto in category.items()
+        }
+
+        return self.lure_prototypes
+
+    def _compute_embedding_based_lure_field(self, text: str) -> Dict[str, float]:
+        """Compute lure field using semantic similarity."""
+        self._ensure_embedding_coordinator()
+        prototypes = self._load_lure_prototypes()
+
+        # Get and normalize input embedding
+        input_embedding = self.embedding_coordinator.embed(text)
+        input_embedding = input_embedding / np.linalg.norm(input_embedding)
+
+        # Compute cosine similarity to each prototype
+        similarities = {}
+        for dimension, prototype in prototypes.items():
+            similarity = np.dot(input_embedding, prototype)
+            similarities[dimension] = max(0.0, similarity)
+
+        # Normalize to sum to 1.0
+        total_sim = sum(similarities.values())
+        if total_sim > 0:
+            lure_field = {k: v / total_sim for k, v in similarities.items()}
+        else:
+            lure_field = {k: 1.0 / len(similarities) for k in similarities.keys()}
+
+        return lure_field
 
     # ========================================================================
     # MAIN PROCESSING METHOD (Universal Organ Interface)
@@ -134,6 +400,9 @@ class SANSTextCore:
             SANSResult with coherence, patterns, and lure
         """
         start_time = time.time()
+
+        # 🆕 PHASE C3: Collect full input text for embedding-based lures
+        full_text = ' '.join([occasion.text for occasion in occasions])
 
         if len(occasions) == 0:
             return self._create_empty_result()
@@ -179,6 +448,25 @@ class SANSTextCore:
         if len(self.pattern_history) > self.config.semantic_history_limit:
             self.pattern_history = self.pattern_history[-self.config.semantic_history_limit:]
 
+        # 🆕 PHASE 1: Compute atom activations DIRECTLY (bypass semantic_field_extractor!)
+        atom_activations = self._compute_atom_activations(
+            patterns, coherence_metrics['overall_coherence'], lure)
+
+        # 🆕 PHASE C3: Compute embedding-based lure field
+        if self.use_embedding_lures and full_text:
+            coherence_lure_field = self._compute_embedding_based_lure_field(full_text)
+        else:
+            # Fallback to balanced default
+            coherence_lure_field = {
+                'semantic_drift': 1.0/7,
+                'contradiction_detected': 1.0/7,
+                'alignment_strong': 1.0/7,
+                'repair_needed': 1.0/7,
+                'fragmentation': 1.0/7,
+                'coherent_narrative': 1.0/7,
+                'bridging_gaps': 1.0/7
+            }
+
         return SANSResult(
             coherence=coherence_metrics['overall_coherence'],
             patterns=patterns,
@@ -189,7 +477,9 @@ class SANSTextCore:
             thematic_coherence=coherence_metrics['thematic_coherence'],
             novelty_score=coherence_metrics['novelty_score'],
             occasions_processed=len(occasions),
-            comparisons_made=coherence_metrics['comparisons_made']
+            comparisons_made=coherence_metrics['comparisons_made'],
+            atom_activations=atom_activations,  # 🆕 POPULATED!
+            coherence_lure_field=coherence_lure_field  # 🆕 PHASE C3
         )
 
     # ========================================================================

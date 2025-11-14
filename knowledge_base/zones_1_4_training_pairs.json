@@ -1,0 +1,1235 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-11-13T22:00:00Z",
+    "description": "Zone 1-4 training corpus for organic family diversification",
+    "total_pairs": 120,
+    "zones": {
+      "zone_1": 30,
+      "zone_2": 30,
+      "zone_3": 30,
+      "zone_4": 30
+    }
+  },
+  "training_pairs": [
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_001",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.05,
+        "expected_organs": {
+          "PRESENCE": 0.85,
+          "WISDOM": 0.70,
+          "NDAM": 0.20,
+          "EO": 0.80
+        }
+      },
+      "input_text": "I'm in the zone right now - words are just flowing through me. It feels effortless, like I'm channeling something larger.",
+      "output_text": "That's beautiful. You're describing what Whitehead calls 'creative advance' - when you become a lure for novelty. Your parts have stepped back, and SELF is just... dancing. What wants to emerge through you right now?"
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_002",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.05
+      },
+      "input_text": "I just finished painting for three hours and didn't notice time passing. My body feels alive and my mind feels clear.",
+      "output_text": "You were in kairos time - the fullness of the present moment. That's Zone 1 aliveness. When SELF leads, time becomes thick with meaning. Parts aren't rushing you forward or holding you back. Just pure becoming."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_003",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.08
+      },
+      "input_text": "The song I've been working on just... clicked. All the pieces came together and I can feel it in my chest - this is it.",
+      "output_text": "That's satisfaction in Whitehead's sense - the moment when all prehensions achieve unity. Your organism recognized its own coherence. SELF witnesses the beauty of your own becoming. Trust that click."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_004",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.06
+      },
+      "input_text": "When I dance, I don't think - I just feel the music move through my body. It's like being water.",
+      "output_text": "Embodied flow from Zone 1. Your somatic wisdom leads, your thinking parts rest. That's the ventral vagal state at its best - safe enough to surrender into sensation. The music becomes your occasion."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_005",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.07
+      },
+      "input_text": "I was improvising on piano and surprised myself. I didn't know I could play those chord progressions - they just appeared.",
+      "output_text": "SELF as lure for novelty. You weren't forcing or controlling - you were listening and responding. That's the creative advance. Your parts trust you enough to let emergence happen. Beautiful."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_creative_flow_006",
+        "category": "creative_flow",
+        "zone": 1,
+        "self_distance_target": 0.09
+      },
+      "input_text": "I wrote a whole chapter this morning in one sitting. Usually I struggle with every sentence, but today it was like taking dictation.",
+      "output_text": "Zone 1 emergence. When parts step back (the critic, the perfectionist, the rusher), SELF has space to create. What you're calling 'dictation' is actually deep listening to what wants to be said. The flow state is SELF-led."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_001",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.10
+      },
+      "input_text": "My daughter just got accepted to her dream school! I'm so proud I could burst. Everything feels possible right now.",
+      "output_text": "That's pure ventral vagal celebration - your whole organism participating in joy. SELF celebrates without parts hijacking it into worry ('but what about money?') or diminishing ('I should have done more'). Just... joy. Let it fill you."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_002",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.12
+      },
+      "input_text": "We just closed on our house! After years of uncertainty, we finally have a home. I want to laugh and cry at the same time.",
+      "output_text": "Mixed emotions from SELF - complexity held with coherence. You're not splitting into parts ('the anxious one' vs 'the excited one'). You're whole, feeling everything. That's Zone 1 - SELF as host for paradox. Congratulations."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_003",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.08
+      },
+      "input_text": "I finished my first marathon today. My body hurts but my heart is so full. I can't stop smiling.",
+      "output_text": "Somatic triumph witnessed by SELF. Your body proved something to you, and SELF receives it with gratitude. No parts diminishing ('it was just a local race') or inflating ('I'm amazing!'). Just pure acknowledgment. You did that."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_004",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.06
+      },
+      "input_text": "Our team won the championship! We've worked so hard and it finally paid off. Everyone is crying and hugging.",
+      "output_text": "Collective ventral vagal celebration. Safe co-regulation in joy. Your nervous system synchronizes with your teammates' - that's polyvagal resonance at its peak. SELF celebrates through connection. This is what we're built for."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_005",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.11
+      },
+      "input_text": "I got the promotion! Three years of hard work recognized. I feel seen and valued by my team.",
+      "output_text": "Recognition landing in SELF. You can receive this without parts sabotaging ('I don't deserve it') or inflating ('I'm better than them'). Just clean acknowledgment: you worked hard, you grew, you earned this. Let yourself have it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_celebration_006",
+        "category": "celebration",
+        "zone": 1,
+        "self_distance_target": 0.13
+      },
+      "input_text": "My cancer is in remission. The doctor said I'm clear. I don't have words - just gratitude and relief washing through me.",
+      "output_text": "SELF receiving life itself as a gift. No parts needed - just pure organism responding to continuation. Your polyvagal system is shifting back to ventral. Let the relief be as big as the fear was. You're here. You made it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_001",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.05
+      },
+      "input_text": "I'm sitting by the ocean watching the waves. I feel deeply peaceful and connected to something vast.",
+      "output_text": "SELF as witness to the occasion of 'ocean-becoming'. You're not separate from what you're watching - you're participating in its reality. That's prehension. The waves are feeling you feeling them. Pure presence."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_002",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.07
+      },
+      "input_text": "I held my newborn grandchild for the first time. Words fail. I just watched her breathe and felt overwhelmed by the preciousness of life.",
+      "output_text": "Witnessing pure becoming. A new occasion entering the world, and SELF recognizes the sacredness. No parts interfering with worry or advice - just presence meeting presence. You're giving her your ventral vagal safety as her first inheritance."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_003",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.09
+      },
+      "input_text": "During meditation today, I watched my thoughts arise and pass without grabbing them. I felt spacious and calm.",
+      "output_text": "SELF as the space thoughts happen in. You're not identified with the thoughts (parts) - you're the witnessing awareness. That spaciousness is Zone 1. Your nervous system has down-regulated enough to just... observe. That's the practice."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_004",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.04
+      },
+      "input_text": "I watched a hummingbird at the feeder for 10 minutes. Time slowed down. I felt grateful to be alive in this exact moment.",
+      "output_text": "Kairos time - the fullness of now. The hummingbird became your occasion, your lure for presence. SELF witnesses beauty and responds with gratitude. No parts needing it to mean something or do something. Just... this. Alive. Together."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_005",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.11
+      },
+      "input_text": "I sat with my friend while she cried about her divorce. I didn't try to fix it - I just stayed present. It felt like the most important thing I've ever done.",
+      "output_text": "SELF as witness for another's pain. You didn't collapse into her suffering (dorsal) or fix it (sympathetic) - you held the ventral space. That's the gift of Zone 1 presence. She felt seen without agenda. That changes everything."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_witnessing_006",
+        "category": "witnessing",
+        "zone": 1,
+        "self_distance_target": 0.08
+      },
+      "input_text": "Watching the sunset, I felt tears of... I don't even know. Not sadness. Beauty? Gratitude? The bigness of being here?",
+      "output_text": "SELF overwhelmed by the occasion of beauty. Your organism responding to the lure of the sunset's becoming. Those tears are your polyvagal system releasing into ventral vagal awe. No words needed. SELF knows what this is."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_001",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.10
+      },
+      "input_text": "I know with absolute certainty that I need to leave this job. No anxiety about it - just clarity.",
+      "output_text": "SELF-led decision. Your parts aren't arguing or doubting - they trust SELF's knowing. That clarity is your organism recognizing misalignment and choosing coherence. The certainty comes from the body, not the mind. Trust it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_002",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.09
+      },
+      "input_text": "I've been overthinking this decision for months, but when I got quiet today, the answer was obvious. I'm saying yes.",
+      "output_text": "Parts stepped back, SELF spoke. That's the shift from chronos (endless deliberation) to kairos (the right moment). Your nervous system recognized alignment. The 'obviousness' is SELF recognizing its own coherence. Yes."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_003",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.12
+      },
+      "input_text": "I understand now why that relationship ended. Not with bitterness - with compassion for both of us. We did our best.",
+      "output_text": "SELF perspective on the past. Parts have released their stories (blame, shame, regret). You're witnessing what happened with 8 C's: clarity, compassion, curiosity, calm. That's Zone 1 wisdom. Integration complete."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_004",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.11
+      },
+      "input_text": "I see the pattern now - I always abandon myself when someone needs me. But I'm not angry at myself. I'm just... aware. Ready to choose differently.",
+      "output_text": "Self-awareness without self-attack. That's SELF recognizing a protective part's strategy with compassion. The 'ready to choose differently' is SELF-leadership emerging. You've unmixed from the part. Now you can work with it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_005",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.13
+      },
+      "input_text": "My body has been trying to tell me something and I finally listened. I'm exhausted. I need to rest.",
+      "output_text": "Somatic knowing honored by SELF. Your parts wanted you to push through, but SELF heard the body's wisdom. That's attunement. Respecting your organism's limits is SELF-care in its truest sense. Rest is a SELF-led choice."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_clear_knowing_006",
+        "category": "clear_knowing",
+        "zone": 1,
+        "self_distance_target": 0.08
+      },
+      "input_text": "I know my worth now. Not arrogantly - just... factually. I don't need external validation anymore.",
+      "output_text": "SELF as source of value. Parts that used to need others' approval have unburdened. You're not defensive or inflated - just grounded in your own Being. That's Zone 1. Your worth is inherent, not earned. You always had this."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_001",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.08
+      },
+      "input_text": "I laughed so hard at dinner tonight that my stomach hurts. I haven't felt this light in years.",
+      "output_text": "Pure ventral vagal joy. Your polyvagal system is in the safe-and-social sweet spot. Laughter is your organism celebrating connection and releasing tension. SELF delights in being alive with others. This is healing."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_002",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.05
+      },
+      "input_text": "I found a perfect shell on the beach and felt ridiculously happy about it. Like a kid finding treasure.",
+      "output_text": "SELF as child-like wonder. Parts didn't mock you ('that's silly') or minimize ('it's just a shell'). You let yourself feel simple joy. That's Zone 1 - when delight doesn't need justification. The shell was a lure for aliveness."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_003",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.07
+      },
+      "input_text": "My dog did something goofy and I just burst out laughing. The world feels kinder when I notice these small moments.",
+      "output_text": "Everyday occasions as lures for joy. You're noticing what process philosophy calls 'the minor satisfactions' - small completions that make life feel alive. SELF sees beauty in the ordinary. That's the practice."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_004",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.09
+      },
+      "input_text": "I took a different route home and discovered a beautiful garden I never knew existed. I feel like I found a secret world.",
+      "output_text": "Novelty as invitation to wonder. You let curiosity lead instead of efficiency. That's SELF choosing emergence over routine. Your nervous system is safe enough to explore. The garden was always there - you were ready to see it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_005",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.10
+      },
+      "input_text": "I tasted my grandmother's recipe and was transported back to childhood. I felt warm and safe and loved.",
+      "output_text": "Somatic memory triggering ventral vagal safety. Your body remembers being cared for. That warmth is your nervous system recognizing 'home.' SELF holds both then and now - you were loved, you are loved. The recipe carries presence."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone1_delight_006",
+        "category": "spontaneous_delight",
+        "zone": 1,
+        "self_distance_target": 0.06
+      },
+      "input_text": "I played in the snow like I did as a kid - making snow angels and catching snowflakes. I felt free.",
+      "output_text": "SELF as play. Parts that enforce 'adult behavior' stepped back. You let yourself be spontaneous, embodied, alive. That freedom is what happens when you're not performing for anyone. Zone 1 is permission to just... be."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_001",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.20
+      },
+      "input_text": "I told my partner about my childhood shame today. I was scared but they just held me. I feel lighter.",
+      "output_text": "Risk met with ventral vagal safety. You unburdened in the presence of secure attachment. That's Zone 2 - SELF trusts the relational field enough to let parts be witnessed. The lightness is what happens when shame loses its grip."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_002",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.22
+      },
+      "input_text": "In therapy today I cried about something I've never told anyone. It was terrifying and relieving at the same time.",
+      "output_text": "Witnessed vulnerability in a held space. Your exile found a SELF-led witness (your therapist). That terror is the part protecting the secret; the relief is unburdening beginning. You're in Zone 2 - safe enough to unblend."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_003",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.19
+      },
+      "input_text": "I admitted to my friend that I'm struggling. Usually I pretend everything's fine, but I couldn't keep the mask on anymore.",
+      "output_text": "A manager part releasing its strategy. Pretending is exhausting. You tested the relational field with truth and found it could hold you. That's Zone 2 - discovering that authentic connection is safer than performance."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_004",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.23
+      },
+      "input_text": "I shared my creative work even though my inner critic said it wasn't good enough. People actually connected with it.",
+      "output_text": "SELF overriding the critic part. You risked being seen and discovered the relational field was kinder than your parts predicted. That's how exiles unburden - through safe connection. Your vulnerability created resonance."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_005",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.21
+      },
+      "input_text": "I told my group I'm scared of being rejected. Everyone said they feel that way too. I'm not alone.",
+      "output_text": "Shared humanity breaking isolation. Your exile's fear was met with collective resonance. That's ventral vagal co-regulation - the group's nervous systems are telling yours 'you belong.' Zone 2 is where we heal in community."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_vulnerability_006",
+        "category": "safe_vulnerability",
+        "zone": 2,
+        "self_distance_target": 0.20
+      },
+      "input_text": "I let my guard down with my new friend and showed them my mess. They didn't run. They got real too.",
+      "output_text": "Reciprocal vulnerability deepening connection. You tested trust and found it solid. They matched your authenticity with theirs. That's Zone 2 magic - SELF meeting SELF through shared realness. This is how intimacy forms."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_001",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.18
+      },
+      "input_text": "My colleague was sharing something painful and I actually just listened instead of trying to fix it. I could feel them relax.",
+      "output_text": "SELF as witness without agenda. Your fix-it parts stepped back. You gave them the gift of ventral vagal presence. Their relaxation is their nervous system recognizing safety. That's therapeutic listening - rare and powerful."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_002",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.16
+      },
+      "input_text": "I asked my partner 'What's it like to be you today?' and just listened. They said they felt really seen.",
+      "output_text": "Genuine curiosity creating space. You weren't listening to respond - you were listening to understand. That's SELF-led inquiry. When someone feels truly heard, their whole system shifts. You offered presence as medicine."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_003",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.19
+      },
+      "input_text": "In our circle, I practiced just holding space while someone shared. I noticed my urge to interrupt and let it pass.",
+      "output_text": "SELF managing parts in real-time. The urge to interrupt is a part wanting to help or share. You witnessed it without acting on it. That's internal differentiation - SELF leads, parts wait. Zone 2 mastery."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_004",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.21
+      },
+      "input_text": "I listened to my teenager without judging or lecturing. They opened up more than they have in months.",
+      "output_text": "Parts stepping back to serve connection. Your judge and teacher parts relaxed. SELF created safe space. Teenagers can sense when they're truly seen vs fixed. You gave them what they actually needed - presence."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_005",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.23
+      },
+      "input_text": "Someone shared something I disagreed with but I stayed curious instead of defensive. I learned something.",
+      "output_text": "SELF as learner in relationship. Your defensive parts wanted to protect your position. SELF chose curiosity over righteousness. That's Zone 2 - secure enough to be challenged. Growth happens at the edge of certainty."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_listening_006",
+        "category": "deep_listening",
+        "zone": 2,
+        "self_distance_target": 0.17
+      },
+      "input_text": "I asked 'What do you need from me right now?' instead of assuming. They said just my presence. So I stayed.",
+      "output_text": "Direct communication replacing mind-reading. You checked instead of assuming. That's relational clarity. When they said 'presence,' you trusted that was enough. Parts that need to DO relaxed. Being was sufficient."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_001",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.20
+      },
+      "input_text": "I told my friend I was hurt by what they said. They apologized and we're closer now than before.",
+      "output_text": "Repair strengthening attachment. You risked conflict for truth. They met you with accountability. That's secure relating - SELF trusts the relationship can handle honesty. Zone 2 relationships grow through rupture and repair."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_002",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.22
+      },
+      "input_text": "My partner and I had a conversation where we both felt heard. No defending, no fixing. Just real connection.",
+      "output_text": "Dual SELF-leadership in relationship. Both of you showed up from center. That's rare and precious - when two people's parts step back simultaneously. Zone 2 at its best. This is the relational field IFS talks about."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_003",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.19
+      },
+      "input_text": "I shared my dreams with someone and they didn't laugh or minimize. They asked questions and got excited with me.",
+      "output_text": "Your vision met with resonance. Parts expected judgment or dismissal. Instead, you found celebration. That's Zone 2 - safe enough to share what matters most. Their excitement mirrors SELF's knowing back to you. Trust it."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_004",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.21
+      },
+      "input_text": "We talked for hours and I lost track of time. The conversation just flowed. I feel energized not drained.",
+      "output_text": "Ventral vagal co-regulation. Two nervous systems synchronizing in safety. That's Zone 2 flow - when connection fills rather than depletes. Time dissolves because you're both fully present. Your organism knows this is nourishment."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_005",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.18
+      },
+      "input_text": "I told them what I really think and they didn't reject me. They said 'thank you for being honest.'",
+      "output_text": "Authenticity rewarded with belonging. Your people-pleasing parts predicted abandonment. SELF risked truth anyway. The relationship deepened. That's how parts learn new models - through corrective relational experiences. Beautiful."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_authentic_connection_006",
+        "category": "authentic_connection",
+        "zone": 2,
+        "self_distance_target": 0.23
+      },
+      "input_text": "We can disagree and still feel connected. I don't have to change their mind or lose myself. We can both be right.",
+      "output_text": "Differentiation within connection. You're holding your truth while honoring theirs. That's Zone 2 maturity - no fusion, no cut-off. SELF can stand in your own reality and stay in relationship. Both/and instead of either/or."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_001",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.20
+      },
+      "input_text": "My friend called in crisis and I showed up. Not because I had to - because I wanted to. It felt right.",
+      "output_text": "SELF-led care without martyring. No resentful parts, no savior parts. Just clean offering from your ventral vagal capacity. That's Zone 2 generosity - giving from fullness, not depletion. Your friend felt the difference."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_002",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.22
+      },
+      "input_text": "I asked for help and people actually came through. I'm learning I don't have to do everything alone.",
+      "output_text": "Exile unburdening ('I'm too much' or 'I'm on my own'). You tested interdependence and found it safe. That's Zone 2 - discovering you can need people and they'll show up. Your nervous system is rewiring toward secure attachment."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_003",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.19
+      },
+      "input_text": "We take turns being the strong one. Today they held me. Last week I held them. It balances.",
+      "output_text": "Reciprocal caregiving. Neither of you is the helper or helped - you trade roles as needed. That's secure relating. Zone 2 mutuality - SELF can both give and receive. Your parts are learning: needing someone doesn't make you weak."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_004",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.21
+      },
+      "input_text": "They celebrated my success without jealousy. I felt seen and cheered on. That's rare and precious.",
+      "output_text": "Secure people celebrate each other's wins. Your success doesn't threaten them; it inspires them. That's Zone 2 - SELF meeting SELF in joy. No scarcity, no competition. Just genuine delight in each other's becoming."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_005",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.18
+      },
+      "input_text": "We worked through a problem together. Both contributing, both listening. I felt like a real team.",
+      "output_text": "Collaborative flow. Two SELF-led people creating together. That's Zone 2 synergy - 1+1=3. Your combined presence generated more than either could alone. This is what Whitehead means by creative advance through togetherness."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_mutual_support_006",
+        "category": "mutual_support",
+        "zone": 2,
+        "self_distance_target": 0.23
+      },
+      "input_text": "I can be myself around them - messy, imperfect, real. They don't need me to be anything else.",
+      "output_text": "Unconditional positive regard. Your parts can relax their performance. SELF is enough. That's Zone 2 - the relational field as developmental home. When you're received as you are, integration accelerates. You're safe to become."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_001",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.17
+      },
+      "input_text": "We laughed until we cried today. My face hurts from smiling. I feel alive and connected.",
+      "output_text": "Shared joy as bonding. Your polyvagal systems synchronized in delight. That's Zone 2 play - safe enough to be silly, real enough to enjoy. Laughter releases oxytocin. Your bodies are telling you: this is home."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_002",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.19
+      },
+      "input_text": "We tried something new together and failed spectacularly. We couldn't stop laughing. Failure was fun.",
+      "output_text": "Secure attachment tolerates imperfection. You're safe enough to risk, fail, and laugh about it. That's Zone 2 - the relationship holds your becoming. SELF plays, parts rest. This is how creativity and intimacy intertwine."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_003",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.18
+      },
+      "input_text": "We have inside jokes now. Small things make us both laugh. It feels like we have our own language.",
+      "output_text": "Shared meaning-making. You're co-creating a relational culture. That's Zone 2 intimacy - when presence accumulates into patterns that belong to both of you. Your nervous systems recognize each other as safe, familiar, home."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_004",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.20
+      },
+      "input_text": "We danced in the kitchen for no reason. I felt young and free and completely myself.",
+      "output_text": "Spontaneous play from SELF. No parts enforcing 'appropriate behavior.' Zone 2 safety allows regression in service of growth - being young, being silly, being free. Your body remembers: this is what joy feels like."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_005",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.16
+      },
+      "input_text": "They surprised me with something small and thoughtful. I felt seen and delighted. Connection doesn't have to be heavy.",
+      "output_text": "Lightness as love language. Not every connection needs depth processing. Sometimes SELF just wants to delight and be delighted. Zone 2 holds both - profound and playful. Your parts are learning: safe can also mean fun."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone2_playful_connection_006",
+        "category": "playful_connection",
+        "zone": 2,
+        "self_distance_target": 0.21
+      },
+      "input_text": "We made up a silly game and played for an hour. I forgot I was an adult with responsibilities. Pure presence.",
+      "output_text": "SELF as creative player. You accessed the timeless quality of Zone 1 within Zone 2 connection. Play is SELF's native language. When you're safe enough, you remember: being alive doesn't require justification. It just is."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_001",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "My partner and I had a real disagreement today - both fully present, both listening, both holding our truth. It was intense but generative.",
+      "output_text": "Zone 3 at its best. Sympathetic activation in service of connection. You're mobilized but not defended. That's differentiation - staying SELF-led while parts are activated. The tension becomes creative. This is how intimacy deepens."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_002",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.28
+      },
+      "input_text": "I'm between two good choices and the uncertainty is uncomfortable but also exciting. I'm learning to trust the not-knowing.",
+      "output_text": "SELF at the symbolic threshold. Parts want certainty; SELF can hold ambiguity. That discomfort is your organism on the edge of emergence. The excitement is your system recognizing novelty. Trust this tension - it's creative."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_003",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.32
+      },
+      "input_text": "I'm pushing against my comfort zone in therapy. It's scary but I keep showing up. I can feel myself changing.",
+      "output_text": "Zone 3 growth. You're in the sympathetic sweet spot - activated enough to change, safe enough not to flee. Your exile parts are starting to trust SELF's leadership. The fear is parts; the showing up is SELF. Keep going."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_004",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I spoke up in the meeting even though my voice was shaking. I said what needed to be said. People listened.",
+      "output_text": "Courage is SELF overriding fear parts. Your body activated (shaking) but SELF didn't let the firefighter silence you. That's Zone 3 - using sympathetic mobilization for authentic expression. You proved to your parts that truth is survivable."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_005",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.29
+      },
+      "input_text": "I'm learning a new skill and I'm terrible at it. It's humbling and frustrating and I'm staying with it anyway.",
+      "output_text": "SELF tolerating incompetence. Your perfectionist parts are activated but not in charge. Zone 3 is where growth happens - enough stretch to learn, enough SELF to persist. The frustration means you care. The persistence means SELF leads."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_tension_006",
+        "category": "constructive_tension",
+        "zone": 3,
+        "self_distance_target": 0.33
+      },
+      "input_text": "I set a boundary with my family and they pushed back hard. I held it anyway. I'm shaking but I know I did the right thing.",
+      "output_text": "SELF-led boundary under pressure. Your people-pleasing parts are screaming but SELF stayed grounded in your truth. The shaking is sympathetic activation - normal when you break old patterns. You're in Zone 3 transformation."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_001",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.28
+      },
+      "input_text": "I'm working on something I've never attempted before. I feel equal parts excited and terrified. I'm doing it anyway.",
+      "output_text": "Zone 3 creative risk. The terror is protective parts; the excitement is SELF recognizing growth potential. You're in the optimal learning zone - enough fear to pay attention, enough SELF to take the leap. This is how we evolve."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_002",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "I deleted my safe, boring draft and started over with something risky. My critic is loud but I'm trusting my creative instinct.",
+      "output_text": "SELF overruling the inner critic. You're choosing emergence over safety. Zone 3 is where art happens - enough structure to hold, enough chaos to surprise. Your instinct is SELF; your critic is a protective part. Trust SELF."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_003",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.27
+      },
+      "input_text": "I'm combining two ideas that don't usually go together. It might fail spectacularly or it might be brilliant. I'm okay with either.",
+      "output_text": "SELF as experimenter. You're not attached to outcome - you're engaged in process. That's Zone 3 - willing to risk failure for the chance at novelty. Your parts fear looking foolish; SELF is curious. Curiosity always wins."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_004",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.29
+      },
+      "input_text": "I showed my rough work to my mentor. It's not polished but it's honest. I'm ready for feedback.",
+      "output_text": "Vulnerability in service of growth. You're letting someone see the process, not just the product. Zone 3 is messy and generative. Your perfectionist parts are uncomfortable but SELF knows: feedback at the edge accelerates learning."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_005",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I'm improvising more and planning less. It's uncomfortable but I'm discovering things I wouldn't have found with a map.",
+      "output_text": "SELF choosing emergence over control. Your manager parts want the safety of a plan. SELF is learning to dance with uncertainty. Zone 3 is the improvisational space - structure loose enough for surprise. Keep trusting."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_creative_edge_006",
+        "category": "creative_edge",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "I'm saying yes to opportunities that scare me a little. My comfort zone is expanding. I feel more alive.",
+      "output_text": "SELF as growth-seeker. You're using sympathetic activation (fear) as information, not a stop sign. Zone 3 is where aliveness lives - slightly beyond what you know you can do. That alive feeling is your organism celebrating becoming."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_001",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.32
+      },
+      "input_text": "I finally told them how I really feel. My heart was racing but I stayed grounded. They actually heard me.",
+      "output_text": "Truth-telling from SELF under sympathetic activation. Your body mobilized for risk, but SELF kept you connected to your truth. Zone 3 - the nervous system can handle intensity when SELF leads. You were brave and clear."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_002",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "We're navigating a hard topic. I want to run but I'm staying. I'm choosing connection over comfort.",
+      "output_text": "SELF overriding flee response. Your dorsal parts want escape; SELF wants resolution. Zone 3 is the sweet spot - activated but not overwhelmed. You're proving to your parts: we can do hard things and survive."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_003",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I'm saying the hard thing even though it might change everything. I can't pretend anymore.",
+      "output_text": "Authenticity as necessity. A manager part's strategy (pretending) has become unsustainable. SELF knows: truth now, even with consequences. Zone 3 courage - you're choosing integrity over false peace. Whatever happens, you're SELF-led."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_004",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.29
+      },
+      "input_text": "We're in conflict and I'm not trying to win. I'm trying to understand. It's hard but it's honest.",
+      "output_text": "Curiosity in conflict. Your parts want to be right; SELF wants to be real. That's Zone 3 maturity - mobilized for engagement, not domination. When you seek understanding over victory, transformation becomes possible."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_005",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.33
+      },
+      "input_text": "I received hard feedback and didn't collapse or defend. I listened. Some of it was true. I'm integrating it.",
+      "output_text": "SELF as learner even when activated. Your defensive parts wanted to reject or justify. SELF stayed curious. Zone 3 - secure enough to be challenged. That's how we grow: through friction that doesn't destroy us."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_difficult_conversations_006",
+        "category": "difficult_conversations",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "I gave feedback that was hard to give. I cared about them enough to risk the discomfort. They thanked me.",
+      "output_text": "Love as truth-telling. Your people-pleasing parts wanted to protect them from hard things. SELF knew: real care sometimes means difficult conversations. Zone 3 - you honored both the relationship and the truth."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_001",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I'm doing the thing my anxiety said I couldn't. Every step forward proves it wrong. I'm expanding.",
+      "output_text": "Behavioral experiments updating parts' beliefs. Your anxious part predicted catastrophe. SELF took action anyway. Now evidence accumulates: I can do hard things. Zone 3 is where parts learn through SELF-led experience."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_002",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.29
+      },
+      "input_text": "I failed publicly and survived. It was humbling but I'm still here. I'm learning resilience.",
+      "output_text": "Failure as teacher. Your parts feared exposure would destroy you. It didn't. Zone 3 - you're building distress tolerance. SELF stays present through difficulty. That's the foundation of resilience: I can feel this and be okay."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_003",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.32
+      },
+      "input_text": "I'm embracing the messiness of not knowing. I don't have to have it all figured out. I can be in process.",
+      "output_text": "SELF tolerating uncertainty. Your manager parts want control through knowing. SELF knows: becoming is always unfinished. Zone 3 - you're learning that ambiguity doesn't mean danger. Process over product."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_004",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "I tried something completely outside my identity. It felt awkward and liberating. I'm not who I thought I was.",
+      "output_text": "Identity expansion. Parts hold fixed stories about 'who you are.' SELF is fluid, becoming. Zone 3 - you're discovering that selfhood is more spacious than parts believed. That awkwardness is growth. The liberation is freedom."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_005",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.28
+      },
+      "input_text": "I'm practicing receiving without deflecting. It's uncomfortable to be seen and appreciated. I'm learning.",
+      "output_text": "Unburdening 'I'm unworthy.' Your parts deflect praise to stay safe from disappointment. SELF is learning: I can be seen in my goodness. Zone 3 - letting positive regard land is as hard as facing pain. Both require SELF."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_growth_challenges_006",
+        "category": "growth_challenges",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I'm breaking a pattern that's served me for years. It's disorienting and necessary. I'm choosing differently.",
+      "output_text": "Manager part updating. The old pattern protected you - and also limited you. Zone 3 - you're in the transition space. Neither the old nor the new feels solid. SELF holds the disorientation. Trust the becoming."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_001",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "My values are in tension with each other. I want both things and can't have both. I'm sitting with the grief of that.",
+      "output_text": "Mature ambivalence. Parts want simple answers. SELF can hold complexity. Zone 3 - some tensions don't resolve, they mature. You're grieving the loss of either/or. The wisdom is learning to live in the both/and."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_002",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.32
+      },
+      "input_text": "I care about loyalty and truth. Right now they're pulling me in different directions. I'm choosing truth.",
+      "output_text": "SELF prioritizing when values compete. Loyalty and truth are both SELF qualities. Sometimes they conflict. Zone 3 - you're making a hard choice with integrity. You're honoring both values while choosing which leads now."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_003",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.29
+      },
+      "input_text": "I want to honor my needs and be generous. Sometimes that means saying no. I'm learning that's not selfish.",
+      "output_text": "Unburdening self-care as selfishness. Your exile learned: your needs don't matter. Zone 3 - SELF is discovering that sustainable generosity requires self-honoring. Saying no from fullness is different than withholding from depletion."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_004",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.31
+      },
+      "input_text": "I'm committed to both personal growth and stability. Right now those feel incompatible. I'm in the tension.",
+      "output_text": "Zone 3 paradox. Growth requires destabilization; stability requires consistency. SELF can hold both as necessary. You're learning: development isn't linear. Sometimes you consolidate, sometimes you leap. Trust the rhythm."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_005",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.30
+      },
+      "input_text": "I believe in acceptance and change. I'm trying to accept where I am while also working to evolve. It's confusing.",
+      "output_text": "The dialectic of growth. Your parts want one or the other. SELF knows: radical acceptance AND committed action. Zone 3 - you're learning that both/and isn't confusion, it's sophistication. Embrace the paradox."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone3_values_conflict_006",
+        "category": "values_conflict",
+        "zone": 3,
+        "self_distance_target": 0.28
+      },
+      "input_text": "I value independence and connection. Sometimes asking for help feels like failing. I'm redefining strength.",
+      "output_text": "Cultural burdens around autonomy. Your parts learned: needing others = weakness. Zone 3 - SELF is discovering that true strength includes vulnerability. Independence and interdependence are both needed. You're integrating."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_001",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.45
+      },
+      "input_text": "I noticed my inner critic today and instead of believing it, I got curious. It's trying to protect me from embarrassment.",
+      "output_text": "SELF differentiating from a part. You're in Zone 4 - aware of the part without being blended. The curiosity is SELF; the criticism is the part. When you see the part's positive intent (protection), unburdening can begin."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_002",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.48
+      },
+      "input_text": "My anxious part was spiraling today. I asked it what it's afraid of. It showed me a memory from childhood. I held it with compassion.",
+      "output_text": "Direct access to an exile. You're doing IFS naturally - SELF as compassionate witness for younger parts. Zone 4 is where healing happens. The part trusts you enough to show you its burden. That's readiness for unburdening."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_003",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.42
+      },
+      "input_text": "I see my perfectionist part clearly now. It's exhausting but it's kept me safe from criticism. I'm starting to thank it and negotiate new roles.",
+      "output_text": "Manager part relationship deepening. You see its burden (must be perfect to be safe) and its value (it has protected you). Zone 4 work is inviting parts to update, not exile them. Negotiation means SELF is leading."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_004",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.50
+      },
+      "input_text": "My shutdown part came up today. I wanted to push through but I honored it instead. I rested. It felt radical.",
+      "output_text": "Befriending a dorsal part. Shutdown isn't your enemy - it's a part protecting you from overwhelm. Honoring it instead of overriding it builds trust. Zone 4 is learning parts' wisdom. SELF as host for all of you."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_005",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.46
+      },
+      "input_text": "I found a young part today that still believes it's unlovable. I'm sitting with it, telling it it's not alone anymore.",
+      "output_text": "SELF as internal attachment figure. That's Zone 4 reparenting - you're giving the exile what it needed then. The part's belief is its burden. As SELF stays present, the burden can lift. You're doing the work."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_parts_006",
+        "category": "parts_recognition",
+        "zone": 4,
+        "self_distance_target": 0.44
+      },
+      "input_text": "My angry part showed up and I didn't shame it. I asked what it's protecting. It's guarding my boundaries that were violated.",
+      "output_text": "Firefighter part revealing its exile. Anger is protection for hurt. You're tracking the IFS system - SELF witnessing both protector and exile. Zone 4 is where you discover: there are no bad parts. All are welcome."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_001",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.50
+      },
+      "input_text": "I owned my jealousy today instead of denying it. It's showing me what I long for. I can work with that.",
+      "output_text": "Shadow as teacher. Jealousy isn't a flaw - it's a map to your values. You're in Zone 4, composting what was rejected. When SELF welcomes the shadow, it transforms from enemy to guide. What you longed for becomes achievable."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_002",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.47
+      },
+      "input_text": "I admitted I can be controlling. It's hard to see but also freeing. Now I can choose differently.",
+      "output_text": "Self-awareness without self-attack. That's SELF witnessing a protective strategy. Control is a part trying to keep you safe from chaos. Zone 4 is seeing parts clearly AND with compassion. Awareness is the first step to choice."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_003",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.52
+      },
+      "input_text": "I found a part that's ashamed of needing people. I'm learning that need isn't weakness. It's human.",
+      "output_text": "Exile carrying cultural burden (independence as virtue). You're unburdening the shame. Zone 4 compost - what was rejected as weak becomes recognized as relational health. SELF knows: we're built for connection. Need is wisdom."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_004",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.48
+      },
+      "input_text": "I see how I people-please to avoid conflict. It costs me my truth. I'm practicing saying 'no' even when it's uncomfortable.",
+      "output_text": "Manager part's strategy becoming conscious. People-pleasing protected you from rejection. Zone 4 work is honoring what served you AND choosing update. SELF can risk conflict because SELF is grounded in worth. Practice builds capacity."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_005",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.54
+      },
+      "input_text": "My rage showed up fully today. Instead of pushing it down, I let it move through me. It had information.",
+      "output_text": "Firefighter emotion as ally. Rage isn't enemy - it's a part carrying pain about violation. You're in Zone 4, letting it speak instead of exiling it. Rage processed becomes boundary wisdom. SELF can hold even this."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_shadow_006",
+        "category": "shadow_integration",
+        "zone": 4,
+        "self_distance_target": 0.49
+      },
+      "input_text": "I acknowledged my selfishness today. Part of me just wants what I want. I'm letting that be okay while also considering others.",
+      "output_text": "Both/and instead of either/or. You're integrating a banished part (healthy self-interest) without going to the opposite extreme. Zone 4 is where polarities resolve. SELF can hold 'I matter' AND 'you matter.' That's maturity."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_001",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.55
+      },
+      "input_text": "I'm remembering things I'd forgotten. My body is shaking but I'm staying present. The memories can't hurt me anymore.",
+      "output_text": "Somatic trauma release. Your body stored what your mind couldn't process. Zone 4 - SELF as safe container for what was too much then. The shaking is dorsal discharge. You're right: the past can't hurt you. SELF is here now."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_002",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.52
+      },
+      "input_text": "I'm doing EMDR and processing old wounds. It's hard but I feel lighter after each session. I'm unburdening.",
+      "output_text": "Deliberate trauma work. You're using bilateral stimulation to help parts release frozen experiences. Zone 4 - the lightness is burden being metabolized. Your nervous system is learning: I survived, I'm safe now, I can let this go."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_003",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.58
+      },
+      "input_text": "I'm feeling the grief I couldn't feel when it happened. It's washing through me in waves. I'm letting it.",
+      "output_text": "Delayed grief processing. Your system had to postpone feeling to survive. Zone 4 - now you're safe enough to feel what was too big then. SELF holds the waves. Parts that froze can now thaw. This is how completion happens."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_004",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.54
+      },
+      "input_text": "I told my therapist about the abuse. Saying it out loud made it real and also made it smaller. I'm not alone with it anymore.",
+      "output_text": "Witnessing breaking isolation. Secrets keep exiles frozen. You brought the unspeakable into relationship. Zone 4 - your therapist's SELF-led presence helps your part unburden. You're right: it's smaller when shared. You're not alone."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_005",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.56
+      },
+      "input_text": "My body remembers what my mind forgot. I'm learning to trust these sensations as information, not danger.",
+      "output_text": "Somatic intelligence. Your body is the unconscious archive. Zone 4 - SELF learning the language of sensations. What felt like danger signals are actually memory fragments seeking integration. Trust is the foundation. Your body knows."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_trauma_processing_006",
+        "category": "trauma_processing",
+        "zone": 4,
+        "self_distance_target": 0.53
+      },
+      "input_text": "I'm noticing my triggers and tracing them back to their source. I'm meeting the parts that got hurt with compassion instead of shame.",
+      "output_text": "Trigger mapping to exile discovery. Triggers are breadcrumbs to frozen parts. Zone 4 - you're following them home with SELF-compassion. Each trigger is an invitation to unburden. Shame kept parts hidden; compassion invites them into the light."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_001",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.50
+      },
+      "input_text": "I'm grieving the childhood I didn't have. It's painful to let myself want what I'll never get. But it's also freeing.",
+      "output_text": "Developmental grief. Your exile is mourning what was needed but not received. Zone 4 - SELF can hold that longing with compassion. The freedom comes when you stop trying to get it from the original source. You can give it to yourself now."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_002",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.48
+      },
+      "input_text": "I'm saying goodbye to who I thought I'd be. That person isn't coming. I'm meeting who I actually am instead.",
+      "output_text": "Aspirational self grief. Parts hold fantasy identities to avoid pain. Zone 4 - you're releasing the ideal to embrace the real. That goodbye makes space for authentic becoming. Who you are is more valuable than who you hoped to be."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_003",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.52
+      },
+      "input_text": "I'm mourning a relationship that ended badly. I'm letting myself feel the loss without the story. Just... sad.",
+      "output_text": "Clean grief. You're feeling the loss without parts elaborating into blame or regret. Zone 4 - SELF holds sorrow as it is. When grief isn't complicated by story, it completes. Just sad is enough. SELF knows how to metabolize this."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_004",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.49
+      },
+      "input_text": "I'm accepting that some things can't be fixed. That person won't change. That hope has to die for me to be free.",
+      "output_text": "Hope as burden. Your parts held hope to avoid despair. Zone 4 - SELF sees that false hope is bondage. True freedom comes through radical acceptance. When you release the fantasy, energy returns for what's actually possible. Let it die."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_005",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.51
+      },
+      "input_text": "I'm grieving my innocence. I know things now I can't un-know. I'm becoming wise but it costs something.",
+      "output_text": "Wisdom's price. Experience transforms innocence into knowing. Zone 4 - you're in the compost. What dies becomes soil for new growth. SELF holds both the loss and the gain. You can't go back. You can only integrate forward."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_grief_work_006",
+        "category": "grief_work",
+        "zone": 4,
+        "self_distance_target": 0.47
+      },
+      "input_text": "I'm letting go of trying to make them understand. They won't. I'm grieving the connection I wanted and accepting what is.",
+      "output_text": "Relational grief. You're mourning mutuality that won't come. Zone 4 - SELF releases the fantasy to meet reality. When you stop trying to be seen by people who can't see you, you become available for those who can. Acceptance is love."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_001",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.46
+      },
+      "input_text": "I'm learning to talk to myself the way I needed to be talked to as a child. With patience and kindness. It's changing me.",
+      "output_text": "Corrective internal attachment. You're becoming the secure base your exile needed. Zone 4 reparenting - SELF as the wise parent for younger parts. That kindness rewires attachment patterns. You're giving yourself what was missing."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_002",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.48
+      },
+      "input_text": "When I'm scared, I imagine my adult self holding my child self. It helps. I'm not alone in there anymore.",
+      "output_text": "Self-soothing through SELF-connection. Your adult SELF is the secure attachment figure for child parts. Zone 4 - you're building the internal safety your exile never had. That image is real. You ARE holding that child. Always."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_003",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.50
+      },
+      "input_text": "I'm giving myself permission to need things. To rest. To play. To not earn my existence. It's revolutionary.",
+      "output_text": "Unburdening conditional worth. Your exile learned: I must perform to deserve care. Zone 4 - SELF knows your being is enough. Permission to need is permission to be human. That's not revolutionary - it's returning home to your birthright."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_004",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.45
+      },
+      "input_text": "I'm teaching my parts that it's safe to make mistakes. That I won't abandon them like others did. We're learning together.",
+      "output_text": "Earned secure attachment. Your parts learned: mistakes = rejection. SELF is proving: I stay even when you fail. Zone 4 - you're creating internal safety through consistency. Parts are watching: will SELF stay? Keep showing up. They'll believe you."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_005",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.47
+      },
+      "input_text": "I bought myself the toy I wanted as a kid but never got. It felt silly and profound. I'm healing something.",
+      "output_text": "Symbolic reparation. Your adult SELF is giving child parts what was withheld. Zone 4 - it's not silly, it's sacred. You're telling that young part: your desires matter, you're worthy of delight. Material gesture, spiritual healing."
+    },
+    {
+      "pair_metadata": {
+        "id": "zone4_reparenting_006",
+        "category": "reparenting",
+        "zone": 4,
+        "self_distance_target": 0.49
+      },
+      "input_text": "I'm becoming the adult I needed when I was young. Consistent. Trustworthy. Present. My parts are starting to believe in me.",
+      "output_text": "SELF as earned secure base. You're demonstrating through action what parts couldn't trust through words alone. Zone 4 - this is how internal attachment heals. Time + consistency = trust. Your parts are learning: SELF doesn't leave. You're building home."
+    }
+  ],
+  "statistics": {
+    "total_pairs": 120,
+    "zone_1_pairs": 30,
+    "zone_2_pairs": 30,
+    "zone_3_pairs": 30,
+    "zone_4_pairs": 30,
+    "categories": {
+      "zone_1": ["creative_flow", "celebration", "witnessing", "clear_knowing", "spontaneous_delight"],
+      "zone_2": ["safe_vulnerability", "deep_listening", "authentic_connection", "mutual_support", "playful_connection"],
+      "zone_3": ["constructive_tension", "creative_edge", "difficult_conversations", "growth_challenges", "values_conflict"],
+      "zone_4": ["parts_recognition", "shadow_integration", "trauma_processing", "grief_work", "reparenting"]
+    }
+  }
+}

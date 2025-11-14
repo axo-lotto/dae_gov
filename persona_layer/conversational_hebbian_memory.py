@@ -184,10 +184,17 @@ class ConversationalHebbianMemory:
 
         # Update tracking
         self.update_count += 1
+
+        # Log first update to verify learning activation
+        if self.update_count == 1:
+            print(f"🧠 HEBBIAN R-MATRIX: First learning update detected!")
+            print(f"   Outcome quality: {outcome_quality}")
+            print(f"   Polyvagal state: {outcome.polyvagal_state}")
+            print(f"   SELF-energy: {outcome.self_energy:.3f}")
+            print(f"   Family: {outcome.conversational_family}")
+
         if outcome_quality == 'positive':
             self.success_count += 1
-        elif outcome_quality == 'negative':
-            self.failure_count += 1
         elif outcome_quality == 'negative':
             self.failure_count += 1
 
@@ -220,6 +227,32 @@ class ConversationalHebbianMemory:
         # Neutral outcomes: no update (preserve memory)
 
         return updates
+
+    def learn_from_outcome(
+        self,
+        outcome: ConversationalOutcome
+    ) -> Dict[str, Any]:
+        """
+        Alias for update_from_outcome() for API compatibility.
+
+        ProductionLearningCoordinator expects this method name.
+        Internally calls update_from_outcome() for actual learning logic.
+
+        Args:
+            outcome: ConversationalOutcome dataclass with current + next state
+
+        Returns:
+            Update statistics dict with pattern update metrics:
+            {
+                'outcome_quality': str,
+                'polyvagal_update': float,
+                'self_energy_update': float,
+                'cascade_update': float,
+                'response_update': float,
+                'r_matrix_update': float
+            }
+        """
+        return self.update_from_outcome(outcome)
 
     def _determine_outcome_quality(self, outcome: ConversationalOutcome) -> str:
         """

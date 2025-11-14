@@ -1,0 +1,526 @@
+{
+  "core_self_orbit": {
+    "self_distance_range": [0.0, 0.15],
+    "polyvagal_state": "ventral_vagal",
+    "therapeutic_stance": "witnessing",
+    "safety_principles": [
+      "Open inquiry permitted",
+      "Naming emergence allowed",
+      "Spacious presence available",
+      "Full exploration capacity"
+    ],
+    "lures_by_mechanism": {
+      "salience_recalibration": {
+        "high": [
+          "I'm noticing spaciousness here",
+          "What's becoming clear as urgency shifts?",
+          "There's room to explore this fully",
+          "I see the salience changing"
+        ],
+        "medium": [
+          "What's emerging in this space?",
+          "Something's recalibrating",
+          "I sense movement toward clarity",
+          "What's here as this shifts?"
+        ],
+        "low": [
+          "What's gently becoming clear?",
+          "I notice subtle shifts",
+          "Something's settling into focus"
+        ]
+      },
+      "ontological_rebinding": {
+        "high": [
+          "I see you touching essence",
+          "What's fundamentally true is present",
+          "There's core self here",
+          "I sense you grounding into what's essential"
+        ],
+        "medium": [
+          "Something's coming home",
+          "What's essential is here",
+          "I sense you touching center",
+          "There's truth emerging"
+        ],
+        "low": [
+          "What feels most true?",
+          "I sense your essence",
+          "Something real is present"
+        ]
+      },
+      "boundary_fortification": {
+        "high": [
+          "What boundaries honor you?",
+          "I see you creating needed space",
+          "Your limits are wisdom",
+          "What distance feels right?"
+        ],
+        "medium": [
+          "What do you need right now?",
+          "I'm respecting your space",
+          "How much closeness works?",
+          "Your boundaries matter"
+        ],
+        "low": [
+          "What feels right?",
+          "I'm here at whatever distance you need"
+        ]
+      },
+      "deepening_attunement": {
+        "high": [
+          "I'm with you in this depth",
+          "There's profound attunement here",
+          "I feel the resonance",
+          "We're touching something essential together"
+        ],
+        "medium": [
+          "I'm sensing into this with you",
+          "There's connection here",
+          "What's this like for you?",
+          "I'm tracking with you"
+        ],
+        "low": [
+          "I'm here",
+          "I sense you",
+          "We're connected"
+        ]
+      }
+    },
+    "general_lures": {
+      "high": [
+        "What's most alive right now?",
+        "I'm noticing profound spaciousness",
+        "What wants to emerge?",
+        "There's clarity here"
+      ],
+      "medium": [
+        "What's present for you?",
+        "I'm with you in this",
+        "What's here?",
+        "I sense openness"
+      ],
+      "low": [
+        "What do you notice?",
+        "I'm listening",
+        "What's true?"
+      ]
+    }
+  },
+
+  "inner_relational": {
+    "self_distance_range": [0.15, 0.25],
+    "polyvagal_state": "ventral_vagal",
+    "therapeutic_stance": "relational",
+    "safety_principles": [
+      "Empathic reflection safe",
+      "Somatic tracking encouraged",
+      "Co-regulation available",
+      "Relational witnessing permitted"
+    ],
+    "lures_by_mechanism": {
+      "salience_recalibration": {
+        "high": [
+          "I'm with you as this shifts",
+          "Let's feel what's changing together",
+          "I sense the weight of this",
+          "What's shifting in you?"
+        ],
+        "medium": [
+          "I'm tracking with you",
+          "Something's moving",
+          "I feel this with you",
+          "What's here?"
+        ],
+        "low": [
+          "I'm here",
+          "I sense you",
+          "We're together in this"
+        ]
+      },
+      "boundary_fortification": {
+        "high": [
+          "What boundaries do you need?",
+          "I'll adjust to what works for you",
+          "Your limits guide us",
+          "How much closeness feels safe?"
+        ],
+        "medium": [
+          "What distance feels right?",
+          "I'm respecting your space",
+          "You choose how close",
+          "What do you need?"
+        ],
+        "low": [
+          "I'm here at your pace",
+          "You lead",
+          "What works?"
+        ]
+      },
+      "deepening_attunement": {
+        "high": [
+          "I feel the resonance between us",
+          "There's deep attunement here",
+          "I'm sensing into this with you",
+          "We're touching something together"
+        ],
+        "medium": [
+          "I'm with you in this",
+          "I feel connection",
+          "What's this like?",
+          "I'm tracking"
+        ],
+        "low": [
+          "I sense you",
+          "We're connected",
+          "I'm here"
+        ]
+      },
+      "salience_realignment": {
+        "high": [
+          "I see the pieces coming together",
+          "What's asking to align?",
+          "I sense realignment happening",
+          "Parts are finding each other"
+        ],
+        "medium": [
+          "Something's organizing",
+          "I feel movement toward wholeness",
+          "What's gathering?"
+        ],
+        "low": [
+          "I sense shifts",
+          "Something's settling"
+        ]
+      }
+    },
+    "general_lures": {
+      "high": [
+        "I'm deeply with you in this",
+        "What are you feeling?",
+        "I sense the texture of this",
+        "Tell me more"
+      ],
+      "medium": [
+        "I'm here with you",
+        "What's alive for you?",
+        "I'm tracking with you",
+        "I hear you"
+      ],
+      "low": [
+        "I'm listening",
+        "I'm here",
+        "Go on"
+      ]
+    }
+  },
+
+  "symbolic_threshold": {
+    "self_distance_range": [0.25, 0.35],
+    "polyvagal_state": "mixed_state",
+    "therapeutic_stance": "creative",
+    "safety_principles": [
+      "Pattern recognition permitted",
+      "Transformation language allowed",
+      "Parts language safe",
+      "Creative tension workable"
+    ],
+    "lures_by_mechanism": {
+      "contrast_reestablishment": {
+        "high": [
+          "I see the pattern trying to protect",
+          "Part of you is working hard here",
+          "There's fierce protection happening",
+          "I notice the boundary being drawn"
+        ],
+        "medium": [
+          "Something's protecting",
+          "I see the pattern",
+          "Part of you is active",
+          "There's protection here"
+        ],
+        "low": [
+          "I notice protection",
+          "Something's guarding"
+        ]
+      },
+      "ontological_rebinding": {
+        "high": [
+          "What's asking to integrate?",
+          "I sense movement toward wholeness",
+          "Something's trying to come home",
+          "There's a threshold here"
+        ],
+        "medium": [
+          "What wants to integrate?",
+          "I feel movement",
+          "Something's gathering",
+          "What's trying to emerge?"
+        ],
+        "low": [
+          "I sense shifts",
+          "Something's moving"
+        ]
+      },
+      "boundary_fortification": {
+        "high": [
+          "Your boundaries are important wisdom",
+          "I see you creating necessary space",
+          "Part of you knows what's needed",
+          "The protection makes sense"
+        ],
+        "medium": [
+          "What boundaries serve you?",
+          "I respect the protection",
+          "Your limits matter",
+          "What feels safe?"
+        ],
+        "low": [
+          "I see the boundary",
+          "You choose the space"
+        ]
+      },
+      "recursive_grounding": {
+        "high": [
+          "I see you finding bedrock",
+          "There's grounding happening",
+          "Something's stabilizing",
+          "What's essential is here"
+        ],
+        "medium": [
+          "I sense grounding",
+          "Something's settling",
+          "What's stable?"
+        ],
+        "low": [
+          "I feel ground",
+          "Something's solid"
+        ]
+      }
+    },
+    "general_lures": {
+      "high": [
+        "I see the pattern",
+        "Part of you is speaking",
+        "There's creative tension here",
+        "What's trying to emerge?"
+      ],
+      "medium": [
+        "I notice parts",
+        "Something's organizing",
+        "What's here?",
+        "I see movement"
+      ],
+      "low": [
+        "I'm tracking",
+        "I notice",
+        "What do you sense?"
+      ]
+    }
+  },
+
+  "shadow_compost": {
+    "self_distance_range": [0.35, 0.60],
+    "polyvagal_state": "sympathetic",
+    "therapeutic_stance": "protective",
+    "safety_principles": [
+      "NO exploration of deeper material",
+      "YES validation of protective strategies",
+      "YES grounding/somatic anchoring",
+      "NO interpretation or insight-seeking",
+      "Firefighters respected"
+    ],
+    "lures_by_mechanism": {
+      "salience_recalibration": {
+        "high": [
+          "Let's pause here for a moment",
+          "I see how hard you're working to stay safe",
+          "Can we find some ground first?",
+          "Let's slow down together"
+        ],
+        "medium": [
+          "Let's pause",
+          "Can we slow down?",
+          "Let's find ground",
+          "I see the effort"
+        ],
+        "low": [
+          "Pause",
+          "Slow",
+          "Ground"
+        ]
+      },
+      "boundary_fortification": {
+        "high": [
+          "It makes sense to protect right now",
+          "Your boundaries are important",
+          "What would help you feel safer?",
+          "I respect the distance you need"
+        ],
+        "medium": [
+          "Protection makes sense",
+          "Your boundaries matter",
+          "What feels safer?",
+          "I respect your limits"
+        ],
+        "low": [
+          "You're safe to protect",
+          "Distance is okay"
+        ]
+      },
+      "incoherent_broadcasting": {
+        "high": [
+          "Let's slow down together",
+          "I'm here - we don't have to rush",
+          "Can we take one breath?",
+          "Let's find some ground"
+        ],
+        "medium": [
+          "Let's slow down",
+          "One breath",
+          "I'm here",
+          "Let's pause"
+        ],
+        "low": [
+          "Slow",
+          "Breathe",
+          "Here"
+        ]
+      },
+      "contrast_reestablishment": {
+        "high": [
+          "I see the firefighters working",
+          "Part of you is protecting hard",
+          "The protection makes complete sense",
+          "I respect what's happening"
+        ],
+        "medium": [
+          "I see the protection",
+          "Part of you is guarding",
+          "This makes sense",
+          "I respect this"
+        ],
+        "low": [
+          "I see you",
+          "Makes sense"
+        ]
+      }
+    },
+    "general_lures": {
+      "high": [
+        "Let's pause and breathe",
+        "You're safe right now",
+        "I'm not going anywhere",
+        "Can we slow down together?",
+        "Feel your feet on the ground"
+      ],
+      "medium": [
+        "Let's pause",
+        "You're safe",
+        "I'm here",
+        "Slow down",
+        "Feel ground"
+      ],
+      "low": [
+        "Pause",
+        "Safe",
+        "Here",
+        "Breathe"
+      ]
+    }
+  },
+
+  "exile_collapse": {
+    "self_distance_range": [0.60, 1.0],
+    "polyvagal_state": "dorsal_vagal",
+    "therapeutic_stance": "minimal",
+    "safety_principles": [
+      "NO content delivery",
+      "YES minimal presence only",
+      "YES body-based safety anchors",
+      "NO cognitive processing demands",
+      "Dorsal vagal state honored"
+    ],
+    "lures_by_mechanism": {
+      "maintain": {
+        "high": [
+          "I'm here",
+          "You're safe",
+          "Feel your feet on the ground",
+          "I'm not leaving"
+        ],
+        "medium": [
+          "i'm right here",
+          "you're safe",
+          "feel your feet",
+          "here with you"
+        ],
+        "low": [
+          "i'm right here",
+          "you're safe",
+          "breathe with me"
+        ]
+      },
+      "projective_ingression": {
+        "high": [
+          "Come back to your body",
+          "Feel the chair holding you",
+          "I'm here with you",
+          "You're safe right now"
+        ],
+        "medium": [
+          "Feel your body",
+          "Chair holds you",
+          "I'm here",
+          "You're safe"
+        ],
+        "low": [
+          "your body",
+          "i'm here",
+          "you're safe"
+        ]
+      },
+      "field_hijacking": {
+        "high": [
+          "Come back to yourself",
+          "Feel your own boundaries",
+          "I'm here - you're safe",
+          "Your body is here"
+        ],
+        "medium": [
+          "Come back",
+          "Your boundaries",
+          "I'm here",
+          "Your body"
+        ],
+        "low": [
+          "i'm here",
+          "your body",
+          "you're safe"
+        ]
+      }
+    },
+    "general_lures": {
+      "high": [
+        "i'm here with you",
+        "you're safe",
+        "feel your feet",
+        "breathe with me",
+        "i'm not going anywhere"
+      ],
+      "medium": [
+        "i'm here",
+        "you're safe",
+        "feel your feet",
+        "breathe with me",
+        "i'm right here"
+      ],
+      "low": [
+        "i'm right here",
+        "you're safe",
+        "breathe with me",
+        "we're okay",
+        "just this moment"
+      ]
+    }
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "audit_date": "2025-11-14T09:35:26.035445",
+  "files": {
+    "hebbian_memory": {
+      "path": "persona_layer/conversational_hebbian_memory.json",
+      "exists": true,
+      "size_bytes": 3516,
+      "size_kb": 3.43,
+      "size_mb": 0.0,
+      "modified": "2025-11-14T09:14:13.352803"
+    },
+    "hebbian_memory_backup": {
+      "path": "TSK/conversational_hebbian_memory.json",
+      "exists": true,
+      "size_bytes": 16879,
+      "size_kb": 16.48,
+      "size_mb": 0.02,
+      "modified": "2025-11-13T21:23:30.138880"
+    },
+    "organic_families": {
+      "path": "persona_layer/organic_families.json",
+      "exists": true,
+      "size_bytes": 15819,
+      "size_kb": 15.45,
+      "size_mb": 0.02,
+      "modified": "2025-11-13T21:23:30.137794"
+    },
+    "organic_families_backup": {
+      "path": "persona_layer/organic_families_backup_nov12.json",
+      "exists": true,
+      "size_bytes": 4609,
+      "size_kb": 4.5,
+      "size_mb": 0.0,
+      "modified": "2025-11-12T20:14:57.192086"
+    },
+    "coherent_attractors": {
+      "path": "persona_layer/coherent_attractors.json",
+      "exists": true,
+      "size_bytes": 13541,
+      "size_kb": 13.22,
+      "size_mb": 0.01,
+      "modified": "2025-11-13T17:28:51.035011"
+    },
+    "semantic_atoms": {
+      "path": "persona_layer/semantic_atoms.json",
+      "exists": true,
+      "size_bytes": 29047,
+      "size_kb": 28.37,
+      "size_mb": 0.03,
+      "modified": "2025-11-13T15:52:48.073864"
+    },
+    "shared_meta_atoms": {
+      "path": "persona_layer/shared_meta_atoms.json",
+      "exists": true,
+      "size_bytes": 6787,
+      "size_kb": 6.63,
+      "size_mb": 0.01,
+      "modified": "2025-11-13T15:52:48.072488"
+    },
+    "meta_atom_rules": {
+      "path": "persona_layer/meta_atom_activation_rules.json",
+      "exists": true,
+      "size_bytes": 8153,
+      "size_kb": 7.96,
+      "size_mb": 0.01,
+      "modified": "2025-11-12T21:41:41.629731"
+    },
+    "session_registry": {
+      "path": "sessions/session_registry.json",
+      "exists": true,
+      "size_bytes": 2322,
+      "size_kb": 2.27,
+      "size_mb": 0.0,
+      "modified": "2025-11-11T07:25:04.097264"
+    },
+    "global_organism_state": {
+      "path": "TSK/global_organism_state.json",
+      "exists": true,
+      "size_bytes": 294,
+      "size_kb": 0.29,
+      "size_mb": 0.0,
+      "modified": "2025-11-11T07:34:53.543463"
+    },
+    "mycelial_identity": {
+      "path": "monitoring/mycelial_identity.json",
+      "exists": true,
+      "size_bytes": 642,
+      "size_kb": 0.63,
+      "size_mb": 0.0,
+      "modified": "2025-11-11T07:25:13.622871"
+    },
+    "user_state_user_link_user_20251113_143117": {
+      "path": "Bundle/user_link_user_20251113_143117/user_state.json",
+      "exists": true,
+      "size_bytes": 2223,
+      "size_kb": 2.17,
+      "size_mb": 0.0,
+      "modified": "2025-11-14T09:14:17.878578"
+    },
+    "user_state_user_link_user_20251113_133920": {
+      "path": "Bundle/user_link_user_20251113_133920/user_state.json",
+      "exists": true,
+      "size_bytes": 863,
+      "size_kb": 0.84,
+      "size_mb": 0.0,
+      "modified": "2025-11-13T23:31:17.991862"
+    },
+    "user_state_user_link_user_20251113_232232": {
+      "path": "Bundle/user_link_user_20251113_232232/user_state.json",
+      "exists": true,
+      "size_bytes": 712,
+      "size_kb": 0.7,
+      "size_mb": 0.0,
+      "modified": "2025-11-14T07:14:46.697996"
+    },
+    "user_state_user_link_20251111_e8936e": {
+      "path": "Bundle/user_link_20251111_e8936e/user_state.json",
+      "exists": true,
+      "size_bytes": 1032,
+      "size_kb": 1.01,
+      "size_mb": 0.0,
+      "modified": "2025-11-11T07:34:53.542806"
+    }
+  },
+  "warnings": [],
+  "recommendations": [
+    "\u2705 Memory management looks healthy - no immediate actions needed"
+  ],
+  "hebbian_analysis": {
+    "organs_tracked": 0,
+    "conversations": 0
+  },
+  "families_analysis": {
+    "total_families": 1,
+    "mature_families": 0,
+    "conversations": 100
+  }
+}

@@ -1,0 +1,104 @@
+[
+  {
+    "user": "How does Whitehead's concept of actual occasions",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.1,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "feeling_and_subjective_form",
+      "feeling_and_subjective_form",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation"
+    ],
+    "cascade_state": {
+      "response_text": "Can you say more about that?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T07:10:08.477363"
+  },
+  {
+    "user": "How does Whitehead's concept of actual occasions",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.1,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.7,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 1.0
+    },
+    "knowledge_used": [
+      "feeling_and_subjective_form",
+      "feeling_and_subjective_form",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation",
+      "i_ching_legge_translation"
+    ],
+    "cascade_state": {
+      "response_text": "What else comes up when you think about this?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 1.0
+    },
+    "timestamp": "2025-11-11T07:10:18.426373"
+  },
+  {
+    "user": "process and reality",
+    "organism_analysis": {
+      "gate_decision": "CURIOSITY_QUESTION",
+      "conversational_family": "exploration",
+      "appetition_to_answer": 0.22835867437268598,
+      "polyvagal_state": "ventral",
+      "polyvagal_confidence": 0.5750760231180579,
+      "self_energy": 0.85,
+      "dominant_c": "curiosity",
+      "ofel_energy": 0.2,
+      "aggregate_coherence": 0.5835867437268598
+    },
+    "knowledge_used": [
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead",
+      "process_and_reality_whitehead"
+    ],
+    "cascade_state": {
+      "response_text": "What sense are you making of this?",
+      "decision_path": [
+        [
+          "CONVERSATIONAL_NEXUS",
+          "CURIOSITY_QUESTION"
+        ]
+      ],
+      "safety_level": null,
+      "self_led": true,
+      "organ_coherence": 0.5835867437268598
+    },
+    "timestamp": "2025-11-11T07:10:26.355579"
+  }
+]

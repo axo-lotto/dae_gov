@@ -1,0 +1,358 @@
+{
+  "training_summary": {
+    "total_tasks": 50,
+    "total_epochs": 5,
+    "training_completed": "2025-11-12T23:24:19.788047"
+  },
+  "task_level_stats": {
+    "mean_satisfaction": 0.8973353643236373,
+    "std_satisfaction": 0.06279012970755211,
+    "mean_confidence": 0.6899999999999998,
+    "std_confidence": 0.20712315177207985,
+    "mean_v0_descent": 0.8054531659418237,
+    "mean_convergence_cycles": 2.32,
+    "mean_active_organs": 4.82,
+    "success_rate": 1.0
+  },
+  "epoch_level_stats": {
+    "epochs": [
+      {
+        "epoch_id": 1,
+        "timestamp": "2025-11-12T23:24:16.996980",
+        "task_count": 10,
+        "success_count": 10,
+        "success_rate": 1.0,
+        "mean_satisfaction": 0.8530211385830437,
+        "mean_confidence": 0.6,
+        "mean_v0_final": 0.24865084036777452,
+        "mean_convergence_cycles": 2.1,
+        "families_discovered": 0,
+        "epoch_reward": 0.84
+      },
+      {
+        "epoch_id": 2,
+        "timestamp": "2025-11-12T23:24:17.742969",
+        "task_count": 10,
+        "success_count": 10,
+        "success_rate": 1.0,
+        "mean_satisfaction": 0.9460047474543632,
+        "mean_confidence": 0.8,
+        "mean_v0_final": 0.1305110649439297,
+        "mean_convergence_cycles": 2.6,
+        "families_discovered": 0,
+        "epoch_reward": 0.92
+      },
+      {
+        "epoch_id": 3,
+        "timestamp": "2025-11-12T23:24:18.337098",
+        "task_count": 10,
+        "success_count": 10,
+        "success_rate": 1.0,
+        "mean_satisfaction": 0.8886250495433726,
+        "mean_confidence": 0.65,
+        "mean_v0_final": 0.21441035966747327,
+        "mean_convergence_cycles": 2.2,
+        "families_discovered": 0,
+        "epoch_reward": 0.86
+      },
+      {
+        "epoch_id": 4,
+        "timestamp": "2025-11-12T23:24:18.989678",
+        "task_count": 10,
+        "success_count": 10,
+        "success_rate": 1.0,
+        "mean_satisfaction": 0.8530211385830437,
+        "mean_confidence": 0.65,
+        "mean_v0_final": 0.24865084036777452,
+        "mean_convergence_cycles": 2.1,
+        "families_discovered": 0,
+        "epoch_reward": 0.86
+      },
+      {
+        "epoch_id": 5,
+        "timestamp": "2025-11-12T23:24:19.750457",
+        "task_count": 10,
+        "success_count": 10,
+        "success_rate": 1.0,
+        "mean_satisfaction": 0.9460047474543632,
+        "mean_confidence": 0.75,
+        "mean_v0_final": 0.1305110649439297,
+        "mean_convergence_cycles": 2.6,
+        "families_discovered": 0,
+        "epoch_reward": 0.9
+      }
+    ]
+  },
+  "organ_participation": {
+    "CARD": {
+      "mean_coherence": 0.565,
+      "activation_rate": 0.26,
+      "max_coherence": 0.75
+    },
+    "PRESENCE": {
+      "mean_coherence": 0.409250583762316,
+      "activation_rate": 0.48,
+      "max_coherence": 0.9
+    },
+    "BOND": {
+      "mean_coherence": 0.6946666666666667,
+      "activation_rate": 0.66,
+      "max_coherence": 1.0
+    },
+    "SANS": {
+      "mean_coherence": 1.0,
+      "activation_rate": 1.0,
+      "max_coherence": 1.0
+    },
+    "EMPATHY": {
+      "mean_coherence": 0.6439364484127311,
+      "activation_rate": 0.7,
+      "max_coherence": 0.95
+    },
+    "LISTENING": {
+      "mean_coherence": 0.579946248141448,
+      "activation_rate": 0.66,
+      "max_coherence": 0.95
+    },
+    "EO": {
+      "mean_coherence": 0.3174831832202746,
+      "activation_rate": 0.0,
+      "max_coherence": 0.5
+    },
+    "AUTHENTICITY": {
+      "mean_coherence": 0.45923742232451104,
+      "activation_rate": 0.52,
+      "max_coherence": 0.95
+    },
+    "WISDOM": {
+      "mean_coherence": 0.4748101486551288,
+      "activation_rate": 0.54,
+      "max_coherence": 0.95
+    },
+    "NDAM": {
+      "mean_coherence": 0.20099378551646208,
+      "activation_rate": 0.0,
+      "max_coherence": 0.45612244897959187
+    },
+    "RNX": {
+      "mean_coherence": 0.5,
+      "activation_rate": 0.0,
+      "max_coherence": 0.5
+    }
+  },
+  "r_matrix_evolution": [
+    {
+      "epoch_id": 1,
+      "mean_coupling": 0.5282746946024454,
+      "max_coupling": 1.0,
+      "total_updates": 1100
+    },
+    {
+      "epoch_id": 2,
+      "mean_coupling": 0.669773055811115,
+      "max_coupling": 1.0,
+      "total_updates": 2200
+    },
+    {
+      "epoch_id": 3,
+      "mean_coupling": 0.7225057918264831,
+      "max_coupling": 1.0,
+      "total_updates": 3300
+    },
+    {
+      "epoch_id": 4,
+      "mean_coupling": 0.7508786057736262,
+      "max_coupling": 1.0,
+      "total_updates": 4400
+    },
+    {
+      "epoch_id": 5,
+      "mean_coupling": 0.8164661570464352,
+      "max_coupling": 1.0,
+      "total_updates": 5500
+    }
+  ],
+  "family_formation": [
+    {
+      "epoch_id": 1,
+      "family_count": 1,
+      "families": {
+        "Family_001": {
+          "target_v0": 0.4065097380537602,
+          "total_updates": 5,
+          "mean_satisfaction": 0.8564630036763722,
+          "convergence_cycles_mean": 3.0000000000000004,
+          "top_organs": [
+            [
+              "SANS",
+              0.7500000000000001
+            ],
+            [
+              "PRESENCE",
+              0.5922467947395575
+            ],
+            [
+              "CARD",
+              0.5691518304819865
+            ],
+            [
+              "WISDOM",
+              0.5142857142857143
+            ],
+            [
+              "NDAM",
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "epoch_id": 2,
+      "family_count": 1,
+      "families": {
+        "Family_001": {
+          "target_v0": 0.4065097380537602,
+          "total_updates": 5,
+          "mean_satisfaction": 0.8564630036763722,
+          "convergence_cycles_mean": 3.0000000000000004,
+          "top_organs": [
+            [
+              "SANS",
+              0.7500000000000001
+            ],
+            [
+              "PRESENCE",
+              0.5922467947395575
+            ],
+            [
+              "CARD",
+              0.5691518304819865
+            ],
+            [
+              "WISDOM",
+              0.5142857142857143
+            ],
+            [
+              "NDAM",
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "epoch_id": 3,
+      "family_count": 1,
+      "families": {
+        "Family_001": {
+          "target_v0": 0.4065097380537602,
+          "total_updates": 5,
+          "mean_satisfaction": 0.8564630036763722,
+          "convergence_cycles_mean": 3.0000000000000004,
+          "top_organs": [
+            [
+              "SANS",
+              0.7500000000000001
+            ],
+            [
+              "PRESENCE",
+              0.5922467947395575
+            ],
+            [
+              "CARD",
+              0.5691518304819865
+            ],
+            [
+              "WISDOM",
+              0.5142857142857143
+            ],
+            [
+              "NDAM",
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "epoch_id": 4,
+      "family_count": 1,
+      "families": {
+        "Family_001": {
+          "target_v0": 0.4065097380537602,
+          "total_updates": 5,
+          "mean_satisfaction": 0.8564630036763722,
+          "convergence_cycles_mean": 3.0000000000000004,
+          "top_organs": [
+            [
+              "SANS",
+              0.7500000000000001
+            ],
+            [
+              "PRESENCE",
+              0.5922467947395575
+            ],
+            [
+              "CARD",
+              0.5691518304819865
+            ],
+            [
+              "WISDOM",
+              0.5142857142857143
+            ],
+            [
+              "NDAM",
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "epoch_id": 5,
+      "family_count": 1,
+      "families": {
+        "Family_001": {
+          "target_v0": 0.4065097380537602,
+          "total_updates": 5,
+          "mean_satisfaction": 0.8564630036763722,
+          "convergence_cycles_mean": 3.0000000000000004,
+          "top_organs": [
+            [
+              "SANS",
+              0.7500000000000001
+            ],
+            [
+              "PRESENCE",
+              0.5922467947395575
+            ],
+            [
+              "CARD",
+              0.5691518304819865
+            ],
+            [
+              "WISDOM",
+              0.5142857142857143
+            ],
+            [
+              "NDAM",
+              0.5
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "transduction_pathways": {},
+  "meta_atom_activations": {},
+  "raw_task_metrics": [
+    {
+      "task_id": "task_00021",
+      "timestamp": "2025-11-12T23:24:16.409778",
+      "input_text": "Our team is completely burned out. People are working 60-hour weeks,\n        missing deadlines anywa",
+      "satisfaction": 0.9091586829592934,
+      "confidence": 0.8,
+      "v0_final": 0.20690661697736618,
+      "convergence_cycles": 2,
+      "success": 

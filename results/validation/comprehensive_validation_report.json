@@ -1,0 +1,64 @@
+{
+  "timestamp": "2025-11-13T09:24:02.772980",
+  "summary": {
+    "total_tests": 12,
+    "tests_passed": 1,
+    "tests_failed": 11,
+    "pass_rate": 0.08333333333333333
+  },
+  "category_breakdown": {
+    "intelligence": {
+      "passed": 0,
+      "total": 5
+    },
+    "continuity": {
+      "passed": 0,
+      "total": 4
+    },
+    "responsiveness": {
+      "passed": 1,
+      "total": 2
+    },
+    "superject": {
+      "passed": 0,
+      "total": 1
+    }
+  },
+  "test_results": [
+    {
+      "test_id": "INTEL-001",
+      "test_name": "Abstraction Reasoning",
+      "category": "intelligence",
+      "success": false,
+      "reasoning": "Organ inconsistency: 0.00 < 0.70; Nexus instability: 0.00 < 0.60; Emission incoherence: 0.00 < 0.60",
+      "duration_seconds": 0.06722092628479004
+    },
+    {
+      "test_id": "INTEL-002",
+      "test_name": "Pattern Transfer",
+      "category": "intelligence",
+      "success": false,
+      "reasoning": "Low transfer: organ similarity 0.00 < 0.60; Low confidence on novel domain: 0.30 < 0.40; Structural inconsistency: nexus overlap 0.00 < 0.50",
+      "duration_seconds": 0.028647899627685547
+    },
+    {
+      "test_id": "INTEL-003",
+      "test_name": "Novelty Handling",
+      "category": "intelligence",
+      "success": false,
+      "reasoning": "Overspecialized: only 0 organs active (need \u22655); Inappropriate strategy: unknown (expected hebbian_fallback); Miscalibrated confidence: 0.80 (expected 0.20-0.40)",
+      "duration_seconds": 0.02503490447998047
+    },
+    {
+      "test_id": "INTEL-004",
+      "test_name": "Context Integration",
+      "category": "intelligence",
+      "success": false,
+      "reasoning": "Low context sensitivity: max correlation change 0.00 < 0.30; Repetitive emissions: min unique rate 0.00 < 0.40; No deepening: satisfaction change -0.06 < +0.10",
+      "duration_seconds": 0.03273296356201172
+    },
+    {
+      "test_id": "INTEL-005",
+      "test_name": "Meta-Learning",
+      "category": "intelligence",
+      "success": 

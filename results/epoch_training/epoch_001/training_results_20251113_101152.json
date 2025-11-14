@@ -1,0 +1,189 @@
+{
+  "timestamp": "20251113_101152",
+  "total_pairs": 5,
+  "initial_tau": 0.3,
+  "max_iterations": 3,
+  "satisfaction_target": 0.55,
+  "results": [
+    {
+      "pair_id": "witnessing_002",
+      "input_text": "We've started doing \"check-ins\" at the beginning of meetings where\n        people can share how they're actually doing. It's not performative;\n        there's genuine space for presence. Sometimes someone will say they're\n        having a hard day and we'll adjust the agenda. This practice of\n        witnessing each other has deepened our connection as a team.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.9016096264817366,
+      "final_coherence": 0.78,
+      "final_variance": 0.0028047630914276468,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3070321925296347,
+      "satisfaction_history": [
+        0.9016096264817366,
+        0.9016096264817366,
+        0.9016096264817366
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3070321925296347
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.210633",
+      "end_time": "2025-11-13T10:11:52.305320",
+      "total_time_seconds": 0.094687
+    },
+    {
+      "pair_id": "toxic_prod_001",
+      "input_text": "Our company culture valorizes overwork. People brag about pulling\n        all-nighters and working through weekends. If you leave at 5pm, you're\n        seen as not committed. There's constant competition to be the most\n        productive, the most available, the most sacrificing. It's exhausting\n        and destructive, but nobody wants to be the first to slow down.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.7101588952307257,
+      "final_coherence": 0.78,
+      "final_variance": 0.004251002869949357,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3032031779046145,
+      "satisfaction_history": [
+        0.7101588952307257,
+        0.7101588952307257,
+        0.7101588952307257
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3032031779046145
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.305352",
+      "end_time": "2025-11-13T10:11:52.380146",
+      "total_time_seconds": 0.074794
+    },
+    {
+      "pair_id": "burnout_003",
+      "input_text": "We've lost three senior engineers this quarter to burnout. The pattern\n        is always the same: someone starts missing meetings, their work quality\n        drops, they become withdrawn, and then they give two weeks notice.\n        Management's response is to redistribute their work to the remaining\n        team, which just accelerates the burnout cycle. We're in a death spiral\n        and nobody's addressing the root cause.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8412728612409245,
+      "final_coherence": 0.78,
+      "final_variance": 0.0031349855800826038,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.30582545722481846,
+      "satisfaction_history": [
+        0.8412728612409245,
+        0.8412728612409245,
+        0.8412728612409245
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30582545722481846
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.380179",
+      "end_time": "2025-11-13T10:11:52.492028",
+      "total_time_seconds": 0.111849
+    },
+    {
+      "pair_id": "toxic_prod_003",
+      "input_text": "My manager expects immediate responses to Slack messages, even at 10pm.\n        There's an unspoken rule that we're always on call, always available.\n        Boundaries are seen as weakness. The phrase \"work-life balance\" is\n        treated like a joke. This isn't sustainable, but everyone's afraid to\n        push back because they'll be seen as not a team player.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8788834961623949,
+      "final_coherence": 0.605,
+      "final_variance": 0.0029131863004930674,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.30657766992324786,
+      "satisfaction_history": [
+        0.8788834961623949,
+        0.8788834961623949,
+        0.8788834961623949
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30657766992324786
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.492058",
+      "end_time": "2025-11-13T10:11:52.600827",
+      "total_time_seconds": 0.108769
+    },
+    {
+      "pair_id": "scapegoat_005",
+      "input_text": "The organizational shadow gets projected onto our remote workers. When\n        communication breaks down or deadlines slip, management blames \"remote\n        work culture\" instead of addressing actual systemic issues. The remote\n        team carries all the organization's anxiety about control and visibility.\n        It's a scapegoating dynamic that's destroying morale and trust.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.7453930061538309,
+      "final_coherence": 0.78,
+      "final_variance": 0.0038954648725232485,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3039078601230766,
+      "satisfaction_history": [
+        0.7453930061538309,
+        0.7453930061538309,
+        0.7453930061538309
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3039078601230766
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:52.600860",
+      "end_time": "2025-11-13T10:11:52.685809",
+      "total_time_seconds": 0.084949
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "epoch_id": 3,
+  "regime": "EXPLORING",
+  "total_pairs": 5,
+  "converged_count": 0,
+  "convergence_rate": 0.0,
+  "mean_iterations": 3.0,
+  "mean_satisfaction": 0.8297313134623089,
+  "mean_confidence": 0.7,
+  "mean_tau": 0.30559462626924616,
+  "families_discovered": 1,
+  "mean_r_matrix_coupling": 0.9943157252370336,
+  "mean_v0_final": 0.003249261802734536,
+  "mean_convergence_cycles": 3.0,
+  "regime_distribution": {
+    "STABLE": 5
+  },
+  "task_rewards": [
+    0.8,
+    0.3,
+    0.8,
+    0.8,
+    0.8
+  ],
+  "epoch_reward": 0.7,
+  "start_time": "2025-11-13T10:11:53.200881",
+  "end_time": "2025-11-13T10:11:53.686859",
+  "total_time_seconds": 0.485978,
+  "pair_results": [
+    {
+      "pair_id": "burnout_003",
+      "input_text": "We've lost three senior engineers this quarter to burnout. The pattern\n        is always the same: someone starts missing meetings, their work quality\n        drops, they become withdrawn, and then they give two weeks notice.\n        Management's response is to redistribute their work to the remaining\n        team, which just accelerates the burnout cycle. We're in a death spiral\n        and nobody's addressing the root cause.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8412728612409245,
+      "final_coherence": 0.78,
+      "final_variance": 0.0031349855800826038,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.30582545722481846,
+      "satisfaction_history": [
+        0.8412728612409245,
+        0.8412728612409245,
+        0.8412728612409245
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.30582545722481846
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.200943",
+      "end_time": "2025-11-13T10:11:53.320258",
+      "total_time_seconds": 0.119315
+    },
+    {
+      "pair_id": "witnessing_003",
+      "input_text": "When our project failed, our director didn't rush to blame or problem-solve.\n        She held space for the team to process the disappointment and frustration.\n        That witnessing of our grief about the failure was incredibly healing.\n        It allowed us to move forward without carrying resentment or shame.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8613772773394351,
+      "final_coherence": 0.605,
+      "final_variance": 0.003319597617900894,
+      "final_confidence": 0.3,
+      "final_regime": "STABLE",
+      "final_tau": 0.3062275455467887,
+      "satisfaction_history": [
+        0.8613772773394351,
+        0.8613772773394351,
+        0.8613772773394351
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3062275455467887
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.320309",
+      "end_time": "2025-11-13T10:11:53.403997",
+      "total_time_seconds": 0.083688
+    },
+    {
+      "pair_id": "psych_safety_004",
+      "input_text": "We claim to have psychological safety, but the reality is different.\n        People are afraid to speak up in meetings because dissenters get\n        marginalized. Mistakes are punished, not learned from. The culture\n        rewards conformity and punishes honesty. We're missing out on valuable\n        perspectives because people don't feel safe to share them.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8552065550211464,
+      "final_coherence": 0.78,
+      "final_variance": 0.003028794029393727,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3061041311004229,
+      "satisfaction_history": [
+        0.8552065550211464,
+        0.8552065550211464,
+        0.8552065550211464
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3061041311004229
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.404041",
+      "end_time": "2025-11-13T10:11:53.488694",
+      "total_time_seconds": 0.084653
+    },
+    {
+      "pair_id": "burnout_004",
+      "input_text": "I've been pushing through exhaustion for months, telling myself I can\n        handle it. But my body is screaming at me to stop. I'm getting\n        tension headaches, sleeping poorly, and snapping at my colleagues.\n        I know I'm not performing well, but I'm too overwhelmed to figure out\n        how to get out of this hole. I feel trapped.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.8426576752267074,
+      "final_coherence": 0.78,
+      "final_variance": 0.00321109099567576,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3058531535045341,
+      "satisfaction_history": [
+        0.8426576752267074,
+        0.8426576752267074,
+        0.8426576752267074
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3058531535045341
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.488743",
+      "end_time": "2025-11-13T10:11:53.588486",
+      "total_time_seconds": 0.099743
+    },
+    {
+      "pair_id": "toxic_prod_002",
+      "input_text": "We measure everything: lines of code, tickets closed, hours logged.\n        But all this quantification has made us lose sight of actual value.\n        People game the metrics instead of doing meaningful work. The obsession\n        with productivity numbers is making us less effective, not more. We're\n        optimizing the wrong things.",
+      "converged": false,
+      "iterations": 3,
+      "converged_at": 3,
+      "convergence_decision": "MAX_ITERATIONS",
+      "final_satisfaction": 0.7481421984833306,
+      "final_coherence": 0.78,
+      "final_variance": 0.0035518407906196966,
+      "final_confidence": 0.8,
+      "final_regime": "STABLE",
+      "final_tau": 0.3039628439696666,
+      "satisfaction_history": [
+        0.7481421984833306,
+        0.7481421984833306,
+        0.7481421984833306
+      ],
+      "regime_history": [
+        "INITIALIZING",
+        "INITIALIZING",
+        "STABLE"
+      ],
+      "tau_history": [
+        0.3,
+        0.3,
+        0.3,
+        0.3039628439696666
+      ],
+      "r_matrix_updated": true,
+      "family_assigned": null,
+      "v0_target_learned": true,
+      "start_time": "2025-11-13T10:11:53.588537",
+      "end_time": "2025-11-13T10:11:53.686080",
+      "total_time_seconds": 0.097543
+    }
+  ],
+  "r_matrix_snapshot": {
+    "matrix": [
+      [
+        1.0,
+        0.9999708578131992,
+        0.999819821493437,
+        0.9988553299783547,
+        0.9999999993828861,
+        0.9999999999996673,
+        0.9999999999999966,
+        0.9999688481403962,
+        0.9999986576478815,
+        0.9999999999439915,
+        0.999999979218908
+      ],
+      [
+        0.9999708578131992,
+        1.0,
+        0.9994650154021033,
+        0.9999788716247683,
+        0.9999999994399218,
+        0.9999953070730916,
+        0.9999999999999988,
+        0.9363667240385435,
+        0.9999994520897271,
+        0.9999999999308306,
+        0.9999999998794468
+      ],
+      [
+        0.999819821493437,
+        0.9994650154021033,
+        1.0,
+        0.9891339393751792,
+        0.9984397113080661,
+        0.9998725007084579,
+        0.9999978014857224,
+        0.9494259544687953,
+        0.9983568729821815,
+        0.9945262748759787,
+        0.9995740739309056
+      ],
+      [
+        0.9988553299783547,
+        0.9999788716247683,
+        0.9891339393751792,
+        1.0,
+        0.9963817441249799,
+        0.9998957381544067,
+        0.999992720989173,
+        0.8161455088511689,
+        0.997131508237895,
+        0.9844677241748231,
+        0.9985643526707352
+      ],
+      [
+        0.9999999993828861,
+        0.9999999994399218,
+        0.9984397113080661,
+        0.9963817441249799,
+        1.0,
+        0.9999999999982593,
+        0.9999999999999987,
+        0.9999545998498275,
+        0.9999999482006436,
+        0.9999999999999986,
+        0.9999999999985252
+      ],
+      [
+        0.9999999999996673,
+        0.9999953070730916,
+        0.9998725007084579,
+        0.9998957381544067,
+        0.9999999999982593,
+        1.0,
+        0.9999999999999989,
+        0.9999999998416244,
+        0.9999999997564175,
+        0.9999999999999988,
+        0.9999999999999012
+      ],
+      [
+        0.9999999999999966,
+        0.9999999999999988,
+        0.9999978014857224,
+        0.999992720989173,
+        0.9999999999999987,
+        0.9999999999999989,
+        1.0,
+        0.9999999999592405,
+        0.9999999999999978,
+        0.9999999999999988,
+        0.9999999999999986
+      ],
+      [
+        0.9999688481403962,
+        0.9363667240385435,
+        0.9494259544687953,
+        0.8161455088511689,
+        0.9999545998498275,
+        0.9999999998416244,
+        0.9999999999592405,
+        1.0,
+        0.9998251755639577,
+        0.9999999991642581,
+        0.9999963650736001
+      ],
+      [
+        0.9999986576478815,
+        0.9999994520897271,
+        0.9983568729821815,
+        0.997131508237895,
+        0.9999999482006436,
+        0.9999999997564175,
+        0.9999999999999978,
+        0.9998251755639577,
+        1.0,
+        0.9999999999999942,
+        0.9999999999986786
+      ],
+      [
+        0.9999999999439915,
+        0.9999999999308306,
+        0.9945262748759787,
+        0.9844677241748231,
+        0.9999999999999986,
+        0.9999999999999988,
+        0.9999999999999988,
+        0.9999999991642581,
+        0.9999999999999942,
+        1.0,
+        0.9999999999999983
+      ],
+      [
+        0.999999979218908,
+        0.9999999998794468,
+        0.9995740739309056,
+        0.9985643526707352,
+        0.9999999999985252,
+        0.9999999999999012,
+        0.9999999999999986,
+        0.9999963650736001,
+        0.9999999999986786,
+        0.9999999999999983,
+        1.0
+      ]
+    ],
+    "mean_coupling": 0.9943157252370336,
+    "std_coupling": 0.025348565093272185,
+    "max_coupling": 1.0,
+    "min_coupling": 0.8161455088511689
+  }
+}

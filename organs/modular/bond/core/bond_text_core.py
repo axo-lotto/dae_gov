@@ -53,7 +53,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent.parent.parent.parent.parent))
 
 from transductive.text_occasion import TextOccasion
-from organs.modular.bond.config.bond_config import BONDConfig, DEFAULT_BOND_CONFIG
+from organs.modular.bond.organ_config.bond_config import BONDConfig, DEFAULT_BOND_CONFIG
 
 
 @dataclass
@@ -98,6 +98,13 @@ class BONDResult:
     parts_counts: Dict[str, int] = field(default_factory=dict)
     parts_strengths: Dict[str, float] = field(default_factory=dict)
 
+    # 🆕 PHASE 1: Entity-native emission support
+    atom_activations: Dict[str, float] = field(default_factory=dict)  # Direct atom activation for emission
+    felt_vector: Optional['np.ndarray'] = None  # Future: 7D felt vector for full entity-native
+
+    # 🆕 PHASE C3: Embedding-based lure field
+    parts_lure_field: Dict[str, float] = field(default_factory=dict)  # IFS parts dimensional lure strengths
+
 
 class BONDTextCore:
     """
@@ -129,6 +136,18 @@ class BONDTextCore:
         """Initialize BOND organ with configuration."""
         self.config = config or DEFAULT_BOND_CONFIG
 
+        # 🆕 PHASE 1: Entity-native support
+        self.organ_name = "BOND"
+        self.semantic_atoms = self._load_semantic_atoms()
+
+        # 🆕 PHASE 2: Load shared meta-atoms for nexus formation
+        self.meta_atoms_config = self._load_shared_meta_atoms()
+
+        # 🆕 PHASE C3: Embedding-based lure computation
+        self.embedding_coordinator = None  # Lazy-loaded
+        self.lure_prototypes = None  # Lazy-loaded
+        self.use_embedding_lures = True  # Enable embedding-based lures
+
         # Compile keyword patterns for efficient matching
         self._compile_keyword_patterns()
 
@@ -150,6 +169,211 @@ class BONDTextCore:
         print(f"   Exile keywords: {len(self.config.exile_keywords)}")
         print(f"   SELF-energy keywords: {len(self.config.self_energy_keywords)}")
         print(f"   Total keywords: {len(self.all_keywords)}")
+
+    def _load_semantic_atoms(self) -> List[str]:
+        """Load BOND semantic atoms from semantic_atoms.json."""
+        import json
+        import os
+
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        atoms_path = os.path.join(current_dir, '..', '..', '..', '..',
+                                  'persona_layer', 'semantic_atoms.json')
+
+        try:
+            with open(atoms_path, 'r') as f:
+                all_atoms = json.load(f)
+
+            if self.organ_name not in all_atoms:
+                return []
+
+            metadata_keys = {'description', 'dimension', 'field_type', 'total_atoms'}
+            organ_data = all_atoms[self.organ_name]
+            atom_names = [k for k in organ_data.keys() if k not in metadata_keys]
+
+            return atom_names
+        except Exception as e:
+            print(f"Warning: Could not load semantic atoms for {self.organ_name}: {e}")
+            return []
+
+    def _load_shared_meta_atoms(self) -> Optional[Dict]:
+        """
+        🆕 PHASE 2: Load shared meta-atoms for nexus formation.
+
+        Returns meta-atoms that this organ can activate (BOND contributes to):
+        - trauma_aware (BOND, EO, NDAM)
+        - fierce_holding (EMPATHY, AUTHENTICITY, BOND)
+        - somatic_wisdom (PRESENCE, AUTHENTICITY, EMPATHY)
+        """
+        import json
+        import os
+
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        meta_atoms_path = os.path.join(current_dir, '..', '..', '..', '..',
+                                       'persona_layer', 'shared_meta_atoms.json')
+
+        try:
+            with open(meta_atoms_path, 'r') as f:
+                meta_atoms_data = json.load(f)
+
+            # Filter to only meta-atoms this organ contributes to
+            relevant_meta_atoms = [
+                ma for ma in meta_atoms_data['meta_atoms']
+                if self.organ_name in ma['contributing_organs']
+            ]
+
+            return {
+                'meta_atoms': relevant_meta_atoms,
+                'count': len(relevant_meta_atoms)
+            }
+        except Exception as e:
+            # Meta-atoms optional (Phase 2 feature)
+            return None
+
+    def _compute_atom_activations(
+        self,
+        patterns: List[PartsPattern],
+        coherence: float,
+        lure: float
+    ) -> Dict[str, float]:
+        """
+        🆕 PHASE 1: DIRECT atom activation computation (bypasses semantic_field_extractor!)
+
+        Maps BOND patterns → semantic atoms:
+        - manager → manager_parts (proactive protective)
+        - firefighter → firefighter_parts (reactive protective)
+        - exile → exile_parts (burdened parts)
+        - self_energy → SELF_energy (unburdened core self)
+        - co_occurring_parts → protector_activation (blending detected)
+        - parts_relationship=None + self_energy → unburdening (movement toward SELF)
+        - coherence>0.7 + self_energy → witnessing (SELF-led awareness)
+        """
+        if not patterns:
+            return {}
+
+        atom_activations = {}
+
+        # Direct part type → atom mapping
+        part_to_atom = {
+            'manager': 'manager_parts',
+            'firefighter': 'firefighter_parts',
+            'exile': 'exile_parts',
+            'self_energy': 'SELF_energy'
+        }
+
+        for pattern in patterns:
+            # Direct part mapping
+            atom = part_to_atom.get(pattern.part_type)
+            if atom:
+                base_activation = pattern.strength * pattern.confidence
+                activation = base_activation * coherence
+                atom_activations[atom] = atom_activations.get(atom, 0.0) + activation
+
+            # Protector activation: When parts are blending
+            if pattern.co_occurring_parts:
+                protector_activation = pattern.strength * 0.7  # Parts blending
+                atom_activations['protector_activation'] = atom_activations.get(
+                    'protector_activation', 0.0) + protector_activation
+
+        # Special cases: Unburdening and witnessing
+        has_self_energy = any(p.part_type == 'self_energy' for p in patterns)
+
+        if has_self_energy:
+            # Unburdening: Movement toward SELF (lower self_distance)
+            avg_self_distance = np.mean([p.self_distance for p in patterns])
+            if avg_self_distance < 0.5:  # Close to SELF
+                unburdening_activation = (1.0 - avg_self_distance) * coherence
+                atom_activations['unburdening'] = unburdening_activation
+
+            # Witnessing: High coherence + SELF-energy (SELF-led awareness)
+            if coherence > 0.7:
+                witnessing_activation = coherence * 0.9
+                atom_activations['witnessing'] = witnessing_activation
+
+        # Apply lure weighting
+        lure_weight = 0.5 + 0.5 * lure
+        for atom in atom_activations:
+            atom_activations[atom] *= lure_weight
+
+        # Normalize to [0.0, 1.0]
+        if atom_activations:
+            max_activation = max(atom_activations.values())
+            if max_activation > 1.0:
+                for atom in atom_activations:
+                    atom_activations[atom] /= max_activation
+
+        # 🆕 PHASE 2: Add meta-atom activations (for nexus formation)
+        if self.meta_atoms_config:
+            meta_activations = self._activate_meta_atoms(patterns, coherence, lure)
+            atom_activations.update(meta_activations)
+
+        return atom_activations
+
+    def _activate_meta_atoms(
+        self,
+        patterns: List[PartsPattern],
+        coherence: float,
+        lure: float
+    ) -> Dict[str, float]:
+        """
+        🆕 PHASE 2: Activate shared meta-atoms for nexus formation.
+
+        BOND contributes to 3 meta-atoms:
+        1. trauma_aware (BOND, EO, NDAM) - Parts activation + polyvagal threat
+        2. fierce_holding (EMPATHY, AUTHENTICITY, BOND) - Fierce compassion + parts holding
+        3. somatic_wisdom (PRESENCE, AUTHENTICITY, EMPATHY) - Embodied parts awareness
+
+        Activation logic:
+        - trauma_aware: Firefighter/exile parts detected (protective activation)
+        - fierce_holding: Manager + self_energy (protective holding with SELF)
+        - somatic_wisdom: Low self_distance + parts awareness (embodied SELF-led)
+        """
+        if not self.meta_atoms_config or not patterns:
+            return {}
+
+        meta_activations = {}
+
+        # Get patterns by type
+        firefighters = [p for p in patterns if p.part_type == 'firefighter']
+        exiles = [p for p in patterns if p.part_type == 'exile']
+        managers = [p for p in patterns if p.part_type == 'manager']
+        self_energy_patterns = [p for p in patterns if p.part_type == 'self_energy']
+
+        # Average self_distance across all patterns
+        avg_self_distance = np.mean([p.self_distance for p in patterns]) if patterns else 0.5
+
+        for meta_atom in self.meta_atoms_config['meta_atoms']:
+            atom_name = meta_atom['atom']
+
+            # 1. trauma_aware: Firefighter or exile parts detected
+            if atom_name == 'trauma_aware':
+                if firefighters or exiles:
+                    # High trauma activation when protective parts are active
+                    trauma_patterns = firefighters + exiles
+                    base_strength = sum(p.strength * p.confidence for p in trauma_patterns) / len(trauma_patterns)
+                    activation = base_strength * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+            # 2. fierce_holding: Manager parts + SELF-energy (protective + SELF-led)
+            elif atom_name == 'fierce_holding':
+                if managers and self_energy_patterns:
+                    # Fierce compassion: Protective parts WITH SELF-energy
+                    manager_strength = sum(p.strength * p.confidence for p in managers) / len(managers)
+                    self_strength = sum(p.strength * p.confidence for p in self_energy_patterns) / len(self_energy_patterns)
+                    base_activation = (manager_strength + self_strength) / 2
+                    activation = base_activation * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+            # 3. somatic_wisdom: Low self_distance (close to SELF) + parts awareness
+            elif atom_name == 'somatic_wisdom':
+                if avg_self_distance < 0.5 and len(patterns) >= 2:
+                    # Embodied SELF-led awareness: Close to SELF + multiple parts seen
+                    proximity_to_self = 1.0 - avg_self_distance
+                    parts_awareness = min(1.0, len(patterns) * 0.3)
+                    base_activation = (proximity_to_self + parts_awareness) / 2
+                    activation = base_activation * coherence * (0.5 + 0.5 * lure)
+                    meta_activations[atom_name] = min(1.0, activation)
+
+        return meta_activations
 
     def _compile_keyword_patterns(self):
         """Compile regex patterns for efficient keyword matching."""
@@ -187,6 +411,55 @@ class BONDTextCore:
             pattern = re.compile(r'\b' + escaped + r'\b', re.IGNORECASE)
             self.keyword_patterns[keyword] = pattern
 
+    def _ensure_embedding_coordinator(self):
+        """Lazy-load embedding coordinator."""
+        if self.embedding_coordinator is None:
+            from persona_layer.embedding_coordinator import EmbeddingCoordinator
+            self.embedding_coordinator = EmbeddingCoordinator()
+
+    def _load_lure_prototypes(self) -> Dict[str, np.ndarray]:
+        """Load BOND parts lure prototypes from JSON."""
+        if self.lure_prototypes is not None:
+            return self.lure_prototypes
+
+        import json
+        import os
+        # Navigate from organs/modular/bond/core to project root
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        prototype_path = os.path.join(current_dir, '..', '..', '..', '..', 'persona_layer', 'lure_prototypes.json')
+
+        with open(prototype_path, 'r') as f:
+            data = json.load(f)
+
+        category = data['prototypes']['bond_parts']
+        self.lure_prototypes = {
+            dim: np.array(proto['embedding'])
+            for dim, proto in category.items()
+        }
+
+        return self.lure_prototypes
+
+    def _compute_embedding_based_lure_field(self, text: str) -> Dict[str, float]:
+        """Compute IFS parts lure field using semantic similarity."""
+        self._ensure_embedding_coordinator()
+        prototypes = self._load_lure_prototypes()
+
+        input_embedding = self.embedding_coordinator.embed(text)
+        input_embedding = input_embedding / np.linalg.norm(input_embedding)
+
+        similarities = {}
+        for dimension, prototype in prototypes.items():
+            similarity = np.dot(input_embedding, prototype)
+            similarities[dimension] = max(0.0, similarity)
+
+        total_sim = sum(similarities.values())
+        if total_sim > 0:
+            lure_field = {k: v / total_sim for k, v in similarities.items()}
+        else:
+            lure_field = {k: 1.0 / len(similarities) for k in similarities.keys()}
+
+        return lure_field
+
     def process_text_occasions(self, occasions: List[TextOccasion], cycle: int = 1) -> BONDResult:
         """
         Universal organ method: Process text occasions for IFS parts detection.
@@ -199,6 +472,9 @@ class BONDTextCore:
             BONDResult with parts patterns, coherence, lure, SELF-distance
         """
         start_time = time.perf_counter()
+
+        # 🆕 PHASE C3: Collect full input text
+        full_text = ' '.join([occasion.text for occasion in occasions])
 
         # Phase 1: Extract text content
         texts = [occ.text for occ in occasions]
@@ -226,6 +502,21 @@ class BONDTextCore:
 
         processing_time = (time.perf_counter() - start_time) * 1000  # ms
 
+        # 🆕 PHASE 1: Compute atom activations DIRECTLY (bypass semantic_field_extractor!)
+        atom_activations = self._compute_atom_activations(
+            patterns, coherence_metrics['coherence'], lure)
+
+        # 🆕 PHASE C3: Compute embedding-based lure field
+        if self.use_embedding_lures and full_text:
+            parts_lure_field = self._compute_embedding_based_lure_field(full_text)
+        else:
+            # Fallback: Use parts_strengths as lure field
+            total_strength = sum(coherence_metrics['parts_strengths'].values()) or 1.0
+            parts_lure_field = {
+                part: strength / total_strength
+                for part, strength in coherence_metrics['parts_strengths'].items()
+            }
+
         # Construct result
         result = BONDResult(
             coherence=coherence_metrics['coherence'],
@@ -239,7 +530,10 @@ class BONDTextCore:
             blending_detected=dynamics.get('blending_detected', False),
             unblending_detected=dynamics.get('unblending_detected', False),
             parts_counts=coherence_metrics['parts_counts'],
-            parts_strengths=coherence_metrics['parts_strengths']
+            parts_strengths=coherence_metrics['parts_strengths'],
+            atom_activations=atom_activations,  # 🆕 POPULATED!
+            felt_vector=None,  # Future: Phase 2/3 entity-native
+            parts_lure_field=parts_lure_field  # 🆕 PHASE C3!
         )
 
         return result
