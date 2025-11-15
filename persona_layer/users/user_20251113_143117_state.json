@@ -157,13 +157,18 @@
       "session_id": "20251115_084523",
       "timestamp": "2025-11-15T08:46:51.213459",
       "turns": 1
+    },
+    {
+      "session_id": "20251115_110156",
+      "timestamp": "2025-11-15T11:02:21.877795",
+      "turns": 0
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251115_084523",
+  "last_session": "20251115_110156",
   "preferred_tone": "balanced",
   "dae_personality_notes": [],
   "user_profile": {
