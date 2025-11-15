@@ -49,13 +49,13 @@ class Config:
     # PERSONA LAYER PATHS (Core Processing)
     # ============================================================================
 
-    # Template libraries (Phase 1: Bootstrap)
-    PERSONALITY_TEMPLATES_PATH = PERSONA_LAYER_DIR / "personality_templates.json"
-    SMALL_TALK_TEMPLATES_PATH = PERSONA_LAYER_DIR / "small_talk_templates.json"
-    HUMOR_TEMPLATES_PATH = PERSONA_LAYER_DIR / "humor_templates.json"
-    RELATIONSHIP_TEMPLATES_PATH = PERSONA_LAYER_DIR / "relationship_templates.json"
-    RESPONSE_STYLE_TEMPLATES_PATH = PERSONA_LAYER_DIR / "response_style_templates.json"
-    LLM_AUGMENTATION_PROMPTS_PATH = PERSONA_LAYER_DIR / "llm_augmentation_prompts.json"
+    # Template libraries (Phase 1: Bootstrap) - ORGANIZED INTO config/templates/
+    PERSONALITY_TEMPLATES_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "personality_templates.json"
+    SMALL_TALK_TEMPLATES_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "small_talk_templates.json"
+    HUMOR_TEMPLATES_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "humor_templates.json"
+    RELATIONSHIP_TEMPLATES_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "relationship_templates.json"
+    RESPONSE_STYLE_TEMPLATES_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "response_style_templates.json"
+    LLM_AUGMENTATION_PROMPTS_PATH = PERSONA_LAYER_DIR / "config" / "templates" / "llm_augmentation_prompts.json"
 
     # User profiles and conversations (Levels 8-9)
     USER_PROFILES_DIR = PERSONA_LAYER_DIR / "user_profiles"
@@ -66,18 +66,18 @@ class Config:
     FAMILY_TEMPLATE_PREFERENCES_PATH = PERSONA_LAYER_DIR / "family_template_preferences.json"
     META_TEMPLATES_PATH = PERSONA_LAYER_DIR / "meta_templates.json"  # Phase 3
 
-    # Semantic space
-    SEMANTIC_ATOMS_PATH = PERSONA_LAYER_DIR / "semantic_atoms.json"
-    SHARED_META_ATOMS_PATH = PERSONA_LAYER_DIR / "shared_meta_atoms.json"
+    # Semantic space - ORGANIZED INTO config/atoms/
+    SEMANTIC_ATOMS_PATH = PERSONA_LAYER_DIR / "config" / "atoms" / "semantic_atoms.json"
+    SHARED_META_ATOMS_PATH = PERSONA_LAYER_DIR / "config" / "atoms" / "shared_meta_atoms.json"
 
-    # Memory & learning
-    HEBBIAN_MEMORY_PATH = PERSONA_LAYER_DIR / "conversational_hebbian_memory.json"
-    ORGANIC_FAMILIES_PATH = PERSONA_LAYER_DIR / "organic_families.json"
+    # Memory & learning - ORGANIZED INTO state/active/
+    HEBBIAN_MEMORY_PATH = PERSONA_LAYER_DIR / "state" / "active" / "conversational_hebbian_memory.json"
+    ORGANIC_FAMILIES_PATH = PERSONA_LAYER_DIR / "state" / "active" / "organic_families.json"
     CLUSTER_DATABASE_PATH = PERSONA_LAYER_DIR / "conversational_clusters.json"
 
-    # Emission generation
-    META_ATOM_PHRASE_LIBRARY_PATH = PERSONA_LAYER_DIR / "emission_generation" / "meta_atom_phrase_library.json"
-    TRANSDUCTION_MECHANISM_PHRASES_PATH = PERSONA_LAYER_DIR / "transduction_mechanism_phrases.json"
+    # Emission generation - ORGANIZED
+    META_ATOM_PHRASE_LIBRARY_PATH = PERSONA_LAYER_DIR / "config" / "atoms" / "meta_atom_phrase_library.json"
+    TRANSDUCTION_MECHANISM_PHRASES_PATH = PERSONA_LAYER_DIR / "config" / "transduction" / "transduction_mechanism_phrases.json"
 
     # ============================================================================
     # KNOWLEDGE BASE PATHS (Training Data)

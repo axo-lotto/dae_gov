@@ -162,13 +162,18 @@
       "session_id": "20251115_110156",
       "timestamp": "2025-11-15T11:02:21.877795",
       "turns": 0
+    },
+    {
+      "session_id": "20251115_111232",
+      "timestamp": "2025-11-15T11:14:03.604657",
+      "turns": 0
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251115_110156",
+  "last_session": "20251115_111232",
   "preferred_tone": "balanced",
   "dae_personality_notes": [],
   "user_profile": {

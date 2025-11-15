@@ -44,7 +44,7 @@ class MetaAtomActivator:
     3. Confidence computed from mean organ activations
     """
 
-    def __init__(self, rules_path: str = "persona_layer/meta_atom_activation_rules.json"):
+    def __init__(self, rules_path: str = "persona_layer/config/atoms/meta_atom_activation_rules.json"):
         """
         Initialize meta-atom activator with activation rules.
 

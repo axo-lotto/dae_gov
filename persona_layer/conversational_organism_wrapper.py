@@ -270,7 +270,7 @@ class ConversationalOrganismWrapper:
         if ORGAN_CONFIDENCE_AVAILABLE:
             try:
                 self.organ_confidence = OrganConfidenceTracker(
-                    storage_path="persona_layer/organ_confidence.json",
+                    storage_path="persona_layer/state/active/organ_confidence.json",
                     ema_alpha=0.1,  # DAE 3.0 validated
                     success_threshold=0.5  # Learn from "Helpful" ratings
                 )
@@ -358,7 +358,7 @@ class ConversationalOrganismWrapper:
             try:
                 print("   Loading meta-atom activator...")
                 self.meta_atom_activator = MetaAtomActivator(
-                    rules_path="persona_layer/meta_atom_activation_rules.json"
+                    rules_path="persona_layer/config/atoms/meta_atom_activation_rules.json"
                 )
                 print(f"   ✅ Meta-atom activator ready (10 meta-atoms, trauma-informed)")
             except Exception as e:
@@ -416,7 +416,7 @@ class ConversationalOrganismWrapper:
             try:
                 print("   Loading SELF matrix governance (trauma-informed emission)...")
                 self.self_governance = SELFMatrixGovernance(
-                    coherent_attractors_path="persona_layer/coherent_attractors.json"
+                    coherent_attractors_path="persona_layer/config/symbols/coherent_attractors.json"
                 )
                 print(f"   ✅ SELF matrix governance ready (5 zones, IFS + Polyvagal)")
             except Exception as e:

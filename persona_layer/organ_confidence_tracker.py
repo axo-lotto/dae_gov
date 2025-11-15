@@ -72,7 +72,7 @@ class OrganConfidenceTracker:
 
     def __init__(
         self,
-        storage_path: str = "persona_layer/organ_confidence.json",
+        storage_path: str = "persona_layer/state/active/organ_confidence.json",
         ema_alpha: float = 0.1,  # DAE 3.0 validated
         initial_confidence: float = 0.5,
         success_threshold: float = 0.5  # Min user satisfaction for "success"

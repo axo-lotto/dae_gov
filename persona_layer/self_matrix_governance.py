@@ -543,7 +543,7 @@ def test_self_matrix_governance():
 
     # Create governance (without coherent attractors for now)
     governance = SELFMatrixGovernance(
-        coherent_attractors_path="persona_layer/coherent_attractors.json"
+        coherent_attractors_path="persona_layer/config/symbols/coherent_attractors.json"
     )
 
     # Test zone classification
