@@ -341,7 +341,7 @@ class SANSTextCore:
         from pathlib import Path
 
         # Navigate from organs/modular/sans/core/ up to project root, then to persona_layer
-        prototype_path = Path(__file__).parent.parent.parent.parent.parent / 'persona_layer' / 'lure_prototypes.json'
+        prototype_path = Path(__file__).parent.parent.parent.parent.parent / 'persona_layer' / 'config' / 'lures' / 'lure_prototypes.json'
 
         with open(prototype_path, 'r') as f:
             data = json.load(f)

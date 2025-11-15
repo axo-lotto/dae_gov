@@ -216,7 +216,7 @@ class PresenceTextCore:
         current_dir = os.path.dirname(os.path.abspath(__file__))
         prototypes_path = os.path.join(
             current_dir, '..', '..', '..', '..',
-            'persona_layer', 'lure_prototypes.json'
+            'persona_layer', 'config', 'lures', 'lure_prototypes.json'
         )
 
         try:

@@ -42,7 +42,7 @@ class LureInformedPhraseSelector:
 
     def __init__(
         self,
-        lure_phrase_library_path: str = "persona_layer/transduction_mechanism_phrases_with_lure_tags.json",
+        lure_phrase_library_path: str = "persona_layer/config/transduction/transduction_mechanism_phrases_with_lure_tags.json",
         enable_lure_filtering: bool = True,
         lure_alignment_weight: float = 0.6  # 60% lure, 40% uniform
     ):

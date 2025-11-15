@@ -218,7 +218,7 @@ class EmissionGenerator:
 
         Loads therapeutic phrases for each transduction mechanism (9 primary + additional).
         """
-        phrase_library_path = Path('persona_layer/transduction_mechanism_phrases.json')
+        phrase_library_path = Path('persona_layer/config/transduction/transduction_mechanism_phrases.json')
 
         if not phrase_library_path.exists():
             print(f"⚠️  Transduction mechanism phrase library not found at {phrase_library_path}")

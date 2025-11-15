@@ -84,7 +84,7 @@ class OrganReconstructionPipeline:
         response_assembler,         # ResponseAssembler instance
         self_matrix_governance,     # SELFMatrixGovernance instance
         phase5_learning=None,       # Phase5LearningIntegration instance (optional)
-        hebbian_memory_path: str = "persona_layer/conversational_hebbian_memory.json"
+        hebbian_memory_path: str = "persona_layer/state/active/conversational_hebbian_memory.json"
     ):
         """
         Initialize reconstruction pipeline by wiring existing components.

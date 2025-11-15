@@ -426,7 +426,7 @@ class BONDTextCore:
         import os
         # Navigate from organs/modular/bond/core to project root
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        prototype_path = os.path.join(current_dir, '..', '..', '..', '..', 'persona_layer', 'lure_prototypes.json')
+        prototype_path = os.path.join(current_dir, '..', '..', '..', '..', 'persona_layer', 'config', 'lures', 'lure_prototypes.json')
 
         with open(prototype_path, 'r') as f:
             data = json.load(f)

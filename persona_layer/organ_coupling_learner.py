@@ -59,7 +59,7 @@ class OrganCouplingLearner:
 
     def __init__(
         self,
-        r_matrix_path: Path = Path("persona_layer/conversational_hebbian_memory.json"),
+        r_matrix_path: Path = Path("persona_layer/state/active/conversational_hebbian_memory.json"),
         learning_rate: float = 0.05,
         saturation_enabled: bool = True
     ):

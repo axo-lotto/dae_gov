@@ -289,7 +289,7 @@ class ConversationalOrganismWrapper:
                     semantic_atoms_path="persona_layer/semantic_atoms.json"
                 )
                 self.nexus_composer = NexusIntersectionComposer(
-                    r_matrix_path="persona_layer/conversational_hebbian_memory.json",
+                    r_matrix_path="persona_layer/state/active/conversational_hebbian_memory.json",
                     intersection_threshold=0.005  # 🌀 NOV 14: Lowered 0.01→0.005 for better nexus formation
                 )
 
@@ -313,7 +313,7 @@ class ConversationalOrganismWrapper:
 
                 self.emission_generator = EmissionGenerator(
                     semantic_atoms_path="persona_layer/semantic_atoms.json",
-                    hebbian_memory_path="persona_layer/conversational_hebbian_memory.json",
+                    hebbian_memory_path="persona_layer/state/active/conversational_hebbian_memory.json",
                     direct_threshold=Config.EMISSION_DIRECT_THRESHOLD,  # 0.50 (was hardcoded 0.65)
                     fusion_threshold=Config.EMISSION_FUSION_THRESHOLD,   # 0.45 (was hardcoded 0.50)
                     felt_guided_llm_generator=felt_guided_llm  # 🌀 PHASE LLM1
@@ -372,7 +372,7 @@ class ConversationalOrganismWrapper:
             try:
                 print("   Loading organ coupling learner (DAE 3.0 R-matrix)...")
                 self.organ_coupling_learner = OrganCouplingLearner(
-                    r_matrix_path=Path("persona_layer/conversational_hebbian_memory.json"),
+                    r_matrix_path=Path("persona_layer/state/active/conversational_hebbian_memory.json"),
                     learning_rate=Config.R_MATRIX_LEARNING_RATE  # 0.005 (fixed Nov 13, 2025)
                 )
                 print(f"   ✅ Organ coupling learner ready (11×11 Hebbian R-matrix)")
@@ -446,7 +446,7 @@ class ConversationalOrganismWrapper:
                     response_assembler=self.response_assembler,
                     self_matrix_governance=self.self_governance,
                     phase5_learning=self.phase5_learning,
-                    hebbian_memory_path="persona_layer/conversational_hebbian_memory.json"
+                    hebbian_memory_path="persona_layer/state/active/conversational_hebbian_memory.json"
                 )
                 print(f"   ✅ Reconstruction pipeline ready (authentic voice enabled!)")
             except Exception as e:

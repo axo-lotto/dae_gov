@@ -47,7 +47,7 @@ class MemoryRetrieval:
 
     def __init__(
         self,
-        hebbian_memory_path: str = "persona_layer/conversational_hebbian_memory.json",
+        hebbian_memory_path: str = "persona_layer/state/active/conversational_hebbian_memory.json",
         organic_families_path: str = "persona_layer/organic_families.json",
         user_bundles_dir: str = "Bundle",
         top_k: int = 5,
