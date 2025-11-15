@@ -68,6 +68,13 @@ try:
     ORGAN_CONFIDENCE_AVAILABLE = True
 except ImportError:
     ORGAN_CONFIDENCE_AVAILABLE = False
+
+# 🌀 Import Entity-Organ Tracker (Quick Win #7 - Neo4j Mastery - Nov 15, 2025)
+try:
+    from persona_layer.entity_organ_tracker import EntityOrganTracker
+    ENTITY_ORGAN_TRACKER_AVAILABLE = True
+except ImportError:
+    ENTITY_ORGAN_TRACKER_AVAILABLE = False
     print("⚠️  Organ confidence tracker not available")
 
 # Import emission generation components
@@ -280,6 +287,21 @@ class ConversationalOrganismWrapper:
                 self.organ_confidence = None
         else:
             self.organ_confidence = None
+
+        # 🌀 Initialize Entity-Organ Tracker (Quick Win #7 - Neo4j Mastery - Nov 15, 2025)
+        if ENTITY_ORGAN_TRACKER_AVAILABLE:
+            try:
+                self.entity_organ_tracker = EntityOrganTracker(
+                    storage_path="persona_layer/state/active/entity_organ_associations.json",
+                    ema_alpha=0.15,  # Slightly faster than organ confidence
+                    min_mentions_for_pattern=3  # Need 3+ mentions before pattern emerges
+                )
+                print(f"   ✅ Entity-organ tracker ready (entity-aware learning)")
+            except Exception as e:
+                print(f"   ⚠️  Entity-organ tracker unavailable: {e}")
+                self.entity_organ_tracker = None
+        else:
+            self.entity_organ_tracker = None
 
         # Initialize emission generation (if available)
         if EMISSION_AVAILABLE:
@@ -736,6 +758,31 @@ class ConversationalOrganismWrapper:
                 )
             except Exception as e:
                 print(f"⚠️  Organ confidence update failed: {e}")
+
+        # 🌀 Quick Win #7: Update entity-organ associations (Nov 15, 2025)
+        if self.entity_organ_tracker and context.get('stored_entities'):
+            try:
+                # Extract entities from context (passed from dae_interactive.py)
+                extracted_entities = context.get('stored_entities', [])
+                organ_results = result.get('organ_results', {})
+
+                # Build felt-state context
+                felt_state = {
+                    'polyvagal_state': result.get('felt_states', {}).get('eo_polyvagal_state', 'mixed'),
+                    'v0_energy': result.get('felt_states', {}).get('v0_energy', {}).get('final_energy', 0.5),
+                    'urgency': result.get('felt_states', {}).get('ndam_urgency', 0.0),
+                    'self_distance': result.get('felt_states', {}).get('bond_self_distance', 0.5)
+                }
+
+                # Update entity-organ associations
+                self.entity_organ_tracker.update(
+                    extracted_entities=extracted_entities,
+                    organ_results=organ_results,
+                    felt_state=felt_state,
+                    emission_satisfaction=user_satisfaction
+                )
+            except Exception as e:
+                print(f"⚠️  Entity-organ tracking update failed: {e}")
 
         return result
 
