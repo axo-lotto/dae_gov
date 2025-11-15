@@ -115,6 +115,12 @@ class UserSuperjectLearner:
             turn_data: Complete turn data from organism
             user_satisfaction: Optional explicit satisfaction (0-1)
         """
+        # 🌀 Phase 1.7: Defensive check for turn_data type (Nov 14, 2025)
+        if not isinstance(turn_data, dict):
+            print(f"⚠️  record_turn received non-dict turn_data (type: {type(turn_data).__name__})")
+            print(f"   Skipping superject recording for this turn")
+            return
+
         profile = self.get_or_create_profile(user_id)
 
         # Extract felt state snapshot
@@ -170,9 +176,11 @@ class UserSuperjectLearner:
 
         # Extract nexuses
         felt_states = turn_data.get('felt_states', {})
+
+        # 🌀 Phase 1.7: Defensive extraction of nexuses (Nov 14, 2025)
         nexuses_data = felt_states.get('nexuses', [])
         dominant_nexuses = []
-        if nexuses_data:
+        if nexuses_data and isinstance(nexuses_data, list):
             dominant_nexuses = [n.get('name', '') for n in nexuses_data[:3]
                                if isinstance(n, dict)]
 
@@ -198,12 +206,17 @@ class UserSuperjectLearner:
         ndam_urgency = felt_states.get('ndam_urgency', 0.0)
 
         # Extract meta-atoms activated
+        # 🌀 Phase 1.7: Defensive extraction (Nov 14, 2025)
         meta_atoms_activated = {}
         if 'meta_atoms_activated' in felt_states:
-            meta_atoms_activated = felt_states['meta_atoms_activated']
+            meta_atoms_raw = felt_states['meta_atoms_activated']
+            if isinstance(meta_atoms_raw, dict):
+                meta_atoms_activated = meta_atoms_raw
         elif 'meta_atoms' in felt_states:
             # Alternative location
-            meta_atoms_activated = felt_states['meta_atoms']
+            meta_atoms_raw = felt_states['meta_atoms']
+            if isinstance(meta_atoms_raw, dict):
+                meta_atoms_activated = meta_atoms_raw
 
         # Extract emission data
         emission_confidence = turn_data.get('emission_confidence', 0.0)
@@ -408,11 +421,15 @@ class UserSuperjectLearner:
             snapshot: Current felt state snapshot
         """
         # Extract salience data from felt_states
-        salience_markers = felt_states.get('salience_trauma_markers', {})
-        salience_guidance = felt_states.get('salience_morphogenetic_guidance', {})
+        # 🌀 Phase 1.7: Defensive extraction (Nov 14, 2025)
+        salience_markers_raw = felt_states.get('salience_trauma_markers', {})
+        salience_markers = salience_markers_raw if isinstance(salience_markers_raw, dict) else {}
+
+        salience_guidance_raw = felt_states.get('salience_morphogenetic_guidance', {})
+        salience_guidance = salience_guidance_raw if isinstance(salience_guidance_raw, dict) else {}
 
         # Track NDAM urgency trends (exponential moving average, α=0.1)
-        ndam_urgency = salience_markers.get('ndam_urgency', 0.0)
+        ndam_urgency = salience_markers.get('ndam_urgency', 0.0) if salience_markers else 0.0
         profile.metadata['typical_urgency'] = (
             profile.metadata.get('typical_urgency', 0.0) * 0.9 +
             ndam_urgency * 0.1
@@ -498,13 +515,14 @@ class UserSuperjectLearner:
             List of detected patterns
         """
         patterns = []
+        satisfaction_threshold = 0.5  # Lowered from 0.7 (learn from "Helpful" not just "Excellent")
 
         for i in range(len(recent_turns) - 1):
             from_state = recent_turns[i]
             to_state = recent_turns[i + 1]
 
-            # Only learn from successful transformations
-            if to_state.user_satisfaction and to_state.user_satisfaction > 0.7:
+            # Only learn from successful transformations (positive ratings)
+            if to_state.user_satisfaction and to_state.user_satisfaction > satisfaction_threshold:
                 if self._is_significant_transformation(from_state, to_state):
                     pattern = self._create_transformation_pattern(from_state, to_state)
                     patterns.append(pattern)
@@ -649,3 +667,149 @@ class UserSuperjectLearner:
         TODO: Implement in Phase 5
         """
         pass
+
+    # ========== OPEN-ENDED ENTITY EXTRACTION (Nov 14, 2025) ==========
+
+    def extract_entities_llm(self, user_input: str, current_entities: Dict) -> Dict:
+        """
+        Open-ended entity extraction using LLM to discover facts naturally.
+
+        NO hardcoded patterns. Memory evolves organically.
+
+        Args:
+            user_input: User's conversational turn
+            current_entities: Currently stored entities
+
+        Returns:
+            New entities to merge with existing
+        """
+        from persona_layer.local_llm_bridge import LocalLLMBridge
+
+        # Build extraction prompt
+        prompt = f"""You are analyzing a conversation to extract memorable facts about the speaker.
+
+Extract any facts worth remembering: names, relationships, emotions, family, values, preferences,
+psychological patterns - anything that helps understand this person.
+
+Previous known facts:
+{self._format_existing_entities(current_entities)}
+
+New statement from user:
+"{user_input}"
+
+What new facts should be remembered? Return as JSON:
+{{
+  "new_facts": [
+    {{"type": "name", "value": "...", "context": "..."}},
+    {{"type": "relationship", "value": "...", "context": "..."}},
+    {{"type": "emotion", "value": "...", "context": "..."}},
+    {{"type": "family", "value": "...", "context": "..."}},
+    {{"type": "value", "value": "...", "context": "..."}},
+    {{"type": "preference", "value": "...", "context": "..."}},
+    {{"type": "psychological", "value": "...", "context": "..."}}
+  ]
+}}
+
+Return empty list if nothing new to remember. Be selective - only remember genuinely useful facts.
+
+JSON:"""
+
+        # Generate extraction
+        llm = LocalLLMBridge()
+        try:
+            response = llm.query_direct(prompt, max_tokens=300, temperature=0.3)
+
+            # Parse JSON response
+            import json
+            import re
+
+            # Handle None response
+            if not response:
+                print(f"      ⚠️  LLM entity extraction: Empty response")
+                return {}
+
+            # Extract text from dict response
+            if isinstance(response, dict):
+                response_text = response.get('response') or response.get('llm_response')
+                if not response_text:
+                    print(f"      ⚠️  LLM entity extraction: No text in dict response")
+                    return {}
+            elif isinstance(response, str):
+                response_text = response
+            else:
+                print(f"      ⚠️  LLM entity extraction: Unexpected type: {type(response)}")
+                return {}
+
+            # Extract JSON from response text
+            json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+            if json_match:
+                json_str = json_match.group(0)
+                try:
+                    extraction = json.loads(json_str)
+                except json.JSONDecodeError as json_error:
+                    print(f"      ⚠️  LLM generated invalid JSON: {json_error}")
+                    print(f"      JSON attempted: {json_str[:200]}...")
+                    # Try to salvage by cleaning common issues
+                    json_str_clean = json_str.replace("'", '"')  # Single quotes to double
+                    json_str_clean = re.sub(r',(\s*[}\]])', r'\1', json_str_clean)  # Trailing commas
+                    try:
+                        extraction = json.loads(json_str_clean)
+                        print(f"      ✅ Salvaged JSON after cleaning")
+                    except:
+                        print(f"      ❌ Could not salvage JSON, returning empty")
+                        return {}
+
+                new_facts = extraction.get('new_facts', [])
+
+                # Convert to storage format
+                new_entities = {}
+
+                for fact in new_facts:
+                    fact_type = fact.get('type', 'unknown')
+                    fact_value = fact.get('value', '')
+                    fact_context = fact.get('context', '')
+
+                    if not fact_value:
+                        continue
+
+                    # Store in memory-compatible format
+                    if 'memories' not in new_entities:
+                        new_entities['memories'] = []
+
+                    new_entities['memories'].append({
+                        'type': fact_type,
+                        'value': fact_value,
+                        'context': fact_context,
+                        'timestamp': datetime.now().isoformat()
+                    })
+
+                    # Also extract specific entities for backward compatibility
+                    if fact_type == 'name' and 'user_name' not in current_entities:
+                        new_entities['user_name'] = fact_value
+
+                return new_entities
+            else:
+                print(f"      ⚠️  LLM entity extraction: No JSON in response")
+                return {}
+
+        except Exception as e:
+            print(f"      ⚠️  LLM entity extraction failed: {e}")
+            return {}
+
+    def _format_existing_entities(self, entities: Dict) -> str:
+        """Format existing entities for LLM context."""
+        if not entities:
+            return "(No facts stored yet)"
+
+        lines = []
+
+        if 'user_name' in entities:
+            lines.append(f"- Name: {entities['user_name']}")
+
+        if 'memories' in entities:
+            for memory in entities.get('memories', [])[-10:]:  # Last 10 memories
+                mem_type = memory.get('type', 'fact')
+                mem_value = memory.get('value', '')
+                lines.append(f"- {mem_type.capitalize()}: {mem_value}")
+
+        return "\n".join(lines) if lines else "(No facts stored yet)"

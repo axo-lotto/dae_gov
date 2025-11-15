@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-11-14T12:42:05.845157",
-  "total_occasions_processed": 70,
-  "total_unique_users": 33,
+  "last_updated": "2025-11-15T00:56:56.631956",
+  "total_occasions_processed": 130,
+  "total_unique_users": 38,
   "current_snapshot": {
-    "timestamp": "2025-11-14T12:00:00",
+    "timestamp": "2025-11-15T00:00:00",
     "total_occasions": 10,
     "mean_v0_descent": 0.0,
     "std_v0_descent": 0.0,
-    "mean_convergence_cycles": -8.256008945646002,
+    "mean_convergence_cycles": -16.939804846534866,
     "kairos_detection_rate": 1.0,
     "zone_distribution": {
       "3": 1.0
@@ -15,18 +15,42 @@
     "polyvagal_distribution": {
       "mixed_state": 1.0
     },
-    "mean_organ_activations": {},
-    "std_organ_activations": {},
-    "mean_nexuses_formed": 10.119806488789285,
+    "mean_organ_activations": {
+      "LISTENING": -0.18081106475381775,
+      "EMPATHY": -12.500475913281182,
+      "WISDOM": 15.190392750379322,
+      "AUTHENTICITY": 14.387385285348833,
+      "PRESENCE": 7.2647114754503885,
+      "BOND": -16.29958015462785,
+      "SANS": 1.5936798038809403,
+      "NDAM": -0.4288749342730491,
+      "RNX": -6.604023168403947,
+      "EO": -15.400949364409946,
+      "CARD": -0.8816691309619844
+    },
+    "std_organ_activations": {
+      "LISTENING": 8.135878058464357,
+      "EMPATHY": -9.471277176706526,
+      "WISDOM": -6.093918506360467,
+      "AUTHENTICITY": -20.874202811341224,
+      "PRESENCE": 3.390258031718338,
+      "BOND": 16.618390390262107,
+      "SANS": 4.829618593218232,
+      "NDAM": -8.150919387508281,
+      "RNX": 4.009551490113024,
+      "EO": 13.937631091577924,
+      "CARD": 9.082563395497786
+    },
+    "mean_nexuses_formed": 24.60613246336042,
     "nexus_type_distribution": {},
     "pathway_distribution": {
       "maintain": 1.0
     },
-    "mean_healing_score": 5.318114437635345,
+    "mean_healing_score": 4.329947495946746,
     "crisis_rate": 0.0,
     "heckling_rate": 0.0,
-    "mean_ndam_urgency": 8.875971807063113,
-    "mean_emission_confidence": 5.962050342143406,
+    "mean_ndam_urgency": -23.97418008501375,
+    "mean_emission_confidence": 7.775124224225517,
     "emission_mode_distribution": {
       "hebbian_fallback": 1.0
     },
@@ -244,6 +268,312 @@
       },
       "cohort_size": 10,
       "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T16:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 10.242015687886367,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {},
+      "std_organ_activations": {},
+      "mean_nexuses_formed": 7.29810456186968,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {},
+      "mean_healing_score": 0.0,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": -1.3933780811550822,
+      "mean_emission_confidence": 10.871803604757885,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T19:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 29.08605872017398,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {
+        "LISTENING": 5.469613304439599,
+        "EMPATHY": 9.156608746664642,
+        "WISDOM": -71.1043339350031,
+        "AUTHENTICITY": 9.233864441927192,
+        "PRESENCE": -6.721058351111915,
+        "BOND": 0.05981994359906897,
+        "SANS": 25.493642002904373,
+        "NDAM": -32.071707402317514,
+        "RNX": -10.474968946288563,
+        "EO": 22.597321086415903,
+        "CARD": -6.165142398464827
+      },
+      "std_organ_activations": {
+        "LISTENING": -11.738436284264168,
+        "EMPATHY": 1.1102701082542108,
+        "WISDOM": 20.02148055992967,
+        "AUTHENTICITY": -1.5007697142041345,
+        "PRESENCE": -8.003397836950013,
+        "BOND": 1.5590598095188688,
+        "SANS": -9.431034511489102,
+        "NDAM": 16.43291644969058,
+        "RNX": 5.459737012182946,
+        "EO": -31.632455532781126,
+        "CARD": 3.4102318652269634
+      },
+      "mean_nexuses_formed": -0.816924900345818,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 0.9,
+        "deepening_attunement": 0.1
+      },
+      "mean_healing_score": -7.638284386355729,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.1,
+      "mean_ndam_urgency": -3.851963305929921,
+      "mean_emission_confidence": 0.9941081839019608,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T22:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 11.094170220198855,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {
+        "LISTENING": 11.525538551036778,
+        "EMPATHY": -26.69236819219595,
+        "WISDOM": -6.24223198024325,
+        "AUTHENTICITY": -0.6345899257487596,
+        "PRESENCE": 8.841980684752887,
+        "BOND": 2.6871254340016923,
+        "SANS": 14.28768487633219,
+        "NDAM": 23.56724306798597,
+        "RNX": -15.78940288618411,
+        "EO": -7.711343883529222,
+        "CARD": 2.5356881388614116
+      },
+      "std_organ_activations": {
+        "LISTENING": -5.08012350341176,
+        "EMPATHY": -13.10546625861628,
+        "WISDOM": -3.415375301904946,
+        "AUTHENTICITY": -13.04368622861999,
+        "PRESENCE": -15.668324709922699,
+        "BOND": -11.044998520891458,
+        "SANS": -2.2799684052140927,
+        "NDAM": 18.04870567869356,
+        "RNX": -8.188750959532992,
+        "EO": 1.8494290017972037,
+        "CARD": -0.8756913035614411
+      },
+      "mean_nexuses_formed": 28.573117486480278,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 0.8,
+        "recursive_grounding": 0.2
+      },
+      "mean_healing_score": 11.049844853482222,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": -7.648971447224371,
+      "mean_emission_confidence": -7.09864514660458,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-14T22:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 11.151811826818097,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {
+        "LISTENING": -3.3635041336518072,
+        "EMPATHY": 0.83765131404492,
+        "WISDOM": 0.7375839224421681,
+        "AUTHENTICITY": 14.385010738623503,
+        "PRESENCE": 0.05203216029489745,
+        "BOND": -21.13905122401883,
+        "SANS": 8.926375676665543,
+        "NDAM": -2.6196712980258363,
+        "RNX": -0.9034450178213969,
+        "EO": -6.861290159801645,
+        "CARD": 3.022724286184938
+      },
+      "std_organ_activations": {
+        "LISTENING": 6.602610968531096,
+        "EMPATHY": -14.784418209295414,
+        "WISDOM": 2.161973337204432,
+        "AUTHENTICITY": 9.976006522254567,
+        "PRESENCE": -9.443198593253522,
+        "BOND": -10.882587179035013,
+        "SANS": 0.5048368411281882,
+        "NDAM": 58.051456074371686,
+        "RNX": 4.43452486194221,
+        "EO": 3.849014050454435,
+        "CARD": 14.486770780186028
+      },
+      "mean_nexuses_formed": 10.36085776648788,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": -10.738571123820615,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": 0.5481866434535073,
+      "mean_emission_confidence": 12.923629022356598,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-15T00:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": 1.5301497390418026,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {
+        "LISTENING": 13.017286327939964,
+        "EMPATHY": 10.018219150636531,
+        "WISDOM": 5.397221804078681,
+        "AUTHENTICITY": 3.3216068192986765,
+        "PRESENCE": 3.3676765453263533,
+        "BOND": 21.754167818747483,
+        "SANS": 39.608181599731395,
+        "NDAM": 3.5370058117688226,
+        "RNX": -4.8140293460341415,
+        "EO": 13.326363302167316,
+        "CARD": 14.913188647278805
+      },
+      "std_organ_activations": {
+        "LISTENING": -5.0131156497507545,
+        "EMPATHY": 1.3853910365179856,
+        "WISDOM": 21.29487191636482,
+        "AUTHENTICITY": -2.1349008791049155,
+        "PRESENCE": 17.115288094335998,
+        "BOND": -5.039695543557308,
+        "SANS": 10.50281837631658,
+        "NDAM": -4.267629622820252,
+        "RNX": -14.567726007530279,
+        "EO": -10.81493356943006,
+        "CARD": 2.4010340867104993
+      },
+      "mean_nexuses_formed": -1.893939945041427,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": -39.06852990062648,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": -5.493161268013623,
+      "mean_emission_confidence": 1.2788139777737904,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
+    },
+    {
+      "timestamp": "2025-11-15T00:00:00",
+      "total_occasions": 10,
+      "mean_v0_descent": 0.0,
+      "std_v0_descent": 0.0,
+      "mean_convergence_cycles": -16.939804846534866,
+      "kairos_detection_rate": 1.0,
+      "zone_distribution": {
+        "3": 1.0
+      },
+      "polyvagal_distribution": {
+        "mixed_state": 1.0
+      },
+      "mean_organ_activations": {
+        "LISTENING": -0.18081106475381775,
+        "EMPATHY": -12.500475913281182,
+        "WISDOM": 15.190392750379322,
+        "AUTHENTICITY": 14.387385285348833,
+        "PRESENCE": 7.2647114754503885,
+        "BOND": -16.29958015462785,
+        "SANS": 1.5936798038809403,
+        "NDAM": -0.4288749342730491,
+        "RNX": -6.604023168403947,
+        "EO": -15.400949364409946,
+        "CARD": -0.8816691309619844
+      },
+      "std_organ_activations": {
+        "LISTENING": 8.135878058464357,
+        "EMPATHY": -9.471277176706526,
+        "WISDOM": -6.093918506360467,
+        "AUTHENTICITY": -20.874202811341224,
+        "PRESENCE": 3.390258031718338,
+        "BOND": 16.618390390262107,
+        "SANS": 4.829618593218232,
+        "NDAM": -8.150919387508281,
+        "RNX": 4.009551490113024,
+        "EO": 13.937631091577924,
+        "CARD": 9.082563395497786
+      },
+      "mean_nexuses_formed": 24.60613246336042,
+      "nexus_type_distribution": {},
+      "pathway_distribution": {
+        "maintain": 1.0
+      },
+      "mean_healing_score": 4.329947495946746,
+      "crisis_rate": 0.0,
+      "heckling_rate": 0.0,
+      "mean_ndam_urgency": -23.97418008501375,
+      "mean_emission_confidence": 7.775124224225517,
+      "emission_mode_distribution": {
+        "hebbian_fallback": 1.0
+      },
+      "cohort_size": 10,
+      "privacy_noise_scale": 10.0
     }
   ],
   "milestones": [
@@ -274,16 +604,21 @@
   ],
   "field_dynamics": [],
   "learned_organism_patterns": {
-    "typical_v0_descent": 0.23914845000000007,
-    "typical_convergence_cycles": 1.2726407488085711,
-    "typical_emission_confidence": -1.2440054981547783,
-    "typical_crisis_rate": 0.09820764000000003,
-    "typical_heckling_rate": 0.11842695000000002,
-    "typical_healing_score": -1.090094595392428
+    "typical_v0_descent": 0.12709329141645007,
+    "typical_convergence_cycles": 3.3452453280572305,
+    "typical_emission_confidence": 1.468005443103886,
+    "typical_crisis_rate": 0.05219156640924002,
+    "typical_heckling_rate": 0.06949793673495003,
+    "typical_healing_score": -4.227932313131071
   },
   "self_insights": [
     "Crisis handling shows maturity: 40.0% crisis rate with mean urgency -26.41 (grounded response)",
     "Kairos detection active: 100.0% of occasions reach opportune coherence moment",
-    "Crisis handling shows maturity: 50.0% crisis rate with mean urgency -4.10 (grounded response)"
+    "Crisis handling shows maturity: 50.0% crisis rate with mean urgency -4.10 (grounded response)",
+    "Most active organ triad: SANS-EO-AUTHENTICITY (mean activations: 25.49, 22.60, 9.23)",
+    "Most active organ triad: NDAM-SANS-LISTENING (mean activations: 23.57, 14.29, 11.53)",
+    "Most active organ triad: AUTHENTICITY-SANS-CARD (mean activations: 14.39, 8.93, 3.02)",
+    "Most active organ triad: SANS-BOND-CARD (mean activations: 39.61, 21.75, 14.91)",
+    "Most active organ triad: WISDOM-AUTHENTICITY-PRESENCE (mean activations: 15.19, 14.39, 7.26)"
   ]
 }

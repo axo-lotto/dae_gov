@@ -438,7 +438,7 @@ class Config:
     LOCAL_LLM_BACKEND = "ollama"  # "ollama", "lmstudio", "gpt4all"
     LOCAL_LLM_MODEL = "llama3.2:3b"
     LOCAL_LLM_ENDPOINT = "http://localhost:11434/api/generate"
-    LOCAL_LLM_MAX_TOKENS = 150
+    LOCAL_LLM_MAX_TOKENS = 400  # 🌀 Nov 14, 2025: Increased for deep conversations (was 150)
     LOCAL_LLM_TEMPERATURE = 0.7
     LOCAL_LLM_TIMEOUT = 30  # seconds (Nov 13, 2025 - increased for felt-guided LLM)
 
@@ -452,6 +452,28 @@ class Config:
     LLM_NEVER_IN_ZONES = [4, 5]  # Protective/collapse zones
     LLM_NEVER_IF_NDAM_ABOVE = 0.7  # Crisis threshold
     LLM_NEVER_FOR_THERAPEUTIC = True  # Therapeutic core always DAE-only
+
+    # ============================================================================
+    # NEO4J KNOWLEDGE GRAPH CONFIGURATION (Phase 1.8++ - NOV 14, 2025)
+    # ============================================================================
+
+    # 🌀 PRIMARY NEO4J TOGGLE - Entity memory enrichment with graph relationships
+    NEO4J_ENABLED = True  # ✅ ENABLED - Aura instance f63b4064 running (Nov 14, 2025)
+
+    # Neo4j Connection (Neo4j Aura - Free instance f63b4064)
+    NEO4J_URI = "neo4j+s://f63b4064.databases.neo4j.io"  # Neo4j Aura secure connection
+    NEO4J_USER = "neo4j"
+    NEO4J_PASSWORD = "zHKglO35XeFD-dhxj6mp5L0WnkAXVD8WVS34pth4AI0"  # Aura instance password
+    NEO4J_DATABASE = "neo4j"  # Default database
+
+    # Entity Memory Settings
+    NEO4J_MAX_ENTITIES_IN_CONTEXT = 20  # Max entities to include in LLM context
+    NEO4J_RELATIONSHIP_MAX_HOPS = 2  # Max relationship hops for graph queries
+    NEO4J_ENABLE_TSK_ENRICHMENT = True  # Store polyvagal state, urgency with entities
+
+    # Storage Strategy
+    NEO4J_DUAL_STORAGE = True  # Store in BOTH JSON (fallback) and Neo4j (enrichment)
+    NEO4J_FALLBACK_ON_ERROR = True  # Continue with JSON-only if Neo4j fails
 
     # ============================================================================
     # HYBRID SUPERJECT CONFIGURATION (WEEK 1 - NOV 13, 2025)

@@ -327,7 +327,8 @@ class EmpathyTextCore:
         self,
         occasions: List,  # List[TextOccasion]
         cycle: int
-    ) -> EmpathyResult:
+    ,
+        context: Optional[Dict] = None) -> EmpathyResult:
         """
         Process text occasions to detect empathy patterns.
 

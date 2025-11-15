@@ -83,6 +83,21 @@ class EntityDifferentiator:
         r'\bhow has (your|you) (learning|growth|evolution)\b'
     ]
 
+    # 🌀 Phase 1.6: Negative patterns to exclude simple greetings (Nov 14, 2025)
+    NEGATIVE_PATTERNS = [
+        # Simple greetings
+        r'\b(hello|hi|hey|greetings|howdy)\b',
+        # Introductions
+        r'\bmy name is\b',
+        r"\bi'?m [a-zA-Z]+\b",
+        # Casual conversation starters
+        r'\bhow are you doing\b',
+        r'\bhow are you today\b',
+        r'\bhow is (it|everything) going\b',
+        # Simple acknowledgments
+        r'\b(thanks|thank you|okay|ok|sure|alright)\b'
+    ]
+
     # ===== USER REFLECTION PATTERNS =====
 
     USER_REFLECTION_PATTERNS = [
@@ -140,9 +155,21 @@ class EntityDifferentiator:
             "I'm curious about myself" → ('user', 0.90)
             "How are we doing?" → ('relationship', 0.80)
             "You know?" → ('ambiguous', 0.3)
+            "Hello there, my name is jason!" → ('ambiguous', 0.2) - excluded by negative patterns
         """
 
         text = user_input.lower()
+
+        # 🌀 Phase 1.6: Check negative patterns first (Nov 14, 2025)
+        # Exclude simple greetings and casual conversation from triggering organism self-awareness
+        negative_matches = sum(
+            1 for pattern in self.NEGATIVE_PATTERNS
+            if self.re.search(pattern, text, self.re.IGNORECASE)
+        )
+
+        if negative_matches > 0:
+            # Simple greeting or casual conversation - don't trigger organism self-awareness
+            return ('ambiguous', 0.2)
 
         # Count pattern matches for each entity type
         dae_score = sum(
@@ -167,10 +194,16 @@ class EntityDifferentiator:
             # No clear pattern match
             return ('ambiguous', 0.3)
 
+        # 🌀 Phase 1.6: Require higher confidence for DAE detection (Nov 14, 2025)
         # Compute confidence as proportion of matches
         if dae_score > user_score and dae_score > relationship_score:
             confidence = min(dae_score / (total + 1), 0.95)
-            return ('dae', confidence)
+            # Require at least 2 pattern matches OR confidence > 0.65 for strong DAE detection
+            if dae_score >= 2 or confidence > 0.65:
+                return ('dae', confidence)
+            else:
+                # Low confidence DAE detection - treat as ambiguous
+                return ('ambiguous', 0.4)
 
         if user_score > dae_score and user_score > relationship_score:
             confidence = min(user_score / (total + 1), 0.95)

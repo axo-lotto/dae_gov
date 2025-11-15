@@ -3,8 +3,8 @@
     "user_id": "user_20251113_133354",
     "username": "Alice",
     "created_at": "2025-11-13T13:33:54.131910",
-    "total_sessions": 1,
-    "total_turns": 10,
+    "total_sessions": 2,
+    "total_turns": 11,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251113_133354_state.json"
   },
@@ -30,8 +30,8 @@
     "user_id": "user_20251113_143117",
     "username": "Emi",
     "created_at": "2025-11-13T14:31:17.336687",
-    "total_sessions": 7,
-    "total_turns": 32,
+    "total_sessions": 29,
+    "total_turns": 141,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251113_143117_state.json"
   },
@@ -39,9 +39,27 @@
     "user_id": "user_20251113_232232",
     "username": "Jason",
     "created_at": "2025-11-13T23:22:32.438093",
+    "total_sessions": 7,
+    "total_turns": 17,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251113_232232_state.json"
+  },
+  "user_20251114_145956": {
+    "user_id": "user_20251114_145956",
+    "username": "e",
+    "created_at": "2025-11-14T14:59:56.488818",
     "total_sessions": 2,
     "total_turns": 5,
     "organic_family_id": null,
-    "user_state_path": "persona_layer/users/user_20251113_232232_state.json"
+    "user_state_path": "persona_layer/users/user_20251114_145956_state.json"
+  },
+  "user_20251114_235624": {
+    "user_id": "user_20251114_235624",
+    "username": "hi alice, testing the continuous reflection fix",
+    "created_at": "2025-11-14T23:56:24.825234",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_235624_state.json"
   }
 }

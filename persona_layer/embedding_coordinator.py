@@ -89,13 +89,26 @@ class EmbeddingCoordinator:
                     EmbeddingCoordinator._initialized = True
 
     def _ensure_model_loaded(self):
-        """Lazy load sentence transformer model."""
+        """Lazy load sentence transformer model (offline-first)."""
         if EmbeddingCoordinator._model is None:
             with EmbeddingCoordinator._lock:
                 if EmbeddingCoordinator._model is None:
                     print("📦 EmbeddingCoordinator: Loading sentence transformer...")
-                    EmbeddingCoordinator._model = SentenceTransformer('all-MiniLM-L6-v2')
-                    print("✅ EmbeddingCoordinator: Model loaded (all-MiniLM-L6-v2, 384D)")
+                    try:
+                        # Try offline-first (use cached model, don't check for updates)
+                        import os
+                        os.environ['TRANSFORMERS_OFFLINE'] = '1'
+                        EmbeddingCoordinator._model = SentenceTransformer(
+                            'all-MiniLM-L6-v2',
+                            cache_folder=None  # Use default cache (~/.cache/torch/sentence_transformers)
+                        )
+                        print("✅ EmbeddingCoordinator: Model loaded from cache (all-MiniLM-L6-v2, 384D)")
+                    except Exception as e:
+                        # If offline fails, allow online download
+                        print(f"⚠️  Offline load failed, downloading model: {e}")
+                        os.environ.pop('TRANSFORMERS_OFFLINE', None)
+                        EmbeddingCoordinator._model = SentenceTransformer('all-MiniLM-L6-v2')
+                        print("✅ EmbeddingCoordinator: Model loaded (all-MiniLM-L6-v2, 384D)")
 
     def embed(self, text: str, use_cache: bool = True) -> np.ndarray:
         """

@@ -295,7 +295,8 @@ class AuthenticityTextCore:
         self,
         occasions: List,  # List[TextOccasion]
         cycle: int
-    ) -> AuthenticityResult:
+    ,
+        context: Optional[Dict] = None) -> AuthenticityResult:
         """
         Process text occasions to detect authenticity patterns.
 

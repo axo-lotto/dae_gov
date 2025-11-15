@@ -1,0 +1,401 @@
+{
+  "timestamp": "2025-11-14T16:21:25.752276",
+  "total_scenarios": 5,
+  "scenarios_passed": 0,
+  "scenarios_failed": 5,
+  "scenario_results": [
+    {
+      "scenario_id": "entity_mem_001",
+      "name": "Basic Name Memory",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "Hi! My name is Sarah.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "entities_stored": [
+              "user_name"
+            ],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Sarah"
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "user_input": "What's the weather like?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Sarah",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Sarah"
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "user_input": "Do you remember my name?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Sarah",
+            "entities_stored": [
+              "user_name"
+            ],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Sarah",
+              "Yes"
+            ]
+          }
+        }
+      ],
+      "overall_success": false,
+      "failures": [
+        "Turn 1: Expected terms not in response: ['Sarah']",
+        "Turn 2: Expected terms not in response: ['Sarah']",
+        "Turn 3: Expected terms not in response: ['Sarah', 'Yes']"
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_002",
+      "name": "Family Relationship Memory",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "Please remember: I have two daughters, Emma and Lily.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "entities_stored": [],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Emma",
+              "Lily",
+              "daughters"
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "user_input": "Tell me about parenting challenges.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "daughters"
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "user_input": "What are my daughters' names?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "entities_stored": [
+              "relationships"
+            ],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Emma",
+              "Lily"
+            ]
+          }
+        }
+      ],
+      "overall_success": false,
+      "failures": [
+        "Turn 1: Expected terms not in response: ['Emma', 'Lily', 'daughters']",
+        "Turn 2: Expected terms not in response: ['daughters']",
+        "Turn 3: Expected terms not in response: ['Emma', 'Lily']"
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_003",
+      "name": "Multi-Entity Complex Memory",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My name is Alex, I work at TechCorp, and my partner is Jordan.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "entities_stored": [
+              "user_name"
+            ],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Alex",
+              "TechCorp",
+              "Jordan"
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "user_input": "I'm stressed about work.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Alex",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "TechCorp"
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "user_input": "Jordan and I are planning a trip.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Alex",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "partner",
+              "Jordan"
+            ]
+          }
+        },
+        {
+          "turn": 4,
+          "user_input": "What do you know about me?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Alex",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Alex",
+              "TechCorp",
+              "Jordan"
+            ]
+          }
+        }
+      ],
+      "overall_success": false,
+      "failures": [
+        "Turn 1: Expected terms not in response: ['Alex', 'TechCorp', 'Jordan']",
+        "Turn 2: Expected terms not in response: ['TechCorp']",
+        "Turn 3: Expected terms not in response: ['partner', 'Jordan']",
+        "Turn 4: Expected terms not in response: ['Alex', 'TechCorp', 'Jordan']"
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_004",
+      "name": "Crisis vs Healing Context (TSK Enrichment)",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My friend Alice is in the hospital right now, I'm really worried.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Alice"
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "user_input": "Alice came home from the hospital today! She's doing much better.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Alice"
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "user_input": "How is Alice doing?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Alice",
+              "better",
+              "hospital"
+            ]
+          }
+        }
+      ],
+      "overall_success": false,
+      "failures": [
+        "Turn 1: Expected terms not in response: ['Alice']",
+        "Turn 2: Expected terms not in response: ['Alice']",
+        "Turn 3: Expected terms not in response: ['Alice', 'better', 'hospital']"
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_005",
+      "name": "Entity Update Resolution",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My name is Bob.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": false,
+            "entities_extracted": true,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": null,
+            "entities_stored": [
+              "user_name"
+            ],
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Bob"
+            ]
+          }
+        },
+        {
+          "turn": 2,
+          "user_input": "Actually, I prefer to go by Robert.",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Bob",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Robert"
+            ]
+          }
+        },
+        {
+          "turn": 3,
+          "user_input": "What's my name?",
+          "success": false,
+          "checks": {
+            "entity_context_loaded": true,
+            "entities_extracted": false,
+            "organism_processed": true,
+            "contains_expected_entities": false,
+            "avoids_forbidden_terms": true
+          },
+          "diagnostics": {
+            "entity_context_string": "Known information:\n- User's name: Bob",
+            "emission": "(no emission)",
+            "emission_confidence": 0.0,
+            "missing_terms": [
+              "Robert"
+            ]
+          }
+        }
+      ],
+      "overall_success": false,
+      "failures": [
+        "Turn 1: Expected terms not in response: ['Bob']",
+        "Turn 2: Expected terms not in response: ['Robert']",
+        "Turn 3: Expected terms not in response: ['Robert']"
+      ]
+    }
+  ]
+}

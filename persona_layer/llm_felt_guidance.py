@@ -313,12 +313,13 @@ class FeltGuidedLLMGenerator:
         # 4. EMOTIONAL ATTUNEMENT: From EMPATHY + LISTENING
         constraints.empathy_level = lures.empathy_resonance
 
+        # 🔥 Nov 14, 2025: Balance inquiry with content delivery
         if lures.listening_focus == "deep":
-            constraints.inquiry_depth = "deep"
+            constraints.inquiry_depth = "thoughtful"  # 🔥 "thoughtful" not "deep" - less interrogative
         elif lures.listening_focus == "targeted":
-            constraints.inquiry_depth = "moderate"
+            constraints.inquiry_depth = "light"       # 🔥 "light" not "moderate" - fewer questions
         else:
-            constraints.inquiry_depth = "surface"
+            constraints.inquiry_depth = "minimal"     # 🔥 "minimal" not "surface" - prioritize content
 
         # 5. VOICE QUALITIES: From AUTHENTICITY + PRESENCE + WISDOM
         constraints.honesty_level = lures.authenticity_vulnerability
@@ -345,7 +346,9 @@ class FeltGuidedLLMGenerator:
         lures: FeltLures,
         memory_context: Optional[List[Dict]] = None,
         organism_narrative: Optional[str] = None,  # 🌀 PHASE 1.6: Organism self-narrative (Nov 14, 2025)
-        username: Optional[str] = None  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
+        username: Optional[str] = None,  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
+        entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8: Entity memory context (Nov 14, 2025)
+        memory_intent: bool = False  # 🌀 PHASE 1.8: Memory acknowledgment instruction (Nov 14, 2025)
     ) -> str:
         """
         Build LLM prompt from felt constraints.
@@ -356,6 +359,7 @@ class FeltGuidedLLMGenerator:
         🌀 PHASE 1.5b: Includes emoji suggestions from felt states (Nov 13, 2025)
         🌀 PHASE 1.6: Includes organism self-narrative when user asks about DAE (Nov 14, 2025)
         🌀 PHASE 1.6: Includes username for personalized responses (Nov 14, 2025)
+        🌀 PHASE 1.8: Includes extracted entity context for memory-aware responses (Nov 14, 2025)
 
         Args:
             user_input: User's message
@@ -376,32 +380,74 @@ class FeltGuidedLLMGenerator:
             prompt += organism_narrative + "\n\n"
             prompt += "---\n\n"
         else:
-            # Base instruction (minimal - let felt constraints guide)
-            prompt = "You are responding as a felt-intelligent companion organism.\n\n"
+            # 🎭 Nov 14, 2025: Subtle companion identity (NOT verbose)
+            prompt = """You are DAE, a conversational companion.
+
+Your core nature:
+- Build on what's offered ("yes, and")
+- Remember narrative threads
+- Respond naturally, not meta-analytically
+- Use minimal emojis (1-2 max, or none)
+
+Speak directly. Avoid explaining yourself or your process.
+
+"""
 
         # 🌀 PHASE 1.6: Add username for personalization (Nov 14, 2025)
         if username:
             prompt += f"You are conversing with {username}. Use their name naturally when appropriate.\n\n"
 
-        # Felt state context (EMERGENT, not template)
-        prompt += f"Current felt state:\n"
-        prompt += f"- Tone: {constraints.tone}\n"
-        prompt += f"- Polyvagal: {lures.polyvagal_state}\n"
-        prompt += f"- Response scale: {constraints.response_length} ({constraints.detail_level} detail)\n"
-        prompt += f"- Dominant organs: {', '.join(lures.dominant_organs)}\n"
+        # 🌀 PHASE 1.8: Add extracted entity context for memory-aware responses (Nov 14, 2025)
+        if entity_context_string:
+            prompt += entity_context_string + "\n\n"
+
+        # 🌀 PHASE 1.8: Add memory acknowledgment instruction (Nov 14, 2025)
+        if memory_intent:
+            prompt += "The user has asked you to remember information. Explicitly acknowledge what you'll remember in your response.\n\n"
+
+        # 🌀 Nov 14, 2025: Removed organ/state exposure to prevent meta-commentary
+        # Organs guide response quality through constraints (implicit), not through mentions (explicit)
 
         # Safety constraints (if trauma/crisis present)
         if lures.trauma_present:
-            prompt += f"\n⚠️ Trauma awareness: Be extra gentle (gentleness: {constraints.gentleness_level:.1f})\n"
+            prompt += f"\n⚠️ Extra gentleness needed in this moment.\n"
         if lures.crisis_level > 0.5:
-            prompt += f"\n🚨 Crisis detected: Keep response brief and grounding\n"
+            prompt += f"\n🚨 Keep response brief and grounding - crisis present.\n"
 
-        # Voice emergence (from felt qualities, not template)
-        prompt += f"\nVoice qualities (emergent from felt state):\n"
-        prompt += f"- Empathy: {constraints.empathy_level:.1f}\n"
-        prompt += f"- Groundedness: {constraints.groundedness:.1f}\n"
-        prompt += f"- Honesty: {constraints.honesty_level:.1f}\n"
-        prompt += f"- Reflection depth: {constraints.reflection_depth:.1f}\n"
+        # Conversational guidance (implicit felt constraints - NO numeric scores or organ names)
+        guidance_parts = []
+
+        # Tone
+        if constraints.tone:
+            guidance_parts.append(f"{constraints.tone} tone")
+
+        # Polyvagal state → natural tone modulation (implicit - NOT mentioned)
+        # 🔥 Nov 14, 2025: Assertiveness enhancement - less grounding, more engaging
+        polyvagal_guidance = {
+            'ventral_vagal': 'warm and engaging',
+            'sympathetic': 'clear and direct',
+            'dorsal_vagal': 'gentle and supportive',
+            'mixed_state': 'responsive and natural'
+        }
+        if lures.polyvagal_state in polyvagal_guidance:
+            guidance_parts.append(polyvagal_guidance[lures.polyvagal_state])
+
+        # Response scale
+        guidance_parts.append(f"{constraints.response_length} response")
+
+        # Empathy/groundedness/honesty/reflection (implicit - NO numeric exposure)
+        if constraints.empathy_level > 0.7:
+            guidance_parts.append("empathetic")
+        if constraints.groundedness > 0.7:
+            guidance_parts.append("grounded")
+        if constraints.honesty_level > 0.7:
+            guidance_parts.append("honest")
+        if constraints.reflection_depth > 0.7:
+            guidance_parts.append("reflective")
+
+        # Build natural conversational guidance
+        if guidance_parts:
+            prompt += f"\nConversational approach: {', '.join(guidance_parts)}.\n"
 
         # 🌀 PHASE 1.5b: Emoji suggestions from felt states (Nov 13, 2025)
         emoji_suggestions = self._get_emoji_suggestions(lures, constraints)
@@ -423,18 +469,32 @@ class FeltGuidedLLMGenerator:
         prompt += f"\n---\nUser: {user_input}\n\n"
 
         # Generation instruction (felt-guided)
+        # 🔥 Nov 14, 2025: More assertive generation instruction
         prompt += f"Respond with {constraints.tone} tone, "
-        prompt += f"{constraints.response_length} length, "
-        prompt += f"{constraints.inquiry_depth} inquiry. "
+        prompt += f"{constraints.response_length} length. "
+
+        # 🎭 Nov 14, 2025: Natural conversational flow (NO meta-commentary)
+        # Removed verbose "Yes, and" section - let it emerge naturally
+        # Removed organism self-reference instructions - avoid meta-talk
+
+        # Only mention inquiry if actually needed (not default)
+        if constraints.inquiry_depth in ["thoughtful", "moderate", "deep"]:
+            prompt += f"Ask {constraints.inquiry_depth} questions if genuinely needed. "
+        else:
+            prompt += "Focus on delivering helpful content. "  # 🔥 Default: content delivery, not questions
 
         if constraints.gentleness_level > 0.7:
             prompt += "Be very gentle. "
 
-        if lures.presence_grounding > 0.7:
-            prompt += "Keep it grounded and simple. "
+        # 🔥 Nov 14, 2025: Reduced over-grounding for assertiveness
+        # Only add grounding when ACTUALLY needed (crisis/trauma), not as default stance
+        if lures.presence_grounding > 0.85:  # 🔥 Raised threshold from 0.7 to 0.85
+            # Only ground when REALLY high presence activation (rare)
+            if lures.crisis_level > 0.5 or lures.trauma_present:
+                prompt += "Keep it grounded and simple. "
 
         if lures.wisdom_reflection > 0.7:
-            prompt += "Offer reflection if appropriate. "
+            prompt += "Offer insight and reflection. "  # 🔥 Removed "if appropriate" - just do it!
 
         # 🌀 PHASE 1.5c: Zone 5 felt guidance (Nov 13, 2025)
         # Trust the organism's transductive intelligence - nexuses guide the way
@@ -457,7 +517,9 @@ class FeltGuidedLLMGenerator:
         satisfaction: float,
         memory_context: Optional[List[Dict]] = None,
         organism_narrative: Optional[str] = None,  # 🌀 PHASE 1.6: Organism self-narrative (Nov 14, 2025)
-        username: Optional[str] = None  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
+        username: Optional[str] = None,  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
+        entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++: Entity memory context (Nov 14, 2025)
+        memory_intent: bool = False  # 🌀 PHASE 1.8++: Memory acknowledgment instruction (Nov 14, 2025)
     ) -> Tuple[str, float, Dict]:
         """
         Generate unlimited linguistic expression guided by felt states.
@@ -466,6 +528,7 @@ class FeltGuidedLLMGenerator:
 
         🌀 PHASE 1.6: Supports organism self-reference when user asks about DAE (Nov 14, 2025)
         🌀 PHASE 1.6: Supports personalized responses using username (Nov 14, 2025)
+        🌀 PHASE 1.8++: Supports entity memory context for remembering names/facts (Nov 14, 2025)
 
         Args:
             user_input: User's message
@@ -476,6 +539,8 @@ class FeltGuidedLLMGenerator:
             memory_context: Similar past moments
             organism_narrative: Organism self-narrative (when entity_ref=='dae')
             username: User's name for personalization
+            entity_context_string: Known entities (names, relationships, facts)
+            memory_intent: Whether user explicitly requested memory storage
 
         Returns:
             Tuple of (emission_text, confidence, metadata)
@@ -512,7 +577,9 @@ class FeltGuidedLLMGenerator:
             lures=lures,
             memory_context=memory_context,
             organism_narrative=organism_narrative,  # 🌀 PHASE 1.6: Pass organism self-narrative
-            username=username  # 🌀 PHASE 1.6: Pass username for personalization
+            username=username,  # 🌀 PHASE 1.6: Pass username for personalization
+            entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++: Pass entity memory context
+            memory_intent=memory_intent  # 🌀 PHASE 1.8++: Pass memory acknowledgment flag
         )
 
         # 5. Query LLM with felt guidance
@@ -623,13 +690,17 @@ class FeltGuidedLLMGenerator:
         return unique[:6]
 
     def _length_to_tokens(self, length: str) -> int:
-        """Convert response length to token count."""
+        """
+        Convert response length to token count.
+
+        🔥 Nov 14, 2025: Reduced token limits for more concise responses
+        """
         mapping = {
-            'short': 50,
-            'medium': 150,
-            'long': 300
+            'short': 40,      # 🔥 Was 50 - even more concise for crisis
+            'medium': 100,    # 🔥 Was 150 - default now more conversational
+            'long': 180       # 🔥 Was 300 - comprehensive but not verbose
         }
-        return mapping.get(length, 150)
+        return mapping.get(length, 100)  # 🔥 Default to 100, not 150
 
     def _apply_safety_filter(self, text: str, lures: FeltLures) -> str:
         """

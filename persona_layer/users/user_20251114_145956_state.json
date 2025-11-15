@@ -1,0 +1,24 @@
+{
+  "user_id": "user_20251114_145956",
+  "username": "e",
+  "created_at": "2025-11-14T14:59:56.488954",
+  "session_history": [
+    {
+      "session_id": "20251114_145956",
+      "timestamp": "2025-11-14T15:03:58.901040",
+      "turns": 3
+    },
+    {
+      "session_id": "20251114_154210",
+      "timestamp": "2025-11-14T15:44:35.311692",
+      "turns": 2
+    }
+  ],
+  "feedback_count": 0,
+  "helpful_rate": 0.0,
+  "excellent_rate": 0.0,
+  "organic_family_membership": [],
+  "last_session": "20251114_154210",
+  "preferred_tone": "balanced",
+  "dae_personality_notes": []
+}

@@ -304,7 +304,8 @@ class WisdomTextCore:
         self,
         occasions: List,  # List[TextOccasion]
         cycle: int
-    ) -> WisdomResult:
+    ,
+        context: Optional[Dict] = None) -> WisdomResult:
         """
         Process text occasions to detect wisdom patterns.
 

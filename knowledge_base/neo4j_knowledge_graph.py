@@ -303,6 +303,317 @@ class Neo4jKnowledgeGraph:
 
         return stats
 
+    # ========================================================================
+    # 🌀 ENTITY MEMORY METHODS (Nov 14, 2025)
+    # Phase 1.8++: Neo4j Integration for Persistent Entity Memory
+    # ========================================================================
+
+    def create_entity(self,
+                      entity_type: str,  # 'Person', 'Place', 'Preference', 'Fact'
+                      entity_value: str,
+                      user_id: str,
+                      properties: Optional[Dict] = None) -> bool:
+        """
+        Create an entity node in the graph.
+
+        Args:
+            entity_type: Type of entity ('Person', 'Place', 'Preference', 'Fact')
+            entity_value: The entity value (e.g., name, location, preference)
+            user_id: User ID who mentioned this entity
+            properties: Additional properties (polyvagal_state, urgency_level, etc.)
+
+        Returns:
+            True if successful, False otherwise
+
+        Example:
+            graph.create_entity('Person', 'Emiliano', 'user_123', {
+                'polyvagal_state': 'ventral',
+                'first_mentioned': '2025-11-14T10:30:00'
+            })
+        """
+        if not self.driver:
+            return False
+
+        from datetime import datetime
+
+        # Set default properties
+        props = properties or {}
+        props['entity_value'] = entity_value
+        props['user_id'] = user_id
+        if 'first_mentioned' not in props:
+            props['first_mentioned'] = datetime.now().isoformat()
+        if 'last_mentioned' not in props:
+            props['last_mentioned'] = datetime.now().isoformat()
+        if 'mention_count' not in props:
+            props['mention_count'] = 1
+
+        query = f"""
+        MERGE (e:{entity_type} {{entity_value: $entity_value, user_id: $user_id}})
+        ON CREATE SET e += $properties
+        ON MATCH SET
+            e.last_mentioned = $last_mentioned,
+            e.mention_count = coalesce(e.mention_count, 0) + 1
+        RETURN e
+        """
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                session.run(
+                    query,
+                    entity_value=entity_value,
+                    user_id=user_id,
+                    properties=props,
+                    last_mentioned=datetime.now().isoformat()
+                )
+            return True
+        except Exception as e:
+            print(f"⚠️  Error creating entity {entity_type}/{entity_value}: {e}")
+            return False
+
+    def create_entity_relationship(self,
+                                    from_entity_value: str,
+                                    to_entity_value: str,
+                                    rel_type: str,  # 'HAS_DAUGHTER', 'HAS_SON', 'LIKES', 'WORKS_AT', etc.
+                                    user_id: str,
+                                    properties: Optional[Dict] = None) -> bool:
+        """
+        Create a relationship between entities.
+
+        Args:
+            from_entity_value: Source entity value
+            to_entity_value: Target entity value
+            rel_type: Relationship type ('HAS_DAUGHTER', 'HAS_SON', 'LIKES', 'WORKS_AT', etc.)
+            user_id: User ID who mentioned this relationship
+            properties: Additional properties (confidence, mentioned_at, etc.)
+
+        Returns:
+            True if successful, False otherwise
+
+        Example:
+            graph.create_entity_relationship('Emiliano', 'Emma', 'HAS_DAUGHTER', 'user_123', {
+                'confidence': 0.95,
+                'mentioned_at': '2025-11-14T10:30:00'
+            })
+        """
+        if not self.driver:
+            return False
+
+        from datetime import datetime
+
+        props = properties or {}
+        if 'mentioned_at' not in props:
+            props['mentioned_at'] = datetime.now().isoformat()
+        if 'user_id' not in props:
+            props['user_id'] = user_id
+
+        # Find entities regardless of type (Person, Place, etc.)
+        query = f"""
+        MATCH (from {{entity_value: $from_value, user_id: $user_id}})
+        MATCH (to {{entity_value: $to_value, user_id: $user_id}})
+        MERGE (from)-[r:{rel_type}]->(to)
+        ON CREATE SET r += $properties
+        ON MATCH SET r.last_updated = $last_updated
+        RETURN r
+        """
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                session.run(
+                    query,
+                    from_value=from_entity_value,
+                    to_value=to_entity_value,
+                    user_id=user_id,
+                    properties=props,
+                    last_updated=datetime.now().isoformat()
+                )
+            return True
+        except Exception as e:
+            print(f"⚠️  Error creating relationship {rel_type}: {e}")
+            return False
+
+    def get_user_entities(self, user_id: str, entity_type: Optional[str] = None) -> List[Dict]:
+        """
+        Get all entities for a user.
+
+        Args:
+            user_id: User ID
+            entity_type: Optional filter by type ('Person', 'Place', 'Preference', 'Fact')
+
+        Returns:
+            List of entity dicts with properties
+
+        Example:
+            entities = graph.get_user_entities('user_123', entity_type='Person')
+            # Returns: [{'entity_value': 'Emiliano', 'mention_count': 5, ...}, ...]
+        """
+        if not self.driver:
+            return []
+
+        if entity_type:
+            query = f"""
+            MATCH (e:{entity_type} {{user_id: $user_id}})
+            RETURN e, labels(e) as types
+            ORDER BY e.mention_count DESC, e.last_mentioned DESC
+            """
+        else:
+            query = """
+            MATCH (e {user_id: $user_id})
+            WHERE e.entity_value IS NOT NULL
+            RETURN e, labels(e) as types
+            ORDER BY e.mention_count DESC, e.last_mentioned DESC
+            """
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                result = session.run(query, user_id=user_id)
+                entities = []
+                for record in result:
+                    entity_dict = dict(record['e'])
+                    entity_dict['entity_types'] = record['types']
+                    entities.append(entity_dict)
+                return entities
+        except Exception as e:
+            print(f"⚠️  Error getting user entities: {e}")
+            return []
+
+    def get_entity_relationships(self,
+                                  entity_value: str,
+                                  user_id: str,
+                                  max_hops: int = 1) -> List[Dict]:
+        """
+        Get all relationships for an entity (multi-hop capable).
+
+        Args:
+            entity_value: Entity to start from
+            user_id: User ID
+            max_hops: Maximum relationship hops (1-3)
+
+        Returns:
+            List of relationship paths with distance
+
+        Example:
+            rels = graph.get_entity_relationships('Emiliano', 'user_123', max_hops=2)
+            # Returns: [
+            #   {'related_entity': 'Emma', 'relationship': 'HAS_DAUGHTER', 'distance': 1},
+            #   {'related_entity': 'Alex', 'relationship': 'HAS_DAUGHTER->HAS_FRIEND', 'distance': 2}
+            # ]
+        """
+        if not self.driver:
+            return []
+
+        query = f"""
+        MATCH path = (start {{entity_value: $entity_value, user_id: $user_id}})-[r*1..{max_hops}]-(related {{user_id: $user_id}})
+        RETURN related, relationships(path) as rels, length(path) as distance
+        ORDER BY distance
+        LIMIT 100
+        """
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                result = session.run(query, entity_value=entity_value, user_id=user_id)
+                relationships = []
+                for record in result:
+                    related = dict(record['related'])
+                    rels = record['rels']
+                    distance = record['distance']
+
+                    # Build relationship path string
+                    rel_path = '->'.join([rel.type for rel in rels])
+
+                    relationships.append({
+                        'related_entity': related.get('entity_value'),
+                        'related_entity_data': related,
+                        'relationship_path': rel_path,
+                        'distance': distance,
+                        'relationships': [dict(rel) for rel in rels]
+                    })
+                return relationships
+        except Exception as e:
+            print(f"⚠️  Error getting entity relationships: {e}")
+            return []
+
+    def build_entity_context_string(self, user_id: str, max_entities: int = 20) -> str:
+        """
+        Build a rich entity context string for LLM prompts.
+
+        Includes:
+        - User entities sorted by recency/frequency
+        - Relationships between entities
+        - TSK-enriched metadata (polyvagal state, urgency, etc.)
+
+        Args:
+            user_id: User ID
+            max_entities: Maximum entities to include
+
+        Returns:
+            Formatted entity context string
+
+        Example Output:
+            Known about user:
+            - Name: Emiliano (mentioned 5 times, last: 2025-11-14)
+              - Has daughter Emma (mentioned 3 times)
+              - Has daughter Lily (mentioned 2 times)
+            - Friend: Rich (mentioned 2 times, last: 2025-11-14)
+            - Friend: Alex (mentioned 2 times, last: 2025-11-14)
+        """
+        if not self.driver:
+            return ""
+
+        entities = self.get_user_entities(user_id)
+        if not entities:
+            return ""
+
+        context_lines = ["Known about user:"]
+
+        for entity in entities[:max_entities]:
+            entity_value = entity.get('entity_value', 'Unknown')
+            entity_types = entity.get('entity_types', [])
+            mention_count = entity.get('mention_count', 1)
+            last_mentioned = entity.get('last_mentioned', 'unknown')
+
+            # Format entity type
+            entity_type_str = entity_types[0] if entity_types else 'Entity'
+
+            # Main entity line
+            if entity_type_str == 'Person':
+                entity_line = f"- Name: {entity_value}"
+            else:
+                entity_line = f"- {entity_type_str}: {entity_value}"
+
+            entity_line += f" (mentioned {mention_count} times"
+            if last_mentioned != 'unknown':
+                # Extract just the date
+                date_str = last_mentioned.split('T')[0]
+                entity_line += f", last: {date_str}"
+            entity_line += ")"
+
+            context_lines.append(entity_line)
+
+            # Add relationships (1-hop only for context brevity)
+            relationships = self.get_entity_relationships(entity_value, user_id, max_hops=1)
+            for rel in relationships[:5]:  # Limit to 5 relationships per entity
+                related_value = rel.get('related_entity', 'Unknown')
+                rel_path = rel.get('relationship_path', 'RELATED_TO')
+                rel_data = rel.get('related_entity_data', {})
+                rel_mention_count = rel_data.get('mention_count', 1)
+
+                # Format relationship
+                if rel_path == 'HAS_DAUGHTER':
+                    rel_str = f"  - Has daughter {related_value}"
+                elif rel_path == 'HAS_SON':
+                    rel_str = f"  - Has son {related_value}"
+                elif rel_path == 'LIKES':
+                    rel_str = f"  - Likes {related_value}"
+                elif rel_path == 'WORKS_AT':
+                    rel_str = f"  - Works at {related_value}"
+                else:
+                    rel_str = f"  - {rel_path.replace('_', ' ').lower()}: {related_value}"
+
+                rel_str += f" (mentioned {rel_mention_count} times)"
+                context_lines.append(rel_str)
+
+        return '\n'.join(context_lines)
+
 
 def initialize_trauma_informed_concepts(graph: Neo4jKnowledgeGraph) -> int:
     """

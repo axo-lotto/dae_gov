@@ -9,5 +9,117 @@
   "organic_family_membership": [],
   "last_session": null,
   "preferred_tone": "balanced",
-  "dae_personality_notes": []
+  "dae_personality_notes": [],
+  "user_profile": {
+    "user_id": "user_20251113_133625",
+    "created_at": "2025-11-14T23:55:20.370083",
+    "last_active": "2025-11-14T23:55:20.370083",
+    "response_length_preference": "moderate",
+    "humor_tolerance": 0.5,
+    "small_talk_openness": 0.5,
+    "llm_usage_consent": false,
+    "total_conversations": 0,
+    "total_turns": 0,
+    "rapport_score": 0.0,
+    "trust_indicators": [],
+    "felt_trajectory": [],
+    "transformation_patterns": {},
+    "humor_evolution": {
+      "current_tolerance": 0.5,
+      "humor_unlocked": false,
+      "total_attempts": 0,
+      "successful_attempts": 0,
+      "failed_attempts": 0,
+      "successful_types": {},
+      "failed_types": {},
+      "inside_jokes": [],
+      "safe_zones": [
+        1,
+        2
+      ],
+      "safe_polyvagal": [
+        "ventral_vagal"
+      ],
+      "unsafe_contexts": [
+        "zone5_collapse",
+        "zone4_shadow"
+      ],
+      "tolerance_history": [],
+      "last_attempt": null,
+      "last_success": null,
+      "unlocked_via_heckling": false
+    },
+    "heckling_trajectory": {
+      "total_heckling_attempts": 0,
+      "successful_deflections": 0,
+      "failed_deflections": 0,
+      "provocation_types": {},
+      "favorite_provocation": null,
+      "banter_unlocked": false,
+      "inside_jokes_from_heckling": [],
+      "zone_held_under_provocation": [],
+      "polyvagal_resilience_score": 0.0,
+      "false_positive_crises": 0,
+      "false_negative_crises": 0,
+      "first_heckling_detected": null,
+      "last_heckling_detected": null
+    },
+    "tone_preferences": {},
+    "inside_jokes": [],
+    "recurring_themes": {},
+    "family_affinities": {},
+    "template_success_rates": {},
+    "favorite_templates": {},
+    "can_reference_past": false,
+    "can_use_humor": false,
+    "can_be_playful": false,
+    "can_give_advice": false,
+    "can_challenge_gently": false,
+    "last_mini_epoch": null,
+    "learning_velocity": 0.0,
+    "metadata": {},
+    "entities": {
+      "user_name": "joe"
+    },
+    "entity_history": [
+      {
+        "timestamp": "2025-11-14T23:55:20.370131",
+        "entities": {
+          "timestamp": "2025-11-14T23:55:20.363869",
+          "source_text": "hey there my name is joe, and i remembered this: \ud83c\udd94 USER IDENTIFICATION",
+          "intent_type": "self_introduction",
+          "user_name": "joe",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:55:20.370062",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445526,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      }
+    ]
+  }
 }

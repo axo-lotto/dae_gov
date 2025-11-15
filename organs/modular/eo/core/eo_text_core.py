@@ -336,7 +336,8 @@ class EOTextCore:
 
         return lure_field
 
-    def process_text_occasions(self, occasions, cycle=0) -> EOResult:
+    def process_text_occasions(self, occasions, cycle=0,
+        context: Optional[Dict] = None) -> EOResult:
         """
         Process TextOccasions to detect polyvagal state.
 

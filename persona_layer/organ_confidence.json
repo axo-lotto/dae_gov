@@ -1,0 +1,127 @@
+{
+  "organ_metrics": {
+    "LISTENING": {
+      "organ_name": "LISTENING",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277021",
+      "first_seen": "2025-11-15T01:09:19.660205"
+    },
+    "EMPATHY": {
+      "organ_name": "EMPATHY",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277024",
+      "first_seen": "2025-11-15T01:09:19.660251"
+    },
+    "WISDOM": {
+      "organ_name": "WISDOM",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277026",
+      "first_seen": "2025-11-15T01:09:19.660264"
+    },
+    "AUTHENTICITY": {
+      "organ_name": "AUTHENTICITY",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277029",
+      "first_seen": "2025-11-15T01:09:19.660275"
+    },
+    "PRESENCE": {
+      "organ_name": "PRESENCE",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277031",
+      "first_seen": "2025-11-15T01:09:19.660285"
+    },
+    "BOND": {
+      "organ_name": "BOND",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277033",
+      "first_seen": "2025-11-15T01:09:19.660296"
+    },
+    "SANS": {
+      "organ_name": "SANS",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277035",
+      "first_seen": "2025-11-15T01:09:19.660306"
+    },
+    "NDAM": {
+      "organ_name": "NDAM",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277037",
+      "first_seen": "2025-11-15T01:09:19.660316"
+    },
+    "RNX": {
+      "organ_name": "RNX",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277039",
+      "first_seen": "2025-11-15T01:09:19.660326"
+    },
+    "EO": {
+      "organ_name": "EO",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277040",
+      "first_seen": "2025-11-15T01:09:19.660336"
+    },
+    "CARD": {
+      "organ_name": "CARD",
+      "confidence": 0.67195,
+      "success_count": 4,
+      "failure_count": 0,
+      "total_participations": 4,
+      "success_rate": 1.0,
+      "weight_multiplier": 1.06878,
+      "last_updated": "2025-11-15T01:09:55.277042",
+      "first_seen": "2025-11-15T01:09:19.660346"
+    }
+  },
+  "last_updated": "2025-11-15T01:09:55.277168",
+  "total_organs": 11
+}

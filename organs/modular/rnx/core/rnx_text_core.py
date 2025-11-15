@@ -372,7 +372,8 @@ class RNXTextCore:
         self,
         occasions: List[Any],
         cycle: int = 0
-    ) -> RNXResult:
+    ,
+        context: Optional[Dict] = None) -> RNXResult:
         """
         Process text occasions through RNX temporal pattern detection.
 

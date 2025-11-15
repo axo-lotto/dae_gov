@@ -913,7 +913,9 @@ class EmissionGenerator:
         organ_results: Dict = None,  # 🌀 NEW: For felt-guided LLM
         v0_energy: float = 1.0,  # 🌀 NEW: For felt-guided LLM
         satisfaction: float = 0.0,  # 🌀 NEW: For felt-guided LLM
-        memory_context: Optional[List[Dict]] = None  # 🌀 NEW: For felt-guided LLM
+        memory_context: Optional[List[Dict]] = None,  # 🌀 NEW: For felt-guided LLM
+        entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++: Entity memory (Nov 14, 2025)
+        memory_intent: bool = False  # 🌀 PHASE 1.8++: Memory intent detected (Nov 14, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate therapeutic phrases from nexuses.
@@ -944,7 +946,9 @@ class EmissionGenerator:
                     v0_energy=v0_energy,
                     satisfaction=satisfaction,
                     memory_context=memory_context,
-                    num_emissions=num_emissions
+                    num_emissions=num_emissions,
+                    entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                    memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
                 )
             else:
                 # Fallback to Hebbian if no felt-guided LLM
@@ -984,7 +988,9 @@ class EmissionGenerator:
                         nexuses=nexuses,
                         v0_energy=v0_energy,
                         satisfaction=satisfaction,
-                        memory_context=memory_context
+                        memory_context=memory_context,
+                        entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                        memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
                     )
                     used_strategies.add('felt_guided_llm')
                 else:
@@ -1394,12 +1400,16 @@ class EmissionGenerator:
         nexuses: List,
         v0_energy: float,
         satisfaction: float,
-        memory_context: Optional[List[Dict]] = None
+        memory_context: Optional[List[Dict]] = None,
+        entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        memory_intent: bool = False  # 🌀 PHASE 1.8++ (Nov 14, 2025)
     ) -> Optional[EmittedPhrase]:
         """
         Generate single emission using felt-guided LLM.
 
         Called when nexuses exist but direct/fusion not strong enough.
+
+        🌀 PHASE 1.8++: Now includes entity memory context (Nov 14, 2025)
         """
         try:
             emission_text, confidence, metadata = self.felt_guided_llm.generate_from_felt_state(
@@ -1408,7 +1418,9 @@ class EmissionGenerator:
                 nexus_states=nexuses,
                 v0_energy=v0_energy,
                 satisfaction=satisfaction,
-                memory_context=memory_context
+                memory_context=memory_context,
+                entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++
+                memory_intent=memory_intent  # 🌀 PHASE 1.8++
             )
 
             # Extract dominant organs
@@ -1439,7 +1451,9 @@ class EmissionGenerator:
         v0_energy: float,
         satisfaction: float,
         memory_context: Optional[List[Dict]] = None,
-        num_emissions: int = 3
+        num_emissions: int = 3,
+        entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        memory_intent: bool = False  # 🌀 PHASE 1.8++ (Nov 14, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate multiple emissions using felt-guided LLM (no nexuses formed).
@@ -1456,7 +1470,9 @@ class EmissionGenerator:
                 nexuses=nexuses,
                 v0_energy=v0_energy,
                 satisfaction=satisfaction,
-                memory_context=memory_context
+                memory_context=memory_context,
+                entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
             )
 
             if emission:

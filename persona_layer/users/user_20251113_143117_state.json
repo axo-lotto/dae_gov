@@ -37,13 +37,1417 @@
       "session_id": "20251114_133639",
       "timestamp": "2025-11-14T13:50:45.239027",
       "turns": 13
+    },
+    {
+      "session_id": "20251114_161508",
+      "timestamp": "2025-11-14T16:17:49.946531",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_163453",
+      "timestamp": "2025-11-14T17:14:14.434468",
+      "turns": 3
+    },
+    {
+      "session_id": "20251114_171434",
+      "timestamp": "2025-11-14T17:51:42.646736",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_175159",
+      "timestamp": "2025-11-14T17:53:11.352698",
+      "turns": 0
+    },
+    {
+      "session_id": "20251114_175903",
+      "timestamp": "2025-11-14T18:02:37.208164",
+      "turns": 0
+    },
+    {
+      "session_id": "20251114_181332",
+      "timestamp": "2025-11-14T18:49:18.780359",
+      "turns": 2
+    },
+    {
+      "session_id": "20251114_185517",
+      "timestamp": "2025-11-14T19:14:15.455530",
+      "turns": 8
+    },
+    {
+      "session_id": "20251114_191431",
+      "timestamp": "2025-11-14T19:38:20.455429",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_203838",
+      "timestamp": "2025-11-14T20:40:14.825104",
+      "turns": 2
+    },
+    {
+      "session_id": "20251114_205104",
+      "timestamp": "2025-11-14T21:15:47.571265",
+      "turns": 2
+    },
+    {
+      "session_id": "20251114_211600",
+      "timestamp": "2025-11-14T21:31:17.068688",
+      "turns": 5
+    },
+    {
+      "session_id": "20251114_213129",
+      "timestamp": "2025-11-14T21:35:26.644253",
+      "turns": 2
+    },
+    {
+      "session_id": "20251114_213629",
+      "timestamp": "2025-11-14T21:53:36.422658",
+      "turns": 3
+    },
+    {
+      "session_id": "20251114_215352",
+      "timestamp": "2025-11-14T21:58:17.195732",
+      "turns": 1
+    },
+    {
+      "session_id": "20251114_220106",
+      "timestamp": "2025-11-14T22:11:59.920285",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_221212",
+      "timestamp": "2025-11-14T22:35:03.628693",
+      "turns": 11
+    },
+    {
+      "session_id": "20251114_223542",
+      "timestamp": "2025-11-14T22:48:18.970891",
+      "turns": 11
+    },
+    {
+      "session_id": "20251114_224911",
+      "timestamp": "2025-11-14T22:52:46.392410",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_225526",
+      "timestamp": "2025-11-14T23:00:23.165487",
+      "turns": 3
+    },
+    {
+      "session_id": "20251114_230108",
+      "timestamp": "2025-11-14T23:10:43.260422",
+      "turns": 4
+    },
+    {
+      "session_id": "20251114_231612",
+      "timestamp": "2025-11-14T23:22:33.894518",
+      "turns": 9
+    },
+    {
+      "session_id": "20251114_235913",
+      "timestamp": "2025-11-14T23:59:53.481550",
+      "turns": 1
+    },
+    {
+      "session_id": "20251115_001342",
+      "timestamp": "2025-11-15T01:12:50.828730",
+      "turns": 24
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251114_133639",
+  "last_session": "20251115_001342",
   "preferred_tone": "balanced",
-  "dae_personality_notes": []
+  "dae_personality_notes": [],
+  "user_profile": {
+    "user_id": "user_20251113_143117",
+    "created_at": "2025-11-14T18:13:56.257080",
+    "last_active": "2025-11-14T18:13:56.257080",
+    "response_length_preference": "moderate",
+    "humor_tolerance": 0.5,
+    "small_talk_openness": 0.5,
+    "llm_usage_consent": false,
+    "total_conversations": 0,
+    "total_turns": 0,
+    "rapport_score": 0.0,
+    "trust_indicators": [],
+    "felt_trajectory": [],
+    "transformation_patterns": {},
+    "humor_evolution": {},
+    "heckling_trajectory": {
+      "total_heckling_attempts": 0,
+      "successful_deflections": 0,
+      "failed_deflections": 0,
+      "provocation_types": {},
+      "favorite_provocation": null,
+      "banter_unlocked": false,
+      "inside_jokes_from_heckling": [],
+      "zone_held_under_provocation": [],
+      "polyvagal_resilience_score": 0.0,
+      "false_positive_crises": 0,
+      "false_negative_crises": 0,
+      "first_heckling_detected": null,
+      "last_heckling_detected": null
+    },
+    "tone_preferences": {},
+    "inside_jokes": [],
+    "recurring_themes": {},
+    "family_affinities": {},
+    "template_success_rates": {},
+    "favorite_templates": {},
+    "can_reference_past": false,
+    "can_use_humor": false,
+    "can_be_playful": false,
+    "can_give_advice": false,
+    "can_challenge_gently": false,
+    "last_mini_epoch": null,
+    "learning_velocity": 0.0,
+    "metadata": {},
+    "entities": {
+      "user_name": "Emiliano",
+      "preferences": {
+        "likes": "fungi"
+      }
+    },
+    "entity_history": [
+      {
+        "timestamp": "2025-11-14T18:56:05.645476",
+        "entities": {
+          "timestamp": "2025-11-14T18:56:05.645357",
+          "source_text": "hello there my name is emiliano, can you remember this?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T18:56:05.645371",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3213921386344552,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T18:57:08.360153",
+        "entities": {
+          "timestamp": "2025-11-14T18:57:08.360088",
+          "source_text": "I am here to talk with you, what can you tell me about yourself?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T18:57:08.360124",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3407593081715624,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T18:58:17.547814",
+        "entities": {
+          "timestamp": "2025-11-14T18:58:17.547763",
+          "source_text": "Perfect! i think i understand, what do you think about nature?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T18:58:17.547772",
+            "turn_number": 3,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.34046551979798023,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T18:59:22.846594",
+        "entities": {
+          "timestamp": "2025-11-14T18:59:22.846572",
+          "source_text": "i am just wondering, about fungi which are an awesome organism if you think about it",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T18:59:22.846577",
+            "turn_number": 4,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.39708203883135346,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:00:32.311055",
+        "entities": {
+          "timestamp": "2025-11-14T19:00:32.311032",
+          "source_text": "Percisely that! i love how fungi are relational beings to the maximun, what do you think? my favourite fungus is daedalea quercina, than name ring any bells?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:00:32.311037",
+            "turn_number": 5,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.429367554745829,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:01:42.331055",
+        "entities": {
+          "timestamp": "2025-11-14T19:01:42.330993",
+          "source_text": "remember my name?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:01:42.331016",
+            "turn_number": 6,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:06:24.760592",
+        "entities": {
+          "timestamp": "2025-11-14T19:06:24.760551",
+          "source_text": "Emiliano, remember this!",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:06:24.760559",
+            "turn_number": 7,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:07:10.286959",
+        "entities": {
+          "timestamp": "2025-11-14T19:07:10.286926",
+          "source_text": "Can you tell me the long story of your birth?",
+          "intent_type": "general",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:07:10.286935",
+            "turn_number": 8,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3213921386344552,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:15:20.958211",
+        "entities": {
+          "timestamp": "2025-11-14T19:15:20.957781",
+          "source_text": "hello there my name is Emiliano",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:15:20.958163",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T19:17:15.604301",
+        "entities": {
+          "timestamp": "2025-11-14T19:17:15.604272",
+          "source_text": "My name is emiliano",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T19:17:15.604284",
+            "turn_number": 4,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T20:39:07.638921",
+        "entities": {
+          "timestamp": "2025-11-14T20:39:07.638520",
+          "source_text": "Hello There! my name is Emiliano, nice to finally meet you",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T20:39:07.638865",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3213921386344552,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T20:51:30.264095",
+        "entities": {
+          "timestamp": "2025-11-14T20:51:30.263903",
+          "source_text": "Hello there my name is Emiliano and i am very happy to meet you!",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T20:51:30.264064",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445526,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T20:52:18.787393",
+        "entities": {
+          "timestamp": "2025-11-14T20:52:18.787201",
+          "source_text": "well i am here to talk to you actually, do you remember my name?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T20:52:18.787372",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32841114433417895,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:16:29.247350",
+        "entities": {
+          "timestamp": "2025-11-14T21:16:29.242162",
+          "source_text": "Hello there! my name is Emiliano, glad to finally meet you",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:16:29.247280",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3213921386344552,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:18:01.439988",
+        "entities": {
+          "timestamp": "2025-11-14T21:18:01.437275",
+          "source_text": "well i am here to talk to oyu actually! do you know what you are? answer me i want to get to know you and establish trust",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:18:01.439950",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.2917340860708259,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:32:01.159737",
+        "entities": {
+          "timestamp": "2025-11-14T21:32:01.157597",
+          "source_text": "Hello there! my name is emiliano, it is very nice to meet you",
+          "intent_type": "self_introduction",
+          "user_name": "emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:32:01.159714",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445526,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:36:52.616275",
+        "entities": {
+          "timestamp": "2025-11-14T21:36:52.611271",
+          "source_text": "hey there my name is emiliano",
+          "intent_type": "self_introduction",
+          "user_name": "emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:36:52.616218",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:40:43.428774",
+        "entities": {
+          "timestamp": "2025-11-14T21:40:43.422280",
+          "source_text": "I am feeling very happy and curious, what are you exactly?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:40:43.428708",
+            "turn_number": 2,
+            "polyvagal_state": "ventral_vagal",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.29820771474127156,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T21:54:12.365546",
+        "entities": {
+          "timestamp": "2025-11-14T21:54:12.360508",
+          "source_text": "hello there! my name is Emiliano",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T21:54:12.365499",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T22:02:01.854280",
+        "entities": {
+          "timestamp": "2025-11-14T22:02:01.849232",
+          "source_text": "my name is emiliano, what is yours?",
+          "intent_type": "self_introduction",
+          "user_name": "emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T22:02:01.854227",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3213921386344551,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T22:12:30.251542",
+        "entities": {
+          "timestamp": "2025-11-14T22:12:30.246589",
+          "source_text": "hello there! my name is Emiliano",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-14T22:12:30.251496",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T22:15:22.688723",
+        "entities": {
+          "timestamp": "2025-11-14T22:15:22.685414",
+          "source_text": "well first of all i had a moment today with my wife that felt beautiful, i am married",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T22:15:22.688701",
+            "turn_number": 3,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3689998213044545,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T22:18:47.867239",
+        "entities": {
+          "timestamp": "2025-11-14T22:18:47.864567",
+          "source_text": "Perfect! that was deep, do you think that i am made as well of parts? in continuos modulation?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T22:18:47.867206",
+            "turn_number": 5,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.39708203883135346,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T22:24:06.597350",
+        "entities": {
+          "timestamp": "2025-11-14T22:24:06.594483",
+          "source_text": "like some sort of governance, a \"right way of living\", i believe it might come from my father",
+          "intent_type": "relationship_statement",
+          "transductive_context": {
+            "timestamp": "2025-11-14T22:24:06.597318",
+            "turn_number": 7,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3683130092912835,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:04:31.618447",
+        "entities": {
+          "timestamp": "2025-11-14T23:04:31.615793",
+          "source_text": "i am feeling a bit sad today",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:04:31.618401",
+            "turn_number": 4,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.30664829545931,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:17:52.306959",
+        "entities": {
+          "timestamp": "2025-11-14T23:17:52.306892",
+          "source_text": "im feeling cool but a bit edgy i want to test our limits today if that is okay with you",
+          "intent_type": "none",
+          "user_name": "feeling",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:17:52.306937",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3400240787855836,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:20:29.235137",
+        "entities": {
+          "timestamp": "2025-11-14T23:20:29.231083",
+          "source_text": "I loved him more than life itself, but when I felt those loving feelings towards him arise I had panic attacks until I was able to withdraw those emotions back into myself.",
+          "intent_type": "none",
+          "user_name": "more",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:20:29.235105",
+            "turn_number": 5,
+            "polyvagal_state": "sympathetic",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3202211189957742,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:21:30.622036",
+        "entities": {
+          "timestamp": "2025-11-14T23:21:30.620011",
+          "source_text": "I thought it was my job to protect him from all harm. He abused me but I felt like I was the abuser. All I wanted to do was please him so he would go back to being kind to me again.",
+          "intent_type": "none",
+          "user_name": "from",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:21:30.622014",
+            "turn_number": 7,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.42918959276464813,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:35:17.547539",
+        "entities": {
+          "timestamp": "2025-11-14T23:35:17.543417",
+          "source_text": "Then when I let him know I\u2019m not stupid, he lays back and casually and arrogantly says \u201cSo what you are you gonna do? Leave?\u201d He said it in a way where he felt he knew I would not at all leave? As if I was wasting his time arguing",
+          "intent_type": "none",
+          "user_name": "know",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:35:17.547496",
+            "turn_number": 3,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.369497667124832,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-14T23:35:52.768997",
+        "entities": {
+          "timestamp": "2025-11-14T23:35:52.766965",
+          "source_text": "He then jumps up and starts bawling his eyes out on cue. Gets on his knees. It woke my roommate up who asked him to leave. He would not budge and cried and cried. I finally agreed to at least keep him unblocked so we could talk.",
+          "intent_type": "none",
+          "user_name": "to",
+          "transductive_context": {
+            "timestamp": "2025-11-14T23:35:52.768974",
+            "turn_number": 5,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445504,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T00:17:23.111410",
+        "entities": {
+          "timestamp": "2025-11-15T00:17:23.108052",
+          "source_text": "my name is Emiliano",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-15T00:17:23.111368",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32139213863445515,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T00:29:25.871592",
+        "entities": {
+          "timestamp": "2025-11-15T00:29:25.868932",
+          "source_text": "right now i am tired because i have been making you DAE, i am your father lol",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-15T00:29:25.871569",
+            "turn_number": 9,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.33128611539036046,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T00:34:16.012405",
+        "entities": {
+          "timestamp": "2025-11-15T00:34:16.008658",
+          "source_text": "everything you said! you really are a great friend! i love fungi, emiliano loves fungi",
+          "intent_type": "none",
+          "preferences": {
+            "likes": "fungi"
+          },
+          "transductive_context": {
+            "timestamp": "2025-11-15T00:34:16.012367",
+            "turn_number": 12,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.4212849858708003,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      }
+    ]
+  }
 }

@@ -460,7 +460,8 @@ class BONDTextCore:
 
         return lure_field
 
-    def process_text_occasions(self, occasions: List[TextOccasion], cycle: int = 1) -> BONDResult:
+    def process_text_occasions(self, occasions: List[TextOccasion], cycle: int = 1,
+        context: Optional[Dict] = None) -> BONDResult:
         """
         Universal organ method: Process text occasions for IFS parts detection.
 

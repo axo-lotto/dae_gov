@@ -426,7 +426,8 @@ class NDAMTextCore:
         self,
         occasions: List[TextOccasion],
         cycle: int = 1
-    ) -> NDAMResult:
+    ,
+        context: Optional[Dict] = None) -> NDAMResult:
         """
         Process text occasions to detect urgency patterns.
 

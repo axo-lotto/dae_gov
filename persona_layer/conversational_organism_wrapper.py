@@ -62,6 +62,14 @@ except ImportError:
     PHASE5_AVAILABLE = False
     print("⚠️  Phase 5 learning not available")
 
+# 🆕 Import Organ Confidence Tracker (Level 2 Fractal Rewards - Nov 15, 2025)
+try:
+    from persona_layer.organ_confidence_tracker import OrganConfidenceTracker
+    ORGAN_CONFIDENCE_AVAILABLE = True
+except ImportError:
+    ORGAN_CONFIDENCE_AVAILABLE = False
+    print("⚠️  Organ confidence tracker not available")
+
 # Import emission generation components
 try:
     from persona_layer.semantic_field_extractor import SemanticFieldExtractor
@@ -258,6 +266,21 @@ class ConversationalOrganismWrapper:
         else:
             self.phase5_learning = None
 
+        # 🆕 Initialize Organ Confidence Tracker (Level 2 Fractal Rewards - Nov 15, 2025)
+        if ORGAN_CONFIDENCE_AVAILABLE:
+            try:
+                self.organ_confidence = OrganConfidenceTracker(
+                    storage_path="persona_layer/organ_confidence.json",
+                    ema_alpha=0.1,  # DAE 3.0 validated
+                    success_threshold=0.5  # Learn from "Helpful" ratings
+                )
+                print(f"   ✅ Organ confidence tracker ready (Level 2 fractal rewards)")
+            except Exception as e:
+                print(f"   ⚠️  Organ confidence tracker unavailable: {e}")
+                self.organ_confidence = None
+        else:
+            self.organ_confidence = None
+
         # Initialize emission generation (if available)
         if EMISSION_AVAILABLE:
             try:
@@ -267,7 +290,7 @@ class ConversationalOrganismWrapper:
                 )
                 self.nexus_composer = NexusIntersectionComposer(
                     r_matrix_path="persona_layer/conversational_hebbian_memory.json",
-                    intersection_threshold=0.01  # 🆕 NOV 13: Lowered 0.03→0.01 for nexus formation
+                    intersection_threshold=0.005  # 🌀 NOV 14: Lowered 0.01→0.005 for better nexus formation
                 )
 
                 # Import emission thresholds from config (Nov 13, 2025 - fixes organic emission bottleneck)
@@ -647,6 +670,32 @@ class ConversationalOrganismWrapper:
             # PHASE 1 PATH: Single-cycle processing (backward compatible)
             result = self._process_single_cycle(text, context, enable_tsk_recording)
 
+        # 🌀 Nov 14, 2025: Open-ended entity extraction (LLM-based, not hardcoded)
+        if user_id and self.superject_learner:
+            try:
+                # Get current user profile
+                user_profile = self.superject_learner.get_or_create_profile(user_id)
+                current_entities = user_profile.entities if user_profile else {}
+
+                # Extract entities using LLM (open-ended discovery)
+                new_entities = self.superject_learner.extract_entities_llm(
+                    user_input=text,
+                    current_entities=current_entities
+                )
+
+                # Store newly extracted entities
+                if new_entities and user_profile:
+                    user_profile.store_entities(new_entities)
+                    self.superject_learner.save_profile(user_profile)
+
+                    # Show extraction feedback
+                    if 'memories' in new_entities:
+                        num_memories = len(new_entities['memories'])
+                        print(f"      📝 Extracted {num_memories} new memories")
+
+            except Exception as e:
+                print(f"      ⚠️  Entity extraction failed: {e}")
+
         # 🌀 PHASE 1 FOUNDATION: Record turn to user superject (Nov 14, 2025)
         if user_id and self.superject_learner:
             try:
@@ -656,7 +705,11 @@ class ConversationalOrganismWrapper:
                     user_satisfaction=user_satisfaction
                 )
             except Exception as e:
+                # 🌀 Phase 1.7: Enhanced error reporting (Nov 14, 2025)
                 print(f"⚠️  Superject recording failed: {e}")
+                print(f"   Debug: result type = {type(result).__name__}")
+                if isinstance(result, dict):
+                    print(f"   Debug: result keys = {list(result.keys())[:10]}")
 
         # 🌀 PHASE 1.6: Record organism occasion (privacy-preserving) - November 14, 2025
         if user_id and self.unified_state:
@@ -667,6 +720,22 @@ class ConversationalOrganismWrapper:
                 )
             except Exception as e:
                 print(f"⚠️  Organism occasion recording failed: {e}")
+
+        # 🆕 Level 2 Fractal Rewards: Update organ confidences (Nov 15, 2025)
+        if self.organ_confidence:
+            try:
+                # Extract organ results and emission quality
+                organ_results = result.get('organ_results', {})
+                emission_confidence = result.get('emission_confidence', 0.0)
+
+                # Update organ confidences based on emission success
+                self.organ_confidence.update(
+                    organ_results=organ_results,
+                    emission_confidence=emission_confidence,
+                    user_satisfaction=user_satisfaction
+                )
+            except Exception as e:
+                print(f"⚠️  Organ confidence update failed: {e}")
 
         return result
 
@@ -682,36 +751,49 @@ class ConversationalOrganismWrapper:
         Preserved for backward compatibility with existing epoch training.
         """
         # Create TextOccasions from input text
-        occasions = self._create_text_occasions(text)
+        # 🌀 Nov 14, 2025: Pass context for entity-aware enrichment
+        occasions = self._create_text_occasions(text, context=context)
+
+        # 🌀 Nov 14, 2025: Build entity context for all organs (Phase 2.1)
+        # Extract entity data from context for organ prehension
+        entity_context = {
+            'stored_entities': context.get('stored_entities', {}),
+            'username': context.get('username')
+        }
 
         # Process through ALL 11 organs (5 conversational + 6 trauma/context-aware)
         # Cycle=0 for single-pass epoch training
+        # 🌀 Nov 14, 2025: Pass entity_context to all organs
         organ_results = {
             # 5 conversational organs
-            'LISTENING': self.listening.process_text_occasions(occasions, cycle=0),
-            'EMPATHY': self.empathy.process_text_occasions(occasions, cycle=0),
-            'WISDOM': self.wisdom.process_text_occasions(occasions, cycle=0),
-            'AUTHENTICITY': self.authenticity.process_text_occasions(occasions, cycle=0),
-            'PRESENCE': self.presence.process_text_occasions(occasions, cycle=0),
+            'LISTENING': self.listening.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'EMPATHY': self.empathy.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'WISDOM': self.wisdom.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'AUTHENTICITY': self.authenticity.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'PRESENCE': self.presence.process_text_occasions(occasions, cycle=0, context=entity_context),
 
             # 3 trauma-aware organs (Phase 1 integration - Nov 11, 2025)
-            'BOND': self.bond.process_text_occasions(occasions, cycle=0),
-            'SANS': self.sans.process_text_occasions(occasions, cycle=0),
-            'NDAM': self.ndam.process_text_occasions(occasions, cycle=0),
+            'BOND': self.bond.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'SANS': self.sans.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'NDAM': self.ndam.process_text_occasions(occasions, cycle=0, context=entity_context),
 
             # 3 Phase 2 organs (temporal, polyvagal, scaling - Nov 11, 2025)
-            'RNX': self.rnx.process_text_occasions(occasions, cycle=0),
-            'EO': self.eo.process_text_occasions(occasions, cycle=0),
+            'RNX': self.rnx.process_text_occasions(occasions, cycle=0, context=entity_context),
+            'EO': self.eo.process_text_occasions(occasions, cycle=0, context=entity_context),
         }
 
-        # CARD needs context from other organs for response scaling
-        # Build context dict with signals from EO, NDAM, BOND, RNX
+        # CARD needs EXTENDED context (entity data + organ signals for response scaling)
+        # Build extended context dict with entity data + signals from EO, NDAM, BOND, RNX
         eo_result = organ_results.get('EO')
         ndam_result = organ_results.get('NDAM')
         bond_result = organ_results.get('BOND')
         rnx_result = organ_results.get('RNX')
 
         card_context = {
+            # Entity context (Nov 14, 2025)
+            'stored_entities': entity_context['stored_entities'],
+            'username': entity_context['username'],
+            # Organ signal context (existing)
             'polyvagal_state': getattr(eo_result, 'polyvagal_state', 'mixed_state') if eo_result else 'mixed_state',
             'urgency': getattr(ndam_result, 'mean_urgency', 0.5) if ndam_result else 0.5,
             'self_distance': getattr(bond_result, 'mean_self_distance', 0.5) if bond_result else 0.5,
@@ -814,6 +896,24 @@ class ConversationalOrganismWrapper:
                     ndam_urgency = getattr(ndam_result, 'mean_urgency', 0.0) if ndam_result else 0.0
                     eo_polyvagal = getattr(eo_result, 'polyvagal_state', 'mixed_state') if eo_result else 'mixed_state'
 
+                    # 🌀 Nov 14, 2025: Build entity context string for LLM
+                    entity_context_string = None
+                    if context and 'stored_entities' in context:
+                        stored_entities = context['stored_entities']
+                        entity_parts = []
+                        if stored_entities.get('user_name'):
+                            entity_parts.append(f"User's name: {stored_entities['user_name']}")
+                        if stored_entities.get('family_members'):
+                            family_names = [m.get('name', '') for m in stored_entities['family_members'] if m.get('name')]
+                            if family_names:
+                                entity_parts.append(f"Family: {', '.join(family_names)}")
+                        if stored_entities.get('friends'):
+                            friend_names = [f.get('name', '') for f in stored_entities['friends'] if f.get('name')]
+                            if friend_names:
+                                entity_parts.append(f"Friends: {', '.join(friend_names)}")
+                        if entity_parts:
+                            entity_context_string = " | ".join(entity_parts)
+
                     # Build felt state for reconstruction
                     felt_state_for_reconstruction = {
                         'organ_coherences': {name: getattr(result, 'coherence', 0.0)
@@ -830,22 +930,27 @@ class ConversationalOrganismWrapper:
                         'user_input': text,
                         'organ_results': organ_results,
                         'memory_context': None,  # TODO: Add memory context from hybrid LLM
-                        # 🌀 PHASE 1.6: Organism self-narrative (Nov 14, 2025)
-                        'organism_narrative': context.get('organism_narrative'),
-                        # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
-                        'username': context.get('username')
+                        # 🌀 Nov 14, 2025: Entity-organism integration
+                        'entity_context_string': entity_context_string,
+                        'memory_intent': False
                     }
 
-                    # Build context for reconstruction (includes DAE 3.0 family learner)
-                    context = {
+                    # Build context for reconstruction (includes DAE 3.0 family learner + entity context)
+                    reconstruction_context = {
                         'user_message': text,
-                        'family_v0_learner': self.family_v0_learner  # 🆕 DAE 3.0 (Levels 2+4)
+                        'family_v0_learner': self.family_v0_learner,  # 🆕 DAE 3.0 (Levels 2+4)
+                        # 🌀 Nov 14, 2025: Entity-organism integration - pass stored entities
+                        'stored_entities': context.get('stored_entities', {}) if context else {},
+                        'username': context.get('username') if context else None,
+                        # 🌀 Nov 14, 2025: Entity memory context for reconstruction pipeline (CRITICAL FIX)
+                        'entity_context_string': context.get('entity_context_string', '') if context else '',
+                        'memory_intent': context.get('memory_intent', False) if context else False
                     }
 
                     # Call reconstruction pipeline
                     reconstruction_result = self.reconstruction_pipeline.reconstruct_emission(
                         felt_state=felt_state_for_reconstruction,
-                        context=context
+                        context=reconstruction_context
                     )
 
                     # Extract results
@@ -872,6 +977,11 @@ class ConversationalOrganismWrapper:
                     # Stage 3: Generate emission phrases (dual-path: intersection vs direct)
                     # Generate 1-3 phrases depending on nexus quality
                     num_emissions = 3 if len(nexuses) >= 5 else (2 if len(nexuses) >= 2 else 1)
+
+                    # 🌀 Nov 14, 2025: Extract entity context from context dict
+                    entity_context_string = context.get('entity_context_string', '') if context else ''
+                    memory_intent = context.get('memory_intent', False) if context else False
+
                     emitted_phrases = self.emission_generator.generate_emissions(
                         nexuses=nexuses,
                         num_emissions=num_emissions,
@@ -880,7 +990,9 @@ class ConversationalOrganismWrapper:
                         organ_results=organ_results,  # 🌀 For felt-guided LLM
                         v0_energy=final_energy,  # 🌀 For felt-guided LLM
                         satisfaction=satisfaction_final,  # 🌀 For felt-guided LLM
-                        memory_context=None  # 🌀 TODO: Pass from dae_interactive if hybrid enabled
+                        memory_context=None,  # 🌀 TODO: Pass from dae_interactive if hybrid enabled
+                        entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
+                        memory_intent=memory_intent  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
                     )
 
                     # Combine emitted phrases into single emission text
@@ -1088,12 +1200,13 @@ class ConversationalOrganismWrapper:
             'zone_id': zone_id
         }
 
-    def _create_text_occasions(self, text: str) -> List[TextOccasion]:
+    def _create_text_occasions(self, text: str, context: Optional[Dict] = None) -> List[TextOccasion]:
         """
         Create TextOccasions from input text (Whiteheadian actual occasions).
 
         Args:
             text: Input text string
+            context: Optional context dict containing stored_entities, username, etc.
 
         Returns:
             List of TextOccasion objects (words/phrases with positions)
@@ -1120,7 +1233,78 @@ class ConversationalOrganismWrapper:
             occasions.append(occasion)
             position += 1
 
+        # 🌀 Nov 14, 2025: Entity-aware enrichment (Phase 1.2)
+        # Enrich occasions with entity context for organism prehension
+        if context and 'stored_entities' in context:
+            stored_entities = context['stored_entities']
+
+            for occasion in occasions:
+                # Add stored entities to occasion (felt context, not symbolic lookup)
+                occasion.known_entities = stored_entities
+
+                # Detect entity references in THIS occasion's text
+                entity_refs = self._detect_entity_references(occasion.text, stored_entities)
+                occasion.entity_references = entity_refs['references']
+                occasion.entity_match_confidence = entity_refs['confidences']
+
         return occasions
+
+    def _detect_entity_references(self, text: str, stored_entities: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Detect entity references in text using simple felt-based matching (DAE 3.0 compliant).
+
+        NOT symbolic AI pattern matching - just simple case-insensitive substring presence.
+        Organisms learn entity patterns through felt prehension, not symbolic rules.
+
+        Args:
+            text: Occasion text (single word/phrase)
+            stored_entities: Known entities from memory
+
+        Returns:
+            Dict with 'references' list and 'confidences' dict
+        """
+        references = []
+        confidences = {}
+
+        if not stored_entities:
+            return {'references': references, 'confidences': confidences}
+
+        text_lower = text.lower()
+
+        # Simple felt-based detection: check if entity name appears in text
+        # Start with highest confidence entity types
+
+        # User name (highest priority)
+        if 'user_name' in stored_entities:
+            name = stored_entities['user_name']
+            if name and name.lower() in text_lower:
+                references.append(name)
+                confidences[name] = 0.95  # High confidence for exact name match
+
+        # Family members
+        if 'family_members' in stored_entities:
+            for member in stored_entities['family_members']:
+                name = member.get('name', '')
+                if name and name.lower() in text_lower:
+                    references.append(name)
+                    confidences[name] = 0.85  # High confidence for family
+
+        # Friends
+        if 'friends' in stored_entities:
+            for friend in stored_entities['friends']:
+                name = friend.get('name', '')
+                if name and name.lower() in text_lower:
+                    references.append(name)
+                    confidences[name] = 0.80  # Medium-high for friends
+
+        # Preferences (lower confidence - more abstract)
+        if 'preferences' in stored_entities:
+            for pref_key, pref_value in stored_entities['preferences'].items():
+                if isinstance(pref_value, str) and pref_value.lower() in text_lower:
+                    references.append(pref_value)
+                    confidences[pref_value] = 0.60  # Lower for preferences
+
+        return {'references': references, 'confidences': confidences}
 
     def _occasions_to_dict(self, occasions: List[TextOccasion]) -> List[Dict[str, Any]]:
         """
@@ -1185,7 +1369,8 @@ class ConversationalOrganismWrapper:
             print(f"\n   Cycle {cycle}:")
 
             # Process all organs for this cycle
-            organ_results = self._process_organs_with_v0(occasions, cycle)
+            # 🌀 Nov 14, 2025: Pass context for entity-aware enrichment
+            organ_results = self._process_organs_with_v0(occasions, cycle, context=context)
 
             # 🛡️ CYCLE 1 ONLY: Assess for crisis/heckling (Phase 1.5H - Nov 14, 2025)
             if cycle == 1 and self.heckling_intel:
@@ -1885,7 +2070,8 @@ class ConversationalOrganismWrapper:
     def _process_organs_with_v0(
         self,
         occasions: List[ConversationalOccasion],
-        cycle: int
+        cycle: int,
+        context: Optional[Dict] = None
     ) -> Dict[str, Any]:
         """Process all 11 organs for current cycle."""
         # Convert ConversationalOccasions to TextOccasions for organ processing
@@ -1899,27 +2085,51 @@ class ConversationalOrganismWrapper:
             )
             text_occasions.append(text_occ)
 
-        # Process through all organs
-        organ_results = {
-            'LISTENING': self.listening.process_text_occasions(text_occasions, cycle=cycle),
-            'EMPATHY': self.empathy.process_text_occasions(text_occasions, cycle=cycle),
-            'WISDOM': self.wisdom.process_text_occasions(text_occasions, cycle=cycle),
-            'AUTHENTICITY': self.authenticity.process_text_occasions(text_occasions, cycle=cycle),
-            'PRESENCE': self.presence.process_text_occasions(text_occasions, cycle=cycle),
-            'BOND': self.bond.process_text_occasions(text_occasions, cycle=cycle),
-            'SANS': self.sans.process_text_occasions(text_occasions, cycle=cycle),
-            'NDAM': self.ndam.process_text_occasions(text_occasions, cycle=cycle),
-            'RNX': self.rnx.process_text_occasions(text_occasions, cycle=cycle),
-            'EO': self.eo.process_text_occasions(text_occasions, cycle=cycle),
+        # 🌀 Nov 14, 2025: Entity-aware enrichment for Phase 2 (multi-cycle)
+        if context and 'stored_entities' in context:
+            stored_entities = context['stored_entities']
+
+            for text_occ in text_occasions:
+                # Add stored entities to occasion (felt context)
+                text_occ.known_entities = stored_entities
+
+                # Detect entity references in THIS occasion's text
+                entity_refs = self._detect_entity_references(text_occ.text, stored_entities)
+                text_occ.entity_references = entity_refs['references']
+                text_occ.entity_match_confidence = entity_refs['confidences']
+
+        # 🌀 Nov 14, 2025: Build entity context for all organs (Phase 2.1)
+        entity_context = {
+            'stored_entities': context.get('stored_entities', {}) if context else {},
+            'username': context.get('username') if context else None
         }
 
-        # CARD needs context
+        # Process through all organs
+        # 🌀 Nov 14, 2025: Pass entity_context to all organs
+        organ_results = {
+            'LISTENING': self.listening.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'EMPATHY': self.empathy.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'WISDOM': self.wisdom.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'AUTHENTICITY': self.authenticity.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'PRESENCE': self.presence.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'BOND': self.bond.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'SANS': self.sans.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'NDAM': self.ndam.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'RNX': self.rnx.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            'EO': self.eo.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+        }
+
+        # CARD needs EXTENDED context (entity data + organ signals for response scaling)
         eo_result = organ_results.get('EO')
         ndam_result = organ_results.get('NDAM')
         bond_result = organ_results.get('BOND')
         rnx_result = organ_results.get('RNX')
 
         card_context = {
+            # Entity context (Nov 14, 2025)
+            'stored_entities': entity_context['stored_entities'],
+            'username': entity_context['username'],
+            # Organ signal context (existing)
             'polyvagal_state': getattr(eo_result, 'polyvagal_state', 'mixed_state') if eo_result else 'mixed_state',
             'urgency': getattr(ndam_result, 'mean_urgency', 0.5) if ndam_result else 0.5,
             'self_distance': getattr(bond_result, 'mean_self_distance', 0.5) if bond_result else 0.5,

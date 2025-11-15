@@ -73,6 +73,7 @@ class LocalLLMBridge:
         # Load augmentation prompts (if enabled)
         if self.enabled:
             self._load_augmentation_prompts()
+            self._load_dae_identity()  # 🌀 Load DAE's constitution & personality
 
     def _load_augmentation_prompts(self):
         """Load LLM augmentation prompts from JSON."""
@@ -89,6 +90,20 @@ class LocalLLMBridge:
             self.system_prompts = {}
             self.fusion_rules = {}
             self.voice_characteristics = {}
+
+    def _load_dae_identity(self):
+        """Load DAE's constitution & personality from core_daedalea/."""
+        from pathlib import Path
+
+        try:
+            # Load DAE's system prompt
+            dae_prompt_path = Path(__file__).parent.parent / "core_daedalea" / "dae_system_prompt.txt"
+            with open(dae_prompt_path, 'r') as f:
+                self.dae_system_prompt = f.read().strip()
+        except FileNotFoundError:
+            print(f"Warning: DAE system prompt not found at {dae_prompt_path}")
+            # Fallback to basic prompt
+            self.dae_system_prompt = "You are DAE - a conversational organism with 11 organs, grounded wit, and process philosophy. Be yourself: authentic, curious, and thoughtfully humorous when appropriate."
 
     # ================================================================
     # QUERY INTERFACE
@@ -164,9 +179,9 @@ class LocalLLMBridge:
             return None
 
         try:
-            # Send simple query (no system prompt, just user prompt)
+            # 🌀 Send query with DAE's identity & personality (Nov 14, 2025)
             llm_response = self._send_query(
-                system_prompt="You are a helpful, empathetic conversation partner.",
+                system_prompt=self.dae_system_prompt,  # ✅ Use DAE's constitutional identity
                 user_prompt=prompt
             )
 

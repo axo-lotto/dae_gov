@@ -289,6 +289,14 @@ class EnhancedUserProfile:
     last_mini_epoch: Optional[str] = None  # ISO timestamp of last pattern learning
     learning_velocity: float = 0.0  # How fast patterns are being learned
 
+    # 🌀 Phase 1.6: Salience pattern tracking metadata (Nov 14, 2025)
+    metadata: Dict[str, Any] = field(default_factory=dict)  # Flexible metadata for tracking patterns
+
+    # 🌀 Phase 1.8: Entity extraction & memory storage (Nov 14, 2025)
+    # Extracted entities from conversation (names, relationships, facts, preferences)
+    entities: Dict[str, Any] = field(default_factory=dict)
+    entity_history: List[Dict[str, Any]] = field(default_factory=list)  # Timeline of extractions
+
     def __post_init__(self):
         """Initialize nested structures."""
         if self.humor_evolution is None:
@@ -335,12 +343,16 @@ class EnhancedUserProfile:
 
         if 'humor_evolution' in data and data['humor_evolution']:
             he_data = data['humor_evolution']
-            if 'inside_jokes' in he_data:
-                he_data['inside_jokes'] = [
-                    InsideJoke(**ij) if isinstance(ij, dict) else ij
-                    for ij in he_data['inside_jokes']
-                ]
-            data['humor_evolution'] = HumorEvolution(**he_data)
+            # Check if already a HumorEvolution object
+            if isinstance(he_data, HumorEvolution):
+                data['humor_evolution'] = he_data
+            elif isinstance(he_data, dict):
+                if 'inside_jokes' in he_data:
+                    he_data['inside_jokes'] = [
+                        InsideJoke(**ij) if isinstance(ij, dict) else ij
+                        for ij in he_data['inside_jokes']
+                    ]
+                data['humor_evolution'] = HumorEvolution(**he_data)
 
         if 'inside_jokes' in data and data['inside_jokes']:
             data['inside_jokes'] = [
@@ -421,6 +433,195 @@ class EnhancedUserProfile:
 
         if self.total_conversations >= 50 and self.rapport_score > 0.8:
             self.can_challenge_gently = True
+
+    # 🌀 Phase 1.8: Entity extraction utility methods (Nov 14, 2025)
+
+    def store_entities(self, new_entities: Dict[str, Any]):
+        """
+        Store newly extracted entities, merging with existing.
+
+        Args:
+            new_entities: Dict from EntityExtractor.extract()
+        """
+        from datetime import datetime
+
+        # Merge with existing entities
+        if 'user_name' in new_entities:
+            self.entities['user_name'] = new_entities['user_name']
+
+        if 'user_role' in new_entities:
+            self.entities['user_role'] = new_entities['user_role']
+
+        # Merge mentioned names (deduplicate)
+        if 'mentioned_names' in new_entities:
+            existing_names = self.entities.get('mentioned_names', [])
+            for name in new_entities['mentioned_names']:
+                if name not in existing_names:
+                    existing_names.append(name)
+            self.entities['mentioned_names'] = existing_names
+
+        # Merge relationships
+        if 'relationships' in new_entities:
+            existing_rels = self.entities.get('relationships', [])
+            for rel in new_entities['relationships']:
+                if rel not in existing_rels:
+                    existing_rels.append(rel)
+            self.entities['relationships'] = existing_rels
+
+        # Store relationship count
+        if 'relationship_count' in new_entities:
+            self.entities['relationship_count'] = new_entities['relationship_count']
+
+        # Store relationship context
+        if 'relationship_context' in new_entities:
+            self.entities['relationship_context'] = new_entities['relationship_context']
+
+        # Store related person
+        if 'related_person' in new_entities:
+            self.entities['related_person'] = new_entities['related_person']
+
+        # Merge facts
+        if 'facts' in new_entities:
+            existing_facts = self.entities.get('facts', [])
+            for fact in new_entities['facts']:
+                existing_facts.append(fact)
+            self.entities['facts'] = existing_facts
+
+        # 🌀 Nov 14, 2025: Add support for family_members, friends, preferences
+        # Merge family_members (deduplicate by name)
+        if 'family_members' in new_entities:
+            existing_family = self.entities.get('family_members', [])
+            existing_names = {m.get('name') for m in existing_family if isinstance(m, dict)}
+            for member in new_entities['family_members']:
+                if isinstance(member, dict) and member.get('name') not in existing_names:
+                    existing_family.append(member)
+                    existing_names.add(member.get('name'))
+            self.entities['family_members'] = existing_family
+
+        # Merge friends (deduplicate by name)
+        if 'friends' in new_entities:
+            existing_friends = self.entities.get('friends', [])
+            existing_names = {f.get('name') for f in existing_friends if isinstance(f, dict)}
+            for friend in new_entities['friends']:
+                if isinstance(friend, dict) and friend.get('name') not in existing_names:
+                    existing_friends.append(friend)
+                    existing_names.add(friend.get('name'))
+            self.entities['friends'] = existing_friends
+
+        # Merge preferences (update dict)
+        if 'preferences' in new_entities:
+            existing_prefs = self.entities.get('preferences', {})
+            if isinstance(new_entities['preferences'], dict):
+                existing_prefs.update(new_entities['preferences'])
+            self.entities['preferences'] = existing_prefs
+
+        # Add to history
+        self.entity_history.append({
+            'timestamp': datetime.now().isoformat(),
+            'entities': new_entities
+        })
+
+    def get_entity_context_string(self) -> str:
+        """
+        Get formatted string of known entities for LLM context.
+
+        🌀 Nov 14, 2025: Supports open-ended memory format (not hardcoded types).
+
+        Returns:
+            Formatted string with known information
+        """
+        if not self.entities:
+            return ""
+
+        lines = []
+
+        # User name (if known)
+        if 'user_name' in self.entities:
+            lines.append(f"- Name: {self.entities['user_name']}")
+
+        # 🌀 Nov 14, 2025: Open-ended memories (natural evolution)
+        if 'memories' in self.entities:
+            memories = self.entities['memories']
+
+            # Group by type for readable context
+            by_type = {}
+            for mem in memories:
+                mem_type = mem.get('type', 'fact')
+                if mem_type not in by_type:
+                    by_type[mem_type] = []
+                by_type[mem_type].append(mem.get('value', ''))
+
+            # Format by category
+            for mem_type, values in by_type.items():
+                if values:
+                    values_str = ", ".join(values[:5])  # Max 5 per type to avoid context bloat
+                    lines.append(f"- {mem_type.capitalize()}: {values_str}")
+
+        # Legacy support for old entity types
+        if 'user_role' in self.entities:
+            lines.append(f"- Role: {self.entities['user_role']}")
+
+        if 'relationships' in self.entities:
+            rels = ', '.join(self.entities['relationships'])
+            lines.append(f"- Relationships: {rels}")
+
+        if 'relationship_count' in self.entities:
+            count = self.entities['relationship_count']
+            context = self.entities.get('relationship_context', 'family')
+            lines.append(f"- {context.capitalize()}: {count} members")
+
+        if 'mentioned_names' in self.entities:
+            names = ', '.join(self.entities['mentioned_names'])
+            lines.append(f"- Mentioned names: {names}")
+
+        if 'related_person' in self.entities:
+            rp = self.entities['related_person']
+            lines.append(f"- {rp['relationship'].capitalize()}: {rp['name']}")
+
+        if 'facts' in self.entities and len(self.entities['facts']) > 0:
+            for fact in self.entities['facts'][:5]:  # Max 5 facts
+                if isinstance(fact, dict):
+                    lines.append(f"- {fact.get('type', 'Fact')}: {fact.get('value', '')}")
+                else:
+                    lines.append(f"- Fact: {fact}")
+
+        # 🌀 Nov 14, 2025: Add family_members, friends, preferences to context
+        if 'family_members' in self.entities and len(self.entities['family_members']) > 0:
+            family_list = []
+            for member in self.entities['family_members']:
+                if isinstance(member, dict):
+                    name = member.get('name', 'Unknown')
+                    relation = member.get('relation', '')
+                    if relation:
+                        family_list.append(f"{name} ({relation})")
+                    else:
+                        family_list.append(name)
+            if family_list:
+                lines.append(f"- Family: {', '.join(family_list)}")
+
+        if 'friends' in self.entities and len(self.entities['friends']) > 0:
+            friend_names = []
+            for friend in self.entities['friends']:
+                if isinstance(friend, dict):
+                    friend_names.append(friend.get('name', 'Unknown'))
+            if friend_names:
+                lines.append(f"- Friends: {', '.join(friend_names)}")
+
+        if 'preferences' in self.entities and len(self.entities['preferences']) > 0:
+            prefs = self.entities['preferences']
+            pref_list = [f"{k}: {v}" for k, v in prefs.items()]
+            if pref_list:
+                lines.append(f"- Preferences: {', '.join(pref_list)}")
+
+        if not lines:
+            return ""
+
+        # 🌀 Nov 14, 2025: More personal framing for open-ended memories
+        return "Known about this person:\n" + "\n".join(lines)
+
+    def has_entity_memory(self) -> bool:
+        """Check if any entities have been extracted."""
+        return len(self.entities) > 0
 
 
 def create_default_profile(user_id: str) -> EnhancedUserProfile:

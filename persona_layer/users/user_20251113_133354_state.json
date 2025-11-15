@@ -2,12 +2,37 @@
   "user_id": "user_20251113_133354",
   "username": "Alice",
   "created_at": "2025-11-13T13:33:54.131919",
-  "session_history": [],
+  "session_history": [
+    {
+      "session_id": "20251114_234236",
+      "timestamp": "2025-11-14T23:46:38.487094",
+      "turns": 1
+    },
+    {
+      "session_id": "20251114_234849",
+      "timestamp": "2025-11-14T23:51:58.585791",
+      "turns": 1
+    }
+  ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": null,
+  "last_session": "20251114_234849",
   "preferred_tone": "balanced",
-  "dae_personality_notes": []
-}
+  "dae_personality_notes": [],
+  "user_profile": {
+    "user_id": "user_20251113_133354",
+    "created_at": "2025-11-14T23:43:00.206600",
+    "last_active": "2025-11-14T23:43:00.206600",
+    "response_length_preference": "moderate",
+    "humor_tolerance": 0.5,
+    "small_talk_openness": 0.5,
+    "llm_usage_consent": false,
+    "total_conversations": 0,
+    "total_turns": 0,
+    "rapport_score": 0.0,
+    "trust_indicators": [],
+    "felt_trajectory": [],
+    "transformation_patterns": {},
+    "humor_evolution": 

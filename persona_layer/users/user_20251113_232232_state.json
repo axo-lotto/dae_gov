@@ -12,13 +12,38 @@
       "session_id": "20251114_071214",
       "timestamp": "2025-11-14T08:17:41.071623",
       "turns": 3
+    },
+    {
+      "session_id": "20251114_142542",
+      "timestamp": "2025-11-14T14:38:07.344360",
+      "turns": 1
+    },
+    {
+      "session_id": "20251114_143820",
+      "timestamp": "2025-11-14T14:39:59.883267",
+      "turns": 2
+    },
+    {
+      "session_id": "20251114_145205",
+      "timestamp": "2025-11-14T14:56:06.326459",
+      "turns": 1
+    },
+    {
+      "session_id": "20251114_145621",
+      "timestamp": "2025-11-14T14:59:22.816683",
+      "turns": 5
+    },
+    {
+      "session_id": "20251114_152934",
+      "timestamp": "2025-11-14T15:34:02.445627",
+      "turns": 3
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251114_071214",
+  "last_session": "20251114_152934",
   "preferred_tone": "balanced",
   "dae_personality_notes": []
 }

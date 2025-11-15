@@ -93,6 +93,15 @@ class TextOccasion:
     # (proto-propositions stored during prehension, matured post-convergence)
     felt_affordances: List[Dict[str, Any]] = field(default_factory=list)
 
+    # === ENTITY-AWARE FIELDS ===
+    # (November 14, 2025: Enable organism entity awareness during prehension)
+    # Stored entities accessible to organs (user_name, family_members, preferences, etc.)
+    known_entities: Dict[str, Any] = field(default_factory=dict)
+    # Names/relationships detected in THIS occasion's text (e.g., ["Alice", "daughter"])
+    entity_references: List[str] = field(default_factory=list)
+    # Confidence that references match stored entities {reference: confidence}
+    entity_match_confidence: Dict[str, float] = field(default_factory=dict)
+
     def __post_init__(self):
         """Initialize derived fields and validate structure."""
         # Ensure embedding is numpy array

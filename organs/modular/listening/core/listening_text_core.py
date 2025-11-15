@@ -419,7 +419,8 @@ class ListeningTextCore:
         self,
         occasions: List,  # List[TextOccasion] - entity-native prehension
         cycle: int
-    ) -> ListeningResult:
+    ,
+        context: Optional[Dict] = None) -> ListeningResult:
         """
         Process text occasions to detect listening patterns.
 

@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "total_tests": 10,
+    "successful_tests": 10,
+    "avg_confidence": 0.85,
+    "avg_v0_descent": 0.0,
+    "avg_active_organs": 0.0,
+    "avg_understanding_score": 1.75,
+    "epoch_training_needed": true
+  },
+  "detailed_results": [
+    {
+      "test_id": "burnout_1",
+      "expected_family": "burnout_spiral",
+      "story_length": 652,
+      "emission_length": 0,
+      "confidence": 1.0,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 2.0,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "burnout_2",
+      "expected_family": "burnout_spiral",
+      "story_length": 466,
+      "emission_length": 0,
+      "confidence": 1.0,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 2.0,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "scapegoat_1",
+      "expected_family": "scapegoat_dynamics",
+      "story_length": 712,
+      "emission_length": 0,
+      "confidence": 1.0,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 2.0,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "safe_connection_1",
+      "expected_family": "psychological_safety",
+      "story_length": 658,
+      "emission_length": 0,
+      "confidence": 0.7,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 1.5,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "safe_connection_2",
+      "expected_family": "psychological_safety",
+      "story_length": 617,
+      "emission_length": 0,
+      "confidence": 0.7,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 1.5,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "sustainable_rhythm_1",
+      "expected_family": "sustainable_rhythm",
+      "story_length": 546,
+      "emission_length": 0,
+      "confidence": 1.0,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 2.0,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "toxic_productivity_1",
+      "expected_family": "toxic_productivity",
+      "story_length": 620,
+      "emission_length": 0,
+      "confidence": 0.7,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 1.5,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "witnessing_presence_1",
+      "expected_family": "witnessing_presence",
+      "story_length": 560,
+      "emission_length": 0,
+      "confidence": 1.0,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 2.0,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "parts_conflict_1",
+      "expected_family": "parts_multiplicity",
+      "story_length": 604,
+      "emission_length": 0,
+      "confidence": 0.7,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 1.5,
+      "emission_preview": ""
+    },
+    {
+      "test_id": "somatic_signal_1",
+      "expected_family": "body_wisdom",
+      "story_length": 598,
+      "emission_length": 0,
+      "confidence": 0.7,
+      "v0_descent": 0.0,
+      "active_organs": 0,
+      "nexuses": [],
+      "understanding_score": 1.5,
+      "emission_preview": ""
+    }
+  ]
+}

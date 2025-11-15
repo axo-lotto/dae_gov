@@ -1,0 +1,116 @@
+{
+  "relationship_types": {
+    "immediate_family": [
+      "mother", "mom", "mum", "mama",
+      "father", "dad", "papa", "pop",
+      "parent", "parents",
+      "son", "daughter", "child", "children", "kid", "kids",
+      "brother", "sister", "sibling", "siblings",
+      "husband", "wife", "spouse", "partner",
+      "grandfather", "grandpa", "grandmother", "grandma", "grandparent"
+    ],
+    "extended_family": [
+      "aunt", "uncle",
+      "cousin", "cousins",
+      "nephew", "niece",
+      "grandson", "granddaughter", "grandchild",
+      "brother-in-law", "sister-in-law", "mother-in-law", "father-in-law"
+    ],
+    "social": [
+      "friend", "friends", "buddy", "buddies", "pal",
+      "colleague", "coworker", "teammate",
+      "neighbor", "neighbour",
+      "boyfriend", "girlfriend", "fiance", "fiancee",
+      "mentor", "mentee", "coach", "therapist",
+      "roommate", "housemate"
+    ]
+  },
+
+  "patterns": [
+    {
+      "pattern": "\\bmy\\s+(\\w+(?:-\\w+)*)\\s+(?:is\\s+)?(?:Dr\\.?\\s+|Mr\\.?\\s+|Mrs\\.?\\s+|Ms\\.?\\s+)?([A-Z][a-z]+)",
+      "confidence": 0.95,
+      "description": "my [relation] [Name]",
+      "examples": ["my daughter Alice", "my father John", "my mother-in-law Patricia", "my therapist Dr. Anderson"],
+      "note": "Handles hyphenated relations and title prefixes"
+    },
+    {
+      "pattern": "\\bI have (?:a|an)\\s+(?:\\w+\\s+)?(\\w+(?:-\\w+)*)\\s+(?:named|called)\\s+(?:Dr\\.?\\s+|Mr\\.?\\s+|Mrs\\.?\\s+|Ms\\.?\\s+)?([A-Z][a-z]+)",
+      "confidence": 0.90,
+      "description": "I have a [relation] named [Name]",
+      "examples": ["I have a son named Jake who just turned 10", "I have a boyfriend named Tyler, we've been dating"],
+      "note": "Handles 'named X' with any trailing text"
+    },
+    {
+      "pattern": "\\bmy\\s+(\\w+(?:-\\w+)*)\\s+([A-Z][a-z]+)\\s+(?:is|was|are)",
+      "confidence": 0.85,
+      "description": "my [relation] [Name] is/was/are",
+      "examples": ["my roommate Alex is really messy"],
+      "note": "Handles 'my relation Name is/was/are' patterns"
+    },
+    {
+      "pattern": "\\bI have (\\w+)\\s+(\\w+(?:-\\w+)*)s?[,:;]\\s*([A-Z][a-z]+)(?:,?\\s+and\\s+([A-Z][a-z]+))?",
+      "confidence": 0.85,
+      "description": "I have [number] [relation]s: [Name] and [Name]",
+      "examples": ["I have two daughters, Alice and Sophie", "I have three sons: John, Paul, and George"],
+      "note": "Handles comma, colon, or semicolon separators"
+    },
+    {
+      "pattern": "\\b(?:Dr\\.?\\s+|Mr\\.?\\s+|Mrs\\.?\\s+|Ms\\.?\\s+)?([A-Z][a-z]+)\\s+is my\\s+(\\w+(?:-\\w+)*)",
+      "confidence": 0.90,
+      "description": "[Name] is my [relation]",
+      "examples": ["Alice is my daughter", "James is my brother-in-law"],
+      "note": "Handles hyphenated relations and title prefixes"
+    },
+    {
+      "pattern": "\\bmy\\s+(\\w+(?:-\\w+)*)\\s+([A-Z][a-z]+)\\s+and\\s+([A-Z][a-z]+)",
+      "confidence": 0.85,
+      "description": "my [relation] [Name] and [Name]",
+      "examples": ["my sons John and Paul", "my mom Lisa and dad Robert"],
+      "note": "Handles two names with 'and'"
+    },
+    {
+      "pattern": "\\b(?:I'm |I am )?(?:closest|close)\\s+to\\s+(?:my\\s+)?(\\w+(?:-\\w+)*)\\s+([A-Z][a-z]+)",
+      "confidence": 0.75,
+      "description": "closest to [relation] [Name]",
+      "examples": ["I'm closest to my cousin Amy", "closest to Amy"],
+      "note": "Handles 'closest to' pattern"
+    },
+    {
+      "pattern": "\\b(?:I'm |I am )?(?:closest|close)\\s+to\\s+([A-Z][a-z]+)(?:\\s|,|$)",
+      "confidence": 0.65,
+      "description": "closest to [Name] (no relation)",
+      "examples": ["I'm closest to Amy"],
+      "note": "Handles 'closest to Name' without explicit relation - infers from context"
+    },
+    {
+      "pattern": "\\bmy\\s+(?:\\w+\\s+)?(\\w+)\\s+(?:Dr\\.?|Mr\\.?|Mrs\\.?|Ms\\.?)\\s+([A-Z][a-z]+)",
+      "confidence": 0.85,
+      "description": "my [relation] [Title] [Name]",
+      "examples": ["my therapist Dr. Anderson"],
+      "note": "Extracts surname after title"
+    }
+  ],
+
+  "number_words": {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+    "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10
+  },
+
+  "possessives": {
+    "wife's": "wife",
+    "husband's": "husband",
+    "mother's": "mother",
+    "father's": "father",
+    "sister's": "sister",
+    "brother's": "brother"
+  },
+
+  "relation_normalization": {
+    "roommate": "friend",
+    "housemate": "friend",
+    "classmate": "friend",
+    "buddy": "friend",
+    "pal": "friend"
+  }
+}

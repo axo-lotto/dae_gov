@@ -1,0 +1,53 @@
+{
+  "user_id": "user_20251114_145956",
+  "total_conversations": 5,
+  "themes": [],
+  "inside_jokes": [],
+  "preferences": {},
+  "created_at": "2025-11-14_15-00-27",
+  "polyvagal_history": [
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-14_15-00-27"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-14_15-01-40"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-14_15-03-38"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-14_15-42-38"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-14_15-44-17"
+    }
+  ],
+  "zone_history": [
+    {
+      "zone": 0,
+      "timestamp": "2025-11-14_15-00-27"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-14_15-01-40"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-14_15-03-38"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-14_15-42-38"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-14_15-44-17"
+    }
+  ],
+  "last_updated": "2025-11-14_15-44-17"
+}

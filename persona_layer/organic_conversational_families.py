@@ -299,8 +299,12 @@ class OrganicConversationalFamilies:
         best_family_id = max(similarities, key=similarities.get)
         best_similarity = similarities[best_family_id]
 
+        # 🆕 Adaptive threshold (Nov 15, 2025 - DAE 3.0 legacy integration)
+        # Encourage family diversity when few families exist
+        adaptive_threshold = self._get_adaptive_threshold()
+
         # DECISION: Assign to existing family OR create new
-        if best_similarity >= self.similarity_threshold:
+        if best_similarity >= adaptive_threshold:
             # HIGH SIMILARITY → Join existing family
             return self._add_to_family(
                 family_id=best_family_id,
@@ -404,6 +408,33 @@ class OrganicConversationalFamilies:
 
         return assignment
 
+    def _get_adaptive_threshold(self) -> float:
+        """
+        Compute adaptive similarity threshold based on current family count.
+
+        Strategy (DAE 3.0 inspired):
+        - Few families (< 10): Lower threshold → encourage diversity
+        - Medium families (10-25): Base threshold → balanced growth
+        - Many families (> 25): Higher threshold → consolidation
+
+        Returns:
+            Adaptive threshold [0.55, 0.70]
+        """
+        current_families = len(self.families)
+        target_families = 25  # DAE 3.0 achieved 37, target ~25 for conversational
+
+        if current_families < target_families // 3:  # < 8 families
+            # Aggressive exploration phase
+            threshold = max(0.55, self.similarity_threshold - 0.10)
+        elif current_families < target_families:  # 8-24 families
+            # Balanced growth phase
+            threshold = self.similarity_threshold  # Use base threshold (0.65)
+        else:  # ≥ 25 families
+            # Consolidation phase
+            threshold = min(0.75, self.similarity_threshold + 0.10)
+
+        return threshold
+
     def _create_family(
         self,
         conversation_id: str,
@@ -482,6 +513,30 @@ class OrganicConversationalFamilies:
             reverse=True
         )
         family.dominant_organs = [organ for organ, _ in sorted_organs[:3]]
+
+    def _get_adaptive_threshold(self) -> float:
+        """
+        Compute adaptive similarity threshold based on current family count.
+
+        Strategy (from DAE 3.0):
+        - Few families (<8): Lower threshold → Encourage new family formation
+        - Medium families (8-25): Balanced threshold → Natural growth
+        - Many families (≥25): Higher threshold → Consolidation
+
+        Returns:
+            Adaptive similarity threshold [0.55, 0.75]
+        """
+        current_families = len(self.families)
+
+        if current_families < 8:
+            # Aggressive exploration (few families)
+            return 0.55
+        elif current_families < 25:
+            # Balanced growth (medium families)
+            return 0.65  # Base threshold
+        else:
+            # Consolidation (many families, approaching saturation)
+            return 0.75
 
     def get_family(self, family_id: str) -> Optional[ConversationalFamily]:
         """Get family by ID."""

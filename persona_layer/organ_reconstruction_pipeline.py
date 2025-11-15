@@ -238,7 +238,7 @@ class OrganReconstructionPipeline:
             )
 
         else:  # hebbian_fallback
-            emissions, path = self._hebbian_fallback(felt_state, zone, transduction_state)
+            emissions, path = self._hebbian_fallback(felt_state, zone, transduction_state, context)  # 🌀 Nov 14, 2025: Pass context
 
         # Step 7: Assemble response (therapeutic arc)
         assembled = self.response_assembler.assemble_response(emissions)
@@ -261,7 +261,8 @@ class OrganReconstructionPipeline:
                     felt_state=felt_state,
                     nexuses=nexuses,
                     zone=zone,
-                    transduction_mechanism=transduction_mechanism
+                    transduction_mechanism=transduction_mechanism,
+                    context=context  # 🌀 Nov 14, 2025: Pass context for entity memory
                 )
             else:
                 print(f"      Generating minimal safe emission for Zone {zone.zone_id}")
@@ -442,7 +443,7 @@ class OrganReconstructionPipeline:
         """
         # For now, fallback to hebbian with family context
         # Future: Load templates from organic_family_templates.json
-        return self._hebbian_fallback(felt_state, zone, transduction_state)
+        return self._hebbian_fallback(felt_state, zone, transduction_state, context=None)  # 🌀 Nov 14, 2025: Pass context (None in this path)
 
     def _hybrid_reconstruction(
         self,
@@ -466,7 +467,8 @@ class OrganReconstructionPipeline:
         self,
         felt_state: Dict,
         zone,
-        transduction_state
+        transduction_state,
+        context: Optional[Dict] = None  # 🌀 Nov 14, 2025: Add context for entity memory
     ) -> Tuple[List, str]:
         """
         Hebbian fallback: No strong nexuses or family match.
@@ -481,6 +483,13 @@ class OrganReconstructionPipeline:
 
             print("      🌀 Hebbian path: Using felt-guided LLM with organ states as lures")
 
+            # 🌀 PHASE 1.8++: Extract entity memory context (Nov 14, 2025)
+            # 🌀 Nov 14, 2025: Get from context parameter, not felt_state
+            entity_context_string = context.get('entity_context_string', '') if context else ''
+            memory_intent = context.get('memory_intent', False) if context else False
+            if entity_context_string:
+                print(f"         🌀 Entity memory context available - enriching hebbian response")
+
             # Generate from organ states directly (no nexuses needed!)
             emission = self.emission_generator._generate_felt_guided_llm_single(
                 user_input=felt_state.get('user_input', ''),
@@ -488,7 +497,9 @@ class OrganReconstructionPipeline:
                 nexuses=[],  # No nexuses in this path
                 v0_energy=felt_state.get('v0_energy', 0.5),
                 satisfaction=felt_state.get('satisfaction', 0.5),
-                memory_context=felt_state.get('memory_context', None)
+                memory_context=felt_state.get('memory_context', None),
+                entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++
+                memory_intent=memory_intent  # 🌀 PHASE 1.8++
             )
 
             if emission:
@@ -504,7 +515,8 @@ class OrganReconstructionPipeline:
         felt_state: Dict,
         nexuses: List,
         zone,
-        transduction_mechanism: Optional[str]
+        transduction_mechanism: Optional[str],
+        context: Optional[Dict] = None  # 🌀 Nov 14, 2025: Add context for entity memory
     ) -> Any:
         """
         🌀 PHASE 1.5c: Zone 5 transductive emission (Nov 13, 2025)
@@ -553,6 +565,13 @@ class OrganReconstructionPipeline:
             if username:
                 print(f"         🌀 Username detected: {username} - personalizing response")
 
+            # 🌀 PHASE 1.8++: Extract entity context for memory-aware responses (Nov 14, 2025)
+            # 🌀 Nov 14, 2025: Get from context dict, not felt_state (CRITICAL FIX)
+            entity_context_string = context.get('entity_context_string', '') if context else ''
+            memory_intent = context.get('memory_intent', False) if context else False
+            if entity_context_string:
+                print(f"         🌀 Entity memory context available - enriching response")
+
             # Build Zone 5-specific LLM prompt
             zone5_emission = self.emission_generator.felt_guided_llm.generate_from_felt_state(
                 user_input=user_input,
@@ -562,7 +581,9 @@ class OrganReconstructionPipeline:
                 satisfaction=satisfaction,
                 memory_context=felt_state.get('memory_context'),
                 organism_narrative=organism_narrative,  # 🌀 PHASE 1.6: Pass organism self-narrative
-                username=username  # 🌀 PHASE 1.6: Pass username for personalization
+                username=username,  # 🌀 PHASE 1.6: Pass username for personalization
+                entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++: Pass entity memory context
+                memory_intent=memory_intent  # 🌀 PHASE 1.8++: Pass memory acknowledgment flag
             )
 
             if zone5_emission:

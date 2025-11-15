@@ -386,7 +386,8 @@ class SANSTextCore:
         self,
         occasions: List[TextOccasion],
         cycle: int = 1
-    ) -> SANSResult:
+    ,
+        context: Optional[Dict] = None) -> SANSResult:
         """
         Process text occasions to detect semantic patterns.
 

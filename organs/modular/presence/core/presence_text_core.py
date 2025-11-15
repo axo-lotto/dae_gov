@@ -299,7 +299,8 @@ class PresenceTextCore:
         self,
         occasions: List,  # List[TextOccasion]
         cycle: int
-    ) -> PresenceResult:
+    ,
+        context: Optional[Dict] = None) -> PresenceResult:
         """
         Process text occasions to detect presence patterns.
 

@@ -1,0 +1,429 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "created": "2025-11-14",
+    "description": "Training corpus for relationship entity extraction - Phase 1",
+    "total_pairs": 35,
+    "categories": {
+      "immediate_family": 15,
+      "extended_family": 8,
+      "social_relationships": 12
+    }
+  },
+
+  "training_pairs": [
+    {
+      "id": "rel_001",
+      "input": "my daughter Alice is studying at Berkeley",
+      "expected": {
+        "family_members": [
+          {"name": "Alice", "relation": "daughter", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_002",
+      "input": "I have a son named Jake who just turned 10",
+      "expected": {
+        "family_members": [
+          {"name": "Jake", "relation": "son", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_003",
+      "input": "my father John lives in Boston with my mother",
+      "expected": {
+        "family_members": [
+          {"name": "John", "relation": "father", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "medium",
+      "note": "Should extract John but may miss mother (no name given)"
+    },
+    {
+      "id": "rel_004",
+      "input": "Sarah is my wife and we've been married for 15 years",
+      "expected": {
+        "family_members": [
+          {"name": "Sarah", "relation": "wife", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_005",
+      "input": "I have two daughters, Alice and Sophie",
+      "expected": {
+        "family_members": [
+          {"name": "Alice", "relation": "daughter", "confidence": 0.85},
+          {"name": "Sophie", "relation": "daughter", "confidence": 0.85}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "hard",
+      "note": "Multiple extraction - current implementation may only get first"
+    },
+    {
+      "id": "rel_006",
+      "input": "my husband Michael and I are going on vacation",
+      "expected": {
+        "family_members": [
+          {"name": "Michael", "relation": "husband", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_007",
+      "input": "Emily is my mother, she raised me alone",
+      "expected": {
+        "family_members": [
+          {"name": "Emily", "relation": "mother", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_008",
+      "input": "I have three sons: John, Paul, and George",
+      "expected": {
+        "family_members": [
+          {"name": "John", "relation": "son", "confidence": 0.80},
+          {"name": "Paul", "relation": "son", "confidence": 0.80},
+          {"name": "George", "relation": "son", "confidence": 0.80}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "very_hard",
+      "note": "Triple extraction with commas"
+    },
+    {
+      "id": "rel_009",
+      "input": "my brother Tom works as a software engineer",
+      "expected": {
+        "family_members": [
+          {"name": "Tom", "relation": "brother", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_010",
+      "input": "Jennifer is my sister, we grew up together",
+      "expected": {
+        "family_members": [
+          {"name": "Jennifer", "relation": "sister", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_011",
+      "input": "my mom Lisa and dad Robert are visiting next week",
+      "expected": {
+        "family_members": [
+          {"name": "Lisa", "relation": "mom", "confidence": 0.95},
+          {"name": "Robert", "relation": "dad", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "hard",
+      "note": "Two parents, different patterns"
+    },
+    {
+      "id": "rel_012",
+      "input": "I have a twin brother named Marcus",
+      "expected": {
+        "family_members": [
+          {"name": "Marcus", "relation": "brother", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "medium",
+      "note": "Qualifier 'twin' should not break extraction"
+    },
+    {
+      "id": "rel_013",
+      "input": "my grandfather William served in WWII",
+      "expected": {
+        "family_members": [
+          {"name": "William", "relation": "grandfather", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_014",
+      "input": "Charlotte is my grandmother on my mother's side",
+      "expected": {
+        "family_members": [
+          {"name": "Charlotte", "relation": "grandmother", "confidence": 0.90}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "medium",
+      "note": "Additional context should not break extraction"
+    },
+    {
+      "id": "rel_015",
+      "input": "my partner Alex and I bought a house together",
+      "expected": {
+        "family_members": [
+          {"name": "Alex", "relation": "partner", "confidence": 0.95}
+        ]
+      },
+      "category": "immediate_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_016",
+      "input": "my aunt Susan lives in Portland",
+      "expected": {
+        "family_members": [
+          {"name": "Susan", "relation": "aunt", "confidence": 0.95}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_017",
+      "input": "David is my uncle, he's really funny",
+      "expected": {
+        "family_members": [
+          {"name": "David", "relation": "uncle", "confidence": 0.90}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_018",
+      "input": "I have a cousin named Rachel who lives in New York",
+      "expected": {
+        "family_members": [
+          {"name": "Rachel", "relation": "cousin", "confidence": 0.90}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_019",
+      "input": "my nephew Oliver just graduated college",
+      "expected": {
+        "family_members": [
+          {"name": "Oliver", "relation": "nephew", "confidence": 0.95}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_020",
+      "input": "Emma is my niece, she's so talented",
+      "expected": {
+        "family_members": [
+          {"name": "Emma", "relation": "niece", "confidence": 0.90}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_021",
+      "input": "my mother-in-law Patricia is coming to visit",
+      "expected": {
+        "family_members": [
+          {"name": "Patricia", "relation": "mother-in-law", "confidence": 0.95}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "medium",
+      "note": "Hyphenated relation"
+    },
+    {
+      "id": "rel_022",
+      "input": "James is my brother-in-law through my wife",
+      "expected": {
+        "family_members": [
+          {"name": "James", "relation": "brother-in-law", "confidence": 0.90}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "medium"
+    },
+    {
+      "id": "rel_023",
+      "input": "I have four cousins, but I'm closest to Amy",
+      "expected": {
+        "family_members": [
+          {"name": "Amy", "relation": "cousin", "confidence": 0.80}
+        ]
+      },
+      "category": "extended_family",
+      "difficulty": "hard",
+      "note": "Mentioned in complex sentence"
+    },
+    {
+      "id": "rel_024",
+      "input": "my friend Sarah and I have known each other for 20 years",
+      "expected": {
+        "friends": [
+          {"name": "Sarah", "relation": "friend", "confidence": 0.95}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_025",
+      "input": "I have a best friend named Chris who always has my back",
+      "expected": {
+        "friends": [
+          {"name": "Chris", "relation": "friend", "confidence": 0.90}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "medium",
+      "note": "Qualifier 'best' should not break extraction"
+    },
+    {
+      "id": "rel_026",
+      "input": "Kevin is my colleague at work, we collaborate a lot",
+      "expected": {
+        "colleagues": [
+          {"name": "Kevin", "relation": "colleague", "confidence": 0.95}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_027",
+      "input": "I work with a great team, especially my coworker Diana",
+      "expected": {
+        "colleagues": [
+          {"name": "Diana", "relation": "coworker", "confidence": 0.80}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "hard",
+      "note": "Embedded in complex sentence"
+    },
+    {
+      "id": "rel_028",
+      "input": "my neighbor Bob helps me with yard work",
+      "expected": {
+        "other_relations": [
+          {"name": "Bob", "relation": "neighbor", "confidence": 0.95}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_029",
+      "input": "Jessica is my mentor, she's taught me so much",
+      "expected": {
+        "other_relations": [
+          {"name": "Jessica", "relation": "mentor", "confidence": 0.90}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_030",
+      "input": "I have a boyfriend named Tyler, we've been dating for 2 years",
+      "expected": {
+        "other_relations": [
+          {"name": "Tyler", "relation": "boyfriend", "confidence": 0.90}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_031",
+      "input": "Rebecca is my girlfriend and we're thinking about moving in together",
+      "expected": {
+        "other_relations": [
+          {"name": "Rebecca", "relation": "girlfriend", "confidence": 0.90}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    },
+    {
+      "id": "rel_032",
+      "input": "my roommate Alex is really messy but a good person",
+      "expected": {
+        "friends": [
+          {"name": "Alex", "relation": "friend", "confidence": 0.80}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "medium",
+      "note": "Roommate should map to friend category"
+    },
+    {
+      "id": "rel_033",
+      "input": "I have two close friends, Maria and Luis",
+      "expected": {
+        "friends": [
+          {"name": "Maria", "relation": "friend", "confidence": 0.85},
+          {"name": "Luis", "relation": "friend", "confidence": 0.85}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "hard",
+      "note": "Multiple friends"
+    },
+    {
+      "id": "rel_034",
+      "input": "my therapist Dr. Anderson has really helped me",
+      "expected": {
+        "other_relations": [
+          {"name": "Anderson", "relation": "therapist", "confidence": 0.90}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "medium",
+      "note": "Title 'Dr.' before name"
+    },
+    {
+      "id": "rel_035",
+      "input": "I work with my teammate Sam on the project",
+      "expected": {
+        "colleagues": [
+          {"name": "Sam", "relation": "teammate", "confidence": 0.95}
+        ]
+      },
+      "category": "social_relationships",
+      "difficulty": "easy"
+    }
+  ],
+
+  "evaluation_criteria": {
+    "passing_threshold": 0.85,
+    "scoring": {
+      "exact_match": 1.0,
+      "name_correct_relation_wrong": 0.5,
+      "name_wrong_relation_correct": 0.3,
+      "missed_extraction": 0.0
+    }
+  }
+}

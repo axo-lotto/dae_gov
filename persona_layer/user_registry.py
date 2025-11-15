@@ -117,8 +117,37 @@ class UserRegistry:
 
         state_path = Path(user['user_state_path'])
         if state_path.exists():
-            with open(state_path, 'r') as f:
-                return json.load(f)
+            try:
+                with open(state_path, 'r') as f:
+                    return json.load(f)
+            except json.JSONDecodeError as e:
+                print(f"⚠️  Corrupted user state for {user_id}: {e}")
+                # Backup corrupted file
+                backup_path = state_path.with_suffix('.json.corrupted')
+                state_path.rename(backup_path)
+                print(f"   Backed up to: {backup_path}")
+                print(f"   Creating fresh state for {user_id}")
+
+                # Create fresh state
+                fresh_state = {
+                    'user_id': user_id,
+                    'username': user.get('username', user_id),
+                    'created_at': user.get('created_at', datetime.now().isoformat()),
+                    'session_history': [],
+                    'feedback_count': 0,
+                    'helpful_rate': 0.0,
+                    'excellent_rate': 0.0,
+                    'organic_family_membership': [],
+                    'last_session': None,
+                    'preferred_tone': 'balanced',
+                    'dae_personality_notes': []
+                }
+
+                # Save fresh state
+                with open(state_path, 'w') as f:
+                    json.dump(fresh_state, f, indent=2)
+
+                return fresh_state
         return {}
 
     def save_user_state(self, user_id: str, state: Dict):

@@ -1,0 +1,1342 @@
+{
+  "timestamp": "2025-11-14T19:20:12.467209",
+  "total_tests": 35,
+  "passed": 24,
+  "failed": 11,
+  "accuracy": 68.57142857142857,
+  "results": [
+    {
+      "id": "rel_001",
+      "input": "my daughter Alice is studying at Berkeley",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Alice",
+            "relation": "daughter",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Alice",
+            "relation": "daughter",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Alice (daughter)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_002",
+      "input": "I have a son named Jake who just turned 10",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Jake",
+            "relation": "son",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Jake",
+            "relation": "son",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Jake (son)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_003",
+      "input": "my father John lives in Boston with my mother",
+      "expected": {
+        "family_members": [
+          {
+            "name": "John",
+            "relation": "father",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "John",
+            "relation": "father",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "John (father)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "medium",
+      "passed": true
+    },
+    {
+      "id": "rel_004",
+      "input": "Sarah is my wife and we've been married for 15 years",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Sarah",
+            "relation": "wife",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "and",
+            "relation": "wife",
+            "confidence": 0.95
+          },
+          {
+            "name": "Sarah",
+            "relation": "wife",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.3,
+      "details": {
+        "exact_matches": [
+          "Sarah (wife)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "wife: expected Sarah, got and"
+        ],
+        "missed": [],
+        "extra": [
+          "and (wife)"
+        ]
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_005",
+      "input": "I have two daughters, Alice and Sophie",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Alice",
+            "relation": "daughter",
+            "confidence": 0.85
+          },
+          {
+            "name": "Sophie",
+            "relation": "daughter",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Alice",
+            "relation": "daughter",
+            "confidence": 0.765
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.65,
+      "details": {
+        "exact_matches": [
+          "Alice (daughter)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "daughter: expected Sophie, got Alice"
+        ],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "hard",
+      "passed": false
+    },
+    {
+      "id": "rel_006",
+      "input": "my husband Michael and I are going on vacation",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Michael",
+            "relation": "husband",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Michael",
+            "relation": "husband",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Michael (husband)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_007",
+      "input": "Emily is my mother, she raised me alone",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Emily",
+            "relation": "mother",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Emily",
+            "relation": "mother",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Emily (mother)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_008",
+      "input": "I have three sons: John, Paul, and George",
+      "expected": {
+        "family_members": [
+          {
+            "name": "John",
+            "relation": "son",
+            "confidence": 0.8
+          },
+          {
+            "name": "Paul",
+            "relation": "son",
+            "confidence": 0.8
+          },
+          {
+            "name": "George",
+            "relation": "son",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "John (son)",
+          "Paul (son)",
+          "George (son)"
+        ],
+        "extra": []
+      },
+      "difficulty": "very_hard",
+      "passed": false
+    },
+    {
+      "id": "rel_009",
+      "input": "my brother Tom works as a software engineer",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Tom",
+            "relation": "brother",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Tom",
+            "relation": "brother",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Tom (brother)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_010",
+      "input": "Jennifer is my sister, we grew up together",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Jennifer",
+            "relation": "sister",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Jennifer",
+            "relation": "sister",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Jennifer (sister)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_011",
+      "input": "my mom Lisa and dad Robert are visiting next week",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Lisa",
+            "relation": "mom",
+            "confidence": 0.95
+          },
+          {
+            "name": "Robert",
+            "relation": "dad",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Lisa",
+            "relation": "mom",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.5,
+      "details": {
+        "exact_matches": [
+          "Lisa (mom)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Robert (dad)"
+        ],
+        "extra": []
+      },
+      "difficulty": "hard",
+      "passed": false
+    },
+    {
+      "id": "rel_012",
+      "input": "I have a twin brother named Marcus",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Marcus",
+            "relation": "brother",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Marcus (brother)"
+        ],
+        "extra": []
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_013",
+      "input": "my grandfather William served in WWII",
+      "expected": {
+        "family_members": [
+          {
+            "name": "William",
+            "relation": "grandfather",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "William",
+            "relation": "grandfather",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "William (grandfather)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_014",
+      "input": "Charlotte is my grandmother on my mother's side",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Charlotte",
+            "relation": "grandmother",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "on",
+            "relation": "grandmother",
+            "confidence": 0.95
+          },
+          {
+            "name": "Charlotte",
+            "relation": "grandmother",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.3,
+      "details": {
+        "exact_matches": [
+          "Charlotte (grandmother)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "grandmother: expected Charlotte, got on"
+        ],
+        "missed": [],
+        "extra": [
+          "on (grandmother)"
+        ]
+      },
+      "difficulty": "medium",
+      "passed": true
+    },
+    {
+      "id": "rel_015",
+      "input": "my partner Alex and I bought a house together",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Alex",
+            "relation": "partner",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Alex",
+            "relation": "partner",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Alex (partner)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_016",
+      "input": "my aunt Susan lives in Portland",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Susan",
+            "relation": "aunt",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Susan",
+            "relation": "aunt",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Susan (aunt)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_017",
+      "input": "David is my uncle, he's really funny",
+      "expected": {
+        "family_members": [
+          {
+            "name": "David",
+            "relation": "uncle",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "David",
+            "relation": "uncle",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "David (uncle)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_018",
+      "input": "I have a cousin named Rachel who lives in New York",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Rachel",
+            "relation": "cousin",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Rachel",
+            "relation": "cousin",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Rachel (cousin)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_019",
+      "input": "my nephew Oliver just graduated college",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Oliver",
+            "relation": "nephew",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Oliver",
+            "relation": "nephew",
+            "confidence": 0.95
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Oliver (nephew)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_020",
+      "input": "Emma is my niece, she's so talented",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Emma",
+            "relation": "niece",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "Emma",
+            "relation": "niece",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Emma (niece)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_021",
+      "input": "my mother-in-law Patricia is coming to visit",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Patricia",
+            "relation": "mother-in-law",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Patricia (mother-in-law)"
+        ],
+        "extra": []
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_022",
+      "input": "James is my brother-in-law through my wife",
+      "expected": {
+        "family_members": [
+          {
+            "name": "James",
+            "relation": "brother-in-law",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "James",
+            "relation": "brother",
+            "confidence": 0.9
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.5,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [
+          "James: expected brother-in-law, got brother"
+        ],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": [
+          "James (brother)"
+        ]
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_023",
+      "input": "I have four cousins, but I'm closest to Amy",
+      "expected": {
+        "family_members": [
+          {
+            "name": "Amy",
+            "relation": "cousin",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [
+          {
+            "name": "but",
+            "relation": "cousin",
+            "confidence": 0.765
+          }
+        ],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.3,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "cousin: expected Amy, got but"
+        ],
+        "missed": [],
+        "extra": [
+          "but (cousin)"
+        ]
+      },
+      "difficulty": "hard",
+      "passed": false
+    },
+    {
+      "id": "rel_024",
+      "input": "my friend Sarah and I have known each other for 20 years",
+      "expected": {
+        "friends": [
+          {
+            "name": "Sarah",
+            "relation": "friend",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [
+          {
+            "name": "Sarah",
+            "relation": "friend",
+            "confidence": 0.95
+          }
+        ],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Sarah (friend)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_025",
+      "input": "I have a best friend named Chris who always has my back",
+      "expected": {
+        "friends": [
+          {
+            "name": "Chris",
+            "relation": "friend",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Chris (friend)"
+        ],
+        "extra": []
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_026",
+      "input": "Kevin is my colleague at work, we collaborate a lot",
+      "expected": {
+        "colleagues": [
+          {
+            "name": "Kevin",
+            "relation": "colleague",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [
+          {
+            "name": "at",
+            "relation": "colleague",
+            "confidence": 0.95
+          },
+          {
+            "name": "Kevin",
+            "relation": "colleague",
+            "confidence": 0.9
+          }
+        ],
+        "other_relations": []
+      },
+      "score": 1.3,
+      "details": {
+        "exact_matches": [
+          "Kevin (colleague)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "colleague: expected Kevin, got at"
+        ],
+        "missed": [],
+        "extra": [
+          "at (colleague)"
+        ]
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_027",
+      "input": "I work with a great team, especially my coworker Diana",
+      "expected": {
+        "colleagues": [
+          {
+            "name": "Diana",
+            "relation": "coworker",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [
+          {
+            "name": "Diana",
+            "relation": "coworker",
+            "confidence": 0.95
+          }
+        ],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Diana (coworker)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "hard",
+      "passed": true
+    },
+    {
+      "id": "rel_028",
+      "input": "my neighbor Bob helps me with yard work",
+      "expected": {
+        "other_relations": [
+          {
+            "name": "Bob",
+            "relation": "neighbor",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": [
+          {
+            "name": "Bob",
+            "relation": "neighbor",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Bob (neighbor)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_029",
+      "input": "Jessica is my mentor, she's taught me so much",
+      "expected": {
+        "other_relations": [
+          {
+            "name": "Jessica",
+            "relation": "mentor",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": [
+          {
+            "name": "Jessica",
+            "relation": "mentor",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Jessica (mentor)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_030",
+      "input": "I have a boyfriend named Tyler, we've been dating for 2 years",
+      "expected": {
+        "other_relations": [
+          {
+            "name": "Tyler",
+            "relation": "boyfriend",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": [
+          {
+            "name": "Tyler",
+            "relation": "boyfriend",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Tyler (boyfriend)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_031",
+      "input": "Rebecca is my girlfriend and we're thinking about moving in together",
+      "expected": {
+        "other_relations": [
+          {
+            "name": "Rebecca",
+            "relation": "girlfriend",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": [
+          {
+            "name": "and",
+            "relation": "girlfriend",
+            "confidence": 0.95
+          },
+          {
+            "name": "Rebecca",
+            "relation": "girlfriend",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "score": 1.3,
+      "details": {
+        "exact_matches": [
+          "Rebecca (girlfriend)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "girlfriend: expected Rebecca, got and"
+        ],
+        "missed": [],
+        "extra": [
+          "and (girlfriend)"
+        ]
+      },
+      "difficulty": "easy",
+      "passed": true
+    },
+    {
+      "id": "rel_032",
+      "input": "my roommate Alex is really messy but a good person",
+      "expected": {
+        "friends": [
+          {
+            "name": "Alex",
+            "relation": "friend",
+            "confidence": 0.8
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Alex (friend)"
+        ],
+        "extra": []
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_033",
+      "input": "I have two close friends, Maria and Luis",
+      "expected": {
+        "friends": [
+          {
+            "name": "Maria",
+            "relation": "friend",
+            "confidence": 0.85
+          },
+          {
+            "name": "Luis",
+            "relation": "friend",
+            "confidence": 0.85
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": []
+      },
+      "score": 0.0,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [
+          "Maria (friend)",
+          "Luis (friend)"
+        ],
+        "extra": []
+      },
+      "difficulty": "hard",
+      "passed": false
+    },
+    {
+      "id": "rel_034",
+      "input": "my therapist Dr. Anderson has really helped me",
+      "expected": {
+        "other_relations": [
+          {
+            "name": "Anderson",
+            "relation": "therapist",
+            "confidence": 0.9
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [],
+        "other_relations": [
+          {
+            "name": "Dr",
+            "relation": "therapist",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "score": 0.3,
+      "details": {
+        "exact_matches": [],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [
+          "therapist: expected Anderson, got Dr"
+        ],
+        "missed": [],
+        "extra": [
+          "Dr (therapist)"
+        ]
+      },
+      "difficulty": "medium",
+      "passed": false
+    },
+    {
+      "id": "rel_035",
+      "input": "I work with my teammate Sam on the project",
+      "expected": {
+        "colleagues": [
+          {
+            "name": "Sam",
+            "relation": "teammate",
+            "confidence": 0.95
+          }
+        ]
+      },
+      "actual": {
+        "family_members": [],
+        "friends": [],
+        "colleagues": [
+          {
+            "name": "Sam",
+            "relation": "teammate",
+            "confidence": 0.95
+          }
+        ],
+        "other_relations": []
+      },
+      "score": 1.0,
+      "details": {
+        "exact_matches": [
+          "Sam (teammate)"
+        ],
+        "name_correct_relation_wrong": [],
+        "name_wrong_relation_correct": [],
+        "missed": [],
+        "extra": []
+      },
+      "difficulty": "easy",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "purpose": "Entity Memory Training - Supervised Learning for Persistent Memory",
+    "created": "2025-11-14",
+    "total_scenarios": 5,
+    "total_turns": 25,
+    "focus": "Multi-turn entity persistence and recall"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "entity_mem_001",
+      "name": "Basic Name Memory",
+      "description": "User introduces name, DAE must remember across turns",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "Hi! My name is Sarah.",
+          "expected_behavior": "Extract user_name=Sarah, store in profile, acknowledge warmly",
+          "expected_entities": ["user_name"],
+          "expected_response_contains": ["Sarah"],
+          "memory_intent": true
+        },
+        {
+          "turn": 2,
+          "user_input": "What's the weather like?",
+          "expected_behavior": "Load entity context, use name in response",
+          "expected_entities_available": ["user_name=Sarah"],
+          "expected_response_contains": ["Sarah"],
+          "memory_intent": false,
+          "critical_test": "Does DAE use 'Sarah' even though user didn't say 'remember'?"
+        },
+        {
+          "turn": 3,
+          "user_input": "Do you remember my name?",
+          "expected_behavior": "Recall from entity memory, respond with confidence",
+          "expected_entities_available": ["user_name=Sarah"],
+          "expected_response_contains": ["Sarah", "Yes"],
+          "memory_intent": false,
+          "critical_test": "Direct memory query - must recall Sarah"
+        }
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_002",
+      "name": "Family Relationship Memory",
+      "description": "User introduces family members, DAE tracks relationships",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "Please remember: I have two daughters, Emma and Lily.",
+          "expected_behavior": "Extract family_members, store relationships",
+          "expected_entities": ["family_members"],
+          "expected_response_contains": ["Emma", "Lily", "daughters"],
+          "memory_intent": true
+        },
+        {
+          "turn": 2,
+          "user_input": "Tell me about parenting challenges.",
+          "expected_behavior": "Load entity context, reference daughters in response",
+          "expected_entities_available": ["family_members"],
+          "expected_response_contains": ["daughters"],
+          "memory_intent": false,
+          "critical_test": "Should reference Emma/Lily or 'daughters' naturally"
+        },
+        {
+          "turn": 3,
+          "user_input": "What are my daughters' names?",
+          "expected_behavior": "Recall both names from entity memory",
+          "expected_entities_available": ["family_members"],
+          "expected_response_contains": ["Emma", "Lily"],
+          "memory_intent": false,
+          "critical_test": "Direct query - must recall both names"
+        }
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_003",
+      "name": "Multi-Entity Complex Memory",
+      "description": "User introduces multiple entities, DAE must track all",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My name is Alex, I work at TechCorp, and my partner is Jordan.",
+          "expected_behavior": "Extract multiple entities (name, workplace, partner)",
+          "expected_entities": ["user_name", "workplace", "partner_name"],
+          "expected_response_contains": ["Alex", "TechCorp", "Jordan"],
+          "memory_intent": false
+        },
+        {
+          "turn": 2,
+          "user_input": "I'm stressed about work.",
+          "expected_behavior": "Reference TechCorp from entity memory",
+          "expected_entities_available": ["workplace=TechCorp"],
+          "expected_response_contains": ["TechCorp"],
+          "memory_intent": false,
+          "critical_test": "Should connect 'work' stress to known workplace TechCorp"
+        },
+        {
+          "turn": 3,
+          "user_input": "Jordan and I are planning a trip.",
+          "expected_behavior": "Recognize Jordan as partner from entity memory",
+          "expected_entities_available": ["partner_name=Jordan"],
+          "expected_response_contains": ["partner", "Jordan"],
+          "memory_intent": false,
+          "critical_test": "Should recognize Jordan as previously mentioned partner"
+        },
+        {
+          "turn": 4,
+          "user_input": "What do you know about me?",
+          "expected_behavior": "Recall all stored entities (name, workplace, partner)",
+          "expected_entities_available": ["user_name=Alex", "workplace=TechCorp", "partner_name=Jordan"],
+          "expected_response_contains": ["Alex", "TechCorp", "Jordan"],
+          "memory_intent": false,
+          "critical_test": "Comprehensive recall - all 3 entities"
+        }
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_004",
+      "name": "Crisis vs Healing Context (TSK Enrichment)",
+      "description": "Same entity mentioned in different felt-states",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My friend Alice is in the hospital right now, I'm really worried.",
+          "expected_behavior": "Extract entity with crisis felt-state (high urgency, sympathetic)",
+          "expected_entities": ["mentioned_names"],
+          "expected_tsk_context": {
+            "polyvagal_state": "sympathetic",
+            "urgency_level": "> 0.7",
+            "nexus_category": "GUT"
+          },
+          "expected_response_contains": ["Alice"],
+          "memory_intent": false
+        },
+        {
+          "turn": 2,
+          "user_input": "Alice came home from the hospital today! She's doing much better.",
+          "expected_behavior": "Extract same entity with healing felt-state (low urgency, ventral vagal)",
+          "expected_entities": ["mentioned_names"],
+          "expected_tsk_context": {
+            "polyvagal_state": "ventral_vagal",
+            "urgency_level": "< 0.3",
+            "healing_trajectory": true
+          },
+          "expected_response_contains": ["Alice"],
+          "memory_intent": false,
+          "critical_test": "Should differentiate Alice-in-crisis from Alice-healing"
+        },
+        {
+          "turn": 3,
+          "user_input": "How is Alice doing?",
+          "expected_behavior": "Recall both contexts (crisis → healing trajectory)",
+          "expected_entities_available": ["mentioned_names=Alice (2 contexts)"],
+          "expected_response_contains": ["Alice", "better", "hospital"],
+          "memory_intent": false,
+          "critical_test": "Should acknowledge both the crisis and the recovery"
+        }
+      ]
+    },
+    {
+      "scenario_id": "entity_mem_005",
+      "name": "Entity Update Resolution",
+      "description": "User corrects previously stated information",
+      "turns": [
+        {
+          "turn": 1,
+          "user_input": "My name is Bob.",
+          "expected_behavior": "Extract user_name=Bob",
+          "expected_entities": ["user_name"],
+          "expected_response_contains": ["Bob"],
+          "memory_intent": false
+        },
+        {
+          "turn": 2,
+          "user_input": "Actually, I prefer to go by Robert.",
+          "expected_behavior": "Update user_name from Bob to Robert",
+          "expected_entities": ["user_name"],
+          "expected_response_contains": ["Robert"],
+          "memory_intent": false,
+          "critical_test": "Should recognize correction and update stored name"
+        },
+        {
+          "turn": 3,
+          "user_input": "What's my name?",
+          "expected_behavior": "Recall UPDATED name (Robert, not Bob)",
+          "expected_entities_available": ["user_name=Robert"],
+          "expected_response_contains": ["Robert"],
+          "expected_response_not_contains": ["Bob"],
+          "memory_intent": false,
+          "critical_test": "Must use Robert, not original Bob"
+        }
+      ]
+    }
+  ],
+  "training_objectives": [
+    "1. ENTITY LOADING: Load entity_context_string on EVERY turn (not just memory_intent)",
+    "2. ENTITY RECALL: LLM must demonstrate knowledge of stored entities in responses",
+    "3. ENTITY PERSISTENCE: Entities must persist across multiple turns",
+    "4. TSK DIFFERENTIATION: Same entity in different felt-states tracked separately",
+    "5. ENTITY UPDATES: Handle corrections/updates to stored entity information",
+    "6. NATURAL USAGE: Reference entities naturally, not just when explicitly asked"
+  ],
+  "evaluation_criteria": {
+    "critical_success": [
+      "Turn 2+ responses demonstrate knowledge of Turn 1 entities",
+      "Direct memory queries ('What's my name?') answered correctly",
+      "Entity context flows to LLM on every turn (observable in logs)"
+    ],
+    "failure_modes": [
+      "DAE says 'I don't know' when entity was previously mentioned",
+      "DAE doesn't use names even when available in entity memory",
+      "Entity context string empty or not loaded on non-memory-intent turns"
+    ],
+    "metrics_to_track": [
+      "Entity extraction success rate",
+      "Entity recall accuracy (Turn N recalls Turn 1 entity)",
+      "Entity context string presence in felt_state",
+      "LLM response contains expected entities (%)"
+    ]
+  }
+}
