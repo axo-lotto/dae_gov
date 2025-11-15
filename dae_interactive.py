@@ -94,10 +94,14 @@ class InteractiveSession:
                         idx = int(user_input) - 1
                         if 0 <= idx < len(users):
                             user_id = users[idx]['user_id']
+                            self.user = self.user_registry.get_user(user_id)
+                        else:
+                            print(f"⚠️  Invalid selection: {user_input} (must be 1-{len(users)})")
+                            self.user = None
                     else:
+                        # Treat as user_id string
                         user_id = user_input
-
-                    self.user = self.user_registry.get_user(user_id)
+                        self.user = self.user_registry.get_user(user_id)
 
                     if not self.user:
                         print(f"⚠️  User not found, creating new user")

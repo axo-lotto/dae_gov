@@ -2,16 +2,16 @@
   "user_20251113_133354": {
     "user_id": "user_20251113_133354",
     "username": "Alice",
-    "created_at": "2025-11-13T13:33:54.131910",
+    "created_at": "2025-11-13T13:33:54.131919",
     "total_sessions": 2,
-    "total_turns": 11,
+    "total_turns": 2,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251113_133354_state.json"
   },
   "user_20251113_133625": {
     "user_id": "user_20251113_133625",
     "username": "Joe",
-    "created_at": "2025-11-13T13:36:25.496517",
+    "created_at": "2025-11-13T13:36:25.496859",
     "total_sessions": 0,
     "total_turns": 0,
     "organic_family_id": null,
@@ -20,7 +20,7 @@
   "user_20251113_133920": {
     "user_id": "user_20251113_133920",
     "username": "TestUser",
-    "created_at": "2025-11-13T13:39:20.174775",
+    "created_at": "2025-11-13T13:39:20.174785",
     "total_sessions": 2,
     "total_turns": 6,
     "organic_family_id": null,
@@ -29,16 +29,16 @@
   "user_20251113_143117": {
     "user_id": "user_20251113_143117",
     "username": "Emi",
-    "created_at": "2025-11-13T14:31:17.336687",
-    "total_sessions": 29,
-    "total_turns": 141,
+    "created_at": "2025-11-13T14:31:17.336782",
+    "total_sessions": 31,
+    "total_turns": 144,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251113_143117_state.json"
   },
   "user_20251113_232232": {
     "user_id": "user_20251113_232232",
     "username": "Jason",
-    "created_at": "2025-11-13T23:22:32.438093",
+    "created_at": "2025-11-13T23:22:32.438319",
     "total_sessions": 7,
     "total_turns": 17,
     "organic_family_id": null,
@@ -47,19 +47,109 @@
   "user_20251114_145956": {
     "user_id": "user_20251114_145956",
     "username": "e",
-    "created_at": "2025-11-14T14:59:56.488818",
+    "created_at": "2025-11-14T14:59:56.488954",
     "total_sessions": 2,
     "total_turns": 5,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251114_145956_state.json"
   },
+  "user_20251114_210211": {
+    "user_id": "user_20251114_210211",
+    "username": "test_entity_persist",
+    "created_at": "2025-11-14T21:02:11.584792",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_210211_state.json"
+  },
+  "user_20251114_210331": {
+    "user_id": "user_20251114_210331",
+    "username": "test_entity_persist",
+    "created_at": "2025-11-14T21:03:31.809464",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_210331_state.json"
+  },
+  "user_20251114_210514": {
+    "user_id": "user_20251114_210514",
+    "username": "test_emiliano",
+    "created_at": "2025-11-14T21:05:14.317290",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_210514_state.json"
+  },
+  "user_20251114_210541": {
+    "user_id": "user_20251114_210541",
+    "username": "test_emiliano",
+    "created_at": "2025-11-14T21:05:41.661935",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_210541_state.json"
+  },
+  "user_20251114_211210": {
+    "user_id": "user_20251114_211210",
+    "username": "test_entity_persist",
+    "created_at": "2025-11-14T21:12:10.709007",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_211210_state.json"
+  },
+  "user_20251114_211221": {
+    "user_id": "user_20251114_211221",
+    "username": "test_emiliano",
+    "created_at": "2025-11-14T21:12:21.604450",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251114_211221_state.json"
+  },
   "user_20251114_235624": {
     "user_id": "user_20251114_235624",
     "username": "hi alice, testing the continuous reflection fix",
-    "created_at": "2025-11-14T23:56:24.825234",
+    "created_at": "2025-11-14T23:56:24.825244",
     "total_sessions": 0,
     "total_turns": 0,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251114_235624_state.json"
+  },
+  "user_20251115_083831": {
+    "user_id": "user_20251115_083831",
+    "username": "/exit",
+    "created_at": "2025-11-15T08:38:31.483291",
+    "total_sessions": 1,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_083831_state.json"
+  },
+  "user_20251115_083852": {
+    "user_id": "user_20251115_083852",
+    "username": "emiliano",
+    "created_at": "2025-11-15T08:38:52.450187",
+    "total_sessions": 1,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_083852_state.json"
+  },
+  "user_20251115_084127": {
+    "user_id": "user_20251115_084127",
+    "username": "jaime",
+    "created_at": "2025-11-15T08:41:27.285355",
+    "total_sessions": 1,
+    "total_turns": 1,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_084127_state.json"
+  },
+  "user_20251115_084314": {
+    "user_id": "user_20251115_084314",
+    "username": "user_20251115_084314",
+    "created_at": "2025-11-15T08:43:14.087354",
+    "total_sessions": 1,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_084314_state.json"
   }
 }

@@ -1,0 +1,38 @@
+{
+  "user_20251115_083341": {
+    "user_id": "user_20251115_083341",
+    "username": "4",
+    "created_at": "2025-11-15T08:33:41.763035",
+    "total_sessions": 1,
+    "total_turns": 1,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_083341_state.json"
+  },
+  "user_20251115_083831": {
+    "user_id": "user_20251115_083831",
+    "username": "/exit",
+    "created_at": "2025-11-15T08:38:31.483087",
+    "total_sessions": 1,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_083831_state.json"
+  },
+  "user_20251115_083852": {
+    "user_id": "user_20251115_083852",
+    "username": "emiliano",
+    "created_at": "2025-11-15T08:38:52.450010",
+    "total_sessions": 1,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_083852_state.json"
+  },
+  "user_20251115_084127": {
+    "user_id": "user_20251115_084127",
+    "username": "jaime",
+    "created_at": "2025-11-15T08:41:27.285032",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251115_084127_state.json"
+  }
+}

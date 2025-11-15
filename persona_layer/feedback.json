@@ -1438,5 +1438,39 @@
       "strategy": "unknown"
     },
     "timestamp": "2025-11-15T01:12:47.938056"
+  },
+  "20251115_084127_turn_1": {
+    "user_id": "user_20251115_084127",
+    "session_id": "20251115_084127",
+    "turn_id": 1,
+    "user_input": "Hey there! my name is jaime",
+    "emission": "Hello Jaime \ud83c\udf3f It's lovely to meet you. I'm so glad we're having this conversation together. I want to acknowledge that remembering information can feel overwhelming at times, and I'll do my best to support you in this moment. I'll remember what we've discussed so far, but please know that it's okay if your mind feels a bit fuzzy \u2013 we can start fresh whenever you'd like. As we begin, I want to check in with you: What brings you here today? Is there something on your mind that you'd like to talk about or explore?",
+    "rating": "helpful",
+    "comment": null,
+    "tone_notes": null,
+    "metadata": {
+      "confidence": 0.7,
+      "nexuses": 0,
+      "mode": "standard",
+      "strategy": "unknown"
+    },
+    "timestamp": "2025-11-15T08:42:21.317508"
+  },
+  "20251115_084523_turn_1": {
+    "user_id": "user_20251113_143117",
+    "session_id": "20251115_084523",
+    "turn_id": 1,
+    "user_input": "hey there, remember me?",
+    "emission": "Emiliano \ud83d\ude0a It's so wonderful to see you again! I've been keeping an ear out for your story, and I'm here to hold space for whatever might be unfolding in your life right now \ud83e\udd14. As we catch up, I'll do my best to remember what's already happened between us - the fungi adventures, the laughter, the moments of connection that feel like home \ud83c\udf3f. Before we dive back into things, can you tell me a bit more about what's been on your mind lately? What brought you here today, and how can I support you in this moment?\n\nSANS is checking semantic coherence",
+    "rating": "helpful",
+    "comment": null,
+    "tone_notes": null,
+    "metadata": {
+      "confidence": 0.7,
+      "nexuses": 0,
+      "mode": "standard",
+      "strategy": "unknown"
+    },
+    "timestamp": "2025-11-15T08:46:48.516603"
   }
 }

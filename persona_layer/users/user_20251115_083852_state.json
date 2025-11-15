@@ -1,0 +1,19 @@
+{
+  "user_id": "user_20251115_083852",
+  "username": "emiliano",
+  "created_at": "2025-11-15T08:38:52.450187",
+  "session_history": [
+    {
+      "session_id": "20251115_083852",
+      "timestamp": "2025-11-15T08:40:39.764054",
+      "turns": 0
+    }
+  ],
+  "feedback_count": 0,
+  "helpful_rate": 0.0,
+  "excellent_rate": 0.0,
+  "organic_family_membership": [],
+  "last_session": "20251115_083852",
+  "preferred_tone": "balanced",
+  "dae_personality_notes": []
+}

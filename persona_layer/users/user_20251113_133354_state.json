@@ -35,4 +35,11 @@
     "trust_indicators": [],
     "felt_trajectory": [],
     "transformation_patterns": {},
-    "humor_evolution": 
+    "humor_evolution": {
+      "attempts": 0,
+      "successes": 0,
+      "tolerance": 0.5
+    },
+    "inside_jokes": []
+  }
+} 

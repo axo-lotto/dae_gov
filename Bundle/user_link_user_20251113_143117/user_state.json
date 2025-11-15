@@ -1,6 +1,6 @@
 {
   "user_id": "user_20251113_143117",
-  "total_conversations": 149,
+  "total_conversations": 150,
   "themes": [],
   "inside_jokes": [],
   "preferences": {},
@@ -8,10 +8,6 @@
   "polyvagal_history": [
     {
       "state": "unknown",
-      "timestamp": "2025-11-14_22-50-43"
-    },
-    {
-      "state": "unknown",
       "timestamp": "2025-11-14_22-51-46"
     },
     {
@@ -205,15 +201,15 @@
     {
       "state": "unknown",
       "timestamp": "2025-11-15_01-07-09"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_08-46-12"
     }
   ],
   "zone_history": [
     {
       "zone": 0,
-      "timestamp": "2025-11-14_22-50-43"
-    },
-    {
-      "zone": 0,
       "timestamp": "2025-11-14_22-51-46"
     },
     {
@@ -407,7 +403,11 @@
     {
       "zone": 0,
       "timestamp": "2025-11-15_01-07-09"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_08-46-12"
     }
   ],
-  "last_updated": "2025-11-15_01-07-09"
+  "last_updated": "2025-11-15_08-46-12"
 }
