@@ -36,8 +36,8 @@ from datetime import datetime
 from typing import Dict, List, Any
 import numpy as np
 
-# Add project to path
-sys.path.insert(0, str(Path(__file__).parent))
+# Add project root to path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from persona_layer.conversational_organism_wrapper import ConversationalOrganismWrapper
 
