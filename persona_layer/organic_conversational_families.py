@@ -129,7 +129,7 @@ class OrganicConversationalFamilies:
 
     def __init__(
         self,
-        storage_path: str = 'persona_layer/organic_families.json',
+        storage_path: str = 'persona_layer/state/active/organic_families.json',
         similarity_threshold: float = 0.65,  # OPTIMIZED Nov 13, 2025: 0.75 → 0.65 (0.50 experiment showed threshold not bottleneck)
         ema_alpha: float = 0.2,
         maturity_threshold: int = 3,

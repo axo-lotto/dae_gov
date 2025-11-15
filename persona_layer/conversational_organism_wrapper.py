@@ -387,7 +387,7 @@ class ConversationalOrganismWrapper:
             try:
                 print("   Loading family V0 learner (DAE 3.0 per-family optimization)...")
                 self.family_v0_learner = FamilyV0Learner(
-                    families_path=Path("persona_layer/organic_families.json"),
+                    families_path=Path("persona_layer/state/active/organic_families.json"),
                     learning_rate=0.1
                 )
                 print(f"   ✅ Family V0 learner ready (per-family V0 targets)")
