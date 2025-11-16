@@ -60,7 +60,7 @@ class FamilyV0Learner:
 
     def __init__(
         self,
-        families_path: Path = Path("persona_layer/organic_families.json"),
+        families_path: Path = Path("persona_layer/state/active/organic_families.json"),
         learning_rate: float = 0.1,
         history_window: int = 20,
         organ_learning_rate: float = 0.05,

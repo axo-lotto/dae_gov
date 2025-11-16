@@ -28,11 +28,14 @@ Status: Phase 3 Implementation
 
 import json
 import numpy as np
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, List, Optional, Set, Tuple, Any
 from dataclasses import dataclass, field
 from pathlib import Path
 from collections import defaultdict
 import random
+
+# Import Config for intelligence emergence mode flag
+from config import Config
 
 
 @dataclass
@@ -556,7 +559,14 @@ class EmissionGenerator:
         # 🌀 PHASE LLM1: Route to felt-guided LLM if available (Nov 13, 2025)
         # This replaces ALL phrase-based emission (direct, fusion, meta-atom, transduction)
         # Meta-atoms become lures that guide LLM, not phrase sources
-        if self.felt_guided_llm and organ_results and user_input:
+        #
+        # 🆕 INTELLIGENCE EMERGENCE MODE CONTROL (Nov 15, 2025)
+        # Check Config.INTELLIGENCE_EMERGENCE_MODE flag:
+        # - False (default): Use felt-guided LLM for quality (interactive/production)
+        # - True: Skip LLM to measure organic emission evolution (epoch training)
+        if (self.felt_guided_llm and organ_results and user_input and
+            not Config.INTELLIGENCE_EMERGENCE_MODE):  # 🆕 Respect intelligence emergence mode
+
             print("      🌀 Using felt-guided LLM for emission (unlimited felt intelligence)")
 
             # Generate single emission from felt state
@@ -915,7 +925,8 @@ class EmissionGenerator:
         satisfaction: float = 0.0,  # 🌀 NEW: For felt-guided LLM
         memory_context: Optional[List[Dict]] = None,  # 🌀 NEW: For felt-guided LLM
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++: Entity memory (Nov 14, 2025)
-        memory_intent: bool = False  # 🌀 PHASE 1.8++: Memory intent detected (Nov 14, 2025)
+        memory_intent: bool = False,  # 🌀 PHASE 1.8++: Memory intent detected (Nov 14, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL (Nov 15, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate therapeutic phrases from nexuses.
@@ -948,7 +959,8 @@ class EmissionGenerator:
                     memory_context=memory_context,
                     num_emissions=num_emissions,
                     entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-                    memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                    memory_intent=memory_intent,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                    temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
                 )
             else:
                 # Fallback to Hebbian if no felt-guided LLM
@@ -990,7 +1002,8 @@ class EmissionGenerator:
                         satisfaction=satisfaction,
                         memory_context=memory_context,
                         entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-                        memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                        memory_intent=memory_intent,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                        temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
                     )
                     used_strategies.add('felt_guided_llm')
                 else:
@@ -1402,7 +1415,8 @@ class EmissionGenerator:
         satisfaction: float,
         memory_context: Optional[List[Dict]] = None,
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-        memory_intent: bool = False  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        memory_intent: bool = False,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL (Nov 15, 2025)
     ) -> Optional[EmittedPhrase]:
         """
         Generate single emission using felt-guided LLM.
@@ -1410,6 +1424,7 @@ class EmissionGenerator:
         Called when nexuses exist but direct/fusion not strong enough.
 
         🌀 PHASE 1.8++: Now includes entity memory context (Nov 14, 2025)
+        🕐 TEMPORAL: Now includes time/date context (Nov 15, 2025)
         """
         try:
             emission_text, confidence, metadata = self.felt_guided_llm.generate_from_felt_state(
@@ -1420,7 +1435,8 @@ class EmissionGenerator:
                 satisfaction=satisfaction,
                 memory_context=memory_context,
                 entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++
-                memory_intent=memory_intent  # 🌀 PHASE 1.8++
+                memory_intent=memory_intent,  # 🌀 PHASE 1.8++
+                temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
             )
 
             # Extract dominant organs
@@ -1453,7 +1469,8 @@ class EmissionGenerator:
         memory_context: Optional[List[Dict]] = None,
         num_emissions: int = 3,
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-        memory_intent: bool = False  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        memory_intent: bool = False,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL (Nov 15, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate multiple emissions using felt-guided LLM (no nexuses formed).
@@ -1472,7 +1489,8 @@ class EmissionGenerator:
                 satisfaction=satisfaction,
                 memory_context=memory_context,
                 entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-                memory_intent=memory_intent  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                memory_intent=memory_intent,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
+                temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
             )
 
             if emission:

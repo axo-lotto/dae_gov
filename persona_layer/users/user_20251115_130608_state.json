@@ -1,0 +1,19 @@
+{
+  "user_id": "user_20251115_130608",
+  "username": "user_20251115_130608",
+  "created_at": "2025-11-15T13:06:08.785366",
+  "session_history": [
+    {
+      "session_id": "20251115_130608",
+      "timestamp": "2025-11-15T13:06:17.582666",
+      "turns": 0
+    }
+  ],
+  "feedback_count": 0,
+  "helpful_rate": 0.0,
+  "excellent_rate": 0.0,
+  "organic_family_membership": [],
+  "last_session": "20251115_130608",
+  "preferred_tone": "balanced",
+  "dae_personality_notes": []
+}

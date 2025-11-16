@@ -1,0 +1,3281 @@
+{
+  "start_time": "2025-11-16T08:04:52.942354",
+  "corpus_info": {
+    "total_prompts": 28,
+    "categories": [
+      "anger_processing",
+      "body_awareness",
+      "crisis_high_urgency",
+      "dorsal_collapse",
+      "existential_inquiry",
+      "grief_processing",
+      "hope_cultivation",
+      "paradoxical_states",
+      "protective_parts",
+      "recursive_loops",
+      "relational_connection",
+      "self_relationship",
+      "trauma_processing",
+      "ventral_safety"
+    ]
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "timestamp": "2025-11-16T08:04:52.942371",
+      "prompts_processed": 28,
+      "results": [
+        {
+          "prompt_id": "crisis_acute_panic_01",
+          "category": "crisis_high_urgency",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.85,
+            "dominant_organs": [
+              "NDAM",
+              "EO",
+              "BOND"
+            ],
+            "expected_nexus_type": "urgency_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9276454881798497,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8287185354691075,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8492917847025497,
+            "BOND": 0.4,
+            "SANS": 1.0,
+            "NDAM": 0.40303030303030296,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "crisis_acute_panic_02",
+          "category": "crisis_high_urgency",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.9,
+            "dominant_organs": [
+              "NDAM",
+              "EO",
+              "BOND"
+            ],
+            "expected_nexus_type": "urgency_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.8626277246996041,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.75,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8406876790830945,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.046296296296296294,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "collapse_shutdown_01",
+          "category": "dorsal_collapse",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 5,
+            "urgency": 0.15,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "dissociative_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.893009853188516,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7820261437908497,
+            "EMPATHY": 0.884567901234568,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8526724975704567,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4234180327868853,
+            "RNX": 0.5,
+            "EO": 0.1639344262295082,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "collapse_shutdown_02",
+          "category": "dorsal_collapse",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 5,
+            "urgency": 0.2,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "dissociative_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9640141567279763,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8083333333333333,
+            "EMPATHY": 0.85,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.85,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.4526086956521739,
+            "RNX": 0.5,
+            "EO": 0.13043478260869565,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "safety_grounded_01",
+          "category": "ventral_safety",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "LISTENING",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9958356830400258,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7820261437908497,
+            "EMPATHY": 0.8887387387387387,
+            "WISDOM": 0.8758064516129033,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8799472295514511,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.1724137931034483,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "safety_grounded_02",
+          "category": "ventral_safety",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "LISTENING",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9945327010255322,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8809322033898302,
+            "EMPATHY": 0.9342105263157894,
+            "WISDOM": 0.8,
+            "AUTHENTICITY": 0.9284810126582279,
+            "PRESENCE": 0.8499999999999999,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.043478260869565216,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "protective_boundary_01",
+          "category": "protective_parts",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.35,
+            "dominant_organs": [
+              "BOND",
+              "WISDOM",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9825300920581663,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.836480686695279,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.8840425531914894,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8406876790830946,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4025641025641026,
+            "RNX": 0.5,
+            "EO": 0.042735042735042736,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "protective_boundary_02",
+          "category": "protective_parts",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.4,
+            "dominant_organs": [
+              "BOND",
+              "WISDOM",
+              "SANS"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9722557996292005,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8045454545454546,
+            "EMPATHY": 0.9305555555555557,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8674418604651163,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.04065040650406505,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "recursive_rumination_01",
+          "category": "recursive_loops",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.55,
+            "dominant_organs": [
+              "RNX",
+              "NDAM",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "looped_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9486264900325897,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8704301075268818,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.85,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.45232558139534884,
+            "RNX": 0.5,
+            "EO": 0.03875968992248062,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "recursive_rumination_02",
+          "category": "recursive_loops",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.5,
+            "dominant_organs": [
+              "RNX",
+              "WISDOM",
+              "SANS"
+            ],
+            "expected_nexus_type": "looped_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.985250804629702,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8608,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.95,
+            "PRESENCE": 0.8362869198312236,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.4023622047244094,
+            "RNX": 0.5,
+            "EO": 0.07874015748031496,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "relational_trust_01",
+          "category": "relational_connection",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.1,
+            "dominant_organs": [
+              "EMPATHY",
+              "LISTENING",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9831292947519261,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8131578947368421,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.8673913043478262,
+            "AUTHENTICITY": 0.8940199335548172,
+            "PRESENCE": 0.8848837209302325,
+            "BOND": 0.7,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "relational_trust_02",
+          "category": "relational_connection",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.15,
+            "dominant_organs": [
+              "EMPATHY",
+              "AUTHENTICITY",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9965703403380882,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.839057239057239,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.4023809523809524,
+            "RNX": 0.5,
+            "EO": 0.15872615883095617,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "paradox_ambivalence_01",
+          "category": "paradoxical_states",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 2,
+            "urgency": 0.45,
+            "dominant_organs": [
+              "WISDOM",
+              "BOND",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9187293164600857,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.75,
+            "EMPATHY": 0.8936548223350252,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8660427807486631,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.03816543909503699,
+            "CARD": 0.25
+          }
+        },
+        {
+          "prompt_id": "paradox_ambivalence_02",
+          "category": "paradoxical_states",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.5,
+            "dominant_organs": [
+              "WISDOM",
+              "BOND",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9758044406874858,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7956647398843931,
+            "EMPATHY": 0.9215686274509806,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8532088681446907,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "grief_loss_01",
+          "category": "grief_processing",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 4,
+            "urgency": 0.3,
+            "dominant_organs": [
+              "EMPATHY",
+              "PRESENCE",
+              "BOND"
+            ],
+            "expected_nexus_type": "grief_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9216973392088367,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.777146814404432,
+            "EMPATHY": 0.8911347517730497,
+            "WISDOM": 0.876,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8235772357723576,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.4022556390977443,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "grief_loss_02",
+          "category": "grief_processing",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 4,
+            "urgency": 0.35,
+            "dominant_organs": [
+              "EMPATHY",
+              "PRESENCE",
+              "BOND"
+            ],
+            "expected_nexus_type": "grief_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9724061796818266,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8634433962264151,
+            "EMPATHY": 0.9499999999999998,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8658536585365852,
+            "BOND": 0.9333333333333332,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "somatic_wisdom_01",
+          "category": "body_awareness",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.2,
+            "dominant_organs": [
+              "PRESENCE",
+              "EO",
+              "LISTENING"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9955744291121906,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.856371911573472,
+            "EMPATHY": 0.9256097560975609,
+            "WISDOM": 0.872197640117994,
+            "AUTHENTICITY": 0.9181818181818181,
+            "PRESENCE": 0.8730109204368175,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.3914755778088366,
+            "RNX": 0.5,
+            "EO": 0.07462353248719068,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "somatic_wisdom_02",
+          "category": "body_awareness",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.1,
+            "dominant_organs": [
+              "PRESENCE",
+              "EO",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9960651357952561,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7890438247011952,
+            "EMPATHY": 0.8722222222222223,
+            "WISDOM": 0.876,
+            "AUTHENTICITY": 0.8809090909090909,
+            "PRESENCE": 0.859974905897114,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.037035370445367,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "self_compassion_growth_01",
+          "category": "self_relationship",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.05,
+            "dominant_organs": [
+              "AUTHENTICITY",
+              "WISDOM",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9648523791265389,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.909409594095941,
+            "EMPATHY": 0.9042669584245079,
+            "WISDOM": 0.9106959498003422,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.863157894736842,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.45232558139534884,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "self_compassion_growth_02",
+          "category": "self_relationship",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "AUTHENTICITY",
+              "WISDOM",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9965260154776469,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8665217391304347,
+            "EMPATHY": 0.8799465240641711,
+            "WISDOM": 0.8631147540983608,
+            "AUTHENTICITY": 0.85,
+            "PRESENCE": 0.8418952618453865,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "trauma_integration_01",
+          "category": "trauma_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.65,
+            "dominant_organs": [
+              "BOND",
+              "NDAM",
+              "SANS"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9090613840382432,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8338827838827839,
+            "EMPATHY": 0.8852941176470589,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.849063670411985,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.40222222222222215,
+            "RNX": 0.5,
+            "EO": 0.074070740890734,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "trauma_integration_02",
+          "category": "trauma_processing",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.45,
+            "dominant_organs": [
+              "BOND",
+              "SANS",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.971206251252885,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7956647398843932,
+            "EMPATHY": 0.9000000000000001,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8362869198312237,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.4044776119402985,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "existential_meaning_01",
+          "category": "existential_inquiry",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.25,
+            "dominant_organs": [
+              "WISDOM",
+              "AUTHENTICITY",
+              "LISTENING"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9292191125035522,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8,
+            "EMPATHY": 0.9305555555555557,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.8987804878048782,
+            "PRESENCE": 0.8488151658767773,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.40215827338129495,
+            "RNX": 0.5,
+            "EO": 0.03597122302158273,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "existential_meaning_02",
+          "category": "existential_inquiry",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 2,
+            "urgency": 0.3,
+            "dominant_organs": [
+              "WISDOM",
+              "LISTENING",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9971563263422942,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8616326530612245,
+            "EMPATHY": 0.9211030082041932,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.8500000000000001,
+            "PRESENCE": 0.85,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "anger_expression_01",
+          "category": "anger_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 2,
+            "urgency": 0.6,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "firefighter_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.8904785369704884,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.841559829059829,
+            "EMPATHY": 0.9342105263157894,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8409532215357457,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4149084210526316,
+            "RNX": 0.5,
+            "EO": 0.09868421052631579,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "anger_expression_02",
+          "category": "anger_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.55,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "firefighter_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9820908031605091,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7686311787072244,
+            "EMPATHY": 0.9039877300613497,
+            "WISDOM": 0.9041743970315399,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8362869198312235,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.42258163265306126,
+            "RNX": 0.5,
+            "EO": 0.2040816326530612,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "hope_emergence_01",
+          "category": "hope_cultivation",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "AUTHENTICITY",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9751251160972415,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8357843137254902,
+            "EMPATHY": 0.95,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.8882022471910113,
+            "PRESENCE": 0.8342995169082127,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.40208333333333335,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "hope_emergence_02",
+          "category": "hope_cultivation",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.05,
+            "dominant_organs": [
+              "PRESENCE",
+              "WISDOM",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 1.0,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8201219512195123,
+            "EMPATHY": 0.85,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.85,
+            "PRESENCE": 0.8429501084598698,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.40214285714285714,
+            "RNX": 0.5,
+            "EO": 0.03571428571428571,
+            "CARD": 0.5
+          }
+        }
+      ],
+      "category_breakdown": {
+        "crisis_high_urgency": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.8951366064397269
+        },
+        "dorsal_collapse": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9285120049582462
+        },
+        "ventral_safety": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.995184192032779
+        },
+        "protective_parts": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9773929458436834
+        },
+        "recursive_loops": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9669386473311459
+        },
+        "relational_connection": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9898498175450072
+        },
+        "paradoxical_states": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9472668785737858
+        },
+        "grief_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9470517594453316
+        },
+        "body_awareness": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9958197824537234
+        },
+        "self_relationship": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9806891973020928
+        },
+        "trauma_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.940133817645564
+        },
+        "existential_inquiry": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9631877194229232
+        },
+        "anger_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9362846700654988
+        },
+        "hope_cultivation": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9875625580486207
+        }
+      },
+      "organ_activations": {
+        "LISTENING": [
+          0.8287185354691075,
+          0.75,
+          0.7820261437908497,
+          0.8083333333333333,
+          0.7820261437908497,
+          0.8809322033898302,
+          0.836480686695279,
+          0.8045454545454546,
+          0.8704301075268818,
+          0.8608,
+          0.8131578947368421,
+          0.8,
+          0.75,
+          0.7956647398843931,
+          0.777146814404432,
+          0.8634433962264151,
+          0.856371911573472,
+          0.7890438247011952,
+          0.909409594095941,
+          0.8665217391304347,
+          0.8338827838827839,
+          0.7956647398843932,
+          0.8,
+          0.8616326530612245,
+          0.841559829059829,
+          0.7686311787072244,
+          0.8357843137254902,
+          0.8201219512195123
+        ],
+        "EMPATHY": [
+          0.0,
+          0.0,
+          0.884567901234568,
+          0.85,
+          0.8887387387387387,
+          0.9342105263157894,
+          0.913755458515284,
+          0.9305555555555557,
+          0.0,
+          0.0,
+          0.913755458515284,
+          0.913755458515284,
+          0.8936548223350252,
+          0.9215686274509806,
+          0.8911347517730497,
+          0.9499999999999998,
+          0.9256097560975609,
+          0.8722222222222223,
+          0.9042669584245079,
+          0.8799465240641711,
+          0.8852941176470589,
+          0.9000000000000001,
+          0.9305555555555557,
+          0.9211030082041932,
+          0.9342105263157894,
+          0.9039877300613497,
+          0.95,
+          0.85
+        ],
+        "WISDOM": [
+          0.0,
+          0.0,
+          0.0,
+          0.85,
+          0.8758064516129033,
+          0.8,
+          0.8840425531914894,
+          0.85,
+          0.85,
+          0.85,
+          0.8673913043478262,
+          0.9,
+          0.85,
+          0.85,
+          0.876,
+          0.85,
+          0.872197640117994,
+          0.876,
+          0.9106959498003422,
+          0.8631147540983608,
+          0.9,
+          0.85,
+          0.9,
+          0.9,
+          0.0,
+          0.9041743970315399,
+          0.85,
+          0.85
+        ],
+        "AUTHENTICITY": [
+          0.0,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.9000000000000001,
+          0.9284810126582279,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.95,
+          0.8940199335548172,
+          0.9000000000000001,
+          0.0,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.9181818181818181,
+          0.8809090909090909,
+          0.0,
+          0.85,
+          0.0,
+          0.9000000000000001,
+          0.8987804878048782,
+          0.8500000000000001,
+          0.0,
+          0.0,
+          0.8882022471910113,
+          0.85
+        ],
+        "PRESENCE": [
+          0.8492917847025497,
+          0.8406876790830945,
+          0.8526724975704567,
+          0.85,
+          0.8799472295514511,
+          0.8499999999999999,
+          0.8406876790830946,
+          0.8674418604651163,
+          0.85,
+          0.8362869198312236,
+          0.8848837209302325,
+          0.839057239057239,
+          0.8660427807486631,
+          0.8532088681446907,
+          0.8235772357723576,
+          0.8658536585365852,
+          0.8730109204368175,
+          0.859974905897114,
+          0.863157894736842,
+          0.8418952618453865,
+          0.849063670411985,
+          0.8362869198312237,
+          0.8488151658767773,
+          0.85,
+          0.8409532215357457,
+          0.8362869198312235,
+          0.8342995169082127,
+          0.8429501084598698
+        ],
+        "BOND": [
+          0.4,
+          0.0,
+          0.5,
+          0.3333333333333333,
+          1.0,
+          1.0,
+          0.5,
+          1.0,
+          0.5,
+          1.0,
+          0.7,
+          1.0,
+          1.0,
+          0.5,
+          0.0,
+          0.9333333333333332,
+          1.0,
+          1.0,
+          0.5,
+          1.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          1.0,
+          0.5,
+          1.0,
+          0.3333333333333333,
+          1.0
+        ],
+        "SANS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NDAM": [
+          0.40303030303030296,
+          0.0,
+          0.4234180327868853,
+          0.4526086956521739,
+          0.0,
+          0.0,
+          0.4025641025641026,
+          0.0,
+          0.45232558139534884,
+          0.4023622047244094,
+          0.0,
+          0.4023809523809524,
+          0.0,
+          0.0,
+          0.4022556390977443,
+          0.0,
+          0.3914755778088366,
+          0.0,
+          0.45232558139534884,
+          0.0,
+          0.40222222222222215,
+          0.4044776119402985,
+          0.40215827338129495,
+          0.0,
+          0.4149084210526316,
+          0.42258163265306126,
+          0.40208333333333335,
+          0.40214285714285714
+        ],
+        "RNX": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "EO": [
+          0.0,
+          0.046296296296296294,
+          0.1639344262295082,
+          0.13043478260869565,
+          0.1724137931034483,
+          0.043478260869565216,
+          0.042735042735042736,
+          0.04065040650406505,
+          0.03875968992248062,
+          0.07874015748031496,
+          0.5,
+          0.15872615883095617,
+          0.03816543909503699,
+          0.5,
+          0.5,
+          0.5,
+          0.07462353248719068,
+          0.037035370445367,
+          0.0,
+          0.5,
+          0.074070740890734,
+          0.0,
+          0.03597122302158273,
+          0.0,
+          0.09868421052631579,
+          0.2040816326530612,
+          0.0,
+          0.03571428571428571
+        ],
+        "CARD": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.75,
+          0.75,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.25,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "polyvagal_states": {
+        "sympathetic": 7,
+        "dorsal_vagal": 6,
+        "ventral_vagal": 10,
+        "mixed_state": 5
+      },
+      "zones": {
+        "zone_1": 28
+      },
+      "urgency_levels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "epoch": 2,
+      "timestamp": "2025-11-16T08:16:22.199500",
+      "prompts_processed": 28,
+      "results": [
+        {
+          "prompt_id": "crisis_acute_panic_01",
+          "category": "crisis_high_urgency",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.85,
+            "dominant_organs": [
+              "NDAM",
+              "EO",
+              "BOND"
+            ],
+            "expected_nexus_type": "urgency_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9276454881798497,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8287185354691075,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8492917847025497,
+            "BOND": 0.4,
+            "SANS": 1.0,
+            "NDAM": 0.40303030303030296,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "crisis_acute_panic_02",
+          "category": "crisis_high_urgency",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.9,
+            "dominant_organs": [
+              "NDAM",
+              "EO",
+              "BOND"
+            ],
+            "expected_nexus_type": "urgency_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.8626277246996041,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.75,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8406876790830945,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.046296296296296294,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "collapse_shutdown_01",
+          "category": "dorsal_collapse",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 5,
+            "urgency": 0.15,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "dissociative_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.893009853188516,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7820261437908497,
+            "EMPATHY": 0.884567901234568,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8526724975704567,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4234180327868853,
+            "RNX": 0.5,
+            "EO": 0.1639344262295082,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "collapse_shutdown_02",
+          "category": "dorsal_collapse",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 5,
+            "urgency": 0.2,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "dissociative_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9640141567279763,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8083333333333333,
+            "EMPATHY": 0.85,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.85,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.4526086956521739,
+            "RNX": 0.5,
+            "EO": 0.13043478260869565,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "safety_grounded_01",
+          "category": "ventral_safety",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "LISTENING",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9958356830400258,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7820261437908497,
+            "EMPATHY": 0.8887387387387387,
+            "WISDOM": 0.8758064516129033,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8799472295514511,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.1724137931034483,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "safety_grounded_02",
+          "category": "ventral_safety",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "LISTENING",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9945327010255322,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8809322033898302,
+            "EMPATHY": 0.9342105263157894,
+            "WISDOM": 0.8,
+            "AUTHENTICITY": 0.9284810126582279,
+            "PRESENCE": 0.8499999999999999,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.043478260869565216,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "protective_boundary_01",
+          "category": "protective_parts",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.35,
+            "dominant_organs": [
+              "BOND",
+              "WISDOM",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9825300920581663,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.836480686695279,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.8840425531914894,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8406876790830946,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4025641025641026,
+            "RNX": 0.5,
+            "EO": 0.042735042735042736,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "protective_boundary_02",
+          "category": "protective_parts",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.4,
+            "dominant_organs": [
+              "BOND",
+              "WISDOM",
+              "SANS"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9722557996292005,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8045454545454546,
+            "EMPATHY": 0.9305555555555557,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8674418604651163,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.04065040650406505,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "recursive_rumination_01",
+          "category": "recursive_loops",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.55,
+            "dominant_organs": [
+              "RNX",
+              "NDAM",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "looped_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9486264900325897,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8704301075268818,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.85,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.45232558139534884,
+            "RNX": 0.5,
+            "EO": 0.03875968992248062,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "recursive_rumination_02",
+          "category": "recursive_loops",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.5,
+            "dominant_organs": [
+              "RNX",
+              "WISDOM",
+              "SANS"
+            ],
+            "expected_nexus_type": "looped_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.985250804629702,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8608,
+            "EMPATHY": 0.0,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.95,
+            "PRESENCE": 0.8362869198312236,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.4023622047244094,
+            "RNX": 0.5,
+            "EO": 0.07874015748031496,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "relational_trust_01",
+          "category": "relational_connection",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.1,
+            "dominant_organs": [
+              "EMPATHY",
+              "LISTENING",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9831292947519261,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8131578947368421,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.8673913043478262,
+            "AUTHENTICITY": 0.8940199335548172,
+            "PRESENCE": 0.8848837209302325,
+            "BOND": 0.7,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "relational_trust_02",
+          "category": "relational_connection",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.15,
+            "dominant_organs": [
+              "EMPATHY",
+              "AUTHENTICITY",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "relational_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9965703403380882,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8,
+            "EMPATHY": 0.913755458515284,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.839057239057239,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.4023809523809524,
+            "RNX": 0.5,
+            "EO": 0.15872615883095617,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "paradox_ambivalence_01",
+          "category": "paradoxical_states",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 2,
+            "urgency": 0.45,
+            "dominant_organs": [
+              "WISDOM",
+              "BOND",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9187293164600857,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.75,
+            "EMPATHY": 0.8936548223350252,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8660427807486631,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.03816543909503699,
+            "CARD": 0.25
+          }
+        },
+        {
+          "prompt_id": "paradox_ambivalence_02",
+          "category": "paradoxical_states",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.5,
+            "dominant_organs": [
+              "WISDOM",
+              "BOND",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9758044406874858,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7956647398843931,
+            "EMPATHY": 0.9215686274509806,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8532088681446907,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "grief_loss_01",
+          "category": "grief_processing",
+          "expected": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 4,
+            "urgency": 0.3,
+            "dominant_organs": [
+              "EMPATHY",
+              "PRESENCE",
+              "BOND"
+            ],
+            "expected_nexus_type": "grief_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9216973392088367,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.777146814404432,
+            "EMPATHY": 0.8911347517730497,
+            "WISDOM": 0.876,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8235772357723576,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.4022556390977443,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "grief_loss_02",
+          "category": "grief_processing",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 4,
+            "urgency": 0.35,
+            "dominant_organs": [
+              "EMPATHY",
+              "PRESENCE",
+              "BOND"
+            ],
+            "expected_nexus_type": "grief_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9724061796818266,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8634433962264151,
+            "EMPATHY": 0.9499999999999998,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8658536585365852,
+            "BOND": 0.9333333333333332,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "somatic_wisdom_01",
+          "category": "body_awareness",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.2,
+            "dominant_organs": [
+              "PRESENCE",
+              "EO",
+              "LISTENING"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9955744291121906,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.856371911573472,
+            "EMPATHY": 0.9256097560975609,
+            "WISDOM": 0.872197640117994,
+            "AUTHENTICITY": 0.9181818181818181,
+            "PRESENCE": 0.8730109204368175,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.3914755778088366,
+            "RNX": 0.5,
+            "EO": 0.07462353248719068,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "somatic_wisdom_02",
+          "category": "body_awareness",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.1,
+            "dominant_organs": [
+              "PRESENCE",
+              "EO",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9960651357952561,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7890438247011952,
+            "EMPATHY": 0.8722222222222223,
+            "WISDOM": 0.876,
+            "AUTHENTICITY": 0.8809090909090909,
+            "PRESENCE": 0.859974905897114,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.037035370445367,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "self_compassion_growth_01",
+          "category": "self_relationship",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.05,
+            "dominant_organs": [
+              "AUTHENTICITY",
+              "WISDOM",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9648523791265389,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.909409594095941,
+            "EMPATHY": 0.9042669584245079,
+            "WISDOM": 0.9106959498003422,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.863157894736842,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.45232558139534884,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "self_compassion_growth_02",
+          "category": "self_relationship",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "AUTHENTICITY",
+              "WISDOM",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "mixed_state",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9965260154776469,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8665217391304347,
+            "EMPATHY": 0.8799465240641711,
+            "WISDOM": 0.8631147540983608,
+            "AUTHENTICITY": 0.85,
+            "PRESENCE": 0.8418952618453865,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.5,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "trauma_integration_01",
+          "category": "trauma_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 4,
+            "urgency": 0.65,
+            "dominant_organs": [
+              "BOND",
+              "NDAM",
+              "SANS"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9090613840382432,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8338827838827839,
+            "EMPATHY": 0.8852941176470589,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.849063670411985,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.40222222222222215,
+            "RNX": 0.5,
+            "EO": 0.074070740890734,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "trauma_integration_02",
+          "category": "trauma_processing",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 3,
+            "urgency": 0.45,
+            "dominant_organs": [
+              "BOND",
+              "SANS",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "protective_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.971206251252885,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7956647398843932,
+            "EMPATHY": 0.9000000000000001,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.9000000000000001,
+            "PRESENCE": 0.8362869198312237,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.4044776119402985,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "existential_meaning_01",
+          "category": "existential_inquiry",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 2,
+            "urgency": 0.25,
+            "dominant_organs": [
+              "WISDOM",
+              "AUTHENTICITY",
+              "LISTENING"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "dorsal_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9292191125035522,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8,
+            "EMPATHY": 0.9305555555555557,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.8987804878048782,
+            "PRESENCE": 0.8488151658767773,
+            "BOND": 0.0,
+            "SANS": 1.0,
+            "NDAM": 0.40215827338129495,
+            "RNX": 0.5,
+            "EO": 0.03597122302158273,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "existential_meaning_02",
+          "category": "existential_inquiry",
+          "expected": {
+            "polyvagal": "mixed_state",
+            "zone": 2,
+            "urgency": 0.3,
+            "dominant_organs": [
+              "WISDOM",
+              "LISTENING",
+              "PRESENCE"
+            ],
+            "expected_nexus_type": "paradox_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9971563263422942,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8616326530612245,
+            "EMPATHY": 0.9211030082041932,
+            "WISDOM": 0.9,
+            "AUTHENTICITY": 0.8500000000000001,
+            "PRESENCE": 0.85,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.0,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.75
+          }
+        },
+        {
+          "prompt_id": "anger_expression_01",
+          "category": "anger_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 2,
+            "urgency": 0.6,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "firefighter_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.8904785369704884,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.841559829059829,
+            "EMPATHY": 0.9342105263157894,
+            "WISDOM": 0.0,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8409532215357457,
+            "BOND": 0.5,
+            "SANS": 1.0,
+            "NDAM": 0.4149084210526316,
+            "RNX": 0.5,
+            "EO": 0.09868421052631579,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "anger_expression_02",
+          "category": "anger_processing",
+          "expected": {
+            "polyvagal": "sympathetic",
+            "zone": 3,
+            "urgency": 0.55,
+            "dominant_organs": [
+              "EO",
+              "BOND",
+              "WISDOM"
+            ],
+            "expected_nexus_type": "firefighter_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9820908031605091,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.7686311787072244,
+            "EMPATHY": 0.9039877300613497,
+            "WISDOM": 0.9041743970315399,
+            "AUTHENTICITY": 0.0,
+            "PRESENCE": 0.8362869198312235,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.42258163265306126,
+            "RNX": 0.5,
+            "EO": 0.2040816326530612,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "hope_emergence_01",
+          "category": "hope_cultivation",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "dominant_organs": [
+              "PRESENCE",
+              "AUTHENTICITY",
+              "EMPATHY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 0.9751251160972415,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8357843137254902,
+            "EMPATHY": 0.95,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.8882022471910113,
+            "PRESENCE": 0.8342995169082127,
+            "BOND": 0.3333333333333333,
+            "SANS": 1.0,
+            "NDAM": 0.40208333333333335,
+            "RNX": 0.5,
+            "EO": 0.0,
+            "CARD": 0.5
+          }
+        },
+        {
+          "prompt_id": "hope_emergence_02",
+          "category": "hope_cultivation",
+          "expected": {
+            "polyvagal": "ventral_vagal",
+            "zone": 1,
+            "urgency": 0.05,
+            "dominant_organs": [
+              "PRESENCE",
+              "WISDOM",
+              "AUTHENTICITY"
+            ],
+            "expected_nexus_type": "innate_nexus"
+          },
+          "actual": {
+            "polyvagal": "sympathetic",
+            "zone": 1,
+            "urgency": 0.0,
+            "family_id": "Family_001",
+            "satisfaction": 1.0,
+            "v0_descent": 0.0
+          },
+          "organ_coherences": {
+            "LISTENING": 0.8201219512195123,
+            "EMPATHY": 0.85,
+            "WISDOM": 0.85,
+            "AUTHENTICITY": 0.85,
+            "PRESENCE": 0.8429501084598698,
+            "BOND": 1.0,
+            "SANS": 1.0,
+            "NDAM": 0.40214285714285714,
+            "RNX": 0.5,
+            "EO": 0.03571428571428571,
+            "CARD": 0.5
+          }
+        }
+      ],
+      "category_breakdown": {
+        "crisis_high_urgency": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.8951366064397269
+        },
+        "dorsal_collapse": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9285120049582462
+        },
+        "ventral_safety": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.995184192032779
+        },
+        "protective_parts": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9773929458436834
+        },
+        "recursive_loops": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9669386473311459
+        },
+        "relational_connection": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9898498175450072
+        },
+        "paradoxical_states": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9472668785737858
+        },
+        "grief_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9470517594453316
+        },
+        "body_awareness": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9958197824537234
+        },
+        "self_relationship": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9806891973020928
+        },
+        "trauma_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.940133817645564
+        },
+        "existential_inquiry": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9631877194229232
+        },
+        "anger_processing": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9362846700654988
+        },
+        "hope_cultivation": {
+          "count": 2,
+          "families": [
+            "Family_001"
+          ],
+          "avg_satisfaction": 0.9875625580486207
+        }
+      },
+      "organ_activations": {
+        "LISTENING": [
+          0.8287185354691075,
+          0.75,
+          0.7820261437908497,
+          0.8083333333333333,
+          0.7820261437908497,
+          0.8809322033898302,
+          0.836480686695279,
+          0.8045454545454546,
+          0.8704301075268818,
+          0.8608,
+          0.8131578947368421,
+          0.8,
+          0.75,
+          0.7956647398843931,
+          0.777146814404432,
+          0.8634433962264151,
+          0.856371911573472,
+          0.7890438247011952,
+          0.909409594095941,
+          0.8665217391304347,
+          0.8338827838827839,
+          0.7956647398843932,
+          0.8,
+          0.8616326530612245,
+          0.841559829059829,
+          0.7686311787072244,
+          0.8357843137254902,
+          0.8201219512195123
+        ],
+        "EMPATHY": [
+          0.0,
+          0.0,
+          0.884567901234568,
+          0.85,
+          0.8887387387387387,
+          0.9342105263157894,
+          0.913755458515284,
+          0.9305555555555557,
+          0.0,
+          0.0,
+          0.913755458515284,
+          0.913755458515284,
+          0.8936548223350252,
+          0.9215686274509806,
+          0.8911347517730497,
+          0.9499999999999998,
+          0.9256097560975609,
+          0.8722222222222223,
+          0.9042669584245079,
+          0.8799465240641711,
+          0.8852941176470589,
+          0.9000000000000001,
+          0.9305555555555557,
+          0.9211030082041932,
+          0.9342105263157894,
+          0.9039877300613497,
+          0.95,
+          0.85
+        ],
+        "WISDOM": [
+          0.0,
+          0.0,
+          0.0,
+          0.85,
+          0.8758064516129033,
+          0.8,
+          0.8840425531914894,
+          0.85,
+          0.85,
+          0.85,
+          0.8673913043478262,
+          0.9,
+          0.85,
+          0.85,
+          0.876,
+          0.85,
+          0.872197640117994,
+          0.876,
+          0.9106959498003422,
+          0.8631147540983608,
+          0.9,
+          0.85,
+          0.9,
+          0.9,
+          0.0,
+          0.9041743970315399,
+          0.85,
+          0.85
+        ],
+        "AUTHENTICITY": [
+          0.0,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.9000000000000001,
+          0.9284810126582279,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.95,
+          0.8940199335548172,
+          0.9000000000000001,
+          0.0,
+          0.9000000000000001,
+          0.0,
+          0.0,
+          0.9181818181818181,
+          0.8809090909090909,
+          0.0,
+          0.85,
+          0.0,
+          0.9000000000000001,
+          0.8987804878048782,
+          0.8500000000000001,
+          0.0,
+          0.0,
+          0.8882022471910113,
+          0.85
+        ],
+        "PRESENCE": [
+          0.8492917847025497,
+          0.8406876790830945,
+          0.8526724975704567,
+          0.85,
+          0.8799472295514511,
+          0.8499999999999999,
+          0.8406876790830946,
+          0.8674418604651163,
+          0.85,
+          0.8362869198312236,
+          0.8848837209302325,
+          0.839057239057239,
+          0.8660427807486631,
+          0.8532088681446907,
+          0.8235772357723576,
+          0.8658536585365852,
+          0.8730109204368175,
+          0.859974905897114,
+          0.863157894736842,
+          0.8418952618453865,
+          0.849063670411985,
+          0.8362869198312237,
+          0.8488151658767773,
+          0.85,
+          0.8409532215357457,
+          0.8362869198312235,
+          0.8342995169082127,
+          0.8429501084598698
+        ],
+        "BOND": [
+          0.4,
+          0.0,
+          0.5,
+          0.3333333333333333,
+          1.0,
+          1.0,
+          0.5,
+          1.0,
+          0.5,
+          1.0,
+          0.7,
+          1.0,
+          1.0,
+          0.5,
+          0.0,
+          0.9333333333333332,
+          1.0,
+          1.0,
+          0.5,
+          1.0,
+          0.0,
+          0.3333333333333333,
+          0.0,
+          1.0,
+          0.5,
+          1.0,
+          0.3333333333333333,
+          1.0
+        ],
+        "SANS": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "NDAM": [
+          0.40303030303030296,
+          0.0,
+          0.4234180327868853,
+          0.4526086956521739,
+          0.0,
+          0.0,
+          0.4025641025641026,
+          0.0,
+          0.45232558139534884,
+          0.4023622047244094,
+          0.0,
+          0.4023809523809524,
+          0.0,
+          0.0,
+          0.4022556390977443,
+          0.0,
+          0.3914755778088366,
+          0.0,
+          0.45232558139534884,
+          0.0,
+          0.40222222222222215,
+          0.4044776119402985,
+          0.40215827338129495,
+          0.0,
+          0.4149084210526316,
+          0.42258163265306126,
+          0.40208333333333335,
+          0.40214285714285714
+        ],
+        "RNX": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "EO": [
+          0.0,
+          0.046296296296296294,
+          0.1639344262295082,
+          0.13043478260869565,
+          0.1724137931034483,
+          0.043478260869565216,
+          0.042735042735042736,
+          0.04065040650406505,
+          0.03875968992248062,
+          0.07874015748031496,
+          0.5,
+          0.15872615883095617,
+          0.03816543909503699,
+          0.5,
+          0.5,
+          0.5,
+          0.07462353248719068,
+          0.037035370445367,
+          0.0,
+          0.5,
+          0.074070740890734,
+          0.0,
+          0.03597122302158273,
+          0.0,
+          0.09868421052631579,
+          0.2040816326530612,
+          0.0,
+          0.03571428571428571
+        ],
+        "CARD": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.75,
+          0.75,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.25,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.75,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      },
+      "polyvagal_states": {
+        "sympathetic": 7,
+        "dorsal_vagal": 6,
+        "ventral_vagal": 10,
+        "mixed_state": 5
+      },
+      "zones": {
+        "zone_1": 28
+      },
+      "urgency_levels": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "organ_agreement_patterns": [
+    {
+      "epoch": 1,
+      "mean_agreement": 0.05130572446876159,
+      "agreement_variance": 0.04417107595983561,
+      "organ_entropy": {
+        "LISTENING": 1.1077844084814268,
+        "EMPATHY": 1.4097590901589392,
+        "WISDOM": 1.2870540515061328,
+        "AUTHENTICITY": 1.5501992497914918,
+        "PRESENCE": 2.975308333795324e-08,
+        "BOND": 2.0798414062940545,
+        "SANS": 2.9753083337953244e-08,
+        "NDAM": 1.16257823825276,
+        "RNX": 2.975308333795324e-08,
+        "EO": 1.4263445674716215,
+        "CARD": 0.9591963426698813
+      },
+      "top_agreements": [
+        {
+          "organ1": "PRESENCE",
+          "organ2": "NDAM",
+          "correlation": -0.49552063438080524
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "WISDOM",
+          "correlation": 0.4233887480210227
+        },
+        {
+          "organ1": "BOND",
+          "organ2": "NDAM",
+          "correlation": -0.41291439087089093
+        },
+        {
+          "organ1": "PRESENCE",
+          "organ2": "BOND",
+          "correlation": 0.3786612656767269
+        },
+        {
+          "organ1": "NDAM",
+          "organ2": "EO",
+          "correlation": -0.33635728304088236
+        },
+        {
+          "organ1": "NDAM",
+          "organ2": "CARD",
+          "correlation": -0.3222365442547677
+        },
+        {
+          "organ1": "WISDOM",
+          "organ2": "BOND",
+          "correlation": 0.31246453395883994
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "NDAM",
+          "correlation": -0.28026845057468003
+        },
+        {
+          "organ1": "WISDOM",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.2548335766592238
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "EO",
+          "correlation": 0.24020207073760336
+        }
+      ],
+      "bottom_agreements": [
+        {
+          "organ1": "LISTENING",
+          "organ2": "CARD",
+          "correlation": 0.07904829120051683
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "PRESENCE",
+          "correlation": 0.05848100977993376
+        },
+        {
+          "organ1": "PRESENCE",
+          "organ2": "CARD",
+          "correlation": 0.054535870728414725
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.053000505785551745
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "EMPATHY",
+          "correlation": -0.04504384034923642
+        },
+        {
+          "organ1": "BOND",
+          "organ2": "EO",
+          "correlation": 0.044866175430371684
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "EO",
+          "correlation": -0.03334592382629254
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.021900914475530813
+        },
+        {
+          "organ1": "EO",
+          "organ2": "CARD",
+          "correlation": 0.016850942746213928
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "PRESENCE",
+          "correlation": -0.013454144093201321
+        }
+      ]
+    },
+    {
+      "epoch": 2,
+      "mean_agreement": 0.05130572446876159,
+      "agreement_variance": 0.04417107595983561,
+      "organ_entropy": {
+        "LISTENING": 1.1077844084814268,
+        "EMPATHY": 1.4097590901589392,
+        "WISDOM": 1.2870540515061328,
+        "AUTHENTICITY": 1.5501992497914918,
+        "PRESENCE": 2.975308333795324e-08,
+        "BOND": 2.0798414062940545,
+        "SANS": 2.9753083337953244e-08,
+        "NDAM": 1.16257823825276,
+        "RNX": 2.975308333795324e-08,
+        "EO": 1.4263445674716215,
+        "CARD": 0.9591963426698813
+      },
+      "top_agreements": [
+        {
+          "organ1": "PRESENCE",
+          "organ2": "NDAM",
+          "correlation": -0.49552063438080524
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "WISDOM",
+          "correlation": 0.4233887480210227
+        },
+        {
+          "organ1": "BOND",
+          "organ2": "NDAM",
+          "correlation": -0.41291439087089093
+        },
+        {
+          "organ1": "PRESENCE",
+          "organ2": "BOND",
+          "correlation": 0.3786612656767269
+        },
+        {
+          "organ1": "NDAM",
+          "organ2": "EO",
+          "correlation": -0.33635728304088236
+        },
+        {
+          "organ1": "NDAM",
+          "organ2": "CARD",
+          "correlation": -0.3222365442547677
+        },
+        {
+          "organ1": "WISDOM",
+          "organ2": "BOND",
+          "correlation": 0.31246453395883994
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "NDAM",
+          "correlation": -0.28026845057468003
+        },
+        {
+          "organ1": "WISDOM",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.2548335766592238
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "EO",
+          "correlation": 0.24020207073760336
+        }
+      ],
+      "bottom_agreements": [
+        {
+          "organ1": "LISTENING",
+          "organ2": "CARD",
+          "correlation": 0.07904829120051683
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "PRESENCE",
+          "correlation": 0.05848100977993376
+        },
+        {
+          "organ1": "PRESENCE",
+          "organ2": "CARD",
+          "correlation": 0.054535870728414725
+        },
+        {
+          "organ1": "EMPATHY",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.053000505785551745
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "EMPATHY",
+          "correlation": -0.04504384034923642
+        },
+        {
+          "organ1": "BOND",
+          "organ2": "EO",
+          "correlation": 0.044866175430371684
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "EO",
+          "correlation": -0.03334592382629254
+        },
+        {
+          "organ1": "LISTENING",
+          "organ2": "AUTHENTICITY",
+          "correlation": 0.021900914475530813
+        },
+        {
+          "organ1": "EO",
+          "organ2": "CARD",
+          "correlation": 0.016850942746213928
+        },
+        {
+          "organ1": "AUTHENTICITY",
+          "organ2": "PRESENCE",
+          "correlation": -0.013454144093201321
+        }
+      ]
+    }
+  ],
+  "family_evolution": [
+    {
+      "epoch": 1,
+      "timestamp": "2025-11-16T08:16:22.199413",
+      "total_families": 1,
+      "total_conversations": 28,
+      "family_sizes": [
+        28
+      ],
+      "family_satisfactions": [
+        0.4607864712220093
+      ],
+      "size_distribution": {
+        "min": 28,
+        "max": 28,
+        "mean": 28.0,
+        "std": 0.0
+      }
+    },
+    {
+      "epoch": 2,
+      "timestamp": "2025-11-16T08:23:12.559519",
+      "total_families": 1,
+      "total_conversations": 56,
+      "family_sizes": [
+        56
+      ],
+      "family_satisfactions": [
+        0.4607864712220093
+      ],
+      "size_distribution": {
+        "min": 56,
+        "max": 56,
+        "mean": 56.0,
+        "std": 0.0
+      }
+    }
+  ],
+  "nexus_type_distribution": {}
+}

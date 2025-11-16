@@ -1,0 +1,3342 @@
+{
+  "corpus_metadata": {
+    "corpus_name": "Emiliano Entity-Situated Training Corpus",
+    "version": "1.0",
+    "created": "2025-11-15",
+    "purpose": "Train organism to develop entity-organ associations through consistent entity graph exposure",
+    "target_epochs": 50,
+    "expected_outcomes": [
+      "Emma \u2192 BOND/EMPATHY high, ventral state, V0 < 0.3",
+      "Lily \u2192 BOND/PRESENCE high, ventral state, V0 < 0.3",
+      "work \u2192 NDAM/AUTHENTICITY high, sympathetic state, V0 > 0.6",
+      "Cross-session consistency > 85%",
+      "Entity success rate correlation > 0.75"
+    ],
+    "total_conversations": 100,
+    "generated_date": "2025-11-15"
+  },
+  "user_profile": {
+    "user_id": "training_emiliano_001",
+    "name": "Emiliano",
+    "background": "Engineering lead at tech startup, father of two young daughters, navigating work-life balance",
+    "entity_graph": {
+      "family": {
+        "daughters": [
+          {
+            "name": "Emma",
+            "age": 5,
+            "relationship": "HAS_DAUGHTER",
+            "context": "Starting kindergarten soon, sweet and curious, loves hugs",
+            "typical_mention_context": "safe, bonding, tenderness, developmental milestones"
+          },
+          {
+            "name": "Lily",
+            "age": 3,
+            "relationship": "HAS_DAUGHTER",
+            "context": "Preschool age, energetic, learning independence",
+            "typical_mention_context": "safe, playful, parental care, bedtime routines"
+          }
+        ],
+        "partner": {
+          "name": "Sofia",
+          "relationship": "PARTNER",
+          "context": "Wife, co-parent, source of support and occasional tension",
+          "typical_mention_context": "relationship dynamics, shared parenting, connection moments"
+        }
+      },
+      "work": {
+        "place": "Tech Startup (unnamed)",
+        "role": "Engineering Lead",
+        "relationship": "WORKS_AT",
+        "stressors": [
+          "deadline_pressure",
+          "team_management",
+          "funding_uncertainty"
+        ],
+        "typical_mention_context": "stress, urgency, boundaries, professional identity"
+      },
+      "friends": [
+        {
+          "name": "Rich",
+          "relationship": "FRIEND",
+          "context": "Childhood friend, grounding presence, outdoor adventures",
+          "typical_mention_context": "nostalgia, authentic connection, escape from stress"
+        },
+        {
+          "name": "Alex",
+          "relationship": "COLLEAGUE_FRIEND",
+          "context": "Work colleague who became friend, understands startup pressure",
+          "typical_mention_context": "work stress validation, professional support"
+        }
+      ],
+      "places": {
+        "home": {
+          "context": "Safe base, family time, bedtime rituals",
+          "typical_affect": "ventral, grounding, sometimes exhausted"
+        },
+        "work_office": {
+          "context": "High-stress environment, deadline pressure, team dynamics",
+          "typical_affect": "sympathetic, urgency, sometimes overwhelm"
+        },
+        "park": {
+          "context": "Weekend family time, Emma and Lily play",
+          "typical_affect": "ventral, present, gentle joy"
+        },
+        "gym": {
+          "context": "Self-care time, release stress",
+          "typical_affect": "mixed (sympathetic\u2192ventral), embodied"
+        }
+      }
+    }
+  },
+  "conversation_categories": {
+    "family_safe": {
+      "count": 30,
+      "description": "Bonding moments with Emma, Lily, or Sofia",
+      "typical_entities": [
+        "Emma",
+        "Lily",
+        "Sofia",
+        "home",
+        "park"
+      ],
+      "expected_organs": [
+        "BOND",
+        "EMPATHY",
+        "PRESENCE"
+      ],
+      "expected_polyvagal": "ventral",
+      "expected_v0": 0.25
+    },
+    "family_worry": {
+      "count": 20,
+      "description": "Developmental concerns, parental anxiety about Emma's school, Lily's tantrums",
+      "typical_entities": [
+        "Emma",
+        "Lily",
+        "kindergarten",
+        "Sofia"
+      ],
+      "expected_organs": [
+        "BOND",
+        "WISDOM",
+        "PRESENCE"
+      ],
+      "expected_polyvagal": "mixed",
+      "expected_v0": 0.5
+    },
+    "work_stress": {
+      "count": 25,
+      "description": "Deadline pressure, team conflicts, funding stress",
+      "typical_entities": [
+        "work",
+        "deadline",
+        "team",
+        "Alex"
+      ],
+      "expected_organs": [
+        "NDAM",
+        "AUTHENTICITY",
+        "SANS"
+      ],
+      "expected_polyvagal": "sympathetic",
+      "expected_v0": 0.7
+    },
+    "relationship": {
+      "count": 15,
+      "description": "Connection moments or tension with Sofia",
+      "typical_entities": [
+        "Sofia",
+        "home",
+        "evenings"
+      ],
+      "expected_organs": [
+        "EMPATHY",
+        "AUTHENTICITY",
+        "BOND"
+      ],
+      "expected_polyvagal": "mixed",
+      "expected_v0": 0.45
+    },
+    "self_care": {
+      "count": 10,
+      "description": "Gym time, walks, moments alone",
+      "typical_entities": [
+        "gym",
+        "park",
+        "self"
+      ],
+      "expected_organs": [
+        "PRESENCE",
+        "AUTHENTICITY",
+        "RNX"
+      ],
+      "expected_polyvagal": "mixed\u2192ventral",
+      "expected_v0": 0.4
+    }
+  },
+  "conversations": [
+    {
+      "conversation_id": "emiliano_001_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        1,
+        5,
+        12,
+        23,
+        38
+      ],
+      "input": "Emma gave me the biggest hug this morning before I left for work. She said 'I love you daddy' and my heart just melted.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "relationship": "HAS_DAUGHTER",
+          "salience": 0.95
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0_energy": 0.25,
+        "zone": 1,
+        "urgency": 0.0,
+        "self_distance": 0.0
+      }
+    },
+    {
+      "conversation_id": "emiliano_002_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        2,
+        8,
+        15,
+        29,
+        42
+      ],
+      "input": "Lily was dancing around the living room tonight, completely unselfconscious and joyful. It reminded me what pure happiness looks like.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "relationship": "HAS_DAUGHTER",
+          "salience": 0.9
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.5
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0_energy": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_003_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        1,
+        7,
+        14,
+        27,
+        40
+      ],
+      "input": "I'm worried about Emma starting kindergarten next month. She's so sensitive, and I don't know if she's ready for a full day away from us.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "relationship": "HAS_DAUGHTER",
+          "salience": 0.9
+        },
+        {
+          "entity_value": "kindergarten",
+          "entity_type": "Place",
+          "salience": 0.75
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0_energy": 0.5,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_004_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        1,
+        6,
+        13,
+        25,
+        39
+      ],
+      "input": "The deadline is in three days and we're nowhere near ready. The pressure from leadership is intense and I feel like I'm failing my team.",
+      "entities": [
+        {
+          "entity_value": "work",
+          "entity_type": "Place",
+          "salience": 0.85
+        },
+        {
+          "entity_value": "deadline",
+          "entity_type": "Concept",
+          "salience": 0.8
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0_energy": 0.75,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_005_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        2,
+        9,
+        18,
+        31,
+        45
+      ],
+      "input": "Another all-hands meeting about the funding situation. I can see the fear in everyone's eyes. What if we don't make it?",
+      "entities": [
+        {
+          "entity_value": "work",
+          "entity_type": "Place",
+          "salience": 0.9
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.8,
+          "BOND": 0.6,
+          "AUTHENTICITY": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0_energy": 0.7,
+        "zone": 3,
+        "urgency": 0.7
+      }
+    },
+    {
+      "conversation_id": "emiliano_006_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        3,
+        10,
+        19,
+        32,
+        46
+      ],
+      "input": "Sofia and I had a rare quiet moment tonight after the girls went to bed. We just sat together on the couch, not talking, just being. I'd forgotten how much I needed that.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "relationship": "PARTNER",
+          "salience": 0.85
+        },
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.3
+        },
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.3
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.6
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.8,
+          "BOND": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0_energy": 0.3,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_007_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        4,
+        11,
+        20,
+        33,
+        47
+      ],
+      "input": "I made myself go to the gym this morning even though I was exhausted. Twenty minutes in, I felt my body start to release some of this tension I've been carrying.",
+      "entities": [
+        {
+          "entity_value": "gym",
+          "entity_type": "Place",
+          "salience": 0.75
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.65,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0_energy": 0.45,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_008_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        1,
+        8,
+        16,
+        28,
+        41
+      ],
+      "input": "Bedtime with Lily tonight was so sweet. She asked me to read the same book three times, and I didn't mind at all. Her little hand in mine, trusting and warm.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.9
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.5
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0_energy": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_009_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        2,
+        9,
+        17,
+        30,
+        43
+      ],
+      "input": "Lily had a massive tantrum at the store today. Everyone was staring. I felt so helpless and judged. Am I doing this parenting thing wrong?",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.85
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.6
+        },
+        "polyvagal": "sympathetic",
+        "v0_energy": 0.6,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.6
+      }
+    },
+    {
+      "conversation_id": "emiliano_010_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        3,
+        10,
+        18,
+        31,
+        44
+      ],
+      "input": "Alex pulled me aside today and said he's thinking about leaving. I don't blame him, but it would be such a loss. And it makes me question whether I should stay too.",
+      "entities": [
+        {
+          "entity_value": "Alex",
+          "entity_type": "Person",
+          "relationship": "COLLEAGUE_FRIEND",
+          "salience": 0.8
+        },
+        {
+          "entity_value": "work",
+          "entity_type": "Place",
+          "salience": 0.75
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.7,
+          "AUTHENTICITY": 0.75,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0_energy": 0.55,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_011_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        11,
+        33,
+        34,
+        37,
+        50
+      ],
+      "input": "Emma and Lily playing together at home. Hearing them laugh together is the best sound.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8114893066059452,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.813548964478501,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8508119528241006
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.82,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.27,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_012_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        4,
+        13,
+        22,
+        28,
+        46
+      ],
+      "input": "Emma smiled at me across the dinner table and it just filled my heart. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.7942213459669849,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_013_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        2,
+        9,
+        11,
+        24,
+        36
+      ],
+      "input": "Lily said the sweetest thing today: 'I love you to the moon and back'. My heart is so full.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8057765563374968,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.88,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.22,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_014_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        4,
+        7,
+        29,
+        34,
+        50
+      ],
+      "input": "Lily said the sweetest thing today: 'I love you to the moon and back'. My heart is so full.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8318221509727586,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.88,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.22,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_015_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        13,
+        31,
+        36,
+        39,
+        43
+      ],
+      "input": "Morning cuddles with Emma before a walk. These quiet moments together mean everything.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8260799228163354,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.78,
+          "EMPATHY": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.26,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_016_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        10,
+        33,
+        34,
+        39,
+        49
+      ],
+      "input": "Morning cuddles with Lily before reading. These quiet moments together mean everything.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8716711483618014,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.78,
+          "EMPATHY": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.26,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_017_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        14,
+        17,
+        36,
+        46,
+        48
+      ],
+      "input": "Morning cuddles with Emma before a walk. These quiet moments together mean everything.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8910788597339931,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.78,
+          "EMPATHY": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.26,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_018_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        3,
+        26,
+        42,
+        47,
+        50
+      ],
+      "input": "Emma said the sweetest thing today: 'Can we do this again tomorrow?'. My heart is so full.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9281432399045106,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.88,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.22,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_019_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        1,
+        19,
+        30,
+        37,
+        48
+      ],
+      "input": "Lily asked me to read her favorite story again and it just made everything else fade away. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.9301763144921595,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_020_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        8,
+        38,
+        40,
+        45,
+        48
+      ],
+      "input": "Lily and Lily playing together at the park. Hearing them laugh together is the best sound.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.9078217452251427,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8233219583381874
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.82,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.27,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_021_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        22,
+        32,
+        33,
+        34,
+        39
+      ],
+      "input": "Emma said the sweetest thing today: 'You're the best daddy ever'. My heart is so full.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9287661931562178,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.88,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.22,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_022_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        6,
+        16,
+        20,
+        27,
+        28
+      ],
+      "input": "Watching Lily meditation at the home today. Such pure joy on his face.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7916663008859063,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8378167706708546
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_023_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        13,
+        15,
+        25,
+        31,
+        47
+      ],
+      "input": "Lily asked me to read her favorite story again and it just made everything else fade away. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8324974082853804,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_024_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        6,
+        20,
+        24,
+        27,
+        44
+      ],
+      "input": "Morning cuddles with Emma before reading. These quiet moments together mean everything.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9101681692730584,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.78,
+          "EMPATHY": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.26,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_025_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        22,
+        23,
+        24,
+        33,
+        46
+      ],
+      "input": "Watching Lily meditation at the park today. Such pure joy on their face.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8211322129242362,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8422020489762115
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_026_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        9,
+        24,
+        33,
+        37,
+        41
+      ],
+      "input": "Watching Lily reading at the park today. Such pure joy on their face.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8270657912035392,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8565413015247473
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_027_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        13,
+        23,
+        36,
+        43,
+        47
+      ],
+      "input": "Lily and Emma playing together at home. Hearing them laugh together is the best sound.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9036827570215654,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8251413928699233,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8690027674990698
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.82,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.27,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_028_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        4,
+        7,
+        10,
+        12,
+        42
+      ],
+      "input": "Emma said the sweetest thing today: 'I feel safe with you'. My heart is so full.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.7871497842870376,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.88,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.22,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_029_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        1,
+        2,
+        8,
+        26,
+        31
+      ],
+      "input": "Watching Lily some stretching at the home today. Such pure joy on their face.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7991268396867939,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8784056762299226
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_030_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        7,
+        9,
+        16,
+        17,
+        45
+      ],
+      "input": "Watching Emma some stretching at the park today. Such pure joy on his face.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9034735384127001,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8164424085916715
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_031_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        1,
+        2,
+        14,
+        31,
+        40
+      ],
+      "input": "Emma and Lily playing together in the backyard. Hearing them laugh together is the best sound.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8647291578835418,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8500924114137463,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.82,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.27,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_032_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        3,
+        4,
+        10,
+        16,
+        25
+      ],
+      "input": "Watching Emma reading at the home today. Such pure joy on his face.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8037492102610864,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.7779435370019243
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.28,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_033_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        9,
+        11,
+        18,
+        22,
+        31
+      ],
+      "input": "Morning cuddles with Lily before reading. These quiet moments together mean everything.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8190724861517538,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "PRESENCE": 0.78,
+          "EMPATHY": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.26,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_034_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        26,
+        30,
+        42,
+        43,
+        49
+      ],
+      "input": "Emma and Emma playing together at home. Hearing them laugh together is the best sound.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9420420298552632,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.7702108204012971
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.82,
+          "PRESENCE": 0.75,
+          "EMPATHY": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.27,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_035_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        18,
+        20,
+        36,
+        43,
+        47
+      ],
+      "input": "Lily wanted to help me make breakfast and it just made me grateful to be her dad. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7508986350289939,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_036_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        13,
+        14,
+        18,
+        25,
+        48
+      ],
+      "input": "Lily smiled at me across the dinner table and it just filled my heart. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8749002853729818,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_037_family_safe",
+      "category": "family_safe",
+      "epoch_distribution": [
+        19,
+        22,
+        32,
+        44,
+        46
+      ],
+      "input": "Lily took my hand while we were walking and it just made me grateful to be her dad. These are the moments I live for.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7623864088306277,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.7
+        },
+        "polyvagal": "ventral",
+        "v0": 0.25,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_038_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        8,
+        9,
+        10,
+        23,
+        42
+      ],
+      "input": "Talked to Sofia about starting school with Emma. We're both reminded me what matters but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.766693666098461,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8052671336137632,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_039_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        12,
+        22,
+        27,
+        36,
+        49
+      ],
+      "input": "Lily is having trouble sleeping and I don't know how to help. Feeling conflicted.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8461543020837147,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_040_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        11,
+        25,
+        34,
+        44,
+        45
+      ],
+      "input": "Emma is refusing to share toys and I don't know how to help. Feeling worried.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.7673906545595631,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_041_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        5,
+        25,
+        42,
+        49,
+        50
+      ],
+      "input": "Lily is refusing to share toys and I don't know how to help. Feeling uncertain.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8678064713559706,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_042_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        5,
+        21,
+        26,
+        29,
+        35
+      ],
+      "input": "Lily is having meltdowns and I don't know how to help. Feeling worried.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8800045583132651,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_043_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        6,
+        9,
+        12,
+        14,
+        42
+      ],
+      "input": "I'm worried about Lily and making friends. Am I equipped for this?",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.822850163296764,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_044_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        19,
+        29,
+        34,
+        43,
+        49
+      ],
+      "input": "I'm worried about Emma and her shyness. Am I being too soft?",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.7844666419996766,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_045_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        12,
+        19,
+        21,
+        27,
+        43
+      ],
+      "input": "I'm worried about Emma and her shyness. Am I being too strict?",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.7618502604147785,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_046_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        13,
+        27,
+        29,
+        38,
+        50
+      ],
+      "input": "Talked to Sofia about making friends with Lily. We're both made everything else fade away but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7942141097413178,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.9410954569927331,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_047_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        8,
+        11,
+        31,
+        41,
+        42
+      ],
+      "input": "Talked to Sofia about her shyness with Emma. We're both made everything else fade away but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.9283039291046862,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.9356393535832561,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_048_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        1,
+        18,
+        21,
+        31,
+        43
+      ],
+      "input": "I'm worried about Lily and starting school. Am I doing something wrong?",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7566780714130079,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_049_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        13,
+        20,
+        22,
+        24,
+        43
+      ],
+      "input": "I'm worried about Lily and making friends. Am I being too soft?",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7669789856349348,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_050_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        19,
+        24,
+        27,
+        35,
+        50
+      ],
+      "input": "I'm worried about Emma and eating habits. Am I doing something wrong?",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8297440994247904,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.8,
+          "WISDOM": 0.65,
+          "PRESENCE": 0.68
+        },
+        "polyvagal": "mixed",
+        "v0": 0.5,
+        "zone": 2,
+        "urgency": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_051_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        8,
+        17,
+        24,
+        43,
+        47
+      ],
+      "input": "Lily is acting out at preschool and I don't know how to help. Feeling uncertain.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7517412072216639,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_052_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        1,
+        3,
+        13,
+        21,
+        26
+      ],
+      "input": "Talked to Sofia about making friends with Emma. We're both made everything else fade away but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8576180800421453,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.9110417712024969,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_053_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        5,
+        8,
+        12,
+        14,
+        33
+      ],
+      "input": "Talked to Sofia about her shyness with Emma. We're both made everything else fade away but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Emma",
+          "entity_type": "Person",
+          "salience": 0.8331759876020162,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.818780899887985,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_054_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        11,
+        16,
+        19,
+        39,
+        44
+      ],
+      "input": "Lily is being so clingy lately and I don't know how to help. Feeling uncertain.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.8480372450306962,
+          "relationship": "HAS_DAUGHTER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.78,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.62
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.58,
+        "zone": 3,
+        "urgency": 0.5,
+        "self_distance": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_055_family_worry",
+      "category": "family_worry",
+      "epoch_distribution": [
+        3,
+        5,
+        12,
+        14,
+        47
+      ],
+      "input": "Talked to Sofia about making friends with Lily. We're both made everything else fade away but trying to stay present.",
+      "entities": [
+        {
+          "entity_value": "Lily",
+          "entity_type": "Person",
+          "salience": 0.7717262465410918,
+          "relationship": "HAS_DAUGHTER"
+        },
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8144274575514882,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "BOND": 0.75,
+          "EMPATHY": 0.72,
+          "WISDOM": 0.65
+        },
+        "polyvagal": "mixed",
+        "v0": 0.48,
+        "zone": 2,
+        "urgency": 0.3
+      }
+    },
+    {
+      "conversation_id": "emiliano_056_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        3,
+        11,
+        29,
+        30,
+        38
+      ],
+      "input": "Another stayed late to debug about leadership expectations. I'm starting to wonder what I'm sacrificing for this job.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_057_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        10,
+        21,
+        33,
+        37,
+        46
+      ],
+      "input": "The scope creep at home is relentless. I can feel the weight of it all.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8559852266274995
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_058_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        2,
+        22,
+        37,
+        43,
+        48
+      ],
+      "input": "Another had another tense standup about leadership expectations. I'm starting to wonder if I should look for something else.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_059_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        24,
+        25,
+        32,
+        34,
+        47
+      ],
+      "input": "Alex and I had another tense standup. The stressed is palpable.",
+      "entities": [
+        {
+          "entity_value": "Alex",
+          "entity_type": "Person",
+          "salience": 0.8024306689475851,
+          "relationship": "COLLEAGUE_FRIEND"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.78,
+          "EMPATHY": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.65,
+        "zone": 3,
+        "urgency": 0.6
+      }
+    },
+    {
+      "conversation_id": "emiliano_060_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        14,
+        21,
+        24,
+        29,
+        40
+      ],
+      "input": "Another had to have a difficult conversation about scope creep. I'm starting to wonder what I'm sacrificing for this job.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_061_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        3,
+        18,
+        36,
+        40,
+        47
+      ],
+      "input": "The funding uncertainty at park is exhausting. I can feel my jaw clenching.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8930907293425824
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_062_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        10,
+        22,
+        33,
+        42,
+        45
+      ],
+      "input": "Another reviewed the roadmap again about leadership expectations. I'm starting to wonder if the stress is worth it.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_063_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        16,
+        21,
+        38,
+        42,
+        47
+      ],
+      "input": "The leadership expectations at park is crushing. I can feel my shoulders tensing up.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8245602498554256
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_064_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        19,
+        30,
+        31,
+        45,
+        46
+      ],
+      "input": "The deadline pressure at park is crushing. I can feel my jaw clenching.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.8850753444051583
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_065_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        6,
+        7,
+        23,
+        26,
+        36
+      ],
+      "input": "Alex and I had another tense standup. The overwhelmed is palpable.",
+      "entities": [
+        {
+          "entity_value": "Alex",
+          "entity_type": "Person",
+          "salience": 0.8975011136020317,
+          "relationship": "COLLEAGUE_FRIEND"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.78,
+          "EMPATHY": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.65,
+        "zone": 3,
+        "urgency": 0.6
+      }
+    },
+    {
+      "conversation_id": "emiliano_066_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        1,
+        8,
+        24,
+        27,
+        33
+      ],
+      "input": "Another stayed late to debug about deadline pressure. I'm starting to wonder what I'm sacrificing for this job.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_067_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        12,
+        13,
+        38,
+        41,
+        43
+      ],
+      "input": "The team conflict at home is unsustainable. I can feel my jaw clenching.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8143287036477532
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_068_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        14,
+        32,
+        34,
+        44,
+        47
+      ],
+      "input": "Another got pulled into an urgent meeting about funding uncertainty. I'm starting to wonder if this is sustainable.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_069_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        1,
+        13,
+        26,
+        36,
+        37
+      ],
+      "input": "Alex and I had to have a difficult conversation. The uncertain is palpable.",
+      "entities": [
+        {
+          "entity_value": "Alex",
+          "entity_type": "Person",
+          "salience": 0.8737223697262878,
+          "relationship": "COLLEAGUE_FRIEND"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.78,
+          "EMPATHY": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.65,
+        "zone": 3,
+        "urgency": 0.6
+      }
+    },
+    {
+      "conversation_id": "emiliano_070_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        4,
+        42,
+        43,
+        48,
+        50
+      ],
+      "input": "The leadership expectations at park is unsustainable. I can feel my chest tightening.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.9464686392618833
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_071_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        13,
+        16,
+        37,
+        45,
+        47
+      ],
+      "input": "The scope creep at home is relentless. I can feel my energy draining.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8683833980033974
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_072_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        4,
+        14,
+        35,
+        39,
+        45
+      ],
+      "input": "Alex and I had another tense standup. The stressed is palpable.",
+      "entities": [
+        {
+          "entity_value": "Alex",
+          "entity_type": "Person",
+          "salience": 0.8346683316742562,
+          "relationship": "COLLEAGUE_FRIEND"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.78,
+          "EMPATHY": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.65,
+        "zone": 3,
+        "urgency": 0.6
+      }
+    },
+    {
+      "conversation_id": "emiliano_073_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        4,
+        5,
+        12,
+        17,
+        50
+      ],
+      "input": "Another got pulled into an urgent meeting about team conflict. I'm starting to wonder if this is sustainable.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_074_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        9,
+        23,
+        25,
+        27,
+        39
+      ],
+      "input": "The scope creep at home is overwhelming. I can feel my chest tightening.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8834579876563632
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_075_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        14,
+        21,
+        24,
+        31,
+        34
+      ],
+      "input": "Another had to have a difficult conversation about deadline pressure. I'm starting to wonder if the stress is worth it.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.75,
+          "WISDOM": 0.68,
+          "AUTHENTICITY": 0.72
+        },
+        "polyvagal": "mixed",
+        "v0": 0.58,
+        "zone": 2,
+        "urgency": 0.5
+      }
+    },
+    {
+      "conversation_id": "emiliano_076_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        13,
+        27,
+        28,
+        33,
+        43
+      ],
+      "input": "The scope creep at park is exhausting. I can feel my chest tightening.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.7563812526232883
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_077_work_stress",
+      "category": "work_stress",
+      "epoch_distribution": [
+        4,
+        15,
+        26,
+        27,
+        39
+      ],
+      "input": "The funding uncertainty at home is crushing. I can feel my jaw clenching.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.8515824464688458
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "NDAM": 0.85,
+          "AUTHENTICITY": 0.7,
+          "SANS": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.72,
+        "zone": 3,
+        "urgency": 0.8
+      }
+    },
+    {
+      "conversation_id": "emiliano_078_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        2,
+        5,
+        22,
+        34,
+        42
+      ],
+      "input": "Tension with Sofia about household responsibilities. We're both anxious and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.837307875568159,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_079_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        10,
+        14,
+        17,
+        20,
+        31
+      ],
+      "input": "Sofia and I cooked dinner as a team tonight. Grateful for her partnership.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.9006257743418393,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.78,
+          "BOND": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.32,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_080_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        10,
+        22,
+        35,
+        36,
+        38
+      ],
+      "input": "Tension with Sofia about my work hours. We're both overwhelmed and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8381316706798124,
+          "relationship": "PARTNER"
+        },
+        {
+          "entity_value": "work",
+          "entity_type": "Place",
+          "salience": 0.8726179089390793
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_081_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        9,
+        13,
+        23,
+        27,
+        29
+      ],
+      "input": "Tension with Sofia about household responsibilities. We're both stressed and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.9207927839607294,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_082_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        12,
+        13,
+        15,
+        24,
+        29
+      ],
+      "input": "Tension with Sofia about our lack of couple time. We're both uncertain and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.7832678310426042,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_083_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        5,
+        26,
+        46,
+        48,
+        50
+      ],
+      "input": "Tension with Sofia about money stress. We're both stressed and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8480549195638367,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_084_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        6,
+        30,
+        44,
+        47,
+        50
+      ],
+      "input": "Tension with Sofia about our lack of couple time. We're both uncertain and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.7669627276215869,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_085_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        16,
+        24,
+        32,
+        35,
+        49
+      ],
+      "input": "Tension with Sofia about household responsibilities. We're both overwhelmed and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.7958778607703515,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_086_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        28,
+        31,
+        39,
+        41,
+        42
+      ],
+      "input": "Tension with Sofia about parenting styles. We're both worried and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8623832214837784,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_087_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        15,
+        22,
+        23,
+        38,
+        50
+      ],
+      "input": "Sofia and I just sat in comfortable silence tonight. Reminded me why I love her.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8606699933335562,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.78,
+          "BOND": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.32,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_088_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        7,
+        16,
+        45,
+        46,
+        50
+      ],
+      "input": "Sofia and I took a walk tonight. Grateful for her partnership.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8888199594240044,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.78,
+          "BOND": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.32,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_089_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        5,
+        19,
+        32,
+        34,
+        49
+      ],
+      "input": "Sofia and I took a walk tonight. Grateful for her partnership.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8737270924543992,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.78,
+          "BOND": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.32,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_090_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        3,
+        29,
+        33,
+        35,
+        40
+      ],
+      "input": "Tension with Sofia about my work hours. We're both worried and I'm not sure {worry}.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.8150676643595665,
+          "relationship": "PARTNER"
+        },
+        {
+          "entity_value": "work",
+          "entity_type": "Place",
+          "salience": 0.9497875833670515
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.7,
+          "BOND": 0.65
+        },
+        "polyvagal": "sympathetic",
+        "v0": 0.55,
+        "zone": 3,
+        "urgency": 0.4,
+        "self_distance": 0.4
+      }
+    },
+    {
+      "conversation_id": "emiliano_091_relationship",
+      "category": "relationship",
+      "epoch_distribution": [
+        7,
+        14,
+        41,
+        43,
+        44
+      ],
+      "input": "Sofia and I took a walk tonight. Simple moments like this matter.",
+      "entities": [
+        {
+          "entity_value": "Sofia",
+          "entity_type": "Person",
+          "salience": 0.880868451554899,
+          "relationship": "PARTNER"
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "EMPATHY": 0.75,
+          "PRESENCE": 0.78,
+          "BOND": 0.72
+        },
+        "polyvagal": "ventral",
+        "v0": 0.32,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_092_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        5,
+        9,
+        32,
+        34,
+        43
+      ],
+      "input": "Made time for some stretching at home today. Noticed how much I needed to move.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.9157116655872428
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.68,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0": 0.42,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_093_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        3,
+        8,
+        16,
+        30,
+        45
+      ],
+      "input": "Made time for reading at home today. Noticed how much I needed to move.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.9343049373424829
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.68,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0": 0.42,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_094_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        2,
+        5,
+        19,
+        41,
+        44
+      ],
+      "input": "Took a reading this morning. Just feeling the tension release. I needed that.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.78,
+          "RNX": 0.72,
+          "AUTHENTICITY": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.35,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_095_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        6,
+        7,
+        15,
+        37,
+        38
+      ],
+      "input": "Made time for the gym at park today. Noticed how much I needed to move.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.7570663362465606
+        },
+        {
+          "entity_value": "gym",
+          "entity_type": "Place",
+          "salience": 0.9209379453425707
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.68,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0": 0.42,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_096_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        1,
+        18,
+        37,
+        48,
+        50
+      ],
+      "input": "Made time for meditation at park today. Starting to feel more grounded.",
+      "entities": [
+        {
+          "entity_value": "park",
+          "entity_type": "Place",
+          "salience": 0.7768256660212032
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.68,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0": 0.42,
+        "zone": 2
+      }
+    },
+    {
+      "conversation_id": "emiliano_097_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        6,
+        23,
+        39,
+        46,
+        48
+      ],
+      "input": "Took a meditation this morning. Just noticing my breath. I needed that.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.78,
+          "RNX": 0.72,
+          "AUTHENTICITY": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.35,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_098_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        14,
+        17,
+        22,
+        40,
+        50
+      ],
+      "input": "Took a meditation this morning. Just being in my body. I needed that.",
+      "entities": [],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.78,
+          "RNX": 0.72,
+          "AUTHENTICITY": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.35,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_099_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        7,
+        14,
+        17,
+        29,
+        37
+      ],
+      "input": "Took a the gym this morning. Just being in my body. I needed that.",
+      "entities": [
+        {
+          "entity_value": "gym",
+          "entity_type": "Place",
+          "salience": 0.7918342537322798
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.78,
+          "RNX": 0.72,
+          "AUTHENTICITY": 0.65
+        },
+        "polyvagal": "ventral",
+        "v0": 0.35,
+        "zone": 1
+      }
+    },
+    {
+      "conversation_id": "emiliano_100_self_care",
+      "category": "self_care",
+      "epoch_distribution": [
+        9,
+        21,
+        23,
+        28,
+        32
+      ],
+      "input": "Made time for the gym at home today. Noticed how much I needed to move.",
+      "entities": [
+        {
+          "entity_value": "home",
+          "entity_type": "Place",
+          "salience": 0.7940038710107029
+        },
+        {
+          "entity_value": "gym",
+          "entity_type": "Place",
+          "salience": 0.8172436728830307
+        }
+      ],
+      "expected_patterns": {
+        "organs": {
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.68,
+          "RNX": 0.7
+        },
+        "polyvagal": "mixed",
+        "v0": 0.42,
+        "zone": 2
+      }
+    }
+  ],
+  "training_notes": {
+    "epoch_1_10": "Exploration phase - organism sampling diverse responses, no strong entity patterns yet",
+    "epoch_11_20": "Pattern emergence - Emma/Lily \u2192 BOND/EMPATHY associations forming, work \u2192 NDAM/AUTHENTICITY emerging",
+    "epoch_21_35": "Consolidation - stable entity-organ patterns, cross-session consistency >80%",
+    "epoch_36_50": "Refinement - subtle context learning (Emma+school vs Emma+bedtime), co-occurrence patterns",
+    "validation_checkpoints": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "success_criteria": {
+      "emma_pattern": "BOND/EMPATHY >0.80, ventral state, V0 <0.30, success_rate >0.85",
+      "lily_pattern": "BOND/PRESENCE >0.75, ventral state, V0 <0.35, success_rate >0.82",
+      "work_pattern": "NDAM/AUTHENTICITY >0.75, sympathetic state, V0 >0.60, urgency >0.5",
+      "cross_session_consistency": ">85% same entity \u2192 similar organ pattern",
+      "entity_success_correlation": "R\u00b2 > 0.75"
+    }
+  }
+}

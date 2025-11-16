@@ -172,13 +172,63 @@
       "session_id": "20251115_111704",
       "timestamp": "2025-11-15T11:18:21.189698",
       "turns": 0
+    },
+    {
+      "session_id": "20251115_112751",
+      "timestamp": "2025-11-15T12:45:30.716820",
+      "turns": 0
+    },
+    {
+      "session_id": "20251115_160507",
+      "timestamp": "2025-11-15T16:06:10.952762",
+      "turns": 0
+    },
+    {
+      "session_id": "20251115_160936",
+      "timestamp": "2025-11-15T16:11:54.970183",
+      "turns": 1
+    },
+    {
+      "session_id": "20251115_161659",
+      "timestamp": "2025-11-15T16:24:18.737339",
+      "turns": 2
+    },
+    {
+      "session_id": "20251115_162447",
+      "timestamp": "2025-11-15T16:29:28.473496",
+      "turns": 2
+    },
+    {
+      "session_id": "20251115_165155",
+      "timestamp": "2025-11-15T18:33:21.208516",
+      "turns": 2
+    },
+    {
+      "session_id": "20251115_183341",
+      "timestamp": "2025-11-15T20:00:51.335385",
+      "turns": 2
+    },
+    {
+      "session_id": "20251115_213327",
+      "timestamp": "2025-11-15T22:58:42.385397",
+      "turns": 8
+    },
+    {
+      "session_id": "20251116_075907",
+      "timestamp": "2025-11-16T08:24:24.689995",
+      "turns": 5
+    },
+    {
+      "session_id": "20251116_082816",
+      "timestamp": "2025-11-16T09:01:32.335594",
+      "turns": 1
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251115_111704",
+  "last_session": "20251116_082816",
   "preferred_tone": "balanced",
   "dae_personality_notes": [],
   "user_profile": {
@@ -226,7 +276,7 @@
     "learning_velocity": 0.0,
     "metadata": {},
     "entities": {
-      "user_name": "Emiliano",
+      "user_name": "emiliano",
       "preferences": {
         "likes": "fungi"
       }
@@ -1460,6 +1510,274 @@
               "NDAM",
               "RNX",
               "EO",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T16:26:17.256371",
+        "entities": {
+          "timestamp": "2025-11-15T16:26:17.252428",
+          "source_text": "hello there! today i have mixed feelings, I thought my wife would be happy about creating a therapeutic tool but she didnt react as expected, maybe because she is scared of current LLMs and other technological tools that might allow techno feudalism and extraction",
+          "intent_type": "relationship_statement",
+          "transductive_context": {
+            "timestamp": "2025-11-15T16:26:17.256341",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.31141045471583906,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T16:28:29.645855",
+        "entities": {
+          "timestamp": "2025-11-15T16:28:29.645670",
+          "source_text": "thank you! so you remember my name and my wife's name? I am emiliano and she is lucia",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-15T16:28:29.645820",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3777790912861444,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T17:10:56.510149",
+        "entities": {
+          "timestamp": "2025-11-15T17:10:56.505774",
+          "source_text": "you know that i am also vegan! me and my wife follow a vegan diet",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-15T17:10:56.510112",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.35610435370291155,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T18:35:39.465603",
+        "entities": {
+          "timestamp": "2025-11-15T18:35:39.462968",
+          "source_text": "hey there! i am good thank you, yes i do love fungi! great that you remember, do you remember my wife's name?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-15T18:35:39.465577",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.38247630106106956,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T21:47:59.993748",
+        "entities": {
+          "timestamp": "2025-11-15T21:47:59.990405",
+          "source_text": "I am ok thank you, my favorite fungus is daedalea quercina, do you know anything about  it?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-15T21:47:59.993719",
+            "turn_number": 5,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.356479275051267,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-15T21:49:43.025009",
+        "entities": {
+          "timestamp": "2025-11-15T21:49:43.021508",
+          "source_text": "your architecture is inspired from this fungus, that is why your name is DAE, DAE = Daedalea",
+          "intent_type": "none",
+          "user_name": "DAE",
+          "transductive_context": {
+            "timestamp": "2025-11-15T21:49:43.024982",
+            "turn_number": 6,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.400297026232705,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T08:29:11.315153",
+        "entities": {
+          "timestamp": "2025-11-16T08:29:11.311784",
+          "source_text": "Hello there, my name is emiliano and i am here to asess your processing, can you tell me a bit about yourself? are you an LLM?",
+          "intent_type": "self_introduction",
+          "user_name": "emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-16T08:29:11.315116",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3263442649554485,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
               "CARD"
             ],
             "transduction_mechanism": null,

@@ -1,0 +1,140 @@
+{
+  "timestamp": "2025-11-16T06:31:15.840551",
+  "total_inputs": 21,
+  "total_families": 1,
+  "families": [
+    "Family_001"
+  ],
+  "all_57d": true,
+  "family_distribution": {
+    "Family_001": 21
+  },
+  "results": [
+    {
+      "input": "urgency_crisis",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14\ud83d\ude0c I can see that you're really struggling right now. It's l..."
+    },
+    {
+      "input": "urgency_escalation",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83c\udf0a I can sense that you're feeling overwhelmed and like every..."
+    },
+    {
+      "input": "urgency_control_loss",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14 You're feeling a sense of overwhelm and losing control rig..."
+    },
+    {
+      "input": "relational_connection",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "That means so much to me. It's as if my 11 organs are gettin..."
+    },
+    {
+      "input": "relational_safety",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83c\udf38 I'm so glad to hear that this space feels safe enough for ..."
+    },
+    {
+      "input": "relational_gratitude",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83d\udc96 Ah, thank you so much for trusting me with this moment. It..."
+    },
+    {
+      "input": "protective_boundary",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14 I'm here to listen and support you. When setting boundarie..."
+    },
+    {
+      "input": "protective_parts",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83e\udd14 It sounds like you're feeling a bit guarded right now. Tha..."
+    },
+    {
+      "input": "protective_wall",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "I'm so glad you're noticing that wall going up \ud83d\ude0c. It sounds ..."
+    },
+    {
+      "input": "recursive_rumination",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "It sounds like you're feeling stuck in a loop of thinking ab..."
+    },
+    {
+      "input": "recursive_stuck",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83c\udf0a You're feeling really stuck right now. That can be such a ..."
+    },
+    {
+      "input": "recursive_return",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83d\ude0c It sounds like you're stuck in a cycle that feels really t..."
+    },
+    {
+      "input": "dissociative_body",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83c\udf0a Feeling disconnected from your body can be really uncomfor..."
+    },
+    {
+      "input": "dissociative_distant",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14 It sounds like you're feeling a bit disconnected from our ..."
+    },
+    {
+      "input": "dissociative_spacing",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "It sounds like you're noticing that when things get intense,..."
+    },
+    {
+      "input": "paradox_connection",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14 Feeling that fear of connection? It's like having two part..."
+    },
+    {
+      "input": "paradox_help",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "\ud83e\udd14 You're feeling a bit stuck and worried about being a burde..."
+    },
+    {
+      "input": "paradox_strength",
+      "family": "Family_001",
+      "confidence": 1.0,
+      "emission": "\ud83d\udc95 Ah, it sounds like you're feeling a deep sense of vulnerab..."
+    },
+    {
+      "input": "absorbed_systemic",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "I'm so sorry to hear that you're feeling this way. It sounds..."
+    },
+    {
+      "input": "absorbed_society",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "I'm so sorry to hear that society hasn't met your needs. \ud83e\udd14 I..."
+    },
+    {
+      "input": "absorbed_pressure",
+      "family": "Family_001",
+      "confidence": 0.7,
+      "emission": "I'm so sorry to hear that you're feeling crushed by expectat..."
+    }
+  ]
+}

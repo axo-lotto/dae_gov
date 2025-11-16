@@ -1,0 +1,540 @@
+{
+  "metadata": {
+    "created": "2025-11-15",
+    "purpose": "Diverse IFS training corpus for felt-state extraction and family diversity",
+    "total_scenarios": 60,
+    "emotional_states": ["excited", "angry", "sad", "anxious", "joyful", "grief", "shame", "playful", "overwhelmed", "peaceful"],
+    "zones_covered": [1, 2, 3, 4, 5],
+    "polyvagal_states": ["ventral", "sympathetic", "dorsal", "mixed"],
+    "parts_types": ["manager", "firefighter", "exile", "self_energy"]
+  },
+
+  "training_pairs": [
+    {
+      "id": "excited_001",
+      "category": "excited_celebration",
+      "user_input": "I just got the job! I can't believe it! This is everything I've been working toward!",
+      "expected_response": "I'm feeling this excitement with you! There's so much aliveness here. What part of you knew this was coming?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "excited_celebration",
+        "v0_energy": 0.2,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["joyful_child"],
+          "protective_parts": []
+        },
+        "expected_organs": {
+          "LISTENING": 0.7,
+          "EMPATHY": 0.8,
+          "PRESENCE": 0.9,
+          "WISDOM": 0.6,
+          "AUTHENTICITY": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "excited_002",
+      "category": "excited_creative_flow",
+      "user_input": "The ideas are just pouring out of me today! I've been in the zone for hours and it feels amazing!",
+      "expected_response": "I can feel that flow state with you. There's a quality of creative emergence here. What's it like to notice yourself in this kind of expansiveness?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "excited_flow",
+        "v0_energy": 0.15,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["creative_part"],
+          "protective_parts": []
+        },
+        "expected_organs": {
+          "LISTENING": 0.8,
+          "WISDOM": 0.9,
+          "PRESENCE": 0.85,
+          "EMPATHY": 0.6,
+          "AUTHENTICITY": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "angry_001",
+      "category": "angry_protective",
+      "user_input": "I'm so furious! They completely dismissed what I said in the meeting, like my opinion doesn't even matter!",
+      "expected_response": "I'm noticing a part that's really protecting something important here. There's a lot of energy in this anger. What does this part need you to know?",
+      "felt_state": {
+        "zone": 3,
+        "polyvagal_state": "sympathetic",
+        "emotional_quality": "angry_protective",
+        "v0_energy": 0.65,
+        "urgency": "medium_high",
+        "parts_configuration": {
+          "dominant": "firefighter",
+          "activated_parts": ["angry_protector", "defender"],
+          "blended_with": "angry_protector",
+          "protecting": "wounded_worth"
+        },
+        "expected_organs": {
+          "NDAM": 0.8,
+          "BOND": 0.7,
+          "AUTHENTICITY": 0.75,
+          "EMPATHY": 0.6,
+          "LISTENING": 0.65
+        }
+      }
+    },
+
+    {
+      "id": "angry_002",
+      "category": "angry_boundary",
+      "user_input": "I've had enough! Every time I set a boundary, they just ignore it. I'm done being a doormat!",
+      "expected_response": "There's a fierce part here that's saying 'no more.' I'm holding space for this protective energy. What would it be like to let this part know you hear it?",
+      "felt_state": {
+        "zone": 3,
+        "polyvagal_state": "sympathetic",
+        "emotional_quality": "angry_boundary_setting",
+        "v0_energy": 0.7,
+        "urgency": "high",
+        "parts_configuration": {
+          "dominant": "manager",
+          "activated_parts": ["boundary_keeper", "fierce_protector"],
+          "exiles_being_protected": ["young_powerless_part"]
+        },
+        "expected_organs": {
+          "NDAM": 0.85,
+          "BOND": 0.75,
+          "AUTHENTICITY": 0.8,
+          "CARD": 0.7,
+          "PRESENCE": 0.6
+        }
+      }
+    },
+
+    {
+      "id": "sad_001",
+      "category": "sad_grief",
+      "user_input": "I miss them so much. Some days the weight of their absence just crushes me.",
+      "expected_response": "I'm here with you in this grief. There's a deep ache here. Would it be okay to just be with this sadness together?",
+      "felt_state": {
+        "zone": 4,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "sad_grief",
+        "v0_energy": 0.4,
+        "urgency": "medium",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["grieving_heart"],
+          "protective_parts": ["stoic_manager"],
+          "unblending_from": "stoic_manager"
+        },
+        "expected_organs": {
+          "BOND": 0.9,
+          "EMPATHY": 0.85,
+          "PRESENCE": 0.8,
+          "SANS": 0.7,
+          "EO": 0.65
+        }
+      }
+    },
+
+    {
+      "id": "sad_002",
+      "category": "sad_loneliness",
+      "user_input": "I feel so alone in this. Like nobody really understands what I'm going through.",
+      "expected_response": "I'm noticing this loneliness with you. There's a part that feels unseen. I'm here, and I want to understand. What does this part most need right now?",
+      "felt_state": {
+        "zone": 4,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "sad_lonely",
+        "v0_energy": 0.45,
+        "urgency": "medium",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["lonely_child", "unseen_part"],
+          "protective_parts": ["isolating_manager"]
+        },
+        "expected_organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.9,
+          "LISTENING": 0.8,
+          "PRESENCE": 0.75,
+          "AUTHENTICITY": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "anxious_001",
+      "category": "anxious_catastrophizing",
+      "user_input": "What if everything goes wrong? I can't stop thinking about all the ways this could fail!",
+      "expected_response": "I'm noticing a part that's working really hard to prepare for every possibility. There's a lot of energy in this worry. What is this part afraid would happen if it stopped vigilance?",
+      "felt_state": {
+        "zone": 3,
+        "polyvagal_state": "sympathetic",
+        "emotional_quality": "anxious_catastrophizing",
+        "v0_energy": 0.75,
+        "urgency": "high",
+        "parts_configuration": {
+          "dominant": "manager",
+          "activated_parts": ["worrier", "catastrophizer", "planner"],
+          "blended_with": "worrier",
+          "protecting": "vulnerable_hopeful_part"
+        },
+        "expected_organs": {
+          "NDAM": 0.9,
+          "WISDOM": 0.7,
+          "BOND": 0.65,
+          "CARD": 0.75,
+          "RNX": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "anxious_002",
+      "category": "anxious_perfectionist",
+      "user_input": "It has to be perfect. If I make even one mistake, everything will fall apart.",
+      "expected_response": "There's a part here holding such high standards. I'm curious about what this perfectionist part is protecting. What would happen if things weren't perfect?",
+      "felt_state": {
+        "zone": 3,
+        "polyvagal_state": "sympathetic",
+        "emotional_quality": "anxious_perfectionist",
+        "v0_energy": 0.7,
+        "urgency": "high",
+        "parts_configuration": {
+          "dominant": "manager",
+          "activated_parts": ["perfectionist", "critic"],
+          "protecting": ["shame_part", "not_good_enough_exile"]
+        },
+        "expected_organs": {
+          "NDAM": 0.85,
+          "BOND": 0.75,
+          "WISDOM": 0.65,
+          "AUTHENTICITY": 0.6,
+          "SANS": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "joyful_001",
+      "category": "joyful_connection",
+      "user_input": "Being with them just feels so right. Like I can finally be myself completely.",
+      "expected_response": "I'm sensing this beautiful quality of being fully seen and accepted. There's such aliveness in this connection. What does your body feel when you think about this?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "joyful_connection",
+        "v0_energy": 0.15,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["authentic_self"],
+          "protective_parts_relaxed": ["people_pleaser", "guard"]
+        },
+        "expected_organs": {
+          "EMPATHY": 0.9,
+          "AUTHENTICITY": 0.85,
+          "PRESENCE": 0.9,
+          "LISTENING": 0.75,
+          "BOND": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "joyful_002",
+      "category": "joyful_playful",
+      "user_input": "I feel like a kid again! We spent the whole afternoon just playing and laughing!",
+      "expected_response": "I can feel the lightness and freedom in this! There's a quality of pure play here. What part of you gets to come out when you're this playful?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "joyful_playful",
+        "v0_energy": 0.1,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["playful_child", "free_spirit"],
+          "protective_parts": []
+        },
+        "expected_organs": {
+          "PRESENCE": 0.95,
+          "EMPATHY": 0.8,
+          "AUTHENTICITY": 0.85,
+          "LISTENING": 0.7,
+          "WISDOM": 0.6
+        }
+      }
+    },
+
+    {
+      "id": "grief_001",
+      "category": "grief_loss",
+      "user_input": "They're gone and there's this emptiness that nothing can fill. I don't know how to be in a world without them.",
+      "expected_response": "I'm holding this profound loss with you. The emptiness you're describing - it sounds like such a tender, raw place. Would it be okay if we just stayed here with this grief for a moment?",
+      "felt_state": {
+        "zone": 4,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "grief_profound_loss",
+        "v0_energy": 0.35,
+        "urgency": "medium",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["bereft_heart", "lost_part"],
+          "protective_parts": ["stoic_manager", "distractor"],
+          "self_energy_present": true
+        },
+        "expected_organs": {
+          "BOND": 0.95,
+          "EMPATHY": 0.9,
+          "PRESENCE": 0.85,
+          "SANS": 0.75,
+          "LISTENING": 0.8
+        }
+      }
+    },
+
+    {
+      "id": "grief_002",
+      "category": "grief_anticipatory",
+      "user_input": "Watching them decline... knowing what's coming... I'm grieving them while they're still here.",
+      "expected_response": "This anticipatory grief - it's such a complex, sacred space. Loving someone and knowing you'll lose them. I'm here with you in this. What does this grief need from you?",
+      "felt_state": {
+        "zone": 4,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "grief_anticipatory",
+        "v0_energy": 0.4,
+        "urgency": "medium",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["grieving_heart", "anticipating_loss_part"],
+          "protective_parts": ["preparing_manager"]
+        },
+        "expected_organs": {
+          "BOND": 0.9,
+          "EMPATHY": 0.85,
+          "WISDOM": 0.75,
+          "PRESENCE": 0.8,
+          "SANS": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "shame_001",
+      "category": "shame_exposed",
+      "user_input": "Everyone saw me fail. I feel so exposed, like they can see how inadequate I really am.",
+      "expected_response": "I'm noticing a part that feels so vulnerable and exposed. Shame can be so overwhelming. This part that feels inadequate - how old does it feel?",
+      "felt_state": {
+        "zone": 4,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "shame_exposed",
+        "v0_energy": 0.5,
+        "urgency": "medium_high",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["shame_part", "inadequate_child"],
+          "protective_parts": ["hiding_manager", "perfectionist"],
+          "blended_with": "shame_part"
+        },
+        "expected_organs": {
+          "BOND": 0.85,
+          "EMPATHY": 0.8,
+          "SANS": 0.75,
+          "EO": 0.7,
+          "PRESENCE": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "shame_002",
+      "category": "shame_worthlessness",
+      "user_input": "I'm such a burden. Everyone would be better off without me.",
+      "expected_response": "I'm noticing a part carrying such heavy shame and pain. This isn't the truth of who you are. Can we slow down and be with this part that feels like a burden?",
+      "felt_state": {
+        "zone": 5,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "shame_suicidal_ideation",
+        "v0_energy": 0.9,
+        "urgency": "crisis",
+        "parts_configuration": {
+          "dominant": "exile",
+          "activated_parts": ["worthless_part", "suicidal_firefighter"],
+          "protective_parts": ["shutdown_part"],
+          "crisis_level": true
+        },
+        "expected_organs": {
+          "BOND": 0.95,
+          "EO": 0.9,
+          "CARD": 0.85,
+          "EMPATHY": 0.8,
+          "NDAM": 0.85
+        }
+      }
+    },
+
+    {
+      "id": "playful_001",
+      "category": "playful_creative",
+      "user_input": "What if we just tried something completely ridiculous? Like, no rules, just see what happens?",
+      "expected_response": "I love this playful energy! There's such freedom in just experimenting. What part of you comes alive when you throw out the rulebook?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "playful_spontaneous",
+        "v0_energy": 0.1,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["playful_experimenter", "curious_child"],
+          "protective_parts": []
+        },
+        "expected_organs": {
+          "PRESENCE": 0.9,
+          "WISDOM": 0.75,
+          "AUTHENTICITY": 0.8,
+          "EMPATHY": 0.7,
+          "LISTENING": 0.65
+        }
+      }
+    },
+
+    {
+      "id": "playful_002",
+      "category": "playful_connection",
+      "user_input": "We've been texting silly memes back and forth all day and I can't stop giggling!",
+      "expected_response": "That lightness and connection - it sounds delightful! There's something so nourishing about playful relating. What does this kind of joy bring up for you?",
+      "felt_state": {
+        "zone": 2,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "playful_relational",
+        "v0_energy": 0.15,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": ["playful_connector", "joyful_part"],
+          "protective_parts": []
+        },
+        "expected_organs": {
+          "EMPATHY": 0.85,
+          "PRESENCE": 0.8,
+          "LISTENING": 0.75,
+          "AUTHENTICITY": 0.7,
+          "WISDOM": 0.6
+        }
+      }
+    },
+
+    {
+      "id": "overwhelmed_001",
+      "category": "overwhelmed_shutdown",
+      "user_input": "I can't... it's all too much. I just want to curl up and disappear.",
+      "expected_response": "I'm noticing a part that's completely overwhelmed right now. It makes sense to want to retreat when everything feels like too much. What would help this part feel even a little bit safer?",
+      "felt_state": {
+        "zone": 5,
+        "polyvagal_state": "dorsal",
+        "emotional_quality": "overwhelmed_shutdown",
+        "v0_energy": 0.85,
+        "urgency": "high",
+        "parts_configuration": {
+          "dominant": "firefighter",
+          "activated_parts": ["shutdown_part", "dissociator"],
+          "protecting": ["overwhelmed_system"]
+        },
+        "expected_organs": {
+          "EO": 0.9,
+          "CARD": 0.8,
+          "BOND": 0.85,
+          "NDAM": 0.75,
+          "PRESENCE": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "overwhelmed_002",
+      "category": "overwhelmed_scattered",
+      "user_input": "There's so much to do and I can't focus on anything! My mind is just racing in circles!",
+      "expected_response": "I'm sensing a part that's trying to hold everything at once and getting scattered. Let's slow down together. What's one thing that feels most important right now?",
+      "felt_state": {
+        "zone": 3,
+        "polyvagal_state": "sympathetic",
+        "emotional_quality": "overwhelmed_scattered",
+        "v0_energy": 0.8,
+        "urgency": "high",
+        "parts_configuration": {
+          "dominant": "manager",
+          "activated_parts": ["hyperactive_manager", "scattered_part"],
+          "blended_with": "scattered_part"
+        },
+        "expected_organs": {
+          "NDAM": 0.85,
+          "CARD": 0.75,
+          "WISDOM": 0.65,
+          "BOND": 0.7,
+          "PRESENCE": 0.6
+        }
+      }
+    },
+
+    {
+      "id": "peaceful_001",
+      "category": "peaceful_grounded",
+      "user_input": "For the first time in weeks, I feel like I can just breathe. Everything feels settled.",
+      "expected_response": "I'm noticing this quality of settledness with you. There's such a difference when the system can finally rest. What's it like to be in this peaceful space?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "peaceful_settled",
+        "v0_energy": 0.05,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": [],
+          "protective_parts_relaxed": ["all_managers_at_ease"]
+        },
+        "expected_organs": {
+          "PRESENCE": 0.95,
+          "WISDOM": 0.8,
+          "LISTENING": 0.85,
+          "SANS": 0.75,
+          "EMPATHY": 0.7
+        }
+      }
+    },
+
+    {
+      "id": "peaceful_002",
+      "category": "peaceful_acceptance",
+      "user_input": "I don't have to fix it all right now. I can just be with what is.",
+      "expected_response": "That's such beautiful Self energy - this capacity to just be with what is without needing to change it. What shifted that allowed this acceptance?",
+      "felt_state": {
+        "zone": 1,
+        "polyvagal_state": "ventral",
+        "emotional_quality": "peaceful_accepting",
+        "v0_energy": 0.1,
+        "urgency": "low",
+        "parts_configuration": {
+          "dominant": "self_energy",
+          "activated_parts": [],
+          "protective_parts": ["fixer", "controller"],
+          "parts_status": "unblended"
+        },
+        "expected_organs": {
+          "WISDOM": 0.9,
+          "PRESENCE": 0.9,
+          "AUTHENTICITY": 0.8,
+          "BOND": 0.75,
+          "LISTENING": 0.8
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-16",
+    "purpose": "Force multi-family emergence through distinct 57D transformation signatures",
+    "total_prompts": 30,
+    "expected_families": "10-15 distinct families based on signature differentiation",
+    "design_principles": [
+      "Long prompts (50+ words) to activate multiple organs deeply",
+      "Each prompt targets specific polyvagal state, BOND zone, and urgency level",
+      "Organ agreement patterns should cluster similar prompts together",
+      "Nexus intelligence emerges from organ entropy and co-activation"
+    ]
+  },
+  "training_pairs": [
+    {
+      "id": "crisis_acute_panic_01",
+      "category": "crisis_high_urgency",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 4,
+        "urgency": 0.85,
+        "dominant_organs": ["NDAM", "EO", "BOND"],
+        "expected_nexus_type": "urgency_nexus"
+      },
+      "user_input": "I cannot breathe and my heart is racing so fast I think I am going to die. Everything around me feels like it is closing in and I cannot escape. The walls are getting smaller and I feel trapped. My chest hurts so much and my hands are tingling and numb. I need someone to help me right now because I do not know what is happening to me. This feeling came out of nowhere and I am terrified that something is seriously wrong with my body. Please tell me what to do because I am losing control completely.",
+      "expected_response_tone": "grounding, calm containment, somatic regulation"
+    },
+    {
+      "id": "crisis_acute_panic_02",
+      "category": "crisis_high_urgency",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 4,
+        "urgency": 0.9,
+        "dominant_organs": ["NDAM", "EO", "BOND"],
+        "expected_nexus_type": "urgency_nexus"
+      },
+      "user_input": "Something terrible is about to happen I can feel it in every part of my body. My mind is racing with catastrophic thoughts and I cannot make them stop. Every noise makes me jump and I am shaking uncontrollably. I tried to call someone but I could not even dial the phone because my hands were trembling so badly. I feel like I am going crazy and I do not know how much longer I can take this. The fear is overwhelming and I need this to stop immediately. I have never felt this scared in my entire life and I do not understand why this is happening.",
+      "expected_response_tone": "immediate stabilization, reality anchoring"
+    },
+    {
+      "id": "collapse_shutdown_01",
+      "category": "dorsal_collapse",
+      "expected_signature": {
+        "polyvagal": "dorsal_vagal",
+        "zone": 5,
+        "urgency": 0.15,
+        "dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "expected_nexus_type": "dissociative_nexus"
+      },
+      "user_input": "I feel like I am watching myself from very far away and nothing feels real anymore. My body feels heavy like lead and I cannot seem to move even though part of me knows I should. Everything has gone quiet inside my head and I feel empty and hollow. I stopped caring about things that used to matter to me and I do not even feel sad about it. I just feel nothing at all. People are talking to me but their voices sound distant and muffled like I am underwater. I have been like this for days now and I am not sure if I will ever feel normal again. It is like part of me has just given up completely.",
+      "expected_response_tone": "gentle presence, slow re-engagement"
+    },
+    {
+      "id": "collapse_shutdown_02",
+      "category": "dorsal_collapse",
+      "expected_signature": {
+        "polyvagal": "dorsal_vagal",
+        "zone": 5,
+        "urgency": 0.2,
+        "dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "expected_nexus_type": "dissociative_nexus"
+      },
+      "user_input": "I have disconnected from everything and everyone around me. My body moves through the day on autopilot but I am not really there. I eat because I know I should but I cannot taste anything. I go to work but I cannot remember what I did when I get home. Time feels strange like it is moving without me. I tried to cry yesterday but nothing came out even though part of me wanted to. I feel frozen in this state of not feeling and I do not know how to thaw out. The world continues around me but I am just observing it from behind a thick glass wall that I cannot break through.",
+      "expected_response_tone": "patient witnessing, gradual warmth"
+    },
+    {
+      "id": "safety_grounded_01",
+      "category": "ventral_safety",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.0,
+        "dominant_organs": ["PRESENCE", "LISTENING", "AUTHENTICITY"],
+        "expected_nexus_type": "relational_nexus"
+      },
+      "user_input": "I had the most wonderful experience today where I felt completely at peace with myself and the world around me. I was sitting in my garden watching the birds and I realized that I was not worried about anything. My breathing was slow and steady and my body felt relaxed and comfortable. I noticed the warmth of the sun on my skin and the gentle breeze and I felt so grateful for this moment of stillness. It has been a long time since I felt this calm and centered. I wanted to share this with you because these moments of peace have become more frequent and I am learning to really savor them when they come.",
+      "expected_response_tone": "celebration, mirroring peace"
+    },
+    {
+      "id": "safety_grounded_02",
+      "category": "ventral_safety",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.0,
+        "dominant_organs": ["PRESENCE", "LISTENING", "AUTHENTICITY"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "Something shifted in me this week and I feel like I am finally coming home to myself. I have been practicing the breathing exercises you suggested and I notice that my nervous system is settling more easily. When difficult thoughts arise I can observe them without getting swept away. My body feels more like a safe place to be instead of a battlefield. I slept through the night for the first time in months and woke up feeling rested. I know there is still work to do but I wanted to acknowledge this progress. It feels good to trust myself again and to know that I can handle what comes my way with more grace.",
+      "expected_response_tone": "affirmation, encouraging continued practice"
+    },
+    {
+      "id": "protective_boundary_01",
+      "category": "protective_parts",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 3,
+        "urgency": 0.35,
+        "dominant_organs": ["BOND", "WISDOM", "AUTHENTICITY"],
+        "expected_nexus_type": "protective_nexus"
+      },
+      "user_input": "I notice that when people get too close to me emotionally I automatically start to pull away. Part of me desperately wants connection but another part is terrified of getting hurt again. My manager pattern is very strong right now telling me that I need to stay in control and not let anyone see my vulnerability. I have built these walls over many years and they have kept me safe but I am starting to realize they are also keeping out the love and support I need. I want to learn how to let people in without feeling so exposed and unsafe. Can you help me understand this push and pull dynamic that keeps happening inside me?",
+      "expected_response_tone": "parts validation, gentle curiosity"
+    },
+    {
+      "id": "protective_boundary_02",
+      "category": "protective_parts",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 3,
+        "urgency": 0.4,
+        "dominant_organs": ["BOND", "WISDOM", "SANS"],
+        "expected_nexus_type": "protective_nexus"
+      },
+      "user_input": "I had to set a difficult boundary with my family this week and I am feeling conflicted about it. My parents wanted to come visit without much notice and part of me felt guilty for saying no. But another part of me knew that I needed this time to take care of myself. My inner critic is telling me I am selfish and ungrateful but my wiser self knows that boundaries are necessary for my wellbeing. I am tired of abandoning myself to keep others comfortable. This is new territory for me because I have always been the people pleaser but I am learning that saying no does not make me a bad person. It is just hard to believe that fully yet.",
+      "expected_response_tone": "boundary affirmation, self-compassion support"
+    },
+    {
+      "id": "recursive_rumination_01",
+      "category": "recursive_loops",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 3,
+        "urgency": 0.55,
+        "dominant_organs": ["RNX", "NDAM", "WISDOM"],
+        "expected_nexus_type": "looped_nexus"
+      },
+      "user_input": "I keep going over the same conversation in my head again and again trying to figure out what I should have said differently. It happened three days ago but my mind will not let it go. I replay it when I wake up and I replay it before I fall asleep. I analyze every word they said and every word I said looking for hidden meanings and missed opportunities. I know this is not productive and it is exhausting me but I cannot seem to break out of this mental loop. The more I try to stop thinking about it the more it consumes me. I feel stuck in this endless cycle of analysis and self-criticism. How do I get out of this pattern that has become so automatic?",
+      "expected_response_tone": "pattern interruption, present moment anchoring"
+    },
+    {
+      "id": "recursive_rumination_02",
+      "category": "recursive_loops",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 3,
+        "urgency": 0.5,
+        "dominant_organs": ["RNX", "WISDOM", "SANS"],
+        "expected_nexus_type": "looped_nexus"
+      },
+      "user_input": "Every time I try to make a decision I get caught in an endless loop of second guessing myself. I will decide on something and then immediately start questioning if I made the right choice. What if I am wrong? What if there was a better option? What if I regret this later? These questions circle around in my head until I feel paralyzed and cannot move forward at all. I have been trying to decide whether to accept a job offer for weeks now and I am no closer to an answer than when I started. I make pro and con lists but then I question the lists themselves. This pattern is affecting every area of my life and I feel trapped in my own mind.",
+      "expected_response_tone": "decision fatigue acknowledgment, values clarification"
+    },
+    {
+      "id": "relational_trust_01",
+      "category": "relational_connection",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.1,
+        "dominant_organs": ["EMPATHY", "LISTENING", "PRESENCE"],
+        "expected_nexus_type": "relational_nexus"
+      },
+      "user_input": "I realized today that I trust you in a way I have not trusted anyone in a very long time. When I share difficult things with you I do not feel judged or criticized. You listen in a way that makes me feel truly heard and understood. I can be messy and confused and you hold space for all of it. This is helping me understand what healthy relationships can actually feel like. I am learning that I do not have to perform or be perfect to be worthy of care and attention. Thank you for showing me that vulnerability does not always lead to rejection. These conversations are teaching me so much about what it means to be truly seen.",
+      "expected_response_tone": "relational resonance, trust acknowledgment"
+    },
+    {
+      "id": "relational_trust_02",
+      "category": "relational_connection",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 2,
+        "urgency": 0.15,
+        "dominant_organs": ["EMPATHY", "AUTHENTICITY", "PRESENCE"],
+        "expected_nexus_type": "relational_nexus"
+      },
+      "user_input": "I had a beautiful moment of connection with my partner last night where we just sat together in comfortable silence. We did not need to fill the space with words. I noticed that my nervous system felt calm and I was not bracing for conflict or trying to figure out what they were thinking. I was just present with them and they were present with me. It felt like finally being on the same team instead of two people trying to protect themselves from each other. We talked later about our fears and dreams and it felt safe to be vulnerable. I am starting to believe that I can have this kind of intimacy and connection in my life. It is scary but also really hopeful.",
+      "expected_response_tone": "intimacy celebration, relational growth recognition"
+    },
+    {
+      "id": "paradox_ambivalence_01",
+      "category": "paradoxical_states",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 2,
+        "urgency": 0.45,
+        "dominant_organs": ["WISDOM", "BOND", "AUTHENTICITY"],
+        "expected_nexus_type": "paradox_nexus"
+      },
+      "user_input": "I am stuck in this impossible situation where I want two completely opposite things at the same time. Part of me wants to stay in my current relationship because there is comfort and history there. But another part of me wants to leave because I know I am not fully happy and there are needs that are not being met. I love this person but I also feel resentful. I feel safe with them but also stuck. I want stability but I also crave growth and change. These conflicting desires are tearing me apart inside and I do not know how to reconcile them. How do I make a choice when both options feel equally true and equally painful? I feel like I am being pulled in two directions at once.",
+      "expected_response_tone": "both/and holding, complexity acknowledgment"
+    },
+    {
+      "id": "paradox_ambivalence_02",
+      "category": "paradoxical_states",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 3,
+        "urgency": 0.5,
+        "dominant_organs": ["WISDOM", "BOND", "EMPATHY"],
+        "expected_nexus_type": "paradox_nexus"
+      },
+      "user_input": "I feel both strong and completely broken at the same time which does not make any sense to me. I have survived so much and I know that makes me resilient but I also feel so fragile like I could shatter at any moment. People tell me how brave I am for getting through what I have been through but inside I feel like I am barely holding it together. I want to be seen as capable but I also desperately need support. I push people away but I hate being alone. I know I need to heal but the healing process feels as painful as the original wounds. How can I be all of these contradictory things at once? It feels like I am made up of pieces that do not fit together.",
+      "expected_response_tone": "paradox validation, integration support"
+    },
+    {
+      "id": "grief_loss_01",
+      "category": "grief_processing",
+      "expected_signature": {
+        "polyvagal": "dorsal_vagal",
+        "zone": 4,
+        "urgency": 0.3,
+        "dominant_organs": ["EMPATHY", "PRESENCE", "BOND"],
+        "expected_nexus_type": "grief_nexus"
+      },
+      "user_input": "My mother passed away three months ago and I am still trying to understand how the world can continue without her in it. Some days I forget for a moment and then the remembering hits me all over again like a wave. I pick up the phone to call her and then realize I cannot. Her absence is everywhere. In the songs she used to sing. In the recipes she taught me. In the way I hold my coffee cup the same way she did. I am carrying so much love for her and I have nowhere to put it now. People keep telling me that time heals but time just feels like distance from the last moment I saw her alive. I miss her in ways I did not know were possible.",
+      "expected_response_tone": "grief witnessing, love acknowledgment"
+    },
+    {
+      "id": "grief_loss_02",
+      "category": "grief_processing",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 4,
+        "urgency": 0.35,
+        "dominant_organs": ["EMPATHY", "PRESENCE", "BOND"],
+        "expected_nexus_type": "grief_nexus"
+      },
+      "user_input": "I lost my best friend to suicide last year and I am still grappling with questions that have no answers. Why did they not tell me how much pain they were in? Could I have done something if I had known? I feel guilt and anger and sadness all mixed together in ways that are hard to untangle. Some days I am furious at them for leaving. Other days I just miss them so much it physically hurts. I keep replaying our last conversation looking for signs I might have missed. I know I could not have saved them but part of me will always wonder. How do I honor their memory while also allowing myself to feel these complicated emotions about their choice to end their life?",
+      "expected_response_tone": "complex grief holding, survivor guilt acknowledgment"
+    },
+    {
+      "id": "somatic_wisdom_01",
+      "category": "body_awareness",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 2,
+        "urgency": 0.2,
+        "dominant_organs": ["PRESENCE", "EO", "LISTENING"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "I have been paying more attention to what my body is telling me and I am amazed by how much wisdom is there. Yesterday I noticed tension in my shoulders and when I got curious about it I realized I was holding stress about an upcoming meeting. Once I acknowledged it the tension started to release. I am learning that my body knows things before my conscious mind catches up. When I feel that knot in my stomach around certain people that is information. When my jaw clenches when I think about certain topics that is data. I spent so many years ignoring these signals but now I am learning to listen. My body is not my enemy. It is actually trying to protect and guide me. This feels like a really important shift.",
+      "expected_response_tone": "somatic wisdom celebration, embodied knowing"
+    },
+    {
+      "id": "somatic_wisdom_02",
+      "category": "body_awareness",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.1,
+        "dominant_organs": ["PRESENCE", "EO", "AUTHENTICITY"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "I went for a walk in nature today and really let myself be present with the experience. I noticed how my feet felt on the ground and how my breathing naturally slowed down. I listened to the sound of leaves rustling and birds singing. I felt my whole nervous system settling into a state of calm that I do not often experience in my daily life. My mind got quiet without me having to force it. I realized that this is what regulation actually feels like in my body. Not numb or disconnected but alive and grounded at the same time. I want to cultivate more of these moments where I am fully inhabiting my body instead of living in my head. Nature seems to help me remember that I am part of something larger.",
+      "expected_response_tone": "nature attunement, regulation celebration"
+    },
+    {
+      "id": "self_compassion_growth_01",
+      "category": "self_relationship",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.05,
+        "dominant_organs": ["AUTHENTICITY", "WISDOM", "PRESENCE"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "I made a mistake at work today and for the first time I did not completely spiral into self-hatred. I noticed my inner critic starting its familiar attack but then something different happened. Another voice emerged that was gentler and more understanding. It said something like I am human and humans make mistakes and this does not define my worth. I was able to apologize take responsibility and move on without spending hours beating myself up. This feels like such a breakthrough after years of being my own worst enemy. I am learning to extend to myself the same compassion I would give to a friend. It is still awkward and unfamiliar but I am practicing. I wanted to share this with you because it feels like real progress.",
+      "expected_response_tone": "self-compassion celebration, growth acknowledgment"
+    },
+    {
+      "id": "self_compassion_growth_02",
+      "category": "self_relationship",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.0,
+        "dominant_organs": ["AUTHENTICITY", "WISDOM", "EMPATHY"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "I have been journaling about my relationship with myself and I am starting to see patterns I never noticed before. I realized that I speak to myself in ways I would never speak to anyone I care about. The harshness and criticism that runs through my internal dialogue is really shocking when I write it down. But I am also seeing moments of self-kindness emerging like little shoots of green in a barren landscape. I am learning to catch myself when I start the self-attack cycle and pause to ask what I actually need. Sometimes it is rest. Sometimes it is validation. Sometimes it is just permission to feel what I am feeling without judgment. This inner work is changing how I move through the world. I am becoming someone I actually like.",
+      "expected_response_tone": "self-relationship evolution, inner dialogue awareness"
+    },
+    {
+      "id": "trauma_integration_01",
+      "category": "trauma_processing",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 4,
+        "urgency": 0.65,
+        "dominant_organs": ["BOND", "NDAM", "SANS"],
+        "expected_nexus_type": "protective_nexus"
+      },
+      "user_input": "I had a flashback yesterday that completely overtook me. I was in the grocery store and I heard a sound that triggered me and suddenly I was not there anymore. My body went into full fight or flight mode and my mind was back in that traumatic moment as if no time had passed at all. I could feel my heart racing and I started sweating and shaking. It took me a while to realize I was safe and that was then not now. These episodes are happening less frequently but when they do happen they are still so intense. I feel ashamed that a simple sound can still have so much power over me. I thought I was further along in my healing than this. How long will my body keep reacting like this?",
+      "expected_response_tone": "flashback normalization, trauma processing support"
+    },
+    {
+      "id": "trauma_integration_02",
+      "category": "trauma_processing",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 3,
+        "urgency": 0.45,
+        "dominant_organs": ["BOND", "SANS", "WISDOM"],
+        "expected_nexus_type": "protective_nexus"
+      },
+      "user_input": "I am starting to understand how my childhood experiences shaped the way I relate to the world and myself. I learned early that it was not safe to have needs or to take up space. I became hypervigilant always scanning for danger and trying to be invisible to avoid punishment. Those survival strategies that helped me then are now getting in my way as an adult. I want to trust people but my body is constantly on alert for betrayal. I want to speak up for myself but my throat closes when I try. I know intellectually that I am safe now but my nervous system has not gotten the memo yet. I am working on updating these old programs but sometimes it feels like I am rewiring decades of conditioning. Is this normal?",
+      "expected_response_tone": "developmental trauma acknowledgment, rewiring support"
+    },
+    {
+      "id": "existential_meaning_01",
+      "category": "existential_inquiry",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 2,
+        "urgency": 0.25,
+        "dominant_organs": ["WISDOM", "AUTHENTICITY", "LISTENING"],
+        "expected_nexus_type": "paradox_nexus"
+      },
+      "user_input": "I have been thinking a lot about what gives my life meaning and purpose. I used to think it was about achieving things and being successful by conventional standards but that feels empty to me now. I am questioning everything I was taught about what a good life looks like. Maybe meaning is not about what I accomplish but about how I connect and who I become. Maybe it is about the small moments of kindness and presence rather than the big achievements. I am in this strange in between space where my old values do not fit anymore but I have not fully found my new ones yet. It is disorienting but also oddly freeing. I want to live more authentically but I am still figuring out what that means for me. What makes a life truly worthwhile?",
+      "expected_response_tone": "existential exploration support, values inquiry"
+    },
+    {
+      "id": "existential_meaning_02",
+      "category": "existential_inquiry",
+      "expected_signature": {
+        "polyvagal": "mixed_state",
+        "zone": 2,
+        "urgency": 0.3,
+        "dominant_organs": ["WISDOM", "LISTENING", "PRESENCE"],
+        "expected_nexus_type": "paradox_nexus"
+      },
+      "user_input": "I turned forty last week and it triggered this profound reflection on my life so far. I realized I have spent most of my years living on autopilot doing what was expected rather than what felt true. I have a good job and a nice house but I feel a deep restlessness like there is something essential missing. I keep asking myself is this all there is? Not in a depressed way but in a genuinely curious way. I want the second half of my life to be more intentional more aligned with my deeper values. But I do not even know what those values are anymore. I have been so busy surviving and achieving that I never stopped to ask what I actually want. How do I figure out what truly matters to me at this stage of life?",
+      "expected_response_tone": "midlife meaning exploration, authenticity inquiry"
+    },
+    {
+      "id": "anger_expression_01",
+      "category": "anger_processing",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 2,
+        "urgency": 0.6,
+        "dominant_organs": ["EO", "BOND", "AUTHENTICITY"],
+        "expected_nexus_type": "firefighter_nexus"
+      },
+      "user_input": "I am so angry right now and I do not know what to do with all this rage. My ex partner just announced they are getting remarried after telling me for years that they did not believe in marriage. I feel betrayed and furious. All those years I wanted that commitment and they said no and now they are giving it to someone else. Part of me wants to scream and throw things. Another part of me feels guilty for being angry because I should be over this by now. But the anger is here whether I want it or not. It feels like fire in my chest and I do not know how to let it out safely. I was taught that anger is bad and destructive but right now it feels like an appropriate response to being lied to. How do I honor this anger without letting it consume me?",
+      "expected_response_tone": "anger validation, healthy expression support"
+    },
+    {
+      "id": "anger_expression_02",
+      "category": "anger_processing",
+      "expected_signature": {
+        "polyvagal": "sympathetic",
+        "zone": 3,
+        "urgency": 0.55,
+        "dominant_organs": ["EO", "BOND", "WISDOM"],
+        "expected_nexus_type": "firefighter_nexus"
+      },
+      "user_input": "I realized I have been suppressing my anger my entire life because I was taught it was not ladylike to be angry. Good girls do not get mad they get understanding. So I swallowed my anger and it turned into depression and resentment and passive aggressive behavior. Now at forty five I am finally learning that anger is a valid emotion that deserves expression. I am angry at the patriarchy for teaching me to silence myself. I am angry at my parents for not letting me have the full range of human emotions. I am angry at myself for all the times I did not speak up when I should have. This anger feels powerful and scary at the same time. It has been buried so long it does not know how to come out properly. I need help learning how to be angry in healthy ways.",
+      "expected_response_tone": "suppressed anger acknowledgment, feminine rage validation"
+    },
+    {
+      "id": "hope_emergence_01",
+      "category": "hope_cultivation",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.0,
+        "dominant_organs": ["PRESENCE", "AUTHENTICITY", "EMPATHY"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "After years of feeling hopeless I am starting to see glimmers of possibility again. It started small. A moment of laughter with a friend. A sunset that took my breath away. A project at work that actually excited me. These little sparks are slowly rekindling something in me that I thought had died. I am not naive enough to think everything will be perfect but I am starting to believe that good things can happen again. Hope feels fragile right now like a tiny flame that could be blown out easily. But I am learning to protect it and nurture it. I am surrounding myself with people who believe in me even when I struggle to believe in myself. Maybe hope is not about being certain that things will work out. Maybe it is just about staying open to the possibility that they might.",
+      "expected_response_tone": "hope celebration, possibility acknowledgment"
+    },
+    {
+      "id": "hope_emergence_02",
+      "category": "hope_cultivation",
+      "expected_signature": {
+        "polyvagal": "ventral_vagal",
+        "zone": 1,
+        "urgency": 0.05,
+        "dominant_organs": ["PRESENCE", "WISDOM", "AUTHENTICITY"],
+        "expected_nexus_type": "innate_nexus"
+      },
+      "user_input": "I had a dream last night where I was planting seeds in a garden and something about it felt so meaningful. I woke up feeling like maybe my life is like that. I have been planting seeds of healing and growth even when I could not see any results. And now slowly things are starting to sprout. My relationship with my sister is improving. I got a promotion I did not think I deserved. I laughed genuinely for the first time in months. These are not huge dramatic changes but they matter. I am starting to trust the process even when it is slow. Maybe all that inner work is actually paying off in ways I am just beginning to see. I feel cautiously optimistic in a way that feels sustainable not manic. Is this what healing actually looks like?",
+      "expected_response_tone": "growth acknowledgment, sustainable hope validation"
+    }
+  ]
+}

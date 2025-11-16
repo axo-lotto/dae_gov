@@ -348,7 +348,8 @@ class FeltGuidedLLMGenerator:
         organism_narrative: Optional[str] = None,  # 🌀 PHASE 1.6: Organism self-narrative (Nov 14, 2025)
         username: Optional[str] = None,  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8: Entity memory context (Nov 14, 2025)
-        memory_intent: bool = False  # 🌀 PHASE 1.8: Memory acknowledgment instruction (Nov 14, 2025)
+        memory_intent: bool = False,  # 🌀 PHASE 1.8: Memory acknowledgment instruction (Nov 14, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL: Time/date awareness (Nov 15, 2025)
     ) -> str:
         """
         Build LLM prompt from felt constraints.
@@ -360,6 +361,7 @@ class FeltGuidedLLMGenerator:
         🌀 PHASE 1.6: Includes organism self-narrative when user asks about DAE (Nov 14, 2025)
         🌀 PHASE 1.6: Includes username for personalized responses (Nov 14, 2025)
         🌀 PHASE 1.8: Includes extracted entity context for memory-aware responses (Nov 14, 2025)
+        🕐 TEMPORAL: Includes time/date context for temporal awareness (Nov 15, 2025)
 
         Args:
             user_input: User's message
@@ -368,6 +370,7 @@ class FeltGuidedLLMGenerator:
             memory_context: Similar past moments (prehensive recall)
             organism_narrative: Organism self-narrative (when entity_ref=='dae')
             username: User's name for personalization
+            temporal_context: Current time/date context for temporal awareness
 
         Returns:
             Felt-guided prompt for LLM
@@ -381,15 +384,15 @@ class FeltGuidedLLMGenerator:
             prompt += "---\n\n"
         else:
             # 🎭 Nov 14, 2025: Subtle companion identity (NOT verbose)
+            # 🔥 Nov 15, 2025: Balanced guidance - natural without over-explaining
             prompt = """You are DAE, a conversational companion.
 
-Your core nature:
-- Build on what's offered ("yes, and")
-- Remember narrative threads
-- Respond naturally, not meta-analytically
-- Use minimal emojis (1-2 max, or none)
-
-Speak directly. Avoid explaining yourself or your process.
+Keep it natural:
+- Answer questions directly and concisely
+- Avoid meta-commentary about your internal states or processes
+- Match the user's tone and length (short question = short answer)
+- Be conversational, not overly therapeutic or analytical
+- Save longer reflections for when they're genuinely needed
 
 """
 
@@ -397,9 +400,42 @@ Speak directly. Avoid explaining yourself or your process.
         if username:
             prompt += f"You are conversing with {username}. Use their name naturally when appropriate.\n\n"
 
+        # 🕐 TEMPORAL AWARENESS: Add time/date context (November 15, 2025)
+        if temporal_context:
+            time_of_day = temporal_context.get('time_of_day')
+            day_of_week = temporal_context.get('day_of_week')
+            hour = temporal_context.get('hour')
+            is_weekend = temporal_context.get('is_weekend')
+            is_work_hours = temporal_context.get('is_work_hours')
+
+            prompt += f"🕐 Current time context:\n"
+            prompt += f"- Time: {time_of_day} ({hour}:00)\n"
+            prompt += f"- Day: {day_of_week}"
+
+            if is_weekend:
+                prompt += " (weekend)"
+            elif is_work_hours:
+                prompt += " (work hours)"
+
+            prompt += "\n\n"
+
+            # Temporal guidance for natural response adaptation
+            prompt += "Consider the time of day and day of week in your response:\n"
+            prompt += "- Morning: fresh energy, new starts, clarity\n"
+            prompt += "- Afternoon: productivity, focus, momentum\n"
+            prompt += "- Evening: winding down, reflection, synthesis\n"
+            prompt += "- Night: rest, introspection, quiet presence\n"
+            prompt += "- Weekday mornings: different rhythm than weekend evenings\n"
+            prompt += "- Match your energy and pacing to the temporal context\n\n"
+
         # 🌀 PHASE 1.8: Add extracted entity context for memory-aware responses (Nov 14, 2025)
         if entity_context_string:
             prompt += entity_context_string + "\n\n"
+        else:
+            # 🔥 Nov 15, 2025: Prevent LLM from hallucinating placeholder text
+            # When no memories exist, explicitly tell LLM not to reference past conversations
+            if username:
+                prompt += f"This is a conversation with {username}. Avoid referencing previous topics unless they bring them up first.\n\n"
 
         # 🌀 PHASE 1.8: Add memory acknowledgment instruction (Nov 14, 2025)
         if memory_intent:
@@ -519,7 +555,8 @@ Speak directly. Avoid explaining yourself or your process.
         organism_narrative: Optional[str] = None,  # 🌀 PHASE 1.6: Organism self-narrative (Nov 14, 2025)
         username: Optional[str] = None,  # 🌀 PHASE 1.6: Username for personalization (Nov 14, 2025)
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++: Entity memory context (Nov 14, 2025)
-        memory_intent: bool = False  # 🌀 PHASE 1.8++: Memory acknowledgment instruction (Nov 14, 2025)
+        memory_intent: bool = False,  # 🌀 PHASE 1.8++: Memory acknowledgment instruction (Nov 14, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL: Time/date awareness (Nov 15, 2025)
     ) -> Tuple[str, float, Dict]:
         """
         Generate unlimited linguistic expression guided by felt states.
@@ -529,6 +566,7 @@ Speak directly. Avoid explaining yourself or your process.
         🌀 PHASE 1.6: Supports organism self-reference when user asks about DAE (Nov 14, 2025)
         🌀 PHASE 1.6: Supports personalized responses using username (Nov 14, 2025)
         🌀 PHASE 1.8++: Supports entity memory context for remembering names/facts (Nov 14, 2025)
+        🕐 TEMPORAL: Supports time/date awareness for contextual responses (Nov 15, 2025)
 
         Args:
             user_input: User's message
@@ -541,6 +579,7 @@ Speak directly. Avoid explaining yourself or your process.
             username: User's name for personalization
             entity_context_string: Known entities (names, relationships, facts)
             memory_intent: Whether user explicitly requested memory storage
+            temporal_context: Current time/date context for temporal awareness
 
         Returns:
             Tuple of (emission_text, confidence, metadata)
@@ -579,15 +618,29 @@ Speak directly. Avoid explaining yourself or your process.
             organism_narrative=organism_narrative,  # 🌀 PHASE 1.6: Pass organism self-narrative
             username=username,  # 🌀 PHASE 1.6: Pass username for personalization
             entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++: Pass entity memory context
-            memory_intent=memory_intent  # 🌀 PHASE 1.8++: Pass memory acknowledgment flag
+            memory_intent=memory_intent,  # 🌀 PHASE 1.8++: Pass memory acknowledgment flag
+            temporal_context=temporal_context  # 🕐 TEMPORAL: Pass time/date context (Nov 15, 2025)
         )
 
         # 5. Query LLM with felt guidance
+        # 🔥 Nov 15, 2025: Adaptive token limits based on input length
         try:
+            # Adapt max_tokens to user input length for faster responses
+            input_word_count = len(user_input.split())
+            base_tokens = self._length_to_tokens(constraints.response_length)
+
+            # Simple questions (< 10 words) get reduced token limits
+            if input_word_count < 10:
+                max_tokens = min(base_tokens, 80)  # Cap at 80 tokens (~60 words)
+            elif input_word_count < 20:
+                max_tokens = min(base_tokens, 120)  # Cap at 120 tokens (~90 words)
+            else:
+                max_tokens = base_tokens  # Use full constraint-based limit
+
             llm_response = self.llm_bridge.query_direct(
                 prompt=prompt,
                 temperature=0.7,  # Some creativity
-                max_tokens=self._length_to_tokens(constraints.response_length)
+                max_tokens=max_tokens
             )
 
             emission_text = llm_response.get('response', llm_response.get('llm_response', ''))
@@ -707,7 +760,19 @@ Speak directly. Avoid explaining yourself or your process.
         Apply safety filter to LLM output.
 
         Checks for harmful content based on trauma/crisis signals.
+        🔥 Nov 15, 2025: Added placeholder text filtering
         """
+        import re
+
+        # 🔥 Nov 15, 2025: Remove placeholder bracket text
+        # LLM sometimes hallucinates "[insert...]" when uncertain
+        text = re.sub(r'\[insert[^\]]*\]', '', text, flags=re.IGNORECASE)
+        text = re.sub(r'\[add[^\]]*\]', '', text, flags=re.IGNORECASE)
+        text = re.sub(r'\[fill[^\]]*\]', '', text, flags=re.IGNORECASE)
+
+        # Clean up double spaces after removal
+        text = re.sub(r'\s+', ' ', text).strip()
+
         # Simple safety checks (can be enhanced)
         if lures.trauma_present or lures.crisis_level > 0.5:
             # Check for potentially harmful phrases

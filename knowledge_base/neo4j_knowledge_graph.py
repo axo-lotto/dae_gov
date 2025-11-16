@@ -16,6 +16,7 @@ Status: Phase 2.2 - Neo4j Implementation
 """
 
 import json
+import os
 from typing import List, Dict, Optional, Tuple
 from dataclasses import dataclass, asdict
 from pathlib import Path
@@ -25,6 +26,13 @@ try:
 except ImportError:
     print("⚠️  Neo4j driver not installed. Install with: pip install neo4j")
     GraphDatabase = None
+
+# Load environment variables from .env file if available
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass  # python-dotenv not installed, will use os.getenv with defaults
 
 
 @dataclass
@@ -73,35 +81,40 @@ class Neo4jKnowledgeGraph:
     - Temporal relationship tracking
     """
 
-    def __init__(self, uri: str = "bolt://localhost:7687",
-                 user: str = "neo4j",
-                 password: str = "password",
-                 database: str = "neo4j"):
+    def __init__(self, uri: str = None,
+                 user: str = None,
+                 password: str = None,
+                 database: str = None):
         """
         Initialize Neo4j knowledge graph.
 
+        Reads credentials from environment variables (.env file) if not provided.
+        Supports both local (bolt://) and cloud (neo4j+s://) connections.
+
         Args:
-            uri: Neo4j bolt URI
-            user: Database user
-            password: Database password
-            database: Database name
+            uri: Neo4j URI (defaults to NEO4J_URI env var or bolt://localhost:7687)
+            user: Database user (defaults to NEO4J_USERNAME env var or 'neo4j')
+            password: Database password (defaults to NEO4J_PASSWORD env var or 'password')
+            database: Database name (defaults to NEO4J_DATABASE env var or 'neo4j')
         """
         if GraphDatabase is None:
             raise ImportError("Neo4j driver not installed. Run: pip install neo4j")
 
-        self.uri = uri
-        self.user = user
-        self.database = database
+        # Read from environment variables with fallbacks
+        self.uri = uri or os.getenv('NEO4J_URI', 'bolt://localhost:7687')
+        self.user = user or os.getenv('NEO4J_USERNAME', 'neo4j')
+        password = password or os.getenv('NEO4J_PASSWORD', 'password')
+        self.database = database or os.getenv('NEO4J_DATABASE', 'neo4j')
 
         try:
-            self.driver = GraphDatabase.driver(uri, auth=(user, password))
+            self.driver = GraphDatabase.driver(self.uri, auth=(self.user, password))
             # Test connection
-            with self.driver.session(database=database) as session:
+            with self.driver.session(database=self.database) as session:
                 result = session.run("RETURN 1 as test")
                 result.single()
             print(f"✅ Neo4j Knowledge Graph connected")
-            print(f"   URI: {uri}")
-            print(f"   Database: {database}")
+            print(f"   URI: {self.uri}")
+            print(f"   Database: {self.database}")
         except Exception as e:
             print(f"⚠️  Could not connect to Neo4j: {e}")
             print("   Run Neo4j locally or use Neo4j Aura (cloud)")
@@ -312,7 +325,8 @@ class Neo4jKnowledgeGraph:
                       entity_type: str,  # 'Person', 'Place', 'Preference', 'Fact'
                       entity_value: str,
                       user_id: str,
-                      properties: Optional[Dict] = None) -> bool:
+                      properties: Optional[Dict] = None,
+                      temporal_context: Optional[Dict] = None) -> bool:  # 🕐 TEMPORAL (Nov 15, 2025)
         """
         Create an entity node in the graph.
 
@@ -321,6 +335,7 @@ class Neo4jKnowledgeGraph:
             entity_value: The entity value (e.g., name, location, preference)
             user_id: User ID who mentioned this entity
             properties: Additional properties (polyvagal_state, urgency_level, etc.)
+            temporal_context: Current time/date context (Nov 15, 2025)
 
         Returns:
             True if successful, False otherwise
@@ -347,24 +362,50 @@ class Neo4jKnowledgeGraph:
         if 'mention_count' not in props:
             props['mention_count'] = 1
 
+        # 🕐 TEMPORAL AWARENESS: Add temporal context properties (November 15, 2025)
+        if temporal_context:
+            if 'time_of_day_first' not in props:
+                props['time_of_day_first'] = temporal_context.get('time_of_day')
+            if 'day_of_week_first' not in props:
+                props['day_of_week_first'] = temporal_context.get('day_of_week')
+            # Always update last mentioned temporal context
+            props['time_of_day_last'] = temporal_context.get('time_of_day')
+            props['day_of_week_last'] = temporal_context.get('day_of_week')
+
+        # Build ON MATCH SET clause dynamically based on temporal context
+        on_match_updates = [
+            "e.last_mentioned = $last_mentioned",
+            "e.mention_count = coalesce(e.mention_count, 0) + 1"
+        ]
+
+        # 🕐 TEMPORAL: Add temporal property updates on match
+        if temporal_context:
+            on_match_updates.append("e.time_of_day_last = $time_of_day_last")
+            on_match_updates.append("e.day_of_week_last = $day_of_week_last")
+
         query = f"""
         MERGE (e:{entity_type} {{entity_value: $entity_value, user_id: $user_id}})
         ON CREATE SET e += $properties
         ON MATCH SET
-            e.last_mentioned = $last_mentioned,
-            e.mention_count = coalesce(e.mention_count, 0) + 1
+            {', '.join(on_match_updates)}
         RETURN e
         """
 
         try:
             with self.driver.session(database=self.database) as session:
-                session.run(
-                    query,
-                    entity_value=entity_value,
-                    user_id=user_id,
-                    properties=props,
-                    last_mentioned=datetime.now().isoformat()
-                )
+                params = {
+                    'entity_value': entity_value,
+                    'user_id': user_id,
+                    'properties': props,
+                    'last_mentioned': datetime.now().isoformat()
+                }
+
+                # 🕐 TEMPORAL: Add temporal parameters if available
+                if temporal_context:
+                    params['time_of_day_last'] = temporal_context.get('time_of_day')
+                    params['day_of_week_last'] = temporal_context.get('day_of_week')
+
+                session.run(query, **params)
             return True
         except Exception as e:
             print(f"⚠️  Error creating entity {entity_type}/{entity_value}: {e}")

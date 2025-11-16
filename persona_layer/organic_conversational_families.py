@@ -278,6 +278,10 @@ class OrganicConversationalFamilies:
         """
         timestamp = datetime.now().isoformat()
 
+        # ✅ FIX (Nov 15, 2025): Ensure signature is NumPy array (may be passed as list)
+        if isinstance(signature, list):
+            signature = np.array(signature)
+
         # Edge case: No families yet → create first family
         if not self.families:
             return self._create_family(
@@ -288,36 +292,42 @@ class OrganicConversationalFamilies:
                 timestamp=timestamp
             )
 
-        # Compute cosine similarity to all family centroids
-        similarities = {}
+        # 🆕 CRITICAL FIX (Nov 16, 2025): Switch to EUCLIDEAN DISTANCE
+        # Cosine similarity on L2-normalized vectors collapses magnitude information.
+        # Euclidean distance preserves magnitude (crisis=high values, safety=low values)
+        # From test_non_normalized_signatures.py: Crisis vs Safety = 3.72 (well separated!)
+        # vs Cosine similarity = 0.87 (too similar after normalization)
+        distances = {}
         for fam_id, family in self.families.items():
-            # Cosine similarity: dot product of L2-normalized vectors
-            similarity = np.dot(signature, family.centroid)
-            similarities[fam_id] = similarity
+            # Euclidean distance: preserves magnitude information
+            distance = np.linalg.norm(signature - family.centroid)
+            distances[fam_id] = distance
 
-        # Find best matching family
-        best_family_id = max(similarities, key=similarities.get)
-        best_similarity = similarities[best_family_id]
+        # Find CLOSEST matching family (minimum distance)
+        best_family_id = min(distances, key=distances.get)
+        best_distance = distances[best_family_id]
 
-        # 🆕 Adaptive threshold (Nov 15, 2025 - DAE 3.0 legacy integration)
-        # Encourage family diversity when few families exist
-        adaptive_threshold = self._get_adaptive_threshold()
+        # 🆕 Adaptive distance threshold (Nov 16, 2025 - FFITTSS T4 integration)
+        # Lower distance = more similar (inverse of similarity threshold)
+        adaptive_threshold = self._get_adaptive_distance_threshold()
 
         # DECISION: Assign to existing family OR create new
-        if best_similarity >= adaptive_threshold:
-            # HIGH SIMILARITY → Join existing family
+        if best_distance <= adaptive_threshold:
+            # LOW DISTANCE → Join existing family (close in felt-state space)
+            # Convert distance to similarity score for backward compatibility
+            similarity_score = 1.0 / (1.0 + best_distance)  # Maps [0, inf) to (0, 1]
             return self._add_to_family(
                 family_id=best_family_id,
                 conversation_id=conversation_id,
                 signature=signature,
                 satisfaction_score=satisfaction_score,
                 organ_contributions=organ_contributions,
-                similarity_score=best_similarity,
+                similarity_score=similarity_score,
                 timestamp=timestamp
             )
         else:
-            # LOW SIMILARITY → Create NEW family (novel pattern discovered!)
-            print(f"🆕 NOVEL PATTERN DETECTED (similarity={best_similarity:.3f} < {self.similarity_threshold})")
+            # HIGH DISTANCE → Create NEW family (novel pattern discovered!)
+            print(f"🆕 NOVEL PATTERN DETECTED (distance={best_distance:.3f} > {adaptive_threshold:.3f})")
             return self._create_family(
                 conversation_id=conversation_id,
                 signature=signature,
@@ -339,13 +349,21 @@ class OrganicConversationalFamilies:
         """Add conversation to existing family with EMA centroid update."""
         family = self.families[family_id]
 
+        # ✅ FIX (Nov 15, 2025): Ensure signature is NumPy array (may be passed as list)
+        if isinstance(signature, list):
+            signature = np.array(signature)
+
         # EMA update centroid: new = (1-α) * old + α * observed
         family.centroid = (1 - self.ema_alpha) * family.centroid + self.ema_alpha * signature
 
-        # Re-normalize centroid (maintain L2 norm = 1.0)
-        norm = np.linalg.norm(family.centroid)
-        if norm > 1e-6:
-            family.centroid = family.centroid / norm
+        # 🆕 CRITICAL FIX (Nov 16, 2025): Do NOT re-normalize centroid!
+        # We're using Euclidean distance now, so magnitude matters.
+        # Re-normalizing destroys the magnitude information we want to preserve.
+        # OLD: Re-normalize centroid (maintain L2 norm = 1.0)
+        # NEW: Keep raw magnitude (crisis families have high values, safety families have low values)
+        # norm = np.linalg.norm(family.centroid)
+        # if norm > 1e-6:
+        #     family.centroid = family.centroid / norm
 
         # Add member (deduplicate to prevent repeated epochs from inflating count)
         if conversation_id not in family.member_conversations:
@@ -412,26 +430,77 @@ class OrganicConversationalFamilies:
         """
         Compute adaptive similarity threshold based on current family count.
 
+        DEPRECATED: This method is kept for backward compatibility.
+        Use _get_adaptive_distance_threshold() instead for Euclidean distance.
+
         Strategy (DAE 3.0 inspired):
         - Few families (< 10): Lower threshold → encourage diversity
         - Medium families (10-25): Base threshold → balanced growth
         - Many families (> 25): Higher threshold → consolidation
 
+        CRITICAL FIX (Nov 16, 2025): Increased all thresholds to force family separation.
+        Previous thresholds [0.55, 0.65, 0.75] resulted in single-family clustering because
+        L2-normalized 57D signatures have high cosine similarity even for different felt-states.
+        New thresholds [0.70, 0.80, 0.90] require more distinct signatures for same-family assignment.
+
         Returns:
-            Adaptive threshold [0.55, 0.70]
+            Adaptive threshold [0.70, 0.90]
         """
         current_families = len(self.families)
         target_families = 25  # DAE 3.0 achieved 37, target ~25 for conversational
 
         if current_families < target_families // 3:  # < 8 families
-            # Aggressive exploration phase
-            threshold = max(0.55, self.similarity_threshold - 0.10)
+            # Aggressive exploration phase - STILL STRICT to force family creation
+            threshold = 0.70  # Was 0.55 - too permissive
         elif current_families < target_families:  # 8-24 families
             # Balanced growth phase
-            threshold = self.similarity_threshold  # Use base threshold (0.65)
+            threshold = 0.80  # Was 0.65 - too permissive
         else:  # ≥ 25 families
             # Consolidation phase
-            threshold = min(0.75, self.similarity_threshold + 0.10)
+            threshold = 0.90  # Was 0.75 - consolidate only very similar patterns
+
+        return threshold
+
+    def _get_adaptive_distance_threshold(self) -> float:
+        """
+        Compute adaptive DISTANCE threshold based on current family count.
+
+        🆕 Nov 16, 2025: FFITTSS T4 Integration - Euclidean Distance Approach
+
+        Critical Insight from test_non_normalized_signatures.py:
+        - Raw Euclidean distances show MUCH better separation than cosine similarity
+        - Crisis vs Safety: 3.72 (excellent separation!)
+        - Crisis vs Ambivalence: 1.52 (closer, as expected)
+        - Mean distance: 2.66, Std: 0.71
+
+        Strategy (inverse of similarity threshold):
+        - Few families (< 8): Higher distance threshold → more permissive (create families)
+        - Medium families (8-24): Moderate threshold → balanced growth
+        - Many families (25+): Lower threshold → consolidation (join existing)
+
+        Distance thresholds based on synthetic data:
+        - distance > 2.0: Create new family (very different felt-state)
+        - distance 1.0-2.0: Context-dependent (might join or create)
+        - distance < 1.0: Join existing family (similar felt-state)
+
+        Returns:
+            Adaptive distance threshold [1.0, 2.5]
+        """
+        current_families = len(self.families)
+        target_families = 25  # Zipf's law target
+
+        if current_families < target_families // 3:  # < 8 families
+            # Aggressive exploration: Create family if distance > 1.5
+            # This encourages family creation for novel patterns
+            threshold = 1.5
+        elif current_families < target_families:  # 8-24 families
+            # Balanced growth: Create family if distance > 2.0
+            # More selective, but still discovering new patterns
+            threshold = 2.0
+        else:  # ≥ 25 families
+            # Consolidation: Create family if distance > 2.5
+            # Only create for very distinct patterns
+            threshold = 2.5
 
         return threshold
 
@@ -446,6 +515,10 @@ class OrganicConversationalFamilies:
         """Create new family (novel pattern discovered)."""
         family_id = f"Family_{self.next_family_id:03d}"
         self.next_family_id += 1
+
+        # ✅ FIX (Nov 15, 2025): Ensure signature is NumPy array (may be passed as list)
+        if isinstance(signature, list):
+            signature = np.array(signature)
 
         # Initialize family with first member
         family = ConversationalFamily(

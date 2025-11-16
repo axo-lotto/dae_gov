@@ -1,0 +1,24 @@
+{
+  "satisfaction_variance": 0.006357411591777501,
+  "satisfaction_mean": 0.8380146950795192,
+  "satisfaction_std": 0.07973337815355311,
+  "modulation_variance": 0.006357411591777501,
+  "raw_vs_modulated_diff": 0.039905461670453314,
+  "phase_distribution": {
+    "CONCRESCENCE": 1.0
+  },
+  "field_coherence_mean": 0.6400193412736587,
+  "field_coherence_std": 0.016662639300685015,
+  "field_coherence_min": 0.6061192991447168,
+  "field_coherence_max": 0.6693765917125061,
+  "kairos_detection_rate": 0.7857142857142857,
+  "kairos_count": 55,
+  "nexus_formation_rate": 0.4,
+  "mean_nexus_count": 1.2,
+  "max_nexus_count": 4,
+  "organic_emission_rate": 0.0,
+  "organic_count": 0,
+  "llm_count": 10,
+  "mean_convergence_cycles": 2.3,
+  "mean_v0_energy": 0.32551772306732596
+}

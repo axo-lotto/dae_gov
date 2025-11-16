@@ -1,0 +1,540 @@
+{
+  "start_time": "2025-11-16T07:52:04.336185",
+  "epochs": [
+    {
+      "epoch": 1,
+      "timestamp": "2025-11-16T07:52:06.003533",
+      "inputs_processed": 0,
+      "processing_results": [],
+      "organ_participation": {
+        "LISTENING": {
+          "mean_coherence": 0.2813319530710835,
+          "std_coherence": 0.3984991437078969,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9000000000000001,
+          "range": 0.9000000000000001
+        },
+        "EMPATHY": {
+          "mean_coherence": 0.3023809523809524,
+          "std_coherence": 0.4280287569545362,
+          "min_coherence": 0.0,
+          "max_coherence": 0.95,
+          "range": 0.95
+        },
+        "WISDOM": {
+          "mean_coherence": 0.12380952380952381,
+          "std_coherence": 0.30340097922553144,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9,
+          "range": 0.9
+        },
+        "AUTHENTICITY": {
+          "mean_coherence": 0.042857142857142864,
+          "std_coherence": 0.19166296949998202,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9000000000000001,
+          "range": 0.9000000000000001
+        },
+        "PRESENCE": {
+          "mean_coherence": 0.5284471701686084,
+          "std_coherence": 0.414746450996718,
+          "min_coherence": 0.0,
+          "max_coherence": 0.8758620689655171,
+          "range": 0.8758620689655171
+        },
+        "BOND": {
+          "mean_coherence": 0.5238095238095238,
+          "std_coherence": 0.49943278484292924,
+          "min_coherence": 0.0,
+          "max_coherence": 1.0,
+          "range": 1.0
+        },
+        "SANS": {
+          "mean_coherence": 1.0,
+          "std_coherence": 0.0,
+          "min_coherence": 1.0,
+          "max_coherence": 1.0,
+          "range": 0.0
+        },
+        "NDAM": {
+          "mean_coherence": 0.043738095238095236,
+          "std_coherence": 0.1350469110286587,
+          "min_coherence": 0.0,
+          "max_coherence": 0.48516666666666663,
+          "range": 0.48516666666666663
+        },
+        "RNX": {
+          "mean_coherence": 0.4801587301587301,
+          "std_coherence": 0.06249212598422073,
+          "min_coherence": 0.25,
+          "max_coherence": 0.5,
+          "range": 0.25
+        },
+        "EO": {
+          "mean_coherence": 0.5859788359788359,
+          "std_coherence": 0.17308088596173743,
+          "min_coherence": 0.5,
+          "max_coherence": 1.0,
+          "range": 0.5
+        }
+      },
+      "signature_stats": {},
+      "transformation_patterns": {
+        "polyvagal_accuracy": 0.0,
+        "zone_accuracy": 0.0,
+        "mean_urgency_error": 0.0,
+        "std_urgency_error": 0.0
+      }
+    },
+    {
+      "epoch": 2,
+      "timestamp": "2025-11-16T07:53:56.102064",
+      "inputs_processed": 0,
+      "processing_results": [],
+      "organ_participation": {
+        "LISTENING": {
+          "mean_coherence": 0.2813319530710835,
+          "std_coherence": 0.3984991437078969,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9000000000000001,
+          "range": 0.9000000000000001
+        },
+        "EMPATHY": {
+          "mean_coherence": 0.3023809523809524,
+          "std_coherence": 0.4280287569545362,
+          "min_coherence": 0.0,
+          "max_coherence": 0.95,
+          "range": 0.95
+        },
+        "WISDOM": {
+          "mean_coherence": 0.12380952380952381,
+          "std_coherence": 0.30340097922553144,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9,
+          "range": 0.9
+        },
+        "AUTHENTICITY": {
+          "mean_coherence": 0.042857142857142864,
+          "std_coherence": 0.19166296949998202,
+          "min_coherence": 0.0,
+          "max_coherence": 0.9000000000000001,
+          "range": 0.9000000000000001
+        },
+        "PRESENCE": {
+          "mean_coherence": 0.5284471701686084,
+          "std_coherence": 0.414746450996718,
+          "min_coherence": 0.0,
+          "max_coherence": 0.8758620689655171,
+          "range": 0.8758620689655171
+        },
+        "BOND": {
+          "mean_coherence": 0.5238095238095238,
+          "std_coherence": 0.49943278484292924,
+          "min_coherence": 0.0,
+          "max_coherence": 1.0,
+          "range": 1.0
+        },
+        "SANS": {
+          "mean_coherence": 1.0,
+          "std_coherence": 0.0,
+          "min_coherence": 1.0,
+          "max_coherence": 1.0,
+          "range": 0.0
+        },
+        "NDAM": {
+          "mean_coherence": 0.043738095238095236,
+          "std_coherence": 0.1350469110286587,
+          "min_coherence": 0.0,
+          "max_coherence": 0.48516666666666663,
+          "range": 0.48516666666666663
+        },
+        "RNX": {
+          "mean_coherence": 0.4801587301587301,
+          "std_coherence": 0.06249212598422073,
+          "min_coherence": 0.25,
+          "max_coherence": 0.5,
+          "range": 0.25
+        },
+        "EO": {
+          "mean_coherence": 0.5859788359788359,
+          "std_coherence": 0.17308088596173743,
+          "min_coherence": 0.5,
+          "max_coherence": 1.0,
+          "range": 0.5
+        }
+      },
+      "signature_stats": {},
+      "transformation_patterns": {
+        "polyvagal_accuracy": 0.0,
+        "zone_accuracy": 0.0,
+        "mean_urgency_error": 0.0,
+        "std_urgency_error": 0.0
+      }
+    }
+  ],
+  "pre_assessment": {
+    "timestamp": "2025-11-16T07:52:06.002871",
+    "families": {
+      "total_families": 0,
+      "mature_families": 0,
+      "total_conversations": 0,
+      "family_sizes": [],
+      "centroid_dimensions": [],
+      "family_details": {}
+    },
+    "r_matrix": {
+      "mean": 0.0,
+      "std": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "total_updates": 0
+    },
+    "organ_confidence": {
+      "mean_confidence": 0.5,
+      "std_confidence": 0.0,
+      "mean_weight": 1.0,
+      "std_weight": 0.0,
+      "organ_details": {
+        "LISTENING": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "EMPATHY": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "WISDOM": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "AUTHENTICITY": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "PRESENCE": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "BOND": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "SANS": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "NDAM": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "RNX": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "EO": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "CARD": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        },
+        "NEXUS": {
+          "confidence": 0.5,
+          "weight": 1.0,
+          "success_rate": 0.0,
+          "total_participations": 0
+        }
+      }
+    }
+  },
+  "post_assessment": null,
+  "learning_trajectory": [
+    {
+      "epoch": 1,
+      "timestamp": "2025-11-16T07:53:56.100956",
+      "families": {
+        "total_families": 1,
+        "mature_families": 1,
+        "total_conversations": 21,
+        "family_sizes": [
+          21
+        ],
+        "centroid_dimensions": [
+          57
+        ],
+        "family_details": {
+          "Family_001": {
+            "members": 21,
+            "dimensions": 57,
+            "mean_satisfaction": 0.33065222673396005
+          }
+        }
+      },
+      "r_matrix": {
+        "mean": 0.014023797268880828,
+        "std": 0.013628203908782577,
+        "max": 0.050225616156140775,
+        "min": 0.0,
+        "total_updates": 1155
+      },
+      "organ_confidence": {
+        "mean_confidence": 0.9452905054342439,
+        "std_confidence": 0.0,
+        "mean_weight": 1.1781162021736975,
+        "std_weight": 0.0,
+        "organ_details": {
+          "LISTENING": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "EMPATHY": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "WISDOM": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "AUTHENTICITY": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "PRESENCE": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "BOND": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "SANS": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "NDAM": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "RNX": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "EO": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "CARD": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          },
+          "NEXUS": {
+            "confidence": 0.9452905054342439,
+            "weight": 1.1781162021736975,
+            "success_rate": 1.0,
+            "total_participations": 21
+          }
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "timestamp": "2025-11-16T07:55:54.509702",
+      "families": {
+        "total_families": 1,
+        "mature_families": 1,
+        "total_conversations": 42,
+        "family_sizes": [
+          42
+        ],
+        "centroid_dimensions": [
+          57
+        ],
+        "family_details": {
+          "Family_001": {
+            "members": 42,
+            "dimensions": 57,
+            "mean_satisfaction": 0.33065222673395994
+          }
+        }
+      },
+      "r_matrix": {
+        "mean": 0.027665199706143628,
+        "std": 0.026684272698454917,
+        "max": 0.09792861979401755,
+        "min": 0.0,
+        "total_updates": 2310
+      },
+      "organ_confidence": {
+        "mean_confidence": 0.9940137424087188,
+        "std_confidence": 2.220446049250313e-16,
+        "mean_weight": 1.197605496963488,
+        "std_weight": 2.220446049250313e-16,
+        "organ_details": {
+          "LISTENING": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "EMPATHY": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "WISDOM": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "AUTHENTICITY": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "PRESENCE": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "BOND": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "SANS": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "NDAM": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "RNX": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "EO": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "CARD": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          },
+          "NEXUS": {
+            "confidence": 0.994013742408719,
+            "weight": 1.1976054969634877,
+            "success_rate": 1.0,
+            "total_participations": 42
+          }
+        }
+      }
+    }
+  ],
+  "rnx_metrics": [
+    {
+      "epoch": 1,
+      "rnx_mean_coherence": 0.4801587301587301,
+      "rnx_coherence_range": 0.25,
+      "overall_organ_discrimination": 0.6761028735632184,
+      "active_organs": 9,
+      "total_organs": 10
+    },
+    {
+      "epoch": 2,
+      "rnx_mean_coherence": 0.4801587301587301,
+      "rnx_coherence_range": 0.25,
+      "overall_organ_discrimination": 0.6761028735632184,
+      "active_organs": 9,
+      "total_organs": 10
+    }
+  ],
+  "tsk_validation": [
+    {
+      "epoch": 1,
+      "total_inputs": 0,
+      "valid_polyvagal": 0,
+      "valid_zone": 0,
+      "valid_urgency": 0,
+      "families_formed": 0,
+      "tsk_recording_success": 0,
+      "polyvagal_valid_rate": 0.0,
+      "zone_valid_rate": 0.0,
+      "urgency_valid_rate": 0.0,
+      "tsk_recording_rate": 0.0
+    },
+    {
+      "epoch": 2,
+      "total_inputs": 0,
+      "valid_polyvagal": 0,
+      "valid_zone": 0,
+      "valid_urgency": 0,
+      "families_formed": 0,
+      "tsk_recording_success": 0,
+      "polyvagal_valid_rate": 0.0,
+      "zone_valid_rate": 0.0,
+      "urgency_valid_rate": 0.0,
+      "tsk_recording_rate": 0.0
+    }
+  ]
+}

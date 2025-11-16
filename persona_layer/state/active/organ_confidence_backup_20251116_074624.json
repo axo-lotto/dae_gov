@@ -1,0 +1,138 @@
+{
+  "organ_metrics": {
+    "LISTENING": {
+      "organ_name": "LISTENING",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428743",
+      "first_seen": "2025-11-15T19:25:47.178298"
+    },
+    "EMPATHY": {
+      "organ_name": "EMPATHY",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428753",
+      "first_seen": "2025-11-15T19:25:47.178322"
+    },
+    "WISDOM": {
+      "organ_name": "WISDOM",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428759",
+      "first_seen": "2025-11-15T19:25:47.178331"
+    },
+    "AUTHENTICITY": {
+      "organ_name": "AUTHENTICITY",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428765",
+      "first_seen": "2025-11-15T19:25:47.178338"
+    },
+    "PRESENCE": {
+      "organ_name": "PRESENCE",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428771",
+      "first_seen": "2025-11-15T19:25:47.178345"
+    },
+    "BOND": {
+      "organ_name": "BOND",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428776",
+      "first_seen": "2025-11-15T19:25:47.178352"
+    },
+    "SANS": {
+      "organ_name": "SANS",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428781",
+      "first_seen": "2025-11-15T19:25:47.178366"
+    },
+    "NDAM": {
+      "organ_name": "NDAM",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428787",
+      "first_seen": "2025-11-15T19:25:47.178373"
+    },
+    "RNX": {
+      "organ_name": "RNX",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428792",
+      "first_seen": "2025-11-15T19:25:47.178380"
+    },
+    "EO": {
+      "organ_name": "EO",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428797",
+      "first_seen": "2025-11-15T19:25:47.178386"
+    },
+    "NEXUS": {
+      "organ_name": "NEXUS",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428802",
+      "first_seen": "2025-11-15T19:25:47.178393"
+    },
+    "CARD": {
+      "organ_name": "CARD",
+      "confidence": 0.9999999999999994,
+      "success_count": 789,
+      "failure_count": 80,
+      "total_participations": 869,
+      "success_rate": 0.9079401611047181,
+      "weight_multiplier": 1.1999999999999997,
+      "last_updated": "2025-11-16T07:35:54.428807",
+      "first_seen": "2025-11-15T19:25:47.178400"
+    }
+  },
+  "last_updated": "2025-11-16T07:35:54.429172",
+  "total_organs": 12
+}

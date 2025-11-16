@@ -1,0 +1,80 @@
+{
+  "current_epoch": 1,
+  "total_epochs": 3,
+  "epoch_history": [
+    {
+      "epoch_id": 1,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:25:17.439925",
+      "duration": 30.510266065597534,
+      "families_discovered_this_epoch": 0
+    },
+    {
+      "epoch_id": 1,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:25:38.653385",
+      "duration": 21.213084936141968,
+      "families_discovered_this_epoch": 0
+    },
+    {
+      "epoch_id": 2,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:25:57.285621",
+      "duration": 18.631157875061035,
+      "families_discovered_this_epoch": 0
+    },
+    {
+      "epoch_id": 3,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:26:14.613029",
+      "duration": 17.326287984848022,
+      "families_discovered_this_epoch": 0
+    },
+    {
+      "epoch_id": 1,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:28:02.985257",
+      "duration": 31.173484802246094,
+      "families_discovered_this_epoch": 0
+    },
+    {
+      "epoch_id": 1,
+      "total_conversations": 5,
+      "mean_confidence": 0.0,
+      "mean_v0_final": 1.0,
+      "mean_satisfaction": 0.3002374892032762,
+      "families_assigned_count": 0,
+      "unique_families_this_epoch": 0,
+      "timestamp": "2025-11-15T22:28:26.232056",
+      "duration": 23.245512008666992,
+      "families_discovered_this_epoch": 0
+    }
+  ],
+  "total_conversations": 30,
+  "last_updated": "2025-11-15T22:28:26.232094"
+}

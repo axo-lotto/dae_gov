@@ -66,14 +66,20 @@ class MetaAtomActivator:
     def activate_meta_atoms(
         self,
         organ_results: Dict,
-        verbose: bool = False
+        verbose: bool = False,
+        field_coherence: float = 0.0
     ) -> List[MetaAtomActivation]:
         """
         Activate meta-atoms based on organ results.
 
+        Phase 2 Integration (Nov 15, 2025):
+        Now accepts field_coherence to modulate nexus formation thresholds.
+        High field coherence = organs "listening" to each other = easier nexus formation.
+
         Args:
             organ_results: Dict[organ_name, organ_result] with atom_activations
             verbose: Print activation details
+            field_coherence: Cross-organ prehensive field coherence [0.0, 1.0]
 
         Returns:
             List of MetaAtomActivation objects (sorted by confidence)
@@ -85,7 +91,8 @@ class MetaAtomActivator:
                 meta_atom_name,
                 rule,
                 organ_results,
-                verbose
+                verbose,
+                field_coherence=field_coherence
             )
 
             if activation:
@@ -106,16 +113,22 @@ class MetaAtomActivator:
         meta_atom_name: str,
         rule: Dict,
         organ_results: Dict,
-        verbose: bool
+        verbose: bool,
+        field_coherence: float = 0.0
     ) -> Optional[MetaAtomActivation]:
         """
         Check if a specific meta-atom should activate.
+
+        Phase 2 Integration (Nov 15, 2025):
+        Adjusts minimum_organs threshold based on field coherence.
+        High coherence → easier nexus formation (lower threshold).
 
         Args:
             meta_atom_name: Name of meta-atom to check
             rule: Activation rule configuration
             organ_results: Organ processing results
             verbose: Print details
+            field_coherence: Cross-organ prehensive field coherence [0.0, 1.0]
 
         Returns:
             MetaAtomActivation if activated, None otherwise
@@ -123,6 +136,26 @@ class MetaAtomActivator:
         participating_organs_list = rule.get('participating_organs', [])
         activation_conditions = rule.get('activation_conditions', {})
         minimum_organs = rule.get('minimum_organs', 2)
+
+        # 🌀 Phase 2 (Nov 15, 2025): Modulate minimum_organs based on DAE 3.0 coherence thresholds
+        # Use empirically validated thresholds from DAE 3.0 (r=0.82 correlation with success)
+        #
+        # DAE 3.0 Coherence Thresholds:
+        # - coherence ≥ 0.70: 82% success rate, 34% perfect rate → AGGRESSIVE nexus formation
+        # - coherence 0.50-0.70: 61% success rate, 18% perfect rate → MODERATE nexus formation
+        # - coherence < 0.50: 29% success rate, 7% perfect rate → CONSERVATIVE (no reduction)
+        if field_coherence >= 0.70:
+            # High coherence (82% success) - aggressive nexus formation
+            reduction_factor = 0.6  # 40% threshold reduction
+        elif field_coherence >= 0.50:
+            # Medium coherence (61% success) - moderate nexus formation
+            reduction_factor = 0.8  # 20% threshold reduction
+        else:
+            # Low coherence (<50% success) - conservative (no reduction)
+            reduction_factor = 1.0
+
+        minimum_organs_adjusted = int(minimum_organs * reduction_factor)
+        minimum_organs_adjusted = max(1, minimum_organs_adjusted)  # At least 1 organ
 
         # Track which organs meet activation conditions
         activated_organs = {}
@@ -153,8 +186,8 @@ class MetaAtomActivator:
                 if max_activation is not None:
                     activated_organs[organ_name] = max_activation
 
-        # Check if minimum organs threshold met
-        if len(activated_organs) >= minimum_organs:
+        # Check if minimum organs threshold met (with field coherence adjustment)
+        if len(activated_organs) >= minimum_organs_adjusted:
             # Compute confidence (mean of participating organ activations)
             confidence = np.mean(list(activated_organs.values()))
 

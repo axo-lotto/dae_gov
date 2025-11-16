@@ -382,55 +382,51 @@ class SELFMatrixGovernance:
         """
         emission_lower = proposed_emission.lower()
 
-        # Zone 5: Exile/Collapse - STRICTEST
+        # Zone 5: Exile/Collapse - GENTLE PRESENCE (Nov 15, 2025 - relaxed for organic emission)
         if zone.zone_id == 5:
-            # Only minimal presence permitted
+            # Allow gentle presence - organic reconstructions can still happen
+            # REMOVED overly strict pattern matching that blocked all organic emission
+
+            # Only block truly unsafe patterns (demands, pressure, cognitive load)
             unsafe_patterns = [
-                ('what', 'Open questions not safe in collapse'),
-                ('why', 'Open questions not safe in collapse'),
-                ('how', 'Open questions not safe in collapse'),
-                ('notice', 'Cognitive noticing too demanding'),
-                ('feel', 'Feeling questions too demanding'),
-                ('sense', 'Sensing questions too demanding'),
-                ('explore', 'Exploration forbidden in collapse'),
+                ('you should', 'Directive language too demanding'),
+                ('you must', 'Directive language too demanding'),
+                ('you need to', 'Directive language too demanding'),
+                ('try to', 'Performance demand inappropriate'),
+                ('figure out', 'Cognitive demand too high'),
+                ('analyze', 'Cognitive demand too high'),
+                ('understand why', 'Deep exploration forbidden in collapse'),
             ]
 
             for pattern, reason in unsafe_patterns:
                 if pattern in emission_lower:
                     return False, f"Zone 5 violation: {reason}"
 
-            # Must be minimal presence
-            safe_patterns = ["i'm here", "you're safe", "feel your", "breathe", "ground"]
-            if not any(pattern in emission_lower for pattern in safe_patterns):
-                return False, "Zone 5 requires minimal presence only (body-based safety)"
+            # REMOVED: "must be minimal presence" requirement
+            # Organic reconstructions with gentle tone are now permitted
+            # The organism learns what's appropriate through training
 
             return True, None
 
-        # Zone 4: Shadow/Compost - PROTECTIVE ONLY
+        # Zone 4: Shadow/Compost - PROTECTIVE (Nov 15, 2025 - relaxed for organic emission)
         elif zone.zone_id == 4:
-            # NO exploration, NO interpretation
+            # Allow protective presence - organic reconstructions can adapt to firefighter needs
+
+            # Only block truly activating patterns
             unsafe_patterns = [
-                ('deeper', 'Exploration forbidden in protective zone'),
-                ('underneath', 'Exploration forbidden in protective zone'),
-                ('really', 'Interpretation forbidden in protective zone'),
-                ('actually', 'Interpretation forbidden in protective zone'),
-                ('what if', 'Hypotheticals too activating'),
-                ('imagine', 'Imagination too activating'),
+                ('you should', 'Directive language inappropriate'),
+                ('you must', 'Directive language inappropriate'),
+                ('you need to', 'Directive language inappropriate'),
+                ('what if you', 'Hypotheticals too activating'),
+                ('imagine yourself', 'Imagination too activating'),
             ]
 
             for pattern, reason in unsafe_patterns:
                 if pattern in emission_lower:
                     return False, f"Zone 4 violation: {reason}"
 
-            # Should emphasize safety, grounding, protection
-            safe_patterns = ["safe", "ground", "pause", "slow", "breath", "here", "with you"]
-            protective_patterns = ["protect", "boundary", "need", "working hard"]
-
-            has_safety = any(pattern in emission_lower for pattern in safe_patterns)
-            has_protection = any(pattern in emission_lower for pattern in protective_patterns)
-
-            if not (has_safety or has_protection):
-                return False, "Zone 4 requires grounding/protective language"
+            # REMOVED: "must contain safe/protective patterns" requirement
+            # Organic reconstructions can learn appropriate protective tone through training
 
             return True, None
 

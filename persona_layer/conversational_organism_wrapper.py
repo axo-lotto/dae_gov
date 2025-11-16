@@ -54,6 +54,9 @@ from organs.modular.rnx.core.rnx_text_core import RNXTextCore
 from organs.modular.eo.core.eo_text_core import EOTextCore
 from organs.modular.card.core.card_text_core import CARDTextCore
 
+# 🌀 Import NEXUS organ (Neo4j memory management - Nov 15, 2025 - Quick Win #9)
+from organs.modular.nexus.core.nexus_text_core import NEXUSTextCore
+
 # Import Phase 5 learning integration
 try:
     from persona_layer.phase5_learning_integration import Phase5LearningIntegration
@@ -213,6 +216,17 @@ except ImportError as e:
     ENTITY_DIFFERENTIATION_AVAILABLE = False
     print(f"⚠️  Entity differentiation not available: {e}")
 
+# 🌀 Import TSK Recorder (Transductive Summary Kernel - November 16, 2025)
+try:
+    from persona_layer.conversational_tsk_recorder import (
+        ConversationalTSKRecorder,
+        TransductiveSummaryKernel
+    )
+    TSK_RECORDER_AVAILABLE = True
+except ImportError as e:
+    TSK_RECORDER_AVAILABLE = False
+    print(f"⚠️  TSK recorder not available: {e}")
+
 
 class ConversationalOrganismWrapper:
     """
@@ -256,7 +270,12 @@ class ConversationalOrganismWrapper:
         self.card = CARDTextCore()        # Response scaling (minimal→comprehensive)
         print(f"   ✅ 3 Phase 2 organs loaded (RNX, EO, CARD)")
 
-        print(f"\n   ✅ 11 organs total operational (Phase 2 COMPLETE!)")
+        # 🌀 Initialize NEXUS organ (Neo4j memory management - Nov 15, 2025 - Quick Win #9)
+        print("   Loading NEXUS organ (Neo4j entity memory)...")
+        self.nexus = NEXUSTextCore(enable_neo4j=True, enable_entity_tracker=True)
+        print(f"   ✅ NEXUS organ loaded (12th organ - memory as prehension!)")
+
+        print(f"\n   ✅ 12 organs total operational (NEXUS COMPLETE!)")
 
         # Initialize Phase 5 learning (if available)
         if PHASE5_AVAILABLE:
@@ -264,7 +283,7 @@ class ConversationalOrganismWrapper:
                 self.phase5_learning = Phase5LearningIntegration(
                     storage_path="persona_layer",
                     learning_threshold=0.55,
-                    enable_learning=False  # Disabled during epoch training (separate learning system)
+                    enable_learning=True  # ✅ ENABLED (Nov 15, 2025) - Pragmatic epoch learning uses existing Phase 5
                 )
                 print(f"   ✅ Phase 5 learning integration ready")
             except Exception as e:
@@ -570,6 +589,20 @@ class ConversationalOrganismWrapper:
         else:
             self.entity_differentiator = None
 
+        # 🌀 Initialize TSK Recorder (Transductive Summary Kernel - November 16, 2025)
+        if TSK_RECORDER_AVAILABLE:
+            try:
+                print("   Loading TSK Recorder (transformation-based epoch learning)...")
+                self.tsk_recorder = ConversationalTSKRecorder(
+                    storage_dir='persona_layer/state/tsks'
+                )
+                print(f"   ✅ TSK Recorder ready (57D transformation signatures)")
+            except Exception as e:
+                print(f"   ⚠️  TSK recorder initialization failed: {e}")
+                self.tsk_recorder = None
+        else:
+            self.tsk_recorder = None
+
         print("="*70)
         print("✅ 11-organ conversational organism initialized (Phase 2 COMPLETE!)\n")
 
@@ -601,7 +634,7 @@ class ConversationalOrganismWrapper:
         text: str,
         context: Optional[Dict[str, Any]] = None,
         enable_tsk_recording: bool = True,
-        enable_phase2: bool = False,
+        enable_phase2: bool = True,  # ✅ ENABLED by default (Nov 15, 2025) - Phase 2 complete!
         regime: Optional[SatisfactionRegime] = None,  # 🆕 Enhancement #1: Nov 13, 2025
         user_id: Optional[str] = None,  # 🌀 Phase 1 Foundation: Nov 14, 2025
         user_satisfaction: Optional[float] = None,  # 🌀 Phase 1 Foundation: Nov 14, 2025
@@ -647,6 +680,9 @@ class ConversationalOrganismWrapper:
 
         context = context or {}
 
+        # 🕐 TEMPORAL AWARENESS: Add time/date context - November 15, 2025
+        context['temporal'] = self._create_temporal_context()
+
         # 🌀 PHASE 1.6: Entity differentiation (detect if user asking about DAE) - November 14, 2025
         entity_ref = 'ambiguous'
         entity_confidence = 0.0
@@ -684,10 +720,27 @@ class ConversationalOrganismWrapper:
             if self.emission_generator and hasattr(self.emission_generator, 'set_exploration_context'):
                 self.emission_generator.set_exploration_context(regime=regime.value if isinstance(regime, SatisfactionRegime) else regime)
 
+        # 🌀 DAE 3.0 LEGACY INTEGRATION: Capture INITIAL felt-state (November 15, 2025)
+        # For transformation-based family emergence, we need to capture the organism's
+        # felt-state BEFORE processing user input. This enables DAE 3.0's proven
+        # INPUT→OUTPUT transformation clustering approach.
+        initial_felt_state = {
+            'v0_initial': 1.0,  # Default starting energy (could be carried from previous turn)
+            'organ_coherences': {
+                'LISTENING': 0.5, 'EMPATHY': 0.5, 'WISDOM': 0.5,
+                'AUTHENTICITY': 0.5, 'PRESENCE': 0.5, 'BOND': 0.5,
+                'SANS': 0.5, 'NDAM': 0.5, 'RNX': 0.5, 'EO': 0.5, 'CARD': 0.5
+            },
+            'polyvagal_state': 'ventral',  # Default state
+            'zone': 1,  # Default zone
+            'satisfaction': 0.5,  # Neutral satisfaction
+            'urgency': 0.0  # No urgency yet (user input not processed)
+        }
+
         # Route to appropriate processing path
         if enable_phase2 and PHASE2_CONVERGENCE_AVAILABLE and self.meta_atoms:
             # PHASE 2 PATH: Multi-cycle V0 convergence with Kairos detection
-            result = self._multi_cycle_convergence(text, context, enable_tsk_recording)
+            result = self._multi_cycle_convergence(text, context, enable_tsk_recording, initial_felt_state)
         else:
             # PHASE 1 PATH: Single-cycle processing (backward compatible)
             result = self._process_single_cycle(text, context, enable_tsk_recording)
@@ -760,10 +813,11 @@ class ConversationalOrganismWrapper:
                 print(f"⚠️  Organ confidence update failed: {e}")
 
         # 🌀 Quick Win #7: Update entity-organ associations (Nov 15, 2025)
-        if self.entity_organ_tracker and context.get('stored_entities'):
+        if self.entity_organ_tracker and context.get('current_turn_entities'):
             try:
-                # Extract entities from context (passed from dae_interactive.py)
-                extracted_entities = context.get('stored_entities', [])
+                # Extract entities from current turn (passed from dae_interactive.py)
+                # Format: List[{'entity_value': 'Emma', 'entity_type': 'Person'}, ...]
+                extracted_entities = context.get('current_turn_entities', [])
                 organ_results = result.get('organ_results', {})
 
                 # Build felt-state context
@@ -803,14 +857,18 @@ class ConversationalOrganismWrapper:
 
         # 🌀 Nov 14, 2025: Build entity context for all organs (Phase 2.1)
         # Extract entity data from context for organ prehension
+        # 🌀 Nov 15, 2025: Extract user_id for NEXUS organ
+        user_id = context.get('user_id', 'default_user')
+
         entity_context = {
             'stored_entities': context.get('stored_entities', {}),
             'username': context.get('username')
         }
 
-        # Process through ALL 11 organs (5 conversational + 6 trauma/context-aware)
+        # Process through ALL 12 organs (5 conversational + 6 trauma/context-aware + 1 memory)
         # Cycle=0 for single-pass epoch training
         # 🌀 Nov 14, 2025: Pass entity_context to all organs
+        # 🌀 Nov 15, 2025: Added NEXUS (12th organ) for Neo4j memory prehension
         organ_results = {
             # 5 conversational organs
             'LISTENING': self.listening.process_text_occasions(occasions, cycle=0, context=entity_context),
@@ -827,6 +885,9 @@ class ConversationalOrganismWrapper:
             # 3 Phase 2 organs (temporal, polyvagal, scaling - Nov 11, 2025)
             'RNX': self.rnx.process_text_occasions(occasions, cycle=0, context=entity_context),
             'EO': self.eo.process_text_occasions(occasions, cycle=0, context=entity_context),
+
+            # 🌀 12th organ: NEXUS (Neo4j entity memory - Nov 15, 2025 - Quick Win #9)
+            'NEXUS': self.nexus.process_text_occasions(occasions, cycle=0, context={**entity_context, 'user_id': user_id}),
         }
 
         # CARD needs EXTENDED context (entity data + organ signals for response scaling)
@@ -1029,6 +1090,9 @@ class ConversationalOrganismWrapper:
                     entity_context_string = context.get('entity_context_string', '') if context else ''
                     memory_intent = context.get('memory_intent', False) if context else False
 
+                    # 🕐 Nov 15, 2025: Extract temporal context from context dict
+                    temporal_context = context.get('temporal') if context else None
+
                     emitted_phrases = self.emission_generator.generate_emissions(
                         nexuses=nexuses,
                         num_emissions=num_emissions,
@@ -1039,7 +1103,8 @@ class ConversationalOrganismWrapper:
                         satisfaction=satisfaction_final,  # 🌀 For felt-guided LLM
                         memory_context=None,  # 🌀 TODO: Pass from dae_interactive if hybrid enabled
                         entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
-                        memory_intent=memory_intent  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
+                        memory_intent=memory_intent,  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
+                        temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
                     )
 
                     # Combine emitted phrases into single emission text
@@ -1069,10 +1134,92 @@ class ConversationalOrganismWrapper:
         phase5_family_id = None
         if self.phase5_learning:
             try:
-                # Extract 45D organ signature for family assignment
-                # This is simplified - full implementation in phase5_learning_integration.py
-                phase5_family_id = "Family_001"  # Placeholder
+                # 🌀 DAE 3.0 LEGACY INTEGRATION: Transformation-based learning (November 15, 2025)
+
+                # Build INITIAL felt-state (defaults - Phase 1 path doesn't have V0 convergence history)
+                initial_felt_state = {
+                    'v0_initial': 1.0,
+                    'organ_coherences': {
+                        'LISTENING': 0.5, 'EMPATHY': 0.5, 'WISDOM': 0.5,
+                        'AUTHENTICITY': 0.5, 'PRESENCE': 0.5, 'BOND': 0.5,
+                        'SANS': 0.5, 'NDAM': 0.5, 'RNX': 0.5, 'EO': 0.5, 'CARD': 0.5
+                    },
+                    'polyvagal_state': 'ventral',
+                    'zone': 1,
+                    'satisfaction': 0.5,
+                    'urgency': 0.0
+                }
+
+                # Build FINAL felt-state from processed results
+                # 🚨 CRITICAL FIX (Nov 16): Compute zone from BOND mean_self_distance
+                # BOND doesn't have a .zone attribute, it has mean_self_distance
+                bond_result = organ_results.get('BOND')
+                if bond_result and hasattr(bond_result, 'mean_self_distance'):
+                    bond_self_dist = bond_result.mean_self_distance
+                else:
+                    bond_self_dist = 0.5
+
+                # Convert BOND self_distance to SELF Matrix zone (1-5)
+                # Zone mapping follows DAE 3.0 SELF Matrix conventions
+                if bond_self_dist > 0.8:
+                    computed_zone = 5  # Collapse/shutdown (far from SELF)
+                elif bond_self_dist > 0.6:
+                    computed_zone = 4  # Protective parts
+                elif bond_self_dist > 0.4:
+                    computed_zone = 3  # Manager parts
+                elif bond_self_dist > 0.2:
+                    computed_zone = 2  # Firefighter parts
+                else:
+                    computed_zone = 1  # SELF (connected, low distance)
+
+                # 🚨 CRITICAL FIX (Nov 16): NDAM has mean_urgency, not urgency attribute
+                ndam_result = organ_results.get('NDAM')
+                if ndam_result and hasattr(ndam_result, 'mean_urgency'):
+                    ndam_urgency = ndam_result.mean_urgency
+                else:
+                    ndam_urgency = 0.0
+
+                final_felt_state = {
+                    'v0_initial': v0_initial if 'v0_initial' in locals() else 1.0,
+                    'v0_final': v0_final if 'v0_final' in locals() else 0.5,
+                    'convergence_cycles': convergence_cycles if 'convergence_cycles' in locals() else 3.0,
+                    'organ_coherences': {
+                        organ_name: getattr(organ_results.get(organ_name), 'coherence', 0.5)
+                        for organ_name in ['LISTENING', 'EMPATHY', 'WISDOM', 'AUTHENTICITY',
+                                          'PRESENCE', 'BOND', 'SANS', 'NDAM', 'RNX', 'EO', 'CARD']
+                    },
+                    'polyvagal_state': getattr(organ_results.get('EO'), 'polyvagal_state', 'ventral') if organ_results.get('EO') else 'ventral',
+                    'zone': computed_zone,  # 🚨 FIX: Use computed zone from BOND self_distance
+                    'satisfaction_final': satisfaction_final,
+                    'urgency': ndam_urgency,  # 🚨 FIX: Use NDAM's mean_urgency attribute
+                    'emission_path': emission_path if 'emission_path' in locals() else 'fusion',
+                    'kairos_detected': kairos_detected if 'kairos_detected' in locals() else False,
+                    'nexus_count': len(nexuses) if 'nexuses' in locals() else 0
+                }
+
+                # Call transformation-based learning (DAE 3.0 approach)
+                learning_result = self.phase5_learning.learn_from_conversation_transformation(
+                    initial_felt_state=initial_felt_state,
+                    final_felt_state=final_felt_state,
+                    emission_text=emission_text if emission_text else '',
+                    user_message=text,
+                    conversation_id=context.get('conversation_id', 'unknown') if context else 'unknown'
+                )
+
+                if learning_result:
+                    phase5_family_id = learning_result.get('family_id')
+
+                    # Log family assignment for visibility
+                    if phase5_family_id:
+                        family_sim = learning_result.get('similarity', 0.0)
+                        is_new = learning_result.get('is_new_family', False)
+                        sat_improvement = learning_result.get('satisfaction_improvement', 0.0)
+                        action = "CREATED" if is_new else "JOINED"
+                        print(f"   🌀 Phase 5: {action} {phase5_family_id} (sim: {family_sim:.3f}, Δsat: {sat_improvement:+.3f})")
             except Exception as e:
+                print(f"   ⚠️  Phase 5 learning failed: {e}")
+                import traceback
+                traceback.print_exc()
                 phase5_family_id = None
 
         # BOND self_distance (trauma activation level) - FROM REAL BOND ORGAN!
@@ -1372,11 +1519,91 @@ class ConversationalOrganismWrapper:
             for occ in occasions
         ]
 
+    def _create_temporal_context(self) -> Dict[str, Any]:
+        """
+        Create rich temporal context for organism awareness.
+
+        🕐 TEMPORAL AWARENESS: November 15, 2025
+        Makes organism aware of current time/date during processing.
+
+        Returns:
+            Dictionary with temporal context:
+            {
+                'timestamp': '2025-11-15T20:30:45.123456',
+                'date': '2025-11-15',
+                'time': '20:30:45',
+                'hour': 20,
+                'minute': 30,
+                'time_of_day': 'evening',  # morning/afternoon/evening/night
+                'day_of_week': 'Friday',
+                'day_of_week_num': 4,  # 0=Monday, 6=Sunday
+                'is_weekend': False,
+                'is_weekday': True,
+                'is_morning': False,
+                'is_afternoon': False,
+                'is_evening': True,
+                'is_night': False,
+                'is_work_hours': False
+            }
+        """
+        now = datetime.now()
+
+        hour = now.hour
+
+        # Categorize time of day
+        if 5 <= hour < 12:
+            time_of_day = "morning"
+            is_morning = True
+            is_afternoon = is_evening = is_night = False
+        elif 12 <= hour < 17:
+            time_of_day = "afternoon"
+            is_afternoon = True
+            is_morning = is_evening = is_night = False
+        elif 17 <= hour < 21:
+            time_of_day = "evening"
+            is_evening = True
+            is_morning = is_afternoon = is_night = False
+        else:
+            time_of_day = "night"
+            is_night = True
+            is_morning = is_afternoon = is_evening = False
+
+        # Day of week info
+        day_of_week_num = now.weekday()  # 0=Monday, 6=Sunday
+        is_weekend = day_of_week_num >= 5
+        is_weekday = day_of_week_num < 5
+
+        # Work hours (9am-5pm on weekdays)
+        is_work_hours = (9 <= hour < 17) and is_weekday
+
+        return {
+            'timestamp': now.isoformat(),
+            'date': now.strftime('%Y-%m-%d'),
+            'time': now.strftime('%H:%M:%S'),
+            'hour': hour,
+            'minute': now.minute,
+
+            # Categorical time
+            'time_of_day': time_of_day,
+            'day_of_week': now.strftime('%A'),
+            'day_of_week_num': day_of_week_num,
+            'is_weekend': is_weekend,
+            'is_weekday': is_weekday,
+
+            # Time-specific flags
+            'is_morning': is_morning,
+            'is_afternoon': is_afternoon,
+            'is_evening': is_evening,
+            'is_night': is_night,
+            'is_work_hours': is_work_hours
+        }
+
     def _multi_cycle_convergence(
         self,
         text: str,
         context: Dict[str, Any],
-        enable_tsk_recording: bool
+        enable_tsk_recording: bool,
+        initial_felt_state: Dict[str, Any]
     ) -> Dict[str, Any]:
         """
         Phase 2 processing path: Multi-cycle V0 convergence with Kairos detection.
@@ -1485,6 +1712,13 @@ class ConversationalOrganismWrapper:
                 # V0 energy descent (🆕 with lure contribution from EO/NDAM/RNX)
                 occasion.descend_v0_energy(organ_coherences, organ_results)
 
+                # 🌀 Phase 2 (Nov 15, 2025): Calculate field coherence using DAE 3.0 std formula
+                # Measures organ harmony: coherence = 1 - std([organ_outputs])
+                # Pass organ_results dict containing coherence/confidence values
+                field_coherence = occasion._calculate_field_coherence(organ_results)
+                occasion.field_coherence = field_coherence
+                occasion.field_coherence_history.append(field_coherence)
+
                 # 🆕 SALIENCE: Evaluate salience and set subjective aim
                 if self.salience_model:
                     # Extract meta-atom activations for salience evaluation
@@ -1592,6 +1826,63 @@ class ConversationalOrganismWrapper:
             print(f"      Energy change: {mean_energy_change:.3f}")
             print(f"      Kairos: {kairos_detected}")
 
+            # 🆕 MULTI-CYCLE TRANSDUCTION: Record per-cycle state (November 16, 2025)
+            if self.transduction_evaluator and TRANSDUCTION_AVAILABLE:
+                try:
+                    # Classify nexus type from current cycle's V0 energy + organ insights
+                    cycle_nexus_type, cycle_nexus_category = classify_nexus_type_from_v0(
+                        v0_energy=mean_energy,
+                        satisfaction=mean_satisfaction,
+                        bond_self_distance=bond_self_distance,
+                        ndam_urgency_level=ndam_urgency_level,
+                        eo_polyvagal_state=eo_polyvagal_state
+                    )
+
+                    # Compute transductive vocabulary for this cycle
+                    cycle_transductive_vocab = compute_transductive_vocabulary(
+                        salience_metrics=salience_trauma_markers,
+                        organ_activations=organ_coherences,
+                        satisfaction=mean_satisfaction,
+                        v0_energy=mean_energy
+                    )
+
+                    # Simplified per-cycle state (rhythm_coherence and mutual_satisfaction computed post-loop)
+                    # Use placeholder values, they'll be overwritten in final state
+                    cycle_rhythm_coherence = getattr(organ_results.get('RNX'), 'coherence', 0.5)
+                    cycle_relational_available = check_relational_field_available(
+                        bond_self_distance,
+                        eo_polyvagal_state,
+                        organ_coherences.get('EMPATHY', 0.5)
+                    )
+
+                    # Create per-cycle transduction state
+                    cycle_transduction_state = NexusTransductionState(
+                        current_type=cycle_nexus_type,
+                        current_category=cycle_nexus_category,
+                        cycle_num=cycle,
+                        v0_energy=mean_energy,
+                        satisfaction=mean_satisfaction,
+                        mutual_satisfaction=mean_satisfaction * 0.8,  # Proxy until full compute
+                        rhythm_coherence=cycle_rhythm_coherence,
+                        field_resonance=0.5,  # Placeholder, nexus not yet formed
+                        signal_inflation=cycle_transductive_vocab['signal_inflation'],
+                        salience_drift=cycle_transductive_vocab['salience_drift'],
+                        prehensive_overload=cycle_transductive_vocab['prehensive_overload'],
+                        coherence_leakage=cycle_transductive_vocab['coherence_leakage'],
+                        relational_field_available=cycle_relational_available,
+                        protective_field_active=(bond_self_distance > 0.4),
+                        bond_self_distance=bond_self_distance,
+                        ndam_urgency_level=ndam_urgency_level,
+                        eo_polyvagal_state=eo_polyvagal_state,
+                        rnx_temporal_coherence=cycle_rhythm_coherence
+                    )
+
+                    # Append to trajectory (multi-cycle recording!)
+                    transduction_trajectory.append(cycle_transduction_state)
+
+                except Exception as e:
+                    print(f"      ⚠️ Per-cycle transduction recording failed: {e}")
+
             if mean_energy_change < convergence_threshold or kairos_detected:
                 convergence_reason = 'kairos' if kairos_detected else 'satisfaction'
                 print(f"   ✓ Convergence at cycle {cycle} ({convergence_reason})")
@@ -1630,9 +1921,19 @@ class ConversationalOrganismWrapper:
         meta_atom_activations = []
         if self.meta_atom_activator and organ_results:
             print(f"\n   🧬 Activating meta-atoms...")
+
+            # 🌀 Phase 2 (Nov 15, 2025): Get field coherence from converged occasion
+            # Use mean field coherence across all cycles for nexus modulation
+            mean_field_coherence = 0.0
+            if occasions:
+                field_coherences = [occ.field_coherence for occ in occasions if hasattr(occ, 'field_coherence')]
+                if field_coherences:
+                    mean_field_coherence = sum(field_coherences) / len(field_coherences)
+
             meta_atom_activations = self.meta_atom_activator.activate_meta_atoms(
                 organ_results=organ_results,
-                verbose=True
+                verbose=True,
+                field_coherence=mean_field_coherence
             )
 
             # Add meta-atom activations to semantic fields for nexus composition
@@ -2073,6 +2374,171 @@ class ConversationalOrganismWrapper:
         if self.organ_coupling_learner:
             self.organ_coupling_learner.save()
 
+        # 🌀 DAE 3.0 LEGACY INTEGRATION: Transformation-based learning (November 15, 2025)
+        # Learn from INPUT→OUTPUT transformation, not single state (DAE 3.0 proven approach)
+        if self.phase5_learning and self.phase5_learning.enable_learning:
+            try:
+                # Build FINAL felt-state from processed results
+                final_felt_state = {
+                    'v0_initial': 1.0,  # From initial state
+                    'v0_final': mean_energy,  # Final V0 energy after convergence
+                    'convergence_cycles': cycle,  # Number of cycles to convergence
+                    'organ_coherences': {
+                        organ_name: organ_coherences.get(organ_name, 0.5)
+                        for organ_name in ['LISTENING', 'EMPATHY', 'WISDOM', 'AUTHENTICITY',
+                                          'PRESENCE', 'BOND', 'SANS', 'NDAM', 'RNX', 'EO', 'CARD']
+                    },
+                    'polyvagal_state': getattr(organ_results.get('EO'), 'polyvagal_state', 'ventral'),
+                    'zone': felt_states.get('bond_zone', 1),
+                    'satisfaction_final': mean_satisfaction,
+                    'urgency': getattr(organ_results.get('NDAM'), 'urgency_level', 0.0),
+                    'emission_path': emission_path,
+                    'kairos_detected': kairos_detected,
+                    'nexus_count': len(nexuses)
+                }
+
+                # Convert transduction_trajectory objects to dicts for Phase 5
+                transduction_trajectory_dicts = []
+                if 'transduction_trajectory' in dir() and transduction_trajectory:
+                    for state in transduction_trajectory:
+                        if hasattr(state, '__dict__'):
+                            state_dict = {
+                                'current_type': getattr(state, 'current_type', 'Relational'),
+                                'current_category': getattr(state, 'current_category', 'PSYCHE'),
+                                'domain': getattr(state, 'get_nexus_domain', lambda: 'PSYCHE')(),
+                                'cycle_num': getattr(state, 'cycle_num', 1),
+                                'v0_energy': getattr(state, 'v0_energy', 0.5),
+                                'satisfaction': getattr(state, 'satisfaction', 0.5),
+                                'mutual_satisfaction': getattr(state, 'mutual_satisfaction', 0.5),
+                                'rhythm_coherence': getattr(state, 'rhythm_coherence', 0.5),
+                                'field_resonance': getattr(state, 'field_resonance', 0.5),
+                                'signal_inflation': getattr(state, 'signal_inflation', 0.0),
+                                'salience_drift': getattr(state, 'salience_drift', 0.0),
+                                'prehensive_overload': getattr(state, 'prehensive_overload', 0.0),
+                                'coherence_leakage': getattr(state, 'coherence_leakage', 0.0),
+                                'next_type': getattr(state, 'next_type', None),
+                                'transition_mechanism': getattr(state, 'transition_mechanism', 'maintain'),
+                                'transition_probability': getattr(state, 'transition_probability', 0.0),
+                                'bond_self_distance': getattr(state, 'bond_self_distance', 0.5),
+                                'ndam_urgency_level': getattr(state, 'ndam_urgency_level', 0.0),
+                                'eo_polyvagal_state': getattr(state, 'eo_polyvagal_state', 'mixed'),
+                                'rnx_temporal_coherence': getattr(state, 'rnx_temporal_coherence', 0.5),
+                            }
+                            transduction_trajectory_dicts.append(state_dict)
+
+                # Compute constraint deltas (initial vs final)
+                constraint_deltas = {}
+                if transduction_trajectory_dicts:
+                    first_state = transduction_trajectory_dicts[0]
+                    last_state = transduction_trajectory_dicts[-1]
+                    constraint_deltas = {
+                        'bond_self_distance': last_state['bond_self_distance'] - first_state['bond_self_distance'],
+                        'ndam_urgency': last_state['ndam_urgency_level'] - first_state['ndam_urgency_level'],
+                        'sans_coherence': last_state['rhythm_coherence'] - first_state['rhythm_coherence'],
+                        'eo_temporal': last_state['rnx_temporal_coherence'] - first_state['rnx_temporal_coherence']
+                    }
+
+                # Call transformation-based learning (DAE 3.0 approach with 57D RNX/TSK)
+                learning_result = self.phase5_learning.learn_from_conversation_transformation(
+                    initial_felt_state=initial_felt_state,
+                    final_felt_state=final_felt_state,
+                    emission_text=emission_text if emission_text else '',
+                    user_message=text,
+                    conversation_id=context.get('conversation_id', 'unknown') if context else 'unknown',
+                    transduction_trajectory=transduction_trajectory_dicts if transduction_trajectory_dicts else None,
+                    constraint_deltas=constraint_deltas if constraint_deltas else None
+                )
+
+                if learning_result:
+                    phase5_family_id = learning_result.get('family_id')
+
+                    # Log family assignment for visibility
+                    if phase5_family_id:
+                        family_sim = learning_result.get('similarity', 0.0)
+                        is_new = learning_result.get('is_new_family', False)
+                        sat_improvement = learning_result.get('satisfaction_improvement', 0.0)
+                        action = "CREATED" if is_new else "JOINED"
+                        print(f"   🌀 Phase 5: {action} {phase5_family_id} (sim: {family_sim:.3f}, Δsat: {sat_improvement:+.3f})")
+
+                        # Store in felt_states for return value
+                        felt_states['phase5_family_id'] = phase5_family_id
+                        felt_states['phase5_similarity'] = family_sim
+                        felt_states['phase5_is_new'] = is_new
+            except Exception as e:
+                print(f"   ⚠️  Phase 5 learning failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # 🌀 POST-EMISSION: Create and store TSK (Transductive Summary Kernel - November 16, 2025)
+        # This enables transformation-based epoch learning with 57D signatures
+        # NOTE: Use "is not None" because TSKRecorder has __len__ method that returns 0 when empty
+        if self.tsk_recorder is not None and TSK_RECORDER_AVAILABLE:
+            try:
+                print(f"   🔄 Creating TSK...")
+                # Create initial state (default before processing)
+                tsk_initial_state = self.tsk_recorder.create_initial_state()
+
+                # Build final felt states from processing results
+                # 🚨 CRITICAL FIX (Nov 16): Use ACTUAL organ result keys, not generic defaults!
+                # Compute zone from BOND self-distance (matches SELF Matrix zones)
+                bond_self_dist = felt_states.get('bond_self_distance', felt_states.get('BOND_self_distance', 0.5))
+                if bond_self_dist > 0.8:
+                    computed_zone = 5  # Collapse/shutdown
+                elif bond_self_dist > 0.6:
+                    computed_zone = 4  # Protective
+                elif bond_self_dist > 0.4:
+                    computed_zone = 3  # Manager
+                elif bond_self_dist > 0.2:
+                    computed_zone = 2  # Firefighter
+                else:
+                    computed_zone = 1  # SELF (connected)
+
+                tsk_final_states = {
+                    'v0_energy': felt_states.get('v0_energy_final', 0.5),
+                    'organ_coherences': felt_states.get('organ_coherences', {}),
+                    # Use ACTUAL organ detection results - keys must match TSK recorder expectations!
+                    'eo_polyvagal_state': felt_states.get('eo_polyvagal_state', felt_states.get('EO_polyvagal_state', 'ventral_vagal')),
+                    'zone': computed_zone,  # Compute from BOND self-distance
+                    'NDAM_urgency_level': felt_states.get('NDAM_urgency_level', felt_states.get('ndam_urgency_level', 0.0)),
+                    'satisfaction': felt_states.get('satisfaction_final', 0.5),
+                    'emission_path': emission_path,
+                    'confidence': emission_confidence,
+                    'nexus_type': felt_states.get('nexus_type', 'Relational'),
+                    'transduction_enabled': felt_states.get('transduction_enabled', False),
+                    'bond_constraint': felt_states.get('BOND_self_distance', felt_states.get('bond_self_distance', 0.0)),
+                    'ndam_urgency': felt_states.get('NDAM_urgency_level', 0.0),
+                    'sans_coherence': felt_states.get('SANS_coherence', 0.0),
+                    'eo_polyvagal': felt_states.get('EO_coherence', 0.5),
+                }
+
+                # Get transduction trajectory from felt_states (already converted to dicts)
+                tsk_transduction_trajectory = felt_states.get('transduction_trajectory', [])
+
+                # Create TSK from INITIAL → FINAL transformation
+                conversation_id = context.get('conversation_id', 'unknown') if context else 'unknown'
+                tsk = self.tsk_recorder.create_tsk_from_processing(
+                    conversation_id=conversation_id,
+                    user_input=text,
+                    initial_state=tsk_initial_state,
+                    final_felt_states=tsk_final_states,
+                    transduction_trajectory=tsk_transduction_trajectory,
+                    response_text=emission_text if emission_text else ''
+                )
+
+                # Store TSK in result for external consumption (e.g., TransductiveEpochCoordinator)
+                felt_states['tsk'] = tsk
+                felt_states['tsk_transformation_signature'] = tsk.transformation_signature
+
+                # Optionally store persistently if epoch_id provided in context
+                if context and context.get('tsk_recording', False):
+                    epoch_id = context.get('epoch_id', None)
+                    self.tsk_recorder.store_tsk(tsk, epoch_id=epoch_id)
+
+            except Exception as e:
+                print(f"   ⚠️  TSK recording failed: {e}")
+                import traceback
+                traceback.print_exc()
+
         # 📊 Phase 1.6: Record occasion for Transductive Self-Governance (Nov 14, 2025)
         # DAE learns from PATTERNS across users, not from individuals
         if self.transductive_monitor and tsk_record:
@@ -2095,7 +2561,11 @@ class ConversationalOrganismWrapper:
             'emission_text': emission_text,
             'emission_confidence': emission_confidence,
             'emission_path': emission_path,
-            'emission_nexus_count': emission_nexus_count
+            'emission_nexus_count': emission_nexus_count,
+            # 🌀 Wave training integration (Nov 15, 2025): Return occasions for metric tracking
+            'occasions': occasions,  # V0 convergence occasions with wave training metadata
+            'nexuses': nexuses,  # Formed nexuses
+            'strategy': emission_path  # Emission strategy for backward compat
         }
 
     def _create_conversational_occasions(self, text: str) -> List[ConversationalOccasion]:
@@ -2146,13 +2616,17 @@ class ConversationalOrganismWrapper:
                 text_occ.entity_match_confidence = entity_refs['confidences']
 
         # 🌀 Nov 14, 2025: Build entity context for all organs (Phase 2.1)
+        # 🌀 Nov 15, 2025: Extract user_id for NEXUS organ
+        user_id = context.get('user_id', 'default_user') if context else 'default_user'
+
         entity_context = {
             'stored_entities': context.get('stored_entities', {}) if context else {},
             'username': context.get('username') if context else None
         }
 
-        # Process through all organs
+        # Process through all 12 organs (5 conversational + 6 trauma + 1 memory)
         # 🌀 Nov 14, 2025: Pass entity_context to all organs
+        # 🌀 Nov 15, 2025: Added NEXUS (12th organ) for Neo4j memory prehension
         organ_results = {
             'LISTENING': self.listening.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
             'EMPATHY': self.empathy.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
@@ -2164,6 +2638,8 @@ class ConversationalOrganismWrapper:
             'NDAM': self.ndam.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
             'RNX': self.rnx.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
             'EO': self.eo.process_text_occasions(text_occasions, cycle=cycle, context=entity_context),
+            # 🌀 12th organ: NEXUS (Neo4j entity memory - Nov 15, 2025 - Quick Win #9)
+            'NEXUS': self.nexus.process_text_occasions(text_occasions, cycle=cycle, context={**entity_context, 'user_id': user_id}),
         }
 
         # CARD needs EXTENDED context (entity data + organ signals for response scaling)

@@ -1,6 +1,6 @@
 {
   "user_id": "user_20251113_143117",
-  "total_conversations": 150,
+  "total_conversations": 173,
   "themes": [],
   "inside_jokes": [],
   "preferences": {},
@@ -8,98 +8,6 @@
   "polyvagal_history": [
     {
       "state": "unknown",
-      "timestamp": "2025-11-14_22-51-46"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_22-52-29"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_22-55-58"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_22-56-51"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_22-58-24"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-01-41"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-02-30"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-03-36"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-04-37"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-17-03"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-18-05"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-19-55"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-20-12"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-20-39"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-21-07"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-21-47"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-22-08"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-22-33"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-33-12"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-35-07"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-35-25"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-35-40"
-    },
-    {
-      "state": "unknown",
-      "timestamp": "2025-11-14_23-36-00"
-    },
-    {
-      "state": "unknown",
       "timestamp": "2025-11-14_23-36-17"
     },
     {
@@ -205,103 +113,103 @@
     {
       "state": "unknown",
       "timestamp": "2025-11-15_08-46-12"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-10-20"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-17-52"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-18-53"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-26-26"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-28-36"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_16-52-29"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_17-11-02"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_18-34-23"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_18-35-52"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-34-41"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-39-01"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-43-09"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-44-41"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-48-07"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-50-00"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_21-51-37"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-15_22-07-15"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_07-59-53"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_08-00-38"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_08-06-16"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_08-08-33"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_08-13-02"
+    },
+    {
+      "state": "unknown",
+      "timestamp": "2025-11-16_08-29-21"
     }
   ],
   "zone_history": [
     {
       "zone": 0,
-      "timestamp": "2025-11-14_22-51-46"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_22-52-29"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_22-55-58"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_22-56-51"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_22-58-24"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-01-41"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-02-30"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-03-36"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-04-37"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-17-03"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-18-05"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-19-55"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-20-12"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-20-39"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-21-07"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-21-47"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-22-08"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-22-33"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-33-12"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-35-07"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-35-25"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-35-40"
-    },
-    {
-      "zone": 0,
-      "timestamp": "2025-11-14_23-36-00"
-    },
-    {
-      "zone": 0,
       "timestamp": "2025-11-14_23-36-17"
     },
     {
@@ -407,7 +315,99 @@
     {
       "zone": 0,
       "timestamp": "2025-11-15_08-46-12"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-10-20"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-17-52"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-18-53"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-26-26"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-28-36"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_16-52-29"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_17-11-02"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_18-34-23"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_18-35-52"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-34-41"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-39-01"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-43-09"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-44-41"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-48-07"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-50-00"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_21-51-37"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-15_22-07-15"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_07-59-53"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_08-00-38"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_08-06-16"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_08-08-33"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_08-13-02"
+    },
+    {
+      "zone": 0,
+      "timestamp": "2025-11-16_08-29-21"
     }
   ],
-  "last_updated": "2025-11-15_08-46-12"
+  "last_updated": "2025-11-16_08-29-21"
 }

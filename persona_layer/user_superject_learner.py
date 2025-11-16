@@ -717,7 +717,8 @@ JSON:"""
         # Generate extraction
         llm = LocalLLMBridge()
         try:
-            response = llm.query_direct(prompt, max_tokens=300, temperature=0.3)
+            # 🔥 Nov 15, 2025: Increased from 300 to 500 - JSON was getting truncated
+            response = llm.query_direct(prompt, max_tokens=500, temperature=0.3)
 
             # Parse JSON response
             import json
@@ -749,14 +750,28 @@ JSON:"""
                 except json.JSONDecodeError as json_error:
                     print(f"      ⚠️  LLM generated invalid JSON: {json_error}")
                     print(f"      JSON attempted: {json_str[:200]}...")
-                    # Try to salvage by cleaning common issues
+
+                    # 🔥 Nov 15, 2025: Enhanced JSON salvage for common LLM errors
                     json_str_clean = json_str.replace("'", '"')  # Single quotes to double
                     json_str_clean = re.sub(r',(\s*[}\]])', r'\1', json_str_clean)  # Trailing commas
+
+                    # Fix truncated strings (common when max_tokens hit)
+                    # If JSON ends with incomplete string, try to close it
+                    if not json_str_clean.endswith('}'):
+                        # Count unclosed braces
+                        open_braces = json_str_clean.count('{')
+                        close_braces = json_str_clean.count('}')
+                        if open_braces > close_braces:
+                            # Add closing braces
+                            json_str_clean += '"' * (json_str_clean.count('"') % 2)  # Close any open quotes
+                            json_str_clean += ']' * (json_str_clean.count('[') - json_str_clean.count(']'))  # Close arrays
+                            json_str_clean += '}' * (open_braces - close_braces)  # Close objects
+
                     try:
                         extraction = json.loads(json_str_clean)
                         print(f"      ✅ Salvaged JSON after cleaning")
-                    except:
-                        print(f"      ❌ Could not salvage JSON, returning empty")
+                    except Exception as salvage_error:
+                        print(f"      ❌ Could not salvage JSON: {salvage_error}")
                         return {}
 
                 new_facts = extraction.get('new_facts', [])

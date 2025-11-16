@@ -378,6 +378,41 @@ class InteractiveSession:
                 memory_intent_detected = True  # Mark that we found actual entities
                 context['pre_extraction_entities'] = extracted_entities
 
+                # 🌀 Quick Win #7: Convert extracted entities to list format for entity-organ tracker
+                # entity-organ tracker expects List[Dict[entity_value, entity_type]]
+                extracted_entities_list = []
+                for key, value in extracted_entities.items():
+                    if key not in ['timestamp', 'source_text', 'intent_type'] and value:
+                        # Infer entity type from key
+                        entity_type = 'Unknown'
+                        if key in ['user_name', 'name']:
+                            entity_type = 'Person'
+                        elif key in ['family_members', 'relationships']:
+                            entity_type = 'Person'
+                        elif key in ['preferences', 'likes', 'dislikes']:
+                            entity_type = 'Preference'
+                        elif key in ['facts', 'information']:
+                            entity_type = 'Fact'
+                        elif key in ['places', 'locations']:
+                            entity_type = 'Place'
+
+                        # Handle list values (like family_members)
+                        if isinstance(value, list):
+                            for item in value:
+                                if isinstance(item, str):
+                                    extracted_entities_list.append({
+                                        'entity_value': item,
+                                        'entity_type': entity_type
+                                    })
+                        elif isinstance(value, str):
+                            extracted_entities_list.append({
+                                'entity_value': value,
+                                'entity_type': entity_type
+                            })
+
+                if extracted_entities_list:
+                    context['current_turn_entities'] = extracted_entities_list
+
         # Step 1: Process through organism (11 organs)
         result = self.organism.process_text(
             user_input,
@@ -870,10 +905,11 @@ class InteractiveSession:
             organ_coherences = felt_states.get('organ_coherences', {})
             active_organs = [k for k, v in organ_coherences.items() if v > 0.1]
 
-            print(f"\n🧬 Active Organs ({len(active_organs)}/11):")
+            print(f"\n🧬 Active Organs ({len(active_organs)}/12):  🌀 12th organ: NEXUS")
             for organ in sorted(active_organs):
                 coherence = organ_coherences[organ]
-                print(f"   {organ}: {coherence:.3f}")
+                emoji = "🌀" if organ == "NEXUS" else "  "
+                print(f"   {emoji} {organ}: {coherence:.3f}")
 
             # Key organ metrics
             if 'BOND_self_distance' in felt_states:
@@ -882,6 +918,8 @@ class InteractiveSession:
                 print(f"   NDAM urgency: {felt_states['NDAM_urgency_level']:.3f}")
             if 'EO_polyvagal_state' in felt_states:
                 print(f"   EO polyvagal: {felt_states['EO_polyvagal_state']}")
+            if 'NEXUS' in organ_coherences and organ_coherences['NEXUS'] > 0.3:
+                print(f"   🌀 NEXUS coherence: {organ_coherences['NEXUS']:.3f} (entity-memory activated!)")
 
         # Show transduction trajectory
         if self.settings['show_transduction']:

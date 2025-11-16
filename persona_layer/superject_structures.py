@@ -76,6 +76,14 @@ class FeltStateSnapshot:
     kairos_detected: bool = False  # Was V0 in Kairos window?
     kairos_cycle_index: Optional[int] = None  # Which cycle detected Kairos
 
+    # 🌀 WAVE TRAINING METADATA (November 15, 2025 - DAE 3.0 Legacy Integration)
+    # Appetitive phase tracking for satisfaction variance learning
+    wave_training_enabled: bool = True  # Whether wave training was active
+    appetitive_phase: Optional[str] = None  # "EXPANSIVE", "NAVIGATION", "CONCRESCENCE"
+    satisfaction_raw: Optional[float] = None  # Pre-modulation satisfaction
+    satisfaction_modulated: Optional[float] = None  # Post-modulation satisfaction
+    satisfaction_variance: float = 0.0  # Temporal variance across cycles
+
 
 @dataclass
 class TransformationPattern:

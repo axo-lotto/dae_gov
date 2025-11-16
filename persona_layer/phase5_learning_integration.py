@@ -3,8 +3,8 @@ Phase 5 Learning Integration - Organic Conversational Learning Hooks
 =================================================================
 
 Integrates the three Phase 5 components with the emission architecture:
-1. OrganSignatureExtractor (45D organ-native)
-2. OrganicConversationalFamilies (self-organizing clustering)
+1. OrganSignatureExtractor (65D organ-native with FAO agreement metrics)
+2. OrganicConversationalFamilies (self-organizing clustering via Euclidean distance)
 3. ConversationalClusterLearning (EMA optimization)
 
 Purpose:
@@ -137,6 +137,127 @@ class Phase5LearningIntegration:
         return dict_results
 
 
+    def learn_from_conversation_transformation(
+        self,
+        initial_felt_state: Dict,
+        final_felt_state: Dict,
+        emission_text: str,
+        user_message: str,
+        conversation_id: Optional[str] = None,
+        transduction_trajectory: List[Dict] = None,
+        constraint_deltas: Dict = None
+    ) -> Optional[Dict]:
+        """
+        POST-EMISSION HOOK: Learn from conversation TRANSFORMATION (DAE 3.0 approach).
+
+        This method implements DAE 3.0's proven transformation-based learning.
+        Instead of clustering single felt-states, we cluster INPUT→OUTPUT transformations.
+
+        DAE 3.0 Results:
+        - 37 families emerged from 35D transformation signatures
+        - Zipf's law validated (α=0.73, R²=0.94)
+        - 86.75% cross-dataset transfer efficiency
+
+        Args:
+            initial_felt_state: Organism state before processing user input
+            final_felt_state: Organism state after generating response
+            emission_text: Generated response text
+            user_message: User's message
+            conversation_id: Optional conversation identifier
+
+        Returns:
+            Learning report dict (or None if not learned)
+
+        Date: November 15, 2025 (DAE 3.0 Legacy Integration)
+        Reference: DAE3_HYPHAE1_ARCHITECTURE_COMPARISON_NOV15_2025.md
+        """
+        if not self.enable_learning:
+            return None
+
+        # Check satisfaction threshold (from final state)
+        satisfaction_score = final_felt_state.get('satisfaction_final', 0.5)
+
+        if satisfaction_score < self.learning_threshold:
+            # Low satisfaction - don't learn from this conversation
+            return None
+
+        # Generate conversation ID if not provided
+        if conversation_id is None:
+            self.conversation_counter += 1
+            conversation_id = f"conv_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{self.conversation_counter}"
+
+        # ================================================================
+        # STEP 1: Extract 65D Transformation Signature with Organ Agreement Metrics
+        # ================================================================
+        # 🆕 CRITICAL FIX (Nov 16, 2025): Switch to 65D signatures with organ agreement
+        # Old: 57D normalized signatures → all conversations clustered into 1 family
+        # New: 65D RAW signatures (normalize=False) + Euclidean distance → multi-family emergence
+        #
+        # Key insight: L2 normalization collapses magnitude information!
+        # Crisis (high urgency 1.7) vs Safety (low urgency 0.2) become similar after normalization.
+        # Raw signatures with Euclidean distance show 2.5× better family separation.
+        #
+        # 65D = 57D base + 8D organ agreement metrics (FAO-equivalent from FFITTSS T4)
+        transformation_signature = self.signature_extractor.extract_transformation_signature_65d(
+            initial_felt_state=initial_felt_state,
+            final_felt_state=final_felt_state,
+            transduction_trajectory=transduction_trajectory if transduction_trajectory else [],
+            constraint_deltas=constraint_deltas if constraint_deltas else {},
+            user_input=user_message,
+            response={'emission': emission_text},
+            normalize=False  # CRITICAL: Do NOT normalize! We use Euclidean distance now.
+        )
+
+        # Calculate satisfaction improvement
+        initial_sat = initial_felt_state.get('satisfaction', 0.5)
+        final_sat = final_felt_state.get('satisfaction_final', 0.5)
+        satisfaction_improvement = final_sat - initial_sat
+
+        # ================================================================
+        # STEP 2: Assign to Family (or create new family)
+        # ================================================================
+        family_assignment = self.families.assign_to_family(
+            conversation_id=conversation_id,
+            signature=transformation_signature,
+            satisfaction_score=satisfaction_improvement,  # Use improvement, not absolute
+            organ_contributions={}  # Not needed for transformation approach
+        )
+
+        self.last_family_assignment = family_assignment
+
+        # ================================================================
+        # STEP 3: Update Cluster Learning (EMA optimization)
+        # ================================================================
+        # For transformation approach, we track transformation characteristics
+        transformation_metrics = {
+            'v0_descent': initial_felt_state.get('v0_initial', 1.0) - final_felt_state.get('v0_final', 0.5),
+            'satisfaction_improvement': satisfaction_improvement,
+            'convergence_cycles': final_felt_state.get('convergence_cycles', 3.0),
+            'polyvagal_transition': f"{initial_felt_state.get('polyvagal_state', 'ventral')}→{final_felt_state.get('polyvagal_state', 'ventral')}",
+            'zone_movement': final_felt_state.get('zone', 1) - initial_felt_state.get('zone', 1),
+            'urgency_shift': final_felt_state.get('urgency', 0.0) - initial_felt_state.get('urgency', 0.0)
+        }
+
+        # Note: cluster_learning expects organ_results dict, but for transformation
+        # approach we'll need to adapt this. For now, skip cluster learning update
+        # and focus on family assignment (the critical part for DAE 3.0 replication)
+
+        # ================================================================
+        # Return Learning Report
+        # ================================================================
+        return {
+            'learned': True,
+            'conversation_id': conversation_id,
+            'family_id': family_assignment.family_id,
+            'family_maturity': family_assignment.family_maturity,
+            'is_new_family': (family_assignment.assignment_type == 'CREATED'),
+            'similarity': family_assignment.similarity_score,
+            'satisfaction_improvement': satisfaction_improvement,
+            'satisfaction_final': final_sat,
+            'total_families': len(self.families.families),
+            'transformation_metrics': transformation_metrics
+        }
+
     def learn_from_conversation(
         self,
         organ_results: Dict,
@@ -148,6 +269,10 @@ class Phase5LearningIntegration:
         POST-EMISSION HOOK: Learn from successful conversation.
 
         Called after response assembly when satisfaction ≥ threshold.
+
+        DEPRECATED: This method uses single felt-state signatures.
+        For transformation-based learning (DAE 3.0 approach), use
+        learn_from_conversation_transformation() instead.
 
         Args:
             organ_results: Dict of organ processing results

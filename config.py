@@ -115,12 +115,19 @@ class Config:
 
     # Multi-cycle convergence
     V0_MAX_CYCLES = 5
+    V0_MIN_CYCLES = 2
     V0_CONVERGENCE_THRESHOLD = 0.1
     V0_SATISFACTION_THRESHOLD = 0.9
 
-    # Kairos detection (tuned Nov 13, 2025 - widened further for better detection)
-    KAIROS_WINDOW_MIN = 0.15  # Was 0.20 - lowered to catch rapid descent through window
-    KAIROS_WINDOW_MAX = 0.75  # Was 0.70 - raised to catch slower cycles
+    # Kairos detection (tuned Nov 15, 2025 - adapted for conversational V0 descent)
+    # DAE 3.0 optimal for ARC-AGI: [0.45, 0.70] (90% perfect task capture)
+    # Conversational V0 descent pattern observed:
+    #   Cycle 1: 0.67-0.70 (too high, exploring)
+    #   Cycle 2: 0.28-0.42 (MID-DESCENT, opportune!)
+    #   Cycle 3: 0.20-0.34 (final convergence)
+    # Target: Detect mid-descent opportune moments (40-60% of occasions)
+    KAIROS_WINDOW_MIN = 0.30  # Conversational mid-descent (DAE 3.0 ARC-AGI: 0.45)
+    KAIROS_WINDOW_MAX = 0.50  # Conversational mid-descent (DAE 3.0 ARC-AGI: 0.70)
 
     # V0 descent formula coefficients
     V0_ALPHA = 0.40  # Satisfaction weight
@@ -128,6 +135,13 @@ class Config:
     V0_GAMMA = 0.15  # Agreement weight
     V0_DELTA = 0.10  # Resonance weight
     V0_ZETA = 0.10   # Intensity weight
+
+    # Wave Training (DAE 3.0 Legacy Integration - Nov 15, 2025)
+    # Creates temporal variance in satisfaction to enable nexus formation
+    ENABLE_WAVE_TRAINING = True
+    WAVE_TRAINING_EXPANSIVE_MOD = -0.05    # -5% modulation in EXPANSIVE phase
+    WAVE_TRAINING_NAVIGATION_MOD = 0.00    # 0% modulation in NAVIGATION phase
+    WAVE_TRAINING_CONCRESCENCE_MOD = +0.05 # +5% modulation in CONCRESCENCE phase
 
     # ============================================================================
     # SALIENCE MODEL PARAMETERS (Trauma-Aware)
@@ -433,6 +447,12 @@ class Config:
 
     # ⭐ PRIMARY TOGGLE - Set to False for 100% template-only operation
     LOCAL_LLM_ENABLED = True  # ENABLED for felt-guided LLM (Nov 13, 2025)
+
+    # 🆕 INTELLIGENCE EMERGENCE MODE (Nov 15, 2025)
+    # When True: Disables felt-guided LLM override to measure organic emission evolution
+    # When False: Uses felt-guided LLM for quality (interactive/production mode)
+    # Usage: Set to True for epoch training, False for dae_interactive.py
+    INTELLIGENCE_EMERGENCE_MODE = False  # Default: production quality mode
 
     # LLM Backend settings (only relevant if LOCAL_LLM_ENABLED = True)
     LOCAL_LLM_BACKEND = "ollama"  # "ollama", "lmstudio", "gpt4all"

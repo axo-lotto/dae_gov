@@ -1,0 +1,220 @@
+{
+  "epochs": [
+    {
+      "epoch": 1,
+      "scenarios_processed": 20,
+      "family_assignments": [
+        {
+          "scenario_id": "excited_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7568240352411244
+        },
+        {
+          "scenario_id": "excited_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8037349410137627
+        },
+        {
+          "scenario_id": "angry_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8091171020630952
+        },
+        {
+          "scenario_id": "angry_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7533048709676706
+        },
+        {
+          "scenario_id": "sad_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7577256770815789
+        },
+        {
+          "scenario_id": "sad_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8676825250538845
+        },
+        {
+          "scenario_id": "anxious_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7488892935274138
+        },
+        {
+          "scenario_id": "anxious_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8034891210446775
+        },
+        {
+          "scenario_id": "joyful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.853102114369806
+        },
+        {
+          "scenario_id": "joyful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8201828903111612
+        },
+        {
+          "scenario_id": "grief_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8031639050387543
+        },
+        {
+          "scenario_id": "grief_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8510248459320309
+        },
+        {
+          "scenario_id": "shame_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.9527246045725171
+        },
+        {
+          "scenario_id": "shame_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7445843532907065
+        },
+        {
+          "scenario_id": "playful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8009307970942158
+        },
+        {
+          "scenario_id": "playful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7472145780653014
+        },
+        {
+          "scenario_id": "overwhelmed_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7466992299229054
+        },
+        {
+          "scenario_id": "overwhelmed_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7555399180911294
+        },
+        {
+          "scenario_id": "peaceful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8450871218663932
+        },
+        {
+          "scenario_id": "peaceful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8646285999034027
+        }
+      ],
+      "avg_satisfaction": 0.8042825262225767
+    },
+    {
+      "epoch": 2,
+      "scenarios_processed": 20,
+      "family_assignments": [
+        {
+          "scenario_id": "excited_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7568240352411244
+        },
+        {
+          "scenario_id": "excited_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8037349410137627
+        },
+        {
+          "scenario_id": "angry_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8091171020630952
+        },
+        {
+          "scenario_id": "angry_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7533048709676706
+        },
+        {
+          "scenario_id": "sad_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7577256770815789
+        },
+        {
+          "scenario_id": "sad_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8676825250538845
+        },
+        {
+          "scenario_id": "anxious_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7488892935274138
+        },
+        {
+          "scenario_id": "anxious_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8034891210446775
+        },
+        {
+          "scenario_id": "joyful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.853102114369806
+        },
+        {
+          "scenario_id": "joyful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8201828903111612
+        },
+        {
+          "scenario_id": "grief_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8031639050387543
+        },
+        {
+          "scenario_id": "grief_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8510248459320309
+        },
+        {
+          "scenario_id": "shame_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.9527246045725171
+        },
+        {
+          "scenario_id": "shame_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7445843532907065
+        },
+        {
+          "scenario_id": "playful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8009307970942158
+        },
+        {
+          "scenario_id": "playful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7472145780653014
+        },
+        {
+          "scenario_id": "overwhelmed_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.7466992299229054
+        },
+        {
+          "scenario_id": "overwhelmed_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.7555399180911294
+        },
+        {
+          "scenario_id": "peaceful_001",
+          "family_id": "Family_001",
+          "satisfaction": 0.8450871218663932
+        },
+        {
+          "scenario_id": "peaceful_002",
+          "family_id": "Family_001",
+          "satisfaction": 0.8646285999034027
+        }
+      ],
+      "avg_satisfaction": 0.8042825262225767
+    }
+  ],
+  "final_families": {},
+  "diversity_metrics": {}
+}
