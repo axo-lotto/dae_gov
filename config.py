@@ -313,7 +313,7 @@ class Config:
 
     # Interactive prompting settings
     INTERACTIVE_ENABLE_PHASE2 = True
-    INTERACTIVE_ENABLE_TSK_RECORDING = False  # Don't record interactive sessions by default
+    INTERACTIVE_ENABLE_TSK_RECORDING = True  # ✅ ENABLED: Record interactive sessions for superject learning
     INTERACTIVE_ENABLE_SALIENCE = True
     INTERACTIVE_SHOW_ORGAN_DETAILS = True
     INTERACTIVE_SHOW_TRANSDUCTION_TRAJECTORY = True

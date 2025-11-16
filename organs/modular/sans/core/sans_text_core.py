@@ -361,7 +361,12 @@ class SANSTextCore:
 
         # Get and normalize input embedding
         input_embedding = self.embedding_coordinator.embed(text)
-        input_embedding = input_embedding / np.linalg.norm(input_embedding)
+        norm = np.linalg.norm(input_embedding)
+        if norm > 0:
+            input_embedding = input_embedding / norm
+        else:
+            # Fallback to uniform if zero vector (rare edge case)
+            input_embedding = np.ones_like(input_embedding) / np.sqrt(len(input_embedding))
 
         # Compute cosine similarity to each prototype
         similarities = {}
@@ -520,7 +525,11 @@ class SANSTextCore:
             Similarity matrix of shape (n, n) with values in [-1, 1]
         """
         # Normalize embeddings for cosine similarity
-        embeddings_norm = embeddings / np.linalg.norm(embeddings, axis=1, keepdims=True)
+        # Guard against zero vectors to prevent NaN warnings
+        norms = np.linalg.norm(embeddings, axis=1, keepdims=True)
+        # Replace zero norms with 1.0 to avoid division by zero (result will be zero vector)
+        norms = np.where(norms == 0, 1.0, norms)
+        embeddings_norm = embeddings / norms
 
         # Compute cosine similarity matrix
         similarity_matrix = embeddings_norm @ embeddings_norm.T

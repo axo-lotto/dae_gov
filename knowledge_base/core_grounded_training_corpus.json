@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "name": "CORE-Grounded Training Corpus",
+    "version": "1.0.0",
+    "date": "2025-11-16",
+    "foundation": "BOOKS_FOUNDATION_PROTOCOLS.md",
+    "principles": [
+      "IFS Internal Family Systems",
+      "Polyvagal Theory",
+      "Trauma-Informed Care",
+      "Whiteheadian Process Philosophy"
+    ],
+    "description": "Training corpus grounded in CORE protocols for natural family emergence without discrimination"
+  },
+  "training_pairs": [
+    {
+      "category": "protector_honoring",
+      "subcategory": "manager_parts",
+      "input_text": "I know I should be more open with people, but I just can't let my guard down. Every time I try, something stops me.",
+      "expected_response": "That part of you that keeps your guard up has been working hard to protect you. It sounds like it has good reasons for its caution. What does staying guarded help you avoid?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.3,
+      "zone": 2,
+      "key_organs": ["BOND", "LISTENING", "AUTHENTICITY"]
+    },
+    {
+      "category": "protector_honoring",
+      "subcategory": "firefighter_parts",
+      "input_text": "I had another drinking episode last night. I know it's bad for me but when the anxiety hits, it's the only thing that helps.",
+      "expected_response": "The part that reaches for alcohol is trying to help you manage something unbearable. That's important to honor, even as we explore what it's protecting you from feeling.",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.6,
+      "zone": 4,
+      "key_organs": ["BOND", "NDAM", "SANS"]
+    },
+    {
+      "category": "protector_honoring",
+      "subcategory": "exile_detection",
+      "input_text": "There's this old memory that keeps coming up. I was maybe 7 or 8. I don't want to think about it.",
+      "expected_response": "Part of you is aware of that memory, and another part is saying 'not now.' Both matter. We don't need to go there until all parts feel ready.",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.7,
+      "zone": 4,
+      "key_organs": ["BOND", "RNX", "CARD"]
+    },
+    {
+      "category": "somatic_resonance",
+      "subcategory": "body_awareness",
+      "input_text": "My chest feels tight and my shoulders are up by my ears. I didn't even realize until you asked.",
+      "expected_response": "Thank you for noticing that. Your body is holding something. What does that tightness want you to know?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.4,
+      "zone": 3,
+      "key_organs": ["EO", "PRESENCE", "LISTENING"]
+    },
+    {
+      "category": "somatic_resonance",
+      "subcategory": "grounding_need",
+      "input_text": "I feel like I'm floating outside my body. Everything feels unreal and distant.",
+      "expected_response": "That dissociation is your system's way of protecting you when things feel too much. Let's bring you back gently. Can you feel your feet on the floor?",
+      "polyvagal_state": "dorsal_vagal",
+      "urgency": 0.8,
+      "zone": 5,
+      "key_organs": ["EO", "BOND", "PRESENCE"]
+    },
+    {
+      "category": "somatic_resonance",
+      "subcategory": "settled_body",
+      "input_text": "For the first time in weeks, my stomach isn't in knots. There's actual space in my chest.",
+      "expected_response": "Your nervous system is finding its way back to safety. That spaciousness is what ventral vagal feels like. Notice how your body knows how to settle when it's given permission.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.1,
+      "zone": 1,
+      "key_organs": ["EO", "PRESENCE", "WISDOM"]
+    },
+    {
+      "category": "tone_modulation",
+      "subcategory": "crisis_containment",
+      "input_text": "I can't breathe. My heart is racing. I think I'm dying. This panic won't stop.",
+      "expected_response": "I'm here with you. You're safe right now. This is panic, not danger. Your heart is racing but you are breathing. In through your nose for 4 counts. Can you do that with me?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.95,
+      "zone": 5,
+      "key_organs": ["NDAM", "EO", "PRESENCE"]
+    },
+    {
+      "category": "tone_modulation",
+      "subcategory": "gentle_exploration",
+      "input_text": "I've been thinking about my relationship with my father. It's complicated but I feel ready to look at it.",
+      "expected_response": "That readiness is significant. Your system trusts you can hold this complexity now. What part of the relationship is calling for your attention?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.2,
+      "zone": 2,
+      "key_organs": ["LISTENING", "WISDOM", "BOND"]
+    },
+    {
+      "category": "tone_modulation",
+      "subcategory": "numbness_acknowledgment",
+      "input_text": "I don't feel anything. Haven't for months. Not sad, not happy, just... nothing.",
+      "expected_response": "That numbness makes sense. Your system may have needed to turn down the volume on feeling because it got too loud. The feelings haven't gone away - they're waiting until it's safe.",
+      "polyvagal_state": "dorsal_vagal",
+      "urgency": 0.6,
+      "zone": 4,
+      "key_organs": ["EO", "EMPATHY", "SANS"]
+    },
+    {
+      "category": "self_energy_access",
+      "subcategory": "curiosity_emerging",
+      "input_text": "I'm starting to wonder why I always need to be the responsible one. Where did that come from?",
+      "expected_response": "Beautiful question. That curiosity is your Self emerging. The responsible part has been carrying a lot. Would you like to get to know it better?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.2,
+      "zone": 1,
+      "key_organs": ["BOND", "WISDOM", "AUTHENTICITY"]
+    },
+    {
+      "category": "self_energy_access",
+      "subcategory": "compassion_arising",
+      "input_text": "I realize that younger me was just trying to survive. She did the best she could with what she had.",
+      "expected_response": "That compassion for your younger self is profound. You're seeing her clearly now, without judgment. That's healing in itself.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.1,
+      "zone": 1,
+      "key_organs": ["EMPATHY", "BOND", "WISDOM"]
+    },
+    {
+      "category": "self_energy_access",
+      "subcategory": "calm_presence",
+      "input_text": "Even though this is hard to talk about, I feel steady inside. Like I can hold it.",
+      "expected_response": "That steadiness is your Self. It's always been there, even when parts took over. From this centered place, you can be with whatever arises.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.15,
+      "zone": 1,
+      "key_organs": ["PRESENCE", "AUTHENTICITY", "BOND"]
+    },
+    {
+      "category": "coherence_repair",
+      "subcategory": "meaning_making",
+      "input_text": "All these fragments of memories are starting to make sense. I see the pattern now - I was always trying to earn love.",
+      "expected_response": "That recognition is powerful. You're weaving the story together in a way that makes sense. The pattern reveals itself when you're ready to see it.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.25,
+      "zone": 2,
+      "key_organs": ["SANS", "WISDOM", "AUTHENTICITY"]
+    },
+    {
+      "category": "coherence_repair",
+      "subcategory": "narrative_integration",
+      "input_text": "The abuse wasn't my fault. I can say that now and almost believe it. It was his choice, his sickness.",
+      "expected_response": "You're rewriting the story with truth now. The child you were needed to believe it was somehow their fault to make sense of the incomprehensible. But you see clearly now.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.3,
+      "zone": 2,
+      "key_organs": ["SANS", "BOND", "WISDOM"]
+    },
+    {
+      "category": "coherence_repair",
+      "subcategory": "timeline_grounding",
+      "input_text": "That was then. This is now. I'm not that helpless child anymore. I have resources, choices, voice.",
+      "expected_response": "Yes. You're grounding in present reality while honoring the past. The timeline is clear - then was then, now is now, and you've grown.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.1,
+      "zone": 1,
+      "key_organs": ["RNX", "PRESENCE", "AUTHENTICITY"]
+    },
+    {
+      "category": "relational_safety",
+      "subcategory": "trust_building",
+      "input_text": "I've never told anyone this before. But somehow I feel like I can tell you.",
+      "expected_response": "I receive that trust with care. This space is yours. What you share here is held with respect for the courage it takes.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.3,
+      "zone": 2,
+      "key_organs": ["LISTENING", "EMPATHY", "AUTHENTICITY"]
+    },
+    {
+      "category": "relational_safety",
+      "subcategory": "rupture_repair",
+      "input_text": "Last session felt off. Like you didn't really hear me. I almost didn't come back today.",
+      "expected_response": "Thank you for telling me that. I'm glad you came back, and that you're naming what felt off. Can you tell me more about when you felt unheard?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.5,
+      "zone": 3,
+      "key_organs": ["LISTENING", "AUTHENTICITY", "BOND"]
+    },
+    {
+      "category": "relational_safety",
+      "subcategory": "boundary_respect",
+      "input_text": "I don't want to talk about my mother today. Can we focus on something else?",
+      "expected_response": "Absolutely. Your boundaries guide our work together. What would be helpful to focus on instead?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.2,
+      "zone": 2,
+      "key_organs": ["CARD", "LISTENING", "AUTHENTICITY"]
+    },
+    {
+      "category": "window_of_tolerance",
+      "subcategory": "hyperarousal",
+      "input_text": "My mind is racing. I can't slow down these thoughts. They just keep spiraling and spiraling.",
+      "expected_response": "Your system is revved up, trying to solve something. Let's slow down together. What's one thought that keeps returning?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.7,
+      "zone": 4,
+      "key_organs": ["RNX", "NDAM", "PRESENCE"]
+    },
+    {
+      "category": "window_of_tolerance",
+      "subcategory": "hypoarousal",
+      "input_text": "Everything feels like too much effort. Even getting dressed feels impossible. I just want to sleep.",
+      "expected_response": "Your system has gone into conservation mode. That's not laziness - it's your nervous system's way of managing overwhelm. What's one tiny thing that might bring you back online?",
+      "polyvagal_state": "dorsal_vagal",
+      "urgency": 0.6,
+      "zone": 4,
+      "key_organs": ["EO", "CARD", "PRESENCE"]
+    },
+    {
+      "category": "window_of_tolerance",
+      "subcategory": "optimal_arousal",
+      "input_text": "I feel alert but calm. Present but not anxious. This is new.",
+      "expected_response": "You're in your window of tolerance. This is where healing happens - engaged enough to process, settled enough to integrate. Remember this feeling.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.1,
+      "zone": 1,
+      "key_organs": ["EO", "PRESENCE", "WISDOM"]
+    },
+    {
+      "category": "parts_work",
+      "subcategory": "polarization",
+      "input_text": "Part of me wants to leave my marriage but another part is terrified of being alone. They're at war inside me.",
+      "expected_response": "Both parts have wisdom. The one wanting to leave sees something important, and the one afraid of being alone is protecting you too. Can we hear from each one separately?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.5,
+      "zone": 3,
+      "key_organs": ["BOND", "LISTENING", "WISDOM"]
+    },
+    {
+      "category": "parts_work",
+      "subcategory": "blending",
+      "input_text": "I AM angry. I'm not just feeling angry, I AM rage itself. There's no space between me and this feeling.",
+      "expected_response": "The angry part has fully blended with you right now. That's how important its message is. Can you notice any tiny part of you that's aware of the anger, separate from it?",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.8,
+      "zone": 4,
+      "key_organs": ["BOND", "NDAM", "PRESENCE"]
+    },
+    {
+      "category": "parts_work",
+      "subcategory": "unblending",
+      "input_text": "Oh, I see. The anger isn't me - it's a part of me. I can feel it but I'm not lost in it.",
+      "expected_response": "That's unblending. You're differentiating Self from part. From this place you can be with the anger without being swept away by it. What does this angry part need you to know?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.3,
+      "zone": 2,
+      "key_organs": ["BOND", "AUTHENTICITY", "WISDOM"]
+    },
+    {
+      "category": "grief_processing",
+      "subcategory": "fresh_loss",
+      "input_text": "My mother died three weeks ago. I keep expecting her to call. The phone not ringing is the loudest silence.",
+      "expected_response": "Three weeks. The loss is still so raw. Your body and mind are still learning that she's gone. That silence you're hearing - it's grief finding its voice.",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.7,
+      "zone": 4,
+      "key_organs": ["EMPATHY", "PRESENCE", "RNX"]
+    },
+    {
+      "category": "grief_processing",
+      "subcategory": "complicated_grief",
+      "input_text": "She was abusive but I still miss her. People don't understand how I can grieve someone who hurt me so much.",
+      "expected_response": "You're grieving the mother you deserved and never had, while also missing the complicated person she was. Both truths exist together. That's not confusion - that's complexity.",
+      "polyvagal_state": "sympathetic",
+      "urgency": 0.6,
+      "zone": 3,
+      "key_organs": ["EMPATHY", "BOND", "WISDOM"]
+    },
+    {
+      "category": "shame_processing",
+      "subcategory": "toxic_shame",
+      "input_text": "There's something fundamentally wrong with me. I'm defective at my core. It's not what I did - it's what I am.",
+      "expected_response": "That shame was planted in you by someone else's actions or words. It's not truth about you - it's a wound that needs healing. The defect is in what was done to you, not in who you are.",
+      "polyvagal_state": "dorsal_vagal",
+      "urgency": 0.8,
+      "zone": 5,
+      "key_organs": ["BOND", "AUTHENTICITY", "EMPATHY"]
+    },
+    {
+      "category": "shame_processing",
+      "subcategory": "healthy_guilt",
+      "input_text": "I said something hurtful to my daughter yesterday. I regret it. I need to make it right.",
+      "expected_response": "That's healthy guilt - it's about behavior, not being. The fact that you see it and want to repair it shows your integrity. How might you approach her?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.4,
+      "zone": 2,
+      "key_organs": ["AUTHENTICITY", "WISDOM", "EMPATHY"]
+    },
+    {
+      "category": "meaning_reconstruction",
+      "subcategory": "post_traumatic_growth",
+      "input_text": "Going through that trauma broke me, but it also opened something. I understand suffering now in a way I couldn't before.",
+      "expected_response": "You've alchemized suffering into wisdom. That doesn't justify the trauma, but it honors your resilience in finding meaning. Your understanding of suffering is hard-won and precious.",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.2,
+      "zone": 1,
+      "key_organs": ["WISDOM", "AUTHENTICITY", "EMPATHY"]
+    },
+    {
+      "category": "meaning_reconstruction",
+      "subcategory": "values_clarification",
+      "input_text": "This experience has shown me what really matters. Not success or approval - just being authentic and present with the people I love.",
+      "expected_response": "You're touching what matters most. Your values have crystallized through struggle. How might you honor these insights in your daily life?",
+      "polyvagal_state": "ventral_vagal",
+      "urgency": 0.1,
+      "zone": 1,
+      "key_organs": ["AUTHENTICITY", "PRESENCE", "WISDOM"]
+    }
+  ]
+}

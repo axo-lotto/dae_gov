@@ -227,6 +227,22 @@ except ImportError as e:
     TSK_RECORDER_AVAILABLE = False
     print(f"⚠️  TSK recorder not available: {e}")
 
+# 🌀 Import Pre-Emission Entity Prehension (NEXUS Entity Memory Training - November 16, 2025)
+try:
+    from persona_layer.pre_emission_entity_prehension import PreEmissionEntityPrehension
+    PRE_EMISSION_PREHENSION_AVAILABLE = True
+except ImportError as e:
+    PRE_EMISSION_PREHENSION_AVAILABLE = False
+    print(f"⚠️  Pre-emission entity prehension not available: {e}")
+
+# 🌀 Import Session Turn Manager (USER:SESSION:TURN Hierarchy - November 16, 2025)
+try:
+    from persona_layer.session_turn_manager import SessionTurnManager
+    SESSION_TURN_MANAGER_AVAILABLE = True
+except ImportError as e:
+    SESSION_TURN_MANAGER_AVAILABLE = False
+    print(f"⚠️  Session turn manager not available: {e}")
+
 
 class ConversationalOrganismWrapper:
     """
@@ -321,6 +337,32 @@ class ConversationalOrganismWrapper:
                 self.entity_organ_tracker = None
         else:
             self.entity_organ_tracker = None
+
+        # 🌀 Initialize Pre-Emission Entity Prehension (NEXUS Entity Memory Training - Nov 16, 2025)
+        if PRE_EMISSION_PREHENSION_AVAILABLE:
+            try:
+                self.entity_prehension = PreEmissionEntityPrehension(
+                    storage_dir="persona_layer/users"
+                )
+                print(f"   ✅ Pre-emission entity prehension ready (entity memory BEFORE organ activation)")
+            except Exception as e:
+                print(f"   ⚠️  Pre-emission entity prehension unavailable: {e}")
+                self.entity_prehension = None
+        else:
+            self.entity_prehension = None
+
+        # 🌀 Initialize Session Turn Manager (USER:SESSION:TURN Hierarchy - Nov 16, 2025)
+        if SESSION_TURN_MANAGER_AVAILABLE:
+            try:
+                self.session_manager = SessionTurnManager(
+                    storage_dir="persona_layer/users"
+                )
+                print(f"   ✅ Session turn manager ready (USER:SESSION:TURN temporal hierarchy)")
+            except Exception as e:
+                print(f"   ⚠️  Session turn manager unavailable: {e}")
+                self.session_manager = None
+        else:
+            self.session_manager = None
 
         # Initialize emission generation (if available)
         if EMISSION_AVAILABLE:
@@ -720,6 +762,43 @@ class ConversationalOrganismWrapper:
             if self.emission_generator and hasattr(self.emission_generator, 'set_exploration_context'):
                 self.emission_generator.set_exploration_context(regime=regime.value if isinstance(regime, SatisfactionRegime) else regime)
 
+        # 🌀 PRE-EMISSION ENTITY PREHENSION: Retrieve entity memory BEFORE organ activation (Nov 16, 2025)
+        # This is the KEY innovation: entity context is available during organ processing,
+        # enabling Entity Memory Nexus (EMN) formation and relational continuity.
+        entity_prehension_result = None
+        if user_id and self.entity_prehension:
+            try:
+                entity_prehension_result = self.entity_prehension.retrieve_relevant_entities(
+                    user_input=text,
+                    user_id=user_id
+                )
+
+                # Store in context for organ enrichment
+                context['entity_prehension'] = entity_prehension_result
+                context['organ_context_enrichment'] = self.entity_prehension.inject_into_organ_context(
+                    entity_prehension_result
+                )
+
+                # Show entity context if relevant
+                if entity_prehension_result.get('entity_memory_available', False):
+                    mentioned_count = len(entity_prehension_result.get('mentioned_entities', []))
+                    relational_query = entity_prehension_result.get('relational_query_detected', False)
+
+                    if relational_query or mentioned_count > 0:
+                        print(f"   🌀 Pre-emission entity prehension:")
+                        if entity_prehension_result.get('user_name'):
+                            print(f"      User: {entity_prehension_result['user_name']}")
+                        if relational_query:
+                            print(f"      🔍 Relational query detected")
+                        if mentioned_count > 0:
+                            print(f"      Entities mentioned: {mentioned_count}")
+                        richness = entity_prehension_result.get('historical_context', {}).get('memory_richness', 0.0)
+                        print(f"      Memory richness: {richness:.2f}")
+
+            except Exception as e:
+                print(f"   ⚠️  Pre-emission entity prehension failed: {e}")
+                entity_prehension_result = None
+
         # 🌀 DAE 3.0 LEGACY INTEGRATION: Capture INITIAL felt-state (November 15, 2025)
         # For transformation-based family emergence, we need to capture the organism's
         # felt-state BEFORE processing user input. This enables DAE 3.0's proven
@@ -785,6 +864,82 @@ class ConversationalOrganismWrapper:
                 print(f"   Debug: result type = {type(result).__name__}")
                 if isinstance(result, dict):
                     print(f"   Debug: result keys = {list(result.keys())[:10]}")
+
+        # 🌀 USER:SESSION:TURN HIERARCHY: Track turn within session (Nov 16, 2025)
+        # This enables temporal entity context preservation:
+        # - WHEN entities were mentioned (turn number)
+        # - IN WHAT CONTEXT (emotional state, polyvagal)
+        # - HOW ENTITY REFERENCES EVOLVE (session-level tracking)
+        if user_id and self.session_manager:
+            try:
+                # Get or create session for this user
+                session = self.session_manager.get_or_create_session(user_id)
+
+                # Extract felt_state from result for turn tracking
+                felt_state_snapshot = None
+                if 'felt_states' in result:
+                    from persona_layer.superject_structures import FeltStateSnapshot
+                    fs = result.get('felt_states', {})
+
+                    # Create FeltStateSnapshot from result data
+                    felt_state_snapshot = FeltStateSnapshot(
+                        timestamp=datetime.utcnow().isoformat(),
+                        turn_id=f"{user_id}_session_{session.session_id}_turn_{len(session.turns) + 1}",
+                        turn_number=len(session.turns) + 1,
+                        session_id=session.session_id,
+                        user_input_text=text,
+                        emission_text=result.get('emission', ''),
+                        entity_prehension=entity_prehension_result or {},
+                        mentioned_entities=[
+                            e.get('name', '') for e in (entity_prehension_result or {}).get('mentioned_entities', [])
+                        ],
+                        entity_references=(entity_prehension_result or {}).get('entity_references', []),
+                        v0_energy=fs.get('v0_energy', {}).get('final_energy', 0.5),
+                        v0_initial=fs.get('v0_energy', {}).get('initial_energy', 1.0),
+                        v0_descent_rate=fs.get('v0_energy', {}).get('energy_descent_rate', 0.0),
+                        convergence_cycles=fs.get('convergence_cycles', 1),
+                        convergence_reason=fs.get('convergence_reason', 'single_pass'),
+                        organ_activations=fs.get('organ_coherences', {}),
+                        zone=fs.get('zone', 3),
+                        polyvagal_state=fs.get('eo_polyvagal_state', 'unknown'),
+                        satisfaction=fs.get('satisfaction_final', 0.5)
+                    )
+
+                # Create turn record
+                turn = self.session_manager.create_turn(
+                    session=session,
+                    user_input=text,
+                    dae_response=result.get('emission', ''),
+                    entity_prehension=entity_prehension_result,
+                    felt_state=felt_state_snapshot,
+                    processing_time_ms=result.get('processing_time_ms', 0.0),
+                    emission_strategy=result.get('emission_strategy', 'unknown'),
+                    user_satisfaction=user_satisfaction
+                )
+
+                # Add turn to session (updates trajectories, entity timeline, etc.)
+                self.session_manager.add_turn(session, turn)
+
+                # Store session info in result for downstream use
+                result['session_info'] = {
+                    'session_id': session.session_id,
+                    'turn_number': turn.turn_number,
+                    'session_total_turns': session.total_turns,
+                    'entities_this_session': list(session.session_entities.keys()),
+                    'polyvagal_trajectory': session.polyvagal_trajectory,
+                    'crisis_session': session.crisis_session,
+                    'breakthrough_session': session.breakthrough_session
+                }
+
+                # Show session tracking info if entities mentioned
+                if turn.mentioned_entities:
+                    print(f"   🌀 Session tracking: Turn {turn.turn_number}")
+                    print(f"      Session entities: {list(session.session_entities.keys())}")
+                    if turn.relational_query:
+                        print(f"      🔍 Relational query in turn {turn.turn_number}")
+
+            except Exception as e:
+                print(f"⚠️  Session/turn tracking failed: {e}")
 
         # 🌀 PHASE 1.6: Record organism occasion (privacy-preserving) - November 14, 2025
         if user_id and self.unified_state:
@@ -919,6 +1074,18 @@ class ConversationalOrganismWrapper:
             coherence = getattr(result, 'coherence', 0.0)
             organ_coherences[organ_name] = coherence
 
+        # 🆕 LEVEL 2 FRACTAL REWARDS: Apply learned organ weight multipliers (November 16, 2025)
+        # This transduces organ confidence learning into actual emission quality
+        # High-confidence organs get boosted (1.0→1.2×), low-confidence organs get dampened (0.8×)
+        if hasattr(self, 'organ_confidence') and self.organ_confidence:
+            # Reload from disk to get latest learning (trainer may have updated)
+            self.organ_confidence._load()
+            for organ_name in organ_coherences:
+                multiplier = self.organ_confidence.get_weight_multiplier(organ_name)
+                organ_coherences[organ_name] *= multiplier
+                # Clamp to [0.0, 1.0] after multiplication
+                organ_coherences[organ_name] = min(1.0, organ_coherences[organ_name])
+
         # Compute mean coherence across organs
         mean_coherence = np.mean(list(organ_coherences.values()))
 
@@ -977,13 +1144,27 @@ class ConversationalOrganismWrapper:
                             print(f"      {organ_name}: All activations were NaN/Inf, skipping")
                             continue
 
-                        print(f"      {organ_name}: {len(filtered_activations)} atoms")
+                        # 🆕 LEVEL 2 FRACTAL REWARDS: Apply organ weight multipliers to atom activations
+                        # This transduces learned organ confidence into nexus formation
+                        # High-confidence organs contribute more to nexuses, low-confidence organs contribute less
+                        organ_multiplier = 1.0
+                        if hasattr(self, 'organ_confidence') and self.organ_confidence:
+                            organ_multiplier = self.organ_confidence.get_weight_multiplier(organ_name)
+                            # Apply multiplier to all atom activations for this organ
+                            filtered_activations = {
+                                atom: min(1.0, activation * organ_multiplier)
+                                for atom, activation in filtered_activations.items()
+                            }
+
+                        print(f"      {organ_name}: {len(filtered_activations)} atoms (×{organ_multiplier:.3f})")
                         for atom, activation in sorted(filtered_activations.items(), key=lambda x: x[1], reverse=True)[:3]:
                             print(f"        - {atom}: {activation:.4f}")
                         # Wrap in SemanticField object (required by nexus_composer)
+                        # Also apply multiplier to coherence for consistent weighting
+                        weighted_coherence = min(1.0, getattr(result, 'coherence', 0.0) * organ_multiplier)
                         semantic_fields[organ_name] = SemanticField(
                             organ_name=organ_name,
-                            coherence=getattr(result, 'coherence', 0.0),
+                            coherence=weighted_coherence,
                             lure=getattr(result, 'lure', 0.0),
                             atom_activations=filtered_activations,
                             pattern_count=len(getattr(result, 'patterns', []))
@@ -1807,6 +1988,12 @@ class ConversationalOrganismWrapper:
                         ethical_weight=salience_results['process_terms']['ethical_salience_field'],
                         morphogenetic_guidance=salience_results['morphogenetic_guidance']
                     )
+
+                    # 🆕 FIX: Extract trauma markers for per-cycle transduction recording
+                    salience_trauma_markers = salience_results.get('trauma_markers', {})
+                else:
+                    # Ensure variable is defined even if salience model not active
+                    salience_trauma_markers = {}
 
                 # Check Kairos
                 if occasion.detect_kairos():

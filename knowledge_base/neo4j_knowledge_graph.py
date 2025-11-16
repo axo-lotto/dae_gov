@@ -106,6 +106,9 @@ class Neo4jKnowledgeGraph:
         password = password or os.getenv('NEO4J_PASSWORD', 'password')
         self.database = database or os.getenv('NEO4J_DATABASE', 'neo4j')
 
+        self._connection_failed = False  # Track connection health
+        self._failure_count = 0  # Avoid repeated warnings
+
         try:
             self.driver = GraphDatabase.driver(self.uri, auth=(self.user, password))
             # Test connection
@@ -119,6 +122,7 @@ class Neo4jKnowledgeGraph:
             print(f"⚠️  Could not connect to Neo4j: {e}")
             print("   Run Neo4j locally or use Neo4j Aura (cloud)")
             self.driver = None
+            self._connection_failed = True
 
     def close(self):
         """Close database connection."""
@@ -504,6 +508,10 @@ class Neo4jKnowledgeGraph:
             ORDER BY e.mention_count DESC, e.last_mentioned DESC
             """
 
+        # Skip if connection already failed (avoid repeated errors)
+        if hasattr(self, '_connection_failed') and self._connection_failed:
+            return []
+
         try:
             with self.driver.session(database=self.database) as session:
                 result = session.run(query, user_id=user_id)
@@ -512,9 +520,22 @@ class Neo4jKnowledgeGraph:
                     entity_dict = dict(record['e'])
                     entity_dict['entity_types'] = record['types']
                     entities.append(entity_dict)
+                # Reset failure count on success
+                if hasattr(self, '_failure_count'):
+                    self._failure_count = 0
                 return entities
         except Exception as e:
-            print(f"⚠️  Error getting user entities: {e}")
+            # Track failures and only warn once per session
+            if not hasattr(self, '_failure_count'):
+                self._failure_count = 0
+            self._failure_count += 1
+
+            if self._failure_count == 1:
+                print(f"⚠️  Error getting user entities: {e}")
+            elif self._failure_count == 3:
+                print(f"⚠️  Neo4j connection failed 3 times, disabling for this session")
+                self._connection_failed = True
+
             return []
 
     def get_entity_relationships(self,

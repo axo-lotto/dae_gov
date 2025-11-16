@@ -84,6 +84,112 @@ class FeltStateSnapshot:
     satisfaction_modulated: Optional[float] = None  # Post-modulation satisfaction
     satisfaction_variance: float = 0.0  # Temporal variance across cycles
 
+    # 🌀 USER:SESSION:TURN HIERARCHY (November 16, 2025 - Entity Identity Architecture)
+    # Explicit turn/session identity for temporal tracking
+    turn_id: Optional[str] = None  # Unique turn identifier (e.g., "user_001_session_003_turn_012")
+    turn_number: Optional[int] = None  # Sequential turn in session (1, 2, 3...)
+    session_id: Optional[str] = None  # Links to parent session
+    user_input_text: Optional[str] = None  # Original user input for this turn
+    emission_text: Optional[str] = None  # DAE's response for this turn
+
+    # Entity context at turn time (pre-emission prehension result)
+    entity_prehension: Dict[str, Any] = field(default_factory=dict)  # From pre_emission_entity_prehension
+    mentioned_entities: List[str] = field(default_factory=list)  # Entity names mentioned this turn
+    entity_references: List[str] = field(default_factory=list)  # ['user', 'dae', 'story_entity', 'relationship']
+
+
+@dataclass
+class ConversationTurn:
+    """
+    Formal identity for a single conversation turn.
+
+    Links FeltStateSnapshot to USER:SESSION:TURN hierarchy with entity context.
+
+    Part of Quick Win #10: USER:SESSION:TURN Identity Hierarchy
+    Date: November 16, 2025
+    """
+    # Identity
+    turn_id: str  # Unique identifier: "user_{user_id}_session_{session_id}_turn_{turn_number}"
+    turn_number: int  # 1, 2, 3... within session
+    session_id: str  # Parent session identifier
+    user_id: str  # Parent user identifier
+    timestamp: str  # ISO timestamp
+
+    # Content
+    user_input: str  # Raw user message
+    dae_response: str  # DAE's emission
+    response_length: int  # Character count of response
+
+    # Entity context (pre-emission prehension)
+    entity_prehension: Dict[str, Any] = field(default_factory=dict)  # Full prehension result
+    mentioned_entities: List[str] = field(default_factory=list)  # ["Emma", "Michael"]
+    entity_references: List[str] = field(default_factory=list)  # ["user", "dae", "story_entity"]
+    relational_query: bool = False  # Was this a "do you remember" type query?
+    implicit_references: List[Dict[str, Any]] = field(default_factory=list)  # "my daughter" → Emma
+
+    # Felt state link
+    felt_state: Optional[FeltStateSnapshot] = None  # Full TSK capture for this turn
+
+    # Turn outcomes
+    user_satisfaction: Optional[float] = None  # 0-1, learned from continuation
+    user_continued: bool = True  # Did they send another message?
+    turn_success: Optional[bool] = None  # Did this turn achieve its goal?
+
+    # Metadata
+    processing_time_ms: float = 0.0  # How long to process
+    emission_strategy: Optional[str] = None  # "direct", "fusion", "felt_guided_llm"
+
+
+@dataclass
+class ConversationSession:
+    """
+    Complete conversation session with turn history and entity evolution.
+
+    Links USER to SESSION:TURN hierarchy with session-level entity tracking.
+
+    Part of Quick Win #10: USER:SESSION:TURN Identity Hierarchy
+    Date: November 16, 2025
+    """
+    # Identity
+    session_id: str  # Unique identifier: "user_{user_id}_session_{timestamp}"
+    user_id: str  # Parent user identifier
+    start_time: str  # ISO timestamp
+    end_time: Optional[str] = None  # Set when session ends
+
+    # Session turns (ordered list)
+    turns: List[ConversationTurn] = field(default_factory=list)
+
+    # Session-level entity tracking
+    session_entities: Dict[str, Any] = field(default_factory=dict)  # Entities discovered THIS session
+    entity_mentions_timeline: List[Dict[str, Any]] = field(default_factory=list)  # [{turn: 3, entity: "Emma", context: "crisis"}]
+    entity_mood_evolution: Dict[str, List[str]] = field(default_factory=dict)  # {"Emma": ["anxious", "hopeful", "relieved"]}
+
+    # Session polyvagal arc (emotional trajectory)
+    polyvagal_trajectory: List[str] = field(default_factory=list)  # ["ventral", "sympathetic", "mixed", "ventral"]
+    zone_trajectory: List[int] = field(default_factory=list)  # [1, 3, 2, 1]
+    v0_trajectory: List[float] = field(default_factory=list)  # [0.85, 0.45, 0.60, 0.78]
+
+    # Session satisfaction metrics
+    mean_satisfaction: float = 0.0
+    satisfaction_trend: str = "stable"  # "improving", "declining", "stable", "volatile"
+    total_turns: int = 0
+
+    # Session themes (discovered patterns)
+    dominant_themes: List[str] = field(default_factory=list)  # ["anxiety", "relationship", "work_stress"]
+    recurring_nexuses: List[str] = field(default_factory=list)  # ["coherence_repair", "sustainable_pacing"]
+
+    # Session-level organ participation
+    organ_participation_summary: Dict[str, float] = field(default_factory=dict)  # {"LISTENING": 0.85, "EMPATHY": 0.72}
+
+    # Session completion status
+    ended_naturally: bool = False  # User said goodbye vs timed out
+    crisis_session: bool = False  # Was crisis detected in this session?
+    breakthrough_session: bool = False  # High satisfaction, transformation detected
+
+    # Learning metadata
+    patterns_learned: int = 0  # How many transformation patterns learned
+    family_assignments: List[str] = field(default_factory=list)  # Which organic families matched
+
 
 @dataclass
 class TransformationPattern:
@@ -304,6 +410,16 @@ class EnhancedUserProfile:
     # Extracted entities from conversation (names, relationships, facts, preferences)
     entities: Dict[str, Any] = field(default_factory=dict)
     entity_history: List[Dict[str, Any]] = field(default_factory=list)  # Timeline of extractions
+
+    # 🌀 Phase 2.0: USER:SESSION:TURN Hierarchy (Nov 16, 2025 - Entity Identity Architecture)
+    # Complete session history with turn-level entity tracking
+    sessions: List[ConversationSession] = field(default_factory=list)  # All sessions for this user
+    current_session_id: Optional[str] = None  # Active session ID
+    total_sessions: int = 0  # Count of sessions
+
+    # Session-level patterns (learned across sessions)
+    session_patterns: Dict[str, Any] = field(default_factory=dict)  # {"crisis_sessions": 3, "breakthrough_sessions": 2}
+    entity_session_evolution: Dict[str, List[Dict[str, Any]]] = field(default_factory=dict)  # {"Emma": [{"session": 1, "mood": "anxious"}, {"session": 3, "mood": "hopeful"}]}
 
     def __post_init__(self):
         """Initialize nested structures."""

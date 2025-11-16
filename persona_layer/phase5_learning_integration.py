@@ -238,9 +238,24 @@ class Phase5LearningIntegration:
             'urgency_shift': final_felt_state.get('urgency', 0.0) - initial_felt_state.get('urgency', 0.0)
         }
 
-        # Note: cluster_learning expects organ_results dict, but for transformation
-        # approach we'll need to adapt this. For now, skip cluster learning update
-        # and focus on family assignment (the critical part for DAE 3.0 replication)
+        # Update cluster learning with organ coherences from final state
+        # This enables per-family organ weight learning
+        organ_coherences = final_felt_state.get('organ_coherences', {})
+        if organ_coherences and hasattr(self.cluster_learning, 'update_from_conversation'):
+            try:
+                # Build organ_results dict from coherences
+                organ_results_for_cluster = {
+                    organ: {'coherence': coherence, 'satisfaction': final_sat}
+                    for organ, coherence in organ_coherences.items()
+                }
+                self.cluster_learning.update_from_conversation(
+                    organ_results=organ_results_for_cluster,
+                    satisfaction_score=final_sat,
+                    family_id=family_assignment.family_id
+                )
+            except Exception as e:
+                # Silent fail - cluster learning is optional enhancement
+                pass
 
         # ================================================================
         # Return Learning Report

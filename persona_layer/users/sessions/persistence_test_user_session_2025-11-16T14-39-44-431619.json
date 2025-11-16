@@ -1,0 +1,237 @@
+{
+  "session_id": "persistence_test_user_session_2025-11-16T14-39-44-431619",
+  "user_id": "persistence_test_user",
+  "start_time": "2025-11-16T14:39:44.431619",
+  "end_time": null,
+  "turns": [
+    {
+      "turn_id": "persistence_test_user_session_persistence_test_user_session_2025-11-16T14-39-44-431619_turn_1",
+      "turn_number": 1,
+      "session_id": "persistence_test_user_session_2025-11-16T14-39-44-431619",
+      "user_id": "persistence_test_user",
+      "timestamp": "2025-11-16T14:39:44.432040",
+      "user_input": "I am worried about Emma.",
+      "dae_response": "I notice concern in your words.",
+      "response_length": 31,
+      "entity_prehension": {
+        "mentioned_entities": [
+          {
+            "name": "Emma",
+            "relationship": "daughter"
+          }
+        ],
+        "relational_query_detected": false
+      },
+      "mentioned_entities": [
+        "Emma"
+      ],
+      "entity_references": [],
+      "relational_query": false,
+      "implicit_references": [],
+      "felt_state": {
+        "timestamp": "2025-11-16T10:00:00",
+        "organ_signature": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "active_organs": [
+          "LISTENING",
+          "EMPATHY"
+        ],
+        "dominant_nexuses": [
+          "coherence_repair"
+        ],
+        "zone": 3,
+        "zone_name": "exploratory",
+        "polyvagal_state": "sympathetic",
+        "self_distance": 0.4,
+        "v0_energy": 0.35,
+        "satisfaction": 0.65,
+        "convergence_cycles": 3,
+        "transduction_mechanism": "coherence_repair",
+        "transduction_pathway": "empathic_bridging",
+        "user_satisfaction": null,
+        "user_continued": null,
+        "ndam_urgency": 0.0,
+        "meta_atoms_activated": {},
+        "emission_confidence": 0.0,
+        "emission_strategy": null,
+        "emission_emoji": [],
+        "kairos_detected": false,
+        "kairos_cycle_index": null,
+        "wave_training_enabled": true,
+        "appetitive_phase": null,
+        "satisfaction_raw": null,
+        "satisfaction_modulated": null,
+        "satisfaction_variance": 0.0,
+        "turn_id": null,
+        "turn_number": null,
+        "session_id": null,
+        "user_input_text": null,
+        "emission_text": null,
+        "entity_prehension": {},
+        "mentioned_entities": [],
+        "entity_references": []
+      },
+      "user_satisfaction": 0.7,
+      "user_continued": true,
+      "turn_success": null,
+      "processing_time_ms": 0.0,
+      "emission_strategy": null
+    },
+    {
+      "turn_id": "persistence_test_user_session_persistence_test_user_session_2025-11-16T14-39-44-431619_turn_2",
+      "turn_number": 2,
+      "session_id": "persistence_test_user_session_2025-11-16T14-39-44-431619",
+      "user_id": "persistence_test_user",
+      "timestamp": "2025-11-16T14:39:44.433642",
+      "user_input": "Emma smiled today, which felt good.",
+      "dae_response": "That smile carries hope.",
+      "response_length": 24,
+      "entity_prehension": {
+        "mentioned_entities": [
+          {
+            "name": "Emma",
+            "relationship": "daughter"
+          }
+        ],
+        "relational_query_detected": false
+      },
+      "mentioned_entities": [
+        "Emma"
+      ],
+      "entity_references": [],
+      "relational_query": false,
+      "implicit_references": [],
+      "felt_state": {
+        "timestamp": "2025-11-16T10:01:00",
+        "organ_signature": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "active_organs": [
+          "LISTENING",
+          "EMPATHY"
+        ],
+        "dominant_nexuses": [
+          "coherence_repair"
+        ],
+        "zone": 2,
+        "zone_name": "safe",
+        "polyvagal_state": "ventral",
+        "self_distance": 0.3,
+        "v0_energy": 0.25,
+        "satisfaction": 0.85,
+        "convergence_cycles": 2,
+        "transduction_mechanism": "coherence_repair",
+        "transduction_pathway": "empathic_bridging",
+        "user_satisfaction": null,
+        "user_continued": null,
+        "ndam_urgency": 0.0,
+        "meta_atoms_activated": {},
+        "emission_confidence": 0.0,
+        "emission_strategy": null,
+        "emission_emoji": [],
+        "kairos_detected": false,
+        "kairos_cycle_index": null,
+        "wave_training_enabled": true,
+        "appetitive_phase": null,
+        "satisfaction_raw": null,
+        "satisfaction_modulated": null,
+        "satisfaction_variance": 0.0,
+        "turn_id": null,
+        "turn_number": null,
+        "session_id": null,
+        "user_input_text": null,
+        "emission_text": null,
+        "entity_prehension": {},
+        "mentioned_entities": [],
+        "entity_references": []
+      },
+      "user_satisfaction": 0.85,
+      "user_continued": true,
+      "turn_success": null,
+      "processing_time_ms": 0.0,
+      "emission_strategy": null
+    }
+  ],
+  "session_entities": {
+    "Emma": {
+      "mention_count": 2,
+      "first_mention_turn": 1,
+      "last_mention_turn": 2,
+      "contexts": [
+        "sympathetic",
+        "ventral"
+      ]
+    }
+  },
+  "entity_mentions_timeline": [
+    {
+      "turn": 1,
+      "entity": "Emma",
+      "context": "sympathetic",
+      "timestamp": "2025-11-16T14:39:44.432040",
+      "relational_query": false
+    },
+    {
+      "turn": 2,
+      "entity": "Emma",
+      "context": "ventral",
+      "timestamp": "2025-11-16T14:39:44.433642",
+      "relational_query": false
+    }
+  ],
+  "entity_mood_evolution": {
+    "Emma": [
+      "sympathetic",
+      "ventral"
+    ]
+  },
+  "polyvagal_trajectory": [
+    "sympathetic",
+    "ventral"
+  ],
+  "zone_trajectory": [
+    3,
+    2
+  ],
+  "v0_trajectory": [
+    0.35,
+    0.25
+  ],
+  "mean_satisfaction": 0.7749999999999999,
+  "satisfaction_trend": "improving",
+  "total_turns": 2,
+  "dominant_themes": [],
+  "recurring_nexuses": [],
+  "organ_participation_summary": {},
+  "ended_naturally": false,
+  "crisis_session": true,
+  "breakthrough_session": false,
+  "patterns_learned": 0,
+  "family_assignments": [],
+  "_metadata": {
+    "saved_at": "2025-11-16T14:39:44.434065",
+    "version": "1.0",
+    "is_active": true
+  }
+}

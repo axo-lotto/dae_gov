@@ -1,0 +1,1026 @@
+{
+  "training_summary": {
+    "num_epochs": 10,
+    "total_conversations": 300,
+    "total_duration_seconds": 0.0010917186737060547,
+    "final_families": 0,
+    "final_organ_confidence_std": 0.0
+  },
+  "family_emergence": {
+    "history": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "growth_rate": 0.0
+  },
+  "organ_differentiation": {
+    "final_confidences": {
+      "LISTENING": 0.5,
+      "EMPATHY": 0.5,
+      "WISDOM": 0.5,
+      "AUTHENTICITY": 0.5,
+      "PRESENCE": 0.5,
+      "BOND": 0.5,
+      "SANS": 0.5,
+      "NDAM": 0.5,
+      "RNX": 0.5,
+      "EO": 0.5,
+      "CARD": 0.5
+    },
+    "std_evolution": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "signal_health": {
+    "final": {
+      "mean_pairwise_agreement": 0.8,
+      "mean_organ_entropy": 0.95,
+      "mean_multiplicity_index": 0.15,
+      "mean_nexus_coherence": 0.75,
+      "mean_max_disagreement": 0.4,
+      "organ_confidence_std": 0.0,
+      "organ_confidence_range": 0.0,
+      "inter_family_distance_mean": 0.0,
+      "inter_family_distance_std": 0.0,
+      "overall_health_score": 0.8000000000000002,
+      "warnings": [
+        "Low organ differentiation (std=0.000)"
+      ],
+      "recommendations": [
+        "Organs not differentiating - check Level 2 updates"
+      ],
+      "individual_health_scores": {
+        "agreement": 0.9000000000000001,
+        "multiplicity": 1.0,
+        "organ_differentiation": 0.5,
+        "family_separation": 0
+      }
+    },
+    "history": [
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      }
+    ]
+  },
+  "epoch_metrics": [
+    {
+      "epoch": 1,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 0.00021314620971679688
+    },
+    {
+      "epoch": 2,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 9.298324584960938e-05
+    },
+    {
+      "epoch": 3,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.702278137207031e-05
+    },
+    {
+      "epoch": 4,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.082389831542969e-05
+    },
+    {
+      "epoch": 5,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 9.107589721679688e-05
+    },
+    {
+      "epoch": 6,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.082389831542969e-05
+    },
+    {
+      "epoch": 7,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.392333984375e-05
+    },
+    {
+      "epoch": 8,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 7.987022399902344e-05
+    },
+    {
+      "epoch": 9,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.916854858398438e-05
+    },
+    {
+      "epoch": 10,
+      "conversations_processed": 30,
+      "conversations_learned": 0,
+      "initial_families": 0,
+      "final_families": 0,
+      "new_families_created": 0,
+      "family_sizes": [],
+      "family_size_std": 0,
+      "mean_satisfaction": 0,
+      "satisfaction_std": 0,
+      "organ_confidence_final": {
+        "LISTENING": 0.5,
+        "EMPATHY": 0.5,
+        "WISDOM": 0.5,
+        "AUTHENTICITY": 0.5,
+        "PRESENCE": 0.5,
+        "BOND": 0.5,
+        "SANS": 0.5,
+        "NDAM": 0.5,
+        "RNX": 0.5,
+        "EO": 0.5,
+        "CARD": 0.5
+      },
+      "organ_confidence_std": 0.0,
+      "organ_confidence_changes": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.0,
+        "EO": 0.0,
+        "CARD": 0.0
+      },
+      "max_organ_change": 0.0,
+      "min_organ_change": 0.0,
+      "zipf_alpha": 0.0,
+      "zipf_r_squared": 0.0,
+      "mean_distance": 0,
+      "distance_std": 0,
+      "signal_health": {
+        "mean_pairwise_agreement": 0.8,
+        "mean_organ_entropy": 0.95,
+        "mean_multiplicity_index": 0.15,
+        "mean_nexus_coherence": 0.75,
+        "mean_max_disagreement": 0.4,
+        "organ_confidence_std": 0.0,
+        "organ_confidence_range": 0.0,
+        "inter_family_distance_mean": 0.0,
+        "inter_family_distance_std": 0.0,
+        "overall_health_score": 0.8000000000000002,
+        "warnings": [
+          "Low organ differentiation (std=0.000)"
+        ],
+        "recommendations": [
+          "Organs not differentiating - check Level 2 updates"
+        ],
+        "individual_health_scores": {
+          "agreement": 0.9000000000000001,
+          "multiplicity": 1.0,
+          "organ_differentiation": 0.5,
+          "family_separation": 0
+        }
+      },
+      "duration_seconds": 8.296966552734375e-05
+    }
+  ],
+  "zipf_validation": {
+    "final_alpha": 0.0,
+    "final_r_squared": 0.0,
+    "zipf_law_emerged": false
+  }
+}

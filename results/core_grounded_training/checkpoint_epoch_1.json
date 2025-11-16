@@ -1,0 +1,146 @@
+{
+  "epoch": 1,
+  "timestamp": "2025-11-16T10:48:37.410082",
+  "metrics": {
+    "epoch": 1,
+    "conversations_processed": 30,
+    "new_families_created": 3,
+    "total_families": 3,
+    "families_touched": 3,
+    "family_sizes": [
+      22,
+      6,
+      2
+    ],
+    "mean_satisfaction": 0.8456089983751972,
+    "satisfaction_std": 0.0590909170144832,
+    "mean_distance": 0.0,
+    "distance_std": 0.0,
+    "organ_confidence_final": {
+      "LISTENING": 0.9249526823515004,
+      "EMPATHY": 0.7847663949999999,
+      "WISDOM": 0.7342795,
+      "AUTHENTICITY": 0.67195,
+      "PRESENCE": 0.8970544339526755,
+      "BOND": 0.843094701955,
+      "SANS": 0.9788044208623918,
+      "NDAM": 0.7608515499999999,
+      "RNX": 0.9764493565137687,
+      "EO": 0.9676945905538666,
+      "NEXUS": 0.9788044208623918,
+      "CARD": 0.9764493565137687
+    },
+    "organ_confidence_std": 0.1068207758376466,
+    "organ_changes": {
+      "LISTENING": 0.4249526823515004,
+      "EMPATHY": 0.2847663949999999,
+      "WISDOM": 0.23427949999999997,
+      "AUTHENTICITY": 0.17195000000000005,
+      "PRESENCE": 0.3970544339526755,
+      "BOND": 0.343094701955,
+      "SANS": 0.47880442086239183,
+      "NDAM": 0.26085154999999993,
+      "RNX": 0.47644935651376874,
+      "EO": 0.46769459055386664,
+      "CARD": 0.47644935651376874
+    },
+    "category_results": {
+      "protector_honoring": {
+        "count": 3,
+        "mean_satisfaction": 0.8088451148796278,
+        "num_families": 1
+      },
+      "somatic_resonance": {
+        "count": 3,
+        "mean_satisfaction": 0.8185427529204389,
+        "num_families": 2
+      },
+      "tone_modulation": {
+        "count": 3,
+        "mean_satisfaction": 0.8364459329369832,
+        "num_families": 1
+      },
+      "self_energy_access": {
+        "count": 3,
+        "mean_satisfaction": 0.8338956497189023,
+        "num_families": 2
+      },
+      "coherence_repair": {
+        "count": 3,
+        "mean_satisfaction": 0.9109384260241115,
+        "num_families": 2
+      },
+      "relational_safety": {
+        "count": 3,
+        "mean_satisfaction": 0.8112143102590764,
+        "num_families": 2
+      },
+      "window_of_tolerance": {
+        "count": 3,
+        "mean_satisfaction": 0.8594258920430913,
+        "num_families": 2
+      },
+      "parts_work": {
+        "count": 3,
+        "mean_satisfaction": 0.8471182475999077,
+        "num_families": 1
+      },
+      "grief_processing": {
+        "count": 2,
+        "mean_satisfaction": 0.8063424813951439,
+        "num_families": 1
+      },
+      "shame_processing": {
+        "count": 2,
+        "mean_satisfaction": 0.8414816003018126,
+        "num_families": 1
+      },
+      "meaning_reconstruction": {
+        "count": 2,
+        "mean_satisfaction": 0.9466714043577913,
+        "num_families": 2
+      }
+    },
+    "epoch_time_seconds": 164.07325625419617,
+    "signal_health": {
+      "mean_pairwise_agreement": 0.5517660399281221,
+      "mean_organ_entropy": 0.7930243975031533,
+      "mean_multiplicity_index": 0.3563953633133485,
+      "mean_nexus_coherence": 0.5055445982462207,
+      "mean_max_disagreement": 1.0,
+      "organ_confidence_std": 0.1068207758376466,
+      "organ_confidence_range": 0.3068544208623918,
+      "inter_family_distance_mean": 1.5620059270813957,
+      "inter_family_distance_std": 0.35125316159778075,
+      "overall_health_score": 0.7485183404469847,
+      "warnings": [
+        "Low pairwise agreement (0.552)",
+        "High multiplicity (0.356) - excessive organ disagreement"
+      ],
+      "recommendations": [
+        "Organs not coordinating well - check organ coherence computation"
+      ],
+      "individual_health_scores": {
+        "agreement": 0.45980503327343514,
+        "multiplicity": 0.9908637666952165,
+        "organ_differentiation": 0.8560692527921554,
+        "family_separation": 0.6873353090271319
+      }
+    }
+  },
+  "families": 3,
+  "organ_confidence": {
+    "LISTENING": 0.9249526823515004,
+    "EMPATHY": 0.7847663949999999,
+    "WISDOM": 0.7342795,
+    "AUTHENTICITY": 0.67195,
+    "PRESENCE": 0.8970544339526755,
+    "BOND": 0.843094701955,
+    "SANS": 0.9788044208623918,
+    "NDAM": 0.7608515499999999,
+    "RNX": 0.9764493565137687,
+    "EO": 0.9676945905538666,
+    "NEXUS": 0.9788044208623918,
+    "CARD": 0.9764493565137687
+  }
+}

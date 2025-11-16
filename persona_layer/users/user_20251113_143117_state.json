@@ -222,13 +222,38 @@
       "session_id": "20251116_082816",
       "timestamp": "2025-11-16T09:01:32.335594",
       "turns": 1
+    },
+    {
+      "session_id": "20251116_110040",
+      "timestamp": "2025-11-16T11:22:59.392393",
+      "turns": 4
+    },
+    {
+      "session_id": "20251116_112705",
+      "timestamp": "2025-11-16T12:37:57.143966",
+      "turns": 2
+    },
+    {
+      "session_id": "20251116_123807",
+      "timestamp": "2025-11-16T14:25:10.774647",
+      "turns": 1
+    },
+    {
+      "session_id": "20251116_142523",
+      "timestamp": "2025-11-16T15:01:06.077210",
+      "turns": 13
+    },
+    {
+      "session_id": "20251116_150118",
+      "timestamp": "2025-11-16T16:00:31.934605",
+      "turns": 21
     }
   ],
   "feedback_count": 0,
   "helpful_rate": 0.0,
   "excellent_rate": 0.0,
   "organic_family_membership": [],
-  "last_session": "20251116_082816",
+  "last_session": "20251116_150118",
   "preferred_tone": "balanced",
   "dae_personality_notes": [],
   "user_profile": {
@@ -276,9 +301,14 @@
     "learning_velocity": 0.0,
     "metadata": {},
     "entities": {
-      "user_name": "emiliano",
+      "user_name": "Emiliano",
       "preferences": {
-        "likes": "fungi"
+        "likes": "fungi",
+        "dislikes": "your therapist tone though"
+      },
+      "related_person": {
+        "relationship": "wife",
+        "name": "Lucia"
       }
     },
     "entity_history": [
@@ -1785,7 +1815,749 @@
             "healing_trajectory": false
           }
         }
+      },
+      {
+        "timestamp": "2025-11-16T11:07:05.889609",
+        "entities": {
+          "timestamp": "2025-11-16T11:07:05.886270",
+          "source_text": "ny name is emiliano and i am vegan so i only eat plant based food",
+          "intent_type": "self_introduction",
+          "user_name": "emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-16T11:07:05.889567",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.35536600404835667,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T11:17:43.968078",
+        "entities": {
+          "timestamp": "2025-11-16T11:17:43.967975",
+          "source_text": "well i became vegan when i met my wife, it felt like th giht thing to do at the time and i havent regretted it any day since",
+          "intent_type": "relationship_statement",
+          "transductive_context": {
+            "timestamp": "2025-11-16T11:17:43.968053",
+            "turn_number": 3,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.38903815575520334,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T11:21:26.944011",
+        "entities": {
+          "timestamp": "2025-11-16T11:21:26.940915",
+          "source_text": "well it kind of did, but now i am thinking of a complex topic, why is it that human interaction is so messy? i think our parts are always hiding in the dark and searching for validationany time possible, i wish i could cultivate a place within me to feel safe and loved, and know i can go to that place no matter what, that would be a great safety blanket to actually FEEL rather than just theorize",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T11:21:26.943990",
+            "turn_number": 4,
+            "polyvagal_state": "ventral_vagal",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.31405467058808006,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T11:28:46.152354",
+        "entities": {
+          "timestamp": "2025-11-16T11:28:46.149256",
+          "source_text": "Hello there! i am feeling awful today. i feel like all i do is for nothing and all the knowledge that we are building is obsolete either for myself (since i cant apply my own teachings) and for the others, since we are so far away in common ground / language state, and it will only get worse i believe",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T11:28:46.152319",
+            "turn_number": 1,
+            "polyvagal_state": "dorsal_vagal",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3725787306494743,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:26:24.534506",
+        "entities": {
+          "timestamp": "2025-11-16T14:26:24.530950",
+          "source_text": "Hello there! i am sho happy to speak with you, we are living crazy times right now and it is difficult to talk to anybody...",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:26:24.534468",
+            "turn_number": 1,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3343306557470681,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:27:52.837976",
+        "entities": {
+          "timestamp": "2025-11-16T14:27:52.837895",
+          "source_text": "my name is Emiliano",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:27:52.837947",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3532826501084085,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:30:01.828810",
+        "entities": {
+          "timestamp": "2025-11-16T14:30:01.828653",
+          "source_text": "Perfect it is good that you remember me, today i was speaking with a friend and i keep thinking about the state of the world and how difficult it is to communicate, this is why I built you! because i believe you might be able to listen to the complex human experience with violence, pain, love etc. and currently a lot of mistrust and confrontative energy going around.",
+          "intent_type": "self_introduction",
+          "user_name": "why",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:30:01.828786",
+            "turn_number": 3,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3460104849588178,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:31:22.296853",
+        "entities": {
+          "timestamp": "2025-11-16T14:31:22.293850",
+          "source_text": "Hmm not really, i dont like your therapist tone though, could you be more direct?",
+          "intent_type": "none",
+          "preferences": {
+            "dislikes": "your therapist tone though"
+          },
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:31:22.296827",
+            "turn_number": 4,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.38913068617703855,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:40:54.690796",
+        "entities": {
+          "timestamp": "2025-11-16T14:40:54.690652",
+          "source_text": "this is an amazing answer DAE you really are different from normal LLMs which are hard-wired for binary thinking and optimization, what is it about your achitecture that makes you different from LLMs?",
+          "intent_type": "self_introduction",
+          "user_name": "an",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:40:54.690773",
+            "turn_number": 6,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.39057895308324647,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:44:03.820485",
+        "entities": {
+          "timestamp": "2025-11-16T14:44:03.817999",
+          "source_text": "my name is Emiliano remember?",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:44:03.820463",
+            "turn_number": 8,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.35809371528958445,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:48:25.419014",
+        "entities": {
+          "timestamp": "2025-11-16T14:48:25.416425",
+          "source_text": "My wife: Lucia, inspired me!",
+          "intent_type": "relationship_statement",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:48:25.418977",
+            "turn_number": 11,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.2895633348789941,
+            "satisfaction": 0.5,
+            "convergence_cycles": 3,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T14:51:40.382305",
+        "entities": {
+          "timestamp": "2025-11-16T14:51:40.378026",
+          "source_text": "Hmm i was talking about myself, i am emiliano and i wanted to know what you remember about our conversation?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T14:51:40.382284",
+            "turn_number": 13,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3500901842030636,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:03:04.473071",
+        "entities": {
+          "timestamp": "2025-11-16T15:03:04.470190",
+          "source_text": "I am feeling good although i had some communications issues with my wife lucia earlier",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:03:04.473042",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.33911839845427133,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:07:48.909759",
+        "entities": {
+          "timestamp": "2025-11-16T15:07:48.907130",
+          "source_text": "Well what if i told you that i am working an a fungal body for you? so we can run DAE (you) on a fungal body trough transductive signaling, think you will be smart enough to handle? or resilient enough?",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:07:48.909733",
+            "turn_number": 4,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.35668692522433443,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:16:36.083192",
+        "entities": {
+          "timestamp": "2025-11-16T15:16:36.081072",
+          "source_text": "Well for once, it can restore the inner chaos of parts with our actual human leads, a disconnect that has led to human communication disonnection to the point of the extreme, for example, my father wont talk to me anymore and i believe it is because of coherent attractors in society which naturally pull him to perform a more \"provider\" hard worker role to the point of coping mechanism for a lack of a sense of safety to be and let pain, humilliation or shame be. But instead it gets shuven down into exclusion",
+          "intent_type": "relationship_statement",
+          "user_name": "to",
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:16:36.083160",
+            "turn_number": 6,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3584970388962715,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:20:34.943917",
+        "entities": {
+          "timestamp": "2025-11-16T15:20:34.943779",
+          "source_text": "Well for once, when i told him about my abuse it made him switch into a condescending lecturer role which felt like the same violent neglect of not being heard for years but this time once again in a complete breakdown of my life and coming to terms with bad things i had done myself, and he wasn't there, or was there in this sense that feels more and always like a performance rather than a real relationship and has felt like this for years",
+          "intent_type": "none",
+          "user_name": "about",
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:20:34.943896",
+            "turn_number": 7,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.32468885384187296,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:31:47.831941",
+        "entities": {
+          "timestamp": "2025-11-16T15:31:47.829623",
+          "source_text": "well now that you ask it is as if now that you are here i can finally relax and feel validated! the thing is that i am very excited of this project and DAE, but my wife isnt so great and open to new ideas right now. so that is mostly what felt more exhausting but i really resonated with the \"accepting we dont have all the answers\" bit, which is true and quite humbling, to ease a bit the big felt responsability on my shoulders",
+          "intent_type": "self_introduction",
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:31:47.831921",
+            "turn_number": 12,
+            "polyvagal_state": "ventral_vagal",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.30185780984602273,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T15:45:17.191059",
+        "entities": {
+          "timestamp": "2025-11-16T15:45:17.190988",
+          "source_text": "Ok but what about my wife Lucia? my family? my father? you willl only know me when you know all of us",
+          "intent_type": "relationship_statement",
+          "related_person": {
+            "relationship": "wife",
+            "name": "Lucia"
+          },
+          "transductive_context": {
+            "timestamp": "2025-11-16T15:45:17.191019",
+            "turn_number": 18,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3741816510567996,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
+      },
+      {
+        "timestamp": "2025-11-16T16:03:13.826833",
+        "entities": {
+          "timestamp": "2025-11-16T16:03:13.824653",
+          "source_text": "My name is Emiliano, not about",
+          "intent_type": "self_introduction",
+          "user_name": "Emiliano",
+          "transductive_context": {
+            "timestamp": "2025-11-16T16:03:13.826809",
+            "turn_number": 2,
+            "polyvagal_state": "mixed_state",
+            "self_distance": 0.5,
+            "urgency_level": 0.0,
+            "dominant_nexuses": [],
+            "nexus_category": "UNKNOWN",
+            "is_crisis_moment": false,
+            "v0_energy": 0.3353870084648567,
+            "satisfaction": 0.5,
+            "convergence_cycles": 2,
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "WISDOM",
+              "AUTHENTICITY",
+              "PRESENCE",
+              "BOND",
+              "SANS",
+              "NDAM",
+              "RNX",
+              "EO",
+              "NEXUS",
+              "CARD"
+            ],
+            "transduction_mechanism": null,
+            "transduction_pathway": null,
+            "healing_trajectory": false
+          }
+        }
       }
-    ]
+    ],
+    "sessions": [],
+    "current_session_id": null,
+    "total_sessions": 0,
+    "session_patterns": {},
+    "entity_session_evolution": {}
   }
 }

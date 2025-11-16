@@ -749,11 +749,43 @@ class InteractiveSession:
                 signature[organ_name] = organ_result['atom_activations']
         return signature
 
+    def _reconnect_neo4j(self) -> bool:
+        """
+        Attempt to reconnect to Neo4j after connection loss.
+
+        Returns:
+            bool: True if reconnection successful, False otherwise
+        """
+        if not Config.NEO4J_ENABLED:
+            return False
+
+        try:
+            from knowledge_base.neo4j_knowledge_graph import Neo4jKnowledgeGraph
+            print("   🔄 Attempting Neo4j reconnection...")
+            self.knowledge_graph = Neo4jKnowledgeGraph(
+                uri=Config.NEO4J_URI,
+                user=Config.NEO4J_USER,
+                password=Config.NEO4J_PASSWORD,
+                database=Config.NEO4J_DATABASE
+            )
+            if self.knowledge_graph.driver:
+                print("   ✅ Neo4j reconnected successfully")
+                return True
+            else:
+                print("   ⚠️  Neo4j reconnection failed - using JSON fallback")
+                self.knowledge_graph = None
+                return False
+        except Exception as e:
+            print(f"   ⚠️  Neo4j reconnection error: {e}")
+            self.knowledge_graph = None
+            return False
+
     def _store_entities_in_neo4j(self, enriched_entities: dict, felt_state: dict):
         """
         Store extracted entities in Neo4j knowledge graph.
 
         Creates entity nodes and relationships with TSK enrichment.
+        Includes automatic reconnection on connection failures.
 
         Args:
             enriched_entities: Extracted entities with transductive context
@@ -773,90 +805,116 @@ class InteractiveSession:
                 'satisfaction': felt_state.get('satisfaction', 0.5)
             }
 
-        # Store user name
-        if enriched_entities.get('user_name'):
-            name = enriched_entities['user_name']
-            self.knowledge_graph.create_entity(
-                entity_type='Person',
-                entity_value=name,
-                user_id=self.user['user_id'],
-                properties=tsk_properties
-            )
+        # Wrap all Neo4j operations with retry logic for connection resilience
+        max_retries = 2
+        for attempt in range(max_retries):
+            try:
+                # Store user name
+                if enriched_entities.get('user_name'):
+                    name = enriched_entities['user_name']
+                    self.knowledge_graph.create_entity(
+                        entity_type='Person',
+                        entity_value=name,
+                        user_id=self.user['user_id'],
+                        properties=tsk_properties
+                    )
 
-        # Store family members with relationships
-        if enriched_entities.get('family_members'):
-            user_name = enriched_entities.get('user_name', 'User')
-            for member in enriched_entities['family_members']:
-                member_name = member.get('name')
-                relationship = member.get('relationship', 'RELATED_TO')
+                # Store family members with relationships
+                if enriched_entities.get('family_members'):
+                    user_name = enriched_entities.get('user_name', 'User')
+                    for member in enriched_entities['family_members']:
+                        member_name = member.get('name')
+                        relationship = member.get('relationship', 'RELATED_TO')
 
-                # Create member entity
-                self.knowledge_graph.create_entity(
-                    entity_type='Person',
-                    entity_value=member_name,
-                    user_id=self.user['user_id'],
-                    properties=tsk_properties
-                )
+                        # Create member entity
+                        self.knowledge_graph.create_entity(
+                            entity_type='Person',
+                            entity_value=member_name,
+                            user_id=self.user['user_id'],
+                            properties=tsk_properties
+                        )
 
-                # Create relationship (HAS_DAUGHTER, HAS_SON, etc.)
-                rel_type = f"HAS_{relationship.upper()}" if relationship else "HAS_FAMILY_MEMBER"
-                self.knowledge_graph.create_entity_relationship(
-                    from_entity_value=user_name,
-                    to_entity_value=member_name,
-                    rel_type=rel_type,
-                    user_id=self.user['user_id'],
-                    properties={'confidence': member.get('confidence', 0.9)}
-                )
+                        # Create relationship (HAS_DAUGHTER, HAS_SON, etc.)
+                        rel_type = f"HAS_{relationship.upper()}" if relationship else "HAS_FAMILY_MEMBER"
+                        self.knowledge_graph.create_entity_relationship(
+                            from_entity_value=user_name,
+                            to_entity_value=member_name,
+                            rel_type=rel_type,
+                            user_id=self.user['user_id'],
+                            properties={'confidence': member.get('confidence', 0.9)}
+                        )
 
-        # Store friends
-        if enriched_entities.get('friends'):
-            user_name = enriched_entities.get('user_name', 'User')
-            for friend_name in enriched_entities['friends']:
-                # Create friend entity
-                self.knowledge_graph.create_entity(
-                    entity_type='Person',
-                    entity_value=friend_name,
-                    user_id=self.user['user_id'],
-                    properties=tsk_properties
-                )
+                # Store friends
+                if enriched_entities.get('friends'):
+                    user_name = enriched_entities.get('user_name', 'User')
+                    for friend_name in enriched_entities['friends']:
+                        # Create friend entity
+                        self.knowledge_graph.create_entity(
+                            entity_type='Person',
+                            entity_value=friend_name,
+                            user_id=self.user['user_id'],
+                            properties=tsk_properties
+                        )
 
-                # Create HAS_FRIEND relationship
-                self.knowledge_graph.create_entity_relationship(
-                    from_entity_value=user_name,
-                    to_entity_value=friend_name,
-                    rel_type='HAS_FRIEND',
-                    user_id=self.user['user_id']
-                )
+                        # Create HAS_FRIEND relationship
+                        self.knowledge_graph.create_entity_relationship(
+                            from_entity_value=user_name,
+                            to_entity_value=friend_name,
+                            rel_type='HAS_FRIEND',
+                            user_id=self.user['user_id']
+                        )
 
-        # Store locations
-        if enriched_entities.get('locations'):
-            for location in enriched_entities['locations']:
-                self.knowledge_graph.create_entity(
-                    entity_type='Place',
-                    entity_value=location,
-                    user_id=self.user['user_id'],
-                    properties=tsk_properties
-                )
+                # Store locations
+                if enriched_entities.get('locations'):
+                    for location in enriched_entities['locations']:
+                        self.knowledge_graph.create_entity(
+                            entity_type='Place',
+                            entity_value=location,
+                            user_id=self.user['user_id'],
+                            properties=tsk_properties
+                        )
 
-        # Store preferences
-        if enriched_entities.get('preferences'):
-            for pref_key, pref_value in enriched_entities['preferences'].items():
-                self.knowledge_graph.create_entity(
-                    entity_type='Preference',
-                    entity_value=f"{pref_key}: {pref_value}",
-                    user_id=self.user['user_id'],
-                    properties=tsk_properties
-                )
+                # Store preferences
+                if enriched_entities.get('preferences'):
+                    for pref_key, pref_value in enriched_entities['preferences'].items():
+                        self.knowledge_graph.create_entity(
+                            entity_type='Preference',
+                            entity_value=f"{pref_key}: {pref_value}",
+                            user_id=self.user['user_id'],
+                            properties=tsk_properties
+                        )
 
-        # Store facts
-        if enriched_entities.get('facts'):
-            for fact in enriched_entities['facts']:
-                self.knowledge_graph.create_entity(
-                    entity_type='Fact',
-                    entity_value=fact,
-                    user_id=self.user['user_id'],
-                    properties=tsk_properties
-                )
+                # Store facts
+                if enriched_entities.get('facts'):
+                    for fact in enriched_entities['facts']:
+                        self.knowledge_graph.create_entity(
+                            entity_type='Fact',
+                            entity_value=fact,
+                            user_id=self.user['user_id'],
+                            properties=tsk_properties
+                        )
+
+                # Success - break out of retry loop
+                break
+
+            except Exception as e:
+                error_msg = str(e).lower()
+                is_connection_error = any(err in error_msg for err in [
+                    'connection reset', 'service unavailable', 'connection refused',
+                    'connection closed', 'socket', 'timeout', 'reconnect'
+                ])
+
+                if is_connection_error and attempt < max_retries - 1:
+                    print(f"   ⚠️  Neo4j connection error: {e}")
+                    if self._reconnect_neo4j():
+                        print(f"   🔄 Retrying entity storage (attempt {attempt + 2}/{max_retries})")
+                        continue
+                    else:
+                        print("   ⚠️  Neo4j reconnection failed, entities not stored in graph")
+                        break
+                else:
+                    print(f"   ⚠️  Neo4j entity storage error: {e}")
+                    break
 
     def _get_top_organs(self, organ_results: dict, k: int = 3) -> list:
         """Get top K organs by activation."""

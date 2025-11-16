@@ -1,0 +1,122 @@
+{
+  "epoch": 3,
+  "timestamp": "2025-11-16T09:37:10.015510",
+  "metrics": {
+    "epoch": 3,
+    "conversations_processed": 30,
+    "new_families_created": 0,
+    "total_families": 3,
+    "families_touched": 3,
+    "family_sizes": [
+      62,
+      20,
+      8
+    ],
+    "mean_satisfaction": 0.8456089983751972,
+    "satisfaction_std": 0.0590909170144832,
+    "mean_distance": 0.0,
+    "distance_std": 0.0,
+    "organ_confidence_final": {
+      "LISTENING": 0.9999619113259769,
+      "EMPATHY": 0.9999619113259769,
+      "WISDOM": 0.9999619113259769,
+      "AUTHENTICITY": 0.9999619113259769,
+      "PRESENCE": 0.9999619113259769,
+      "BOND": 0.9999619113259769,
+      "SANS": 0.9999619113259769,
+      "NDAM": 0.9999619113259769,
+      "RNX": 0.9999619113259769,
+      "EO": 0.9999619113259769,
+      "NEXUS": 0.9999619113259769,
+      "CARD": 0.9999619113259769
+    },
+    "organ_confidence_std": 0.0,
+    "organ_changes": {
+      "LISTENING": 0.000860416475934267,
+      "EMPATHY": 0.000860416475934267,
+      "WISDOM": 0.000860416475934267,
+      "AUTHENTICITY": 0.000860416475934267,
+      "PRESENCE": 0.000860416475934267,
+      "BOND": 0.000860416475934267,
+      "SANS": 0.000860416475934267,
+      "NDAM": 0.000860416475934267,
+      "RNX": 0.000860416475934267,
+      "EO": 0.000860416475934267,
+      "NEXUS": 0.000860416475934267,
+      "CARD": 0.000860416475934267
+    },
+    "category_results": {
+      "protector_honoring": {
+        "count": 3,
+        "mean_satisfaction": 0.8088451148796278,
+        "num_families": 1
+      },
+      "somatic_resonance": {
+        "count": 3,
+        "mean_satisfaction": 0.8185427529204389,
+        "num_families": 2
+      },
+      "tone_modulation": {
+        "count": 3,
+        "mean_satisfaction": 0.8364459329369832,
+        "num_families": 1
+      },
+      "self_energy_access": {
+        "count": 3,
+        "mean_satisfaction": 0.8338956497189023,
+        "num_families": 2
+      },
+      "coherence_repair": {
+        "count": 3,
+        "mean_satisfaction": 0.9109384260241115,
+        "num_families": 3
+      },
+      "relational_safety": {
+        "count": 3,
+        "mean_satisfaction": 0.8112143102590764,
+        "num_families": 2
+      },
+      "window_of_tolerance": {
+        "count": 3,
+        "mean_satisfaction": 0.8594258920430913,
+        "num_families": 2
+      },
+      "parts_work": {
+        "count": 3,
+        "mean_satisfaction": 0.8471182475999077,
+        "num_families": 1
+      },
+      "grief_processing": {
+        "count": 2,
+        "mean_satisfaction": 0.8063424813951439,
+        "num_families": 1
+      },
+      "shame_processing": {
+        "count": 2,
+        "mean_satisfaction": 0.8414816003018126,
+        "num_families": 2
+      },
+      "meaning_reconstruction": {
+        "count": 2,
+        "mean_satisfaction": 0.9466714043577913,
+        "num_families": 2
+      }
+    },
+    "epoch_time_seconds": 170.65649890899658
+  },
+  "families": 3,
+  "organ_confidence": {
+    "LISTENING": 0.9999619113259769,
+    "EMPATHY": 0.9999619113259769,
+    "WISDOM": 0.9999619113259769,
+    "AUTHENTICITY": 0.9999619113259769,
+    "PRESENCE": 0.9999619113259769,
+    "BOND": 0.9999619113259769,
+    "SANS": 0.9999619113259769,
+    "NDAM": 0.9999619113259769,
+    "RNX": 0.9999619113259769,
+    "EO": 0.9999619113259769,
+    "NEXUS": 0.9999619113259769,
+    "CARD": 0.9999619113259769
+  }
+}

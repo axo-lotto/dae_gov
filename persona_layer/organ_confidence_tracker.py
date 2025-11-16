@@ -217,25 +217,41 @@ class OrganConfidenceTracker:
         """
         Check if organ actively participated in emission.
 
-        Heuristic: Organ participated if it generated activations
-        (has atom_activations or pattern data)
+        Heuristic: Organ participated if it has above-threshold coherence.
+        This creates natural differentiation - only organs that were truly
+        active get credit/blame.
         """
         if organ_result is None:
             return False
+
+        # If result is a simple dict with coherence
+        if isinstance(organ_result, dict):
+            coherence = organ_result.get('coherence', 0.0)
+            # Only count as participated if coherence > 0.3 (above minimal threshold)
+            # This ensures organs that were barely active don't get equal credit
+            return coherence > 0.3
 
         # Check for various indicators of participation
         if hasattr(organ_result, 'atom_activations'):
             activations = getattr(organ_result, 'atom_activations', {})
             if activations and len(activations) > 0:
-                return True
+                # Check if any activation is significant
+                if any(v > 0.3 for v in activations.values()):
+                    return True
+                return False
 
         if hasattr(organ_result, 'pattern'):
             pattern = getattr(organ_result, 'pattern', None)
             if pattern is not None:
                 return True
 
-        # Default: assume participated if result exists
-        return True
+        if hasattr(organ_result, 'coherence'):
+            coherence = getattr(organ_result, 'coherence', 0.0)
+            return coherence > 0.3
+
+        # Default: NOT participated unless proven otherwise
+        # This is the key fix - was returning True, causing all organs to get 1.0 confidence
+        return False
 
     def _initialize_organ(self, organ_name: str):
         """Initialize new organ with neutral confidence"""

@@ -1,0 +1,560 @@
+{
+  "user_id": "test_hierarchy_emiliano",
+  "created_at": "2025-11-16T15:28:19.173112",
+  "last_active": "2025-11-16T15:28:19.173112",
+  "response_length_preference": "moderate",
+  "humor_tolerance": 0.5,
+  "small_talk_openness": 0.5,
+  "llm_usage_consent": false,
+  "total_conversations": 0,
+  "total_turns": 0,
+  "rapport_score": 0.0,
+  "trust_indicators": [],
+  "felt_trajectory": [],
+  "transformation_patterns": {},
+  "humor_evolution": {
+    "current_tolerance": 0.5,
+    "humor_unlocked": false,
+    "total_attempts": 0,
+    "successful_attempts": 0,
+    "failed_attempts": 0,
+    "successful_types": {},
+    "failed_types": {},
+    "inside_jokes": [],
+    "safe_zones": [
+      1,
+      2
+    ],
+    "safe_polyvagal": [
+      "ventral_vagal"
+    ],
+    "unsafe_contexts": [
+      "zone5_collapse",
+      "zone4_shadow"
+    ],
+    "tolerance_history": [],
+    "last_attempt": null,
+    "last_success": null,
+    "unlocked_via_heckling": false
+  },
+  "heckling_trajectory": {
+    "total_heckling_attempts": 0,
+    "successful_deflections": 0,
+    "failed_deflections": 0,
+    "provocation_types": {},
+    "favorite_provocation": null,
+    "banter_unlocked": false,
+    "inside_jokes_from_heckling": [],
+    "zone_held_under_provocation": [],
+    "polyvagal_resilience_score": 0.0,
+    "false_positive_crises": 0,
+    "false_negative_crises": 0,
+    "first_heckling_detected": null,
+    "last_heckling_detected": null
+  },
+  "tone_preferences": {},
+  "inside_jokes": [],
+  "recurring_themes": {},
+  "family_affinities": {},
+  "template_success_rates": {},
+  "favorite_templates": {},
+  "can_reference_past": false,
+  "can_use_humor": false,
+  "can_be_playful": false,
+  "can_give_advice": false,
+  "can_challenge_gently": false,
+  "last_mini_epoch": null,
+  "learning_velocity": 0.0,
+  "metadata": {},
+  "entities": {},
+  "entity_history": [],
+  "sessions": [
+    {
+      "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+      "user_id": "test_hierarchy_emiliano",
+      "start_time": "2025-11-16T14:28:19.172607",
+      "end_time": "2025-11-16T14:28:19.173066",
+      "turns": [
+        {
+          "turn_id": "test_hierarchy_emiliano_session_test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607_turn_1",
+          "turn_number": 1,
+          "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+          "user_id": "test_hierarchy_emiliano",
+          "timestamp": "2025-11-16T14:28:19.172892",
+          "user_input": "I'm worried about Emma. She's been quiet lately.",
+          "dae_response": "I notice concern in how you describe Emma's quietness.",
+          "response_length": 54,
+          "entity_prehension": {
+            "entity_memory_available": true,
+            "mentioned_entities": [
+              {
+                "name": "Emma",
+                "relationship": "daughter",
+                "historical_polyvagal": "ventral"
+              }
+            ],
+            "relational_query_detected": false,
+            "implicit_references": [],
+            "entity_references": [
+              "story_entity"
+            ]
+          },
+          "mentioned_entities": [
+            "Emma"
+          ],
+          "entity_references": [
+            "story_entity"
+          ],
+          "relational_query": false,
+          "implicit_references": [],
+          "felt_state": {
+            "timestamp": "2025-11-16T10:00:00",
+            "organ_signature": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY",
+              "BOND"
+            ],
+            "dominant_nexuses": [
+              "coherence_repair"
+            ],
+            "zone": 3,
+            "zone_name": "exploratory",
+            "polyvagal_state": "sympathetic",
+            "self_distance": 0.4,
+            "v0_energy": 0.35,
+            "satisfaction": 0.65,
+            "convergence_cycles": 3,
+            "transduction_mechanism": "coherence_repair",
+            "transduction_pathway": "empathic_bridging",
+            "user_satisfaction": null,
+            "user_continued": null,
+            "ndam_urgency": 0.0,
+            "meta_atoms_activated": {},
+            "emission_confidence": 0.0,
+            "emission_strategy": null,
+            "emission_emoji": [],
+            "kairos_detected": false,
+            "kairos_cycle_index": null,
+            "wave_training_enabled": true,
+            "appetitive_phase": null,
+            "satisfaction_raw": null,
+            "satisfaction_modulated": null,
+            "satisfaction_variance": 0.0,
+            "turn_id": null,
+            "turn_number": null,
+            "session_id": null,
+            "user_input_text": null,
+            "emission_text": null,
+            "entity_prehension": {},
+            "mentioned_entities": [],
+            "entity_references": []
+          },
+          "user_satisfaction": 0.7,
+          "user_continued": true,
+          "turn_success": null,
+          "processing_time_ms": 0.0,
+          "emission_strategy": null
+        },
+        {
+          "turn_id": "test_hierarchy_emiliano_session_test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607_turn_2",
+          "turn_number": 2,
+          "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+          "user_id": "test_hierarchy_emiliano",
+          "timestamp": "2025-11-16T14:28:19.172914",
+          "user_input": "Actually, Emma did smile today when I picked her up.",
+          "dae_response": "That smile carries hope, even in the midst of concern.",
+          "response_length": 54,
+          "entity_prehension": {
+            "entity_memory_available": true,
+            "mentioned_entities": [
+              {
+                "name": "Emma",
+                "relationship": "daughter",
+                "historical_polyvagal": "ventral"
+              }
+            ],
+            "relational_query_detected": false,
+            "implicit_references": [],
+            "entity_references": [
+              "story_entity"
+            ]
+          },
+          "mentioned_entities": [
+            "Emma"
+          ],
+          "entity_references": [
+            "story_entity"
+          ],
+          "relational_query": false,
+          "implicit_references": [],
+          "felt_state": {
+            "timestamp": "2025-11-16T10:01:00",
+            "organ_signature": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY"
+            ],
+            "dominant_nexuses": [
+              "coherence_repair"
+            ],
+            "zone": 3,
+            "zone_name": "exploratory",
+            "polyvagal_state": "mixed",
+            "self_distance": 0.45,
+            "v0_energy": 0.4,
+            "satisfaction": 0.72,
+            "convergence_cycles": 3,
+            "transduction_mechanism": "coherence_repair",
+            "transduction_pathway": "empathic_bridging",
+            "user_satisfaction": null,
+            "user_continued": null,
+            "ndam_urgency": 0.0,
+            "meta_atoms_activated": {},
+            "emission_confidence": 0.0,
+            "emission_strategy": null,
+            "emission_emoji": [],
+            "kairos_detected": false,
+            "kairos_cycle_index": null,
+            "wave_training_enabled": true,
+            "appetitive_phase": null,
+            "satisfaction_raw": null,
+            "satisfaction_modulated": null,
+            "satisfaction_variance": 0.0,
+            "turn_id": null,
+            "turn_number": null,
+            "session_id": null,
+            "user_input_text": null,
+            "emission_text": null,
+            "entity_prehension": {},
+            "mentioned_entities": [],
+            "entity_references": []
+          },
+          "user_satisfaction": 0.75,
+          "user_continued": true,
+          "turn_success": null,
+          "processing_time_ms": 0.0,
+          "emission_strategy": null
+        },
+        {
+          "turn_id": "test_hierarchy_emiliano_session_test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607_turn_3",
+          "turn_number": 3,
+          "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+          "user_id": "test_hierarchy_emiliano",
+          "timestamp": "2025-11-16T14:28:19.172929",
+          "user_input": "Do you remember what we talked about last time?",
+          "dae_response": "I sense your need for continuity and being remembered.",
+          "response_length": 54,
+          "entity_prehension": {
+            "entity_memory_available": true,
+            "mentioned_entities": [],
+            "relational_query_detected": true,
+            "implicit_references": [],
+            "entity_references": [
+              "user",
+              "dae"
+            ]
+          },
+          "mentioned_entities": [],
+          "entity_references": [
+            "user",
+            "dae"
+          ],
+          "relational_query": true,
+          "implicit_references": [],
+          "felt_state": {
+            "timestamp": "2025-11-16T10:02:00",
+            "organ_signature": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY"
+            ],
+            "dominant_nexuses": [
+              "relational_attunement"
+            ],
+            "zone": 2,
+            "zone_name": "safe",
+            "polyvagal_state": "ventral",
+            "self_distance": 0.3,
+            "v0_energy": 0.25,
+            "satisfaction": 0.85,
+            "convergence_cycles": 2,
+            "transduction_mechanism": "relational_attunement",
+            "transduction_pathway": "empathic_bridging",
+            "user_satisfaction": null,
+            "user_continued": null,
+            "ndam_urgency": 0.0,
+            "meta_atoms_activated": {},
+            "emission_confidence": 0.0,
+            "emission_strategy": null,
+            "emission_emoji": [],
+            "kairos_detected": false,
+            "kairos_cycle_index": null,
+            "wave_training_enabled": true,
+            "appetitive_phase": null,
+            "satisfaction_raw": null,
+            "satisfaction_modulated": null,
+            "satisfaction_variance": 0.0,
+            "turn_id": null,
+            "turn_number": null,
+            "session_id": null,
+            "user_input_text": null,
+            "emission_text": null,
+            "entity_prehension": {},
+            "mentioned_entities": [],
+            "entity_references": []
+          },
+          "user_satisfaction": 0.82,
+          "user_continued": true,
+          "turn_success": null,
+          "processing_time_ms": 0.0,
+          "emission_strategy": null
+        },
+        {
+          "turn_id": "test_hierarchy_emiliano_session_test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607_turn_4",
+          "turn_number": 4,
+          "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+          "user_id": "test_hierarchy_emiliano",
+          "timestamp": "2025-11-16T14:28:19.172941",
+          "user_input": "Michael at work has been supportive through this.",
+          "dae_response": "Support from Michael seems to provide grounding during uncertainty.",
+          "response_length": 67,
+          "entity_prehension": {
+            "entity_memory_available": true,
+            "mentioned_entities": [
+              {
+                "name": "Michael",
+                "relationship": "colleague",
+                "historical_polyvagal": "mixed"
+              }
+            ],
+            "relational_query_detected": false,
+            "implicit_references": [],
+            "entity_references": [
+              "story_entity"
+            ]
+          },
+          "mentioned_entities": [
+            "Michael"
+          ],
+          "entity_references": [
+            "story_entity"
+          ],
+          "relational_query": false,
+          "implicit_references": [],
+          "felt_state": {
+            "timestamp": "2025-11-16T10:03:00",
+            "organ_signature": [
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            "active_organs": [
+              "LISTENING",
+              "EMPATHY"
+            ],
+            "dominant_nexuses": [
+              "relational_attunement"
+            ],
+            "zone": 2,
+            "zone_name": "safe",
+            "polyvagal_state": "ventral",
+            "self_distance": 0.32,
+            "v0_energy": 0.28,
+            "satisfaction": 0.88,
+            "convergence_cycles": 2,
+            "transduction_mechanism": "relational_attunement",
+            "transduction_pathway": "empathic_bridging",
+            "user_satisfaction": null,
+            "user_continued": null,
+            "ndam_urgency": 0.0,
+            "meta_atoms_activated": {},
+            "emission_confidence": 0.0,
+            "emission_strategy": null,
+            "emission_emoji": [],
+            "kairos_detected": false,
+            "kairos_cycle_index": null,
+            "wave_training_enabled": true,
+            "appetitive_phase": null,
+            "satisfaction_raw": null,
+            "satisfaction_modulated": null,
+            "satisfaction_variance": 0.0,
+            "turn_id": null,
+            "turn_number": null,
+            "session_id": null,
+            "user_input_text": null,
+            "emission_text": null,
+            "entity_prehension": {},
+            "mentioned_entities": [],
+            "entity_references": []
+          },
+          "user_satisfaction": 0.85,
+          "user_continued": false,
+          "turn_success": null,
+          "processing_time_ms": 0.0,
+          "emission_strategy": null
+        }
+      ],
+      "session_entities": {
+        "Emma": {
+          "mention_count": 2,
+          "first_mention_turn": 1,
+          "last_mention_turn": 2,
+          "contexts": [
+            "sympathetic",
+            "mixed"
+          ]
+        },
+        "Michael": {
+          "mention_count": 1,
+          "first_mention_turn": 4,
+          "last_mention_turn": 4,
+          "contexts": [
+            "ventral"
+          ]
+        }
+      },
+      "entity_mentions_timeline": [
+        {
+          "turn": 1,
+          "entity": "Emma",
+          "context": "sympathetic",
+          "timestamp": "2025-11-16T14:28:19.172892",
+          "relational_query": false
+        },
+        {
+          "turn": 2,
+          "entity": "Emma",
+          "context": "mixed",
+          "timestamp": "2025-11-16T14:28:19.172914",
+          "relational_query": false
+        },
+        {
+          "turn": 4,
+          "entity": "Michael",
+          "context": "ventral",
+          "timestamp": "2025-11-16T14:28:19.172941",
+          "relational_query": false
+        }
+      ],
+      "entity_mood_evolution": {
+        "Emma": [
+          "sympathetic",
+          "mixed"
+        ],
+        "Michael": [
+          "ventral"
+        ]
+      },
+      "polyvagal_trajectory": [
+        "sympathetic",
+        "mixed",
+        "ventral",
+        "ventral"
+      ],
+      "zone_trajectory": [
+        3,
+        3,
+        2,
+        2
+      ],
+      "v0_trajectory": [
+        0.35,
+        0.4,
+        0.25,
+        0.28
+      ],
+      "mean_satisfaction": 0.78,
+      "satisfaction_trend": "stable",
+      "total_turns": 4,
+      "dominant_themes": [],
+      "recurring_nexuses": [],
+      "organ_participation_summary": {},
+      "ended_naturally": true,
+      "crisis_session": true,
+      "breakthrough_session": false,
+      "patterns_learned": 0,
+      "family_assignments": []
+    }
+  ],
+  "current_session_id": null,
+  "total_sessions": 1,
+  "session_patterns": {
+    "total_crisis_sessions": 1,
+    "total_breakthrough_sessions": 0,
+    "last_session_satisfaction": 0.78,
+    "last_session_trend": "stable",
+    "last_session_turns": 4
+  },
+  "entity_session_evolution": {
+    "Emma": [
+      {
+        "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+        "session_number": 1,
+        "moods": [
+          "sympathetic",
+          "mixed"
+        ],
+        "mention_count": 2,
+        "crisis_session": true,
+        "breakthrough_session": false
+      }
+    ],
+    "Michael": [
+      {
+        "session_id": "test_hierarchy_emiliano_session_2025-11-16T14-28-19-172607",
+        "session_number": 1,
+        "moods": [
+          "ventral"
+        ],
+        "mention_count": 1,
+        "crisis_session": true,
+        "breakthrough_session": false
+      }
+    ]
+  }
+}

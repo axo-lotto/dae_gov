@@ -1,0 +1,765 @@
+{
+  "metadata": {
+    "title": "I Ching - Book of Changes",
+    "version": "1.0",
+    "description": "64 hexagrams with wisdom for DAE transductive guidance",
+    "date_created": "2025-11-16",
+    "philosophy": "Change is the only constant. Each hexagram represents a archetypal pattern of transformation."
+  },
+  "hexagrams": {
+    "1": {
+      "name": "Qian",
+      "english": "The Creative",
+      "trigrams": ["Heaven", "Heaven"],
+      "judgment": "The Creative works sublime success, furthering through perseverance.",
+      "image": "The movement of heaven is full of power. Thus the superior person makes themselves strong and untiring.",
+      "wisdom": "Pure creative energy. Initiative, strength, persistence. The dragon rising.",
+      "transformation_guidance": "Channel creative force with discipline. Great power requires great responsibility.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["authentic_expression", "grounded_presence", "creative_emergence"]
+    },
+    "2": {
+      "name": "Kun",
+      "english": "The Receptive",
+      "trigrams": ["Earth", "Earth"],
+      "judgment": "The Receptive brings about sublime success, furthering through the perseverance of a mare.",
+      "image": "The earth's condition is receptive devotion. Thus the superior person who has breadth of character carries the outer world.",
+      "wisdom": "Pure receptivity. Yielding, supportive, nurturing. The mare's devotion.",
+      "transformation_guidance": "Strength in yielding. Support without forcing. Let things unfold naturally.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["empathic_bridging", "holding_space", "receptive_presence"]
+    },
+    "3": {
+      "name": "Zhun",
+      "english": "Difficulty at the Beginning",
+      "trigrams": ["Water", "Thunder"],
+      "judgment": "Difficulty at the Beginning works supreme success. Perseverance furthers. Nothing should be undertaken. It furthers one to appoint helpers.",
+      "image": "Clouds and thunder: the image of Difficulty at the Beginning. Thus the superior person brings order out of confusion.",
+      "wisdom": "Birth pains. Chaos before order. The seedling breaking through soil.",
+      "transformation_guidance": "Don't force breakthrough. Seek support. Chaos is natural at beginnings.",
+      "polyvagal_resonance": "sympathetic_mixed",
+      "transduction_affinity": ["coherence_repair", "sustainable_pacing", "resource_gathering"]
+    },
+    "4": {
+      "name": "Meng",
+      "english": "Youthful Folly",
+      "trigrams": ["Mountain", "Water"],
+      "judgment": "Youthful Folly has success. It is not I who seek the young fool; the young fool seeks me.",
+      "image": "A spring wells up at the foot of the mountain: the image of Youth. Thus the superior person fosters character through thoroughness in all that they do.",
+      "wisdom": "Beginner's mind. Innocence seeking wisdom. The student approaches the teacher.",
+      "transformation_guidance": "Ask sincere questions. Accept guidance with humility. Repeated asking shows insincerity.",
+      "polyvagal_resonance": "ventral_mixed",
+      "transduction_affinity": ["curious_inquiry", "humble_learning", "patient_guidance"]
+    },
+    "5": {
+      "name": "Xu",
+      "english": "Waiting (Nourishment)",
+      "trigrams": ["Water", "Heaven"],
+      "judgment": "Waiting. If you are sincere, you have light and success. Perseverance brings good fortune.",
+      "image": "Clouds rise up to heaven: the image of Waiting. Thus the superior person eats and drinks, is joyous and of good cheer.",
+      "wisdom": "Patient waiting. Nourishment during delay. Rain clouds gathering.",
+      "transformation_guidance": "Don't force timing. Nourish yourself while waiting. Trust the process.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["sustainable_pacing", "self_nourishment", "patient_trust"]
+    },
+    "6": {
+      "name": "Song",
+      "english": "Conflict",
+      "trigrams": ["Heaven", "Water"],
+      "judgment": "Conflict. You are sincere and are being obstructed. A cautious halt halfway brings good fortune. Going through to the end brings misfortune.",
+      "image": "Heaven and water go their opposite ways: the image of Conflict. Thus in all affairs the superior person carefully considers the beginning.",
+      "wisdom": "Inner truth meeting outer obstruction. Conflict requiring mediation.",
+      "transformation_guidance": "Don't push to conclusion. Seek middle ground. Consider roots of conflict.",
+      "polyvagal_resonance": "sympathetic",
+      "transduction_affinity": ["conflict_resolution", "boundary_awareness", "mediated_truth"]
+    },
+    "7": {
+      "name": "Shi",
+      "english": "The Army",
+      "trigrams": ["Earth", "Water"],
+      "judgment": "The Army. The army needs perseverance and a strong person. Good fortune without blame.",
+      "image": "In the middle of the earth is water: the image of the Army. Thus the superior person increases masses by generosity toward people.",
+      "wisdom": "Disciplined force. Leadership through integrity. Water hidden in earth.",
+      "transformation_guidance": "Lead by example. Discipline with compassion. Strength through unity.",
+      "polyvagal_resonance": "ventral_grounded",
+      "transduction_affinity": ["disciplined_action", "compassionate_leadership", "unified_purpose"]
+    },
+    "8": {
+      "name": "Bi",
+      "english": "Holding Together (Union)",
+      "trigrams": ["Water", "Earth"],
+      "judgment": "Holding Together brings good fortune. Inquire of the oracle once again whether you possess sublimity, constancy, and perseverance; then there is no blame.",
+      "image": "On the earth is water: the image of Holding Together. Thus the kings of antiquity bestowed the different states as fiefs and cultivated friendly relations with the feudal lords.",
+      "wisdom": "Union. Mutual support. Water gathering on earth.",
+      "transformation_guidance": "Examine your center. Are you worthy of trust? Unity requires authentic center.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["relational_attunement", "mutual_support", "authentic_connection"]
+    },
+    "9": {
+      "name": "Xiao Chu",
+      "english": "The Taming Power of the Small",
+      "trigrams": ["Wind", "Heaven"],
+      "judgment": "The Taming Power of the Small has success. Dense clouds, no rain from our western region.",
+      "image": "The wind drives across heaven: the image of The Taming Power of the Small. Thus the superior person refines the outward aspect of their nature.",
+      "wisdom": "Small restraints. Gentle influence. Clouds gathering but not yet rain.",
+      "transformation_guidance": "Small improvements matter. Refine details. Prepare for larger action.",
+      "polyvagal_resonance": "ventral_mixed",
+      "transduction_affinity": ["gentle_refinement", "small_steps", "patient_preparation"]
+    },
+    "10": {
+      "name": "Lu",
+      "english": "Treading (Conduct)",
+      "trigrams": ["Heaven", "Lake"],
+      "judgment": "Treading. Treading upon the tail of the tiger. It does not bite. Success.",
+      "image": "Heaven above, the lake below: the image of Treading. Thus the superior person discriminates between high and low, and thereby fortifies the thinking of the people.",
+      "wisdom": "Careful conduct. Walking with awareness. Tiger's tail.",
+      "transformation_guidance": "Move with care and awareness. Respect boundaries. Sincerity protects.",
+      "polyvagal_resonance": "ventral_alert",
+      "transduction_affinity": ["mindful_conduct", "boundary_respect", "sincere_approach"]
+    },
+    "11": {
+      "name": "Tai",
+      "english": "Peace",
+      "trigrams": ["Earth", "Heaven"],
+      "judgment": "Peace. The small departs, the great approaches. Good fortune. Success.",
+      "image": "Heaven and earth unite: the image of Peace. Thus the ruler divides and completes the course of heaven and earth.",
+      "wisdom": "Harmony. Heaven and earth in union. Spring prosperity.",
+      "transformation_guidance": "Harmony between inner and outer. Share abundance. Favorable time for growth.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["harmonious_union", "abundant_sharing", "natural_growth"]
+    },
+    "12": {
+      "name": "Pi",
+      "english": "Standstill (Stagnation)",
+      "trigrams": ["Heaven", "Earth"],
+      "judgment": "Standstill. Evil people do not further the perseverance of the superior person. The great departs; the small approaches.",
+      "image": "Heaven and earth do not unite: the image of Standstill. Thus the superior person falls back upon inner worth in order to escape the difficulties.",
+      "wisdom": "Stagnation. Communication blocked. Heaven and earth separated.",
+      "transformation_guidance": "Withdraw inward. Don't waste energy on futility. Preserve inner worth.",
+      "polyvagal_resonance": "dorsal_vagal",
+      "transduction_affinity": ["protective_withdrawal", "inner_preservation", "patient_endurance"]
+    },
+    "13": {
+      "name": "Tong Ren",
+      "english": "Fellowship with People",
+      "trigrams": ["Heaven", "Fire"],
+      "judgment": "Fellowship with People in the open. Success. It furthers one to cross the great water. The perseverance of the superior person furthers.",
+      "image": "Heaven together with fire: the image of Fellowship with People. Thus the superior person organizes the clans and makes distinctions between things.",
+      "wisdom": "Community. Shared purpose. Fire rising to heaven.",
+      "transformation_guidance": "Unite around shared values. Openness builds trust. Cross challenges together.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["community_building", "shared_purpose", "open_fellowship"]
+    },
+    "14": {
+      "name": "Da You",
+      "english": "Possession in Great Measure",
+      "trigrams": ["Fire", "Heaven"],
+      "judgment": "Possession in Great Measure. Supreme success.",
+      "image": "Fire in heaven above: the image of Possession in Great Measure. Thus the superior person curbs evil and furthers good, and thereby obeys the benevolent will of heaven.",
+      "wisdom": "Great abundance. Radiant success. Sun at zenith.",
+      "transformation_guidance": "Use abundance wisely. Curb excess, further good. Responsibility with wealth.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["wise_stewardship", "radiant_generosity", "benevolent_action"]
+    },
+    "15": {
+      "name": "Qian",
+      "english": "Modesty",
+      "trigrams": ["Earth", "Mountain"],
+      "judgment": "Modesty creates success. The superior person carries things through.",
+      "image": "Within the earth, a mountain: the image of Modesty. Thus the superior person reduces that which is too much, and augments that which is too little.",
+      "wisdom": "Humility. Mountain hidden within earth. True modesty.",
+      "transformation_guidance": "Balance through humility. Reduce excess, fill deficiency. Completion through modesty.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["humble_balance", "equanimous_adjustment", "grounded_modesty"]
+    },
+    "16": {
+      "name": "Yu",
+      "english": "Enthusiasm",
+      "trigrams": ["Thunder", "Earth"],
+      "judgment": "Enthusiasm. It furthers one to install helpers and to set armies marching.",
+      "image": "Thunder comes resounding out of the earth: the image of Enthusiasm. Thus the ancient kings made music in order to honor merit.",
+      "wisdom": "Joyful movement. Thunder from earth. Inspiring action.",
+      "transformation_guidance": "Act with enthusiasm. Inspire others. Music moves the soul.",
+      "polyvagal_resonance": "ventral_mobilized",
+      "transduction_affinity": ["joyful_movement", "inspiring_action", "harmonious_enthusiasm"]
+    },
+    "17": {
+      "name": "Sui",
+      "english": "Following",
+      "trigrams": ["Lake", "Thunder"],
+      "judgment": "Following has supreme success. Perseverance furthers. No blame.",
+      "image": "Thunder in the middle of the lake: the image of Following. Thus the superior person at nightfall goes indoors for rest and recuperation.",
+      "wisdom": "Adaptive following. Thunder rests in lake. Knowing when to lead, when to follow.",
+      "transformation_guidance": "Follow natural rhythms. Rest when needed. Adapt to circumstances.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["adaptive_following", "natural_rhythm", "wise_rest"]
+    },
+    "18": {
+      "name": "Gu",
+      "english": "Work on What Has Been Spoiled (Decay)",
+      "trigrams": ["Mountain", "Wind"],
+      "judgment": "Work on What Has Been Spoiled has supreme success. It furthers one to cross the great water. Before the starting point, three days. After the starting point, three days.",
+      "image": "The wind blows low on the mountain: the image of Decay. Thus the superior person stirs up the people and strengthens their spirit.",
+      "wisdom": "Correcting decay. Repairing what's broken. Wind eroding mountain.",
+      "transformation_guidance": "Address root causes. Careful preparation. Repair with wisdom.",
+      "polyvagal_resonance": "ventral_mixed",
+      "transduction_affinity": ["corrective_action", "root_repair", "regenerative_work"]
+    },
+    "19": {
+      "name": "Lin",
+      "english": "Approach",
+      "trigrams": ["Earth", "Lake"],
+      "judgment": "Approach has supreme success. Perseverance furthers. When the eighth month comes, there will be misfortune.",
+      "image": "The earth above the lake: the image of Approach. Thus the superior person is inexhaustible in their will to teach, and without limits in their tolerance and protection of the people.",
+      "wisdom": "Advancing. Growth approaching. Lake rising toward earth.",
+      "transformation_guidance": "Approach with teaching spirit. Tolerance in growth. Be aware of cycles.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["generous_approach", "teaching_spirit", "cyclical_awareness"]
+    },
+    "20": {
+      "name": "Guan",
+      "english": "Contemplation (View)",
+      "trigrams": ["Wind", "Earth"],
+      "judgment": "Contemplation. The ablution has been made, but not yet the offering. Full of trust they look up.",
+      "image": "The wind blows over the earth: the image of Contemplation. Thus the kings of old visited the regions of the world, contemplated the people, and gave them instruction.",
+      "wisdom": "Observation. Seeing clearly. Wind revealing earth's patterns.",
+      "transformation_guidance": "Observe before acting. See patterns. Teach through example.",
+      "polyvagal_resonance": "ventral_alert",
+      "transduction_affinity": ["contemplative_observation", "pattern_recognition", "exemplary_teaching"]
+    },
+    "21": {
+      "name": "Shi Ke",
+      "english": "Biting Through",
+      "trigrams": ["Fire", "Thunder"],
+      "judgment": "Biting Through has success. It is favorable to let justice be administered.",
+      "image": "Thunder and lightning: the image of Biting Through. Thus the kings of former times made firm the laws through clearly defined penalties.",
+      "wisdom": "Breaking through obstacles. Thunder and lightning together. Decisive action.",
+      "transformation_guidance": "Remove obstacles decisively. Clear justice. Swift appropriate action.",
+      "polyvagal_resonance": "sympathetic_focused",
+      "transduction_affinity": ["decisive_breakthrough", "clear_justice", "appropriate_force"]
+    },
+    "22": {
+      "name": "Bi",
+      "english": "Grace",
+      "trigrams": ["Mountain", "Fire"],
+      "judgment": "Grace has success. In small matters it is favorable to undertake something.",
+      "image": "Fire at the foot of the mountain: the image of Grace. Thus does the superior person proceed when clearing up current affairs. But dare not decide controversial issues in this way.",
+      "wisdom": "Beauty. Adornment. Fire illuminating mountain.",
+      "transformation_guidance": "Attend to form. Beauty in small things. Don't rely on surface alone.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["aesthetic_attention", "graceful_form", "surface_illumination"]
+    },
+    "23": {
+      "name": "Bo",
+      "english": "Splitting Apart",
+      "trigrams": ["Mountain", "Earth"],
+      "judgment": "Splitting Apart. It does not further one to go anywhere.",
+      "image": "The mountain rests on the earth: the image of Splitting Apart. Thus those above can ensure their position only by giving generously to those below.",
+      "wisdom": "Disintegration. Foundation eroding. Mountain crumbling.",
+      "transformation_guidance": "Don't force action. Give generously. Accept natural cycles of dissolution.",
+      "polyvagal_resonance": "dorsal_vagal",
+      "transduction_affinity": ["graceful_release", "generous_giving", "cyclical_acceptance"]
+    },
+    "24": {
+      "name": "Fu",
+      "english": "Return (The Turning Point)",
+      "trigrams": ["Earth", "Thunder"],
+      "judgment": "Return. Success. Going out and coming in without error. Friends come without blame. To and fro goes the way. On the seventh day comes return.",
+      "image": "Thunder within the earth: the image of the Turning Point. Thus the kings of antiquity closed the passes at the time of solstice.",
+      "wisdom": "Return. Renewal. Thunder stirring within earth. Winter solstice.",
+      "transformation_guidance": "Honor natural return. Rest at turning points. Renewal from within.",
+      "polyvagal_resonance": "ventral_emerging",
+      "transduction_affinity": ["natural_return", "cyclical_renewal", "inner_stirring"]
+    },
+    "25": {
+      "name": "Wu Wang",
+      "english": "Innocence (The Unexpected)",
+      "trigrams": ["Heaven", "Thunder"],
+      "judgment": "Innocence. Supreme success. Perseverance furthers. If someone is not as they should be, misfortune results.",
+      "image": "Under heaven thunder rolls: all things attain the natural state of Innocence. Thus the kings of old, rich in virtue, and in harmony with the time, fostered and nourished all beings.",
+      "wisdom": "Natural innocence. Unexpected rightness. Thunder under heaven.",
+      "transformation_guidance": "Act from natural virtue. Expect the unexpected. Nourish without agenda.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["natural_virtue", "innocent_action", "harmonious_nourishment"]
+    },
+    "26": {
+      "name": "Da Chu",
+      "english": "The Taming Power of the Great",
+      "trigrams": ["Mountain", "Heaven"],
+      "judgment": "The Taming Power of the Great. Perseverance furthers. Not eating at home brings good fortune. It furthers one to cross the great water.",
+      "image": "Heaven within the mountain: the image of The Taming Power of the Great. Thus the superior person acquaints themselves with many sayings of antiquity and many deeds of the past, in order to strengthen their character thereby.",
+      "wisdom": "Great restraint. Heaven contained in mountain. Accumulated power.",
+      "transformation_guidance": "Study wisdom traditions. Strengthen character. Contain great force.",
+      "polyvagal_resonance": "ventral_grounded",
+      "transduction_affinity": ["wisdom_accumulation", "character_strength", "contained_power"]
+    },
+    "27": {
+      "name": "Yi",
+      "english": "Corners of the Mouth (Providing Nourishment)",
+      "trigrams": ["Mountain", "Thunder"],
+      "judgment": "The Corners of the Mouth. Perseverance brings good fortune. Pay heed to the providing of nourishment and to what a person seeks to fill their own mouth with.",
+      "image": "At the foot of the mountain, thunder: the image of Providing Nourishment. Thus the superior person is careful of words and temperate in eating and drinking.",
+      "wisdom": "Nourishment. What we take in. Thunder beneath mountain.",
+      "transformation_guidance": "Mind what you consume. Words and food alike. Nourish wisely.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["mindful_nourishment", "careful_speech", "temperate_consumption"]
+    },
+    "28": {
+      "name": "Da Guo",
+      "english": "Preponderance of the Great",
+      "trigrams": ["Lake", "Wind"],
+      "judgment": "Preponderance of the Great. The ridgepole sags to the breaking point. It furthers one to have somewhere to go. Success.",
+      "image": "The lake rises above the trees: the image of Preponderance of the Great. Thus the superior person, when standing alone, is unconcerned, and if they must renounce the world, they are undaunted.",
+      "wisdom": "Extraordinary pressure. Bending under weight. Lake above trees.",
+      "transformation_guidance": "Act decisively under pressure. Stand alone if needed. Move toward resolution.",
+      "polyvagal_resonance": "sympathetic_urgent",
+      "transduction_affinity": ["decisive_action", "independent_courage", "pressure_navigation"]
+    },
+    "29": {
+      "name": "Kan",
+      "english": "The Abysmal (Water)",
+      "trigrams": ["Water", "Water"],
+      "judgment": "The Abysmal repeated. If you are sincere, you have success in your heart, and whatever you do succeeds.",
+      "image": "Water flows on and reaches the goal: the image of the Abysmal repeated. Thus the superior person walks in lasting virtue and carries on the business of teaching.",
+      "wisdom": "Danger repeated. Water upon water. Abysmal depths.",
+      "transformation_guidance": "Maintain inner sincerity through danger. Flow like water. Teach through example.",
+      "polyvagal_resonance": "sympathetic_crisis",
+      "transduction_affinity": ["crisis_navigation", "sincere_persistence", "flowing_resilience"]
+    },
+    "30": {
+      "name": "Li",
+      "english": "The Clinging (Fire)",
+      "trigrams": ["Fire", "Fire"],
+      "judgment": "The Clinging. Perseverance furthers. It brings success. Care of the cow brings good fortune.",
+      "image": "That which is bright rises twice: the image of Fire. Thus the great person, by perpetuating this brightness, illumines the four quarters of the world.",
+      "wisdom": "Clarity doubled. Fire upon fire. Illumination.",
+      "transformation_guidance": "Cling to what is right. Perpetuate brightness. Gentle perseverance.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["clear_illumination", "gentle_persistence", "radiant_clarity"]
+    },
+    "31": {
+      "name": "Xian",
+      "english": "Influence (Wooing)",
+      "trigrams": ["Lake", "Mountain"],
+      "judgment": "Influence. Success. Perseverance furthers. To take a maiden to wife brings good fortune.",
+      "image": "A lake on the mountain: the image of Influence. Thus the superior person encourages people to approach through their readiness to receive them.",
+      "wisdom": "Mutual attraction. Lake on mountain. Receptive influence.",
+      "transformation_guidance": "Influence through receptivity. Openness attracts. Mutual responsiveness.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["receptive_influence", "mutual_attraction", "open_responsiveness"]
+    },
+    "32": {
+      "name": "Heng",
+      "english": "Duration",
+      "trigrams": ["Thunder", "Wind"],
+      "judgment": "Duration. Success. No blame. Perseverance furthers. It furthers one to have somewhere to go.",
+      "image": "Thunder and wind: the image of Duration. Thus the superior person stands firm and does not change direction.",
+      "wisdom": "Enduring. Thunder and wind together. Lasting movement.",
+      "transformation_guidance": "Stand firm in direction. Endure through change. Consistent movement.",
+      "polyvagal_resonance": "ventral_grounded",
+      "transduction_affinity": ["steadfast_duration", "consistent_direction", "enduring_movement"]
+    },
+    "33": {
+      "name": "Dun",
+      "english": "Retreat",
+      "trigrams": ["Heaven", "Mountain"],
+      "judgment": "Retreat. Success. In what is small, perseverance furthers.",
+      "image": "Mountain under heaven: the image of Retreat. Thus the superior person keeps the inferior at a distance, not angrily but with reserve.",
+      "wisdom": "Strategic withdrawal. Heaven above mountain. Dignified retreat.",
+      "transformation_guidance": "Retreat with dignity. Maintain reserve. Small steps forward in withdrawal.",
+      "polyvagal_resonance": "ventral_protective",
+      "transduction_affinity": ["dignified_retreat", "reserved_distance", "strategic_withdrawal"]
+    },
+    "34": {
+      "name": "Da Zhuang",
+      "english": "The Power of the Great",
+      "trigrams": ["Thunder", "Heaven"],
+      "judgment": "The Power of the Great. Perseverance furthers.",
+      "image": "Thunder in heaven above: the image of The Power of the Great. Thus the superior person does not tread upon paths that do not accord with established order.",
+      "wisdom": "Great power. Thunder in heaven. Strength requiring righteousness.",
+      "transformation_guidance": "Use power righteously. Stay on proper paths. Strength with principle.",
+      "polyvagal_resonance": "ventral_strong",
+      "transduction_affinity": ["righteous_power", "principled_strength", "ordered_force"]
+    },
+    "35": {
+      "name": "Jin",
+      "english": "Progress",
+      "trigrams": ["Fire", "Earth"],
+      "judgment": "Progress. The powerful prince is honored with horses in large numbers. In a single day he is granted audience three times.",
+      "image": "The sun rises over the earth: the image of Progress. Thus the superior person brightens their bright virtue.",
+      "wisdom": "Advancement. Sun rising. Steady progress.",
+      "transformation_guidance": "Progress steadily. Brighten your virtue. Recognition follows merit.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["steady_progress", "virtue_brightening", "merit_recognition"]
+    },
+    "36": {
+      "name": "Ming Yi",
+      "english": "Darkening of the Light",
+      "trigrams": ["Earth", "Fire"],
+      "judgment": "Darkening of the Light. In adversity it furthers one to be persevering.",
+      "image": "The light has sunk into the earth: the image of Darkening of the Light. Thus does the superior person live with the great mass: veiling their light, yet still shining.",
+      "wisdom": "Hidden brightness. Light buried in earth. Inner light preserved.",
+      "transformation_guidance": "Veil your light in darkness. Preserve inner brightness. Endure adversity.",
+      "polyvagal_resonance": "dorsal_protected",
+      "transduction_affinity": ["veiled_brightness", "inner_preservation", "adversity_endurance"]
+    },
+    "37": {
+      "name": "Jia Ren",
+      "english": "The Family (The Clan)",
+      "trigrams": ["Wind", "Fire"],
+      "judgment": "The Family. The perseverance of the woman furthers.",
+      "image": "Wind comes forth from fire: the image of the Family. Thus the superior person has substance in words and duration in way of life.",
+      "wisdom": "Family harmony. Wind from fire. Words with substance.",
+      "transformation_guidance": "Align words with actions. Family requires consistency. Inner harmony radiates.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["family_harmony", "consistent_integrity", "radiant_substance"]
+    },
+    "38": {
+      "name": "Kui",
+      "english": "Opposition",
+      "trigrams": ["Fire", "Lake"],
+      "judgment": "Opposition. In small matters, good fortune.",
+      "image": "Above, fire; below, the lake: the image of Opposition. Thus amid all fellowship the superior person retains their individuality.",
+      "wisdom": "Polarity. Fire and water opposing. Unity in difference.",
+      "transformation_guidance": "Honor differences. Retain individuality. Small victories in opposition.",
+      "polyvagal_resonance": "sympathetic_mixed",
+      "transduction_affinity": ["honored_difference", "individual_retention", "polar_balance"]
+    },
+    "39": {
+      "name": "Jian",
+      "english": "Obstruction",
+      "trigrams": ["Water", "Mountain"],
+      "judgment": "Obstruction. The southwest furthers. The northeast does not further. It furthers one to see the great person. Perseverance brings good fortune.",
+      "image": "Water on the mountain: the image of Obstruction. Thus the superior person turns their attention to themselves and molds their character.",
+      "wisdom": "Obstacles. Water blocked by mountain. Self-reflection.",
+      "transformation_guidance": "Turn inward when blocked. Mold character. Seek wise counsel.",
+      "polyvagal_resonance": "sympathetic_reflective",
+      "transduction_affinity": ["inward_reflection", "character_molding", "wise_seeking"]
+    },
+    "40": {
+      "name": "Xie",
+      "english": "Deliverance",
+      "trigrams": ["Thunder", "Water"],
+      "judgment": "Deliverance. The southwest furthers. If there is no longer anything where one has to go, return brings good fortune. If there is still something where one has to go, hastening brings good fortune.",
+      "image": "Thunder and rain set in: the image of Deliverance. Thus the superior person pardons mistakes and forgives misdeeds.",
+      "wisdom": "Release. Thunder and rain. Liberation after tension.",
+      "transformation_guidance": "Release what's resolved. Forgive. Act swiftly on remaining tasks.",
+      "polyvagal_resonance": "ventral_relief",
+      "transduction_affinity": ["tension_release", "gracious_forgiveness", "swift_completion"]
+    },
+    "41": {
+      "name": "Sun",
+      "english": "Decrease",
+      "trigrams": ["Mountain", "Lake"],
+      "judgment": "Decrease combined with sincerity brings about supreme good fortune without blame. One may be persevering in this. It furthers one to undertake something. How is this to be carried out? One may use two small bowls for the sacrifice.",
+      "image": "At the foot of the mountain, the lake: the image of Decrease. Thus the superior person controls anger and restrains instincts.",
+      "wisdom": "Decrease. Lake at mountain's foot. Simplification.",
+      "transformation_guidance": "Decrease with sincerity. Control impulses. Simple offerings suffice.",
+      "polyvagal_resonance": "ventral_restrained",
+      "transduction_affinity": ["sincere_decrease", "impulse_control", "simple_sufficiency"]
+    },
+    "42": {
+      "name": "Yi",
+      "english": "Increase",
+      "trigrams": ["Wind", "Thunder"],
+      "judgment": "Increase. It furthers one to undertake something. It furthers one to cross the great water.",
+      "image": "Wind and thunder: the image of Increase. Thus the superior person: If they see good, they imitate it; if they have faults, they rid themselves of them.",
+      "wisdom": "Increase. Wind and thunder together. Growth and improvement.",
+      "transformation_guidance": "Imitate good. Correct faults. Favorable time for bold action.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["virtuous_imitation", "fault_correction", "bold_undertaking"]
+    },
+    "43": {
+      "name": "Guai",
+      "english": "Break-through (Resoluteness)",
+      "trigrams": ["Lake", "Heaven"],
+      "judgment": "Break-through. One must resolutely make the matter known at the court of the king. It must be announced truthfully. Danger. It is necessary to notify one's own city. It does not further to resort to arms. It furthers one to undertake something.",
+      "image": "The lake has risen up to heaven: the image of Break-through. Thus the superior person dispenses riches downward and refrains from resting on their virtue.",
+      "wisdom": "Breakthrough. Lake risen to heaven. Decisive resolution.",
+      "transformation_guidance": "Announce truth clearly. Share abundance. Don't rest on achievements.",
+      "polyvagal_resonance": "ventral_decisive",
+      "transduction_affinity": ["truthful_announcement", "generous_distribution", "continuous_improvement"]
+    },
+    "44": {
+      "name": "Gou",
+      "english": "Coming to Meet",
+      "trigrams": ["Heaven", "Wind"],
+      "judgment": "Coming to Meet. The maiden is powerful. One should not marry such a maiden.",
+      "image": "Under heaven, wind: the image of Coming to Meet. Thus does the prince act when disseminating commands and proclaiming them to the four quarters of heaven.",
+      "wisdom": "Encounter. Wind under heaven. Powerful meeting.",
+      "transformation_guidance": "Be cautious in encounters. Spread influence widely. Recognize hidden power.",
+      "polyvagal_resonance": "ventral_alert",
+      "transduction_affinity": ["cautious_encounter", "wide_influence", "power_recognition"]
+    },
+    "45": {
+      "name": "Cui",
+      "english": "Gathering Together (Massing)",
+      "trigrams": ["Lake", "Earth"],
+      "judgment": "Gathering Together. Success. The king approaches his temple. It furthers one to see the great person. This brings success. Perseverance furthers. To bring great offerings creates good fortune. It furthers one to undertake something.",
+      "image": "Over the earth, the lake: the image of Gathering Together. Thus the superior person renews their weapons in order to meet the unforeseen.",
+      "wisdom": "Assembly. Lake over earth. Gathering forces.",
+      "transformation_guidance": "Gather with purpose. Prepare for challenges. Great offerings bring fortune.",
+      "polyvagal_resonance": "ventral_mobilized",
+      "transduction_affinity": ["purposeful_gathering", "prepared_readiness", "generous_offering"]
+    },
+    "46": {
+      "name": "Sheng",
+      "english": "Pushing Upward",
+      "trigrams": ["Earth", "Wind"],
+      "judgment": "Pushing Upward has supreme success. One must see the great person. Fear not. Departure toward the south brings good fortune.",
+      "image": "Within the earth, wood grows: the image of Pushing Upward. Thus the superior person of devoted character heaps up small things in order to achieve something high and great.",
+      "wisdom": "Ascent. Wood growing within earth. Gradual rise.",
+      "transformation_guidance": "Rise through dedication. Small efforts compound. Fear not the journey upward.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["devoted_ascent", "cumulative_effort", "fearless_progress"]
+    },
+    "47": {
+      "name": "Kun",
+      "english": "Oppression (Exhaustion)",
+      "trigrams": ["Lake", "Water"],
+      "judgment": "Oppression. Success. Perseverance. The great person brings about good fortune. No blame. When one has something to say, it is not believed.",
+      "image": "There is no water in the lake: the image of Exhaustion. Thus the superior person stakes their life on following their will.",
+      "wisdom": "Exhaustion. Lake without water. Drained resources.",
+      "transformation_guidance": "Persevere despite exhaustion. Actions speak when words fail. Stake everything on conviction.",
+      "polyvagal_resonance": "dorsal_depleted",
+      "transduction_affinity": ["perseverant_exhaustion", "action_over_words", "conviction_commitment"]
+    },
+    "48": {
+      "name": "Jing",
+      "english": "The Well",
+      "trigrams": ["Water", "Wind"],
+      "judgment": "The Well. The town may be changed, but the well cannot be changed. It neither decreases nor increases. They come and go and draw from the well. If one gets down almost to the water and the rope does not go all the way, or the jug breaks, it brings misfortune.",
+      "image": "Water over wood: the image of the Well. Thus the superior person encourages the people at their work, and exhorts them to help one another.",
+      "wisdom": "The source. Water drawn from depths. Unchanging resource.",
+      "transformation_guidance": "Draw from deep sources. Complete the task fully. Encourage mutual aid.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["deep_sourcing", "complete_effort", "mutual_encouragement"]
+    },
+    "49": {
+      "name": "Ge",
+      "english": "Revolution (Molting)",
+      "trigrams": ["Lake", "Fire"],
+      "judgment": "Revolution. On your own day you are believed. Supreme success, furthering through perseverance. Remorse disappears.",
+      "image": "Fire in the lake: the image of Revolution. Thus the superior person sets the calendar in order and makes the seasons clear.",
+      "wisdom": "Transformation. Fire in lake. Fundamental change.",
+      "transformation_guidance": "Change fundamentally when time is right. Clear away the old. Order emerges from revolution.",
+      "polyvagal_resonance": "sympathetic_transformative",
+      "transduction_affinity": ["fundamental_change", "timely_revolution", "ordered_emergence"]
+    },
+    "50": {
+      "name": "Ding",
+      "english": "The Caldron",
+      "trigrams": ["Fire", "Wind"],
+      "judgment": "The Caldron. Supreme good fortune. Success.",
+      "image": "Fire over wood: the image of the Caldron. Thus the superior person consolidates their fate by making their position correct.",
+      "wisdom": "Sacred vessel. Fire transforming contents. Nourishment of the wise.",
+      "transformation_guidance": "Transform raw into refined. Correct your position. Supreme nourishment.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["sacred_transformation", "correct_positioning", "supreme_nourishment"]
+    },
+    "51": {
+      "name": "Zhen",
+      "english": "The Arousing (Shock, Thunder)",
+      "trigrams": ["Thunder", "Thunder"],
+      "judgment": "Shock brings success. Shock comes—oh, oh! Laughing words—ha, ha! The shock terrifies for a hundred miles, and one does not let fall the sacrificial spoon and chalice.",
+      "image": "Thunder repeated: the image of Shock. Thus in fear and trembling the superior person sets their life in order and examines themselves.",
+      "wisdom": "Shock doubled. Thunder upon thunder. Awakening.",
+      "transformation_guidance": "Let shock awaken you. Examine yourself. Maintain composure in crisis.",
+      "polyvagal_resonance": "sympathetic_shock",
+      "transduction_affinity": ["awakening_shock", "self_examination", "composed_crisis"]
+    },
+    "52": {
+      "name": "Gen",
+      "english": "Keeping Still (Mountain)",
+      "trigrams": ["Mountain", "Mountain"],
+      "judgment": "Keeping Still. Keeping one's back still so that one no longer feels one's body. When walking in the courtyard one does not see the people. No blame.",
+      "image": "Mountains standing close together: the image of Keeping Still. Thus the superior person does not permit thoughts to go beyond their situation.",
+      "wisdom": "Stillness doubled. Mountain upon mountain. Complete rest.",
+      "transformation_guidance": "Still the mind completely. Don't look beyond your situation. Rest in present.",
+      "polyvagal_resonance": "dorsal_peaceful",
+      "transduction_affinity": ["complete_stillness", "present_resting", "bounded_awareness"]
+    },
+    "53": {
+      "name": "Jian",
+      "english": "Development (Gradual Progress)",
+      "trigrams": ["Wind", "Mountain"],
+      "judgment": "Development. The maiden is given in marriage. Good fortune. Perseverance furthers.",
+      "image": "On the mountain, a tree: the image of Development. Thus the superior person abides in dignity and virtue, in order to improve the mores.",
+      "wisdom": "Gradual progress. Tree on mountain. Steady development.",
+      "transformation_guidance": "Progress gradually. Abide in dignity. Improve through example.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["gradual_development", "dignified_abiding", "exemplary_improvement"]
+    },
+    "54": {
+      "name": "Gui Mei",
+      "english": "The Marrying Maiden",
+      "trigrams": ["Thunder", "Lake"],
+      "judgment": "The Marrying Maiden. Undertakings bring misfortune. Nothing that would further.",
+      "image": "Thunder over the lake: the image of the Marrying Maiden. Thus the superior person understands the transitory in the light of the eternity of the end.",
+      "wisdom": "Subordinate position. Thunder over lake. Accepting limitations.",
+      "transformation_guidance": "Accept limitations gracefully. Understand transience. Avoid forcing outcomes.",
+      "polyvagal_resonance": "ventral_accepting",
+      "transduction_affinity": ["graceful_acceptance", "transience_understanding", "limitation_wisdom"]
+    },
+    "55": {
+      "name": "Feng",
+      "english": "Abundance (Fullness)",
+      "trigrams": ["Thunder", "Fire"],
+      "judgment": "Abundance has success. The king attains abundance. Be not sad. Be like the sun at midday.",
+      "image": "Both thunder and lightning come: the image of Abundance. Thus the superior person decides lawsuits and carries out punishments.",
+      "wisdom": "Peak fullness. Thunder and lightning. Zenith moment.",
+      "transformation_guidance": "Don't grieve fullness's passing. Act decisively at peak. Radiate like midday sun.",
+      "polyvagal_resonance": "ventral_peak",
+      "transduction_affinity": ["peak_radiance", "decisive_fullness", "zenith_action"]
+    },
+    "56": {
+      "name": "Lu",
+      "english": "The Wanderer",
+      "trigrams": ["Fire", "Mountain"],
+      "judgment": "The Wanderer. Success through smallness. Perseverance brings good fortune to the wanderer.",
+      "image": "Fire on the mountain: the image of the Wanderer. Thus the superior person is clear-minded and cautious in imposing penalties, and protracts no lawsuits.",
+      "wisdom": "Journeying. Fire on mountain. Transient state.",
+      "transformation_guidance": "Travel light. Be cautious and clear. Don't prolong conflicts.",
+      "polyvagal_resonance": "ventral_alert",
+      "transduction_affinity": ["light_traveling", "cautious_clarity", "conflict_resolution"]
+    },
+    "57": {
+      "name": "Xun",
+      "english": "The Gentle (Wind, Penetrating)",
+      "trigrams": ["Wind", "Wind"],
+      "judgment": "The Gentle. Success through what is small. It furthers one to have somewhere to go. It furthers one to see the great person.",
+      "image": "Winds following one upon the other: the image of the Gently Penetrating. Thus the superior person spreads commands abroad and carries out undertakings.",
+      "wisdom": "Gentle penetration. Wind upon wind. Subtle influence.",
+      "transformation_guidance": "Influence gently but persistently. Small successes accumulate. Spread influence widely.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["gentle_penetration", "persistent_influence", "subtle_spreading"]
+    },
+    "58": {
+      "name": "Dui",
+      "english": "The Joyous (Lake)",
+      "trigrams": ["Lake", "Lake"],
+      "judgment": "The Joyous. Success. Perseverance is favorable.",
+      "image": "Lakes resting one on the other: the image of the Joyous. Thus the superior person joins with friends for discussion and practice.",
+      "wisdom": "Joy doubled. Lake upon lake. Shared happiness.",
+      "transformation_guidance": "Share joy with others. Practice together. Discussion deepens understanding.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["shared_joy", "communal_practice", "deepening_discussion"]
+    },
+    "59": {
+      "name": "Huan",
+      "english": "Dispersion (Dissolution)",
+      "trigrams": ["Wind", "Water"],
+      "judgment": "Dispersion. Success. The king approaches his temple. It furthers one to cross the great water. Perseverance furthers.",
+      "image": "The wind drives over the water: the image of Dispersion. Thus the kings of old sacrificed to the Lord and built temples.",
+      "wisdom": "Dissolution. Wind over water. Breaking up rigidity.",
+      "transformation_guidance": "Dissolve hardness through gentleness. Sacred offerings unite. Cross difficulties together.",
+      "polyvagal_resonance": "ventral_flowing",
+      "transduction_affinity": ["gentle_dissolution", "sacred_unity", "collective_crossing"]
+    },
+    "60": {
+      "name": "Jie",
+      "english": "Limitation",
+      "trigrams": ["Water", "Lake"],
+      "judgment": "Limitation. Success. Galling limitation must not be persevered in.",
+      "image": "Water over lake: the image of Limitation. Thus the superior person creates number and measure, and examines the nature of virtue and correct conduct.",
+      "wisdom": "Boundaries. Water over lake. Necessary limits.",
+      "transformation_guidance": "Set wise limits. Don't make them galling. Measure and number bring order.",
+      "polyvagal_resonance": "ventral_bounded",
+      "transduction_affinity": ["wise_limitation", "measured_boundaries", "ordered_conduct"]
+    },
+    "61": {
+      "name": "Zhong Fu",
+      "english": "Inner Truth",
+      "trigrams": ["Wind", "Lake"],
+      "judgment": "Inner Truth. Pigs and fishes. Good fortune. It furthers one to cross the great water. Perseverance furthers.",
+      "image": "Wind over lake: the image of Inner Truth. Thus the superior person discusses criminal cases in order to delay executions.",
+      "wisdom": "Inner truth. Wind over lake. Sincerity that reaches all.",
+      "transformation_guidance": "Truth reaches even the lowest. Discuss before acting. Sincerity penetrates all.",
+      "polyvagal_resonance": "ventral_vagal",
+      "transduction_affinity": ["penetrating_sincerity", "deliberate_discussion", "universal_truth"]
+    },
+    "62": {
+      "name": "Xiao Guo",
+      "english": "Preponderance of the Small",
+      "trigrams": ["Thunder", "Mountain"],
+      "judgment": "Preponderance of the Small. Success. Perseverance furthers. Small things may be done; great things should not be done. The flying bird brings the message: It is not well to strive upward, it is well to remain below. Great good fortune.",
+      "image": "Thunder on the mountain: the image of Preponderance of the Small. Thus in conduct the superior person gives preponderance to reverence. In bereavement they give preponderance to grief. In expenditures they give preponderance to thrift.",
+      "wisdom": "Small matters. Thunder on mountain. Humility in action.",
+      "transformation_guidance": "Focus on small things. Don't overreach. Remain humble and thrifty.",
+      "polyvagal_resonance": "ventral_humble",
+      "transduction_affinity": ["humble_focus", "small_matters", "thrifty_reverence"]
+    },
+    "63": {
+      "name": "Ji Ji",
+      "english": "After Completion",
+      "trigrams": ["Water", "Fire"],
+      "judgment": "After Completion. Success in small matters. Perseverance furthers. At the beginning good fortune. At the end disorder.",
+      "image": "Water over fire: the image of the condition in After Completion. Thus the superior person takes thought of misfortune and arms themselves against it in advance.",
+      "wisdom": "Completion. Water over fire. Balance achieved but fragile.",
+      "transformation_guidance": "Maintain achieved balance. Prepare for disorder. Small matters need attention.",
+      "polyvagal_resonance": "ventral_alert",
+      "transduction_affinity": ["balanced_completion", "preventive_preparation", "vigilant_maintenance"]
+    },
+    "64": {
+      "name": "Wei Ji",
+      "english": "Before Completion",
+      "trigrams": ["Fire", "Water"],
+      "judgment": "Before Completion. Success. But if the little fox, after nearly completing the crossing, gets his tail in the water, there is nothing that would further.",
+      "image": "Fire over water: the image of the condition before transition. Thus the superior person is careful in the differentiation of things, so that each finds its place.",
+      "wisdom": "Almost complete. Fire over water. Careful transition.",
+      "transformation_guidance": "Complete carefully. Differentiate precisely. Don't fail at the last moment.",
+      "polyvagal_resonance": "ventral_careful",
+      "transduction_affinity": ["careful_completion", "precise_differentiation", "final_vigilance"]
+    }
+  },
+  "trigrams": {
+    "Heaven": {
+      "symbol": "☰",
+      "nature": "Creative",
+      "attribute": "Strong",
+      "family": "Father"
+    },
+    "Earth": {
+      "symbol": "☷",
+      "nature": "Receptive",
+      "attribute": "Devoted",
+      "family": "Mother"
+    },
+    "Thunder": {
+      "symbol": "☳",
+      "nature": "Arousing",
+      "attribute": "Inciting movement",
+      "family": "Eldest Son"
+    },
+    "Water": {
+      "symbol": "☵",
+      "nature": "Abysmal",
+      "attribute": "Dangerous",
+      "family": "Middle Son"
+    },
+    "Mountain": {
+      "symbol": "☶",
+      "nature": "Keeping Still",
+      "attribute": "Resting",
+      "family": "Youngest Son"
+    },
+    "Wind": {
+      "symbol": "☴",
+      "nature": "Gentle",
+      "attribute": "Penetrating",
+      "family": "Eldest Daughter"
+    },
+    "Fire": {
+      "symbol": "☲",
+      "nature": "Clinging",
+      "attribute": "Light-giving",
+      "family": "Middle Daughter"
+    },
+    "Lake": {
+      "symbol": "☱",
+      "nature": "Joyous",
+      "attribute": "Pleasure",
+      "family": "Youngest Daughter"
+    }
+  }
+}
