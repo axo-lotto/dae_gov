@@ -31,6 +31,9 @@ from typing import Dict, List, Optional, Tuple
 from datetime import datetime
 from sklearn.metrics.pairwise import cosine_similarity
 
+# ✅ NOV 17: Import Config for consistent paths
+from config import Config
+
 
 class MemoryRetrieval:
     """
@@ -47,8 +50,8 @@ class MemoryRetrieval:
 
     def __init__(
         self,
-        hebbian_memory_path: str = "persona_layer/state/active/conversational_hebbian_memory.json",
-        organic_families_path: str = "persona_layer/state/active/organic_families.json",
+        hebbian_memory_path: str = None,  # ✅ NOV 17: Use Config.HEBBIAN_MEMORY_PATH by default
+        organic_families_path: str = None,  # ✅ NOV 17: Use Config.ORGANIC_FAMILIES_PATH by default
         user_bundles_dir: str = "Bundle",
         top_k: int = 5,
         recency_weight: float = 0.2,
@@ -67,6 +70,12 @@ class MemoryRetrieval:
             family_bonus: Similarity boost for same-family members
             hebbian_bonus_weight: Weight for R-matrix coupling bonus
         """
+        # ✅ NOV 17: Use Config paths if not provided
+        if hebbian_memory_path is None:
+            hebbian_memory_path = str(Config.HEBBIAN_MEMORY_PATH)
+        if organic_families_path is None:
+            organic_families_path = str(Config.ORGANIC_FAMILIES_PATH)
+
         self.hebbian_memory_path = hebbian_memory_path
         self.organic_families_path = organic_families_path
         self.user_bundles_dir = Path(user_bundles_dir)

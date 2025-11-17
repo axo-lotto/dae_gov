@@ -49,7 +49,7 @@ class NDAMConfig:
         """Initialize text domain patterns if not provided"""
         if self.urgency_keywords is None:
             self.urgency_keywords = [
-                # Crisis indicators
+                # Crisis indicators (organizational)
                 'urgent', 'crisis', 'emergency', 'critical', 'immediate',
                 'escalating', 'breaking down', 'collapse', 'failing',
 
@@ -57,7 +57,7 @@ class NDAMConfig:
                 'deadline', 'overdue', 'behind schedule', 'running out', 'too late',
                 'time-sensitive', 'now', 'asap', 'right away',
 
-                # Emotional intensity
+                # Emotional intensity (organizational)
                 'exhausted', 'overwhelmed', 'burned out', 'cant take', 'breaking point',
                 'desperate', 'panic', 'anxiety', 'stress',
 
@@ -67,7 +67,33 @@ class NDAMConfig:
 
                 # IFS firefighter activation (high urgency, protective)
                 'must fix', 'have to', 'need to', 'should', 'supposed to',
-                'responsibility', 'obligation', 'duty', 'requirement'
+                'responsibility', 'obligation', 'duty', 'requirement',
+
+                # 🆕 PERSONAL/THERAPEUTIC CRISIS (coherent attractors for exile energy)
+                # Fear/Terror
+                'terrified', 'terror', 'fear', 'scared', 'frightened', 'afraid',
+
+                # Crushing/Suffocating
+                'crushing', 'crushed', 'suffocating', 'suffocate', 'cant breathe',
+                'breathe', 'choking', 'drowning',
+
+                # Spiraling/Losing Control
+                'spiraling', 'spiral', 'spinning', 'losing control', 'out of control',
+                'falling apart', 'unraveling',
+
+                # Shame/Exile (IFS exile energy)
+                'ashamed', 'shame', 'humiliated', 'humiliation', 'worthless',
+                'defective', 'broken', 'damaged',
+
+                # Shutdown/Dissociation (dorsal vagal)
+                'shut down', 'shutdown', 'numb', 'frozen', 'disconnected',
+                'empty', 'void', 'nothing', 'collapse',
+
+                # Rage/Destructive Energy
+                'rage', 'furious', 'destroy', 'explode', 'violence',
+
+                # Abandonment/Isolation
+                'abandoned', 'alone', 'isolated', 'rejected', 'unwanted'
             ]
 
         if self.collaboration_patterns is None:

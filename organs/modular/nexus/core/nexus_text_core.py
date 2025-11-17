@@ -67,6 +67,14 @@ try:
 except ImportError:
     ENTITY_TRACKER_AVAILABLE = False
 
+# Import organ agreement computer for past/present comparison (Nov 16, 2025)
+try:
+    from persona_layer.organ_agreement_metrics import OrganAgreementComputer
+    ORGAN_AGREEMENT_AVAILABLE = True
+except ImportError:
+    ORGAN_AGREEMENT_AVAILABLE = False
+    print("⚠️  NEXUS: Organ agreement computer not available")
+
 
 @dataclass
 class EntityMention:
@@ -171,6 +179,16 @@ class NEXUSTextCore:
                 print(f"   ⚠️  NEXUS: Entity tracker unavailable: {e}")
                 self.entity_tracker = None
 
+        # Load organ agreement computer for past/present differentiation (Nov 16, 2025)
+        self.agreement_computer = None
+        if ORGAN_AGREEMENT_AVAILABLE:
+            try:
+                self.agreement_computer = OrganAgreementComputer()
+                print(f"   ✅ NEXUS: Organ agreement computer loaded (FAO formula)")
+            except Exception as e:
+                print(f"   ⚠️  NEXUS: Agreement computer unavailable: {e}")
+                self.agreement_computer = None
+
     def process_text_occasions(
         self,
         occasions: List[TextOccasion],
@@ -201,8 +219,8 @@ class NEXUSTextCore:
         context = context or {}
         user_id = context.get('user_id', 'default_user')
 
-        # Step 1: Calculate semantic atom activations
-        atom_activations = self._calculate_atom_activations(occasions)
+        # Step 1: Calculate semantic atom activations with past/present differentiation (Nov 16, 2025)
+        atom_activations = self._calculate_atom_activations(occasions, context=context)
 
         # Step 2: Detect entity mentions
         entity_mentions = self._detect_entity_mentions(occasions, user_id, atom_activations)
@@ -256,24 +274,34 @@ class NEXUSTextCore:
 
     def _calculate_atom_activations(
         self,
-        occasions: List[TextOccasion]
+        occasions: List[TextOccasion],
+        context: Optional[Dict] = None
     ) -> Dict[str, float]:
         """
         Calculate activation strength for each of 7 NEXUS semantic atoms.
 
-        Each atom scans text for keyword matches and returns average activation.
+        🌀 ENHANCED (Nov 16, 2025): Past/present differentiation + temporal coherence horizon
+
+        Base activation: Keyword matching (existing)
+        Enhanced activation: Past entity state vs present context comparison
+        Temporal coherence: Real-world time awareness for entity memory grounding
+
+        Uses existing DAE_HYPHAE_1 infrastructure:
+        - EntityOrganTracker: Historical entity patterns (PAST state)
+        - OrganAgreementComputer: FAO formula for past/present comparison
+        - Temporal context: Real-world time/date for coherence horizon
 
         Args:
             occasions: List of text occasions (words/phrases)
+            context: Processing context with entity_prehension, temporal, etc.
 
         Returns:
-            {atom_name: activation_strength} dict
+            {atom_name: activation_strength} dict with differentiation boosts
         """
-        # Join occasions into continuous text for keyword matching
+        # Step 1: Base keyword activation (EXISTING - preserve original behavior)
         text = " ".join([occ.text for occ in occasions]).lower()
 
-        activations = {}
-
+        base_activations = {}
         for atom_name, keywords in self.atoms.items():
             # Find all keyword matches in text
             matches = []
@@ -283,9 +311,251 @@ class NEXUSTextCore:
 
             # Average activation strength (or 0.0 if no matches)
             if matches:
-                activations[atom_name] = float(np.mean(matches))
+                base_activations[atom_name] = float(np.mean(matches))
+
+        # Step 2: Past/Present Differentiation + Temporal Coherence (NEW)
+        if context and self.entity_tracker and self.agreement_computer:
+            entity_prehension = context.get('entity_prehension', {})
+            temporal_context = context.get('temporal', {})
+
+            # DEBUG: Check what we got
+            print(f"🔍 NEXUS DEBUG: entity_memory_available = {entity_prehension.get('entity_memory_available', False)}")
+            print(f"🔍 NEXUS DEBUG: mentioned_entities = {len(entity_prehension.get('mentioned_entities', []))}")
+
+            # Check if entity memory available
+            if entity_prehension.get('entity_memory_available', False):
+                print(f"✅ NEXUS: Entity memory available, computing differentiation...")
+                # Compute differentiation boosts
+                differentiation_boosts = self._compute_past_present_temporal_boosts(
+                    entity_prehension=entity_prehension,
+                    temporal_context=temporal_context,
+                    current_text=text
+                )
+
+                # Combine base + differentiation (FAO-style enhancement)
+                activations = {}
+                for atom_name in self.atoms.keys():
+                    base = base_activations.get(atom_name, 0.0)
+                    boost = differentiation_boosts.get(atom_name, 0.0)
+
+                    # FAO formula: I · (1 + α·boost) + boost
+                    α = 1.0  # Agreement weight (tunable)
+                    enhanced = base * (1.0 + α * boost) + boost
+
+                    activations[atom_name] = min(1.0, enhanced)
+            else:
+                # No entity memory, use base only
+                activations = base_activations
+        else:
+            # No context or tracker, use base only
+            activations = base_activations
 
         return activations
+
+    def _compute_past_present_temporal_boosts(
+        self,
+        entity_prehension: Dict,
+        temporal_context: Dict,
+        current_text: str
+    ) -> Dict[str, float]:
+        """
+        🌀 Compute NEXUS atom activation boosts from past/present differentiation + temporal coherence.
+
+        Leverages existing DAE_HYPHAE_1 infrastructure:
+        - EntityOrganTracker: Historical entity patterns (PAST state)
+        - OrganAgreementComputer: FAO pairwise agreement formula (COMPARISON)
+        - Temporal context: Real-world time/date (COHERENCE HORIZON)
+
+        Process Philosophy:
+        "The entity is not merely recalled, but PREHENDED—felt as the difference
+        between what it was and what it is becoming now." — Whiteheadian becoming
+
+        Args:
+            entity_prehension: Entity context from pre-emission prehension
+            temporal_context: Real-world time/date context
+            current_text: Current input text
+
+        Returns:
+            Dict[atom_name, boost_value] - Activation boosts for each semantic atom
+        """
+        boosts = {atom_name: 0.0 for atom_name in self.atoms.keys()}
+
+        # Extract entity mentions from prehension
+        entity_mentions = entity_prehension.get('mentioned_entities', [])  # ✅ FIXED: Was 'entity_mentions', should be 'mentioned_entities'
+        if not entity_mentions:
+            return boosts
+
+        # Extract organ context (PRESENT state)
+        organ_context = entity_prehension.get('organ_context_enrichment', {})
+        current_polyvagal = organ_context.get('polyvagal_state', 'ventral')
+        current_urgency = organ_context.get('urgency', 0.0)
+        current_self_distance = organ_context.get('self_distance', 0.5)
+
+        # Temporal coherence horizon (real-world grounding)
+        time_of_day = temporal_context.get('time_of_day', 'unknown')
+        day_of_week = temporal_context.get('day_of_week', 'unknown')
+        is_weekend = temporal_context.get('is_weekend', False)
+
+        # Aggregate differentiation across all mentioned entities
+        total_agreement_scores = []
+        total_state_changes = []
+        total_memory_richness = 0.0
+
+        for entity_mention in entity_mentions:
+            entity_value = entity_mention.get('name', '')  # ✅ FIXED: Was 'entity_value', should be 'name'
+            entity_type = entity_mention.get('type', 'person')  # ✅ FIXED: Was 'entity_type', should be 'type'
+
+            # Query PAST state from EntityOrganTracker
+            if not self.entity_tracker:
+                continue
+
+            past_pattern = self.entity_tracker.get_entity_pattern(entity_value)
+            if not past_pattern:
+                # New entity, no PAST to compare
+                continue
+
+            # PAST state
+            past_polyvagal = past_pattern.get('typical_polyvagal_state', 'ventral')
+            past_urgency = past_pattern.get('typical_urgency', 0.0)
+            past_self_distance = past_pattern.get('typical_self_distance', 0.5)
+            past_v0 = past_pattern.get('typical_v0_energy', 0.5)
+            mention_count = past_pattern.get('mention_count', 0)
+
+            # Memory richness (regime classification per entity)
+            memory_richness = min(mention_count / 10.0, 1.0)  # Cap at 10 mentions = saturated
+            total_memory_richness += memory_richness
+
+            # Compute past/present agreement (FAO formula)
+            agreement_score = self._compute_past_present_agreement(
+                past_polyvagal=past_polyvagal,
+                current_polyvagal=current_polyvagal,
+                past_urgency=past_urgency,
+                current_urgency=current_urgency,
+                past_self_distance=past_self_distance,
+                current_self_distance=current_self_distance
+            )
+            total_agreement_scores.append(agreement_score)
+
+            # Detect state changes (differentiation)
+            polyvagal_changed = (past_polyvagal != current_polyvagal)
+            urgency_delta = abs(current_urgency - past_urgency)
+            self_delta = abs(current_self_distance - past_self_distance)
+
+            state_change_intensity = (
+                (1.0 if polyvagal_changed else 0.0) * 0.4 +
+                urgency_delta * 0.3 +
+                self_delta * 0.3
+            )
+            total_state_changes.append(state_change_intensity)
+
+        if not total_agreement_scores:
+            return boosts
+
+        # Aggregate metrics
+        mean_agreement = np.mean(total_agreement_scores)
+        mean_state_change = np.mean(total_state_changes)
+        mean_memory_richness = total_memory_richness / len(entity_mentions)
+
+        # Classify regime based on memory richness (FFITTSS-inspired)
+        if mean_memory_richness < 0.3:
+            regime = "INITIALIZING"
+            regime_multiplier = 0.8  # Cautious with new entities
+        elif mean_memory_richness < 0.7:
+            regime = "COMMITTED"
+            regime_multiplier = 1.2  # Peak learning phase
+        else:
+            regime = "SATURATING"
+            regime_multiplier = 1.0  # Stable patterns
+
+        # Compute atom-specific boosts based on past/present patterns
+
+        # 1. entity_recall - Boost if low agreement (entity context shifting)
+        disagreement = 1.0 - mean_agreement
+        boosts['entity_recall'] = disagreement * 0.4 * regime_multiplier
+
+        # 2. relationship_depth - Boost if state change detected
+        boosts['relationship_depth'] = mean_state_change * 0.5 * regime_multiplier
+
+        # 3. temporal_continuity - Boost if time-grounded mention
+        temporal_boost = 0.0
+        if time_of_day in current_text or day_of_week.lower() in current_text:
+            temporal_boost = 0.3
+        elif is_weekend and any(kw in current_text for kw in ['weekend', 'saturday', 'sunday']):
+            temporal_boost = 0.25
+        boosts['temporal_continuity'] = temporal_boost * regime_multiplier
+
+        # 4. memory_coherence - Boost if high agreement (consistent patterns)
+        boosts['memory_coherence'] = mean_agreement * 0.4 * regime_multiplier
+
+        # 5. salience_gradient - Boost if urgency changed significantly
+        urgency_salience = mean_state_change * 0.6 if mean_state_change > 0.3 else 0.0
+        boosts['salience_gradient'] = urgency_salience * regime_multiplier
+
+        # 6. contextual_grounding - Boost if rich memory + high agreement
+        grounding = mean_memory_richness * mean_agreement * 0.5
+        boosts['contextual_grounding'] = grounding * regime_multiplier
+
+        # 7. co_occurrence - Boost if multiple entities mentioned together
+        num_entities = len(entity_mentions)
+        co_occurrence_boost = min((num_entities - 1) / 3.0, 1.0) * 0.3  # Cap at 3+ entities
+        boosts['co_occurrence'] = co_occurrence_boost * regime_multiplier
+
+        return boosts
+
+    def _compute_past_present_agreement(
+        self,
+        past_polyvagal: str,
+        current_polyvagal: str,
+        past_urgency: float,
+        current_urgency: float,
+        past_self_distance: float,
+        current_self_distance: float
+    ) -> float:
+        """
+        Compute pairwise agreement between PAST and PRESENT entity state.
+
+        Uses OrganAgreementComputer FAO formula adapted for state comparison:
+        A = mean(1 - |past_i - current_i|) across all dimensions
+
+        Dimensions:
+        - Polyvagal state (categorical → numeric mapping)
+        - Urgency (continuous)
+        - SELF distance (continuous)
+
+        Args:
+            past_polyvagal: Historical polyvagal state
+            current_polyvagal: Current polyvagal state
+            past_urgency: Historical urgency value
+            current_urgency: Current urgency value
+            past_self_distance: Historical SELF distance
+            current_self_distance: Current SELF distance
+
+        Returns:
+            Agreement score [0.0, 1.0] - 1.0 = perfect agreement, 0.0 = maximum disagreement
+        """
+        # Map polyvagal states to numeric values for comparison
+        polyvagal_map = {
+            'ventral': 1.0,
+            'sympathetic': 0.5,
+            'dorsal': 0.0
+        }
+
+        past_pv_value = polyvagal_map.get(past_polyvagal, 0.5)
+        current_pv_value = polyvagal_map.get(current_polyvagal, 0.5)
+
+        # Compute component agreements (FAO formula: 1 - |a - b|)
+        pv_agreement = 1.0 - abs(past_pv_value - current_pv_value)
+        urgency_agreement = 1.0 - abs(past_urgency - current_urgency)
+        self_agreement = 1.0 - abs(past_self_distance - current_self_distance)
+
+        # Weighted mean (polyvagal state most important for entity context)
+        agreement = (
+            pv_agreement * 0.5 +
+            urgency_agreement * 0.3 +
+            self_agreement * 0.2
+        )
+
+        return agreement
 
     def _detect_entity_mentions(
         self,

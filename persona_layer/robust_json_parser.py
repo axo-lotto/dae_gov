@@ -156,17 +156,19 @@ def _apply_salvage_transformations(json_str: str) -> Tuple[str, list]:
     # Pattern: "key": unquoted_value -> "key": "unquoted_value"
     # Handles: "value": Emiliano, "context": something
     # Avoid matching numbers, booleans (already fixed), or null
+    # BUT: Allow null to pass through (it's valid JSON)
     unquoted_pattern = r'(\"[^\"]+\"\s*:\s*)([A-Za-z_][A-Za-z0-9_]*)((?=\s*[,}\]]))'
     matches = re.findall(unquoted_pattern, salvaged)
     if matches:
-        # Don't replace true, false, null
+        # Don't replace true, false, null (valid JSON keywords)
         def replace_unquoted(m):
             key_part = m.group(1)
             value = m.group(2)
             suffix = m.group(3)
-            # Skip if already a JSON keyword
-            if value in ('true', 'false', 'null'):
-                return m.group(0)
+            # Skip if already a JSON keyword (including null)
+            if value.lower() in ('true', 'false', 'null'):
+                # Ensure lowercase for JSON compliance
+                return f'{key_part}{value.lower()}{suffix}'
             return f'{key_part}"{value}"{suffix}'
 
         salvaged = re.sub(unquoted_pattern, replace_unquoted, salvaged)

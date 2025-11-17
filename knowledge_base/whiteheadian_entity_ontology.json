@@ -1,0 +1,364 @@
+{
+  "metadata": {
+    "version": "2.0",
+    "created": "2025-11-17",
+    "purpose": "Whiteheadian Process Philosophy + Common-Sense Entity Ontology",
+    "philosophy": "Entities as Societies (persistent occasions) with Eternal Objects (patterns) and Nexus (relationships)",
+    "integration": "Combines process philosophy categories with human-understandable entity types"
+  },
+
+  "ontology_structure": {
+    "description": "Two-layer ontology: Process Philosophy foundation + Common-sense surface",
+
+    "process_philosophy_foundation": {
+      "actual_occasions": {
+        "description": "Fundamental units of reality - conversations, turns, interactions",
+        "mapping": "Each conversation turn = 1 actual occasion",
+        "properties": [
+          "prehensions (what is felt)",
+          "satisfaction (how it completes)",
+          "subjective_form (felt quality)",
+          "objective_immortality (becomes data for future)"
+        ]
+      },
+
+      "eternal_objects": {
+        "description": "Pure potentials - patterns, concepts, values that repeat",
+        "categories": [
+          "patterns (conversation patterns, relational dynamics)",
+          "concepts (anxiety, safety, growth, trust)",
+          "values (honesty, compassion, boundaries)",
+          "qualities (warm, distant, supportive, critical)"
+        ],
+        "mapping": "Concept entities in common-sense layer"
+      },
+
+      "societies": {
+        "description": "Persistent structured entities - people, places, organizations",
+        "definition": "A nexus of occasions with common defining characteristics",
+        "types": {
+          "personal_societies": {
+            "description": "Human individuals with persistent identity",
+            "examples": ["Emma", "Emiliano", "therapist"],
+            "mapping": "Person entities in common-sense layer",
+            "defining_characteristic": "Continuous personal identity across occasions"
+          },
+
+          "structured_societies": {
+            "description": "Organizations, institutions with hierarchical structure",
+            "examples": ["work", "therapy practice", "family system"],
+            "mapping": "Organization/Group entities",
+            "defining_characteristic": "Internal relationships and roles"
+          },
+
+          "physical_societies": {
+            "description": "Places, spaces with spatial continuity",
+            "examples": ["home", "office", "park"],
+            "mapping": "Place entities in common-sense layer",
+            "defining_characteristic": "Spatial location and boundaries"
+          }
+        }
+      },
+
+      "nexus": {
+        "description": "Relationships between societies - connections without unified structure",
+        "examples": [
+          "Emma HAS_PARENT Emiliano",
+          "Emiliano WORKS_AT Company",
+          "Home LOCATED_IN Portland"
+        ],
+        "mapping": "Neo4j relationships between entities"
+      }
+    },
+
+    "common_sense_surface": {
+      "description": "Human-understandable entity categories mapped to process philosophy",
+
+      "person": {
+        "process_mapping": "Personal Society (persistent individual)",
+        "neo4j_label": "Person",
+        "categories": {
+          "family": {
+            "relationships": ["mother", "father", "sister", "brother", "daughter", "son",
+                            "grandmother", "grandfather", "aunt", "uncle", "cousin", "partner", "spouse"],
+            "salience_base": 0.8,
+            "description": "Primary attachment figures - highest baseline salience"
+          },
+
+          "professional": {
+            "relationships": ["colleague", "boss", "mentor", "therapist", "doctor", "teacher", "coworker"],
+            "salience_base": 0.6,
+            "description": "Professional connections - medium baseline salience"
+          },
+
+          "social": {
+            "relationships": ["friend", "best_friend", "acquaintance", "neighbor", "classmate"],
+            "salience_base": 0.5,
+            "description": "Social connections - variable salience based on mention frequency"
+          },
+
+          "pets": {
+            "relationships": ["dog", "cat", "pet"],
+            "salience_base": 0.7,
+            "description": "Companion animals - high attachment salience"
+          }
+        },
+
+        "properties": {
+          "required": ["name", "relationship"],
+          "optional": ["age", "location", "description", "first_mentioned", "last_mentioned"]
+        }
+      },
+
+      "place": {
+        "process_mapping": "Physical Society (spatial continuity)",
+        "neo4j_label": "Place",
+        "categories": {
+          "private": {
+            "types": ["home", "bedroom", "personal_space"],
+            "salience_base": 0.7,
+            "description": "Private spaces - high safety/vulnerability association"
+          },
+
+          "professional": {
+            "types": ["office", "workplace", "clinic", "school"],
+            "salience_base": 0.6,
+            "description": "Work/professional spaces - medium salience"
+          },
+
+          "public": {
+            "types": ["park", "cafe", "store", "city", "country"],
+            "salience_base": 0.4,
+            "description": "Public spaces - lower baseline salience"
+          },
+
+          "sacred": {
+            "types": ["therapy_space", "meditation_room", "nature_spot"],
+            "salience_base": 0.8,
+            "description": "Meaningful places - high emotional salience"
+          }
+        },
+
+        "properties": {
+          "required": ["name", "place_type"],
+          "optional": ["city", "country", "description", "emotional_valence"]
+        }
+      },
+
+      "concept": {
+        "process_mapping": "Eternal Object (repeating pattern/value)",
+        "neo4j_label": "Concept",
+        "categories": {
+          "emotional": {
+            "types": ["anxiety", "fear", "joy", "peace", "anger", "sadness", "shame", "guilt"],
+            "salience_base": 0.9,
+            "description": "Emotional states - highest salience (crisis-aware)"
+          },
+
+          "relational": {
+            "types": ["trust", "boundaries", "safety", "intimacy", "conflict", "connection"],
+            "salience_base": 0.8,
+            "description": "Relational dynamics - high therapeutic salience"
+          },
+
+          "philosophical": {
+            "types": ["meaning", "purpose", "identity", "growth", "change", "acceptance"],
+            "salience_base": 0.6,
+            "description": "Existential themes - medium salience"
+          },
+
+          "process": {
+            "types": ["healing", "transformation", "integration", "emergence", "becoming"],
+            "salience_base": 0.7,
+            "description": "Process philosophy concepts - therapeutic salience"
+          }
+        },
+
+        "properties": {
+          "required": ["concept_name", "category"],
+          "optional": ["definition", "user_meaning", "first_mentioned"]
+        }
+      },
+
+      "preference": {
+        "process_mapping": "Eternal Object (value pattern)",
+        "neo4j_label": "Preference",
+        "subcategories": {
+          "likes": {
+            "description": "Positive preferences",
+            "salience_base": 0.5
+          },
+          "dislikes": {
+            "description": "Negative preferences",
+            "salience_base": 0.6,
+            "note": "Higher salience - often related to boundaries/safety"
+          },
+          "interests": {
+            "description": "Areas of curiosity",
+            "salience_base": 0.4
+          },
+          "goals": {
+            "description": "Future aspirations",
+            "salience_base": 0.7,
+            "note": "Higher salience - directional importance"
+          }
+        }
+      },
+
+      "organization": {
+        "process_mapping": "Structured Society (hierarchical nexus)",
+        "neo4j_label": "Organization",
+        "types": ["company", "institution", "therapy_practice", "school", "group"],
+        "salience_base": 0.6,
+        "properties": {
+          "required": ["name", "org_type"],
+          "optional": ["role", "industry", "location"]
+        }
+      }
+    }
+  },
+
+  "salience_initialization": {
+    "description": "Category-aware salience bootstrapping - prevents cold start problem",
+    "formula": "initial_salience = category_base * urgency_modifier * relationship_modifier",
+
+    "category_baselines": {
+      "Person::family": 0.8,
+      "Person::professional::therapist": 0.85,
+      "Person::professional::other": 0.6,
+      "Person::social": 0.5,
+      "Person::pets": 0.7,
+      "Place::private": 0.7,
+      "Place::professional": 0.6,
+      "Place::public": 0.4,
+      "Place::sacred": 0.8,
+      "Concept::emotional": 0.9,
+      "Concept::relational": 0.8,
+      "Concept::philosophical": 0.6,
+      "Concept::process": 0.7,
+      "Preference::likes": 0.5,
+      "Preference::dislikes": 0.6,
+      "Preference::interests": 0.4,
+      "Preference::goals": 0.7,
+      "Organization": 0.6
+    },
+
+    "modifiers": {
+      "urgency": {
+        "crisis": 1.5,
+        "high": 1.3,
+        "medium": 1.0,
+        "low": 0.8
+      },
+
+      "relationship_strength": {
+        "primary_attachment": 1.3,
+        "close": 1.2,
+        "moderate": 1.0,
+        "distant": 0.7
+      }
+    }
+  },
+
+  "validation_rules": {
+    "description": "Prevent garbage entity creation",
+
+    "stopwords_blacklist": [
+      "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+      "of", "with", "by", "from", "about", "as", "into", "through", "during",
+      "feeling", "know", "want", "need", "think", "feel", "do", "your", "my",
+      "about", "why", "how", "when", "where", "more", "most", "some", "very"
+    ],
+
+    "entity_filters": [
+      {
+        "rule": "min_length",
+        "value": 2,
+        "description": "Entity names must be >= 2 characters"
+      },
+      {
+        "rule": "proper_noun_check",
+        "applies_to": ["Person", "Place", "Organization"],
+        "pattern": "^[A-Z]",
+        "description": "Must start with capital letter"
+      },
+      {
+        "rule": "no_pronouns",
+        "blacklist": ["he", "she", "it", "they", "them", "him", "her", "his", "hers", "their"],
+        "description": "Pronouns are not entities (resolve first)"
+      },
+      {
+        "rule": "category_must_exist",
+        "description": "Entity must map to valid ontology category"
+      },
+      {
+        "rule": "relationship_required_for_person",
+        "applies_to": ["Person"],
+        "required_field": "relationship",
+        "description": "All Person entities need relationship context"
+      }
+    ]
+  },
+
+  "neo4j_schema": {
+    "description": "Graph structure mapping",
+
+    "node_labels": ["Person", "Place", "Concept", "Preference", "Organization", "Occasion"],
+
+    "relationship_types": {
+      "social": [
+        "HAS_PARENT", "HAS_CHILD", "HAS_SIBLING", "HAS_PARTNER", "HAS_FRIEND",
+        "HAS_COLLEAGUE", "HAS_THERAPIST", "HAS_DOCTOR", "HAS_MENTOR", "HAS_PET"
+      ],
+
+      "spatial": [
+        "LIVES_AT", "WORKS_AT", "VISITS", "LOCATED_IN", "NEAR"
+      ],
+
+      "conceptual": [
+        "EXPERIENCES", "VALUES", "BELIEVES_IN", "STRUGGLES_WITH", "PURSUES"
+      ],
+
+      "organizational": [
+        "EMPLOYED_BY", "MEMBER_OF", "LEADS", "REPORTS_TO"
+      ],
+
+      "temporal": [
+        "MENTIONED_IN", "DISCUSSED_AT", "FIRST_APPEARED", "LAST_APPEARED"
+      ]
+    },
+
+    "occasion_tracking": {
+      "description": "Link entities to conversational occasions",
+      "structure": "(Entity)-[:MENTIONED_IN {turn: N, salience: X}]->(Occasion:Turn)"
+    }
+  },
+
+  "integration_strategy": {
+    "description": "How to integrate with existing DAE_HYPHAE_1 systems",
+
+    "step1_entity_extraction": {
+      "module": "dae_interactive.py (entity extraction section)",
+      "enhancement": "Use ontology categories to validate extracted entities",
+      "filter": "Apply stopwords blacklist + validation rules BEFORE Neo4j storage"
+    },
+
+    "step2_salience_initialization": {
+      "module": "EntitySalienceTracker",
+      "enhancement": "Initialize new entities with category_baseline instead of 0.5 neutral",
+      "benefit": "Prevents cold start - family members start at 0.8, random words filtered out"
+    },
+
+    "step3_neo4j_storage": {
+      "module": "neo4j_knowledge_graph.py",
+      "enhancement": "Add ontology_category and process_mapping properties to nodes",
+      "structure": "Node properties include: ontology_category, common_sense_type, salience_base"
+    },
+
+    "step4_nexus_organ": {
+      "module": "NEXUS organ (12th organ)",
+      "enhancement": "Use ontology categories for semantic atom activation",
+      "benefit": "entity_recall atom knows family > professional > social hierarchy"
+    }
+  }
+}

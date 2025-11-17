@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2025-11-16",
+    "purpose": "Baseline entity schema template to scaffold proper entity structure and prevent garbage entity creation",
+    "philosophy": "Pre-define entity categories so organism learns proper entity types, not random words"
+  },
+
+  "baseline_entity_schema": {
+    "description": "Default entity structure created for every new user to guide proper entity formation",
+    "auto_initialize": true,
+    "categories": [
+      {
+        "category": "PersonalIdentity",
+        "entity_type": "Person",
+        "fields": [
+          {"name": "user_name", "default": null, "required": true, "description": "User's preferred name"},
+          {"name": "age", "default": null, "required": false, "description": "User's age"},
+          {"name": "location", "default": null, "required": false, "description": "User's primary location/city"}
+        ]
+      },
+      {
+        "category": "FamilyRelationships",
+        "entity_type": "Person",
+        "relationship_types": [
+          "mother",
+          "father",
+          "sister",
+          "brother",
+          "daughter",
+          "son",
+          "grandmother",
+          "grandfather",
+          "aunt",
+          "uncle",
+          "cousin"
+        ],
+        "fields": [
+          {"name": "name", "required": true},
+          {"name": "relationship", "required": true},
+          {"name": "age", "required": false},
+          {"name": "location", "required": false}
+        ]
+      },
+      {
+        "category": "SocialRelationships",
+        "entity_type": "Person",
+        "relationship_types": [
+          "partner",
+          "spouse",
+          "friend",
+          "best_friend",
+          "colleague",
+          "boss",
+          "mentor",
+          "therapist",
+          "doctor",
+          "teacher"
+        ],
+        "fields": [
+          {"name": "name", "required": true},
+          {"name": "relationship", "required": true},
+          {"name": "context", "required": false, "description": "Where/how they know each other"}
+        ]
+      },
+      {
+        "category": "Pets",
+        "entity_type": "Person",
+        "relationship_types": [
+          "dog",
+          "cat",
+          "pet"
+        ],
+        "fields": [
+          {"name": "name", "required": true},
+          {"name": "relationship", "required": true},
+          {"name": "age", "required": false},
+          {"name": "breed", "required": false}
+        ]
+      },
+      {
+        "category": "Places",
+        "entity_type": "Place",
+        "place_types": [
+          "home",
+          "workplace",
+          "school",
+          "city",
+          "country",
+          "neighborhood",
+          "favorite_place"
+        ],
+        "fields": [
+          {"name": "name", "required": true},
+          {"name": "place_type", "required": true},
+          {"name": "city", "required": false},
+          {"name": "country", "required": false}
+        ]
+      },
+      {
+        "category": "Work",
+        "entity_type": "Fact",
+        "fields": [
+          {"name": "company", "default": null, "description": "Current employer"},
+          {"name": "job_title", "default": null, "description": "Current role"},
+          {"name": "industry", "default": null, "description": "Work industry"},
+          {"name": "work_location", "default": null, "description": "Office location"}
+        ]
+      },
+      {
+        "category": "Preferences",
+        "entity_type": "Preference",
+        "preference_types": {
+          "likes": {
+            "description": "Things user enjoys",
+            "examples": ["hobbies", "activities", "foods", "music", "books"]
+          },
+          "dislikes": {
+            "description": "Things user avoids or dislikes",
+            "examples": ["foods", "activities", "communication styles"]
+          },
+          "interests": {
+            "description": "Topics user is interested in",
+            "examples": ["technology", "art", "sports", "cooking"]
+          },
+          "goals": {
+            "description": "User's aspirations or objectives",
+            "examples": ["career goals", "personal growth", "health goals"]
+          }
+        },
+        "fields": [
+          {"name": "preference_type", "required": true, "values": ["likes", "dislikes", "interests", "goals"]},
+          {"name": "value", "required": true, "description": "The actual preference"}
+        ]
+      },
+      {
+        "category": "HealthMental",
+        "entity_type": "Fact",
+        "fields": [
+          {"name": "diagnoses", "default": [], "description": "Mental health diagnoses (user-disclosed)"},
+          {"name": "medications", "default": [], "description": "Current medications"},
+          {"name": "therapist_name", "default": null, "description": "Current therapist"},
+          {"name": "treatment_history", "default": [], "description": "Past treatments"}
+        ]
+      }
+    ]
+  },
+
+  "entity_validation_rules": {
+    "description": "Rules to prevent garbage entity creation",
+    "rules": [
+      {
+        "rule_id": "no_stopwords",
+        "description": "Reject common stopwords as entity names",
+        "stopwords": [
+          "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+          "of", "with", "by", "from", "about", "as", "into", "through", "during",
+          "before", "after", "above", "below", "up", "down", "out", "off", "over",
+          "under", "again", "further", "then", "once", "here", "there", "when",
+          "where", "why", "how", "all", "both", "each", "few", "more", "most",
+          "other", "some", "such", "no", "nor", "not", "only", "own", "same",
+          "so", "than", "too", "very", "can", "will", "just", "should", "now",
+          "feeling", "know", "want", "need", "think", "feel"
+        ]
+      },
+      {
+        "rule_id": "min_entity_length",
+        "description": "Entity names must be at least 2 characters",
+        "min_length": 2
+      },
+      {
+        "rule_id": "proper_capitalization",
+        "description": "Person names should start with capital letter",
+        "applies_to": ["Person"],
+        "pattern": "^[A-Z]"
+      },
+      {
+        "rule_id": "no_duplicate_person_names",
+        "description": "Avoid creating duplicate person entities with case variations",
+        "applies_to": ["Person"],
+        "normalize": "case_insensitive"
+      },
+      {
+        "rule_id": "require_relationship_for_person",
+        "description": "Person entities must have a relationship type",
+        "applies_to": ["Person"],
+        "required_field": "relationship"
+      }
+    ]
+  },
+
+  "initialization_instructions": {
+    "description": "How to use this template when creating a new user",
+    "steps": [
+      "1. When new user first interacts, create baseline entity structure with null values",
+      "2. As user mentions entities, populate the appropriate category slots",
+      "3. Validate all entities against validation rules before storage",
+      "4. If entity doesn't fit any category, reject it unless it's clearly a proper noun",
+      "5. Use relationship_types lists to validate person relationships",
+      "6. Store preferences in structured format (likes vs dislikes vs interests vs goals)"
+    ]
+  },
+
+  "example_initialized_user": {
+    "user_id": "example_user_001",
+    "user_name": null,
+    "age": null,
+    "location": null,
+    "relationships": [],
+    "places": [],
+    "work": {
+      "company": null,
+      "job_title": null,
+      "industry": null,
+      "work_location": null
+    },
+    "preferences": {
+      "likes": [],
+      "dislikes": [],
+      "interests": [],
+      "goals": []
+    },
+    "health_mental": {
+      "diagnoses": [],
+      "medications": [],
+      "therapist_name": null,
+      "treatment_history": []
+    }
+  },
+
+  "llm_entity_extraction_prompt_template": {
+    "description": "Template for LLM to extract entities correctly using this schema",
+    "prompt": "Extract entities from the user's message using ONLY the following valid entity types:\n\nPERSON entities (relationships):\n- Family: mother, father, sister, brother, daughter, son, grandmother, grandfather, aunt, uncle, cousin\n- Social: partner, spouse, friend, best_friend, colleague, boss, mentor, therapist, doctor, teacher\n- Pets: dog, cat, pet\n\nPLACE entities: home, workplace, school, city, country, neighborhood, favorite_place\n\nPREFERENCE entities: likes, dislikes, interests, goals\n\nWORK entities: company, job_title, industry, work_location\n\nRULES:\n1. Do NOT extract common words like 'feeling', 'about', 'why', 'to', 'from', 'more', 'know'\n2. Person names must start with a capital letter (Emma, not emma)\n3. Only extract proper nouns or explicit entity mentions\n4. Each Person entity MUST have a relationship type\n5. Avoid creating duplicate entities with case variations\n\nReturn JSON with format:\n{\n  \"relationships\": [{\"name\": \"Emma\", \"relationship\": \"daughter\", \"age\": 8}],\n  \"places\": [{\"name\": \"Portland\", \"place_type\": \"city\"}],\n  \"preferences\": {\"likes\": [\"coffee\"], \"dislikes\": [\"therapist tone\"]},\n  \"work\": {\"company\": \"Google\"},\n  \"mentioned_names\": [\"specific proper nouns only\"]\n}"
+  }
+}

@@ -125,6 +125,39 @@ def create_indexes(graph: Neo4jKnowledgeGraph) -> List[Tuple[str, bool, str]]:
 
         ("Entity zone safety score",
          "CREATE INDEX entity_safety IF NOT EXISTS FOR (n:Person) ON (n.zone_5_safety_score)"),
+
+        # ===================================================================
+        # PHASE 1 SCALABILITY: FULL-TEXT SEARCH INDEX (November 17, 2025)
+        # Expected: 50-200× speedup on property matching (300ms → 1-5ms)
+        # ===================================================================
+
+        ("Entity properties full-text",
+         """CREATE FULLTEXT INDEX entity_properties_fulltext IF NOT EXISTS
+            FOR (n:Person|Place|Preference|Fact|Organization)
+            ON EACH [n.description, n.relationship, n.role, n.entity_value]"""),
+
+        # ===================================================================
+        # WHITEHEADIAN ONTOLOGY INDEXES (November 17, 2025)
+        # Expected: 5-10× speedup on category-aware entity queries
+        # ===================================================================
+
+        # Ontology category index (Person::family, Concept::emotional, etc.)
+        ("Entity ontology category",
+         """CREATE INDEX entity_ontology_category IF NOT EXISTS
+            FOR (n:Person|Place|Preference|Concept|Organization)
+            ON (n.ontology_category)"""),
+
+        # Process philosophy mapping (Personal Society, Eternal Object, etc.)
+        ("Entity process mapping",
+         """CREATE INDEX entity_process_mapping IF NOT EXISTS
+            FOR (n:Person|Place|Preference|Concept|Organization)
+            ON (n.process_mapping)"""),
+
+        # Composite index: user + ontology category (category-filtered queries)
+        ("Entity user-ontology composite",
+         """CREATE INDEX entity_user_ontology IF NOT EXISTS
+            FOR (n:Person|Place|Preference|Concept|Organization)
+            ON (n.user_id, n.ontology_category)"""),
     ]
 
     results = []

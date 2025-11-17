@@ -526,8 +526,11 @@ class ConversationalTrainingPairProcessor:
         tsk_file_path = self.epoch_training_path / "conversations" / f"{conversation_id}.json"
 
         try:
+            # ✅ FIX (Nov 17): Recursively convert nested TSK dataclasses
+            from persona_layer.tsk_serialization_helper import tsk_to_dict_recursive
+            tsk_data = tsk_to_dict_recursive(tsk_record)
             with open(tsk_file_path, 'w') as f:
-                json.dump(tsk_record, f, indent=2)
+                json.dump(tsk_data, f, indent=2)
             print(f"   💾 TSK stored: {tsk_file_path.name}")
         except Exception as e:
             print(f"   ⚠️ TSK storage failed: {e}")

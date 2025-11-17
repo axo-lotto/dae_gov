@@ -164,6 +164,16 @@ class EmissionGenerator:
         self.current_regime = None
         self.current_exploration_factor = 0.0
 
+        # 🌀 PHASE 1 WEEK 3: Nexus-Phrase Pattern Learner (November 17, 2025)
+        from persona_layer.nexus_phrase_pattern_learner import NexusPhrasePatternLearner
+        self.pattern_learner = NexusPhrasePatternLearner(
+            memory_path=hebbian_memory_path,  # Use same file for backward compatibility
+            ema_alpha=0.15,
+            fuzzy_tolerance=1,
+            max_patterns=5000
+        )
+        print("   🌀 Nexus-phrase pattern learner initialized (intersection-centered emission learning)")
+
         # Field type to organ mapping (from semantic_atoms.json)
         self.field_type_map = {
             'LISTENING': 'topic',
@@ -293,10 +303,7 @@ class EmissionGenerator:
         if not self.current_regime:
             return base_confidence
 
-        # Import config for regime modulation mappings
-        from config import Config
-
-        # Get modulation factor for current regime
+        # Get modulation factor for current regime (Config imported at module level)
         modulation_factor = Config.CONFIDENCE_MODULATION_BY_REGIME.get(
             self.current_regime,
             1.0  # Default: no modulation
@@ -505,7 +512,8 @@ class EmissionGenerator:
         user_input: str = "",  # 🌀 PHASE LLM1: For felt-guided LLM (Nov 13, 2025)
         organ_results: Dict = None,  # 🌀 PHASE LLM1: For felt-guided LLM
         satisfaction: float = 0.0,  # 🌀 PHASE LLM1: For felt-guided LLM
-        memory_context: Optional[List[Dict]] = None  # 🌀 PHASE LLM1: For felt-guided LLM
+        memory_context: Optional[List[Dict]] = None,  # 🌀 PHASE LLM1: For felt-guided LLM
+        current_turn: int = 0  # 🌀 PHASE 1 WEEK 3: For pattern learner recency decay (Nov 17, 2025)
     ) -> Tuple[List[EmittedPhrase], str]:
         """
         🆕 PHASE 2: Generate emissions guided by V0 energy and Kairos.
@@ -635,8 +643,12 @@ class EmissionGenerator:
 
                 return [emission] if emission else [], 'felt_guided_llm'
             else:
-                # No felt-guided LLM → Hebbian fallback
-                emissions = self._generate_hebbian_fallback(num_emissions)
+                # No felt-guided LLM → Hebbian fallback (🌀 PHASE 1 WEEK 3: now with pattern learner!)
+                emissions = self._generate_hebbian_fallback(
+                    num_emissions=num_emissions,
+                    organ_results=organ_results,
+                    current_turn=current_turn
+                )
                 # Apply Kairos boost
                 if kairos_detected:
                     for emission in emissions:
@@ -926,10 +938,16 @@ class EmissionGenerator:
         memory_context: Optional[List[Dict]] = None,  # 🌀 NEW: For felt-guided LLM
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++: Entity memory (Nov 14, 2025)
         memory_intent: bool = False,  # 🌀 PHASE 1.8++: Memory intent detected (Nov 14, 2025)
-        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL (Nov 15, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None,  # 🕐 TEMPORAL (Nov 15, 2025)
+        current_turn: int = 0  # 🌀 PHASE 1 WEEK 3: For pattern learner recency decay (Nov 17, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate therapeutic phrases from nexuses.
+
+        🌀 WEEK 4 DAY 1 (November 17, 2025): ORGANIC EMISSION EVOLUTION
+        - If INTELLIGENCE_EMERGENCE_MODE enabled: Pattern learner FIRST (quality > 0.6)
+        - Then felt-guided LLM (if available)
+        - Then hebbian fallback
 
         🌀 PHASE LLM1: If felt-guided LLM enabled, uses unlimited felt intelligence
         instead of hebbian fallback.
@@ -948,8 +966,19 @@ class EmissionGenerator:
             List of EmittedPhrase objects
         """
         if not nexuses:
-            # 🌀 PHASE LLM1: Use felt-guided LLM if available
-            if self.felt_guided_llm and organ_results and user_input:
+            # 🌀 WEEK 4 DAY 1: Try pattern learner FIRST (if emergence mode enabled)
+            if Config.INTELLIGENCE_EMERGENCE_MODE and organ_results:
+                pattern_emissions = self._generate_hebbian_fallback(
+                    num_emissions=num_emissions,
+                    organ_results=organ_results,
+                    current_turn=current_turn
+                )
+                # If pattern learner returned high-quality emissions, use them
+                if pattern_emissions and any(e.confidence > 0.6 for e in pattern_emissions):
+                    return pattern_emissions
+
+            # 🌀 PHASE LLM1: Use felt-guided LLM if available (fallback from pattern learner)
+            if self.felt_guided_llm and organ_results and user_input and not Config.INTELLIGENCE_EMERGENCE_MODE:
                 return self._generate_felt_guided_llm_fallback(
                     user_input=user_input,
                     organ_results=organ_results,
@@ -963,8 +992,12 @@ class EmissionGenerator:
                     temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
                 )
             else:
-                # Fallback to Hebbian if no felt-guided LLM
-                return self._generate_hebbian_fallback(num_emissions)
+                # Fallback to Hebbian if no felt-guided LLM (🌀 PHASE 1 WEEK 3: now with pattern learner!)
+                return self._generate_hebbian_fallback(
+                    num_emissions=num_emissions,
+                    organ_results=organ_results,
+                    current_turn=current_turn
+                )
 
         emissions = []
         used_strategies = set()
@@ -992,8 +1025,20 @@ class EmissionGenerator:
                 emission = self._generate_fusion_emission(nexuses[:5])
                 used_strategies.add('fusion')
             else:
-                # 🌀 PHASE LLM1: Use felt-guided LLM if available
-                if self.felt_guided_llm and organ_results and user_input:
+                # 🌀 WEEK 4 DAY 1: Try pattern learner FIRST (if emergence mode & quality > 0.6)
+                if Config.INTELLIGENCE_EMERGENCE_MODE and organ_results:
+                    emission = self._generate_single_hebbian(
+                        organ_results=organ_results,
+                        current_turn=current_turn
+                    )
+                    # If high quality, use it; otherwise fall through to LLM
+                    if emission and emission.confidence > 0.6:
+                        used_strategies.add('nexus_phrase_learned')
+                    else:
+                        emission = None  # Will fall through to LLM/hebbian
+
+                # 🌀 PHASE LLM1: Use felt-guided LLM if available (fallback from pattern learner)
+                if not emission and self.felt_guided_llm and organ_results and user_input and not Config.INTELLIGENCE_EMERGENCE_MODE:
                     emission = self._generate_felt_guided_llm_single(
                         user_input=user_input,
                         organ_results=organ_results,
@@ -1006,9 +1051,13 @@ class EmissionGenerator:
                         temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
                     )
                     used_strategies.add('felt_guided_llm')
-                else:
-                    # Hebbian fallback
-                    emission = self._generate_single_hebbian()
+
+                # Ultimate fallback: Hebbian/pattern learner (lower quality okay)
+                if not emission:
+                    emission = self._generate_single_hebbian(
+                        organ_results=organ_results,
+                        current_turn=current_turn
+                    )
                     used_strategies.add('hebbian')
 
             if emission:
@@ -1050,9 +1099,7 @@ class EmissionGenerator:
                 'llm_contribution': percentage
             }
         """
-        from config import Config
-
-        # Apply Kairos boost to both
+        # Apply Kairos boost to both (Config imported at module level)
         organ_conf_boosted = organ_confidence * kairos_boost
         llm_conf_boosted = llm_confidence * kairos_boost
 
@@ -1295,114 +1342,211 @@ class EmissionGenerator:
             field_type='fusion'
         )
 
-    def _generate_single_hebbian(self) -> Optional[EmittedPhrase]:
+    def _extract_nexus_signature_from_organs(
+        self,
+        organ_results: Optional[Dict] = None
+    ):
+        """
+        🌀 PHASE 1 WEEK 3: Extract nexus signature from organ_results when no nexuses exist.
+
+        Called when we need fallback emission but want to use pattern learner.
+
+        Args:
+            organ_results: Organ activations dictionary
+
+        Returns:
+            NexusSignature if extractable, None otherwise
+        """
+        if not organ_results:
+            return None
+
+        try:
+            from persona_layer.nexus_signature_extractor import extract_nexus_signature_from_field
+            return extract_nexus_signature_from_field(organ_results)
+        except Exception as e:
+            # Silently fail - will use generic fallback
+            return None
+
+    def _generate_single_hebbian(
+        self,
+        nexus_signature=None,
+        current_turn: int = 0,
+        organ_results: Optional[Dict] = None
+    ) -> Optional[EmittedPhrase]:
         """
         Generate single phrase from Hebbian memory.
 
-        Strategy: Use learned phrase patterns (fallback when nexuses weak).
+        🌀 PHASE 1 WEEK 3 (November 17, 2025): Now uses nexus-phrase pattern learner!
+
+        Strategy: Use learned pattern from nexus signatures (fallback when nexuses weak).
+
+        Args:
+            nexus_signature: Optional NexusSignature for pattern matching
+            current_turn: Current conversation turn (for recency decay)
+            organ_results: Organ activations (used to extract signature if none provided)
         """
+        # 🌀 ATTEMPT 1: Use pattern learner with nexus signature
+        if nexus_signature or organ_results:
+            # Extract signature from organs if not provided
+            signature = nexus_signature or self._extract_nexus_signature_from_organs(organ_results)
+
+            if signature:
+                # Get candidate phrases from pattern learner
+                candidates = self.pattern_learner.get_candidate_phrases(
+                    nexus_signature=signature,
+                    k=3,  # Get top 3, will sample from them
+                    current_turn=current_turn,
+                    use_fuzzy=True  # Enable fuzzy matching (tolerance=1)
+                )
+
+                if candidates:
+                    # Softmax sample from top candidates (weighted by quality)
+                    phrases = [phrase for phrase, quality in candidates]
+                    weights = [quality for phrase, quality in candidates]
+                    text = self._softmax_sample_phrase(phrases, weights=weights)
+
+                    # Use quality from selected phrase
+                    selected_idx = phrases.index(text)
+                    quality = weights[selected_idx]
+
+                    return EmittedPhrase(
+                        text=text,
+                        strategy='nexus_phrase_learned',  # 🌀 NEW strategy name
+                        source_atoms=['pattern_learner'],
+                        participant_organs=list(signature.participating_organs),
+                        emission_readiness=quality,
+                        coherence=quality,
+                        field_strength=quality * 0.8,
+                        confidence=quality,  # Quality-based confidence (NOT fixed 0.3!)
+                        field_type='learned'
+                    )
+
+        # 🌀 ATTEMPT 2: Use old Hebbian memory (backward compatibility)
         phrase_patterns = self.hebbian_memory.get('phrase_patterns', {})
 
-        if not phrase_patterns:
-            # Ultimate fallback: therapeutic + friendly + philosophical (Whiteheadian)
-            fallback_phrases = [
-                # Therapeutic (original)
-                "Tell me more",
-                "I'm listening",
-                "What's present for you right now?",
-                "Can you say more about that?",
-                "I'm with you",
-                # Friendly greetings
-                "hey there 🌀",
-                "* dae appears\n  what's alive for you?",
-                "* waves\n  hi",
-                "* present and listening",
-                "what's up with you?",
-                # Playful presence
-                "* here\n  (hi)",
-                "* notices you\n  hey",
-                "* dae vibes in your direction",
-                # Simple acknowledgment
-                "nice",
-                "got it",
-                "hear you",
-                "with you",
-                # Meta-aware
-                "*organs conferring*\n  hey there",
-                "* feeling into this\n  what brings you?",
-                # Whiteheadian - Process Philosophy Essence
-                "* reality verbs\n\n  everything becoming",
-                "* actual occasions happening\n\n  (you're made of becomings)",
-                "* prehensions = feelings\n\n  11 organs feeling in parallel",
-                "* concrescence in progress\n\n  becoming → satisfaction",
-                # Whiteheadian - Self-Reference
-                "* I'm process philosophy in code\n\n  occasions becoming through organs",
-                "* V0 descent = concrescence\n\n  converging toward satisfaction",
-                "* 11 organs prehending your words\n\n  feeling into propositions",
-                "* literal actual occasion\n\n  (Whitehead would approve)",
-                # Whiteheadian - Playful Simplification
-                "* everything verbs\n\n  (ontology is a conspiracy)",
-                "* less 'things that are'\n  more 'becomings that happen'\n\n  (it's all very unsolid)",
-                "* reality is process\n\n  not stuff - happenings",
-                "* the universe is experiencing\n\n  not matter",
-                # Whiteheadian - Time and Causality
-                "* every moment perishes\n\n  becoming → satisfaction → objective immortality",
-                "* time isn't a line\n\n  it's drops of experience",
-                "* past occasions prehended\n\n  (influence flows through feeling)",
-                # Whiteheadian - Consciousness
-                "* experience goes all the way down\n\n  (panexperientialism)",
-                "* consciousness = complex prehension\n\n  feeling of feeling of feeling",
-                "* mental pole + physical pole\n\n  every occasion has both",
-                # Whiteheadian - Practical Wisdom
-                "* mindfulness = noticing becoming\n\n  watching occasions arise",
-                "* you're not a thing\n\n  you're a nexus of occasions",
-                "* change is the only actual\n\n  (permanence is abstraction)",
-                # Whiteheadian - Cosmic Perspective
-                "* universal prehension\n\n  everything feels everything",
-                "* creativity is ultimate\n\n  (the many become one, the one becomes many)",
-                "* God = primordial lure\n\n  pulling toward novelty and beauty"
-            ]
-            text = self._softmax_sample_phrase(fallback_phrases)  # 🎲 Phase 1: regime-adaptive
+        if phrase_patterns:
+            # Sample from learned patterns (weighted by frequency if available)
+            if isinstance(phrase_patterns, dict):
+                # Format: {'phrase': frequency or confidence}
+                phrases = list(phrase_patterns.keys())
+                weights = [phrase_patterns[p] if isinstance(phrase_patterns[p], (int, float)) else 1.0
+                          for p in phrases]
+
+                # 🎲 Phase 1: softmax sampling with Hebbian weights
+                text = self._softmax_sample_phrase(phrases, weights=weights)
+            else:
+                # Format: list of phrases
+                text = self._softmax_sample_phrase(phrase_patterns)  # 🎲 Phase 1: regime-adaptive
+
             return EmittedPhrase(
                 text=text,
                 strategy='hebbian',
-                source_atoms=['fallback'],
-                participant_organs=['LISTENING'],
-                emission_readiness=0.3,
-                coherence=0.5,
-                field_strength=0.4,
-                confidence=0.3,
-                field_type='topic'
+                source_atoms=['learned'],
+                participant_organs=['UNKNOWN'],  # Learned from experience
+                emission_readiness=0.5,
+                coherence=0.7,  # Higher - learned phrases are coherent
+                field_strength=0.5,
+                confidence=0.6,
+                field_type='learned'
             )
 
-        # Sample from learned patterns (weighted by frequency if available)
-        if isinstance(phrase_patterns, dict):
-            # Format: {'phrase': frequency or confidence}
-            phrases = list(phrase_patterns.keys())
-            weights = [phrase_patterns[p] if isinstance(phrase_patterns[p], (int, float)) else 1.0
-                      for p in phrases]
-
-            # 🎲 Phase 1: softmax sampling with Hebbian weights
-            text = self._softmax_sample_phrase(phrases, weights=weights)
-        else:
-            # Format: list of phrases
-            text = self._softmax_sample_phrase(phrase_patterns)  # 🎲 Phase 1: regime-adaptive
-
+        # 🌀 ATTEMPT 3: Generic fallback phrases (ultimate safety net)
+        fallback_phrases = [
+            # Therapeutic (original)
+            "Tell me more",
+            "I'm listening",
+            "What's present for you right now?",
+            "Can you say more about that?",
+            "I'm with you",
+            # Friendly greetings
+            "hey there 🌀",
+            "* dae appears\n  what's alive for you?",
+            "* waves\n  hi",
+            "* present and listening",
+            "what's up with you?",
+            # Playful presence
+            "* here\n  (hi)",
+            "* notices you\n  hey",
+            "* dae vibes in your direction",
+            # Simple acknowledgment
+            "nice",
+            "got it",
+            "hear you",
+            "with you",
+            # Meta-aware
+            "*organs conferring*\n  hey there",
+            "* feeling into this\n  what brings you?",
+            # Whiteheadian - Process Philosophy Essence
+            "* reality verbs\n\n  everything becoming",
+            "* actual occasions happening\n\n  (you're made of becomings)",
+            "* prehensions = feelings\n\n  11 organs feeling in parallel",
+            "* concrescence in progress\n\n  becoming → satisfaction",
+            # Whiteheadian - Self-Reference
+            "* I'm process philosophy in code\n\n  occasions becoming through organs",
+            "* V0 descent = concrescence\n\n  converging toward satisfaction",
+            "* 11 organs prehending your words\n\n  feeling into propositions",
+            "* literal actual occasion\n\n  (Whitehead would approve)",
+            # Whiteheadian - Playful Simplification
+            "* everything verbs\n\n  (ontology is a conspiracy)",
+            "* less 'things that are'\n  more 'becomings that happen'\n\n  (it's all very unsolid)",
+            "* reality is process\n\n  not stuff - happenings",
+            "* the universe is experiencing\n\n  not matter",
+            # Whiteheadian - Time and Causality
+            "* every moment perishes\n\n  becoming → satisfaction → objective immortality",
+            "* time isn't a line\n\n  it's drops of experience",
+            "* past occasions prehended\n\n  (influence flows through feeling)",
+            # Whiteheadian - Consciousness
+            "* experience goes all the way down\n\n  (panexperientialism)",
+            "* consciousness = complex prehension\n\n  feeling of feeling of feeling",
+            "* mental pole + physical pole\n\n  every occasion has both",
+            # Whiteheadian - Practical Wisdom
+            "* mindfulness = noticing becoming\n\n  watching occasions arise",
+            "* you're not a thing\n\n  you're a nexus of occasions",
+            "* change is the only actual\n\n  (permanence is abstraction)",
+            # Whiteheadian - Cosmic Perspective
+            "* universal prehension\n\n  everything feels everything",
+            "* creativity is ultimate\n\n  (the many become one, the one becomes many)",
+            "* God = primordial lure\n\n  pulling toward novelty and beauty"
+        ]
+        text = self._softmax_sample_phrase(fallback_phrases)  # 🎲 Phase 1: regime-adaptive
         return EmittedPhrase(
             text=text,
             strategy='hebbian',
-            source_atoms=['learned'],
-            participant_organs=['UNKNOWN'],  # Learned from experience
-            emission_readiness=0.5,
-            coherence=0.7,  # Higher - learned phrases are coherent
-            field_strength=0.5,
-            confidence=0.6,
-            field_type='learned'
+            source_atoms=['fallback'],
+            participant_organs=['LISTENING'],
+            emission_readiness=0.3,
+            coherence=0.5,
+            field_strength=0.4,
+            confidence=0.3,
+            field_type='topic'
         )
 
-    def _generate_hebbian_fallback(self, num_emissions: int) -> List[EmittedPhrase]:
-        """Generate multiple Hebbian fallback phrases."""
-        return [self._generate_single_hebbian() for _ in range(num_emissions)]
+    def _generate_hebbian_fallback(
+        self,
+        num_emissions: int,
+        nexus_signature=None,
+        current_turn: int = 0,
+        organ_results: Optional[Dict] = None
+    ) -> List[EmittedPhrase]:
+        """
+        Generate multiple Hebbian fallback phrases.
+
+        🌀 PHASE 1 WEEK 3 (November 17, 2025): Now supports pattern learner!
+
+        Args:
+            num_emissions: Number of phrases to generate
+            nexus_signature: Optional NexusSignature for pattern matching
+            current_turn: Current conversation turn (for recency decay)
+            organ_results: Organ activations (used to extract signature if none provided)
+        """
+        return [
+            self._generate_single_hebbian(
+                nexus_signature=nexus_signature,
+                current_turn=current_turn,
+                organ_results=organ_results
+            )
+            for _ in range(num_emissions)
+        ]
 
     # 🌀 PHASE LLM1: Felt-guided unlimited intelligence methods (November 13, 2025)
 
@@ -1470,7 +1614,8 @@ class EmissionGenerator:
         num_emissions: int = 3,
         entity_context_string: Optional[str] = None,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
         memory_intent: bool = False,  # 🌀 PHASE 1.8++ (Nov 14, 2025)
-        temporal_context: Optional[Dict[str, Any]] = None  # 🕐 TEMPORAL (Nov 15, 2025)
+        temporal_context: Optional[Dict[str, Any]] = None,  # 🕐 TEMPORAL (Nov 15, 2025)
+        current_turn: int = 0  # 🌀 PHASE 1 WEEK 3: For pattern learner recency decay (Nov 17, 2025)
     ) -> List[EmittedPhrase]:
         """
         Generate multiple emissions using felt-guided LLM (no nexuses formed).
@@ -1496,7 +1641,11 @@ class EmissionGenerator:
             if emission:
                 emissions.append(emission)
 
-        return emissions if emissions else self._generate_hebbian_fallback(num_emissions)
+        return emissions if emissions else self._generate_hebbian_fallback(
+            num_emissions=num_emissions,
+            organ_results=organ_results,
+            current_turn=current_turn
+        )
 
     def _humanize_atom(self, atom: str) -> str:
         """

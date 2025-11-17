@@ -30,8 +30,8 @@
     "user_id": "user_20251113_143117",
     "username": "Emi",
     "created_at": "2025-11-13T14:31:17.336782",
-    "total_sessions": 49,
-    "total_turns": 208,
+    "total_sessions": 59,
+    "total_turns": 255,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251113_143117_state.json"
   },
@@ -169,5 +169,50 @@
     "total_turns": 0,
     "organic_family_id": null,
     "user_state_path": "persona_layer/users/user_20251115_130608_state.json"
+  },
+  "user_20251116_162655": {
+    "user_id": "user_20251116_162655",
+    "username": "EntityTestUser",
+    "created_at": "2025-11-16T16:26:55.404118",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251116_162655_state.json"
+  },
+  "user_20251116_162755": {
+    "user_id": "user_20251116_162755",
+    "username": "DirectPrehensionTest",
+    "created_at": "2025-11-16T16:27:55.602006",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251116_162755_state.json"
+  },
+  "user_20251116_162835": {
+    "user_id": "user_20251116_162835",
+    "username": "FixedPrehensionTest",
+    "created_at": "2025-11-16T16:28:35.180848",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251116_162835_state.json"
+  },
+  "user_20251116_162854": {
+    "user_id": "user_20251116_162854",
+    "username": "DebugProfile",
+    "created_at": "2025-11-16T16:28:54.270671",
+    "total_sessions": 0,
+    "total_turns": 0,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251116_162854_state.json"
+  },
+  "user_20251117_160809": {
+    "user_id": "user_20251117_160809",
+    "username": "Xeno",
+    "created_at": "2025-11-17T16:08:09.692849",
+    "total_sessions": 1,
+    "total_turns": 10,
+    "organic_family_id": null,
+    "user_state_path": "persona_layer/users/user_20251117_160809_state.json"
   }
 }

@@ -155,19 +155,27 @@ class PreEmissionEntityPrehension:
                 })
 
         # Check for mentioned relationship names
+        # Support both 'relationships' and 'manual_entities' formats
+        all_relationships = []
         if 'relationships' in entities:
-            for rel in entities['relationships']:
-                rel_name = rel.get('name', '')
-                if rel_name and self._mentions_name(user_input, rel_name):
-                    mentioned.append({
-                        'name': rel_name,
-                        'type': rel.get('type', 'person'),
-                        'relationship': rel.get('relationship', 'unknown'),
-                        'context': f"User's {rel.get('relationship', 'connection')}",
-                        'historical_polyvagal': rel.get('polyvagal_state', 'unknown'),
-                        'historical_safety': rel.get('safety_score', 0.5),
-                        'source': 'stored_profile',
-                    })
+            all_relationships.extend(entities['relationships'])
+        if 'manual_entities' in entities:
+            all_relationships.extend(entities['manual_entities'])
+        if 'family_members' in entities:
+            all_relationships.extend(entities['family_members'])
+
+        for rel in all_relationships:
+            rel_name = rel.get('name', '')
+            if rel_name and self._mentions_name(user_input, rel_name):
+                mentioned.append({
+                    'name': rel_name,
+                    'type': rel.get('type', 'person'),
+                    'relationship': rel.get('relationship', 'unknown'),
+                    'context': f"User's {rel.get('relationship', 'connection')}",
+                    'historical_polyvagal': rel.get('polyvagal_state', 'unknown'),
+                    'historical_safety': rel.get('safety_score', 0.5),
+                    'source': 'stored_profile',
+                })
 
         # Check for other mentioned names
         if 'mentioned_names' in entities:
@@ -186,6 +194,26 @@ class PreEmissionEntityPrehension:
 
         # 4. Detect implicit entity references
         result['implicit_references'] = self._detect_implicit_references(user_input, entities)
+
+        # ✅ FIX (Nov 16): Add implicitly referenced entities to mentioned_entities
+        # NEXUS needs these to compute past/present differentiation
+        for impl_ref in result['implicit_references']:
+            resolved_name = impl_ref.get('resolved_to', '')
+            if resolved_name and not any(m['name'] == resolved_name for m in mentioned):
+                mentioned.append({
+                    'name': resolved_name,
+                    'type': 'person',
+                    'relationship': impl_ref.get('relationship', 'unknown'),
+                    'context': f"Implicit reference ('{impl_ref.get('keyword', '')}')",
+                    'source': 'implicit_reference',
+                    'confidence': impl_ref.get('confidence', 0.85)
+                })
+
+        # Update mentioned_entities with implicit resolutions
+        result['mentioned_entities'] = mentioned
+
+        # ✅ FIX (Nov 16): Update entity_memory_available based on MENTIONED entities, not just stored
+        result['entity_memory_available'] = len(mentioned) > 0 or bool(result['implicit_references'])
 
         # 5. Build historical context summary
         result['historical_context'] = self._build_historical_context(entities)

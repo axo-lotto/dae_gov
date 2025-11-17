@@ -452,7 +452,8 @@ class Config:
     # When True: Disables felt-guided LLM override to measure organic emission evolution
     # When False: Uses felt-guided LLM for quality (interactive/production mode)
     # Usage: Set to True for epoch training, False for dae_interactive.py
-    INTELLIGENCE_EMERGENCE_MODE = False  # Default: production quality mode
+    # 🌀 WEEK 4 DAY 1 (Nov 17, 2025): ENABLED for organic emission evolution
+    INTELLIGENCE_EMERGENCE_MODE = True  # Default: production quality mode
 
     # LLM Backend settings (only relevant if LOCAL_LLM_ENABLED = True)
     LOCAL_LLM_BACKEND = "ollama"  # "ollama", "lmstudio", "gpt4all"
@@ -494,6 +495,35 @@ class Config:
     # Storage Strategy
     NEO4J_DUAL_STORAGE = True  # Store in BOTH JSON (fallback) and Neo4j (enrichment)
     NEO4J_FALLBACK_ON_ERROR = True  # Continue with JSON-only if Neo4j fails
+
+    # ============================================================================
+    # WHITEHEADIAN ENTITY ONTOLOGY (NOV 17, 2025)
+    # ============================================================================
+    # Process Philosophy + Common-Sense Entity Continuity
+
+    # Entity Validation (Garbage Filtering)
+    ENTITY_ONTOLOGY_ENABLED = True  # Enable Whiteheadian ontology validation
+    ENTITY_ONTOLOGY_STOPWORDS_ENABLED = True  # Filter stopwords ("feeling", "do", "your")
+    ENTITY_ONTOLOGY_CAPITALIZATION_CHECK = True  # Require capitalization for Person/Place
+
+    # Morpheable Horizon (LAYER 1 - Adaptive Memory Depth)
+    ENTITY_HORIZON_MIN_SIZE = 100  # Minimum entities in horizon (low coherence)
+    ENTITY_HORIZON_MAX_SIZE = 500  # Maximum entities in horizon (high coherence)
+    ENTITY_HORIZON_COHERENCE_GATE = 0.3  # FFITTSS τ_recall pattern (NEXUS uses 0.3)
+
+    # Entity Salience (LAYER 2 - 3-Tier EMA Decay)
+    ENTITY_SALIENCE_LOCAL_ALPHA = 0.05  # Entity-specific decay (half-life ≈ 13 turns)
+    ENTITY_SALIENCE_FAMILY_ALPHA = 0.1  # Relationship type decay (half-life ≈ 7 turns)
+    ENTITY_SALIENCE_GLOBAL_ALPHA = 0.05  # Cross-entity theme decay (half-life ≈ 14 turns)
+    ENTITY_SALIENCE_L2_LAMBDA = 0.001  # L2 regularization (prevents explosion)
+    ENTITY_SALIENCE_STALENESS_THRESHOLD = 300  # Prune entities not mentioned in 300+ turns
+
+    # Felt-Satisfaction Inference (Non-Invasive Urgency)
+    FELT_SATISFACTION_ENABLED = True  # Infer satisfaction from organism felt-state
+    FELT_SATISFACTION_WEIGHT_COHERENCE = 0.4  # Field coherence weight
+    FELT_SATISFACTION_WEIGHT_V0 = 0.3  # V0 descent weight
+    FELT_SATISFACTION_WEIGHT_KAIROS = 0.2  # Kairos detection weight
+    FELT_SATISFACTION_WEIGHT_EMISSION = 0.1  # Emission confidence weight
 
     # ============================================================================
     # HYBRID SUPERJECT CONFIGURATION (WEEK 1 - NOV 13, 2025)

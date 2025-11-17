@@ -789,27 +789,30 @@ class UserSuperjectLearner:
 
     def extract_entities_llm(self, user_input: str, current_entities: Dict) -> Dict:
         """
-        Open-ended entity extraction using LLM to discover facts naturally.
+        Open-ended entity extraction using LLM with schema validation.
 
-        ⚠️ DEPRECATED (Nov 16, 2025): Use extract_entities_organic() instead.
-        This method has JSON parsing reliability issues. Kept for backward compatibility.
-
-        NO hardcoded patterns. Memory evolves organically.
+        🌀 UPDATED (Nov 16, 2025): Now uses entity_schema_validator to prevent garbage
+        entity creation (stopwords like "feeling", "about", "why", etc.)
 
         Args:
             user_input: User's conversational turn
             current_entities: Currently stored entities
 
         Returns:
-            New entities to merge with existing
+            New entities to merge with existing (validated and filtered)
         """
         from persona_layer.local_llm_bridge import LocalLLMBridge
+        from persona_layer.entity_schema_validator import get_validator
 
-        # Build extraction prompt
+        # Get validator
+        validator = get_validator()
+
+        # Build extraction prompt using schema template
+        schema_prompt = validator.get_llm_extraction_prompt()
+
         prompt = f"""You are analyzing a conversation to extract memorable facts about the speaker.
 
-Extract any facts worth remembering: names, relationships, emotions, family, values, preferences,
-psychological patterns - anything that helps understand this person.
+{schema_prompt}
 
 Previous known facts:
 {self._format_existing_entities(current_entities)}
@@ -817,20 +820,8 @@ Previous known facts:
 New statement from user:
 "{user_input}"
 
-What new facts should be remembered? Return as JSON:
-{{
-  "new_facts": [
-    {{"type": "name", "value": "...", "context": "..."}},
-    {{"type": "relationship", "value": "...", "context": "..."}},
-    {{"type": "emotion", "value": "...", "context": "..."}},
-    {{"type": "family", "value": "...", "context": "..."}},
-    {{"type": "value", "value": "...", "context": "..."}},
-    {{"type": "preference", "value": "...", "context": "..."}},
-    {{"type": "psychological", "value": "...", "context": "..."}}
-  ]
-}}
-
-Return empty list if nothing new to remember. Be selective - only remember genuinely useful facts.
+What new entities should be remembered? Return JSON in the format specified above.
+Be selective - only extract proper nouns and explicit entity mentions.
 
 JSON:"""
 
@@ -864,9 +855,12 @@ JSON:"""
             extraction, error_msg, was_salvaged = salvage_llm_json(response_text)
 
             if extraction is None:
+                # Provide more context for debugging but don't spam the output
                 print(f"      ⚠️  LLM entity extraction: {error_msg}")
-                if response_text:
-                    print(f"      Response preview: {response_text[:200]}...")
+                # Only show preview in debug mode or if it's a short response
+                if response_text and len(response_text) < 300:
+                    preview = response_text.replace('\n', ' ').strip()
+                    print(f"      Response preview: {preview[:150]}...")
                 return {}
 
             if was_salvaged:
@@ -880,10 +874,11 @@ JSON:"""
 
                 for fact in new_facts:
                     fact_type = fact.get('type', 'unknown')
-                    fact_value = fact.get('value', '')
+                    fact_value = fact.get('value')
                     fact_context = fact.get('context', '')
 
-                    if not fact_value:
+                    # Skip facts with null, None, or empty values
+                    if fact_value is None or (isinstance(fact_value, str) and not fact_value.strip()):
                         continue
 
                     # Store in memory-compatible format
@@ -901,7 +896,19 @@ JSON:"""
                     if fact_type == 'name' and 'user_name' not in current_entities:
                         new_entities['user_name'] = fact_value
 
-                return new_entities
+                # 🌀 Nov 16, 2025: Validate and filter entities before returning
+                # Get existing entities for duplicate detection
+                existing_entities_list = []
+                if 'relationships' in current_entities:
+                    existing_entities_list.extend(current_entities['relationships'])
+
+                # Validate extracted entities
+                filtered_entities = validator.validate_and_filter_entities(
+                    new_entities,
+                    existing_entities=existing_entities_list
+                )
+
+                return filtered_entities
             else:
                 # extraction exists but is empty or None-like (shouldn't happen due to earlier check)
                 print(f"      ⚠️  LLM entity extraction: Empty extraction result")

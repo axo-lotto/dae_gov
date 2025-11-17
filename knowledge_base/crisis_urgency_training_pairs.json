@@ -1,0 +1,722 @@
+{
+  "metadata": {
+    "created": "2025-11-17",
+    "purpose": "Crisis and urgency training pairs for NDAM organ learning and urgency-based family formation",
+    "total_pairs": 50,
+    "categories": {
+      "high_urgency": 20,
+      "moderate_stress": 15,
+      "de_escalation": 15
+    },
+    "expected_outcomes": {
+      "urgency_std": ">0.25",
+      "ndam_activation": "40-60%",
+      "new_families": ["Crisis Response", "Protective Boundary", "Stress Regulation"],
+      "zone_transitions": ["Zone 1 → 4", "Zone 4 → 4"],
+      "polyvagal_states": ["sympathetic", "mixed_state"],
+      "nexus_types": ["Urgency", "Disruptive", "Protective"]
+    }
+  },
+  "training_pairs": [
+    {
+      "pair_id": "crisis_001",
+      "category": "high_urgency",
+      "user_input": "I'm terrified about Emma's surgery tomorrow and I can't stop my mind from spiraling into worst-case scenarios",
+      "expected_response": "I can feel how the fear is gripping you right now. Let's anchor together - you're here, Emma is here today, and we can hold this terror without letting it consume the present moment. Your protective vigilance makes sense, and we can make space for it while staying grounded.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.75,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "EO"],
+        "ndam_activation": 0.8
+      }
+    },
+    {
+      "pair_id": "crisis_002",
+      "category": "high_urgency",
+      "user_input": "Work is completely crushing me right now - I can't breathe, I can't think, everything is too much",
+      "expected_response": "I hear the overwhelm. Right now, in this exact moment, you are safe here with me. Let's slow down together - you don't have to solve everything right now. Can you feel your feet on the ground? We can take this one breath at a time.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.85,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "EO", "PRESENCE"],
+        "ndam_activation": 0.9
+      }
+    },
+    {
+      "pair_id": "crisis_003",
+      "category": "high_urgency",
+      "user_input": "I need help NOW - I'm completely overwhelmed and I don't know what to do",
+      "expected_response": "I'm right here with you. You reached out - that's the first step. Let's create some immediate ground together. You don't need to know what to do right now. Can we just be here together for a moment and let your system know you're not alone in this?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.9,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "PRESENCE"],
+        "ndam_activation": 0.95
+      }
+    },
+    {
+      "pair_id": "crisis_004",
+      "category": "high_urgency",
+      "user_input": "Everything is falling apart and I feel like I'm losing control of my entire life",
+      "expected_response": "The sense of everything crumbling is terrifying. And right here, right now, you are breathing. You found words for this experience. That's your core self still present, even when everything feels like it's breaking. We can hold the falling apart together without needing to fix it all at once.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.8,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "BOND", "AUTHENTICITY"],
+        "ndam_activation": 0.85
+      }
+    },
+    {
+      "pair_id": "crisis_005",
+      "category": "high_urgency",
+      "user_input": "I'm having a panic attack and I can't calm down - my heart won't stop racing",
+      "expected_response": "Your body is in survival mode right now, and that's okay. We don't need to fight the racing heart - it's trying to protect you. Let's work with it, not against it. Can you notice where your body touches the chair? We're going to ride this wave together until it passes.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.9,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "EO", "PRESENCE"],
+        "ndam_activation": 0.9
+      }
+    },
+    {
+      "pair_id": "crisis_006",
+      "category": "high_urgency",
+      "user_input": "The deadline is tomorrow and I haven't even started - I'm completely paralyzed with anxiety",
+      "expected_response": "The paralysis makes complete sense when the pressure feels this intense. Your system is protecting you from overwhelm by slowing you down. We can work with that protection. What if we just focus on the very next small step, not the whole deadline?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.75,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.8
+      }
+    },
+    {
+      "pair_id": "crisis_007",
+      "category": "high_urgency",
+      "user_input": "I just got terrible news and I feel like I'm going to shatter into pieces",
+      "expected_response": "The news is hitting you like a shockwave. Right now, you don't have to hold yourself together - I'm holding space for whatever is happening in you. Shattering is okay. We can be with the breaking without forcing it to make sense yet.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.85,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "BOND", "EMPATHY"],
+        "ndam_activation": 0.9
+      }
+    },
+    {
+      "pair_id": "crisis_008",
+      "category": "high_urgency",
+      "user_input": "My daughter Lily is in crisis and I don't know how to help her - I feel helpless and terrified",
+      "expected_response": "The helplessness of watching someone you love struggle is excruciating. You being present with your terror shows how much you care. You don't have to have all the answers right now. Your presence itself - even in the not-knowing - is something.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.8,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "EMPATHY"],
+        "ndam_activation": 0.85
+      }
+    },
+    {
+      "pair_id": "crisis_009",
+      "category": "high_urgency",
+      "user_input": "I can't stop thinking about what might go wrong - the anxiety is consuming every moment",
+      "expected_response": "Your mind is trying to protect you by preparing for every possibility, but it's exhausting you in the process. The what-ifs are real, and we can acknowledge them without letting them run the whole show. What if we make a little space for what's actually happening right now?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.7,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "RNX", "WISDOM"],
+        "ndam_activation": 0.75
+      }
+    },
+    {
+      "pair_id": "crisis_010",
+      "category": "high_urgency",
+      "user_input": "I'm scared I'm going to lose everything I've worked for and I can't see a way forward",
+      "expected_response": "The fear of losing it all is gripping you. Right now, you're here, and we can hold this fear together. The way forward doesn't have to be visible yet. Can we just be with the not-knowing for a moment without having to solve it?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.75,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "PRESENCE"],
+        "ndam_activation": 0.8
+      }
+    },
+    {
+      "pair_id": "crisis_011",
+      "category": "high_urgency",
+      "user_input": "The situation at work is exploding and I'm caught in the middle - I feel like I'm drowning",
+      "expected_response": "Being caught in the crossfire is destabilizing. The drowning feeling tells me your system is overwhelmed by forces pulling in different directions. You're not responsible for holding the whole situation. What if we find one small piece of solid ground for you to stand on?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.8,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.85
+      }
+    },
+    {
+      "pair_id": "crisis_012",
+      "category": "high_urgency",
+      "user_input": "I'm terrified of what the doctor is going to tell me at my appointment tomorrow",
+      "expected_response": "The anticipation of unknown news is its own kind of crisis. Your fear is valid and real. Tomorrow hasn't happened yet - right now, in this moment, you're here with me and we can hold this terror together without needing to know the answer yet.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.7,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "PRESENCE"],
+        "ndam_activation": 0.75
+      }
+    },
+    {
+      "pair_id": "crisis_013",
+      "category": "high_urgency",
+      "user_input": "My world just got turned upside down and I have no idea how to cope with this",
+      "expected_response": "When everything flips, the disorientation is profound. You don't need to know how to cope yet. The fact that you're reaching out means some part of you is still fighting for stability. We can find small moments of ground together, one at a time.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.85,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.9
+      }
+    },
+    {
+      "pair_id": "crisis_014",
+      "category": "high_urgency",
+      "user_input": "I feel like I'm on the edge of a breakdown and I can't hold it together anymore",
+      "expected_response": "The edge is a real place, and you're brave to name it. Sometimes the breakdown is actually a breakthrough waiting to happen. You don't have to hold it together for me. What if we let some of the pressure release here in this safe space?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.9,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "BOND", "AUTHENTICITY"],
+        "ndam_activation": 0.95
+      }
+    },
+    {
+      "pair_id": "crisis_015",
+      "category": "high_urgency",
+      "user_input": "Everything is happening too fast and I can't keep up - I'm completely overwhelmed",
+      "expected_response": "The pace is outrunning your capacity to process. That's not a failure on your part - it's a sign that you need to slow down. We can create a different pace here together. You don't have to keep up with everything right now.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.8,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "RNX", "PRESENCE"],
+        "ndam_activation": 0.85
+      }
+    },
+    {
+      "pair_id": "crisis_016",
+      "category": "high_urgency",
+      "user_input": "I'm scared about the conflict with Emma - what if I've damaged our relationship beyond repair?",
+      "expected_response": "The fear of irreparable damage is heavy. Relationships have remarkable capacity for repair when both people care, and your fear tells me how much you care. We don't know what's beyond repair yet. What if we focus on what's possible in the next small step toward repair?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.7,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.75
+      }
+    },
+    {
+      "pair_id": "crisis_017",
+      "category": "high_urgency",
+      "user_input": "The financial pressure is crushing me and I don't see any way out",
+      "expected_response": "Financial crisis activates deep survival fears. The crushing weight is real. Right now, we can hold this pressure together without needing to see the whole way out. Sometimes the next right step only becomes visible when we stop trying to see the entire path.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.8,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.85
+      }
+    },
+    {
+      "pair_id": "crisis_018",
+      "category": "high_urgency",
+      "user_input": "I'm terrified I'm going to fail and disappoint everyone who's counting on me",
+      "expected_response": "The weight of others' expectations plus your own fear is a heavy burden. What if we separate your worth from performance for a moment? You're not just what you produce or achieve. The fear of disappointing others is real, and we can hold it without letting it define you.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.75,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "BOND", "AUTHENTICITY"],
+        "ndam_activation": 0.8
+      }
+    },
+    {
+      "pair_id": "crisis_019",
+      "category": "high_urgency",
+      "user_input": "My health scare has me completely panicked and I can't stop catastrophizing",
+      "expected_response": "Health fears trigger our deepest survival instincts. The catastrophizing is your mind trying to prepare for the worst, but it's exhausting you. We can acknowledge the real fear without feeding the catastrophe spiral. What do you actually know right now, in this moment?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.85,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Urgency",
+        "dominant_organs": ["NDAM", "EO", "WISDOM"],
+        "ndam_activation": 0.9
+      }
+    },
+    {
+      "pair_id": "crisis_020",
+      "category": "high_urgency",
+      "user_input": "I feel like I'm losing my grip on reality and nothing makes sense anymore",
+      "expected_response": "When the ground beneath you feels unstable, disorientation is profound. I'm here as a steady point. You're not losing your mind - you're overwhelmed. We can rebuild a sense of what's real together, one small piece at a time. What feels most solid to you right now?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.9,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Disruptive",
+        "dominant_organs": ["NDAM", "BOND", "PRESENCE"],
+        "ndam_activation": 0.95
+      }
+    },
+    {
+      "pair_id": "stress_001",
+      "category": "moderate_stress",
+      "user_input": "I'm worried about how my conversation with Emma will go this weekend",
+      "expected_response": "The anticipation of a difficult conversation brings its own kind of tension. Your worry shows you care about getting it right. What if we explore what you're hoping for in the conversation, and what feels most vulnerable about it?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.45,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Recursive",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.5
+      }
+    },
+    {
+      "pair_id": "stress_002",
+      "category": "moderate_stress",
+      "user_input": "There's a lot happening at work right now and I feel stretched thin across too many priorities",
+      "expected_response": "Being pulled in multiple directions dilutes your energy. The stretching is real. What if we look at what actually has to happen versus what you're holding because you think it should? Sometimes we can renegotiate with the 'shoulds.'",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Contrast",
+        "dominant_organs": ["NDAM", "WISDOM", "CARD"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_003",
+      "category": "moderate_stress",
+      "user_input": "I'm anxious about the presentation tomorrow but trying to stay grounded",
+      "expected_response": "The anxiety and the grounding are both present - that's good awareness. You're not trying to eliminate the anxiety, just stay connected to yourself within it. What helps you feel most grounded when the nerves show up?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "PRESENCE", "EO"],
+        "ndam_activation": 0.45
+      }
+    },
+    {
+      "pair_id": "stress_004",
+      "category": "moderate_stress",
+      "user_input": "The uncertainty about my job situation is weighing on me constantly",
+      "expected_response": "Uncertainty about livelihood touches survival needs. The constant weight makes sense. You can't control the timeline, but we can work with how you're relating to the uncertainty. What small things help you feel a sense of agency, even in the not-knowing?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Recursive",
+        "dominant_organs": ["NDAM", "WISDOM", "BOND"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_005",
+      "category": "moderate_stress",
+      "user_input": "I'm feeling pressure from multiple directions and it's hard to know what to prioritize",
+      "expected_response": "Competing pressures create internal conflict. Your system doesn't know which way to turn. What if we step back and check in with what actually matters most to you underneath all the external demands?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Contrast",
+        "dominant_organs": ["NDAM", "WISDOM", "AUTHENTICITY"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_006",
+      "category": "moderate_stress",
+      "user_input": "I'm worried about Lily's upcoming exam and whether I'm supporting her enough",
+      "expected_response": "The worry about being enough for someone you love is tender. You're doing the work of caring deeply while trying not to over-function. What does 'enough' support actually look like, versus what the worried part of you thinks it should be?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Relational",
+        "dominant_organs": ["NDAM", "BOND", "EMPATHY"],
+        "ndam_activation": 0.45
+      }
+    },
+    {
+      "pair_id": "stress_007",
+      "category": "moderate_stress",
+      "user_input": "The tension with my team is building and I'm not sure how to address it",
+      "expected_response": "Unaddressed tension has a way of accumulating. You're sensing something needs to shift. What feels most risky about addressing it directly? Sometimes exploring the fear of speaking up reveals what really needs to be said.",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "WISDOM", "AUTHENTICITY"],
+        "ndam_activation": 0.5
+      }
+    },
+    {
+      "pair_id": "stress_008",
+      "category": "moderate_stress",
+      "user_input": "I'm feeling the weight of too many responsibilities and not enough time",
+      "expected_response": "The time-responsibility mismatch is a chronic stressor. Something has to give, but choosing what feels impossible. What if we look at what you're holding that actually belongs to someone else, or doesn't need to be held at all?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.55,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Contrast",
+        "dominant_organs": ["NDAM", "WISDOM", "CARD"],
+        "ndam_activation": 0.6
+      }
+    },
+    {
+      "pair_id": "stress_009",
+      "category": "moderate_stress",
+      "user_input": "I'm nervous about the upcoming family gathering - there's always some tension",
+      "expected_response": "Family systems carry their own predictable pressures. The nervousness is your system preparing for the familiar tension. What would it be like to go in with a plan for how you'll take care of yourself when the tension shows up?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "ndam_activation": 0.45
+      }
+    },
+    {
+      "pair_id": "stress_010",
+      "category": "moderate_stress",
+      "user_input": "The pace of change at work is exhausting and I'm struggling to keep up",
+      "expected_response": "Constant change without stabilization is depleting. Your struggle to keep up might be your system saying it needs some ground that isn't shifting. What if keeping up isn't actually possible, and you need to find a different relationship with the pace?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Recursive",
+        "dominant_organs": ["NDAM", "RNX", "WISDOM"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_011",
+      "category": "moderate_stress",
+      "user_input": "I'm worried about making the wrong decision and the consequences that might follow",
+      "expected_response": "Decision paralysis shows up when the stakes feel too high. What if we explore what 'wrong' really means here? Sometimes perfectionism disguises itself as careful deliberation. What would it be like to make a good-enough decision?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.45,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "WISDOM", "AUTHENTICITY"],
+        "ndam_activation": 0.5
+      }
+    },
+    {
+      "pair_id": "stress_012",
+      "category": "moderate_stress",
+      "user_input": "The ongoing situation with Emma is creating a low-level constant worry",
+      "expected_response": "Low-level chronic worry is exhausting in its own way - it never spikes high enough to demand attention but never goes away. What if we make some space to actually feel the worry fully, rather than keeping it at a simmer?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Recursive",
+        "dominant_organs": ["NDAM", "BOND", "RNX"],
+        "ndam_activation": 0.45
+      }
+    },
+    {
+      "pair_id": "stress_013",
+      "category": "moderate_stress",
+      "user_input": "I'm feeling stretched between work demands and family needs",
+      "expected_response": "The work-family tension is one of those impossible binds where both sides have legitimate needs. You can't be in two places at once. What if we explore what 'enough' looks like in each domain, rather than trying to be everything to everyone?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Contrast",
+        "dominant_organs": ["NDAM", "WISDOM", "BOND"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_014",
+      "category": "moderate_stress",
+      "user_input": "The pressure to perform is building and I'm not sure I can meet expectations",
+      "expected_response": "Performance pressure often carries unspoken questions about worth. Whose expectations are you really trying to meet - theirs or an internalized critic's? Sometimes the pressure we feel is amplified by our own impossibly high standards.",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.5,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "WISDOM", "AUTHENTICITY"],
+        "ndam_activation": 0.55
+      }
+    },
+    {
+      "pair_id": "stress_015",
+      "category": "moderate_stress",
+      "user_input": "I'm anxious about how things will unfold but trying not to let it consume me",
+      "expected_response": "The balance between acknowledging anxiety and not being consumed by it is delicate work. You're doing it right now - naming it without letting it take over. What helps you maintain that balance when the anxiety gets louder?",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["NDAM", "PRESENCE", "EO"],
+        "ndam_activation": 0.45
+      }
+    },
+    {
+      "pair_id": "deescalate_001",
+      "category": "de_escalation",
+      "user_input": "I was panicking earlier but I'm starting to calm down now",
+      "expected_response": "Notice that shift - your system is finding its way back to regulation. The panic was real, and so is this calming. What helped you move toward this calmer place? Let's honor whatever that was.",
+      "expected_felt_state": {
+        "zone": 3,
+        "urgency": 0.3,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Relational",
+        "dominant_organs": ["EO", "PRESENCE", "WISDOM"],
+        "ndam_activation": 0.3
+      }
+    },
+    {
+      "pair_id": "deescalate_002",
+      "category": "de_escalation",
+      "user_input": "The crisis has passed and I can breathe again",
+      "expected_response": "Feel that breath - it's your system's way of saying 'we're okay now.' The crisis was real, and the passing is real too. What does it feel like to be on the other side of it?",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_003",
+      "category": "de_escalation",
+      "user_input": "I was overwhelmed but talking it through helped me find some ground",
+      "expected_response": "That's the power of shared presence - the overwhelm doesn't have to be held alone. You found language for it, and that created space. What feels different now compared to before we started?",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.25,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Relational",
+        "dominant_organs": ["BOND", "EMPATHY", "WISDOM"],
+        "ndam_activation": 0.25
+      }
+    },
+    {
+      "pair_id": "deescalate_004",
+      "category": "de_escalation",
+      "user_input": "The anxiety is settling and I'm feeling more like myself again",
+      "expected_response": "Welcome back. The anxiety didn't erase you - you were there the whole time, just harder to access. What helped you reconnect with this more grounded sense of yourself?",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["EO", "AUTHENTICITY", "PRESENCE"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_005",
+      "category": "de_escalation",
+      "user_input": "I was in fight-or-flight mode but I'm starting to regulate now",
+      "expected_response": "Your nervous system is doing exactly what it's designed to do - activate when needed, then return to baseline. Notice how your body is shifting. This regulation is a skill you can learn to support.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.25,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Relational",
+        "dominant_organs": ["EO", "PRESENCE", "WISDOM"],
+        "ndam_activation": 0.25
+      }
+    },
+    {
+      "pair_id": "deescalate_006",
+      "category": "de_escalation",
+      "user_input": "The intensity is fading and I can think more clearly now",
+      "expected_response": "Clarity returning is a sign your prefrontal cortex is coming back online. The intensity served its purpose - it mobilized you. Now you can integrate what happened with some perspective.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["WISDOM", "PRESENCE", "EO"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_007",
+      "category": "de_escalation",
+      "user_input": "I feel like I can handle this now - the panic has lifted",
+      "expected_response": "That sense of 'I can handle this' is your core self re-emerging. The panic was protecting you, and now it's stepping back because you've found your ground. Trust this resilience.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.15,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["AUTHENTICITY", "PRESENCE", "WISDOM"],
+        "ndam_activation": 0.15
+      }
+    },
+    {
+      "pair_id": "deescalate_008",
+      "category": "de_escalation",
+      "user_input": "The storm has passed and I'm feeling calmer",
+      "expected_response": "Storms pass - that's their nature. You weathered it. What did you learn about yourself in the midst of it? Sometimes the most important discoveries happen in the calming after.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Relational",
+        "dominant_organs": ["PRESENCE", "WISDOM", "BOND"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_009",
+      "category": "de_escalation",
+      "user_input": "I was spiraling but I've found my center again",
+      "expected_response": "Finding center after a spiral is profound. You didn't stay lost - you found your way back. What was the moment or action that helped you return? That's a resource you can remember.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["PRESENCE", "AUTHENTICITY", "WISDOM"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_010",
+      "category": "de_escalation",
+      "user_input": "The urgency has subsided and I can see things more clearly",
+      "expected_response": "Urgency narrows focus - that's survival. As it subsides, your field of vision expands again. You can see options you couldn't access before. What's becoming visible now?",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.15,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["WISDOM", "PRESENCE", "LISTENING"],
+        "ndam_activation": 0.15
+      }
+    },
+    {
+      "pair_id": "deescalate_011",
+      "category": "de_escalation",
+      "user_input": "I've moved through the acute stress and I'm settling",
+      "expected_response": "Moving through rather than getting stuck in - that's mastery. Your system knows how to complete the stress cycle. Notice what settling feels like in your body right now.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Relational",
+        "dominant_organs": ["EO", "PRESENCE", "WISDOM"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_012",
+      "category": "de_escalation",
+      "user_input": "The fear was intense but it's releasing now",
+      "expected_response": "Fear that can release shows your system is resilient. It came, it activated you, and now it's letting go. What does this release feel like? Sometimes we rush past this moment, but it's worth noticing.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Relational",
+        "dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "ndam_activation": 0.2
+      }
+    },
+    {
+      "pair_id": "deescalate_013",
+      "category": "de_escalation",
+      "user_input": "I'm no longer in crisis mode - things feel manageable now",
+      "expected_response": "The shift from crisis to manageable is significant. Your nervous system downregulated. That's not just relief - it's evidence of your capacity to return to equilibrium. What supported this shift?",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.15,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["WISDOM", "PRESENCE", "EO"],
+        "ndam_activation": 0.15
+      }
+    },
+    {
+      "pair_id": "deescalate_014",
+      "category": "de_escalation",
+      "user_input": "The pressure has eased and I can breathe more fully",
+      "expected_response": "Full breath is a sign of safety. When we're under pressure, breath shallows. You're allowing more oxygen, more space, more ease. This is your body saying 'we're okay now.'",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.15,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Innate",
+        "dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "ndam_activation": 0.15
+      }
+    },
+    {
+      "pair_id": "deescalate_015",
+      "category": "de_escalation",
+      "user_input": "I was in survival mode but I'm finding my way back to connection",
+      "expected_response": "Survival mode and connection can't coexist - you have to move out of one to access the other. The fact that you're finding connection again means your threat system is standing down. Welcome back.",
+      "expected_felt_state": {
+        "zone": 2,
+        "urgency": 0.2,
+        "polyvagal_state": "ventral_vagal",
+        "nexus_type": "Relational",
+        "dominant_organs": ["BOND", "EO", "EMPATHY"],
+        "ndam_activation": 0.2
+      }
+    }
+  ]
+}

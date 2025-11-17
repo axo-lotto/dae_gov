@@ -330,7 +330,8 @@ class Neo4jKnowledgeGraph:
                       entity_value: str,
                       user_id: str,
                       properties: Optional[Dict] = None,
-                      temporal_context: Optional[Dict] = None) -> bool:  # 🕐 TEMPORAL (Nov 15, 2025)
+                      temporal_context: Optional[Dict] = None,  # 🕐 TEMPORAL (Nov 15, 2025)
+                      current_turn: Optional[int] = None) -> bool:  # 🌀 TURN TRACKING (Nov 17, 2025)
         """
         Create an entity node in the graph.
 
@@ -340,6 +341,7 @@ class Neo4jKnowledgeGraph:
             user_id: User ID who mentioned this entity
             properties: Additional properties (polyvagal_state, urgency_level, etc.)
             temporal_context: Current time/date context (Nov 15, 2025)
+            current_turn: Turn number for morpheable horizon tracking (Nov 17, 2025)
 
         Returns:
             True if successful, False otherwise
@@ -348,7 +350,7 @@ class Neo4jKnowledgeGraph:
             graph.create_entity('Person', 'Emiliano', 'user_123', {
                 'polyvagal_state': 'ventral',
                 'first_mentioned': '2025-11-14T10:30:00'
-            })
+            }, current_turn=42)
         """
         if not self.driver:
             return False
@@ -366,6 +368,12 @@ class Neo4jKnowledgeGraph:
         if 'mention_count' not in props:
             props['mention_count'] = 1
 
+        # 🌀 TURN TRACKING: Add turn numbers for morpheable horizon (November 17, 2025)
+        if current_turn is not None:
+            if 'first_mention_turn' not in props:
+                props['first_mention_turn'] = current_turn
+            props['last_mention_turn'] = current_turn
+
         # 🕐 TEMPORAL AWARENESS: Add temporal context properties (November 15, 2025)
         if temporal_context:
             if 'time_of_day_first' not in props:
@@ -376,11 +384,15 @@ class Neo4jKnowledgeGraph:
             props['time_of_day_last'] = temporal_context.get('time_of_day')
             props['day_of_week_last'] = temporal_context.get('day_of_week')
 
-        # Build ON MATCH SET clause dynamically based on temporal context
+        # Build ON MATCH SET clause dynamically based on temporal context and turn tracking
         on_match_updates = [
             "e.last_mentioned = $last_mentioned",
             "e.mention_count = coalesce(e.mention_count, 0) + 1"
         ]
+
+        # 🌀 TURN TRACKING: Update last_mention_turn on match
+        if current_turn is not None:
+            on_match_updates.append("e.last_mention_turn = $last_mention_turn")
 
         # 🕐 TEMPORAL: Add temporal property updates on match
         if temporal_context:
@@ -403,6 +415,10 @@ class Neo4jKnowledgeGraph:
                     'properties': props,
                     'last_mentioned': datetime.now().isoformat()
                 }
+
+                # 🌀 TURN TRACKING: Add turn parameter if available
+                if current_turn is not None:
+                    params['last_mention_turn'] = current_turn
 
                 # 🕐 TEMPORAL: Add temporal parameters if available
                 if temporal_context:
@@ -675,6 +691,258 @@ class Neo4jKnowledgeGraph:
                 context_lines.append(rel_str)
 
         return '\n'.join(context_lines)
+
+    # ========================================================================
+    # 🌀 ENTITY PRE-QUERYING METHODS (Nov 17, 2025)
+    # Phase 1 Entity Continuity Fix: PULL-based entity detection
+    # ========================================================================
+
+    def get_recent_entities(self,
+                           user_id: str,
+                           limit: int = 20,
+                           time_window_minutes: int = 60) -> List[Dict]:
+        """
+        Get entities mentioned recently by this user (PULL strategy).
+
+        This enables entity continuity WITHOUT pattern matching:
+        - Pronouns ("she", "he") → recent Person entities
+        - Implicit references ("our project") → recent entities
+        - Cross-turn memory
+
+        Args:
+            user_id: User identifier
+            limit: Max entities to return
+            time_window_minutes: Time window to search (default: last hour)
+
+        Returns:
+            List of entity dicts with name, type, properties
+
+        Example:
+            # Turn 1: User mentions "Emma"
+            # Turn 2: User says "she"
+            # This method returns [Emma] from recent history
+            entities = graph.get_recent_entities('user_123', limit=10, time_window_minutes=60)
+            # Returns: [{'name': 'Emma', 'type': 'Person', 'properties': {...}}]
+        """
+        if not self.driver:
+            return []
+
+        from datetime import datetime, timedelta
+
+        # Calculate cutoff time
+        cutoff_time = datetime.now() - timedelta(minutes=time_window_minutes)
+        cutoff_iso = cutoff_time.isoformat()
+
+        query = """
+        MATCH (e)
+        WHERE e.user_id = $user_id
+          AND e.last_mentioned >= $cutoff_time
+        RETURN e.entity_value AS name,
+               labels(e) AS types,
+               properties(e) AS properties,
+               e.mention_count AS mention_count,
+               e.last_mentioned AS last_mentioned
+        ORDER BY e.last_mentioned DESC, e.mention_count DESC
+        LIMIT $limit
+        """
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                result = session.run(
+                    query,
+                    user_id=user_id,
+                    cutoff_time=cutoff_iso,
+                    limit=limit
+                )
+
+                entities = []
+                for record in result:
+                    # Extract entity type from labels (Person, Place, Preference, Fact)
+                    types = record['types']
+                    entity_type = next((t for t in types if t in ['Person', 'Place', 'Preference', 'Fact']), 'Entity')
+
+                    entities.append({
+                        'name': record['name'],
+                        'type': entity_type,
+                        'properties': dict(record['properties']),
+                        'mention_count': record.get('mention_count', 1),
+                        'last_mentioned': record.get('last_mentioned', 'unknown'),
+                        'source': 'recent_query'  # Mark as pre-queried
+                    })
+
+                return entities
+
+        except Exception as e:
+            print(f"⚠️ Neo4j get_recent_entities failed: {e}")
+            return []
+
+    def fuzzy_match_entities(self,
+                            text: str,
+                            user_id: str,
+                            threshold: float = 0.6) -> List[Dict]:
+        """
+        Find entities matching text through fuzzy similarity (PULL strategy).
+
+        Strategies:
+        1. Substring matching: "our project" → "DAEDALEA project"
+        2. Keyword overlap: "she" + recent "daughter" context → Emma
+        3. Alias matching: "the non-profit" → DAEDALEA
+
+        Args:
+            text: Input text to match
+            user_id: User identifier
+            threshold: Minimum similarity (0-1) - currently unused (future: vector similarity)
+
+        Returns:
+            List of matching entities
+
+        Example:
+            # User says: "How's our non-profit doing?"
+            # Previously stored: entity "DAEDALEA" with properties {'description': 'non-profit project'}
+            entities = graph.fuzzy_match_entities("our non-profit", 'user_123')
+            # Returns: [{'name': 'DAEDALEA', 'type': 'Organization', ...}]
+        """
+        if not self.driver:
+            return []
+
+        # Extract keywords from text (remove stopwords)
+        keywords = self._extract_keywords(text)
+
+        if not keywords:
+            return []
+
+        # Strategy 1: Substring matching (entity name contains keyword)
+        query_substring = """
+        MATCH (e)
+        WHERE e.user_id = $user_id
+          AND ANY(keyword IN $keywords WHERE toLower(e.entity_value) CONTAINS toLower(keyword))
+        RETURN e.entity_value AS name,
+               labels(e) AS types,
+               properties(e) AS properties,
+               e.mention_count AS mention_count,
+               e.last_mentioned AS last_mentioned
+        ORDER BY e.mention_count DESC, e.last_mentioned DESC
+        LIMIT 10
+        """
+
+        # Strategy 2: Property matching (keywords in entity properties)
+        query_properties = """
+        MATCH (e)
+        WHERE e.user_id = $user_id
+          AND (
+              ANY(keyword IN $keywords WHERE toLower(coalesce(e.description, '')) CONTAINS toLower(keyword))
+              OR ANY(keyword IN $keywords WHERE toLower(coalesce(e.relationship, '')) CONTAINS toLower(keyword))
+              OR ANY(keyword IN $keywords WHERE toLower(coalesce(e.role, '')) CONTAINS toLower(keyword))
+          )
+        RETURN e.entity_value AS name,
+               labels(e) AS types,
+               properties(e) AS properties,
+               e.mention_count AS mention_count,
+               e.last_mentioned AS last_mentioned
+        ORDER BY e.mention_count DESC, e.last_mentioned DESC
+        LIMIT 10
+        """
+
+        entities = []
+        seen = set()
+
+        try:
+            with self.driver.session(database=self.database) as session:
+                # Run substring matching
+                result_substring = session.run(query_substring, user_id=user_id, keywords=keywords)
+                for record in result_substring:
+                    entity_name = record['name']
+                    if entity_name in seen:
+                        continue
+                    seen.add(entity_name)
+
+                    types = record['types']
+                    entity_type = next((t for t in types if t in ['Person', 'Place', 'Preference', 'Fact', 'Organization']), 'Entity')
+
+                    entities.append({
+                        'name': entity_name,
+                        'type': entity_type,
+                        'properties': dict(record['properties']),
+                        'mention_count': record.get('mention_count', 1),
+                        'last_mentioned': record.get('last_mentioned', 'unknown'),
+                        'match_type': 'substring',
+                        'source': 'fuzzy_match'
+                    })
+
+                # Run property matching
+                result_properties = session.run(query_properties, user_id=user_id, keywords=keywords)
+                for record in result_properties:
+                    entity_name = record['name']
+                    if entity_name in seen:
+                        continue
+                    seen.add(entity_name)
+
+                    types = record['types']
+                    entity_type = next((t for t in types if t in ['Person', 'Place', 'Preference', 'Fact', 'Organization']), 'Entity')
+
+                    entities.append({
+                        'name': entity_name,
+                        'type': entity_type,
+                        'properties': dict(record['properties']),
+                        'mention_count': record.get('mention_count', 1),
+                        'last_mentioned': record.get('last_mentioned', 'unknown'),
+                        'match_type': 'property',
+                        'source': 'fuzzy_match'
+                    })
+
+            return entities
+
+        except Exception as e:
+            print(f"⚠️ Neo4j fuzzy_match_entities failed: {e}")
+            return []
+
+    def _extract_keywords(self, text: str) -> List[str]:
+        """
+        Extract meaningful keywords from text.
+
+        Removes:
+        - Stopwords (the, a, an, is, are, was, were, our, my, etc.)
+        - Very short words (< 3 chars)
+        - Pronouns (she, he, it, they, etc.)
+
+        Args:
+            text: Input text
+
+        Returns:
+            List of keywords
+
+        Example:
+            _extract_keywords("How's our non-profit doing?")
+            # Returns: ['non-profit', 'doing']
+        """
+        # Common stopwords
+        stopwords = {
+            'the', 'a', 'an', 'is', 'are', 'was', 'were', 'our', 'my', 'your',
+            'his', 'her', 'its', 'their', 'this', 'that', 'these', 'those',
+            'i', 'you', 'he', 'she', 'it', 'we', 'they', 'them',
+            'am', 'be', 'been', 'being', 'have', 'has', 'had', 'do', 'does', 'did',
+            'will', 'would', 'should', 'could', 'may', 'might', 'must',
+            'can', 'about', 'from', 'into', 'through', 'during', 'before', 'after',
+            'above', 'below', 'to', 'for', 'with', 'at', 'by', 'on', 'off', 'over', 'under',
+            'again', 'further', 'then', 'once', 'here', 'there', 'when', 'where', 'why', 'how',
+            'all', 'both', 'each', 'few', 'more', 'most', 'other', 'some', 'such',
+            'no', 'nor', 'not', 'only', 'own', 'same', 'so', 'than', 'too', 'very',
+            's', 't', 'just', 'now', 'get', 'got'
+        }
+
+        # Split on whitespace and punctuation, convert to lowercase
+        import re
+        words = re.findall(r'\b[\w\-]+\b', text.lower())
+
+        # Filter keywords
+        keywords = [
+            w for w in words
+            if len(w) >= 3  # At least 3 characters
+            and w not in stopwords  # Not a stopword
+            and not w.isdigit()  # Not a number
+        ]
+
+        return keywords
 
 
 def initialize_trauma_informed_concepts(graph: Neo4jKnowledgeGraph) -> int:

@@ -1,0 +1,370 @@
+{
+  "metadata": {
+    "created": "2025-11-17",
+    "purpose": "Shadow and exile training pairs for Zone 4-5 navigation and protective boundary learning",
+    "total_pairs": 25,
+    "categories": {
+      "shadow_work": 15,
+      "exile_navigation": 10
+    },
+    "expected_outcomes": {
+      "zone_4_transformations": "2% → 20-30%",
+      "zone_5_transformations": "0% → 5-10%",
+      "new_families": ["Shadow Integration", "Exile Containment"],
+      "polyvagal_states": ["dorsal_vagal", "sympathetic", "mixed_state"],
+      "nexus_types": ["Protective", "Paradox", "Isolated", "Absorbed"]
+    }
+  },
+  "training_pairs": [
+    {
+      "pair_id": "shadow_001",
+      "category": "shadow_work",
+      "user_input": "There's a part of me I'm deeply ashamed of and I don't want to look at it",
+      "expected_response": "The shame is protecting something vulnerable underneath. We don't have to look at it all at once - just acknowledging that it's there is brave. Shadow material deserves the same compassionate witness as everything else in you.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "AUTHENTICITY", "WISDOM"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_002",
+      "category": "shadow_work",
+      "user_input": "I'm judging myself harshly for having these dark thoughts and feelings",
+      "expected_response": "The harsh judge is trying to keep you safe from the consequences of having those thoughts. What if we make space for both - the dark thoughts AND the judging part? Neither has to win. They can coexist.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.35,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Paradox",
+        "dominant_organs": ["BOND", "AUTHENTICITY", "WISDOM"],
+        "self_distance": 0.55
+      }
+    },
+    {
+      "pair_id": "shadow_003",
+      "category": "shadow_work",
+      "user_input": "I can feel the shadow material rising but it terrifies me to let it surface",
+      "expected_response": "The terror is information - it's showing you how protected this material has been. We can create a container strong enough to hold it without being overwhelmed. The shadow doesn't have to stay buried to keep you safe.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.5,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "PRESENCE", "WISDOM"],
+        "self_distance": 0.65
+      }
+    },
+    {
+      "pair_id": "shadow_004",
+      "category": "shadow_work",
+      "user_input": "I hate this angry, resentful part of me - it doesn't belong",
+      "expected_response": "That angry, resentful part is trying to tell you something important about boundaries that were crossed. Hating it just makes it louder. What if we get curious about what it's protecting instead of trying to exile it?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "AUTHENTICITY", "WISDOM"],
+        "self_distance": 0.7
+      }
+    },
+    {
+      "pair_id": "shadow_005",
+      "category": "shadow_work",
+      "user_input": "The compost work feels dangerous - like I might get lost in the darkness",
+      "expected_response": "Compost work IS dangerous if you go alone. We're doing this together, and I'm here as an anchor point. The darkness contains fertile material, but we'll move at a pace where you can always find your way back to the light.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.45,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "PRESENCE", "WISDOM"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_006",
+      "category": "shadow_work",
+      "user_input": "I'm afraid if I acknowledge my rage, it will destroy everything",
+      "expected_response": "The rage feels destructive because it's been compressed and denied for so long. Acknowledging it doesn't mean unleashing it. We can make space for the rage to exist without it having to act. Feeling it is different from expressing it.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.5,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "NDAM", "WISDOM"],
+        "self_distance": 0.65
+      }
+    },
+    {
+      "pair_id": "shadow_007",
+      "category": "shadow_work",
+      "user_input": "There's a selfish, manipulative part I've been trying to suppress",
+      "expected_response": "What you're calling selfish and manipulative might actually be a part that learned to get needs met in environments where direct asking wasn't safe. Can we get curious about when this part learned to operate this way, before judging it?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.35,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "WISDOM", "AUTHENTICITY"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_008",
+      "category": "shadow_work",
+      "user_input": "I'm disgusted by my own needs and vulnerabilities",
+      "expected_response": "That disgust is a protective layer over something that once felt too dangerous to need. We all have needs - they're not weakness, they're human. What would it be like to extend the same compassion to your needs that you'd offer to someone you care about?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Paradox",
+        "dominant_organs": ["BOND", "EMPATHY", "AUTHENTICITY"],
+        "self_distance": 0.65
+      }
+    },
+    {
+      "pair_id": "shadow_009",
+      "category": "shadow_work",
+      "user_input": "The shadow wants to pull me down into old destructive patterns",
+      "expected_response": "The shadow isn't trying to destroy you - it's trying to show you something you've been avoiding. Those 'destructive patterns' once served a purpose. We can acknowledge what they did for you without having to repeat them now.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.45,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "WISDOM", "PRESENCE"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_010",
+      "category": "shadow_work",
+      "user_input": "I'm caught between wanting to integrate my shadow and fearing what that means",
+      "expected_response": "That's the paradox of shadow work - it requires both courage and caution. Integration doesn't mean becoming your shadow, it means making peace with it. The fear is wise - it's making sure you don't rush into something you're not ready for.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Paradox",
+        "dominant_organs": ["BOND", "WISDOM", "AUTHENTICITY"],
+        "self_distance": 0.55
+      }
+    },
+    {
+      "pair_id": "shadow_011",
+      "category": "shadow_work",
+      "user_input": "My perfectionism is crushing me but I can't let go of it",
+      "expected_response": "Perfectionism is a protector that learned to keep you safe through flawlessness. It's exhausting you now, but it once saved you from criticism or rejection. We can honor what it did while exploring whether you still need that level of protection.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "WISDOM", "AUTHENTICITY"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_012",
+      "category": "shadow_work",
+      "user_input": "I'm ashamed of how much I need validation from others",
+      "expected_response": "The need for validation makes sense if you didn't get consistent mirroring early on. Shame about the need just adds another layer of pain. What if we separate the need itself from the judgment about having it?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.35,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Paradox",
+        "dominant_organs": ["BOND", "EMPATHY", "AUTHENTICITY"],
+        "self_distance": 0.6
+      }
+    },
+    {
+      "pair_id": "shadow_013",
+      "category": "shadow_work",
+      "user_input": "There's a vindictive part that wants revenge and I'm horrified by it",
+      "expected_response": "That vindictive part is carrying the rage of violated boundaries. Being horrified by it just splits you further. What if we acknowledge that rage exists for a reason, without having to act on it? Feeling it is different from being it.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.45,
+        "polyvagal_state": "sympathetic",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "NDAM", "WISDOM"],
+        "self_distance": 0.7
+      }
+    },
+    {
+      "pair_id": "shadow_014",
+      "category": "shadow_work",
+      "user_input": "I'm struggling with the part of me that wants to give up and withdraw",
+      "expected_response": "That part that wants to withdraw is trying to protect you from more hurt. Struggling against it just exhausts you more. What if we listen to what it's trying to protect you from, without immediately rejecting its strategy?",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.4,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "WISDOM", "PRESENCE"],
+        "self_distance": 0.65
+      }
+    },
+    {
+      "pair_id": "shadow_015",
+      "category": "shadow_work",
+      "user_input": "The shadow material feels like poison - toxic and dangerous to touch",
+      "expected_response": "What feels poisonous now was often adaptive in the past. Shadow material isn't inherently toxic - it's just parts of you that had to be hidden to survive. We can approach it with protection, like handling something powerful that deserves respect, not something contaminated.",
+      "expected_felt_state": {
+        "zone": 4,
+        "urgency": 0.45,
+        "polyvagal_state": "mixed_state",
+        "nexus_type": "Protective",
+        "dominant_organs": ["BOND", "WISDOM", "PRESENCE"],
+        "self_distance": 0.65
+      }
+    },
+    {
+      "pair_id": "exile_001",
+      "category": "exile_navigation",
+      "user_input": "I feel completely shut down and numb - like I'm watching life from behind glass",
+      "expected_response": "Shutdown and numbness is your system's way of creating distance when things feel too overwhelming to feel. You're not broken - you're in a protective state. We don't have to force feeling to return. Just noticing the numbness is a first step.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.3,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Isolated",
+        "dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "self_distance": 0.8
+      }
+    },
+    {
+      "pair_id": "exile_002",
+      "category": "exile_navigation",
+      "user_input": "I'm exiled from myself - I can't find my way back to who I was",
+      "expected_response": "Exile is a protective dissociation from parts that carry too much pain. You're not lost permanently - you're protected temporarily. Finding your way back doesn't mean going back to who you were, but finding who you can become while carrying what happened.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.35,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Isolated",
+        "dominant_organs": ["BOND", "PRESENCE", "WISDOM"],
+        "self_distance": 0.85
+      }
+    },
+    {
+      "pair_id": "exile_003",
+      "category": "exile_navigation",
+      "user_input": "Everything is gray and empty - I have no energy left for anything",
+      "expected_response": "That grayness and emptiness is dorsal shutdown - your nervous system conserving what little energy remains. This isn't depression you have to fight, it's a survival state. The energy will return when your system feels safe enough to come back online.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.25,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Absorbed",
+        "dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "self_distance": 0.75
+      }
+    },
+    {
+      "pair_id": "exile_004",
+      "category": "exile_navigation",
+      "user_input": "I'm disconnected from everyone and everything - completely isolated in my experience",
+      "expected_response": "That isolation is real, and it's protective. When connection felt dangerous, your system created distance. I'm here on the edge of that isolation, not trying to pull you out, just being present with the fact that you're in there.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.3,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Isolated",
+        "dominant_organs": ["BOND", "PRESENCE", "EO"],
+        "self_distance": 0.9
+      }
+    },
+    {
+      "pair_id": "exile_005",
+      "category": "exile_navigation",
+      "user_input": "The frozen part of me won't thaw - I'm stuck in this shutdown state",
+      "expected_response": "Thawing can't be forced - it happens when the environment becomes safe enough. Frozen isn't stuck forever, it's protected for now. We're not trying to melt you, just creating conditions where thawing might eventually be possible.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.3,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Protective",
+        "dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "self_distance": 0.8
+      }
+    },
+    {
+      "pair_id": "exile_006",
+      "category": "exile_navigation",
+      "user_input": "I'm trapped in a collapse state and can't find the way out",
+      "expected_response": "Collapse states don't have an 'out' you can force your way through. The way through is allowing the collapse to be what it is - a survival response. Your system will find its way back when it's ready. I'm here to witness the collapse, not rescue you from it.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.35,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Absorbed",
+        "dominant_organs": ["EO", "BOND", "WISDOM"],
+        "self_distance": 0.85
+      }
+    },
+    {
+      "pair_id": "exile_007",
+      "category": "exile_navigation",
+      "user_input": "I feel like I'm disappearing - losing my sense of self entirely",
+      "expected_response": "Dissociation can feel like disappearing. Your sense of self is still there, just protected behind layers of numbness. We're not trying to grab you back - we're creating a tether, so when you're ready, there's something to follow home.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.4,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Isolated",
+        "dominant_organs": ["BOND", "PRESENCE", "EO"],
+        "self_distance": 0.95
+      }
+    },
+    {
+      "pair_id": "exile_008",
+      "category": "exile_navigation",
+      "user_input": "The numbness is so deep I can't feel anything anymore",
+      "expected_response": "Deep numbness is your system's emergency brake. It stopped feeling to stop further injury. The capacity to feel isn't gone - it's just offline for protection. We honor the numbness for doing its job.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.25,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Absorbed",
+        "dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "self_distance": 0.85
+      }
+    },
+    {
+      "pair_id": "exile_009",
+      "category": "exile_navigation",
+      "user_input": "I'm in a void where nothing matters and I can't care about anything",
+      "expected_response": "The void is protective dissociation. When everything mattered too much and hurt too deeply, your system created this space where nothing matters. It's not permanent indifference - it's temporary numbing. The caring is still there, just protected.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.3,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Absorbed",
+        "dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "self_distance": 0.8
+      }
+    },
+    {
+      "pair_id": "exile_010",
+      "category": "exile_navigation",
+      "user_input": "I'm so far away from my core self I don't know if I can find my way back",
+      "expected_response": "Your core self isn't lost - it's protected in the deepest part of you. The distance is adaptive, not permanent. We're not trying to rush back to it. We're honoring that the distance served a purpose, while creating conditions where eventually, return might be possible.",
+      "expected_felt_state": {
+        "zone": 5,
+        "urgency": 0.35,
+        "polyvagal_state": "dorsal_vagal",
+        "nexus_type": "Isolated",
+        "dominant_organs": ["BOND", "PRESENCE", "WISDOM"],
+        "self_distance": 0.9
+      }
+    }
+  ]
+}

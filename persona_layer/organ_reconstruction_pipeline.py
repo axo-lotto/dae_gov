@@ -84,7 +84,7 @@ class OrganReconstructionPipeline:
         response_assembler,         # ResponseAssembler instance
         self_matrix_governance,     # SELFMatrixGovernance instance
         phase5_learning=None,       # Phase5LearningIntegration instance (optional)
-        hebbian_memory_path: str = "persona_layer/state/active/conversational_hebbian_memory.json"
+        hebbian_memory_path: str = None  # ✅ NOV 17: Use Config.HEBBIAN_MEMORY_PATH by default
     ):
         """
         Initialize reconstruction pipeline by wiring existing components.
@@ -102,6 +102,9 @@ class OrganReconstructionPipeline:
         self.response_assembler = response_assembler
         self.self_governance = self_matrix_governance
         self.phase5 = phase5_learning
+        # ✅ NOV 17: Use Config.HEBBIAN_MEMORY_PATH if not provided
+        if hebbian_memory_path is None:
+            hebbian_memory_path = str(Config.HEBBIAN_MEMORY_PATH)
         self.hebbian_memory_path = Path(hebbian_memory_path)
 
         # Strategy selection thresholds (from Config - Nov 13, 2025 - fixes organic emission bottleneck)
@@ -158,7 +161,9 @@ class OrganReconstructionPipeline:
             }
         """
         # Step 1: Classify SELF zone (trauma-informed governance)
-        bond_self_distance = felt_state['organ_coherences'].get('BOND', 0.5)
+        # ✅ FIX (Nov 17): Use actual bond_self_distance from BOND organ, not coherence!
+        # bond_self_distance comes from BOND's mean_self_distance calculation (trauma activation level)
+        bond_self_distance = felt_state.get('bond_self_distance', 0.5)
         eo_polyvagal_state = felt_state.get('eo_polyvagal_state', 'mixed_state')
 
         zone = self.self_governance.classify_zone(bond_self_distance, eo_polyvagal_state)

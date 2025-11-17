@@ -66,6 +66,16 @@ conversation_history/
 # Learned patterns (session-specific)
 knowledge_base/persona_layer_hebbian_memory.json
 persona_layer/persona_organism_state.json
+persona_layer/organic_families.json
+persona_layer/pattern_learner_database.json
+persona_layer/state/
+persona_layer/users/
+
+# Training results (epoch data, TSK logs, metrics)
+results/
+baseline_training_results.json
+entity_memory_*.json
+*_epoch_*_results.json
 
 # Environment variables
 .env
