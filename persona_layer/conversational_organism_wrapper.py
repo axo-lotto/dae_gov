@@ -293,6 +293,14 @@ except ImportError as e:
     PHASE3B_TRACKERS_AVAILABLE = False
     print(f"⚠️  Phase 3B trackers not available: {e}")
 
+# 🌀 Import Multi-Organ Entity Extractor (Phase 0C - November 19, 2025)
+try:
+    from persona_layer.multi_organ_entity_extractor import MultiOrganEntityExtractor
+    MULTI_ORGAN_EXTRACTOR_AVAILABLE = True
+except ImportError as e:
+    MULTI_ORGAN_EXTRACTOR_AVAILABLE = False
+    print(f"⚠️  Multi-organ entity extractor not available: {e}")
+
 
 class ConversationalOrganismWrapper:
     """
@@ -498,6 +506,23 @@ class ConversationalOrganismWrapper:
                 self.entity_neighbor_prehension = None
         else:
             self.entity_neighbor_prehension = None
+
+        # 🌀 Initialize Multi-Organ Entity Extractor (Phase 0C - Nov 19, 2025)
+        if MULTI_ORGAN_EXTRACTOR_AVAILABLE and getattr(Config, 'MULTI_ORGAN_ENTITY_EXTRACTION_ENABLED', False):
+            try:
+                self.multi_organ_extractor = MultiOrganEntityExtractor(
+                    coherence_threshold=getattr(Config, 'MULTI_ORGAN_COHERENCE_THRESHOLD', 0.75),
+                    min_organs=getattr(Config, 'MULTI_ORGAN_MIN_ORGANS', 3),
+                    ema_alpha=getattr(Config, 'MULTI_ORGAN_EMA_ALPHA', 0.15)
+                )
+                print(f"   ✅ Multi-organ entity extractor ready (Phase 0C: FFITTSS T4 AffinityNexus)")
+            except Exception as e:
+                print(f"   ⚠️  Multi-organ entity extractor unavailable: {e}")
+                self.multi_organ_extractor = None
+        else:
+            self.multi_organ_extractor = None
+            if MULTI_ORGAN_EXTRACTOR_AVAILABLE:
+                print(f"   ℹ️  Multi-organ extraction: STUB (enable via Config.MULTI_ORGAN_ENTITY_EXTRACTION_ENABLED)")
 
         # Initialize emission generation (if available)
         if EMISSION_AVAILABLE:

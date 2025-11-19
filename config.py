@@ -484,8 +484,8 @@ class Config:
     # Entity extraction mode (Phase 1-3 progression)
     ENTITY_EXTRACTION_MODE = "symbiotic"  # Options: "symbiotic", "hybrid", "pattern"
 
-    # Symbiotic learning mode (Phase 1: Weeks 1-4)
-    SYMBIOTIC_LEARNING_MODE = "bootstrap"  # Options: "bootstrap" (70%), "balanced" (40%), "specialized" (10%)
+    # Symbiotic learning mode (Phase 1: Weeks 1-4, Nov 19: Transition to balanced)
+    SYMBIOTIC_LEARNING_MODE = "balanced"   # Options: "bootstrap" (70%), "balanced" (40%), "specialized" (10%)
 
     # Pattern-LLM comparison logging
     PATTERN_LLM_COMPARISON_ENABLED = True  # Log discrepancies for learning
@@ -497,6 +497,19 @@ class Config:
     OLLAMA_FALLBACK_ENABLED = False  # Enable optional fallback for unknown entities (Phase 3)
     OLLAMA_FALLBACK_THRESHOLD = 0.60  # Use fallback if confidence < 0.60
     OLLAMA_FALLBACK_MAX_RATE = 0.10  # Maximum 10% fallback usage
+
+    # ============================================================================
+    # PHASE 0C: MULTI-ORGAN ENTITY EXTRACTION (Nov 19, 2025)
+    # ============================================================================
+
+    # Multi-organ entity extraction (FFITTSS T4 AffinityNexus pattern)
+    # Currently STUB ONLY - Requires organs to emit entity_signals (future Week 4+ work)
+    MULTI_ORGAN_ENTITY_EXTRACTION_ENABLED = False  # ⚠️ STUB - Not yet operational
+
+    # Multi-organ extraction parameters (Phase 0C architecture)
+    MULTI_ORGAN_COHERENCE_THRESHOLD = 0.75  # C̄ > 0.75 gate (DAE 3.0 validated)
+    MULTI_ORGAN_MIN_ORGANS = 3  # Require 3+ organs to agree (intersection requirement)
+    MULTI_ORGAN_EMA_ALPHA = 0.15  # Match Phase 0A/0B learning rate
 
     # ============================================================================
     # NEO4J KNOWLEDGE GRAPH CONFIGURATION (Phase 1.8++ - NOV 14, 2025)

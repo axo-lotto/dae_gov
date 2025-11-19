@@ -75,53 +75,53 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.08367162184480709,
+      "typical_self_distance": 6.56161762695502e-05,
       "co_mentioned_entities": {
-        "Rachel": 1
+        "Rachel": 5
       },
       "typical_left_neighbors": {
-        "where": 2,
-        "many": 1,
-        "children": 1,
-        "what": 2,
-        "city": 2,
-        "did": 2,
-        "technologies": 1,
-        "the": 1,
-        "place": 1,
-        "that": 1,
-        "best": 1,
-        "friend": 1,
-        "and": 4,
-        "rachel": 1,
-        "snapshot": 1,
-        "who": 1,
-        "james": 1,
-        "sam": 1
+        "where": 10,
+        "many": 5,
+        "children": 5,
+        "what": 10,
+        "city": 10,
+        "did": 10,
+        "technologies": 5,
+        "the": 5,
+        "place": 5,
+        "that": 5,
+        "best": 5,
+        "friend": 5,
+        "and": 20,
+        "rachel": 5,
+        "snapshot": 5,
+        "who": 5,
+        "james": 5,
+        "sam": 5
       },
       "typical_right_neighbors": {
-        "work?": 1,
-        "have?": 1,
-        "mention?": 2,
-        "work": 1,
-        "has": 2,
-        "been": 1,
-        "mentioned": 1,
-        "amazing": 1,
-        "are": 1,
-        "planning": 1,
-        "take": 1,
-        "classes": 1,
-        "based": 1,
-        "talked": 1,
-        "things": 1,
-        "through.": 1,
-        "reconnected": 1,
-        "and": 1
+        "work?": 5,
+        "have?": 5,
+        "mention?": 10,
+        "work": 5,
+        "has": 10,
+        "been": 5,
+        "mentioned": 5,
+        "amazing": 5,
+        "are": 5,
+        "planning": 5,
+        "take": 5,
+        "classes": 5,
+        "based": 5,
+        "talked": 5,
+        "things": 5,
+        "through.": 5,
+        "reconnected": 5,
+        "and": 5
       },
-      "mention_count": 11,
-      "first_mentioned": "2025-11-19T17:30:22.776205",
-      "last_mentioned": "2025-11-19T17:39:55.852321",
+      "mention_count": 55,
+      "first_mentioned": "2025-11-19T18:50:09.378288",
+      "last_mentioned": "2025-11-19T19:47:48.658042",
       "success_rate": 0.5
     },
     "Emma": {
@@ -199,22 +199,22 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {
-        "Lily": 1
+        "Lily": 5
       },
       "typical_left_neighbors": {
-        "how": 1,
-        "are": 1
+        "how": 5,
+        "are": 5
       },
       "typical_right_neighbors": {
-        "and": 1,
-        "lily": 1,
-        "doing?": 1
+        "and": 5,
+        "lily": 5,
+        "doing?": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:33:45.121080",
-      "last_mentioned": "2025-11-19T17:33:45.121128",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:53:45.226896",
+      "last_mentioned": "2025-11-19T19:41:16.261912",
       "success_rate": 0.5
     },
     "Lily": {
@@ -292,21 +292,21 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {
-        "Emma": 1
+        "Emma": 5
       },
       "typical_left_neighbors": {
-        "are": 1,
-        "emma": 1,
-        "and": 1
+        "are": 5,
+        "emma": 5,
+        "and": 5
       },
       "typical_right_neighbors": {
-        "doing?": 1
+        "doing?": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:33:45.121129",
-      "last_mentioned": "2025-11-19T17:33:45.121161",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:53:45.226939",
+      "last_mentioned": "2025-11-19T19:41:16.261942",
       "success_rate": 0.5
     },
     "Boston": {
@@ -384,16 +384,16 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {},
       "typical_left_neighbors": {
-        "are": 1,
-        "moving": 1
+        "are": 5,
+        "moving": 5
       },
       "typical_right_neighbors": {},
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:34:06.660420",
-      "last_mentioned": "2025-11-19T17:34:06.660461",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:54:11.370513",
+      "last_mentioned": "2025-11-19T19:41:42.054943",
       "success_rate": 0.5
     },
     "Google": {
@@ -471,18 +471,18 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {},
       "typical_left_neighbors": {
-        "just": 1,
-        "started": 1
+        "just": 5,
+        "started": 5
       },
       "typical_right_neighbors": {
-        "too.": 1
+        "too.": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:34:16.740670",
-      "last_mentioned": "2025-11-19T17:34:16.740712",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:54:23.237492",
+      "last_mentioned": "2025-11-19T19:41:53.521740",
       "success_rate": 0.5
     },
     "Rachel": {
@@ -560,22 +560,22 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {
-        "I": 1
+        "I": 5
       },
       "typical_left_neighbors": {
-        "the": 1,
-        "place": 1,
-        "where": 1
+        "the": 5,
+        "place": 5,
+        "where": 5
       },
       "typical_right_neighbors": {
-        "and": 1,
-        "take": 1
+        "and": 5,
+        "take": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:34:40.714613",
-      "last_mentioned": "2025-11-19T17:34:40.714656",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:54:46.953998",
+      "last_mentioned": "2025-11-19T19:42:16.229935",
       "success_rate": 0.5
     },
     "Max": {
@@ -653,19 +653,19 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {},
       "typical_left_neighbors": {
-        "the": 1,
-        "vet": 1,
-        "says": 1
+        "the": 5,
+        "vet": 5,
+        "says": 5
       },
       "typical_right_neighbors": {
-        "going": 1
+        "going": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:39:01.389903",
-      "last_mentioned": "2025-11-19T17:39:01.389948",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:59:28.941036",
+      "last_mentioned": "2025-11-19T19:46:50.993184",
       "success_rate": 0.5
     },
     "Sophie's": {
@@ -743,20 +743,20 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {},
       "typical_left_neighbors": {
-        "how": 1,
-        "has": 1
+        "how": 5,
+        "has": 5
       },
       "typical_right_neighbors": {
-        "behavior": 1,
-        "evolved": 1,
-        "over": 1
+        "behavior": 5,
+        "evolved": 5,
+        "over": 5
       },
-      "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:39:20.104633",
-      "last_mentioned": "2025-11-19T17:39:20.104675",
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T18:59:49.067057",
+      "last_mentioned": "2025-11-19T19:47:12.712382",
       "success_rate": 0.5
     },
     "Berlin": {
@@ -834,25 +834,87 @@
       "typical_polyvagal_state": "mixed",
       "typical_v0_energy": 0.5,
       "typical_urgency": 0.0,
-      "typical_self_distance": 0.425,
+      "typical_self_distance": 0.22185265624999995,
       "co_mentioned_entities": {},
       "typical_left_neighbors": {
-        "the": 1,
-        "job": 1
+        "the": 5,
+        "job": 5
       },
       "typical_right_neighbors": {},
+      "mention_count": 5,
+      "first_mentioned": "2025-11-19T19:00:12.365413",
+      "last_mentioned": "2025-11-19T19:47:36.235391",
+      "success_rate": 0.5
+    },
+    "Xeno's brother": {
+      "entity_value": "Xeno's brother",
+      "entity_type": "Person",
+      "organ_boosts": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.075,
+        "EO": 0.075,
+        "NEXUS": 0.056999999999999995,
+        "CARD": 0.075
+      },
+      "typical_polyvagal_state": "mixed_state",
+      "typical_v0_energy": 0.4742850083688933,
+      "typical_urgency": 0.0,
+      "typical_self_distance": 0.5,
+      "co_mentioned_entities": {
+        "James": 1
+      },
+      "typical_left_neighbors": {},
+      "typical_right_neighbors": {},
       "mention_count": 1,
-      "first_mentioned": "2025-11-19T17:39:43.746478",
-      "last_mentioned": "2025-11-19T17:39:43.746517",
+      "first_mentioned": "2025-11-19T20:04:09.837678",
+      "last_mentioned": "2025-11-19T20:04:09.837695",
+      "success_rate": 0.5
+    },
+    "James": {
+      "entity_value": "James",
+      "entity_type": "Person",
+      "organ_boosts": {
+        "LISTENING": 0.0,
+        "EMPATHY": 0.0,
+        "WISDOM": 0.0,
+        "AUTHENTICITY": 0.0,
+        "PRESENCE": 0.0,
+        "BOND": 0.0,
+        "SANS": 0.0,
+        "NDAM": 0.0,
+        "RNX": 0.075,
+        "EO": 0.075,
+        "NEXUS": 0.056999999999999995,
+        "CARD": 0.075
+      },
+      "typical_polyvagal_state": "mixed_state",
+      "typical_v0_energy": 0.4742850083688933,
+      "typical_urgency": 0.0,
+      "typical_self_distance": 0.5,
+      "co_mentioned_entities": {
+        "Xeno's brother": 1
+      },
+      "typical_left_neighbors": {},
+      "typical_right_neighbors": {},
+      "mention_count": 1,
+      "first_mentioned": "2025-11-19T20:04:09.837696",
+      "last_mentioned": "2025-11-19T20:04:09.837705",
       "success_rate": 0.5
     }
   },
-  "last_updated": "2025-11-19T17:40:27.340036",
-  "total_entities": 9,
+  "last_updated": "2025-11-19T20:04:09.838877",
+  "total_entities": 11,
   "summary": {
-    "total_entities": 9,
-    "entities_with_patterns": 1,
-    "mean_mention_count": 2.111111111111111,
+    "total_entities": 11,
+    "entities_with_patterns": 9,
+    "mean_mention_count": 8.818181818181818,
     "mean_success_rate": 0.5,
     "mean_v0_energy": 0.5,
     "entity_types": [

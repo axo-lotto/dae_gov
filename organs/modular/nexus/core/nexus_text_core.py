@@ -1127,6 +1127,88 @@ class NEXUSTextCore:
         # No clear entity type
         return None, 0.0
 
+    # ========================================================================
+    # PHASE 0C: MULTI-ORGAN ENTITY SIGNAL EXTRACTION (Nov 19, 2025)
+    # ========================================================================
+
+    def extract_entity_signals(
+        self,
+        entity_value: str,
+        user_id: str = 'default_user'
+    ) -> Dict[str, float]:
+        """
+        Extract NEXUS entity signals for multi-organ intersection (Phase 0C).
+
+        Provides memory-based entity signals to MultiOrganEntityExtractor for
+        intersection-based entity extraction via FFITTSS T4 AffinityNexus pattern.
+
+        Signals extracted:
+        1. **memory_strength** - How many times entity mentioned (normalized 0-1)
+        2. **memory_recency** - How recently mentioned (1.0 = current mention, decays)
+        3. **co_occurrence** - Average co-occurrence with other entities (0-1)
+        4. **relationship_richness** - How many relationships tracked (0-1)
+        5. **temporal_grounding** - Time/date awareness for entity (0-1)
+
+        Args:
+            entity_value: Entity name (e.g., "Emma", "work")
+            user_id: User identifier for entity lookup
+
+        Returns:
+            Dict[signal_name, signal_strength] - NEXUS signals for this entity
+
+        Example:
+            >>> nexus = NEXUSTextCore()
+            >>> signals = nexus.extract_entity_signals("Emma", user_id="user_123")
+            >>> # Returns: {'memory_strength': 0.85, 'memory_recency': 0.92, ...}
+        """
+        signals = {
+            'memory_strength': 0.0,
+            'memory_recency': 0.0,
+            'co_occurrence': 0.0,
+            'relationship_richness': 0.0,
+            'temporal_grounding': 0.0
+        }
+
+        # Query entity-organ tracker for pattern (PAST state)
+        if not self.entity_tracker:
+            return signals
+
+        pattern = self.entity_tracker.get_entity_pattern(entity_value)
+        if not pattern:
+            # Unknown entity, return zero signals
+            return signals
+
+        # Signal 1: Memory strength (mention count normalized)
+        mention_count = pattern.get('mention_count', 0)
+        # Normalize: 1 mention = 0.1, 5 mentions = 0.5, 10+ mentions = 1.0
+        signals['memory_strength'] = min(mention_count / 10.0, 1.0)
+
+        # Signal 2: Memory recency (if tracker supports last_mention_time)
+        # For now, use mention_count as proxy (more mentions = more recent pattern)
+        # TODO: Add temporal decay when entity_tracker supports timestamps
+        if mention_count > 0:
+            signals['memory_recency'] = min(0.5 + (mention_count / 20.0), 1.0)
+
+        # Signal 3: Co-occurrence (from entity-organ tracker)
+        # Count how many unique left/right neighbors this entity has
+        left_neighbors = pattern.get('typical_left_neighbors', {})
+        right_neighbors = pattern.get('typical_right_neighbors', {})
+        total_neighbor_types = len(left_neighbors) + len(right_neighbors)
+        # Normalize: 0-5 neighbors = low, 10+ neighbors = high
+        signals['co_occurrence'] = min(total_neighbor_types / 10.0, 1.0)
+
+        # Signal 4: Relationship richness (from organ_boosts)
+        # Check if entity has strong relationship_depth activation
+        organ_boosts = pattern.get('organ_boosts', {})
+        relationship_depth = organ_boosts.get('relationship_depth', 0.0)
+        signals['relationship_richness'] = relationship_depth
+
+        # Signal 5: Temporal grounding (from temporal_continuity atom)
+        temporal_continuity = organ_boosts.get('temporal_continuity', 0.0)
+        signals['temporal_grounding'] = temporal_continuity
+
+        return signals
+
 
 # Quick test
 if __name__ == '__main__':
