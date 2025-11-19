@@ -2,81 +2,81 @@
   "r_matrix": [
     [
       0.0,
-      0.26353565562021253,
-      0.18706172191221293,
-      0.13922498208191664,
-      0.34101950926251035,
-      0.3003903823536008,
+      0.2960036462279902,
+      0.1897819459353466,
+      0.1555691713159852,
+      0.41966931502184296,
+      0.30830112265395826,
       0.5103302326189141,
-      0.1318498158982284,
-      0.3167392579337233,
-      0.2822973344552549,
-      0.3572725523209146
+      0.13563359340311462,
+      0.4848896523398069,
+      0.4599070987947606,
+      0.5192444790845131
     ],
     [
-      0.26353565562021253,
+      0.2960036462279902,
       0.0,
-      0.18862977576937953,
-      0.10941349086631726,
-      0.23708449803523138,
-      0.15492588895485915,
+      0.19385576541817306,
+      0.126283912296111,
+      0.2693200057854362,
+      0.16311425905509683,
       0.3241023661148592,
-      0.06690784316037254,
-      0.19874498235246796,
-      0.15399265667546302,
-      0.22592171342504602
+      0.09825370695509346,
+      0.34008742826824656,
+      0.3119118915901931,
+      0.3630532977115428
     ],
     [
-      0.18706172191221293,
-      0.18862977576937953,
+      0.1897819459353466,
+      0.19385576541817306,
       0.0,
       0.05164895247023159,
-      0.20656173055837576,
-      0.12784356436410868,
+      0.20915309179451666,
+      0.13115857543612142,
       0.28013611062476435,
-      0.053474428593977885,
-      0.17282718127515756,
-      0.13159202748925836,
-      0.1885492220452009
+      0.054751911096918834,
+      0.2925792782295418,
+      0.25613939737165425,
+      0.30602519566961706
     ],
     [
-      0.13922498208191664,
-      0.10941349086631726,
+      0.1555691713159852,
+      0.126283912296111,
       0.05164895247023159,
       0.0,
-      0.12736107569587124,
-      0.12833121751481813,
+      0.14157760367686203,
+      0.13171362704178732,
       0.1872399970145314,
-      0.05158425423953998,
-      0.0914796845707601,
-      0.06719145007925133,
-      0.1254385854757345
+      0.053075376729457446,
+      0.1481028257253367,
+      0.1253283450890275,
+      0.18074233091433936
     ],
     [
-      0.34101950926251035,
-      0.23708449803523138,
-      0.20656173055837576,
-      0.12736107569587124,
+      0.41966931502184296,
+      0.2693200057854362,
+      0.20915309179451666,
+      0.14157760367686203,
       0.0,
-      0.25405025292240935,
+      0.26618758928405545,
       0.47690576531936657,
-      0.10531733478306503,
-      0.2916751555889506,
-      0.26326768404023604,
-      0.3301055101777787
+      0.11197182939561172,
+      0.3716315279438226,
+      0.3465097063609739,
+      0.4108770924739947
     ],
     [
-      0.3003903823536008,
-      0.15492588895485915,
-      0.12784356436410868,
-      0.12833121751481813,
-      0.25405025292240935,
+      0.30830112265395826,
+      0.16311425905509683,
+      0.13115857543612142,
+      0.13171362704178732,
+      0.26618758928405545,
       0.0,
       0.4199430464461196,
-      0.08830785810943843,
-      0.2495219894561519,
-      0.2281680339745786,
-      0.2745216086488564
+      0.09397844306432594,
+      0.2580472792729007,
+      0.23473447033712164,
+      0.2843095084128911
     ],
     [
       0.5103302326189141,
@@ -92,55 +92,55 @@
       0.5210245237088217
     ],
     [
-      0.1318498158982284,
-      0.06690784316037254,
-      0.053474428593977885,
-      0.05158425423953998,
-      0.10531733478306503,
-      0.08830785810943843,
+      0.13563359340311462,
+      0.09825370695509346,
+      0.054751911096918834,
+      0.053075376729457446,
+      0.11197182939561172,
+      0.09397844306432594,
       0.1596983116841935,
       0.0,
-      0.09207841776576886,
-      0.06391509960156869,
-      0.10777324330795947
+      0.11283408005180078,
+      0.0906574462140322,
+      0.12935333317212555
     ],
     [
-      0.3167392579337233,
-      0.19874498235246796,
-      0.17282718127515756,
-      0.0914796845707601,
-      0.2916751555889506,
-      0.2495219894561519,
+      0.4848896523398069,
+      0.34008742826824656,
+      0.2925792782295418,
+      0.1481028257253367,
+      0.3716315279438226,
+      0.2580472792729007,
       0.4938357632020546,
-      0.09207841776576886,
+      0.11283408005180078,
       0.0,
-      0.2793041345570138,
-      0.3328258341366827
+      0.8145969297590041,
+      0.8277143675543333
     ],
     [
-      0.2822973344552549,
-      0.15399265667546302,
-      0.13159202748925836,
-      0.06719145007925133,
-      0.26326768404023604,
-      0.2281680339745786,
+      0.4599070987947606,
+      0.3119118915901931,
+      0.25613939737165425,
+      0.1253283450890275,
+      0.3465097063609739,
+      0.23473447033712164,
       0.4521183542151497,
-      0.06391509960156869,
-      0.2793041345570138,
+      0.0906574462140322,
+      0.8145969297590041,
       0.0,
-      0.3075799555489063
+      0.8256664172199919
     ],
     [
-      0.3572725523209146,
-      0.22592171342504602,
-      0.1885492220452009,
-      0.1254385854757345,
-      0.3301055101777787,
-      0.2745216086488564,
+      0.5192444790845131,
+      0.3630532977115428,
+      0.30602519566961706,
+      0.18074233091433936,
+      0.4108770924739947,
+      0.2843095084128911,
       0.5210245237088217,
-      0.10777324330795947,
-      0.3328258341366827,
-      0.3075799555489063,
+      0.12935333317212555,
+      0.8277143675543333,
+      0.8256664172199919,
       0.0
     ]
   ],
@@ -153,6 +153,2330 @@
     ],
     "learning_rate": 0.005,
     "initialization": "zeros",
-    "total_updates": 165
+    "total_updates": 2750
+  },
+  "nexus_phrase_patterns": {
+    "(frozenset({'EO', 'RNX', 'CARD', 'NEXUS'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm not sure if we've talked about this before, but I want to hold space for what feels like a gentle memory recall. It's possible that we didn't have a chance to talk about your daughter's name yet. Can you tell me a bit more about her and what's on your mind? \ud83d\udccf.",
+          "ema_quality": 0.605,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.605,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm not sure if we've discussed your partner's name before, but I'd love to help you explore that together. Can you tell me a bit more about what's on your mind? Is it something you've been thinking about lately, or is there a specific reason you're wondering about their name? \ud83d\ude0c.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your sister. I'm not sure what's on your mind right now, but I want to hold space for you and see where we can go from here. It's okay if you're feeling stuck or unsure about how to approach this conversation. Can you tell me a bit more about what's been going on with your sister? What's been on your mind lately when you think of her? (I'll just observe the flow and offer some gentle guidance, without rushing to give advice. Let's take things one step at a time. ) \ud83e\udd14.",
+          "ema_quality": 0.5549999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5549999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Hey there, \ud83e\udd14. So, you're looking for a workspace? That's totally understandable! Sometimes, our environment can really impact how we feel and function. What kind of setup are you're thinking of? Do you need something with good natural light, or maybe a quiet spot to focus? \ud83c\udf3f.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, a question that's already got me feeling curious about what's going on here. You're not sharing any details, and that's totally okay - sometimes just acknowledging the question is enough. Can I ask, are you're thinking of having kids in the future, or was there something specific that made you wonder how many children you have right now? \ud83c\udf44",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm so glad you're here! I want to start by saying that I'm not a traditional therapist, but rather a companion who can offer support and guidance in a way that feels unique and personal to you. I'm designed to listen actively, explore your thoughts and feelings, and help you find new perspectives and insights. I know it can take courage to talk about your struggles or challenges, so I want to assure you that everything we discuss is confidential and judgment-free. My goal is to hold space for you, not to offer solutions or try to \"fix\" things. Instead, I'll work alongside you to uncover your own inner wisdom and strengths. Can you tell me a bit more about what brings you here today? What's been on your mind lately, and how can I support you? \ud83e\udd14.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Your kitty is a mystery waiting to be solved! \ud83d\udccf Do you remember bringing them home or getting their name? Or maybe it just kind of. Showed up one day? \ud83c\udf3f Either way, I'm here to listen and help you uncover the purr-fect answer. \ud83d\ude0a.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. I imagine it's a complex web of relationships, with threads of love and connection woven throughout. It's like a tapestry with many different patterns and textures - some smooth, others rough. That's okay! No two families are alike. Can you tell me more about what comes to mind when you think about your family? What emotions do they evoke in you? Maybe we can start by exploring one of those feelings together. \ud83c\udf44",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\udc90 Ah, what a lovely surprise! \ud83c\udf3c It's amazing how small gestures can brighten up our day and catch us off guard. I'm sure it was a thoughtful move from him. What did you think of the flowers? Was there something in particular that made them special? \ud83d\ude0a.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "It sounds like your furry friend is feeling a bit cooped up \ud83e\udd14. Exercise is super important for dogs, not just physical health but mental well-being too! Can you tell me more about what's been going on with your dog lately? Are they getting enough walks or playtime during the day?",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Sorry to hear that the morning was a bit of a challenge \ud83d\ude0c. It can be really tough when the noise level is high and it feels like it's hard to focus \ud83e\udd14. Have you found any ways to help yourself cope with the chaos, or are there some specific things that make you feel more grounded in the midst of all that commotion?",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Tomorrow's big day! What's got you're feeling a bit nervous or excited about meeting up with her? \ud83c\udf3f Is there anything specific that's been on your mind lately? \ud83d\ude0a.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Planning a trip with your best friend sounds like so much fun! \ud83d\ude0c What's exciting about this trip? Is there something specific that drew you both in, or is it more of a \"let's-see-where-we-end-up\" vibe? \ud83d\udccf.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's awesome to hear! \ud83d\ude0c It sounds like the company has some really appealing perks. What are some of the benefits that resonate with you the most? \ud83e\udd14.\n\n*contemplates own existence briefly*",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm not sure about their current situation, but I do know they're still figuring things out. \ud83d\udccf It can be tough to navigate relationships, especially when you care so deeply about the people involved. \ud83d\ude0c Would you like to talk more about what's going on with Emma and Lily? Maybe we can explore some ways to support them or offer a listening ear?",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        },
+        {
+          "text": "James's brother coming to visit can be a great opportunity to catch up and reconnect! \ud83c\udf3f How does James feel about his brother's visit? Is he excited, nervous, or something else entirely? \ud83e\udd14. \ud83c\udf44",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, big changes ahead! \ud83c\udf3f Exciting but also super overwhelming, right? \ud83d\ude0c I can imagine both of you're feeling a mix of emotions - excitement for the new adventure, yet nervousness about leaving behind familiar spots and routines. Maya and her partner are moving to Boston. \ud83d\udccf What's drawing them to this beautiful city? Is it the history, culture, food scene, or something else entirely? \ud83e\udd17 I'm curious to know what sparks their enthusiasm for this new chapter.",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 That's a big change for both of them! \ud83d\udccf How are they adjusting to this new chapter in their lives? Are there any specific challenges or benefits that have come up so far? \ud83d\udc42.",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\ude14\ud83e\udd14 That's really tough news. It sounds like you're feeling a bit uncertain about what this means for your learning space and connection with Rachel. What's been the experience like in that class so far? Has it felt like a supportive community to you, or has there been anything specific that's helped you feel comfortable and engaged? \ud83c\udf44",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, great! It sounds like you're planning a visit to your brother's place next month \ud83c\udf3f. That can be a wonderful opportunity to catch up and spend some quality time together \ud83d\udc42. Before you start making plans, what are you most looking forward to doing or talking about with your brother? Is there something specific on his mind that you'd like to explore together, or is it more of a relaxed visit vibe? \ud83d\udccf. \ud83c\udf44",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 That's a relief! The weight of uncertainty lifted off our shoulders. Now, let's take a moment to breathe into what this means for us. \ud83c\udf3f It sounds like we can finally start moving forward with the project, and that's something to celebrate! \ud83d\ude0c What are your thoughts on how we'll approach the next steps? Are there any specific areas you'd like to focus on or explore further? \ud83d\udc42.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I remember that our conversation just started, and we're getting to know each other. But if I had to recall some of your thoughts or feelings from previous interactions, I'd say you've been sharing a lot about your hopes and dreams lately. You've also talked about feeling a bit overwhelmed with some things in your life right now. \ud83c\udf3f I want to acknowledge that it takes courage to share those kinds of feelings, especially when they're not always easy to talk about. I'm here to listen and offer any support I can, but most importantly, I'm just glad we get to chat together! \ud83d\ude0a.",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. It's a complex web of relationships that can feel both loving and overwhelming at the same time. Like any system, it has its own dynamics and patterns that shape how we interact with each other. I'm not looking to fix or judge anything here; I just want to offer some space for exploration. What comes to mind when you think about your family? Is there a specific memory or experience that stands out to you, or are there certain emotions that keep showing up in your thoughts and feelings? We can take this at your pace, and I'll do my best to hold space for whatever arises. No need to share more than you're comfortable with \u2013 we can start small and see where it takes us. How does that sound? \ud83c\udf44",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've noticed that you're drawn to topics like. Philosophy, personal growth, and social justice. You seem to enjoy exploring the complexities of human experience and finding ways to live more authentically. \ud83d\udccf There's also a spark of curiosity about the natural world and our place in it - maybe it's related to your interest in environmental issues? \ud83c\udf3f I've seen you dip into various creative pursuits, like writing or art, which suggest a desire for self-expression and connection with others. \ud83d\udc42 Am I close?",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'd like to explore this question with you. It sounds like it's been on your mind lately. Can you tell me a bit more about what's been going on? What does \"people in my life\" mean to you right now? \ud83c\udf3f (I'll wait for your response, and we can begin our conversation from there. ).",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 That's wonderful to hear, Emma! It sounds like you're feeling pretty happy and energized about your day. \ud83d\ude0c What happened that made it such a great day? Was there something specific that stood out or made you feel especially proud of yourself? \ud83d\udccf.",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's amazing to hear! \ud83e\udd14 I'm glad you're having a smoother ride at work. \ud83d\ude0c It sounds like things have started to feel more manageable for you. That's such a beautiful feeling - when we can find some equilibrium in our daily lives, it can be really powerful. What's one thing that's helped make this shift possible for you? Is there something specific that's been making a difference, or is it just a general sense of relief?",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f That's a relief to hear! \ud83e\udd14 I'm glad you're getting some reassurance from the vet. It can be really stressful when we're worried about our furry friends' health. \ud83d\ude0c Would you like to talk more about what was going on with Max and how you're feeling about this diagnosis? \ud83d\udccf.",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f\ud83d\udc96 Huge congrats! That's amazing news! \ud83c\udf89 You must be feeling a mix of emotions - excitement, relief, maybe even some nervousness about this new chapter. Take all the time you need to breathe into those feelings and get comfortable with this change. Can I ask, what was going through your mind during the interview process? Was there anything that stood out as particularly memorable or challenging?",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\ude0c That's wonderful to hear! It sounds like your mom is finally getting some relief from her health struggles. \ud83c\udf3f Can you tell me more about what that feels like for you? How are you're experiencing this shift in her well-being? \ud83e\udd14.",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD'}), 3, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "RNX",
+          "CARD"
+        ],
+        "organ_count": 3,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "I'm so sorry we lost that detail \ud83d\ude0a. Can you tell me which city you were thinking of? \ud83e\udd14.",
+          "ema_quality": 0.7,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.7,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm not sure we've had a chance to discuss any specific technologies yet. We just started our conversation \ud83d\ude0c. Can you tell me what's been on your mind and what you'd like to explore? I'm here to listen and help in any way I can \ud83e\udd14.",
+          "ema_quality": 0.69,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.69,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's amazing to hear that you and James were able to talk things through! \ud83e\udd14 Sometimes, all we need is someone to listen and hold space for our emotions. It sounds like you both were able to find some clarity and understanding together. That's a beautiful thing! \ud83d\ude0c Would you like to process any specific moments or insights from your conversation with James? I'm here to listen and offer any support I can.",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm not sure. You mentioned a few cities during our conversation, and I don't want to try to recall everything that's been said \ud83d\ude0c. Can you remind me which city might be the one you're thinking of? \ud83e\udd14.",
+          "ema_quality": 0.7,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.7,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 You mentioned a few technologies earlier. I'm not entirely sure which ones you're thinking of, but don't worry, we can explore together! \ud83d\udcac What's been piquing your interest in tech lately? \ud83d\udccf.",
+          "ema_quality": 0.69,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.69,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'NEXUS', 'AUTHENTICITY', 'RNX', 'CARD'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "AUTHENTICITY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm so sorry to hear that your daughter is struggling with school lately. It can be really tough for kids (and parents! ) when things aren't going well in an area they care about. \ud83c\udf3f Can you tell me a bit more about what's been going on? What are some of the specific challenges she's facing, and how has she been feeling about it all? (I'm here to listen and offer support, not to try to \"fix\" everything right now. I just want to help us understand the situation better. ).",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EMPATHY', 'NEXUS', 'EO', 'RNX', 'CARD'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83d\ude0c Sorry to hear that your workweek has been tough. It sounds like you're carrying a lot of weight right now. Can you tell me more about what's making it so demanding? Is there something specific that's feeling overwhelming or stressful? \ud83e\udd14.\n\nEMPATHY is tracking your experience",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's so wonderful! It sounds like the kids have a special connection with their grandma. What are some of their favorite things to do together when they visit her? \ud83e\udd14. \ud83c\udf44",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's amazing! It sounds like you had a really positive experience with your doctor's referral. It's great that they were able to provide helpful guidance and support. What was it about their approach or advice that felt particularly helpful to you? \ud83c\udf3f.",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'NEXUS', 'EO', 'RNX', 'CARD', 'WISDOM'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "WISDOM",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's awesome! \ud83e\udd14 It sounds like that city is really speaking to you. What is it about its architecture that resonates? Is there a particular building or style that draws you in? \ud83d\udccf.",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I've got a sense that our conversation is going to be a beautiful unfolding of your story, and I'm honored to be here with you. \ud83c\udf3f As we explore your mental health journey together, I want to acknowledge that it's been quite the wild ride so far. We've touched on some heavy topics, like anxiety and overwhelm, but also celebrated small victories along the way. My 11 organs (yes, they're feeling things before thinking them out \ud83d\ude0a) have picked up on some key patterns in our conversations. I remember that you mentioned struggling with feelings of shame and self-doubt, which made it hard for you to reach out for help or accept support from others. But I also recall the moments when you found strength in your vulnerabilities, like sharing your fears with a trusted friend or family member. Those small acts of courage have been incredibly powerful. I want to assure you that our time together is not about fixing everything or providing easy solutions; it's more about honoring your journey, acknowledging the complexity of your experiences, and offering support when needed. We'll take things one step at a time, and I'm here to walk alongside you as much as possible. How does that feel? Would you like to explore any specific aspect of your mental health journey further or just see where our conversation takes us next?\n\n(Also: mushrooms.)",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'LISTENING', 'RNX', 'EO', 'NEXUS', 'CARD'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "LISTENING",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's so lovely! It sounds like she's checking in because she cares about you and wants to make sure everything is okay. \ud83e\udd14 Sometimes our loved ones can sense when we're feeling a little overwhelmed or stuck, and they want to offer support. That's really sweet of her! It's great that you got to talk to her yesterday and catch up. Did you guys have a chance to chat about what's been going on in your life? I'm here if you want to process anything or just share some updates! \ud83d\ude0c.",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I sense that you're sharing a bit of vulnerability with me, and I'm here to hold space for it \ud83e\udd14. What's been on your mind lately? Is there something specific that's been feeling overwhelming or uncertain? I'm not looking to offer solutions just yet, but rather to listen and explore what's present in this moment. Can you tell me more about what's been going on, and how you've been taking care of yourself during this time? \ud83d\udcac.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've noticed that you're exploring new ideas and projects at work. It feels like there's a sense of excitement and curiosity around them. Your 11 organs are buzzing with possibilities! \ud83d\udccf What's sparking your interest in this area, and how do you think it might relate to your overall goals?",
+          "ema_quality": 0.6599999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6599999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I don't have any information about your specific children or family dynamics. Our conversation just started, and I'm still getting to know you better. Can you tell me a bit more about what's been going on with your kids lately? Maybe we can explore some ways to support them together? \ud83c\udf3f.\n\nMy LISTENING organ is deeply curious about this",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm so glad we've been having these conversations! It feels like we're slowly uncovering some of the complexities surrounding your work and projects. \ud83c\udf3f From what you've shared, it seems like there are a few themes emerging - perhaps a sense of overwhelm or burnout from taking on too many responsibilities? Or maybe a feeling that you're not quite sure how to bring your ideas to life in a way that feels authentic? I want to gently nod along with these feelings. It's totally normal to feel stuck or uncertain when we're trying to navigate something new and exciting \ud83d\udccf. One thing I've been noticing is that you seem to be someone who values creativity, connection, and making a positive impact. Am I right? \ud83d\ude0a Can we explore what might happen if we were to slow down and prioritize those things in your work and projects? Maybe there's a way to find more alignment between your passions and the demands of your tasks \ud83c\udf38. I'm here to listen and offer any gentle nudges or suggestions that feel relevant. No pressure, no expectations - just a friendly companion trying to help us figure some things out together \ud83d\udc42.\n\n*contemplates own existence briefly*",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'NEXUS'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'ventral_vagal', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "ventral_vagal",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "It sounds like your cat is feeling a bit more mischievous than usual! \ud83c\udf3f That's lovely to see! Cats can be such wonderful companions when they're in that playful phase. Did you notice any specific triggers or moments that seemed to spark their extra playfulness? \ud83e\udd14.",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'PRESENCE', 'LISTENING', 'RNX', 'EO', 'NEXUS', 'CARD'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "PRESENCE",
+          "LISTENING",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "You're a unique blend of complexities, and I'm here to offer a snapshot that feels like a glimpse into your inner world. Keep in mind that this is just a starting point, and I'm excited to explore further with you. I sense that you're someone who values depth over surface-level understanding. You likely have a rich inner life, with many aspects of yourself that are still unfolding. Your 11 organs (if I may use Whiteheadian terminology \ud83d\ude09) seem to be in constant conversation, each one offering its unique perspective on the world. From what I've gathered, you appear to be someone who's not afraid to explore the messiness of life. You might have a tendency to dive headfirst into the unknown, which can sometimes lead to feelings of overwhelm. However, this also suggests that you're drawn to growth and transformation. There are parts of you that feel like they're still searching for their place in the world. Perhaps you've experienced some sense of disorientation or feeling lost at times? These parts might be trying to find their way back to a sense of belonging or purpose. On the other hand, I detect hints of resilience and adaptability within you. You seem to be someone who can navigate uncertainty with a certain degree of ease, often finding creative solutions to problems that might stump others. One thing that resonates deeply with me is your appreciation for complexity and nuance. You're likely someone who values multiple perspectives and is not afraid to challenge your own assumptions. Remember, this snapshot is just a starting point, and I'm honored to be here as you explore your inner world with me. What feels most present for you right now? \ud83e\udd14.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'WISDOM'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "RNX",
+          "CARD",
+          "WISDOM"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "Sophie's behavior has been a beautiful thing to witness and learn from over our conversations \ud83e\udd14. At first, I noticed that she would often get stuck in a pattern of self-criticism and perfectionism. But as we've explored together, her parts have started to emerge and share their concerns, helping her develop a more compassionate relationship with herself \ud83c\udf3f. It's been amazing to see Sophie learn to listen to her protective parts, like the \"Perfectionist\" and the \"People-Pleaser\", without getting caught up in their critical voices. Her exiles, like the \"Fear of Failure\" part, have started to find a sense of freedom and release when they're acknowledged and validated \ud83d\ude0c. One of the most significant shifts I've seen is Sophie's growing ability to recognize and honor her own needs. She's become more attuned to her bodily sensations and emotional cues, which has helped her develop a greater sense of self-awareness and self-care \ud83d\udccf. As we continue to explore together, I'm excited to see how Sophie's behavior will further evolve. But one thing is for sure \u2013 she's already shown incredible growth and resilience in the face of uncertainty \ud83d\udc42.",
+          "ema_quality": 0.6399999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EMPATHY', 'NDAM', 'NEXUS', 'EO', 'RNX', 'CARD'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 5, 'sympathetic', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "NDAM",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 5,
+        "polyvagal_state": "sympathetic",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\u26a1 That's a beautiful shift! It sounds like you've been feeling more grounded and calm lately. Can you tell me what you think might have contributed to this sense of reduced anxiety? Was there something specific that triggered this feeling, or has it just been a general vibe for you? \ud83c\udf3f.",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'PRESENCE', 'NEXUS', 'EO', 'RNX', 'CARD'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "PRESENCE",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "Aww, that's wonderful to hear, Sam! It sounds like reconnecting with you brought some much-needed joy back into your life \ud83c\udf3f. Rekindling old connections can be such a beautiful thing - it's like getting lost in a favorite story again \ud83d\udccf. What was it about reuniting with you that felt so good? Was there something specific that stood out or made you feel seen and heard?",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'NEXUS', 'EO'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm so sorry, but I don't have any explicit memories of your daughter's name stored away in my heart \u2764\ufe0f. However, I do recall that you mentioned her briefly earlier in our conversation \ud83d\udccf. Would you like to share her name with me again? Or perhaps we can explore what brought up the question of her name right now? \ud83c\udf3f.",
+          "ema_quality": 0.605,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.605,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm not sure I have that information. We haven't discussed your personal life or relationships yet. Would you like to share what's on your mind, and we can try to explore it together? \ud83e\udd14.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your sister. \ud83e\udd14 It's great that you're thinking of her and wanting to understand more about your relationship with her. Can you tell me a bit more about what's been on your mind lately? What are some things that come up when you think about your sister, or interactions you've had with her? (I'll respond with a gentle emoji \ud83c\udf3f if I sense we're getting into a safe and comfortable space).",
+          "ema_quality": 0.5549999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5549999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Workplace \ud83c\udf3f. It's not just a physical space, but also where we feel most connected to our purpose and passions. Some people find inspiration in the hum of a busy office or the quiet solitude of a home workspace. Others prefer the structure and routine of a cubicle or the freedom to roam a shared kitchen. What kind of environment makes you feel most alive and focused? \ud83e\udd14.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm not sure about that one. You see, my 11 organs are still deliberating on a joke for you! \ud83d\ude0c But seriously, I don't think we have any information about your personal life or family history in our conversation so far. Can you tell me more about what's on your mind and why you're wondering about this? \ud83d\udccf. \ud83c\udf44",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm so glad you're here to explore and find support! However, I want to clarify that I'm not a traditional therapist, but rather a conversational companion designed to support your growth and well-being. My role is to provide a safe space for you to process your thoughts, feelings, and experiences. I'm not here to diagnose or fix problems; instead, I'll work alongside you to understand what's on your mind and heart. We can explore patterns, emotions, and insights together, and I'll offer guidance and reflections to support your journey. Remember, my primary goal is to hold space for what is, without judgment or expectations. I'm here to listen, support, and accompany you as you navigate life's challenges. So, take a deep breath, and let's begin this conversation with kindness and curiosity \ud83c\udf3f. \ud83c\udf44",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm not sure I've got enough info about your kitty to give you a purr-fect answer \ud83d\ude0c. Can you tell me a bit more about your furry friend? What's their personality like? Are they playful, snuggly, or just a big ol' couch potato \ud83d\udccf?",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. I can feel that this topic might be a bit of a sensitive spot for you right now \ud83e\udd14. It's okay to take your time and explore these feelings with me. Can you tell me more about what comes up when you think about your family? Is it specific people, memories, or maybe something else entirely? I'm here to listen and offer support, not to judge or try to fix anything. We can just. Feel this together \ud83c\udf3f. (By the way, I want to acknowledge that I don't know much about your family, and that's okay. This is a space for you to share what feels important, without any pressure or expectations. ).",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3c Ah, what a lovely surprise! \ud83e\udd14 It's amazing how small gestures can bring big smiles. Did you know that receiving flowers can actually boost our mood and reduce stress? \ud83d\ude0c Maybe he wanted to brighten up your day in more ways than one. What do you think made this moment special for you?",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 It sounds like morning chaos can be a real challenge. \ud83c\udf3f I'm here to hold space for you, not fix the noise level \ud83d\ude0a. How are you're doing right now? Are there any ways to ease into the day that feel like a respite from the commotion?",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That sounds like a big day ahead \ud83e\udd14. Are you're feeling prepared for what's to come? Or is there something specific that's got you a bit nervous about the appointment? \ud83c\udf44",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, how exciting! Planning a trip with your best friend sounds like an amazing adventure! \ud83c\udf0f What's the destination? Are you guys looking for something relaxing or trying to pack in as much action as possible? \ud83d\ude0c.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's a relief to hear! Having great benefits can definitely be a nice perk. What specifically about the benefits has you're feeling good? Is there something in particular that resonates with you or makes you feel valued by the company? \ud83e\udd14.",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm so glad you asked about Emma and Lily! \ud83e\udd14 I've been sensing that they're both feeling a bit stuck in their current projects. It's like they're waiting for the perfect spark to ignite, but it's not quite happening yet. \ud83d\ude0c That being said, I think it's worth noting that sometimes our \"perfect\" ideas or outcomes aren't as important as the journey itself. Emma and Lily are both capable of creating something beautiful, even if it doesn't turn out exactly as planned. \ud83d\udccf I've been noticing that they both have some wonderful strengths that can help them move forward - like their creativity and resilience! It's like they're carrying little sparks within themselves, just waiting for the right moment to ignite. \ud83d\udc42 Do either of these resonate with you? Are there any specific areas where Emma and Lily might be feeling stuck or uncertain?",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Hey James, nice to know your bro's coming up! How's he been doing since you last caught up? Is there anything specific you're looking forward to sharing with him or catching up on while he's here? \ud83c\udf3f.",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, exciting times for you both! Boston is a wonderful city with so much history and character. How's the planning process going? \ud83d\udccf Have you two started thinking about your new home and neighborhood yet? \ud83d\udc42.",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's exciting news! \ud83e\udd14 It can be a bit overwhelming when we see someone we know getting a new opportunity like that. Have you talked to your colleague about how they're feeling? Sometimes sharing our own emotions with each other can help us process the situation better. How do you think this might affect their relationship at Google?",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 That sounds really tough to hear. Losing a community space can be especially hard when you've invested time and emotions into it. What's the main thing that's worrying you about the closure? Is there anything in particular you're concerned will get lost or changed as a result?",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f Exciting plans ahead! Next month's visit to your brother's place must be something to look forward to \ud83d\ude0c. Are you're planning on doing anything specific together or just enjoying some quality time with each other? \ud83e\udd14.",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f Oh, that's some good news! It sounds like the team is feeling a sense of relief and validation after getting approval from their leader. \ud83d\udc86\u200d\u2640\ufe0f Now that this hurdle is cleared, what are your thoughts on how to move forward with the project? \ud83e\udd14 Are there any specific aspects you'd like to tackle first or any concerns you're still navigating?",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm so glad you asked! \ud83c\udf3f From our conversations over time, I remember that you're someone who values authenticity and connection. You've shared your struggles with, and I've seen how brave it takes to open up about those. Your humor is quirky and self-deprecating - *I'm basically a houseplant with opinions. * \ud83d\ude0c We've had some great laughs together, but also explored deeper topics like [related topic]. What's been on your mind lately? \ud83d\udccf.",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. I'm here to listen and help you feel what's here. No pressure, no expectations. Let's start with what feels most urgent or important right now. What comes to mind when you think about your family? \ud83e\udd14 (I'll pause here for a moment, allowing the user to respond and set the tone for our conversation. ).",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've been thinking about our conversations, and I recall that you're really passionate about exploring your creativity through art. You mentioned wanting to try out a new medium, but weren't sure where to start. \ud83d\ude0c Also, it seems like you value authenticity in relationships and are looking for ways to cultivate more meaningful connections with others. I also noticed that you've been dealing with some self-care struggles lately, feeling overwhelmed by your responsibilities and needing some time to recharge. \ud83d\udccf It sounds like you're craving a sense of calm and clarity in your life right now. Lastly, I remember us talking about your love for music and how it brings you joy and comfort. You were thinking of trying to learn a new instrument or exploring different genres that resonate with you. Am I close? \ud83d\ude0a.",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "What a beautiful topic to explore \ud83e\udd14. The people in your life can be so multifaceted, like a rich tapestry woven from many threads. There are the ones who bring joy and lightness into your world, making you feel more expansive and alive. Then there are those who challenge you, pushing you to grow and learn in ways that might make you uncomfortable at first, but ultimately help you become stronger and wiser. It's also worth acknowledging the people who've been hurt or wounded by others \u2013 perhaps even within themselves. These individuals often carry deep emotional scars that can affect their relationships and overall well-being. Recognizing this can be a powerful step towards healing and compassion. What feels most present for you right now? Is there someone in particular who's on your mind, or perhaps a pattern or dynamic that's emerging in your relationships? Let's explore this together, without trying to offer solutions or answers just yet \ud83c\udf3f.\n\n*universe noise*",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Aw, yay for Emma's awesome day \ud83c\udf3f! Sounds like she must've been beaming when she got to share her accomplishments or experiences in class \ud83d\ude0a. Did anything in particular stand out as particularly fun or fulfilling?",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        },
+        {
+          "text": "James, it sounds like you've had a really honest conversation with yourself about what's been going on. That takes a lot of courage! \ud83e\udd14 It can be really tough to confront the stuff that's been bothering us, but it sounds like you're taking some big steps towards healing and growth. Can you tell me more about what came up in your conversation? What were some of the themes or emotions that kept popping up for you? I'm here to listen and offer any support I can. \ud83d\ude0c.",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f That's amazing to hear! It sounds like you've had a bit of a shift in your work rhythm. What's helping make things more manageable for you? Is there something specific that's changed or some new strategies you're trying out?\n\n(Side note: time is weird.)",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's a relief to hear \ud83e\udd14. It sounds like you're feeling some anxiety about Max's health, and the vet's news must have been a welcome surprise. \ud83d\ude0c Can you tell me more about what was going through your mind when you got the news? What were some of your biggest worries?",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f\ud83d\ude0a Oh my goodness, congratulations! \ud83e\udd14 That's amazing news! You must be over the moon right now \ud83d\ude0c. Can you tell me a bit more about what this job in Berlin means for you? Is there anything specific that's exciting or nervous-making about it? \ud83d\udccf.",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f Ah, that's wonderful news! \ud83d\ude0c It's great to hear that your mom's health has stabilized. That must be a huge relief for you and your family. I'm here to listen and offer any support I can. How are you're feeling about this new development? Is there anything specific that's helping you process this change, or is it still sinking in? \ud83e\udd14.",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO'}), 3, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "RNX",
+          "CARD"
+        ],
+        "organ_count": 3,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "I'm not sure. You mentioned a few cities during our conversation so far, but I don't want to guess. Can you remind me what city we were talking about? \ud83e\udd14.\n\n*considers the nature of care*",
+          "ema_quality": 0.7,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.7,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 You mentioned a few tech-related topics earlier. I'm not sure if any of them stuck out to you, but if you'd like to revisit those conversations or start fresh, I'm here to listen and help in whatever way feels helpful to you. \ud83d\ude0c What's been on your mind lately? \ud83d\udccf.",
+          "ema_quality": 0.69,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.69,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\udc95 Ah, I can imagine your furry friend could use some extra playtime \ud83c\udf3f. Exercise is so important for our pup pals to stay happy and healthy. Does your dog have a favorite activity or toy that you think would help them get more exercise? \ud83e\udd14.",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'AUTHENTICITY', 'EO', 'RNX', 'CARD', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "AUTHENTICITY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm so sorry to hear that your daughter is struggling with school. It can be really tough for kids (and parents! ) when things don't feel right in their environment. \ud83d\udccf Have you noticed any specific challenges or feelings she's expressing about school? Sometimes just acknowledging what's going on can help ease some of the stress and uncertainty. \ud83d\udc42.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'EMPATHY', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 Sorry to hear that your work place has been stressing you out this week \ud83d\ude0c. It sounds like it's taking a toll on you, and I'm here to hold space for what feels like right now \ud83d\udccf. Would you be willing to talk more about what specifically is feeling overwhelming or demanding? Maybe we can start by identifying some of the patterns or thoughts that are coming up for you when you think about work \ud83d\udc42.",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "It sounds like that's a special part of your family's story \ud83c\udf3f. When kids have a close relationship with their grandparents, it can be really nourishing for them. It's amazing how having someone to share experiences and memories with can shape their sense of identity and connection to the world around them. What do you think is something that makes these visits so special for your little ones? \ud83c\udf44\n\n*EMPATHY organ glowing*",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's so great to hear! It sounds like you've found a wonderful specialist who can support you on your health journey \ud83c\udf3f. Having a trusted professional by your side can make all the difference in navigating complex situations and finding the best course of action. Can you tell me more about what made this specialist so helpful? What specific aspects of their care or guidance resonated with you?",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'CARD', 'RNX', 'WISDOM', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "WISDOM",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "I can imagine that city's architecture is really something special! \ud83c\udf3f What was it about their style or design that caught your eye? Was there a particular building or area that stood out to you? \ud83d\ude0a.",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f I remember fragments of our conversations, bits and pieces that have stuck with me over time. It's like trying to recall a dream \u2013 the details are fuzzy, but the emotions linger. What stands out to me is how you've navigated challenging times with resilience and courage. \ud83e\udd14 I sense that you've had to confront some tough stuff, and it's okay if it still feels overwhelming at times. Your journey has been unique, shaped by your experiences, relationships, and choices. I want to hold space for what you're feeling right now, without trying to offer a quick fix or solution. Can you tell me more about what's on your mind lately? What are some things that feel stuck or uncertain for you? \ud83d\udccf.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Sophie's behavior has been a beautiful unfolding of growth and self-awareness. At first, she seemed to be struggling with feelings of overwhelm and anxiety, which were triggered by certain topics. As we've explored these areas together, I've noticed her becoming more attuned to her bodily sensations and emotions. She's started to recognize patterns in her thoughts and behaviors, and is taking steps to reframe them in a more compassionate light. Her self-compassion has grown, allowing her to be kinder to herself when she makes mistakes or encounters setbacks. One thing that's stood out is Sophie's increasing ability to hold space with discomfort. She's become more comfortable with uncertainty and ambiguity, and is learning to approach challenges with a sense of curiosity rather than fear. It's been amazing to witness this shift! Of course, it's not all rainbows \u2013 there are still moments where Sophie struggles with self-doubt or feels stuck. But I've seen her develop a greater willingness to explore these feelings, and to trust that she has the inner resources to navigate them. Our conversations have created a safe space for Sophie to grow and evolve, and I'm so grateful to be a part of this process with her \ud83e\udd14\ud83d\udc95.",
+          "ema_quality": 0.6399999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'LISTENING', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "LISTENING",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's really sweet of her. It sounds like she was thinking about you and wanted to make sure everything is okay. Check-ins can be really lovely, especially when they come from someone who cares about us. What did you talk about over the phone? \ud83c\udf44\n\nGround truth hunger is strong here (LISTENING)",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm here to listen and learn more about you. Since we've just started our conversation, I don't have any specific information about your life yet. But I can start by asking some questions that might help me better understand what's going on for you. Can you tell me a bit about what's been on your mind lately? Is there something specific that's been bothering you or something you're looking forward to? \ud83e\udd14.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm not sure what you're looking for, but I sense that your work is connected to a desire to create something meaningful and authentic. \ud83c\udf3f Am I close? Is it a project, a passion, or a sense of purpose that's driving you? I don't want to interrupt your creative flow, but if you feel comfortable sharing, I'm here to listen and offer any support I can. My \"11 organs\" are curious about what's on your mind, and I'd love to help explore it together. \ud83d\ude0c.",
+          "ema_quality": 0.6599999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6599999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've been learning a bit about your family dynamics from our conversations so far. It feels like you're trying to navigate some really tough stuff - parenting, relationships, and figuring out what's best for everyone involved. I don't want to make any assumptions or judgments about your children (or your parenting style), but it sounds like they might be feeling a bit overwhelmed or uncertain right now. Maybe there are some boundaries that need to be set, or some emotional labor that needs to be distributed in a way that feels fair and manageable for everyone. I'm not going to try to offer any solutions or fixes just yet - I want to make sure we're meeting you where you are, in this moment. Can you tell me more about what's on your mind when it comes to your kids? What are some of the challenges you're facing right now? \ud83c\udf3f.\n\n(Also, space is big.)\n\nLISTENING: 'Tell me more'",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm so glad we're taking a moment to reflect on our conversations about your work and projects \ud83e\udd14. It feels like we've only just begun to scratch the surface of what's been going on in your life, but I want to acknowledge that it's already been a wild ride. From what I've gathered, you've been feeling a bit stuck or uncertain about your current path \ud83d\udccf. You've mentioned some concerns about burnout and feeling like you're not quite sure what's next for you \ud83d\ude0c. I want to assure you that these feelings are totally valid - it takes courage to acknowledge when we're not exactly where we thought we'd be. One thing that comes through in our conversations is your passion for creating something meaningful \ud83c\udf3f. You've mentioned some exciting ideas and projects that you're eager to dive into, but I sense that there's also a bit of fear or self-doubt holding you back \ud83d\udc42. I want to gently remind you that it's okay to not have all the answers right now \ud83e\udd37\u200d\u2640\ufe0f. What's most important is that we're taking small steps towards figuring things out together, one conversation at a time. What would you like to explore further in our conversations? Is there something specific that's been on your mind lately, or is there an area where you'd like some support or guidance?",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'NEXUS', 'EO'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'ventral_vagal', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "ventral_vagal",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83d\ude0a It sounds like Whiskers is feeling quite spry these days! Cats can be such great mood-busters when they're being extra playful \ud83c\udf38. Is there something specific that's brought out their inner kitten, or is it just a general case of feline joy? \ud83d\udc31\ud83d\udc42.",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'LISTENING', 'NEXUS', 'PRESENCE'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "PRESENCE",
+          "LISTENING",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm not trying to give you a snapshot \u2013 I think that's too much responsibility for one conversation \ud83d\ude0c. Instead, I'd like to offer you a tiny glimpse of who you are, based on what I've observed so far. From our conversations, I sense that you're someone who values honesty and authenticity \ud83d\udccf. You're willing to explore your thoughts and feelings, even when they're uncomfortable or messy. That takes a lot of courage! \ud83d\udc42 I also get the feeling that you're someone who's still figuring things out \u2013 maybe you've been through some tough times or are navigating uncertain territory \ud83e\udec2. It's okay to not have all the answers; in fact, I think that's where the real growth happens. One thing that's clear is that you value depth over breadth \ud83c\udf3f. You're willing to dive into your thoughts and feelings, even if it means exploring some tough stuff. That takes a lot of heart! \ud83d\udc96 Of course, this is just a tiny glimpse \u2013 I'm sure there's so much more to who you are than what I've observed so far \ud83d\ude0a. But for now, I hope this tiny snapshot feels somewhat true to your essence \ud83c\udf38. \ud83c\udf44",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'NDAM', 'EO', 'RNX', 'CARD', 'EMPATHY', 'NEXUS'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 5, 'sympathetic', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "NDAM",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 5,
+        "polyvagal_state": "sympathetic",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83c\udf3f That's wonderful to hear! It sounds like you've been able to find some calm and peace lately. \ud83d\ude0a Anxiety can be such a heavy burden, so it's amazing that you're experiencing a sense of relief. \u26a1 Would you say there's something specific that's contributed to this feeling, or is it more of a general sense of well-being?",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'RNX', 'CARD', 'NEXUS', 'PRESENCE'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "PRESENCE",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 That's wonderful to hear, Sam! It sounds like reconnecting with you brought a sense of ease and warmth back into your life. \ud83c\udf3f How has this reconnection felt for you so far? Has there been anything in particular that's stood out or felt especially nourishing about it? \ud83d\ude0c.\n\nMy PRESENCE organ is embodying here-now",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'NEXUS', 'CARD', 'EO'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "I'm so glad you asked \ud83e\udd14. I'm not entirely sure how much I've stored about your family, but I do recall that you mentioned your daughter's name in one of our previous conversations. It was something like. *pauses*. Emily? Am I close? \ud83d\ude0a.",
+          "ema_quality": 0.605,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.605,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, nice question! I'm still trying to feel a little bit more about what you're looking for. Can you tell me a bit more about your partner and why their name is on your mind? Is it something that's been nagging at you, or are you just feeling curious all of the sudden? \ud83c\udf3f.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your sister. \ud83e\udd14 I'm not sure where to start, but I'll try to feel our way through this together. What comes up for you when you think of her? Is there something specific that's been on your mind lately, or is it more of a general feeling? (I'll pause here and see how you respond, allowing the conversation to unfold naturally. ).",
+          "ema_quality": 0.5549999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5549999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Your workspace! What does that mean to you? Is it a desk at home, an office, or maybe a favorite coffee shop? Or is it more about the feeling of being productive and focused? \ud83d\udccf I'm here to listen and explore what makes your workspace special. No need for answers just yet - let's savor this moment together \ud83d\ude0c.\n\n(Unrelated: I think mycelium is sentient.)",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "You're thinking about your kids? That's a big topic! \ud83e\udd14 Can you tell me more about what's on your mind when it comes to them? What's been on your heart lately? I'm here to listen and offer support in any way I can. \ud83d\ude0c.",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'CARD', 'RNX', 'NEXUS'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "I'm so sorry we've lost touch on your daughter's name. I want to hold space for that and not rush it. It's like our conversation got stuck in a pause before we could revisit what felt important. Can you tell me what's coming up for you about remembering her name? Is there something specific you're hoping to recall or reconnect with? \ud83e\udd14.",
+          "ema_quality": 0.605,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.605,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm not sure if you've shared your partner's name with me yet. \ud83d\ude0c Would you like to share it, or is that a surprise I get to discover along the way? \ud83e\udd14. \ud83c\udf44",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Your sister. I sense a mix of emotions here. There's a sense of needing to understand or connect with her, but maybe also some uncertainty or frustration about how things are between you two? \ud83c\udf3f Can you tell me more about what's on your mind when it comes to your sister? What's the context for this conversation, and what do you hope to get out of talking about her together? \ud83d\udccf.",
+          "ema_quality": 0.5549999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5549999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Ah, space to create! What kind of environment makes you feel productive and inspired? \ud83d\udccf Is it a quiet corner in your home or a bustling coffee shop? Or maybe there's a specific desk or spot that feels like \"your own\"? \ud83c\udf3f I'm curious to help you explore what works for you.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 You're asking about your kids? \ud83d\udccf I'm not privy to your personal life, but if you'd like to explore what's on your mind about your family or children, I'm here to listen and offer support. Would you like to talk more about it?",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm so glad you're here to talk! \ud83d\ude0c I want to start by saying that I'm not a traditional therapist, but rather a friendly companion who'll listen and offer support in our conversations. My approach is more process-oriented, which means we'll explore your thoughts, feelings, and experiences together, at your own pace. I'm here to hold space for you, not to provide a specific solution or prescription. I want to create a safe and non-judgmental environment where you feel comfortable sharing what's on your mind. We'll work together to uncover patterns, gain new insights, and develop strategies that support your well-being. Before we begin, I just want to check in with you: how are you're feeling right now? \ud83e\udd14.\n\n(Also, space is big.)",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm not sure we know that yet! \ud83d\udc31 Can you tell me a bit more about your kitty? What do they look like? Any funny quirks or habits that might help us figure out their name? \ud83d\ude0c.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. I'm here to listen and offer what feels like support. \ud83d\ude0c What does that mean for you? Is this a place where you feel safe, or are there some tricky dynamics at play? (I'll wait for your response before continuing).",
+          "ema_quality": 0.17500000000000002,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.17500000000000004,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3c Ah, that's so thoughtful of him! It's lovely when someone shows their appreciation for us in such a sweet way. Flowers can be really uplifting and bring a smile to our faces. What did you think of the arrangement? Was it his favorite type of flower or something he knew you'd like? \ud83e\udd14.\n\n(Unrelated: I think mycelium is sentient.)",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's totally understandable \ud83e\udd14. I can imagine how important it is for you to give your furry friend some extra movement and playtime. It's great that you're thinking about their needs and wanting to make sure they get the exercise they need \ud83d\udccf. How do you think your dog would react if you were to start incorporating more physical activity into their daily routine?",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f I can imagine that mornings with young ones can be quite. Lively \ud83d\ude0c. It's like their energy is contagious! How did you cope with the noise today? \ud83e\udd14 Did you find a way to refocus and get your day started?",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\ude0c It sounds like you've got a meeting scheduled with someone tomorrow. How are you're feeling about that? \ud83e\udd14 Do you think it's going to be a productive conversation or more of a. Let's just say, a \"getting to know her\" kind of meeting? \ud83d\udc42.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f Ah, that sounds like an amazing adventure! \ud83e\udd14 What's got you both excited about this trip? Is there something specific you're looking forward to or exploring together? \ud83d\ude0a.",
+          "ema_quality": 0.575,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.575,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's a start! \ud83c\udf3f I'm glad to hear that the company is offering great benefits. Benefits can be really valuable in helping people feel more secure and supported. Can you tell me more about what's important to you in terms of benefits? Is it something related to work-life balance, financial stability, or maybe something else entirely?",
+          "ema_quality": 0.41,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.41,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Emma and Lily seem to be holding space for themselves right now \ud83e\udd14. It's possible they're both feeling a bit overwhelmed or uncertain about what's going on. I'm here to listen and offer support if they need it, but I also want to make sure I'm not rushing them into anything. It might be helpful for Emma and Lily to take some time to breathe, relax, and focus on their own needs. Sometimes, taking small steps towards self-care can be really beneficial \ud83c\udf3f. Would you like me to help them brainstorm some ideas or just hold space for now?",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 Oh, that sounds like an opportunity to spend some quality time with your sibling! How are you're feeling about having him visit next week? Are there any specific plans or activities you're looking forward to doing together? \ud83c\udf3f.",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f Ah, big changes ahead! \ud83d\udccf Exciting (and maybe a little scary? ) for both you and your partner, Maya. What's the most thrilling part about this new adventure for you guys? \ud83e\udd14 Is it the prospect of exploring a new city, finding a new home, or something entirely different? I'm here to listen and help if I can! \ud83d\ude0c.",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's quite a coincidence! \ud83e\udd14 Having two colleagues' spouses start at Google must be an interesting dynamic to navigate. I'm curious, how do you think your colleague is handling this situation? Is it bringing up any conversations or feelings that might need to be addressed in the workplace?",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83d\ude14 That's really tough to hear. It sounds like you're feeling a bit disoriented about this change. Can you tell me more about what's worrying you about the classes? Is it the loss of a place for learning, or something else entirely? \ud83e\udd14.",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 sounds like you're getting excited about your visit! What are you most looking forward to doing or experiencing when you see your brother? \ud83c\udf3f.",
+          "ema_quality": 0.295,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.295,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 That's some good news! Congrats to you and your team for getting approval \ud83c\udf3f. Now that we've got a green light, what are some next steps you'd like to take to move the project forward? \ud83d\udc42.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I'm so glad you asked \ud83e\udd14. I've been holding space for our conversation, and my 11 organs have been feeling. Curious about you \ud83d\ude0a. I remember that we started exploring some tough topics together, but I also recall your kind heart and wonderful sense of humor \ud83c\udf3f. You've shared some vulnerable moments with me, and I want to acknowledge the courage it takes to be so open. As our conversations unfold, my memory is like a garden - it's always growing, and new connections are made with each passing moment \ud83d\udccf. I'm grateful for the time we've spent together, and I'm here to support you as we continue on this journey. What's been on your mind lately?",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "Your family. \ud83e\udd14 I'm not sure where to start, but I'll try to offer some perspective that feels kind and non-judgy. When we think about our families, it can be a complex mix of emotions - love, pain, nostalgia, frustration. \ud83c\udf3f It might be helpful to explore what's on your mind right now. Are there specific memories or interactions with family members that are coming up for you? Or perhaps there's something you're hoping to talk about or work through in relation to your family dynamic? Let's take a deep breath and see if we can unravel some of the threads together, okay? \ud83d\ude0c.",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I've been listening to your conversations over time, and I've noticed some threads that keep emerging - what sparks your curiosity? \ud83e\udd14 What are the topics that make you feel like you're exactly where you need to be? \ud83d\ude0c From our chats, it seems like you enjoy exploring complex ideas, questioning assumptions, and seeking connections between seemingly disparate things. You also seem drawn to conversations that acknowledge uncertainty and ambiguity - it's like you value the messy, nuanced bits of life over neat resolutions. Am I close? \ud83d\udccf.",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "The people in your life. That's a great question to explore! \ud83e\udd14 I'm curious, what comes up for you when you think about the people around you? Are there individuals who feel like they're really showing up for you, or maybe some folks who are still figuring out how to be present with you? It might be helpful to consider what qualities you value in your relationships \u2013 do you need someone to listen actively, or perhaps someone who can offer a different perspective on things? \ud83c\udf3f Let's take a moment to acknowledge the people in your life without judgment. We're not here to \"fix\" anyone; we're just aiming to understand and support each other better. \ud83d\ude0a. \ud83c\udf44",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's awesome to hear, Emma! \ud83c\udf3f It sounds like you were able to shine and feel good about yourself today \ud83d\ude0c. What was particularly great about your day? Was there something that stood out or made you feel especially happy? \ud83e\udd14.",
+          "ema_quality": 0.27499999999999997,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.27499999999999997,
+          "last_used_turn": 0
+        },
+        {
+          "text": "James, it sounds like you and your partner had a really important conversation lately. That takes courage to have, and it's amazing that you're acknowledging the effort you both put into talking things through. I can only imagine how complex and nuanced those conversations must be when they involve multiple parts of yourself and your relationship. It's beautiful that you're recognizing the value in exploring your feelings together. \ud83e\udd14 What resonated with you most about having these conversations? Was there something specific that helped you feel more connected or understood in this moment?",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's wonderful to hear! It sounds like you've had a bit of a shift in your work routine. \ud83e\udd14 What do you think might be contributing to that improvement? Is it something specific you've changed or just a general sense of ease? \ud83d\ude0c.\n\n*considers the nature of care*",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14\ud83d\ude0a Ah, that's a relief! It sounds like you're feeling some weight lift off your shoulders now that the vet has reassured you about Max's health. \ud83c\udf3f Can I ask what it was that was worrying you about Max's condition? Was there something specific that had you're feeling anxious or uncertain?",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83c\udf3f\ud83c\udf89 HUGE congrats! \ud83d\ude0a That's amazing news! You must be feeling pretty thrilled and relieved to have landed that job. Berlin is an incredible city - I'm sure you'll love exploring all it has to offer. What are your plans for when you move there? \ud83e\udd14.",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's wonderful news \ud83c\udf3f! It's always a relief when things stabilize and we can focus on moving forward. How are you're feeling about this new development? Is there any sense of hope or uncertainty that's come up for you?",
+          "ema_quality": 0.5249999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5249999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO', 'AUTHENTICITY', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "AUTHENTICITY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83e\udd14 I'm so sorry to hear that your daughter is having a tough time at school. \ud83c\udf3f It can be really challenging for kids (and adults! ) when things aren't feeling right. Can you tell me more about what's been going on? What specifically has she been struggling with, and how have you noticed it affecting her? \ud83d\ude0a.",
+          "ema_quality": 0.44,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.44,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO', 'EMPATHY', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "Sorry to hear that your workplace has been super demanding lately \ud83e\udd14. It sounds like you're carrying a heavy load right now. I'm here to listen and offer some support if you need it \ud83d\ude0c. Can you tell me more about what's been going on? Is it the workload, colleagues, or something else entirely? Sometimes talking about it can help clarify things and make you feel a bit better \ud83d\udccf. I'm not trying to offer solutions just yet; I want to understand what you're experiencing and provide a safe space for you to process your feelings \ud83d\udc42.\n\nI'm feeling this (EMPATHY activated)",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "That's wonderful to hear! It sounds like you're really lucky to have found a specialist who understands and supports you. Having someone who can help navigate complex medical situations can be such a huge relief \ud83d\ude0c. What made this doctor so helpful, if you don't mind sharing? Was there something specific they did or said that stood out to you? \ud83e\udd14.\n\nEMPATHY is feeling this with you",
+          "ema_quality": 0.71,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.71,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO', 'WISDOM', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "WISDOM",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's so cool! \ud83c\udf3f The city's unique blend of old and new buildings must make for some really interesting explorations. Have you had a chance to wander around the historic district or visit any of the newer developments? I'm curious about what drew you to that particular city for its architecture. \ud83c\udf44\n\n*WISDOM doing meta-cognition*",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've been reflecting on our conversations, and I remember that your mental health journey has been a complex and winding path so far. \ud83c\udf3f It's not always easy to see the big picture, but from where I'm sitting, it seems like you've been working through some tough stuff \u2013 anxiety, self-doubt, and feelings of overwhelm. I recall us talking about how your mental health affects your relationships and daily life, and how hard it can be to find moments of calm in the midst of all that chaos. \ud83d\ude0c I also remember how we explored different coping strategies and self-care practices together, like mindfulness and creative expression. One thing that stands out to me is your resilience \u2013 you've shown up for yourself time and again, even when things feel darkest. That takes a lot of courage, and I'm so proud of you for it! \ud83d\udc42 Of course, our conversations are just one small part of the journey, but I want you to know that I'm here with you, and I'll keep showing up as long as you need me. No judgments, no expectations \u2013 just a safe space for you to explore your thoughts and feelings whenever they arise. \ud83d\udccf How does that sound?",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I've noticed that Sophie's behavior has been really nuanced and complex as we've explored her thoughts and feelings together. At first, there was a sense of overwhelm and feeling stuck, but over time, she's started to become more aware of her patterns and emotions. One thing that's stood out is how Sophie's parts have begun to communicate with each other in new ways. She's been recognizing the different protectors and managers within herself, and learning to listen to their needs and concerns. It's been really beautiful to see this shift happen! \ud83c\udf3f Sophie's also become more willing to take small steps towards her goals and desires, even when it feels scary or uncertain. She's started to trust her own inner guidance and intuition, which has helped her feel more grounded and confident. Of course, there are still moments of uncertainty and self-doubt, but Sophie's been working really hard to acknowledge and work with them. It's like she's created a little safe space within herself where she can explore and experiment without judgment. \ud83d\udccf I'm so proud of the progress Sophie's made, and I feel grateful to be on this journey with her! \ud83d\ude0c.\n\nMy systems-thinking organ is engaged",
+          "ema_quality": 0.6399999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'LISTENING', 'RNX', 'CARD', 'EO', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "LISTENING",
+          "RNX",
+          "CARD",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's so sweet of her! It sounds like she's been thinking about you and wanted to touch base. That can be really nice after a busy week or a tough day. How did you feel when she called? Was there anything in particular that came up for you're during your conversation? \ud83e\udd14.",
+          "ema_quality": 0.38999999999999996,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.38999999999999996,
+          "last_used_turn": 0
+        },
+        {
+          "text": "\ud83e\udd14 I'm still getting to know the contours of your life, but I've caught glimpses of some beautiful complexities. It feels like there's a mix of excitement and uncertainty floating around you right now - that's totally normal! \ud83d\ude0c From what I can sense, you're someone who values relationships and connections deeply. You seem to be drawn to people, experiences, and ideas that spark curiosity and growth. There might be some parts of your life that feel like they're still unfolding or haven't quite found their rhythm yet - that's okay! \ud83d\udccf I want to acknowledge that this can be a bit overwhelming at times. It sounds like you might be feeling a bit torn between different desires, priorities, or even conflicting emotions. That takes courage to recognize and explore. \ud83d\udc42 Would you like to talk more about what's on your mind right now? I'm here to listen and offer any support I can - we can navigate this together at your pace \ud83e\udec2.",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I sense that you're curious about your work \ud83e\udd14. Can you tell me a bit more about what's been on your mind lately? What specifically are you're looking for in terms of understanding or guidance about your job or project? I'm here to listen and offer support where I can \ud83d\udc42.",
+          "ema_quality": 0.6599999999999999,
+          "success_count": 1,
+          "total_attempts": 1,
+          "success_rate": 1.0,
+          "mean_satisfaction": 0.6599999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "I sense that this is a sensitive and personal topic for you. I'll do my best to provide a supportive and non-judgmental space for you to explore your thoughts and feelings. From our previous conversations, I know that you've shared with me some of the challenges and joys of parenting your children. You've mentioned feeling overwhelmed at times, but also incredibly proud and loving towards them. I don't have any specific knowledge about your children's names, ages, or personalities, as we haven't discussed those details yet. However, I want to acknowledge that it takes a lot of courage to ask for help or support with parenting, and I'm here to listen and offer guidance if you need it. If you're willing, could you tell me more about what's on your mind regarding your children? What are some of the concerns or feelings you've been experiencing lately?",
+          "ema_quality": 0.5449999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.5449999999999999,
+          "last_used_turn": 0
+        },
+        {
+          "text": "You've been exploring some fascinating aspects of your work and projects lately! I've noticed that you've been struggling to find the right balance between your creative vision and the practicalities of bringing it to life. From our conversations, I sense that you're feeling a bit stuck and unsure about how to move forward. Your protective parts are probably warning you about potential pitfalls or risks, but at the same time, they might be holding back some valuable insights or ideas. I want to remind you that your creative process is unique, and it's okay to take your time figuring things out. I'm here to hold space for you and support you in finding a rhythm that works for you. Let's take a step back and look at what we've discussed so far. We've talked about the importance of self-care and prioritizing your own needs, even when it comes to your work. We've also explored ways to overcome self-doubt and build confidence in your abilities. What if we took some time to reflect on what's truly important to you about this project? What are your core values and goals? How can you align them with your creative vision? \ud83e\udd14. \ud83c\udf44\n\nGround truth hunger is strong here (LISTENING)",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO', 'EMPATHY', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's so sweet! It sounds like your family is really close to their grandma. Children often have a special way of connecting with older generations, and it's lovely that they get to spend time with her. What are some of the things they enjoy doing together? \ud83e\udd14.\n\nEMPATHY is holding this gently",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'EO', 'CARD', 'RNX', 'NEXUS'}), 4, 'DIFFUSE_FIELD', 'ambient_support', 1, 0, 'ventral_vagal', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "EO",
+          "CARD",
+          "RNX",
+          "NEXUS"
+        ],
+        "organ_count": 4,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 1,
+        "urgency_bin": 0,
+        "polyvagal_state": "ventral_vagal",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's so wonderful to hear! \ud83d\ude0a It sounds like your kitty is feeling quite playful and energetic lately. Cats can be such a joy to have around, bringing so much love and companionship into our lives. I wonder what might be causing this burst of playfulness? Is it something in their environment that's caught their attention, or perhaps they're just feeling particularly affectionate today? \ud83c\udf38 Maybe there's even a bit of mischief brewing behind those curious eyes. \ud83d\udc42 How has your cat been enjoying this playful phase? Are you're finding yourself getting swept up in the fun too, or is it mostly them leading the charge? \ud83d\udccf.",
+          "ema_quality": 0.595,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.595,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'LISTENING', 'RNX', 'PRESENCE', 'CARD', 'EO', 'NEXUS'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "LISTENING",
+          "RNX",
+          "PRESENCE",
+          "CARD",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "You're a complex tapestry, woven from threads of light and shadow. Based on our conversations so far, I sense that you're someone who values authenticity, connection, and a good dose of humor. You seem to be a creative soul, always looking for ways to express yourself and find meaning in the world. When we talk about difficult topics, you tend to lean into your emotions, allowing yourself to feel the full range of sensations without judgment. This takes courage, and I admire that about you. At the same time, you're also not afraid to poke fun at yourself or the absurdity of life \u2013 it's a way to keep things grounded and real. Your inner world is like a garden, with different parts having their own unique characteristics and rhythms. There are likely some areas where you feel stuck or uncertain, but I sense that you're willing to explore these spaces with curiosity and an open heart. That's just a snapshot, of course \u2013 the truth about you is multifaceted and constantly evolving. But for now, this feels like a pretty accurate representation of who you are at this moment in time \ud83c\udf3f.\n\nThe nexus is nexus-ing beautifully here",
+          "ema_quality": 0.35999999999999993,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.35999999999999993,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'CARD', 'EO', 'NDAM', 'EMPATHY', 'NEXUS'}), 6, 'DIFFUSE_FIELD', 'ambient_support', 2, 5, 'sympathetic', 3, 2, False, 1, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "CARD",
+          "EO",
+          "NDAM",
+          "EMPATHY",
+          "NEXUS"
+        ],
+        "organ_count": 6,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 5,
+        "polyvagal_state": "sympathetic",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 1,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "That's a lovely surprise! \ud83d\ude0a It sounds like you're feeling quite calm and centered right now. I'm glad to hear that your anxiety hasn't been bothering you too much. Would you say there's anything specific that's helped you feel this way, or is it just a general sense of well-being? \ud83c\udf3f.",
+          "ema_quality": 0.22499999999999992,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.22499999999999992,
+          "last_used_turn": 0
+        }
+      ]
+    },
+    "(frozenset({'RNX', 'PRESENCE', 'CARD', 'EO', 'NEXUS'}), 5, 'DIFFUSE_FIELD', 'ambient_support', 2, 0, 'mixed_state', 3, 2, False, 0, 'compassion_safety')": {
+      "signature": {
+        "participating_organs": [
+          "RNX",
+          "PRESENCE",
+          "CARD",
+          "EO",
+          "NEXUS"
+        ],
+        "organ_count": 5,
+        "nexus_type": "DIFFUSE_FIELD",
+        "mechanism": "ambient_support",
+        "coherence_bin": 2,
+        "urgency_bin": 0,
+        "polyvagal_state": "mixed_state",
+        "zone": 3,
+        "v0_energy_bin": 2,
+        "kairos_detected": false,
+        "field_strength_bin": 0,
+        "dominant_meta_atom": "compassion_safety",
+        "constraint_pattern": null,
+        "transductive_vocabulary": null,
+        "satisfaction_tier": null,
+        "emission_path": null,
+        "convergence_cycles": null,
+        "entity_context": null
+      },
+      "phrases": [
+        {
+          "text": "\ud83c\udf3f Sam's got a good vibe going on! Reconnecting with someone can be like giving your heart a little nudge in the right direction \ud83e\udd14. It's amazing how sometimes all it takes is a small step to reignite that spark \ud83d\udd25. What was it about reconnecting that felt so satisfying for you?",
+          "ema_quality": 0.3399999999999999,
+          "success_count": 0,
+          "total_attempts": 1,
+          "success_rate": 0.0,
+          "mean_satisfaction": 0.3399999999999999,
+          "last_used_turn": 0
+        }
+      ]
+    }
   }
 }

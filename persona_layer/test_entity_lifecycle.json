@@ -1,0 +1,48 @@
+{
+  "entities": {
+    "Emma": {
+      "entity_value": "Emma",
+      "entity_type": "Person",
+      "current_properties": {
+        "relation": "daughter",
+        "age": 7
+      },
+      "status": "deprecated",
+      "salience": 0.07234188818405035,
+      "confidence": 0.95,
+      "version_number": 2,
+      "first_mentioned": "2025-11-18T16:49:10.319054",
+      "last_mentioned": "2025-11-18T16:49:10.319386",
+      "mention_count": 2,
+      "days_since_mention": 100,
+      "version_history": [
+        {
+          "version_number": 1,
+          "timestamp": "2025-11-18T16:49:10.319054",
+          "properties": {
+            "relation": "daughter",
+            "age": 6
+          },
+          "mention_context": "Emma is my 6-year-old daughter",
+          "confidence": 0.9,
+          "source": "user_direct"
+        },
+        {
+          "version_number": 2,
+          "timestamp": "2025-11-18T16:49:10.319386",
+          "properties": {
+            "relation": "daughter",
+            "age": 7
+          },
+          "mention_context": "Emma just turned 7!",
+          "confidence": 0.95,
+          "source": "corrected"
+        }
+      ],
+      "pending_updates": [],
+      "salience_decay_rate": 0.02,
+      "deprecation_threshold_days": 90
+    }
+  },
+  "last_updated": "2025-11-18T16:49:10.319890"
+}

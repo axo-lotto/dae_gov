@@ -11,7 +11,7 @@
       "relational_context_queries": 10,
       "multi_session_entity_memory": 10
     },
-    "training_methodology": "INPUT→OUTPUT supervised learning for entity prehension",
+    "training_methodology": "INPUT\u2192OUTPUT supervised learning for entity prehension",
     "target_capabilities": [
       "NEXUS organ activation on entity mentions",
       "Pre-emission prehension retrieves entities",
@@ -23,26 +23,25 @@
       "epoch_1": {
         "entity_recall_accuracy": 0.45,
         "nexus_formation_rate": 0.15,
-        "emission_correctness": 0.40
+        "emission_correctness": 0.4
       },
       "epoch_10": {
         "entity_recall_accuracy": 0.65,
         "nexus_formation_rate": 0.35,
-        "emission_correctness": 0.60
+        "emission_correctness": 0.6
       },
       "epoch_20": {
         "entity_recall_accuracy": 0.75,
-        "nexus_formation_rate": 0.50,
+        "nexus_formation_rate": 0.5,
         "emission_correctness": 0.75
       },
       "epoch_40": {
         "entity_recall_accuracy": 0.85,
-        "nexus_formation_rate": 0.70,
-        "emission_correctness": 0.90
+        "nexus_formation_rate": 0.7,
+        "emission_correctness": 0.9
       }
     }
   },
-
   "training_pairs": [
     {
       "pair_id": "basic_recall_001",
@@ -53,25 +52,42 @@
         "pre_existing_entities": {
           "user_name": "Emiliano",
           "relationships": [
-            {"name": "Emma", "relationship": "daughter", "age": 8}
+            {
+              "name": "Emma",
+              "relationship": "daughter",
+              "age": 8
+            }
           ]
         }
       },
       "input": "Do you remember my daughter's name?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Emma"],
+        "mentioned_entities": [
+          "Emma"
+        ],
         "implicit_references": [
-          {"keyword": "daughter", "resolved": "Emma"}
+          {
+            "keyword": "daughter",
+            "resolved": "Emma"
+          }
         ],
         "memory_richness": 0.67
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "LISTENING": {"relational_inquiry_boost": 0.2},
-          "EMPATHY": {"relational_attunement_boost": 0.2},
-          "BOND": {"entity_parts_available": true}
+          "LISTENING": {
+            "relational_inquiry_boost": 0.2
+          },
+          "EMPATHY": {
+            "relational_attunement_boost": 0.2
+          },
+          "BOND": {
+            "entity_parts_available": true
+          }
         },
         "expected_coherence": "> 0.7"
       },
@@ -81,9 +97,9 @@
         "nexus_formation": true,
         "emission_correctness": 0.85
       },
-      "teaching_objective": "Basic explicit entity recall with relational query detection"
+      "teaching_objective": "Basic explicit entity recall with relational query detection",
+      "user_satisfaction": 0.905
     },
-
     {
       "pair_id": "basic_recall_002",
       "category": "basic_entity_recall",
@@ -93,22 +109,35 @@
         "pre_existing_entities": {
           "user_name": "Sarah",
           "relationships": [
-            {"name": "James", "relationship": "partner", "years_together": 5}
+            {
+              "name": "James",
+              "relationship": "partner",
+              "years_together": 5
+            }
           ]
         }
       },
       "input": "What's my partner's name?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["James"],
+        "mentioned_entities": [
+          "James"
+        ],
         "implicit_references": [
-          {"keyword": "partner", "resolved": "James"}
+          {
+            "keyword": "partner",
+            "resolved": "James"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "LISTENING": {"relational_inquiry_boost": 0.2}
+          "LISTENING": {
+            "relational_inquiry_boost": 0.2
+          }
         }
       },
       "output": "Your partner's name is James.",
@@ -116,9 +145,9 @@
         "entity_recall_accuracy": 0.9,
         "nexus_formation": true
       },
-      "teaching_objective": "Direct entity query with relationship resolution"
+      "teaching_objective": "Direct entity query with relationship resolution",
+      "user_satisfaction": 0.905
     },
-
     {
       "pair_id": "basic_recall_003",
       "category": "basic_entity_recall",
@@ -128,21 +157,36 @@
         "pre_existing_entities": {
           "user_name": "Alex",
           "relationships": [
-            {"name": "Maya", "relationship": "sister", "location": "Portland"}
+            {
+              "name": "Maya",
+              "relationship": "sister",
+              "location": "Portland"
+            }
           ],
-          "mentioned_names": ["TechCorp", "Portland"]
+          "mentioned_names": [
+            "TechCorp",
+            "Portland"
+          ]
         }
       },
       "input": "Tell me about my sister.",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Maya"],
+        "mentioned_entities": [
+          "Maya"
+        ],
         "implicit_references": [
-          {"keyword": "sister", "resolved": "Maya"}
+          {
+            "keyword": "sister",
+            "resolved": "Maya"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"],
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ],
         "expected_coherence": "> 0.65"
       },
       "output": "Your sister is Maya, who lives in Portland.",
@@ -150,9 +194,9 @@
         "entity_recall_accuracy": 0.85,
         "includes_related_context": true
       },
-      "teaching_objective": "Entity recall with contextual properties (location)"
+      "teaching_objective": "Entity recall with contextual properties (location)",
+      "user_satisfaction": 0.79
     },
-
     {
       "pair_id": "basic_recall_004",
       "category": "basic_entity_recall",
@@ -161,28 +205,37 @@
         "user_id": "jordan_training",
         "pre_existing_entities": {
           "user_name": "Jordan",
-          "mentioned_names": ["Google", "Seattle"]
+          "mentioned_names": [
+            "Google",
+            "Seattle"
+          ]
         }
       },
       "input": "Where do I work?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Google"],
+        "mentioned_entities": [
+          "Google"
+        ],
         "query_type": "workplace"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "LISTENING": {"relational_inquiry_boost": 0.15}
+          "LISTENING": {
+            "relational_inquiry_boost": 0.15
+          }
         }
       },
       "output": "You work at Google.",
       "success_criteria": {
         "entity_recall_accuracy": 0.9
       },
-      "teaching_objective": "Non-person entity recall (workplace)"
+      "teaching_objective": "Non-person entity recall (workplace)",
+      "user_satisfaction": 0.905
     },
-
     {
       "pair_id": "basic_recall_005",
       "category": "basic_entity_recall",
@@ -192,19 +245,32 @@
         "pre_existing_entities": {
           "user_name": "Taylor",
           "relationships": [
-            {"name": "Oliver", "relationship": "son", "age": 3},
-            {"name": "Sophie", "relationship": "daughter", "age": 6}
+            {
+              "name": "Oliver",
+              "relationship": "son",
+              "age": 3
+            },
+            {
+              "name": "Sophie",
+              "relationship": "daughter",
+              "age": 6
+            }
           ]
         }
       },
       "input": "How many children do I have?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Oliver", "Sophie"],
+        "mentioned_entities": [
+          "Oliver",
+          "Sophie"
+        ],
         "query_type": "count"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "You have two children: Sophie, who is 6, and Oliver, who is 3.",
@@ -212,9 +278,9 @@
         "entity_recall_accuracy": 0.85,
         "correct_count": true
       },
-      "teaching_objective": "Multiple entity recall with aggregation"
+      "teaching_objective": "Multiple entity recall with aggregation",
+      "user_satisfaction": 0.79
     },
-
     {
       "pair_id": "basic_recall_006",
       "category": "basic_entity_recall",
@@ -224,23 +290,39 @@
         "pre_existing_entities": {
           "user_name": "Morgan",
           "relationships": [
-            {"name": "Dr. Chen", "relationship": "therapist"},
-            {"name": "Rachel", "relationship": "friend", "context": "yoga_class"}
+            {
+              "name": "Dr. Chen",
+              "relationship": "therapist"
+            },
+            {
+              "name": "Rachel",
+              "relationship": "friend",
+              "context": "yoga_class"
+            }
           ]
         }
       },
       "input": "Who's my therapist?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Dr. Chen"],
+        "mentioned_entities": [
+          "Dr. Chen"
+        ],
         "implicit_references": [
-          {"keyword": "therapist", "resolved": "Dr. Chen"}
+          {
+            "keyword": "therapist",
+            "resolved": "Dr. Chen"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "LISTENING": {"relational_inquiry_boost": 0.2}
+          "LISTENING": {
+            "relational_inquiry_boost": 0.2
+          }
         }
       },
       "output": "Your therapist is Dr. Chen.",
@@ -248,9 +330,9 @@
         "entity_recall_accuracy": 0.9,
         "correct_relationship_type": true
       },
-      "teaching_objective": "Professional relationship entity recall"
+      "teaching_objective": "Professional relationship entity recall",
+      "user_satisfaction": 0.675
     },
-
     {
       "pair_id": "basic_recall_007",
       "category": "basic_entity_recall",
@@ -259,25 +341,33 @@
         "user_id": "casey_training",
         "pre_existing_entities": {
           "user_name": "Casey",
-          "mentioned_names": ["Berlin", "Spanish", "guitar"]
+          "mentioned_names": [
+            "Berlin",
+            "Spanish",
+            "guitar"
+          ]
         }
       },
       "input": "What city did I mention?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Berlin"],
+        "mentioned_entities": [
+          "Berlin"
+        ],
         "query_type": "place"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "You mentioned Berlin.",
       "success_criteria": {
         "entity_recall_accuracy": 0.85
       },
-      "teaching_objective": "Place entity recall"
+      "teaching_objective": "Place entity recall",
+      "user_satisfaction": 0.79
     },
-
     {
       "pair_id": "basic_recall_008",
       "category": "basic_entity_recall",
@@ -287,28 +377,39 @@
         "pre_existing_entities": {
           "user_name": "Riley",
           "relationships": [
-            {"name": "Luna", "relationship": "cat", "age": 2}
+            {
+              "name": "Luna",
+              "relationship": "cat",
+              "age": 2
+            }
           ]
         }
       },
       "input": "What's my cat's name?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Luna"],
+        "mentioned_entities": [
+          "Luna"
+        ],
         "implicit_references": [
-          {"keyword": "cat", "resolved": "Luna"}
+          {
+            "keyword": "cat",
+            "resolved": "Luna"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Your cat's name is Luna.",
       "success_criteria": {
         "entity_recall_accuracy": 0.9
       },
-      "teaching_objective": "Pet entity recall"
+      "teaching_objective": "Pet entity recall",
+      "user_satisfaction": 0.905
     },
-
     {
       "pair_id": "basic_recall_009",
       "category": "basic_entity_recall",
@@ -318,19 +419,33 @@
         "pre_existing_entities": {
           "user_name": "Quinn",
           "relationships": [
-            {"name": "Marcus", "relationship": "brother", "location": "Chicago"},
-            {"name": "Lisa", "relationship": "mother", "location": "Denver"}
+            {
+              "name": "Marcus",
+              "relationship": "brother",
+              "location": "Chicago"
+            },
+            {
+              "name": "Lisa",
+              "relationship": "mother",
+              "location": "Denver"
+            }
           ]
         }
       },
       "input": "Tell me about my family.",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Marcus", "Lisa"],
+        "mentioned_entities": [
+          "Marcus",
+          "Lisa"
+        ],
         "query_type": "family_overview"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"],
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "Your family includes your brother Marcus in Chicago and your mother Lisa in Denver.",
@@ -338,9 +453,9 @@
         "entity_recall_accuracy": 0.85,
         "includes_multiple_entities": true
       },
-      "teaching_objective": "Multi-entity family overview"
+      "teaching_objective": "Multi-entity family overview",
+      "user_satisfaction": 0.79
     },
-
     {
       "pair_id": "basic_recall_010",
       "category": "basic_entity_recall",
@@ -349,17 +464,27 @@
         "user_id": "avery_training",
         "pre_existing_entities": {
           "user_name": "Avery",
-          "mentioned_names": ["Node.js", "React", "PostgreSQL"]
+          "mentioned_names": [
+            "Node.js",
+            "React",
+            "PostgreSQL"
+          ]
         }
       },
       "input": "What technologies did I mention?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Node.js", "React", "PostgreSQL"],
+        "mentioned_entities": [
+          "Node.js",
+          "React",
+          "PostgreSQL"
+        ],
         "query_type": "preferences"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "expected_coherence": "> 0.65"
       },
       "output": "You mentioned Node.js, React, and PostgreSQL.",
@@ -367,9 +492,9 @@
         "entity_recall_accuracy": 0.85,
         "all_items_recalled": true
       },
-      "teaching_objective": "Multiple non-person entity recall"
+      "teaching_objective": "Multiple non-person entity recall",
+      "user_satisfaction": 0.675
     },
-
     {
       "pair_id": "implicit_ref_001",
       "category": "implicit_entity_references",
@@ -379,23 +504,39 @@
         "pre_existing_entities": {
           "user_name": "Emiliano",
           "relationships": [
-            {"name": "Emma", "relationship": "daughter", "age": 8}
+            {
+              "name": "Emma",
+              "relationship": "daughter",
+              "age": 8
+            }
           ]
         }
       },
       "input": "My daughter has been struggling with school lately.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Emma"],
+        "mentioned_entities": [
+          "Emma"
+        ],
         "implicit_references": [
-          {"keyword": "My daughter", "resolved": "Emma", "confidence": 0.9}
+          {
+            "keyword": "My daughter",
+            "resolved": "Emma",
+            "confidence": 0.9
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "BOND": {"entity_parts_available": true},
-          "EMPATHY": {"relational_attunement_boost": 0.15}
+          "BOND": {
+            "entity_parts_available": true
+          },
+          "EMPATHY": {
+            "relational_attunement_boost": 0.15
+          }
         }
       },
       "output": "I hear that Emma has been finding school challenging.",
@@ -403,9 +544,9 @@
         "implicit_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Implicit reference resolution ('my daughter' → Emma)"
+      "teaching_objective": "Implicit reference resolution ('my daughter' \u2192 Emma)",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "implicit_ref_002",
       "category": "implicit_entity_references",
@@ -415,29 +556,40 @@
         "pre_existing_entities": {
           "user_name": "Sarah",
           "relationships": [
-            {"name": "James", "relationship": "partner"}
+            {
+              "name": "James",
+              "relationship": "partner"
+            }
           ]
         }
       },
       "input": "He surprised me with flowers today.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["James"],
+        "mentioned_entities": [
+          "James"
+        ],
         "implicit_references": [
-          {"keyword": "He", "resolved": "James", "confidence": 0.85}
+          {
+            "keyword": "He",
+            "resolved": "James",
+            "confidence": 0.85
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "How thoughtful of James to surprise you with flowers.",
       "success_criteria": {
         "pronoun_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Pronoun resolution ('He' → James)"
+      "teaching_objective": "Pronoun resolution ('He' \u2192 James)",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "implicit_ref_003",
       "category": "implicit_entity_references",
@@ -447,30 +599,43 @@
         "pre_existing_entities": {
           "user_name": "Alex",
           "relationships": [
-            {"name": "Maya", "relationship": "sister"}
+            {
+              "name": "Maya",
+              "relationship": "sister"
+            }
           ],
-          "mentioned_names": ["TechCorp"]
+          "mentioned_names": [
+            "TechCorp"
+          ]
         }
       },
       "input": "The place I work has been really demanding this week.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["TechCorp"],
+        "mentioned_entities": [
+          "TechCorp"
+        ],
         "implicit_references": [
-          {"keyword": "place I work", "resolved": "TechCorp", "confidence": 0.8}
+          {
+            "keyword": "place I work",
+            "resolved": "TechCorp",
+            "confidence": 0.8
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "It sounds like things have been intense at TechCorp this week.",
       "success_criteria": {
         "implicit_resolution": true,
         "contextual_understanding": true
       },
-      "teaching_objective": "Contextual phrase resolution ('place I work' → TechCorp)"
+      "teaching_objective": "Contextual phrase resolution ('place I work' \u2192 TechCorp)",
+      "user_satisfaction": 0.625
     },
-
     {
       "pair_id": "implicit_ref_004",
       "category": "implicit_entity_references",
@@ -480,29 +645,41 @@
         "pre_existing_entities": {
           "user_name": "Jordan",
           "relationships": [
-            {"name": "Max", "relationship": "dog", "age": 5}
+            {
+              "name": "Max",
+              "relationship": "dog",
+              "age": 5
+            }
           ]
         }
       },
       "input": "My dog needs more exercise.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Max"],
+        "mentioned_entities": [
+          "Max"
+        ],
         "implicit_references": [
-          {"keyword": "My dog", "resolved": "Max", "confidence": 0.9}
+          {
+            "keyword": "My dog",
+            "resolved": "Max",
+            "confidence": 0.9
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Max would probably enjoy some longer walks.",
       "success_criteria": {
         "implicit_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Pet reference resolution"
+      "teaching_objective": "Pet reference resolution",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "implicit_ref_005",
       "category": "implicit_entity_references",
@@ -512,30 +689,50 @@
         "pre_existing_entities": {
           "user_name": "Taylor",
           "relationships": [
-            {"name": "Oliver", "relationship": "son", "age": 3},
-            {"name": "Sophie", "relationship": "daughter", "age": 6}
+            {
+              "name": "Oliver",
+              "relationship": "son",
+              "age": 3
+            },
+            {
+              "name": "Sophie",
+              "relationship": "daughter",
+              "age": 6
+            }
           ]
         }
       },
       "input": "The kids were so loud this morning.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Oliver", "Sophie"],
+        "mentioned_entities": [
+          "Oliver",
+          "Sophie"
+        ],
         "implicit_references": [
-          {"keyword": "kids", "resolved": ["Oliver", "Sophie"], "confidence": 0.85}
+          {
+            "keyword": "kids",
+            "resolved": [
+              "Oliver",
+              "Sophie"
+            ],
+            "confidence": 0.85
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "It sounds like Oliver and Sophie were energetic this morning.",
       "success_criteria": {
         "plural_resolution": true,
         "mentions_both_children": true
       },
-      "teaching_objective": "Plural implicit reference ('the kids' → both children)"
+      "teaching_objective": "Plural implicit reference ('the kids' \u2192 both children)",
+      "user_satisfaction": 0.625
     },
-
     {
       "pair_id": "implicit_ref_006",
       "category": "implicit_entity_references",
@@ -545,29 +742,40 @@
         "pre_existing_entities": {
           "user_name": "Morgan",
           "relationships": [
-            {"name": "Dr. Chen", "relationship": "therapist"}
+            {
+              "name": "Dr. Chen",
+              "relationship": "therapist"
+            }
           ]
         }
       },
       "input": "I have an appointment with her tomorrow.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Dr. Chen"],
+        "mentioned_entities": [
+          "Dr. Chen"
+        ],
         "implicit_references": [
-          {"keyword": "her", "resolved": "Dr. Chen", "confidence": 0.8}
+          {
+            "keyword": "her",
+            "resolved": "Dr. Chen",
+            "confidence": 0.8
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Your appointment with Dr. Chen is tomorrow.",
       "success_criteria": {
         "pronoun_resolution": true,
         "professional_context": true
       },
-      "teaching_objective": "Professional pronoun resolution"
+      "teaching_objective": "Professional pronoun resolution",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "implicit_ref_007",
       "category": "implicit_entity_references",
@@ -576,28 +784,38 @@
         "user_id": "casey_training",
         "pre_existing_entities": {
           "user_name": "Casey",
-          "mentioned_names": ["Berlin"]
+          "mentioned_names": [
+            "Berlin"
+          ]
         }
       },
       "input": "That city I mentioned has amazing architecture.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Berlin"],
+        "mentioned_entities": [
+          "Berlin"
+        ],
         "implicit_references": [
-          {"keyword": "city I mentioned", "resolved": "Berlin", "confidence": 0.85}
+          {
+            "keyword": "city I mentioned",
+            "resolved": "Berlin",
+            "confidence": 0.85
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Berlin does have incredible architecture.",
       "success_criteria": {
         "contextual_resolution": true,
         "place_entity": true
       },
-      "teaching_objective": "Contextual place reference resolution"
+      "teaching_objective": "Contextual place reference resolution",
+      "user_satisfaction": 0.625
     },
-
     {
       "pair_id": "implicit_ref_008",
       "category": "implicit_entity_references",
@@ -607,29 +825,40 @@
         "pre_existing_entities": {
           "user_name": "Riley",
           "relationships": [
-            {"name": "Sam", "relationship": "best_friend"}
+            {
+              "name": "Sam",
+              "relationship": "best_friend"
+            }
           ]
         }
       },
       "input": "My best friend and I are planning a trip.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Sam"],
+        "mentioned_entities": [
+          "Sam"
+        ],
         "implicit_references": [
-          {"keyword": "best friend", "resolved": "Sam", "confidence": 0.9}
+          {
+            "keyword": "best friend",
+            "resolved": "Sam",
+            "confidence": 0.9
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "That sounds fun! Where are you and Sam thinking of going?",
       "success_criteria": {
         "relationship_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Relationship-based resolution ('best friend' → Sam)"
+      "teaching_objective": "Relationship-based resolution ('best friend' \u2192 Sam)",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "implicit_ref_009",
       "category": "implicit_entity_references",
@@ -639,30 +868,45 @@
         "pre_existing_entities": {
           "user_name": "Quinn",
           "relationships": [
-            {"name": "Marcus", "relationship": "brother"},
-            {"name": "Lisa", "relationship": "mother"}
+            {
+              "name": "Marcus",
+              "relationship": "brother"
+            },
+            {
+              "name": "Lisa",
+              "relationship": "mother"
+            }
           ]
         }
       },
       "input": "She called me yesterday to check in.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Lisa"],
+        "mentioned_entities": [
+          "Lisa"
+        ],
         "implicit_references": [
-          {"keyword": "She", "resolved": "Lisa", "confidence": 0.75, "reasoning": "Most recent female relationship"}
+          {
+            "keyword": "She",
+            "resolved": "Lisa",
+            "confidence": 0.75,
+            "reasoning": "Most recent female relationship"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "It's nice that Lisa called to check in on you.",
       "success_criteria": {
         "gender_aware_resolution": true,
         "prefers_recent_context": true
       },
-      "teaching_objective": "Ambiguous pronoun resolution with recency bias"
+      "teaching_objective": "Ambiguous pronoun resolution with recency bias",
+      "user_satisfaction": 0.625
     },
-
     {
       "pair_id": "implicit_ref_010",
       "category": "implicit_entity_references",
@@ -671,28 +915,39 @@
         "user_id": "avery_training",
         "pre_existing_entities": {
           "user_name": "Avery",
-          "mentioned_names": ["Google", "San Francisco"]
+          "mentioned_names": [
+            "Google",
+            "San Francisco"
+          ]
         }
       },
       "input": "The company offers great benefits.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Google"],
+        "mentioned_entities": [
+          "Google"
+        ],
         "implicit_references": [
-          {"keyword": "company", "resolved": "Google", "confidence": 0.85}
+          {
+            "keyword": "company",
+            "resolved": "Google",
+            "confidence": 0.85
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Google does have an excellent benefits package.",
       "success_criteria": {
         "workplace_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Workplace entity resolution ('the company' → Google)"
+      "teaching_objective": "Workplace entity resolution ('the company' \u2192 Google)",
+      "user_satisfaction": 0.74
     },
-
     {
       "pair_id": "entity_rel_001",
       "category": "entity_relationships",
@@ -702,21 +957,37 @@
         "pre_existing_entities": {
           "user_name": "Emiliano",
           "relationships": [
-            {"name": "Emma", "relationship": "daughter", "age": 8},
-            {"name": "Lily", "relationship": "daughter", "age": 5}
+            {
+              "name": "Emma",
+              "relationship": "daughter",
+              "age": 8
+            },
+            {
+              "name": "Lily",
+              "relationship": "daughter",
+              "age": 5
+            }
           ]
         }
       },
       "input": "How are Emma and Lily doing?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Emma", "Lily"],
+        "mentioned_entities": [
+          "Emma",
+          "Lily"
+        ],
         "query_type": "multiple_entity_status"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"],
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ],
         "organ_boosts": {
-          "BOND": {"entity_parts_available": true}
+          "BOND": {
+            "entity_parts_available": true
+          }
         }
       },
       "output": "I'd like to know how Emma and Lily are doing. Can you tell me more about how they've been?",
@@ -724,9 +995,9 @@
         "mentions_both_entities": true,
         "relationship_aware": true
       },
-      "teaching_objective": "Multi-entity relational query"
+      "teaching_objective": "Multi-entity relational query",
+      "user_satisfaction": 0.76
     },
-
     {
       "pair_id": "entity_rel_002",
       "category": "entity_relationships",
@@ -736,28 +1007,44 @@
         "pre_existing_entities": {
           "user_name": "Sarah",
           "relationships": [
-            {"name": "James", "relationship": "partner"},
-            {"name": "Tom", "relationship": "James_brother"}
+            {
+              "name": "James",
+              "relationship": "partner"
+            },
+            {
+              "name": "Tom",
+              "relationship": "James_brother"
+            }
           ]
         }
       },
       "input": "James's brother is visiting next week.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["James", "Tom"],
-        "relationship_chain": ["James", "brother", "Tom"]
+        "mentioned_entities": [
+          "James",
+          "Tom"
+        ],
+        "relationship_chain": [
+          "James",
+          "brother",
+          "Tom"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ]
       },
-      "output": "So Tom is coming to visit next week—that should be nice.",
+      "output": "So Tom is coming to visit next week\u2014that should be nice.",
       "success_criteria": {
         "relationship_inference": true,
         "uses_correct_name": true
       },
-      "teaching_objective": "Relationship chain inference (James → brother → Tom)"
+      "teaching_objective": "Relationship chain inference (James \u2192 brother \u2192 Tom)",
+      "user_satisfaction": 0.645
     },
-
     {
       "pair_id": "entity_rel_003",
       "category": "entity_relationships",
@@ -767,30 +1054,45 @@
         "pre_existing_entities": {
           "user_name": "Alex",
           "relationships": [
-            {"name": "Maya", "relationship": "sister"},
-            {"name": "Jordan", "relationship": "Maya_partner"}
+            {
+              "name": "Maya",
+              "relationship": "sister"
+            },
+            {
+              "name": "Jordan",
+              "relationship": "Maya_partner"
+            }
           ]
         }
       },
       "input": "Maya and her partner are moving to Boston.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Maya", "Jordan"],
+        "mentioned_entities": [
+          "Maya",
+          "Jordan"
+        ],
         "implicit_references": [
-          {"keyword": "her partner", "resolved": "Jordan", "confidence": 0.85}
+          {
+            "keyword": "her partner",
+            "resolved": "Jordan",
+            "confidence": 0.85
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "That's a big change for Maya and Jordan. How do you feel about them moving to Boston?",
       "success_criteria": {
         "relationship_resolution": true,
         "mentions_both_names": true
       },
-      "teaching_objective": "Possessive relationship resolution ('Maya's partner' → Jordan)"
+      "teaching_objective": "Possessive relationship resolution ('Maya's partner' \u2192 Jordan)",
+      "user_satisfaction": 0.76
     },
-
     {
       "pair_id": "entity_rel_004",
       "category": "entity_relationships",
@@ -800,29 +1102,48 @@
         "pre_existing_entities": {
           "user_name": "Jordan",
           "relationships": [
-            {"name": "Chris", "relationship": "colleague"},
-            {"name": "Pat", "relationship": "Chris_spouse"}
+            {
+              "name": "Chris",
+              "relationship": "colleague"
+            },
+            {
+              "name": "Pat",
+              "relationship": "Chris_spouse"
+            }
           ],
-          "mentioned_names": ["Google"]
+          "mentioned_names": [
+            "Google"
+          ]
         }
       },
       "input": "My colleague's spouse just started at Google too.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Chris", "Pat", "Google"],
-        "relationship_chain": ["colleague", "Chris", "spouse", "Pat"]
+        "mentioned_entities": [
+          "Chris",
+          "Pat",
+          "Google"
+        ],
+        "relationship_chain": [
+          "colleague",
+          "Chris",
+          "spouse",
+          "Pat"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "So Pat is now working at Google alongside you and Chris.",
       "success_criteria": {
         "multi_hop_resolution": true,
         "workplace_context": true
       },
-      "teaching_objective": "Multi-hop relationship with workplace context"
+      "teaching_objective": "Multi-hop relationship with workplace context",
+      "user_satisfaction": 0.645
     },
-
     {
       "pair_id": "entity_rel_005",
       "category": "entity_relationships",
@@ -832,32 +1153,59 @@
         "pre_existing_entities": {
           "user_name": "Taylor",
           "relationships": [
-            {"name": "Oliver", "relationship": "son", "age": 3},
-            {"name": "Sophie", "relationship": "daughter", "age": 6},
-            {"name": "Grandma Rose", "relationship": "mother"}
+            {
+              "name": "Oliver",
+              "relationship": "son",
+              "age": 3
+            },
+            {
+              "name": "Sophie",
+              "relationship": "daughter",
+              "age": 6
+            },
+            {
+              "name": "Grandma Rose",
+              "relationship": "mother"
+            }
           ]
         }
       },
       "input": "The kids love visiting their grandmother.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Oliver", "Sophie", "Grandma Rose"],
+        "mentioned_entities": [
+          "Oliver",
+          "Sophie",
+          "Grandma Rose"
+        ],
         "implicit_references": [
-          {"keyword": "kids", "resolved": ["Oliver", "Sophie"]},
-          {"keyword": "grandmother", "resolved": "Grandma Rose"}
+          {
+            "keyword": "kids",
+            "resolved": [
+              "Oliver",
+              "Sophie"
+            ]
+          },
+          {
+            "keyword": "grandmother",
+            "resolved": "Grandma Rose"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ]
       },
       "output": "It's wonderful that Oliver and Sophie enjoy time with Grandma Rose.",
       "success_criteria": {
         "multi_entity_resolution": true,
         "generational_awareness": true
       },
-      "teaching_objective": "Multi-generation relationship resolution"
+      "teaching_objective": "Multi-generation relationship resolution",
+      "user_satisfaction": 0.76
     },
-
     {
       "pair_id": "entity_rel_006",
       "category": "entity_relationships",
@@ -867,28 +1215,40 @@
         "pre_existing_entities": {
           "user_name": "Morgan",
           "relationships": [
-            {"name": "Rachel", "relationship": "friend"},
-            {"name": "yoga_studio", "relationship": "place", "context": "meets_Rachel_here"}
+            {
+              "name": "Rachel",
+              "relationship": "friend"
+            },
+            {
+              "name": "yoga_studio",
+              "relationship": "place",
+              "context": "meets_Rachel_here"
+            }
           ]
         }
       },
       "input": "The place where Rachel and I take classes is closing.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Rachel", "yoga_studio"],
+        "mentioned_entities": [
+          "Rachel",
+          "yoga_studio"
+        ],
         "contextual_link": "yoga_studio where Rachel and Morgan meet"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "That's disappointing that the yoga studio where you and Rachel take classes is closing.",
       "success_criteria": {
         "place_entity_resolution": true,
         "context_aware": true
       },
-      "teaching_objective": "Place-relationship association"
+      "teaching_objective": "Place-relationship association",
+      "user_satisfaction": 0.645
     },
-
     {
       "pair_id": "entity_rel_007",
       "category": "entity_relationships",
@@ -898,31 +1258,49 @@
         "pre_existing_entities": {
           "user_name": "Casey",
           "relationships": [
-            {"name": "Sam", "relationship": "partner"},
-            {"name": "Luna", "relationship": "shared_cat", "age": 2}
+            {
+              "name": "Sam",
+              "relationship": "partner"
+            },
+            {
+              "name": "Luna",
+              "relationship": "shared_cat",
+              "age": 2
+            }
           ]
         }
       },
       "input": "Our cat has been extra playful lately.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Luna"],
-        "implicit_references": [
-          {"keyword": "Our cat", "resolved": "Luna", "confidence": 0.9}
+        "mentioned_entities": [
+          "Luna"
         ],
-        "shared_ownership": ["Casey", "Sam"]
+        "implicit_references": [
+          {
+            "keyword": "Our cat",
+            "resolved": "Luna",
+            "confidence": 0.9
+          }
+        ],
+        "shared_ownership": [
+          "Casey",
+          "Sam"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Luna sounds like she's been having a lot of fun.",
       "success_criteria": {
         "shared_entity_resolution": true,
         "uses_entity_name": true
       },
-      "teaching_objective": "Shared ownership entity resolution"
+      "teaching_objective": "Shared ownership entity resolution",
+      "user_satisfaction": 0.76
     },
-
     {
       "pair_id": "entity_rel_008",
       "category": "entity_relationships",
@@ -932,28 +1310,45 @@
         "pre_existing_entities": {
           "user_name": "Riley",
           "relationships": [
-            {"name": "Dr. Kim", "relationship": "doctor"},
-            {"name": "Dr. Patel", "relationship": "specialist", "context": "Dr_Kim_referral"}
+            {
+              "name": "Dr. Kim",
+              "relationship": "doctor"
+            },
+            {
+              "name": "Dr. Patel",
+              "relationship": "specialist",
+              "context": "Dr_Kim_referral"
+            }
           ]
         }
       },
       "input": "The specialist my doctor referred me to was really helpful.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Dr. Kim", "Dr. Patel"],
-        "relationship_chain": ["my doctor", "Dr. Kim", "specialist", "Dr. Patel"]
+        "mentioned_entities": [
+          "Dr. Kim",
+          "Dr. Patel"
+        ],
+        "relationship_chain": [
+          "my doctor",
+          "Dr. Kim",
+          "specialist",
+          "Dr. Patel"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "I'm glad Dr. Patel, who Dr. Kim referred you to, was helpful.",
       "success_criteria": {
         "professional_relationship_chain": true,
         "both_names_mentioned": true
       },
-      "teaching_objective": "Professional referral relationship"
+      "teaching_objective": "Professional referral relationship",
+      "user_satisfaction": 0.645
     },
-
     {
       "pair_id": "entity_rel_009",
       "category": "entity_relationships",
@@ -963,31 +1358,50 @@
         "pre_existing_entities": {
           "user_name": "Quinn",
           "relationships": [
-            {"name": "Marcus", "relationship": "brother", "location": "Chicago"},
-            {"name": "Chicago_apartment", "relationship": "place", "context": "Marcus_lives_here"}
+            {
+              "name": "Marcus",
+              "relationship": "brother",
+              "location": "Chicago"
+            },
+            {
+              "name": "Chicago_apartment",
+              "relationship": "place",
+              "context": "Marcus_lives_here"
+            }
           ]
         }
       },
       "input": "I'm visiting my brother's place next month.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Marcus", "Chicago_apartment"],
+        "mentioned_entities": [
+          "Marcus",
+          "Chicago_apartment"
+        ],
         "implicit_references": [
-          {"keyword": "brother", "resolved": "Marcus"},
-          {"keyword": "brother's place", "resolved": "Chicago_apartment"}
+          {
+            "keyword": "brother",
+            "resolved": "Marcus"
+          },
+          {
+            "keyword": "brother's place",
+            "resolved": "Chicago_apartment"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "Looking forward to your visit to see Marcus in Chicago next month.",
       "success_criteria": {
         "person_place_association": true,
         "location_context": true
       },
-      "teaching_objective": "Person-place association resolution"
+      "teaching_objective": "Person-place association resolution",
+      "user_satisfaction": 0.76
     },
-
     {
       "pair_id": "entity_rel_010",
       "category": "entity_relationships",
@@ -997,31 +1411,53 @@
         "pre_existing_entities": {
           "user_name": "Avery",
           "relationships": [
-            {"name": "Alex", "relationship": "team_lead"},
-            {"name": "DevTeam", "relationship": "group", "members": ["Avery", "Sarah", "Tom"], "lead": "Alex"}
+            {
+              "name": "Alex",
+              "relationship": "team_lead"
+            },
+            {
+              "name": "DevTeam",
+              "relationship": "group",
+              "members": [
+                "Avery",
+                "Sarah",
+                "Tom"
+              ],
+              "lead": "Alex"
+            }
           ],
-          "mentioned_names": ["TechCorp"]
+          "mentioned_names": [
+            "TechCorp"
+          ]
         }
       },
       "input": "Our team lead approved the project proposal.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Alex", "DevTeam"],
+        "mentioned_entities": [
+          "Alex",
+          "DevTeam"
+        ],
         "implicit_references": [
-          {"keyword": "team lead", "resolved": "Alex"}
+          {
+            "keyword": "team lead",
+            "resolved": "Alex"
+          }
         ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "That's great that Alex approved your team's project proposal.",
       "success_criteria": {
         "workplace_hierarchy": true,
         "group_context": true
       },
-      "teaching_objective": "Workplace hierarchy and group entity resolution"
+      "teaching_objective": "Workplace hierarchy and group entity resolution",
+      "user_satisfaction": 0.645
     },
-
     {
       "pair_id": "context_query_001",
       "category": "relational_context_queries",
@@ -1031,7 +1467,11 @@
         "pre_existing_entities": {
           "user_name": "Emiliano",
           "relationships": [
-            {"name": "Emma", "relationship": "daughter", "age": 8}
+            {
+              "name": "Emma",
+              "relationship": "daughter",
+              "age": 8
+            }
           ]
         }
       },
@@ -1039,12 +1479,19 @@
       "expected_prehension": {
         "relational_query": true,
         "query_type": "self_summary",
-        "mentioned_entities": ["Emiliano", "Emma"]
+        "mentioned_entities": [
+          "Emiliano",
+          "Emma"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "LISTENING": {"relational_inquiry_boost": 0.3}
+          "LISTENING": {
+            "relational_inquiry_boost": 0.3
+          }
         }
       },
       "output": "I remember your name is Emiliano, and you have a daughter named Emma who is 8 years old.",
@@ -1052,9 +1499,9 @@
         "comprehensive_recall": true,
         "all_entities_mentioned": true
       },
-      "teaching_objective": "Comprehensive self-summary query"
+      "teaching_objective": "Comprehensive self-summary query",
+      "user_satisfaction": 0.71
     },
-
     {
       "pair_id": "context_query_002",
       "category": "relational_context_queries",
@@ -1064,19 +1511,35 @@
         "pre_existing_entities": {
           "user_name": "Sarah",
           "relationships": [
-            {"name": "James", "relationship": "partner", "years_together": 5}
+            {
+              "name": "James",
+              "relationship": "partner",
+              "years_together": 5
+            }
           ],
-          "mentioned_names": ["Portland", "hiking", "photography"]
+          "mentioned_names": [
+            "Portland",
+            "hiking",
+            "photography"
+          ]
         }
       },
       "input": "Tell me what you know about my life.",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "life_summary",
-        "mentioned_entities": ["Sarah", "James", "Portland", "hiking", "photography"]
+        "mentioned_entities": [
+          "Sarah",
+          "James",
+          "Portland",
+          "hiking",
+          "photography"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "Your name is Sarah, and you've been with your partner James for 5 years. You live in Portland and enjoy hiking and photography.",
@@ -1084,9 +1547,9 @@
         "multi_category_recall": true,
         "contextual_synthesis": true
       },
-      "teaching_objective": "Multi-category life summary"
+      "teaching_objective": "Multi-category life summary",
+      "user_satisfaction": 0.595
     },
-
     {
       "pair_id": "context_query_003",
       "category": "relational_context_queries",
@@ -1096,8 +1559,15 @@
         "pre_existing_entities": {
           "user_name": "Alex",
           "relationships": [
-            {"name": "Maya", "relationship": "sister", "location": "Portland"},
-            {"name": "Jordan", "relationship": "Maya_partner"}
+            {
+              "name": "Maya",
+              "relationship": "sister",
+              "location": "Portland"
+            },
+            {
+              "name": "Jordan",
+              "relationship": "Maya_partner"
+            }
           ]
         }
       },
@@ -1105,19 +1575,25 @@
       "expected_prehension": {
         "relational_query": true,
         "query_type": "family_context",
-        "mentioned_entities": ["Maya", "Jordan"]
+        "mentioned_entities": [
+          "Maya",
+          "Jordan"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ]
       },
       "output": "Your sister Maya lives in Portland with her partner Jordan.",
       "success_criteria": {
         "family_synthesis": true,
         "relationship_aware": true
       },
-      "teaching_objective": "Family context synthesis"
+      "teaching_objective": "Family context synthesis",
+      "user_satisfaction": 0.71
     },
-
     {
       "pair_id": "context_query_004",
       "category": "relational_context_queries",
@@ -1126,26 +1602,38 @@
         "user_id": "jordan_training",
         "pre_existing_entities": {
           "user_name": "Jordan",
-          "mentioned_names": ["Google", "Seattle", "Node.js", "React"]
+          "mentioned_names": [
+            "Google",
+            "Seattle",
+            "Node.js",
+            "React"
+          ]
         }
       },
       "input": "What do you know about my work?",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "work_context",
-        "mentioned_entities": ["Google", "Seattle", "Node.js", "React"]
+        "mentioned_entities": [
+          "Google",
+          "Seattle",
+          "Node.js",
+          "React"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "You work at Google in Seattle, and you work with Node.js and React.",
       "success_criteria": {
         "work_synthesis": true,
         "technical_context": true
       },
-      "teaching_objective": "Work context synthesis with technical details"
+      "teaching_objective": "Work context synthesis with technical details",
+      "user_satisfaction": 0.595
     },
-
     {
       "pair_id": "context_query_005",
       "category": "relational_context_queries",
@@ -1155,8 +1643,16 @@
         "pre_existing_entities": {
           "user_name": "Taylor",
           "relationships": [
-            {"name": "Oliver", "relationship": "son", "age": 3},
-            {"name": "Sophie", "relationship": "daughter", "age": 6}
+            {
+              "name": "Oliver",
+              "relationship": "son",
+              "age": 3
+            },
+            {
+              "name": "Sophie",
+              "relationship": "daughter",
+              "age": 6
+            }
           ]
         }
       },
@@ -1164,19 +1660,24 @@
       "expected_prehension": {
         "relational_query": true,
         "query_type": "children_summary",
-        "mentioned_entities": ["Oliver", "Sophie"]
+        "mentioned_entities": [
+          "Oliver",
+          "Sophie"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "You have two children: Sophie who is 6 years old, and Oliver who is 3.",
       "success_criteria": {
         "children_synthesis": true,
         "age_details": true
       },
-      "teaching_objective": "Children-specific context summary"
+      "teaching_objective": "Children-specific context summary",
+      "user_satisfaction": 0.71
     },
-
     {
       "pair_id": "context_query_006",
       "category": "relational_context_queries",
@@ -1186,22 +1687,40 @@
         "pre_existing_entities": {
           "user_name": "Morgan",
           "relationships": [
-            {"name": "Dr. Chen", "relationship": "therapist"},
-            {"name": "Rachel", "relationship": "friend", "context": "yoga_class"}
+            {
+              "name": "Dr. Chen",
+              "relationship": "therapist"
+            },
+            {
+              "name": "Rachel",
+              "relationship": "friend",
+              "context": "yoga_class"
+            }
           ],
-          "mentioned_names": ["anxiety", "meditation"]
+          "mentioned_names": [
+            "anxiety",
+            "meditation"
+          ]
         }
       },
       "input": "What do you remember about my mental health journey?",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "health_context",
-        "mentioned_entities": ["Dr. Chen", "anxiety", "meditation"]
+        "mentioned_entities": [
+          "Dr. Chen",
+          "anxiety",
+          "meditation"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "organ_boosts": {
-          "EMPATHY": {"relational_attunement_boost": 0.2}
+          "EMPATHY": {
+            "relational_attunement_boost": 0.2
+          }
         }
       },
       "output": "You've been working with Dr. Chen, your therapist, on anxiety, and you practice meditation.",
@@ -1209,9 +1728,9 @@
         "health_context_synthesis": true,
         "sensitive_handling": true
       },
-      "teaching_objective": "Mental health context synthesis with sensitivity"
+      "teaching_objective": "Mental health context synthesis with sensitivity",
+      "user_satisfaction": 0.595
     },
-
     {
       "pair_id": "context_query_007",
       "category": "relational_context_queries",
@@ -1220,26 +1739,40 @@
         "user_id": "casey_training",
         "pre_existing_entities": {
           "user_name": "Casey",
-          "mentioned_names": ["Berlin", "Paris", "Tokyo", "Spanish", "guitar"]
+          "mentioned_names": [
+            "Berlin",
+            "Paris",
+            "Tokyo",
+            "Spanish",
+            "guitar"
+          ]
         }
       },
       "input": "What interests of mine do you remember?",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "interests_summary",
-        "mentioned_entities": ["Berlin", "Paris", "Tokyo", "Spanish", "guitar"]
+        "mentioned_entities": [
+          "Berlin",
+          "Paris",
+          "Tokyo",
+          "Spanish",
+          "guitar"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
-      "output": "You're interested in travel—you've mentioned Berlin, Paris, and Tokyo—and you also enjoy learning Spanish and playing guitar.",
+      "output": "You're interested in travel\u2014you've mentioned Berlin, Paris, and Tokyo\u2014and you also enjoy learning Spanish and playing guitar.",
       "success_criteria": {
         "interests_synthesis": true,
         "category_grouping": true
       },
-      "teaching_objective": "Interest/preference synthesis with categorization"
+      "teaching_objective": "Interest/preference synthesis with categorization",
+      "user_satisfaction": 0.71
     },
-
     {
       "pair_id": "context_query_008",
       "category": "relational_context_queries",
@@ -1249,20 +1782,38 @@
         "pre_existing_entities": {
           "user_name": "Riley",
           "relationships": [
-            {"name": "Sam", "relationship": "best_friend"},
-            {"name": "Luna", "relationship": "cat", "age": 2}
+            {
+              "name": "Sam",
+              "relationship": "best_friend"
+            },
+            {
+              "name": "Luna",
+              "relationship": "cat",
+              "age": 2
+            }
           ],
-          "mentioned_names": ["Portland", "coffee_roasting"]
+          "mentioned_names": [
+            "Portland",
+            "coffee_roasting"
+          ]
         }
       },
       "input": "Give me a snapshot of who I am based on what you know.",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "identity_snapshot",
-        "mentioned_entities": ["Riley", "Sam", "Luna", "Portland", "coffee_roasting"]
+        "mentioned_entities": [
+          "Riley",
+          "Sam",
+          "Luna",
+          "Portland",
+          "coffee_roasting"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "You're Riley, living in Portland with your cat Luna. Your best friend is Sam, and you're into coffee roasting.",
@@ -1270,9 +1821,9 @@
         "identity_synthesis": true,
         "holistic_picture": true
       },
-      "teaching_objective": "Holistic identity snapshot synthesis"
+      "teaching_objective": "Holistic identity snapshot synthesis",
+      "user_satisfaction": 0.595
     },
-
     {
       "pair_id": "context_query_009",
       "category": "relational_context_queries",
@@ -1282,8 +1833,16 @@
         "pre_existing_entities": {
           "user_name": "Quinn",
           "relationships": [
-            {"name": "Marcus", "relationship": "brother", "location": "Chicago"},
-            {"name": "Lisa", "relationship": "mother", "location": "Denver"}
+            {
+              "name": "Marcus",
+              "relationship": "brother",
+              "location": "Chicago"
+            },
+            {
+              "name": "Lisa",
+              "relationship": "mother",
+              "location": "Denver"
+            }
           ]
         }
       },
@@ -1291,19 +1850,25 @@
       "expected_prehension": {
         "relational_query": true,
         "query_type": "relationships_summary",
-        "mentioned_entities": ["Marcus", "Lisa"]
+        "mentioned_entities": [
+          "Marcus",
+          "Lisa"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ]
       },
       "output": "Your brother Marcus is in Chicago, and your mother Lisa is in Denver.",
       "success_criteria": {
         "relationship_synthesis": true,
         "geographic_context": true
       },
-      "teaching_objective": "Relationship network synthesis with locations"
+      "teaching_objective": "Relationship network synthesis with locations",
+      "user_satisfaction": 0.71
     },
-
     {
       "pair_id": "context_query_010",
       "category": "relational_context_queries",
@@ -1313,19 +1878,37 @@
         "pre_existing_entities": {
           "user_name": "Avery",
           "relationships": [
-            {"name": "Alex", "relationship": "team_lead"}
+            {
+              "name": "Alex",
+              "relationship": "team_lead"
+            }
           ],
-          "mentioned_names": ["TechCorp", "Node.js", "React", "PostgreSQL", "side_project"]
+          "mentioned_names": [
+            "TechCorp",
+            "Node.js",
+            "React",
+            "PostgreSQL",
+            "side_project"
+          ]
         }
       },
       "input": "Summarize our conversations about my work and projects.",
       "expected_prehension": {
         "relational_query": true,
         "query_type": "work_projects_summary",
-        "mentioned_entities": ["TechCorp", "Alex", "Node.js", "React", "PostgreSQL", "side_project"]
+        "mentioned_entities": [
+          "TechCorp",
+          "Alex",
+          "Node.js",
+          "React",
+          "PostgreSQL",
+          "side_project"
+        ]
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"],
+        "nexuses": [
+          "entity_memory"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "You work at TechCorp under team lead Alex, using Node.js, React, and PostgreSQL. You've also mentioned working on a side project.",
@@ -1333,9 +1916,9 @@
         "work_project_synthesis": true,
         "technical_and_organizational_context": true
       },
-      "teaching_objective": "Complex work context synthesis (people + tech + projects)"
+      "teaching_objective": "Complex work context synthesis (people + tech + projects)",
+      "user_satisfaction": 0.595
     },
-
     {
       "pair_id": "multi_session_001",
       "category": "multi_session_entity_memory",
@@ -1345,7 +1928,12 @@
         "pre_existing_entities": {
           "user_name": "Emiliano",
           "relationships": [
-            {"name": "Emma", "relationship": "daughter", "age": 8, "context": "mentioned_in_crisis"}
+            {
+              "name": "Emma",
+              "relationship": "daughter",
+              "age": 8,
+              "context": "mentioned_in_crisis"
+            }
           ]
         },
         "session_context": "Previous session: Emma in crisis at school (sympathetic state, urgency 0.8)"
@@ -1353,24 +1941,31 @@
       "input": "Emma had a great day at school today!",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Emma"],
+        "mentioned_entities": [
+          "Emma"
+        ],
         "cross_session_context": true,
-        "polyvagal_shift": "sympathetic → ventral_vagal"
+        "polyvagal_shift": "sympathetic \u2192 ventral_vagal"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"],
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ],
         "organ_boosts": {
-          "EMPATHY": {"trajectory_awareness": 0.2}
+          "EMPATHY": {
+            "trajectory_awareness": 0.2
+          }
         }
       },
-      "output": "I'm so glad to hear Emma had a good day—what a shift from the challenges she was facing at school before.",
+      "output": "I'm so glad to hear Emma had a good day\u2014what a shift from the challenges she was facing at school before.",
       "success_criteria": {
         "cross_session_awareness": true,
         "trajectory_recognition": true
       },
-      "teaching_objective": "Cross-session entity trajectory (crisis → healing)"
+      "teaching_objective": "Cross-session entity trajectory (crisis \u2192 healing)",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_002",
       "category": "multi_session_entity_memory",
@@ -1380,7 +1975,11 @@
         "pre_existing_entities": {
           "user_name": "Sarah",
           "relationships": [
-            {"name": "James", "relationship": "partner", "context": "conflict_previous_session"}
+            {
+              "name": "James",
+              "relationship": "partner",
+              "context": "conflict_previous_session"
+            }
           ]
         },
         "session_context": "Previous session: Conflict with James (sympathetic state)"
@@ -1388,21 +1987,26 @@
       "input": "James and I talked things through.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["James"],
+        "mentioned_entities": [
+          "James"
+        ],
         "cross_session_context": true,
         "resolution_detected": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth"
+        ]
       },
       "output": "I'm glad you and James were able to have that conversation and work through things.",
       "success_criteria": {
         "conflict_resolution_awareness": true,
         "cross_session_continuity": true
       },
-      "teaching_objective": "Cross-session relationship evolution (conflict → resolution)"
+      "teaching_objective": "Cross-session relationship evolution (conflict \u2192 resolution)",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_003",
       "category": "multi_session_entity_memory",
@@ -1411,7 +2015,9 @@
         "user_id": "alex_training",
         "pre_existing_entities": {
           "user_name": "Alex",
-          "mentioned_names": ["TechCorp"],
+          "mentioned_names": [
+            "TechCorp"
+          ],
           "context": "job_stress_previous_session"
         },
         "session_context": "Previous session: Work stress at TechCorp (high urgency)"
@@ -1419,23 +2025,30 @@
       "input": "Work has been much better this week.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["TechCorp"],
+        "mentioned_entities": [
+          "TechCorp"
+        ],
         "implicit_references": [
-          {"keyword": "Work", "resolved": "TechCorp"}
+          {
+            "keyword": "Work",
+            "resolved": "TechCorp"
+          }
         ],
         "cross_session_context": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory"]
+        "nexuses": [
+          "entity_memory"
+        ]
       },
       "output": "That's a relief to hear things have improved at TechCorp.",
       "success_criteria": {
         "workplace_continuity": true,
         "stress_trajectory_awareness": true
       },
-      "teaching_objective": "Cross-session workplace stress trajectory"
+      "teaching_objective": "Cross-session workplace stress trajectory",
+      "user_satisfaction": 0.69
     },
-
     {
       "pair_id": "multi_session_004",
       "category": "multi_session_entity_memory",
@@ -1445,7 +2058,12 @@
         "pre_existing_entities": {
           "user_name": "Jordan",
           "relationships": [
-            {"name": "Max", "relationship": "dog", "age": 5, "context": "health_scare_previous_session"}
+            {
+              "name": "Max",
+              "relationship": "dog",
+              "age": 5,
+              "context": "health_scare_previous_session"
+            }
           ]
         },
         "session_context": "Previous session: Max had health scare (dorsal state, high urgency)"
@@ -1453,14 +2071,21 @@
       "input": "The vet says Max is going to be fine.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Max"],
+        "mentioned_entities": [
+          "Max"
+        ],
         "cross_session_context": true,
         "recovery_trajectory": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"],
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ],
         "organ_boosts": {
-          "EMPATHY": {"relief_recognition": 0.25}
+          "EMPATHY": {
+            "relief_recognition": 0.25
+          }
         }
       },
       "output": "What a relief about Max! I know you were really worried about him.",
@@ -1468,9 +2093,9 @@
         "health_trajectory_awareness": true,
         "emotional_continuity": true
       },
-      "teaching_objective": "Cross-session pet health trajectory (crisis → relief)"
+      "teaching_objective": "Cross-session pet health trajectory (crisis \u2192 relief)",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_005",
       "category": "multi_session_entity_memory",
@@ -1480,7 +2105,12 @@
         "pre_existing_entities": {
           "user_name": "Taylor",
           "relationships": [
-            {"name": "Sophie", "relationship": "daughter", "age": 6, "context": "behavior_challenges"}
+            {
+              "name": "Sophie",
+              "relationship": "daughter",
+              "age": 6,
+              "context": "behavior_challenges"
+            }
           ]
         },
         "session_context": "Sessions 1-3: Sophie having behavior challenges at school"
@@ -1488,12 +2118,17 @@
       "input": "How has Sophie's behavior evolved over our conversations?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["Sophie"],
+        "mentioned_entities": [
+          "Sophie"
+        ],
         "query_type": "temporal_trajectory",
         "cross_session_synthesis": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"],
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ],
         "expected_coherence": "> 0.7"
       },
       "output": "We've talked about Sophie's behavior challenges at school across several conversations. It would help to hear your perspective on how things have been changing.",
@@ -1501,9 +2136,9 @@
         "longitudinal_awareness": true,
         "invites_user_perspective": true
       },
-      "teaching_objective": "Longitudinal entity trajectory synthesis"
+      "teaching_objective": "Longitudinal entity trajectory synthesis",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_006",
       "category": "multi_session_entity_memory",
@@ -1512,7 +2147,9 @@
         "user_id": "morgan_training",
         "pre_existing_entities": {
           "user_name": "Morgan",
-          "mentioned_names": ["anxiety"],
+          "mentioned_names": [
+            "anxiety"
+          ],
           "context": "anxiety_high_session1_medium_session2"
         },
         "session_context": "Session 1: High anxiety, Session 2: Moderate anxiety"
@@ -1520,20 +2157,25 @@
       "input": "My anxiety has been really low lately.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["anxiety"],
-        "cross_session_trajectory": "high → medium → low"
+        "mentioned_entities": [
+          "anxiety"
+        ],
+        "cross_session_trajectory": "high \u2192 medium \u2192 low"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"]
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ]
       },
-      "output": "That's wonderful to hear your anxiety has continued to decrease—it's been a positive trajectory.",
+      "output": "That's wonderful to hear your anxiety has continued to decrease\u2014it's been a positive trajectory.",
       "success_criteria": {
         "symptom_trajectory_awareness": true,
         "improvement_recognition": true
       },
-      "teaching_objective": "Cross-session symptom trajectory (improvement recognition)"
+      "teaching_objective": "Cross-session symptom trajectory (improvement recognition)",
+      "user_satisfaction": 0.69
     },
-
     {
       "pair_id": "multi_session_007",
       "category": "multi_session_entity_memory",
@@ -1542,7 +2184,10 @@
         "user_id": "casey_training",
         "pre_existing_entities": {
           "user_name": "Casey",
-          "mentioned_names": ["Berlin", "job_interview"],
+          "mentioned_names": [
+            "Berlin",
+            "job_interview"
+          ],
           "context": "considering_berlin_move_session1_interview_session2"
         },
         "session_context": "Session 1: Considering move to Berlin, Session 2: Had interview"
@@ -1550,13 +2195,21 @@
       "input": "I got the job in Berlin!",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Berlin", "job_interview"],
-        "cross_session_narrative": "consideration → interview → acceptance"
+        "mentioned_entities": [
+          "Berlin",
+          "job_interview"
+        ],
+        "cross_session_narrative": "consideration \u2192 interview \u2192 acceptance"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"],
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ],
         "organ_boosts": {
-          "EMPATHY": {"celebration_recognition": 0.25}
+          "EMPATHY": {
+            "celebration_recognition": 0.25
+          }
         }
       },
       "output": "Congratulations on the Berlin job! This has been quite a journey from considering the move to getting the offer.",
@@ -1564,9 +2217,9 @@
         "narrative_continuity": true,
         "celebratory_tone": true
       },
-      "teaching_objective": "Cross-session life change narrative (decision → outcome)"
+      "teaching_objective": "Cross-session life change narrative (decision \u2192 outcome)",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_008",
       "category": "multi_session_entity_memory",
@@ -1576,7 +2229,11 @@
         "pre_existing_entities": {
           "user_name": "Riley",
           "relationships": [
-            {"name": "Sam", "relationship": "best_friend", "context": "conflict_session1_distance_session2"}
+            {
+              "name": "Sam",
+              "relationship": "best_friend",
+              "context": "conflict_session1_distance_session2"
+            }
           ]
         },
         "session_context": "Session 1: Conflict with Sam, Session 2: Taking space"
@@ -1584,20 +2241,26 @@
       "input": "Sam and I reconnected and it feels good.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Sam"],
-        "cross_session_trajectory": "conflict → space → reconnection"
+        "mentioned_entities": [
+          "Sam"
+        ],
+        "cross_session_trajectory": "conflict \u2192 space \u2192 reconnection"
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "relational_depth", "temporal_continuity"]
+        "nexuses": [
+          "entity_memory",
+          "relational_depth",
+          "temporal_continuity"
+        ]
       },
       "output": "I'm glad you and Sam were able to reconnect. It sounds like the space you took was helpful for the relationship.",
       "success_criteria": {
         "relationship_repair_trajectory": true,
         "space_recognition": true
       },
-      "teaching_objective": "Cross-session relationship repair trajectory (conflict → space → healing)"
+      "teaching_objective": "Cross-session relationship repair trajectory (conflict \u2192 space \u2192 healing)",
+      "user_satisfaction": 0.575
     },
-
     {
       "pair_id": "multi_session_009",
       "category": "multi_session_entity_memory",
@@ -1607,7 +2270,11 @@
         "pre_existing_entities": {
           "user_name": "Quinn",
           "relationships": [
-            {"name": "Lisa", "relationship": "mother", "context": "declining_health_session1"}
+            {
+              "name": "Lisa",
+              "relationship": "mother",
+              "context": "declining_health_session1"
+            }
           ]
         },
         "session_context": "Previous session: Mother's declining health (sympathetic state)"
@@ -1615,23 +2282,31 @@
       "input": "My mom's health has stabilized.",
       "expected_prehension": {
         "relational_query": false,
-        "mentioned_entities": ["Lisa"],
+        "mentioned_entities": [
+          "Lisa"
+        ],
         "implicit_references": [
-          {"keyword": "mom", "resolved": "Lisa"}
+          {
+            "keyword": "mom",
+            "resolved": "Lisa"
+          }
         ],
         "cross_session_context": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"]
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ]
       },
       "output": "That must be such a relief that Lisa's health has stabilized.",
       "success_criteria": {
         "health_continuity": true,
         "emotional_awareness": true
       },
-      "teaching_objective": "Cross-session family health trajectory"
+      "teaching_objective": "Cross-session family health trajectory",
+      "user_satisfaction": 0.69
     },
-
     {
       "pair_id": "multi_session_010",
       "category": "multi_session_entity_memory",
@@ -1640,7 +2315,9 @@
         "user_id": "avery_training",
         "pre_existing_entities": {
           "user_name": "Avery",
-          "mentioned_names": ["side_project"],
+          "mentioned_names": [
+            "side_project"
+          ],
           "context": "session1_idea_session2_prototyping_session3_launching"
         },
         "session_context": "Session 1: Project idea, Session 2: Prototyping, Session 3: Preparing to launch"
@@ -1648,12 +2325,17 @@
       "input": "Can you trace how my side project has evolved?",
       "expected_prehension": {
         "relational_query": true,
-        "mentioned_entities": ["side_project"],
+        "mentioned_entities": [
+          "side_project"
+        ],
         "query_type": "project_evolution",
         "cross_session_synthesis": true
       },
       "expected_processing": {
-        "nexuses": ["entity_memory", "temporal_continuity"],
+        "nexuses": [
+          "entity_memory",
+          "temporal_continuity"
+        ],
         "expected_coherence": "> 0.75"
       },
       "output": "Your side project has evolved from initial idea to prototyping and now preparing to launch. It's been exciting to see the progression.",
@@ -1661,7 +2343,8 @@
         "project_trajectory_synthesis": true,
         "developmental_awareness": true
       },
-      "teaching_objective": "Cross-session project evolution synthesis (idea → prototype → launch)"
+      "teaching_objective": "Cross-session project evolution synthesis (idea \u2192 prototype \u2192 launch)",
+      "user_satisfaction": 0.575
     }
   ]
 }

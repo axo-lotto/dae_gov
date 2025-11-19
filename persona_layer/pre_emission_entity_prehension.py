@@ -212,8 +212,18 @@ class PreEmissionEntityPrehension:
         # Update mentioned_entities with implicit resolutions
         result['mentioned_entities'] = mentioned
 
-        # ✅ FIX (Nov 16): Update entity_memory_available based on MENTIONED entities, not just stored
-        result['entity_memory_available'] = len(mentioned) > 0 or bool(result['implicit_references'])
+        # 🚨 CRITICAL FIX (Nov 18): Entity memory should be available if user HAS stored entities
+        # This ensures cross-session continuity - memory is context for ALL turns, not just when mentioned
+        has_stored_entities = bool(entities and any(entities.values()))
+        has_mentioned_entities = len(mentioned) > 0 or bool(result['implicit_references'])
+
+        # Memory available if EITHER: (1) user has stored entities OR (2) entities mentioned this turn
+        result['entity_memory_available'] = has_stored_entities or has_mentioned_entities
+
+        # 🔍 DEBUG: Show why memory is/isn't available
+        if has_stored_entities:
+            entity_count = sum(len(v) if isinstance(v, list) else (1 if v else 0) for v in entities.values())
+            print(f"   🌀 Entity memory AVAILABLE: {entity_count} stored entities in profile")
 
         # 5. Build historical context summary
         result['historical_context'] = self._build_historical_context(entities)

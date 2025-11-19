@@ -368,6 +368,16 @@ class Neo4jKnowledgeGraph:
         if 'mention_count' not in props:
             props['mention_count'] = 1
 
+        # 🌀 LIFECYCLE MANAGEMENT: Entity lifecycle fields (November 18, 2025 - Phase 1 Dual Memory)
+        if 'salience' not in props:
+            props['salience'] = 1.0  # Maximum salience when first mentioned
+        if 'status' not in props:
+            props['status'] = 'active'  # 'active', 'fading', 'deprecated', 'conflicting'
+        if 'version_number' not in props:
+            props['version_number'] = 1
+        if 'confidence' not in props:
+            props['confidence'] = 0.8  # Default confidence in entity information
+
         # 🌀 TURN TRACKING: Add turn numbers for morpheable horizon (November 17, 2025)
         if current_turn is not None:
             if 'first_mention_turn' not in props:

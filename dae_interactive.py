@@ -48,6 +48,10 @@ from persona_layer.user_superject_learner import UserSuperjectLearner
 from persona_layer.memory_intent_detector import MemoryIntentDetector
 from persona_layer.entity_extractor import EntityExtractor
 
+# 🌀 Phase 3: Transductive felt entity filtering imports (Nov 18, 2025 - Dual Memory Phase 3 Refactor)
+from persona_layer.transductive_felt_entity_filter import get_transductive_felt_entity_filter
+from persona_layer.satisfaction_fingerprinting import SatisfactionFingerprintClassifier
+
 # Hybrid components (conditional import)
 if Config.HYBRID_ENABLED:
     from persona_layer.memory_retrieval import MemoryRetrieval
@@ -225,6 +229,17 @@ class InteractiveSession:
             self.memory_intent_detector = None
             self.entity_extractor = None
 
+        # 🌀 Phase 3B: Initialize NEXUS-first entity extraction (Nov 18, 2025)
+        # Neighbor prehension + 4-gate cascade + multi-word detection
+        try:
+            from persona_layer.entity_neighbor_prehension import EntityNeighborPrehension
+            # Will initialize entity_organ_tracker later (after wrapper is ready)
+            self.entity_neighbor_prehension = EntityNeighborPrehension(entity_tracker=None)
+            print("✅ NEXUS-first entity extraction ready (neighbor prehension + 4-gate cascade)")
+        except Exception as e:
+            print(f"⚠️  NEXUS entity extraction initialization failed: {e}")
+            self.entity_neighbor_prehension = None
+
         # 🌀 Phase 1.8++: Initialize Neo4j knowledge graph (Nov 14, 2025)
         # Dual-storage strategy: JSON fallback + Neo4j enrichment
         self.knowledge_graph = None
@@ -258,6 +273,21 @@ class InteractiveSession:
 
             # Entity horizon (morpheable 100-500 based on field coherence)
             self.entity_horizon = EntityHorizon()
+
+            # 🌀 Phase 3: Transductive felt entity filter (Nov 18, 2025 - Dual Memory Phase 3 Refactor)
+            # 4-layer filtering: BOND IFS Gate → SELF Matrix → Salience + Temporal Decay → Satisfaction + Regime
+            self.transductive_felt_filter = get_transductive_felt_entity_filter(
+                enable_layer0=True,  # BOND IFS parts gate
+                enable_layer1=True,  # SELF Matrix zone gating
+                enable_layer2=False,  # Salience + temporal decay (disabled for now - needs full prehension)
+                enable_layer3=False   # Satisfaction fingerprinting (disabled for now - needs trace)
+            )
+            self.satisfaction_classifier = SatisfactionFingerprintClassifier()
+            print("✅ Transductive felt entity filter initialized (Phase 3 - 4-layer architecture)")
+            print("   • Layer 0: BOND IFS Parts Gate (120+ keywords)")
+            print("   • Layer 1: SELF Matrix Zone Gating (5 zones)")
+            print("   • Layer 2: Salience + Temporal Decay (disabled pending prehension)")
+            print("   • Layer 3: Satisfaction + Regime (disabled pending trace)")
 
             # Entity salience tracker (3-tier EMA decay)
             self.entity_salience_tracker = EntitySalienceTracker(
@@ -471,19 +501,103 @@ class InteractiveSession:
                 context['memory_intent_type'] = intent_type
                 context['memory_intent_confidence'] = confidence
 
-        # Step 2: ALWAYS run EntityExtractor with proper intent_type and context
-        if self.entity_extractor:
-            extracted_entities = self.entity_extractor.extract(
-                user_input,
-                intent_type=intent_type,  # Use detected intent type (or 'general')
-                context=intent_context  # Use context from detector (includes extracted_name if found)
-            )
+        # Step 2: Try NEXUS-first entity extraction (Phase 3B - Nov 18, 2025)
+        # Falls back to LLM EntityExtractor if NEXUS confidence is low
+        nexus_entities = []
+        word_occasions = []  # Phase 3B: For epoch learning trackers
+        nexus_extraction_attempted = False
 
-            # Check if ANY entities were extracted
-            if extracted_entities and any(k != 'timestamp' and k != 'source_text' and k != 'intent_type'
-                                         and extracted_entities.get(k) for k in extracted_entities.keys()):
-                memory_intent_detected = True  # Mark that we found actual entities
-                context['pre_extraction_entities'] = extracted_entities
+        if hasattr(self, 'entity_neighbor_prehension'):
+            try:
+                import time
+                nexus_extraction_attempted = True
+
+                # Time NEXUS extraction (for NexusVsLLMDecisionTracker)
+                nexus_start = time.time()
+                nexus_entities, word_occasions = self.entity_neighbor_prehension.extract_entities(
+                    user_input,
+                    return_word_occasions=True  # Phase 3B: Get word_occasions for trackers
+                )
+                nexus_time_ms = (time.time() - nexus_start) * 1000.0
+
+                # Compute NEXUS confidence (max confidence across all entities)
+                nexus_confidence = max([e.get('confidence_score', 0.0) for e in nexus_entities], default=0.0)
+
+                # Store word_occasions in context for trackers (Phase 3B - Nov 18, 2025)
+                context['word_occasions'] = word_occasions
+
+                # Check if we got high-confidence entities from NEXUS
+                high_confidence_nexus = [
+                    e for e in nexus_entities
+                    if e.get('confidence_score', 0.0) >= 0.7
+                ]
+
+                if high_confidence_nexus:
+                    # Use NEXUS entities (LLM-free extraction!)
+                    memory_intent_detected = True
+                    context['pre_extraction_entities_nexus'] = high_confidence_nexus
+                    context['nexus_extraction_used'] = True
+
+                    # Store NEXUS metadata for NexusVsLLMDecisionTracker (Phase 3B)
+                    context['nexus_confidence'] = nexus_confidence
+                    context['nexus_entities'] = nexus_entities
+                    context['extraction_time_ms'] = nexus_time_ms
+
+                    # Convert to extracted_entities format for compatibility
+                    extracted_entities = {
+                        'timestamp': context.get('timestamp'),
+                        'source_text': user_input,
+                        'intent_type': intent_type
+                    }
+
+                    # Populate entity fields based on type
+                    for entity in high_confidence_nexus:
+                        entity_value = entity.get('entity_value')
+                        entity_type = entity.get('entity_type')
+
+                        if entity_type == 'Person':
+                            if 'family_members' not in extracted_entities:
+                                extracted_entities['family_members'] = []
+                            extracted_entities['family_members'].append(entity_value)
+                        elif entity_type == 'Place':
+                            if 'places' not in extracted_entities:
+                                extracted_entities['places'] = []
+                            extracted_entities['places'].append(entity_value)
+                        # Add more type mappings as needed
+
+            except Exception as e:
+                print(f"⚠️  NEXUS entity extraction failed: {e}")
+                import traceback
+                traceback.print_exc()
+                nexus_extraction_attempted = False
+
+        # Fallback to LLM EntityExtractor if NEXUS didn't provide high-confidence entities
+        if not nexus_entities or not any(e.get('confidence_score', 0.0) >= 0.7 for e in nexus_entities):
+            if self.entity_extractor:
+                import time
+
+                # Time LLM extraction (for comparison)
+                llm_start = time.time()
+                extracted_entities = self.entity_extractor.extract(
+                    user_input,
+                    intent_type=intent_type,  # Use detected intent type (or 'general')
+                    context=intent_context  # Use context from detector (includes extracted_name if found)
+                )
+                llm_time_ms = (time.time() - llm_start) * 1000.0
+
+                context['nexus_extraction_used'] = False
+
+                # Store LLM metadata for NexusVsLLMDecisionTracker (Phase 3B)
+                context['nexus_confidence'] = max([e.get('confidence_score', 0.0) for e in nexus_entities], default=0.0) if nexus_entities else 0.0
+                context['nexus_entities'] = nexus_entities
+                context['llm_entities'] = extracted_entities
+                context['extraction_time_ms'] = llm_time_ms
+
+                # Check if ANY entities were extracted
+                if extracted_entities and any(k != 'timestamp' and k != 'source_text' and k != 'intent_type'
+                                             and extracted_entities.get(k) for k in extracted_entities.keys()):
+                    memory_intent_detected = True  # Mark that we found actual entities
+                    context['pre_extraction_entities'] = extracted_entities
 
                 # 🌀 Quick Win #7: Convert extracted entities to list format for entity-organ tracker
                 # entity-organ tracker expects List[Dict[entity_value, entity_type]]
@@ -518,6 +632,9 @@ class InteractiveSession:
                             })
 
                 if extracted_entities_list:
+                    # 🌀 Phase 3: OLD felt entity filter (DISABLED - Nov 18, 2025)
+                    # Replaced by transductive felt entity filter POST-organism processing
+                    # See lines ~770-810 for new 4-layer transductive filtering
                     context['current_turn_entities'] = extracted_entities_list
 
         # 🌀 Phase 1 Entity Continuity Fix: Merge Neo4j entities with pattern-matched (Nov 17, 2025)
@@ -554,6 +671,25 @@ class InteractiveSession:
                 print(f"      • Pattern-matched: {pattern_matched}")
             if neo4j_sourced > 0:
                 print(f"      • Neo4j/Session: {neo4j_sourced}")
+
+        # 🌀 Nov 17, 2025: Populate entity_prehension for NEXUS organ
+        # Convert current_turn_entities to entity_prehension format that NEXUS expects
+        if context.get('current_turn_entities'):
+            mentioned_entities = [
+                {
+                    'name': entity['entity_value'],
+                    'type': entity.get('entity_type', 'person'),
+                    'relationship': entity.get('relationship'),
+                    'source': entity.get('source', 'explicit')
+                }
+                for entity in context['current_turn_entities']
+            ]
+
+            context['entity_prehension'] = {
+                'entity_memory_available': len(mentioned_entities) > 0,
+                'mentioned_entities': mentioned_entities,
+                'user_name': self.user.get('username', 'User')
+            }
 
         # 🌀 Phase 1.9: Load user's learned satisfaction baseline from superject (Nov 17, 2025)
         # This enables personalized wave protocols, humor calibration, and tone adaptation post-training
@@ -702,6 +838,95 @@ class InteractiveSession:
                     context,
                     felt_state=felt_state
                 )
+
+                # 🌀 Phase 3: Apply transductive felt entity filter (Nov 18, 2025 - Dual Memory Phase 3 Refactor)
+                # 4-layer filtering: BOND IFS Gate → SELF Matrix → Salience + Temporal Decay → Satisfaction + Regime
+                if hasattr(self, 'transductive_felt_filter') and self.transductive_felt_filter and enriched_entities:
+                    pre_filter_count = len(enriched_entities)
+
+                    # Get BOND result and zone from felt_state
+                    bond_result = organ_results.get('BOND') if organ_results else None
+
+                    # Derive zone from BOND self_distance using SELF Matrix classification
+                    zone = None
+                    if bond_result and hasattr(bond_result, 'self_distance'):
+                        # Use SELF Matrix to classify zone
+                        from persona_layer.self_matrix_governance import SELFZoneState
+                        self_distance = bond_result.self_distance
+
+                        # Map self_distance to zone (SELF Matrix boundaries)
+                        if self_distance < 0.15:
+                            zone_id = 1  # Core SELF Orbit
+                        elif self_distance < 0.25:
+                            zone_id = 2  # Inner Relational
+                        elif self_distance < 0.35:
+                            zone_id = 3  # Symbolic Threshold
+                        elif self_distance < 0.60:
+                            zone_id = 4  # Shadow/Compost
+                        else:
+                            zone_id = 5  # Exile/Collapse
+
+                        # Create zone state object
+                        zone_names = {
+                            1: "Core SELF Orbit",
+                            2: "Inner Relational",
+                            3: "Symbolic Threshold",
+                            4: "Shadow/Compost",
+                            5: "Exile/Collapse"
+                        }
+                        therapeutic_stances = {
+                            1: "Full exploration",
+                            2: "Relational depth",
+                            3: "Caution advised",
+                            4: "Protective stance",
+                            5: "Crisis containment"
+                        }
+
+                        zone = SELFZoneState(
+                            zone_id=zone_id,
+                            zone_name=zone_names.get(zone_id, "Unknown"),
+                            therapeutic_stance=therapeutic_stances.get(zone_id, "Unknown")
+                        )
+
+                    # Convert enriched_entities to candidate_entities format
+                    candidate_entities = []
+                    for entity in enriched_entities:
+                        candidate_entities.append({
+                            'value': entity.get('value', entity.get('entity_value', '')),
+                            'entity_type': entity.get('type', entity.get('entity_type', 'Unknown')),
+                            'confidence_score': entity.get('confidence', 0.5)
+                        })
+
+                    # Filter entities transductively
+                    filtered_entities, filter_metadata = self.transductive_felt_filter.filter_entities_transductively(
+                        candidate_entities=candidate_entities,
+                        bond_result=bond_result,
+                        zone=zone,
+                        prehension=None,  # Disabled for now - requires full prehension object
+                        satisfaction_trace=[]  # Disabled for now - requires satisfaction trace
+                    )
+
+                    # Convert back to enriched_entities format
+                    enriched_entities = []
+                    for entity in filtered_entities:
+                        enriched_entities.append({
+                            'value': entity['value'],
+                            'type': entity['entity_type'],
+                            'confidence': entity.get('confidence_score', 0.5)
+                        })
+
+                    # Show filtering results
+                    if self.display_mode in ['detailed', 'debug'] and pre_filter_count != len(enriched_entities):
+                        filter_rate = filter_metadata.get('filter_rate', 0.0)
+                        print(f"\n🌀 Transductive Felt Filter:")
+                        print(f"   {pre_filter_count} → {len(enriched_entities)} entities ({filter_rate:.1%} filtered)")
+                        print(f"   Zone: {zone.zone_name if zone else 'Unknown'}")
+
+                        # Show layer contributions
+                        if 'layer0_filtered' in filter_metadata and filter_metadata['layer0_filtered'] > 0:
+                            print(f"   Layer 0 (BOND IFS): {filter_metadata['layer0_filtered']} filtered")
+                        if 'layer1_filtered' in filter_metadata and filter_metadata['layer1_filtered'] > 0:
+                            print(f"   Layer 1 (SELF Matrix): {filter_metadata['layer1_filtered']} filtered")
 
                 # Store enriched entities in user profile
                 # 🌀 Phase 1.8++: CREATE profile if it doesn't exist (Nov 14, 2025 - Critical Fix)
@@ -1519,8 +1744,27 @@ class InteractiveSession:
             '3': 'not_helpful'
         }
 
+        # 🌀 Nov 17, 2025: Add satisfaction prompt (0.0-1.0 for quality boost activation)
+        satisfaction_score = None
+
         if rating_input in rating_map:
             rating = rating_map[rating_input]
+
+            # Prompt for numerical satisfaction score (0.0-1.0)
+            print("\n💧 Satisfaction score (optional - enables Hebbian learning):")
+            print("  How satisfied are you with this response? (0.0-1.0)")
+            print("  [0.0 = Not at all] [0.5 = Somewhat] [1.0 = Very satisfied] [Enter] Skip")
+            satisfaction_input = input("Satisfaction (0.0-1.0): ").strip()
+
+            if satisfaction_input:
+                try:
+                    satisfaction_score = float(satisfaction_input)
+                    # Clamp to [0.0, 1.0] range
+                    satisfaction_score = max(0.0, min(1.0, satisfaction_score))
+                    print(f"   ✅ Satisfaction recorded: {satisfaction_score:.2f}")
+                except ValueError:
+                    print("   ⚠️  Invalid number, skipping satisfaction score")
+                    satisfaction_score = None
             comment = None
             tone_notes = None
 
@@ -1546,7 +1790,8 @@ class InteractiveSession:
                     'confidence': confidence,
                     'nexuses': nexuses,
                     'mode': self.mode,
-                    'strategy': felt_states.get('emission_strategy', 'unknown')
+                    'strategy': felt_states.get('emission_strategy', 'unknown'),
+                    'satisfaction_score': satisfaction_score  # 🌀 Nov 17, 2025: Real-time quality boost
                 }
             )
 

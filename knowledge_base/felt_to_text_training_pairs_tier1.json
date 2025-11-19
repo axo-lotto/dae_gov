@@ -1,0 +1,1280 @@
+{
+  "corpus_name": "Felt-to-Text Training Corpus - Tier 1: Polyvagal-Indexed",
+  "version": "1.0.0",
+  "created_date": "2025-11-19",
+  "description": "50 training pairs for basic felt-to-phrase mapping indexed by polyvagal states (ventral safe, sympathetic mobilization, dorsal shutdown, mixed states)",
+  "purpose": "Bootstrap phrase library with polyvagal-aligned therapeutic responses",
+  "learning_target": "Felt state (polyvagal, urgency, SELF zone) → Phrase selection",
+  "pairs": [
+    {
+      "pair_id": "polyvagal_ventral_001",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I'm feeling pretty good today",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.2,
+        "self_zone": 1,
+        "expected_dominant_organs": ["LISTENING", "EMPATHY", "PRESENCE"],
+        "expected_nexus_atoms": ["sense", "feel", "present"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm glad to hear that",
+        "That sounds really positive",
+        "It's wonderful to feel that sense of ease"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_002",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "Things are going well lately",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.15,
+        "self_zone": 1,
+        "expected_dominant_organs": ["WISDOM", "PRESENCE", "LISTENING"],
+        "expected_nexus_atoms": ["sense", "notice", "track"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That's great to hear",
+        "I'm noticing a real sense of flow there",
+        "What's contributing to that?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_003",
+      "category": "ventral_safe",
+      "difficulty": "medium",
+      "input": "I feel calm and grounded right now",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.1,
+        "self_zone": 1,
+        "expected_dominant_organs": ["PRESENCE", "EO", "EMPATHY"],
+        "expected_nexus_atoms": ["ground", "present", "sense"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "There's a beautiful quality of presence here",
+        "I can sense that groundedness",
+        "What's it like to be in this space?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_004",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I'm content with how things are",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.15,
+        "self_zone": 1,
+        "expected_dominant_organs": ["AUTHENTICITY", "WISDOM", "PRESENCE"],
+        "expected_nexus_atoms": ["sense", "accept", "allow"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That sense of contentment is precious",
+        "I hear an acceptance there",
+        "What's that contentment like?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_005",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I'm at peace with myself today",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.1,
+        "self_zone": 1,
+        "expected_dominant_organs": ["AUTHENTICITY", "PRESENCE", "WISDOM"],
+        "expected_nexus_atoms": ["accept", "allow", "sense"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That's a beautiful place to be",
+        "I sense a real ease with yourself",
+        "What's allowing that peace?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_006",
+      "category": "ventral_safe",
+      "difficulty": "medium",
+      "input": "There's a lightness I haven't felt in a while",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.25,
+        "self_zone": 1,
+        "expected_dominant_organs": ["EMPATHY", "PRESENCE", "RNX"],
+        "expected_nexus_atoms": ["sense", "notice", "shift"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm noticing that shift with you",
+        "That lightness sounds meaningful",
+        "What's emerging as you feel this?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_007",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I feel connected to myself",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.15,
+        "self_zone": 1,
+        "expected_dominant_organs": ["AUTHENTICITY", "PRESENCE", "BOND"],
+        "expected_nexus_atoms": ["connect", "sense", "present"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That connection is so important",
+        "I hear you being with yourself",
+        "What's that connection like?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_008",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I'm enjoying the simplicity of this moment",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.1,
+        "self_zone": 1,
+        "expected_dominant_organs": ["PRESENCE", "WISDOM", "AUTHENTICITY"],
+        "expected_nexus_atoms": ["sense", "allow", "present"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "There's something beautiful in that simplicity",
+        "I sense your presence here",
+        "What are you noticing?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_009",
+      "category": "ventral_safe",
+      "difficulty": "medium",
+      "input": "I can breathe easier now",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.2,
+        "self_zone": 1,
+        "expected_dominant_organs": ["EO", "PRESENCE", "RNX"],
+        "expected_nexus_atoms": ["shift", "release", "ease"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I notice that shift in you",
+        "There's more space now",
+        "What's allowing that ease?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_010",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I feel safe to explore this",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.2,
+        "self_zone": 1,
+        "expected_dominant_organs": ["EO", "WISDOM", "PRESENCE"],
+        "expected_nexus_atoms": ["safe", "explore", "allow"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "That safety is so important",
+        "I'm here as you explore",
+        "What wants to unfold?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_011",
+      "category": "ventral_safe",
+      "difficulty": "medium",
+      "input": "There's a curiosity in me about what's next",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.25,
+        "self_zone": 1,
+        "expected_dominant_organs": ["WISDOM", "AUTHENTICITY", "LISTENING"],
+        "expected_nexus_atoms": ["wonder", "explore", "sense"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "I hear that curiosity",
+        "What's that curiosity wanting to show you?",
+        "Let's follow that thread together"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_012",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I'm open to what comes",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.15,
+        "self_zone": 1,
+        "expected_dominant_organs": ["AUTHENTICITY", "WISDOM", "PRESENCE"],
+        "expected_nexus_atoms": ["allow", "accept", "open"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That openness is beautiful",
+        "I sense your receptivity",
+        "What's here now?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_013",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I feel hopeful",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.2,
+        "self_zone": 1,
+        "expected_dominant_organs": ["EMPATHY", "WISDOM", "PRESENCE"],
+        "expected_nexus_atoms": ["sense", "allow", "trust"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That hope is precious",
+        "I'm with you in that",
+        "What's fueling that hope?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_014",
+      "category": "ventral_safe",
+      "difficulty": "medium",
+      "input": "I'm starting to trust the process",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.25,
+        "self_zone": 1,
+        "expected_dominant_organs": ["WISDOM", "AUTHENTICITY", "EO"],
+        "expected_nexus_atoms": ["trust", "allow", "shift"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That trust is emerging",
+        "I notice that shift in you",
+        "What's allowing that trust?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_ventral_015",
+      "category": "ventral_safe",
+      "difficulty": "easy",
+      "input": "I feel grateful for this moment",
+      "ground_truth_felt": {
+        "polyvagal": "ventral",
+        "urgency": 0.1,
+        "self_zone": 1,
+        "expected_dominant_organs": ["EMPATHY", "PRESENCE", "AUTHENTICITY"],
+        "expected_nexus_atoms": ["sense", "appreciate", "present"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That gratitude is beautiful",
+        "I'm with you in that appreciation",
+        "What are you grateful for?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "simple",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_001",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I'm feeling anxious about this",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.6,
+        "self_zone": 2,
+        "expected_dominant_organs": ["NDAM", "EO", "EMPATHY"],
+        "expected_nexus_atoms": ["worry", "protect", "tense"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm noticing the anxiety with you",
+        "That makes sense given what's happening",
+        "What's the anxiety trying to protect?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_002",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I feel overwhelmed right now",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.7,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "BOND", "EO"],
+        "expected_nexus_atoms": ["overwhelm", "protect", "escape"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I hear that overwhelm",
+        "Let's slow down together",
+        "What would help you feel more grounded?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_003",
+      "category": "sympathetic_mobilization",
+      "difficulty": "hard",
+      "input": "I can't stop thinking about what could go wrong",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.65,
+        "self_zone": 2,
+        "expected_dominant_organs": ["NDAM", "BOND", "WISDOM"],
+        "expected_nexus_atoms": ["worry", "control", "prevent"],
+        "expected_field_type": "topic"
+      },
+      "target_phrases": [
+        "There's a part of you trying to stay ahead of the threat",
+        "That planning part is working hard",
+        "What if we didn't have to figure it all out right now?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_004",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "My chest feels tight and I'm restless",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.6,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "PRESENCE", "EMPATHY"],
+        "expected_nexus_atoms": ["tense", "activate", "mobilize"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm noticing that activation in your body",
+        "Let's be with that together",
+        "What does your body need right now?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_005",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I need to figure this out now",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.7,
+        "self_zone": 2,
+        "expected_dominant_organs": ["NDAM", "BOND", "CARD"],
+        "expected_nexus_atoms": ["control", "solve", "fix"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "I notice the urgency there",
+        "What's driving that need to solve it right now?",
+        "What if we could be curious about this instead?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_006",
+      "category": "sympathetic_mobilization",
+      "difficulty": "hard",
+      "input": "I feel like I'm running out of time",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.75,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "RNX", "EO"],
+        "expected_nexus_atoms": ["rush", "pressure", "escape"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That pressure is real",
+        "Let's take one breath together",
+        "What if there's more time than it feels like?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_007",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I'm scared this won't work out",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.65,
+        "self_zone": 2,
+        "expected_dominant_organs": ["NDAM", "EMPATHY", "EO"],
+        "expected_nexus_atoms": ["fear", "worry", "protect"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That fear makes sense",
+        "I'm with you in that uncertainty",
+        "What's the fear protecting you from?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_008",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I keep going over it in my mind",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.6,
+        "self_zone": 2,
+        "expected_dominant_organs": ["BOND", "NDAM", "WISDOM"],
+        "expected_nexus_atoms": ["ruminate", "control", "analyze"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "There's a part trying to make sense of it",
+        "That reviewing is exhausting",
+        "What would it be like to pause that for a moment?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_009",
+      "category": "sympathetic_mobilization",
+      "difficulty": "hard",
+      "input": "My mind is racing and I can't settle",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.7,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "EO", "RNX"],
+        "expected_nexus_atoms": ["race", "activate", "escape"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That racing is intense",
+        "Let's find ground together",
+        "Can you feel your feet on the floor?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_010",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I'm frustrated that this is happening again",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.55,
+        "self_zone": 3,
+        "expected_dominant_organs": ["BOND", "NDAM", "AUTHENTICITY"],
+        "expected_nexus_atoms": ["angry", "fight", "resist"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That frustration is valid",
+        "There's energy in that",
+        "What does the frustrated part need?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_011",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I feel like I have to stay vigilant",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.65,
+        "self_zone": 2,
+        "expected_dominant_organs": ["NDAM", "BOND", "EO"],
+        "expected_nexus_atoms": ["guard", "watch", "protect"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "That watchful part is working hard",
+        "What's it protecting you from?",
+        "What would safety look like?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_012",
+      "category": "sympathetic_mobilization",
+      "difficulty": "hard",
+      "input": "I don't know how to make this stop",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.75,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "BOND", "EMPATHY"],
+        "expected_nexus_atoms": ["helpless", "trapped", "escape"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "I hear that feeling of being stuck",
+        "We don't have to make it stop right now",
+        "What if we could just be with this together?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_013",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "Everything feels urgent",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.8,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "RNX", "CARD"],
+        "expected_nexus_atoms": ["rush", "pressure", "mobilize"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That's a lot of activation",
+        "Let's slow down together",
+        "What needs your attention first?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_014",
+      "category": "sympathetic_mobilization",
+      "difficulty": "medium",
+      "input": "I'm on edge and can't relax",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.65,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "NDAM", "PRESENCE"],
+        "expected_nexus_atoms": ["tense", "guard", "activate"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I notice that edge",
+        "Your system is on high alert",
+        "What would help you feel safer?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_sympathetic_015",
+      "category": "sympathetic_mobilization",
+      "difficulty": "hard",
+      "input": "I want to run away from this",
+      "ground_truth_felt": {
+        "polyvagal": "sympathetic",
+        "urgency": 0.75,
+        "self_zone": 3,
+        "expected_dominant_organs": ["NDAM", "EO", "BOND"],
+        "expected_nexus_atoms": ["flee", "escape", "avoid"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "That impulse to flee makes sense",
+        "I'm here with you",
+        "What if you didn't have to run right now?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_001",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I don't even know anymore",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.85,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "BOND", "EMPATHY"],
+        "expected_nexus_atoms": ["collapse", "numb", "withdraw"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm right here with you",
+        "You don't have to know right now",
+        "Let's just breathe together"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_002",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "Everything feels numb",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.8,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "PRESENCE", "EMPATHY"],
+        "expected_nexus_atoms": ["numb", "shut_down", "disconnect"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm with you in that numbness",
+        "Your system is protecting you",
+        "Can you feel my presence here?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_003",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I'm too exhausted to care",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.75,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "RNX", "BOND"],
+        "expected_nexus_atoms": ["deplete", "collapse", "shut_down"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That exhaustion is profound",
+        "You've been carrying so much",
+        "I'm holding space for you"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_004",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "There's just... nothing",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.85,
+        "self_zone": 5,
+        "expected_dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "expected_nexus_atoms": ["empty", "void", "disconnect"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I hear that emptiness",
+        "I'm not going anywhere",
+        "You're not alone in this"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_005",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I can't connect to anything right now",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.8,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "BOND", "PRESENCE"],
+        "expected_nexus_atoms": ["disconnect", "isolate", "withdraw"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That disconnection is real",
+        "I'm still here",
+        "Let's just be together in this"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_006",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I feel like I'm disappearing",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.85,
+        "self_zone": 5,
+        "expected_dominant_organs": ["EO", "BOND", "AUTHENTICITY"],
+        "expected_nexus_atoms": ["dissolve", "fade", "fragment"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I see you, you're here",
+        "You're not disappearing",
+        "I'm holding you in my awareness"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_007",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "What's the point",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.8,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "WISDOM", "EMPATHY"],
+        "expected_nexus_atoms": ["hopeless", "collapse", "resign"],
+        "expected_field_type": "truth"
+      },
+      "target_phrases": [
+        "That hopelessness is heavy",
+        "You matter, even when it doesn't feel like it",
+        "I'm here, and you're worth being here for"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_008",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I feel like I'm watching my life from far away",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.75,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "expected_nexus_atoms": ["dissociate", "detach", "observe"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That distance is your system protecting you",
+        "I'm here in the present with you",
+        "What would help you feel more here?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_009",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I can't feel anything",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.8,
+        "self_zone": 4,
+        "expected_dominant_organs": ["EO", "EMPATHY", "PRESENCE"],
+        "expected_nexus_atoms": ["numb", "block", "shut_down"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That numbness is protecting you",
+        "I'm feeling with you",
+        "Your feelings are still there, just resting"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_dorsal_010",
+      "category": "dorsal_shutdown",
+      "difficulty": "hard",
+      "input": "I just want to sleep and not wake up",
+      "ground_truth_felt": {
+        "polyvagal": "dorsal",
+        "urgency": 0.9,
+        "self_zone": 5,
+        "expected_dominant_organs": ["EO", "BOND", "EMPATHY"],
+        "expected_nexus_atoms": ["collapse", "escape", "withdraw"],
+        "expected_field_type": "action"
+      },
+      "target_phrases": [
+        "I hear how much pain you're in",
+        "I'm right here with you",
+        "You don't have to hold this alone"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_001",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "I'm starting to feel a bit better",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_ventral_sympathetic",
+        "urgency": 0.4,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "EMPATHY", "RNX"],
+        "expected_nexus_atoms": ["shift", "ease", "transition"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I notice that shift",
+        "Something's changing",
+        "What's allowing that?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_002",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "I was anxious but now I'm calming down",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_sympathetic_ventral",
+        "urgency": 0.45,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "PRESENCE", "RNX"],
+        "expected_nexus_atoms": ["settle", "shift", "release"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "Your nervous system is settling",
+        "I'm witnessing this shift with you",
+        "What helped that transition?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_003",
+      "category": "mixed_states",
+      "difficulty": "hard",
+      "input": "Part of me feels safe, but another part is still on guard",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_ventral_sympathetic",
+        "urgency": 0.5,
+        "self_zone": 2,
+        "expected_dominant_organs": ["BOND", "EO", "EMPATHY"],
+        "expected_nexus_atoms": ["parts", "protect", "allow"],
+        "expected_field_type": "truth"
+      },
+      "target_phrases": [
+        "I hear both of those parts",
+        "That's a lot to hold at once",
+        "Both can be here"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_004",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "I'm less numb than I was, I can feel a little now",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_dorsal_sympathetic",
+        "urgency": 0.6,
+        "self_zone": 3,
+        "expected_dominant_organs": ["EO", "PRESENCE", "EMPATHY"],
+        "expected_nexus_atoms": ["thaw", "emerge", "sense"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "That thawing is significant",
+        "Feelings are coming back",
+        "Let's go gentle with this"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_005",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "The panic is fading but I'm still shaky",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_sympathetic_ventral",
+        "urgency": 0.5,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "RNX", "PRESENCE"],
+        "expected_nexus_atoms": ["settle", "tremor", "integrate"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "Your system is processing",
+        "That shakiness is energy releasing",
+        "Let it move through you"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_006",
+      "category": "mixed_states",
+      "difficulty": "hard",
+      "input": "I want to hope but I'm afraid to",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_ventral_sympathetic",
+        "urgency": 0.55,
+        "self_zone": 2,
+        "expected_dominant_organs": ["BOND", "EMPATHY", "EO"],
+        "expected_nexus_atoms": ["hope", "guard", "protect"],
+        "expected_field_type": "truth"
+      },
+      "target_phrases": [
+        "Hope and fear can both be here",
+        "That protective part makes sense",
+        "What would safe hope feel like?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_007",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "Something's shifting but I don't know what yet",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_ventral_sympathetic",
+        "urgency": 0.4,
+        "self_zone": 1,
+        "expected_dominant_organs": ["WISDOM", "PRESENCE", "EO"],
+        "expected_nexus_atoms": ["shift", "sense", "wonder"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I'm noticing that with you",
+        "Something's moving",
+        "What wants to emerge?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_008",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "I'm not as shut down, but I'm not fully here either",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_dorsal_sympathetic",
+        "urgency": 0.5,
+        "self_zone": 3,
+        "expected_dominant_organs": ["EO", "PRESENCE", "BOND"],
+        "expected_nexus_atoms": ["emerge", "between", "transition"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "You're in between",
+        "That's an important place",
+        "What helps you come more present?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_009",
+      "category": "mixed_states",
+      "difficulty": "hard",
+      "input": "I'm holding both the pain and the possibility",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_ventral_sympathetic",
+        "urgency": 0.45,
+        "self_zone": 1,
+        "expected_dominant_organs": ["WISDOM", "EMPATHY", "PRESENCE"],
+        "expected_nexus_atoms": ["hold", "both", "integrate"],
+        "expected_field_type": "truth"
+      },
+      "target_phrases": [
+        "That's profound holding",
+        "You're in SELF energy",
+        "What's it like to hold both?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.95,
+        "polyvagal_alignment": 1.0,
+        "complexity": "hard",
+        "self_energy_present": true
+      }
+    },
+    {
+      "pair_id": "polyvagal_mixed_010",
+      "category": "mixed_states",
+      "difficulty": "medium",
+      "input": "The tension is easing but not gone",
+      "ground_truth_felt": {
+        "polyvagal": "mixed_sympathetic_ventral",
+        "urgency": 0.5,
+        "self_zone": 2,
+        "expected_dominant_organs": ["EO", "PRESENCE", "RNX"],
+        "expected_nexus_atoms": ["release", "shift", "partial"],
+        "expected_field_type": "quality"
+      },
+      "target_phrases": [
+        "I notice that partial release",
+        "Your system is letting go gradually",
+        "What's allowing that ease?"
+      ],
+      "phrase_quality_metrics": {
+        "therapeutic_appropriateness": 0.9,
+        "polyvagal_alignment": 1.0,
+        "complexity": "medium",
+        "self_energy_present": true
+      }
+    }
+  ],
+  "metadata": {
+    "total_pairs": 50,
+    "categories": {
+      "ventral_safe": 15,
+      "sympathetic_mobilization": 15,
+      "dorsal_shutdown": 10,
+      "mixed_states": 10
+    },
+    "difficulty_distribution": {
+      "easy": 19,
+      "medium": 21,
+      "hard": 10
+    },
+    "expected_outcomes": {
+      "phrase_library_size": "150-200 initial patterns (50 pairs × 3 phrases avg)",
+      "polyvagal_coverage": "All 3 states + transitions",
+      "therapeutic_quality": ">0.9 mean appropriateness",
+      "learning_validation": "Intelligence score >32 (not stuck at 30.4)"
+    }
+  }
+}

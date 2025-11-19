@@ -452,8 +452,11 @@ class Config:
     # When True: Disables felt-guided LLM override to measure organic emission evolution
     # When False: Uses felt-guided LLM for quality (interactive/production mode)
     # Usage: Set to True for epoch training, False for dae_interactive.py
-    # 🌀 WEEK 4 DAY 1 (Nov 17, 2025): ENABLED for organic emission evolution
-    INTELLIGENCE_EMERGENCE_MODE = True  # Default: production quality mode
+    # 🚨 EMERGENCY PATCH (Nov 18, 2025): DISABLED to fix nonsensical organic emissions
+    # Organism was pulling from transduction_mechanism_phrases.json (philosophical templates)
+    # instead of generating contextually appropriate conversational responses.
+    # This MUST stay False until proper conversational phrase learning is implemented.
+    INTELLIGENCE_EMERGENCE_MODE = False  # EMERGENCY: LLM-only mode for coherent responses
 
     # LLM Backend settings (only relevant if LOCAL_LLM_ENABLED = True)
     LOCAL_LLM_BACKEND = "ollama"  # "ollama", "lmstudio", "gpt4all"
@@ -473,6 +476,27 @@ class Config:
     LLM_NEVER_IN_ZONES = [4, 5]  # Protective/collapse zones
     LLM_NEVER_IF_NDAM_ABOVE = 0.7  # Crisis threshold
     LLM_NEVER_FOR_THERAPEUTIC = True  # Therapeutic core always DAE-only
+
+    # ============================================================================
+    # SYMBIOTIC LLM LEARNING (Phase 1 LLM Independence - NOV 18, 2025)
+    # ============================================================================
+
+    # Entity extraction mode (Phase 1-3 progression)
+    ENTITY_EXTRACTION_MODE = "symbiotic"  # Options: "symbiotic", "hybrid", "pattern"
+
+    # Symbiotic learning mode (Phase 1: Weeks 1-4)
+    SYMBIOTIC_LEARNING_MODE = "bootstrap"  # Options: "bootstrap" (70%), "balanced" (40%), "specialized" (10%)
+
+    # Pattern-LLM comparison logging
+    PATTERN_LLM_COMPARISON_ENABLED = True  # Log discrepancies for learning
+
+    # Hybrid mode settings (Phase 2: Weeks 5-8)
+    HYBRID_LLM_VALIDATION_RATE = 0.20  # Validate 20% of pattern extractions (Phase 2)
+
+    # OLLAMA fallback settings (Phase 3: Weeks 9-12)
+    OLLAMA_FALLBACK_ENABLED = False  # Enable optional fallback for unknown entities (Phase 3)
+    OLLAMA_FALLBACK_THRESHOLD = 0.60  # Use fallback if confidence < 0.60
+    OLLAMA_FALLBACK_MAX_RATE = 0.10  # Maximum 10% fallback usage
 
     # ============================================================================
     # NEO4J KNOWLEDGE GRAPH CONFIGURATION (Phase 1.8++ - NOV 14, 2025)

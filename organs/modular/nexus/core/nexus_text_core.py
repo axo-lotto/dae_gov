@@ -67,6 +67,13 @@ try:
 except ImportError:
     ENTITY_TRACKER_AVAILABLE = False
 
+# Import entity-organ predictor for proactive entity querying (Nov 18, 2025 - Dual Memory Phase 1)
+try:
+    from persona_layer.entity_organ_predictor import EntityOrganPredictor
+    ENTITY_PREDICTOR_AVAILABLE = True
+except ImportError:
+    ENTITY_PREDICTOR_AVAILABLE = False
+
 # Import organ agreement computer for past/present comparison (Nov 16, 2025)
 try:
     from persona_layer.organ_agreement_metrics import OrganAgreementComputer
@@ -188,6 +195,19 @@ class NEXUSTextCore:
             except Exception as e:
                 print(f"   ⚠️  NEXUS: Agreement computer unavailable: {e}")
                 self.agreement_computer = None
+
+        # Load entity-organ predictor for proactive querying (Nov 18, 2025 - Dual Memory Phase 1)
+        self.entity_predictor = None
+        if ENTITY_PREDICTOR_AVAILABLE:
+            try:
+                self.entity_predictor = EntityOrganPredictor(
+                    confidence_threshold=0.6,  # Predict entities with 60%+ similarity
+                    max_predictions=5  # Top 5 entities
+                )
+                print(f"   ✅ NEXUS: Entity-organ predictor loaded (field → entity bridge)")
+            except Exception as e:
+                print(f"   ⚠️  NEXUS: Entity predictor unavailable: {e}")
+                self.entity_predictor = None
 
     def process_text_occasions(
         self,
@@ -564,11 +584,15 @@ class NEXUSTextCore:
         atom_activations: Dict[str, float]
     ) -> List[EntityMention]:
         """
-        Detect entity mentions via semantic atom keyword matching.
+        Detect entity mentions via semantic atom keyword matching + PROACTIVE PREDICTION.
 
-        Priority:
-        1. Check entity_recall atoms for known entities (from entity_organ_tracker)
-        2. Check other atoms for entity-memory patterns
+        Strategy (Dual Memory Architecture - Nov 18, 2025):
+        1. KEYWORD DETECTION: Check entity_recall atoms for entities mentioned in text
+        2. PROACTIVE PREDICTION: Use entity-organ predictor to suggest relevant entities
+           based on current organ activation patterns (field → entity bridge)
+
+        This enables NEXUS to query Neo4j for entities that MIGHT be relevant
+        even if not explicitly mentioned (prehensive resonance).
 
         Args:
             occasions: List of text occasions
@@ -576,12 +600,12 @@ class NEXUSTextCore:
             atom_activations: Already-calculated atom activations
 
         Returns:
-            List of detected EntityMention objects
+            List of detected EntityMention objects (keyword + predicted)
         """
         mentions = []
         text = " ".join([occ.text for occ in occasions]).lower()
 
-        # Get entity_recall keywords (these are potential entity values)
+        # ===== PATHWAY 1: KEYWORD DETECTION (Explicit mentions) =====
         entity_keywords = self.atoms.get('entity_recall', {})
 
         for keyword, strength in entity_keywords.items():
@@ -614,6 +638,39 @@ class NEXUSTextCore:
                     activation_atoms=activated_atoms,
                     activation_strength=combined_strength
                 ))
+
+        # ===== PATHWAY 2: PROACTIVE PREDICTION (Field-based resonance) =====
+        # Use entity-organ predictor to suggest entities based on atom activations
+        if self.entity_predictor and self.entity_tracker:
+            # Convert NEXUS atom activations to "current organ activations"
+            # (NEXUS atoms ARE organ activations for memory prehension)
+            current_organ_pattern = atom_activations  # 7D entity-memory space
+
+            # Predict entities likely relevant based on field pattern
+            predictions = self.entity_predictor.predict_entities_for_organs(
+                current_organ_activations=current_organ_pattern,
+                entity_tracker=self.entity_tracker,
+                min_mention_threshold=3  # Need 3+ mentions for reliable prediction
+            )
+
+            # Add predicted entities that aren't already mentioned
+            mentioned_values = {m.entity_value for m in mentions}
+
+            for prediction in predictions:
+                if prediction.entity_value not in mentioned_values:
+                    # Predicted entity (not explicitly mentioned but resonantly activated)
+                    mentions.append(EntityMention(
+                        entity_value=prediction.entity_value,
+                        entity_type=prediction.entity_type,
+                        confidence=prediction.confidence * 0.8,  # Slightly lower confidence (predicted vs explicit)
+                        text_position=0,
+                        activation_atoms=list(prediction.predicted_organs.keys()),
+                        activation_strength=np.mean(list(prediction.predicted_organs.values())) if prediction.predicted_organs else 0.5,
+                        # Store prediction metadata
+                        predicted_organ_pattern=prediction.predicted_organs,
+                        predicted_polyvagal_state=prediction.predicted_polyvagal,
+                        predicted_v0_energy=prediction.predicted_v0_energy
+                    ))
 
         return mentions
 
@@ -714,6 +771,361 @@ class NEXUSTextCore:
             except Exception as e:
                 # Non-critical - continue without enrichment
                 continue
+
+    # ========================================================================
+    # NEIGHBOR-AWARE METHODS (Nov 18, 2025 - Phase 3B)
+    # ========================================================================
+
+    def process_word_occasions(
+        self,
+        word_occasions: List,  # List[WordOccasion] - avoid circular import
+        cycle: int = 0,
+        context: Optional[Dict[str, Any]] = None
+    ) -> List[Dict[str, Any]]:
+        """
+        Process word occasions through neighbor-aware NEXUS prehension.
+
+        This is the neighbor prehension entry point for LLM-free entity extraction.
+        Each WordOccasion is processed with neighbor context to compute entity scores.
+
+        Args:
+            word_occasions: List of WordOccasion objects with left/right neighbors
+            cycle: Current processing cycle (0 for single-pass)
+            context: Processing context (user_id, entity_tracker, etc.)
+
+        Returns:
+            List of entity dicts: [{
+                'entity_value': str,
+                'entity_type': str,
+                'confidence_score': float,
+                'coherence': float,
+                'atom_activations': Dict[str, float],
+                'position': int,
+                'source': 'neighbor_prehension'
+            }]
+
+        Example:
+            from transductive.word_occasion import WordOccasion
+            word_occs = WordOccasion.from_sentence_batch("Today Emma went to work")
+            entities = nexus.process_word_occasions(word_occs, context={'user_id': 'user_123'})
+            # Returns: [{'entity_value': 'Emma', 'entity_type': 'Person', 'confidence_score': 0.85, ...}]
+        """
+        context = context or {}
+        user_id = context.get('user_id', 'default_user')
+
+        entity_candidates = []
+
+        for word_occ in word_occasions:
+            # Calculate neighbor-aware atom activations
+            atom_activations = self._calculate_atom_activations_with_neighbors(word_occ, context)
+
+            # Skip if no atoms activated
+            if not atom_activations or max(atom_activations.values()) < self.config.entity_detection_threshold:
+                continue
+
+            # Predict entity type from atom pattern
+            entity_type, confidence = self._predict_entity_type_from_atoms(word_occ, atom_activations)
+
+            if entity_type and confidence > 0.7:
+                # High-confidence entity
+                entity_candidates.append({
+                    'entity_value': word_occ.word,
+                    'entity_type': entity_type,
+                    'confidence_score': confidence,
+                    'coherence': np.mean(list(atom_activations.values())),
+                    'atom_activations': atom_activations,
+                    'position': word_occ.position,
+                    'source': 'neighbor_prehension',
+                    'left_neighbors': word_occ.left_neighbors,
+                    'right_neighbors': word_occ.right_neighbors
+                })
+
+        return entity_candidates
+
+    def _calculate_atom_activations_with_neighbors(
+        self,
+        word_occasion,  # WordOccasion - avoid circular import
+        context: Optional[Dict] = None
+    ) -> Dict[str, float]:
+        """
+        Calculate 7 NEXUS atoms with neighbor context awareness.
+
+        Extends base atom calculation with neighbor signals:
+        1. entity_recall - Base + left/right neighbor consistency
+        2. relationship_depth - Relational keywords in neighbors
+        3. temporal_continuity - (unchanged - no neighbor impact)
+        4. co_occurrence - Neighbor co-mention patterns
+        5. salience_gradient - Neighbor novelty gradient
+        6. memory_coherence - (unchanged - no neighbor impact)
+        7. contextual_grounding - Neighbor keyword archetypes
+
+        Args:
+            word_occasion: WordOccasion with word, left_neighbors, right_neighbors
+            context: Processing context (entity_tracker, user_id, etc.)
+
+        Returns:
+            {atom_name: activation_strength} dict with neighbor boosts
+        """
+        context = context or {}
+        word = word_occasion.word.lower()
+        left_neighbors = [w.lower() for w in word_occasion.left_neighbors]
+        right_neighbors = [w.lower() for w in word_occasion.right_neighbors]
+
+        activations = {}
+
+        # Atom 1: entity_recall (with neighbor consistency)
+        activations['entity_recall'] = self._entity_recall_with_neighbors(
+            word, left_neighbors, right_neighbors
+        )
+
+        # Atom 2: relationship_depth (with multi-word relational binding)
+        activations['relationship_depth'] = self._relationship_depth_with_neighbors(
+            word, left_neighbors, right_neighbors
+        )
+
+        # Atom 3: temporal_continuity (unchanged - no neighbor boost)
+        activations['temporal_continuity'] = self._temporal_continuity_base(word)
+
+        # Atom 4: co_occurrence (with neighbor co-mention patterns)
+        activations['co_occurrence'] = self._co_occurrence_with_neighbors(
+            word, left_neighbors, right_neighbors, context
+        )
+
+        # Atom 5: salience_gradient (with neighbor novelty gradient)
+        activations['salience_gradient'] = self._salience_gradient_with_neighbors(
+            word, left_neighbors, right_neighbors
+        )
+
+        # Atom 6: memory_coherence (unchanged - no neighbor boost)
+        activations['memory_coherence'] = self._memory_coherence_base(word)
+
+        # Atom 7: contextual_grounding (with neighbor keyword archetypes)
+        activations['contextual_grounding'] = self._contextual_grounding_with_neighbors(
+            word, left_neighbors, right_neighbors
+        )
+
+        # Filter out zero activations
+        activations = {k: v for k, v in activations.items() if v > 0.0}
+
+        return activations
+
+    # === Individual Atom Methods (Neighbor-Aware) ===
+
+    def _entity_recall_with_neighbors(
+        self,
+        word: str,
+        left_neighbors: List[str],
+        right_neighbors: List[str]
+    ) -> float:
+        """
+        Entity recall with neighbor consistency checking.
+
+        Boosts activation when:
+        - Word matches entity keywords (base)
+        - Neighbors contain pronouns/references (consistency)
+        - Neighbors have possessive markers (my, her, his)
+        """
+        # Base activation from keyword matching
+        base_activation = self.atoms['entity_recall'].get(word, 0.0)
+
+        # Neighbor boost: Pronouns or possessive markers
+        neighbor_keywords = left_neighbors + right_neighbors
+        neighbor_boost = 0.0
+
+        possessive_markers = ['my', 'her', 'his', 'their', 'our', 'your']
+        pronouns = ['she', 'he', 'they', 'her', 'him', 'them']
+
+        for neighbor in neighbor_keywords:
+            if neighbor in possessive_markers:
+                neighbor_boost += 0.15
+            elif neighbor in pronouns:
+                neighbor_boost += 0.10
+
+        # Capitalization boost (likely proper noun)
+        if word[0].isupper() and len(word) > 1:
+            base_activation = max(base_activation, 0.80)
+
+        total_activation = min(1.0, base_activation + neighbor_boost)
+        return total_activation
+
+    def _relationship_depth_with_neighbors(
+        self,
+        word: str,
+        left_neighbors: List[str],
+        right_neighbors: List[str]
+    ) -> float:
+        """
+        Relationship depth with multi-word relational binding.
+
+        Boosts activation when neighbors contain relationship keywords
+        like "daughter", "son", "friend", "colleague", etc.
+        """
+        base_activation = self.atoms['relationship_depth'].get(word, 0.0)
+
+        # Check neighbors for relationship keywords
+        neighbor_keywords = left_neighbors + right_neighbors
+        relationship_keywords = ['daughter', 'son', 'mother', 'father', 'brother', 'sister',
+                                'friend', 'partner', 'colleague', 'boss', 'child', 'parent']
+
+        neighbor_boost = 0.0
+        for neighbor in neighbor_keywords:
+            if neighbor in relationship_keywords:
+                neighbor_boost += 0.20
+                break  # Only boost once
+
+        total_activation = min(1.0, base_activation + neighbor_boost)
+        return total_activation
+
+    def _temporal_continuity_base(self, word: str) -> float:
+        """
+        Temporal continuity (unchanged - no neighbor impact).
+
+        Returns base activation from temporal keywords.
+        """
+        return self.atoms['temporal_continuity'].get(word, 0.0)
+
+    def _co_occurrence_with_neighbors(
+        self,
+        word: str,
+        left_neighbors: List[str],
+        right_neighbors: List[str],
+        context: Dict
+    ) -> float:
+        """
+        Co-occurrence with neighbor co-mention patterns.
+
+        Boosts activation when:
+        - Neighbors contain conjunction words ("and", "with")
+        - Entity-organ tracker shows co-mention patterns
+        """
+        base_activation = self.atoms['co_occurrence'].get(word, 0.0)
+
+        # Check for conjunctions in neighbors
+        neighbor_keywords = left_neighbors + right_neighbors
+        conjunctions = ['and', 'with', 'together', 'both']
+
+        neighbor_boost = 0.0
+        for neighbor in neighbor_keywords:
+            if neighbor in conjunctions:
+                neighbor_boost += 0.15
+                break
+
+        # TODO: Query entity-organ tracker for co-mention patterns
+        # if context.get('entity_tracker'):
+        #     co_mention_boost = self._check_co_mention_patterns(word, context)
+        #     neighbor_boost += co_mention_boost
+
+        total_activation = min(1.0, base_activation + neighbor_boost)
+        return total_activation
+
+    def _salience_gradient_with_neighbors(
+        self,
+        word: str,
+        left_neighbors: List[str],
+        right_neighbors: List[str]
+    ) -> float:
+        """
+        Salience gradient with neighbor novelty gradient.
+
+        Boosts activation when neighbors contain importance/urgency markers.
+        """
+        base_activation = self.atoms['salience_gradient'].get(word, 0.0)
+
+        # Check neighbors for importance markers
+        neighbor_keywords = left_neighbors + right_neighbors
+        importance_markers = ['worried', 'scared', 'anxious', 'concerned', 'important',
+                             'crucial', 'especially', 'particularly']
+
+        neighbor_boost = 0.0
+        for neighbor in neighbor_keywords:
+            if neighbor in importance_markers:
+                neighbor_boost += 0.20
+                break
+
+        total_activation = min(1.0, base_activation + neighbor_boost)
+        return total_activation
+
+    def _memory_coherence_base(self, word: str) -> float:
+        """
+        Memory coherence (unchanged - no neighbor impact).
+
+        Returns base activation from coherence keywords.
+        """
+        return self.atoms['memory_coherence'].get(word, 0.0)
+
+    def _contextual_grounding_with_neighbors(
+        self,
+        word: str,
+        left_neighbors: List[str],
+        right_neighbors: List[str]
+    ) -> float:
+        """
+        Contextual grounding with neighbor keyword archetypes.
+
+        Boosts activation when neighbors contain possessive or grounding keywords.
+        """
+        base_activation = self.atoms['contextual_grounding'].get(word, 0.0)
+
+        # Check left neighbors for possessive pronouns (high signal for entity)
+        possessive_boost = 0.0
+        for neighbor in left_neighbors:
+            if neighbor in ['my', 'our', 'their']:
+                possessive_boost = 0.25
+                break
+
+        # Check right neighbors for grounding prepositions
+        grounding_boost = 0.0
+        for neighbor in right_neighbors:
+            if neighbor in ['about', 'regarding', 'with', 'of']:
+                grounding_boost = 0.10
+                break
+
+        total_activation = min(1.0, base_activation + possessive_boost + grounding_boost)
+        return total_activation
+
+    def _predict_entity_type_from_atoms(
+        self,
+        word_occasion,  # WordOccasion
+        atom_activations: Dict[str, float]
+    ) -> tuple[Optional[str], float]:
+        """
+        Predict entity type from atom activation pattern.
+
+        Uses heuristics based on which atoms are most active:
+        - entity_recall + relationship_depth → Person
+        - contextual_grounding + salience → Place/Organization
+        - co_occurrence → Event/Concept
+
+        Args:
+            word_occasion: WordOccasion object
+            atom_activations: {atom_name: activation} dict
+
+        Returns:
+            (entity_type, confidence) tuple or (None, 0.0) if not entity
+        """
+        if not atom_activations:
+            return None, 0.0
+
+        # Simple heuristic: Capitalized word + high entity_recall = Person
+        entity_recall = atom_activations.get('entity_recall', 0.0)
+        relationship_depth = atom_activations.get('relationship_depth', 0.0)
+        contextual_grounding = atom_activations.get('contextual_grounding', 0.0)
+
+        is_capitalized = word_occasion.word[0].isupper()
+
+        # Person detection
+        if is_capitalized and entity_recall > 0.7:
+            confidence = entity_recall
+            if relationship_depth > 0.5:
+                confidence = min(1.0, confidence + 0.1)  # Boost for relationship context
+            return "Person", confidence
+
+        # Place detection (capitalized + contextual grounding)
+        if is_capitalized and contextual_grounding > 0.6:
+            return "Place", contextual_grounding
+
+        # No clear entity type
+        return None, 0.0
 
 
 # Quick test

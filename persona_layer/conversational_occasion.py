@@ -350,15 +350,17 @@ class ConversationalOccasion:
         # Condition 2: Satisfaction increasing
         satisfaction_increasing = self.satisfaction > self._prev_satisfaction
 
-        # Simplified Kairos for conversational: in window + good satisfaction
+        # 🌀 Phase 3B Fix #3 (Nov 18, 2025): Fixed satisfaction threshold
+        # Previous: satisfaction > 0.7 (OUTSIDE kairos window [0.30, 0.50])
+        # Fixed: satisfaction >= 0.30 (WITHIN kairos window)
         # Conversational V0 descends rapidly through window, so just check:
         # 1. We're in the window
-        # 2. Satisfaction is sufficient (>0.7 means good coherence)
+        # 2. Satisfaction is at lower bound (>=0.30 means entering kairos)
         # 3. Not first cycle (too early)
         kairos = (
             self.cycle >= 2 and  # Skip first cycle (initial descent)
             in_window and
-            self.satisfaction > 0.7  # High satisfaction = good moment for decision
+            self.satisfaction >= Config.KAIROS_WINDOW_MIN  # Match window lower bound
         )
 
         if kairos and not self.kairos_detected:

@@ -1,0 +1,53 @@
+{
+  "entity_metrics": {
+    "Emma": {
+      "entity_value": "Emma",
+      "entity_type": "Person",
+      "organ_boosts": {
+        "BOND": 0.775748913763936,
+        "EMPATHY": 0.6571049622470987,
+        "PRESENCE": 0.6205991310111487
+      },
+      "typical_polyvagal_state": "ventral",
+      "typical_v0_energy": 0.2718385547753128,
+      "typical_urgency": 0.0,
+      "typical_self_distance": 0.13494168764050068,
+      "co_mentioned_entities": {},
+      "mention_count": 15,
+      "first_mentioned": "2025-11-18T16:38:22.535124",
+      "last_mentioned": "2025-11-18T16:40:37.646092",
+      "success_rate": 0.8833112279774742
+    },
+    "work": {
+      "entity_value": "work",
+      "entity_type": "Place",
+      "organ_boosts": {
+        "NDAM": 0.7301166247189985,
+        "AUTHENTICITY": 0.565840384157224,
+        "BOND": 0.36505831235949926
+      },
+      "typical_polyvagal_state": "sympathetic",
+      "typical_v0_energy": 0.6642762405617745,
+      "typical_urgency": 0.6388520466291238,
+      "typical_self_distance": 0.5912645780898746,
+      "co_mentioned_entities": {},
+      "mention_count": 15,
+      "first_mentioned": "2025-11-18T16:38:22.536433",
+      "last_mentioned": "2025-11-18T16:40:37.646945",
+      "success_rate": 0.6642762405617745
+    }
+  },
+  "last_updated": "2025-11-18T16:40:37.646985",
+  "total_entities": 2,
+  "summary": {
+    "total_entities": 2,
+    "entities_with_patterns": 2,
+    "mean_mention_count": 15.0,
+    "mean_success_rate": 0.7737937342696244,
+    "mean_v0_energy": 0.46805739766854365,
+    "entity_types": [
+      "Place",
+      "Person"
+    ]
+  }
+}

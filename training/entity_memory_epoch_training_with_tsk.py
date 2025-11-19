@@ -28,8 +28,11 @@ from persona_layer.tsk_serialization_helper import tsk_to_dict_recursive, valida
 # ✅ NEW: Import organic intelligence metrics
 from training.organic_intelligence_metrics import OrganicIntelligenceEvaluator
 
+# 🌀 NEW (Nov 19, 2025): Import wave coupling metrics
+from training.wave_coupling_metrics import WaveCouplingTracker
+
 print("\n" + "="*80)
-print("🧠 ENTITY-MEMORY TRAINING WITH TSK LOGGING")
+print("🧠 ENTITY-MEMORY TRAINING WITH TSK LOGGING + WAVE COUPLING")
 print("="*80 + "\n")
 
 # ============================================================================
@@ -170,6 +173,10 @@ def evaluate_entity_prehension(pair: Dict, result: Dict) -> Dict:
 
 print(f"🚀 Starting Epoch {EPOCH_NUM} training...\n")
 
+# 🌀 NEW (Nov 19, 2025): Initialize wave coupling tracker
+wave_tracker = WaveCouplingTracker()
+print("🌀 Wave coupling tracker initialized (R-matrix + field coherence + wave phases)\n")
+
 results = []
 metrics = {
     'entity_recall_accuracy': [],
@@ -192,7 +199,8 @@ tsk_summary = {
     'polyvagal_trajectories': [],
     'kairos_detections': 0,
     'organ_signature_evolution': [],
-    'transformation_pathways': []
+    'transformation_pathways': [],
+    'satisfaction_scores': []  # ✅ TRACK SATISFACTION FOR QUALITY BOOST
 }
 
 # ✅ NEW: Initialize organic intelligence evaluator
@@ -208,24 +216,32 @@ for i, pair in enumerate(training_pairs[:NUM_PAIRS], 1):
     input_text = pair['input']
     category = pair.get('category', 'unknown')
     difficulty = pair.get('difficulty', 'medium')
+    user_satisfaction = pair.get('user_satisfaction', None)  # ✅ GET SATISFACTION SCORE
 
     print(f"{'='*80}")
     print(f"📝 Pair {i}/{NUM_PAIRS}: {pair_id}")
     print(f"{'='*80}")
     print(f"   Category: {category}")
     print(f"   Difficulty: {difficulty}")
+    if user_satisfaction is not None:
+        print(f"   Satisfaction: {user_satisfaction:.3f}")  # ✅ SHOW SATISFACTION
     print(f"   Input: {input_text[:100]}...")
 
     try:
-        # Process with organism
+        # Process with organism (Phase 3B: Use wrapper method for automatic context)
         processing_start = time.time()
 
-        result = organism.process_text(
+        # 🌀 Phase 3B Fix (Nov 18, 2025): Use process_text_with_phase3b_context()
+        # This automatically extracts entities with word_occasions and builds Phase 3B context
+        # for all 5 epoch learning trackers (WordOccasion, CycleConvergence, GateCascade,
+        # NexusVsLLM, NeighborWordContext)
+        result = organism.process_text_with_phase3b_context(
             input_text,
+            user_id=f"epoch_{EPOCH_NUM}_training",
+            username="training_user",
             enable_phase2=ENABLE_PHASE2,
             enable_tsk_recording=ENABLE_TSK,  # ✅ TSK ENABLED
-            user_id=f"epoch_{EPOCH_NUM}_training",
-            username="training_user"
+            user_satisfaction=user_satisfaction  # ✅ PASS SATISFACTION TO ORGANISM
         )
 
         processing_time = time.time() - processing_start
@@ -240,6 +256,11 @@ for i, pair in enumerate(training_pairs[:NUM_PAIRS], 1):
 
         # Evaluate entity prehension
         entity_eval = evaluate_entity_prehension(pair, result)
+
+        # 🌀 Track wave coupling metrics
+        # ✅ FIX (Nov 19, 2025): field coherence now uses organ_coherences (already in felt_states)
+        # No need to pass organ_signatures anymore - felt_states['organ_coherences'] is correct data
+        wave_metrics = wave_tracker.update(organism, felt_states)
 
         # ✅ Save TSK log if available
         # ✅ FIX (Nov 17): Organism returns 'tsk_record', not 'tsk'!
@@ -286,6 +307,10 @@ for i, pair in enumerate(training_pairs[:NUM_PAIRS], 1):
                 if felt_states_tsk.get('kairos_detected', False):
                     tsk_summary['kairos_detections'] += 1
 
+            # ✅ Track satisfaction scores for intelligence metrics
+            if user_satisfaction is not None:
+                tsk_summary['satisfaction_scores'].append(user_satisfaction)
+
                 # Organ signature evolution (57D) - store initial and final coherences
                 tsk_summary['organ_signature_evolution'].append({
                     'pair_id': pair_id,
@@ -317,6 +342,10 @@ for i, pair in enumerate(training_pairs[:NUM_PAIRS], 1):
             print(f"         NEXUS coherence: {entity_eval['nexus_coherence']:.3f}")
         print(f"      📝 EntityTracker updated: {'✅ Yes' if entity_eval['entity_tracker_updated'] else '❌ No'}")
         print(f"      💬 Emission correctness: {entity_eval['emission_correctness']:.2f}")
+        # 🌀 NEW (Nov 19, 2025): Print wave coupling metrics
+        print(f"      🌀 Wave phase: {wave_metrics['wave_phase']} (urgency={wave_metrics['urgency']:.2f}, zone={wave_metrics['self_zone']})")
+        print(f"      🌀 Field coherence: {wave_metrics['field_coherence']:.3f}")
+        print(f"      🌀 R-matrix coupling: NDAM-EO={wave_metrics['ndam_eo_coupling']:.3f}, BOND-EO={wave_metrics['bond_eo_coupling']:.3f}")
         # ✅ FIX (Nov 17): Only print if TSK was ACTUALLY saved
         if ENABLE_TSK and 'tsk_record' in result and result['tsk_record'] is not None:
             print(f"      📊 TSK logged: {TSK_LOGS_DIR}/{pair_id}_tsk.json")
@@ -343,6 +372,12 @@ for i, pair in enumerate(training_pairs[:NUM_PAIRS], 1):
             'entity_tracker_updated': entity_eval['entity_tracker_updated'],
             'emission_correctness': entity_eval['emission_correctness'],
             'success': True,
+            # 🌀 NEW (Nov 19, 2025): Add wave coupling metrics
+            'wave_phase': wave_metrics['wave_phase'],
+            'field_coherence': wave_metrics['field_coherence'],
+            'ndam_eo_coupling': wave_metrics['ndam_eo_coupling'],
+            'bond_eo_coupling': wave_metrics['bond_eo_coupling'],
+            'bond_ndam_coupling': wave_metrics['bond_ndam_coupling'],
             # ✅ FIX (Nov 17): Only record if TSK was actually saved
             'tsk_file': f"{pair_id}_tsk.json" if (ENABLE_TSK and 'tsk_record' in result and result['tsk_record'] is not None) else None
         })
@@ -418,6 +453,23 @@ print(f"   Mean processing time: {aggregate['processing_time_mean']:.2f}s\n")
 
 print(f"✅ Success: {successful}/{NUM_PAIRS} ({successful/NUM_PAIRS*100:.1f}%)")
 print(f"❌ Failed: {failed}/{NUM_PAIRS}\n")
+
+# 🌀 NEW (Nov 19, 2025): Print wave coupling statistics
+wave_stats = wave_tracker.get_statistics()
+print(f"🌀 Wave Coupling & Field Coherence Metrics:")
+print(f"   R-Matrix Coupling:")
+print(f"      NDAM → EO: {wave_stats['r_matrix_coupling']['mean_ndam_eo']:.3f}")
+print(f"      BOND → EO: {wave_stats['r_matrix_coupling']['mean_bond_eo']:.3f}")
+print(f"      BOND → NDAM: {wave_stats['r_matrix_coupling']['mean_bond_ndam']:.3f}")
+print(f"      Mean trauma coupling: {wave_stats['r_matrix_coupling']['mean_trauma_coupling']:.3f}")
+print(f"   Field Coherence:")
+print(f"      Mean: {wave_stats['field_coherence']['mean']:.3f}")
+print(f"      Std: {wave_stats['field_coherence']['std']:.3f}")
+print(f"      Range: [{wave_stats['field_coherence']['min']:.3f}, {wave_stats['field_coherence']['max']:.3f}]")
+print(f"   Wave Phase Distribution:")
+print(f"      EXPANSIVE: {wave_stats['wave_phases']['expansive_rate']*100:.1f}%")
+print(f"      NAVIGATION: {wave_stats['wave_phases']['navigation_rate']*100:.1f}%")
+print(f"      CONCRESCENCE: {wave_stats['wave_phases']['concrescence_rate']*100:.1f}%\n")
 
 # ============================================================================
 # SAVE RESULTS
@@ -498,7 +550,8 @@ try:
 
     epoch_results_data = {
         'results': results,
-        'aggregate_metrics': aggregate
+        'aggregate_metrics': aggregate,
+        'satisfaction_scores': tsk_summary['satisfaction_scores']  # ✅ ADD SATISFACTION FOR QUALITY BOOST
     }
 
     intelligence_metrics = intelligence_evaluator.evaluate_epoch(

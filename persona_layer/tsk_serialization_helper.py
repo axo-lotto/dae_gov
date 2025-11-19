@@ -16,13 +16,14 @@ def tsk_to_dict_recursive(obj: Any) -> Any:
 
     This handles:
     - TransductiveSummaryKernel dataclasses (has to_dict() method)
-    - Nested dicts containing TSK objects
-    - Lists containing TSK objects
+    - WordOccasion dataclasses (has to_dict() method) ← ADDED NOV 19, 2025
+    - Nested dicts containing TSK/WordOccasion objects
+    - Lists containing TSK/WordOccasion objects
     - Numpy arrays (convert to lists)
     - Numpy scalar types (convert to Python types)
 
     Args:
-        obj: Object to convert (can be TSK, dict, list, numpy, or primitive)
+        obj: Object to convert (can be TSK, WordOccasion, dict, list, numpy, or primitive)
 
     Returns:
         JSON-serializable version of obj
@@ -31,10 +32,13 @@ def tsk_to_dict_recursive(obj: Any) -> Any:
     if obj is None:
         return None
 
-    # Handle TransductiveSummaryKernel dataclass
+    # Handle dataclasses with to_dict() method
+    # This includes: TransductiveSummaryKernel, WordOccasion
     if hasattr(obj, 'to_dict') and hasattr(obj, '__class__'):
-        if 'TransductiveSummaryKernel' in str(obj.__class__):
-            # Convert TSK dataclass to dict, then recursively process
+        class_name = str(obj.__class__)
+        # Check for known serializable dataclasses
+        if any(name in class_name for name in ['TransductiveSummaryKernel', 'WordOccasion']):
+            # Convert dataclass to dict, then recursively process
             obj_dict = obj.to_dict()
             return tsk_to_dict_recursive(obj_dict)
 
@@ -79,8 +83,9 @@ def validate_json_serializable(obj: Any, path: str = 'root') -> List[str]:
     # Check for common non-serializable types
     if hasattr(obj, '__class__'):
         class_name = obj.__class__.__name__
-        if 'TransductiveSummaryKernel' in class_name:
-            errors.append(f"{path}: {class_name}")
+        # Flag known non-serializable dataclasses (should have been converted by tsk_to_dict_recursive)
+        if any(name in class_name for name in ['TransductiveSummaryKernel', 'WordOccasion']):
+            errors.append(f"{path}: {class_name} (should be dict)")
 
     # Recursively check dicts
     if isinstance(obj, dict):

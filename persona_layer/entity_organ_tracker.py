@@ -30,7 +30,7 @@ Status: Quick Win #7 Implementation (Neo4j Mastery Phase 1)
 
 import json
 import numpy as np
-from typing import Dict, Optional, List
+from typing import Dict, Optional, List, Any
 from pathlib import Path
 from datetime import datetime
 from dataclasses import dataclass, asdict
@@ -53,6 +53,10 @@ class EntityOrganMetrics:
 
     # Co-occurrence patterns
     co_mentioned_entities: Dict[str, int]  # Which other entities appear together
+
+    # Phase 0B: Word neighbor patterns (entity-situated learning)
+    typical_left_neighbors: Dict[str, int]  # Words appearing left of entity (±3 tokens)
+    typical_right_neighbors: Dict[str, int]  # Words appearing right of entity (±3 tokens)
 
     # Temporal tracking
     mention_count: int
@@ -118,7 +122,8 @@ class EntityOrganTracker:
         extracted_entities: List[Dict],
         organ_results: Dict,
         felt_state: Dict,
-        emission_satisfaction: Optional[float] = None
+        emission_satisfaction: Optional[float] = None,
+        word_occasions: Optional[List[Any]] = None
     ):
         """
         Update entity-organ associations based on emission outcome.
@@ -134,6 +139,7 @@ class EntityOrganTracker:
                 'self_distance': 0.0
             }
             emission_satisfaction: Optional user rating [0.0, 1.0]
+            word_occasions: Optional list of WordOccasion objects for Phase 0B word neighbor tracking
         """
         if not extracted_entities:
             return  # No entities mentioned
@@ -197,6 +203,17 @@ class EntityOrganTracker:
                     (1 - self.ema_alpha) * metrics.success_rate +
                     self.ema_alpha * emission_satisfaction
                 )
+
+            # Phase 0B: Update word neighbor patterns if provided
+            if word_occasions:
+                # Extract entity indices from entity_dict
+                entity_indices = []
+                if 'start_idx' in entity_dict and 'end_idx' in entity_dict:
+                    entity_indices = list(range(entity_dict['start_idx'], entity_dict['end_idx'] + 1))
+                elif 'position' in entity_dict:
+                    entity_indices = [entity_dict['position']]
+
+                self._update_word_neighbors(entity_value, word_occasions, entity_indices)
 
             # Update co-occurrence tracking
             for other_entity in entity_values:
@@ -321,6 +338,95 @@ class EntityOrganTracker:
 
         return 0.0
 
+    def _update_word_neighbors(
+        self,
+        entity_value: str,
+        word_occasions: Optional[List[Any]],
+        entity_indices: List[int]
+    ):
+        """
+        Phase 0B: Update word neighbor patterns for entity.
+
+        Tracks which words typically appear near this entity (±3 tokens).
+
+        Args:
+            entity_value: Entity being updated
+            word_occasions: List of WordOccasion objects from tokenization
+            entity_indices: Token positions where entity appears
+        """
+        if not word_occasions or not entity_indices:
+            return
+
+        metrics = self.entity_metrics.get(entity_value)
+        if metrics is None:
+            return
+
+        # For each entity position, collect neighbors
+        for entity_idx in entity_indices:
+            for occasion in word_occasions:
+                distance = occasion.position - entity_idx
+
+                # Check if within ±3 token window (excluding entity itself)
+                if distance == 0 or abs(distance) > 3:
+                    continue
+
+                word = occasion.word.lower()
+
+                # Skip stopwords and punctuation
+                if len(word) <= 2 or word in {'.', ',', '!', '?', ':', ';', '-', '(', ')'}:
+                    continue
+
+                # Update left or right neighbors
+                if distance < 0:
+                    # Word is to the left of entity
+                    if word not in metrics.typical_left_neighbors:
+                        metrics.typical_left_neighbors[word] = 0
+                    metrics.typical_left_neighbors[word] += 1
+                else:
+                    # Word is to the right of entity
+                    if word not in metrics.typical_right_neighbors:
+                        metrics.typical_right_neighbors[word] = 0
+                    metrics.typical_right_neighbors[word] += 1
+
+    def get_entity_word_profile(self, entity_value: str) -> Optional[Dict[str, Any]]:
+        """
+        Phase 0B: Get entity profile with word neighbor statistics.
+
+        Returns entity pattern enriched with typical neighboring words.
+        Used by entity extraction to improve detection.
+
+        Args:
+            entity_value: Entity to retrieve profile for
+
+        Returns:
+            Dict with entity info + word neighbors, or None if not tracked
+        """
+        pattern = self.get_entity_pattern(entity_value)
+        if pattern is None:
+            return None
+
+        # Add word neighbor distributions
+        metrics = self.entity_metrics[entity_value]
+        pattern['typical_left_neighbors'] = dict(metrics.typical_left_neighbors)
+        pattern['typical_right_neighbors'] = dict(metrics.typical_right_neighbors)
+
+        # Compute top-5 neighbors for quick reference
+        left_sorted = sorted(
+            metrics.typical_left_neighbors.items(),
+            key=lambda x: x[1],
+            reverse=True
+        )
+        right_sorted = sorted(
+            metrics.typical_right_neighbors.items(),
+            key=lambda x: x[1],
+            reverse=True
+        )
+
+        pattern['top_left_neighbors'] = [word for word, _ in left_sorted[:5]]
+        pattern['top_right_neighbors'] = [word for word, _ in right_sorted[:5]]
+
+        return pattern
+
     def _initialize_entity(self, entity_value: str, entity_type: str):
         """Initialize new entity with neutral patterns"""
         now = datetime.now().isoformat()
@@ -333,6 +439,8 @@ class EntityOrganTracker:
             typical_urgency=0.0,
             typical_self_distance=0.5,
             co_mentioned_entities={},
+            typical_left_neighbors={},  # Phase 0B: word neighbors
+            typical_right_neighbors={},  # Phase 0B: word neighbors
             mention_count=0,
             first_mentioned=now,
             last_mentioned=now,

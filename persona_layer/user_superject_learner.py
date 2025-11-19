@@ -829,7 +829,11 @@ JSON:"""
         llm = LocalLLMBridge()
         try:
             # 🔥 Nov 15, 2025: Increased from 300 to 500 - JSON was getting truncated
+            print(f"      🔍 Calling LLM with prompt length: {len(prompt)} chars")
             response = llm.query_direct(prompt, max_tokens=500, temperature=0.3)
+            print(f"      🔍 LLM raw response type: {type(response)}")
+            if response:
+                print(f"      🔍 LLM raw response preview: {str(response)[:200]}...")
 
             # Parse JSON response - 🔥 Nov 16, 2025: Use robust JSON parser
             from persona_layer.robust_json_parser import salvage_llm_json
@@ -867,46 +871,109 @@ JSON:"""
                 print(f"      ✅ JSON salvaged (LLM returned Python syntax)")
 
             if extraction:
-                new_facts = extraction.get('new_facts', [])
+                # 🚨 CRITICAL FIX (Nov 18, 2025): Handle actual LLM schema response
+                # LLM returns: {'relationships': [...], 'places': [...], 'preferences': {...}, 'work': {...}}
+                # NOT: {'new_facts': [...]}
 
-                # Convert to storage format
+                # Convert LLM schema format to storage format
                 new_entities = {}
 
-                for fact in new_facts:
-                    fact_type = fact.get('type', 'unknown')
-                    fact_value = fact.get('value')
-                    fact_context = fact.get('context', '')
+                # 1. Handle relationships (people)
+                relationships = extraction.get('relationships', [])
+                if relationships:
+                    new_entities['relationships'] = []
+                    for person in relationships:
+                        name = person.get('name')
+                        relationship = person.get('relationship')
 
-                    # Skip facts with null, None, or empty values
-                    if fact_value is None or (isinstance(fact_value, str) and not fact_value.strip()):
-                        continue
+                        # Skip invalid entries
+                        if not name or not relationship:
+                            continue
 
-                    # Store in memory-compatible format
+                        # Normalize person name (capitalize)
+                        name = validator.normalize_person_name(name)
+
+                        # Check for duplicates
+                        existing_entities_list = current_entities.get('relationships', [])
+                        duplicate = validator.detect_duplicate_person(name, existing_entities_list)
+                        if duplicate:
+                            print(f"         ⚠️  Skipping duplicate person: {name} (already stored)")
+                            continue
+
+                        # Validate person name
+                        name_valid, reason = validator.is_valid_entity_name(name)
+                        if not name_valid:
+                            print(f"         ⚠️  Invalid person name '{name}': {reason}")
+                            continue
+
+                        # Store valid person
+                        new_entities['relationships'].append({
+                            'name': name,
+                            'relationship': relationship,
+                            'age': person.get('age'),
+                            'context': person.get('context', ''),
+                            'timestamp': datetime.now().isoformat()
+                        })
+
+                        # Also extract user_name if this is a "self" relationship
+                        if relationship == 'self' and 'user_name' not in current_entities:
+                            new_entities['user_name'] = name
+
+                # 2. Handle places
+                places = extraction.get('places', [])
+                if places:
+                    new_entities['places'] = []
+                    for place in places:
+                        name = place.get('name')
+                        place_type = place.get('place_type')
+
+                        if name and place_type:
+                            new_entities['places'].append({
+                                'name': name,
+                                'place_type': place_type,
+                                'city': place.get('city'),
+                                'country': place.get('country'),
+                                'timestamp': datetime.now().isoformat()
+                            })
+
+                # 3. Handle preferences
+                preferences = extraction.get('preferences', {})
+                if preferences:
+                    new_entities['preferences'] = {}
+                    for pref_type in ['likes', 'dislikes', 'interests', 'goals']:
+                        if pref_type in preferences and preferences[pref_type]:
+                            new_entities['preferences'][pref_type] = preferences[pref_type]
+
+                # 4. Handle work info
+                work = extraction.get('work', {})
+                if work and any(work.values()):  # Only if has non-null values
+                    new_entities['work'] = {
+                        'company': work.get('company'),
+                        'job_title': work.get('job_title'),
+                        'industry': work.get('industry'),
+                        'work_location': work.get('work_location'),
+                        'timestamp': datetime.now().isoformat()
+                    }
+
+                # 5. Handle mentioned_names (backward compatibility for "memories")
+                mentioned_names = extraction.get('mentioned_names', [])
+                if mentioned_names:
                     if 'memories' not in new_entities:
                         new_entities['memories'] = []
 
-                    new_entities['memories'].append({
-                        'type': fact_type,
-                        'value': fact_value,
-                        'context': fact_context,
-                        'timestamp': datetime.now().isoformat()
-                    })
+                    for name in mentioned_names:
+                        # Skip stopwords and duplicates
+                        is_valid, reason = validator.is_valid_entity_name(name)
+                        if is_valid:
+                            new_entities['memories'].append({
+                                'type': 'mentioned_name',
+                                'value': name,
+                                'context': 'Mentioned in conversation',
+                                'timestamp': datetime.now().isoformat()
+                            })
 
-                    # Also extract specific entities for backward compatibility
-                    if fact_type == 'name' and 'user_name' not in current_entities:
-                        new_entities['user_name'] = fact_value
-
-                # 🌀 Nov 16, 2025: Validate and filter entities before returning
-                # Get existing entities for duplicate detection
-                existing_entities_list = []
-                if 'relationships' in current_entities:
-                    existing_entities_list.extend(current_entities['relationships'])
-
-                # Validate extracted entities
-                filtered_entities = validator.validate_and_filter_entities(
-                    new_entities,
-                    existing_entities=existing_entities_list
-                )
+                # 🌀 Return filtered entities (validator already applied above)
+                filtered_entities = new_entities
 
                 return filtered_entities
             else:

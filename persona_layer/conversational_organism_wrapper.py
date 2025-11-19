@@ -83,6 +83,23 @@ except ImportError:
     ENTITY_ORGAN_TRACKER_AVAILABLE = False
     print("⚠️  Organ confidence tracker not available")
 
+# 🌀 Import Symbiotic LLM Entity Extractor (Phase 1 LLM Independence - Nov 18, 2025)
+try:
+    from persona_layer.local_llm_bridge import LocalLLMBridge
+    from persona_layer.symbiotic_llm_entity_extractor import SymbioticLLMEntityExtractor
+    SYMBIOTIC_EXTRACTOR_AVAILABLE = True
+except ImportError as e:
+    SYMBIOTIC_EXTRACTOR_AVAILABLE = False
+    print(f"⚠️  Symbiotic LLM extractor not available: {e}")
+
+# 🌀 Import Entity Neighbor Prehension (Phase 3B Pattern Learning - Nov 18, 2025)
+try:
+    from persona_layer.entity_neighbor_prehension.entity_neighbor_prehension import EntityNeighborPrehension
+    ENTITY_NEIGHBOR_PREHENSION_AVAILABLE = True
+except ImportError as e:
+    ENTITY_NEIGHBOR_PREHENSION_AVAILABLE = False
+    print(f"⚠️  Entity neighbor prehension not available: {e}")
+
 # Import emission generation components
 try:
     from persona_layer.semantic_field_extractor import SemanticFieldExtractor
@@ -238,6 +255,15 @@ except ImportError as e:
     PRE_EMISSION_PREHENSION_AVAILABLE = False
     print(f"⚠️  Pre-emission entity prehension not available: {e}")
 
+# 🌀 Import Entity Extraction Components (Nov 18, 2025 - Fix entity timing for NEXUS)
+try:
+    from persona_layer.memory_intent_detector import MemoryIntentDetector
+    from persona_layer.entity_extractor import EntityExtractor
+    ENTITY_EXTRACTION_AVAILABLE = True
+except ImportError as e:
+    ENTITY_EXTRACTION_AVAILABLE = False
+    print(f"⚠️  Entity extraction components not available: {e}")
+
 # 🌀 Import Session Turn Manager (USER:SESSION:TURN Hierarchy - November 16, 2025)
 try:
     from persona_layer.session_turn_manager import SessionTurnManager
@@ -245,6 +271,27 @@ try:
 except ImportError as e:
     SESSION_TURN_MANAGER_AVAILABLE = False
     print(f"⚠️  Session turn manager not available: {e}")
+
+# 🌀 Import LLM Bridge Components (Phase 1-2 - November 18, 2025)
+try:
+    from persona_layer.conversation_feedback_handler import ConversationFeedbackHandler
+    from persona_layer.turn_history_manager import TurnHistoryManager
+    LLM_BRIDGE_AVAILABLE = True
+except ImportError as e:
+    LLM_BRIDGE_AVAILABLE = False
+    print(f"⚠️  LLM Bridge components not available: {e}")
+
+# 🌀 Import Phase 3B Epoch Learning Trackers (November 18, 2025)
+try:
+    from persona_layer.word_occasion_tracker import WordOccasionTracker
+    from persona_layer.cycle_convergence_tracker import CycleConvergenceTracker
+    from persona_layer.gate_cascade_quality_tracker import GateCascadeQualityTracker
+    from persona_layer.nexus_vs_llm_decision_tracker import NexusVsLLMDecisionTracker
+    from persona_layer.neighbor_word_context_tracker import NeighborWordContextTracker
+    PHASE3B_TRACKERS_AVAILABLE = True
+except ImportError as e:
+    PHASE3B_TRACKERS_AVAILABLE = False
+    print(f"⚠️  Phase 3B trackers not available: {e}")
 
 
 class ConversationalOrganismWrapper:
@@ -341,6 +388,57 @@ class ConversationalOrganismWrapper:
         else:
             self.entity_organ_tracker = None
 
+        # 🌀 Initialize Phase 3B Epoch Learning Trackers (November 18, 2025)
+        if PHASE3B_TRACKERS_AVAILABLE:
+            try:
+                # Tracker 1: Word-level organ activation patterns
+                self.word_occasion_tracker = WordOccasionTracker(
+                    storage_path="persona_layer/state/active/word_occasion_patterns.json",
+                    ema_alpha=0.15,  # Fast adaptation to new entities
+                    min_mentions_for_pattern=3
+                )
+
+                # Tracker 2: Multi-cycle convergence optimization
+                self.cycle_convergence_tracker = CycleConvergenceTracker(
+                    storage_path="persona_layer/state/active/cycle_convergence_stats.json"
+                )
+
+                # Tracker 3: 4-gate cascade quality monitoring
+                self.gate_cascade_quality_tracker = GateCascadeQualityTracker(
+                    storage_path="persona_layer/state/active/gate_cascade_quality.json",
+                    optimization_interval=100  # Optimize thresholds every 100 attempts
+                )
+
+                # Tracker 4: NEXUS vs LLM decision tracking (CRITICAL for LLM independence)
+                self.nexus_vs_llm_tracker = NexusVsLLMDecisionTracker(
+                    storage_path="persona_layer/state/active/nexus_vs_llm_decisions.json",
+                    ema_alpha=0.10  # Conservative accuracy estimates
+                )
+
+                # Tracker 5: Neighbor word → organ boost learning
+                self.neighbor_word_context_tracker = NeighborWordContextTracker(
+                    storage_path="persona_layer/state/active/neighbor_word_context.json",
+                    ema_alpha=0.15,  # Responsive to context shifts
+                    min_count_for_pattern=5
+                )
+
+                print(f"   ✅ Phase 3B epoch learning trackers ready (5/5)")
+            except Exception as e:
+                print(f"   ⚠️  Phase 3B trackers initialization failed: {e}")
+                import traceback
+                traceback.print_exc()
+                self.word_occasion_tracker = None
+                self.cycle_convergence_tracker = None
+                self.gate_cascade_quality_tracker = None
+                self.nexus_vs_llm_tracker = None
+                self.neighbor_word_context_tracker = None
+        else:
+            self.word_occasion_tracker = None
+            self.cycle_convergence_tracker = None
+            self.gate_cascade_quality_tracker = None
+            self.nexus_vs_llm_tracker = None
+            self.neighbor_word_context_tracker = None
+
         # 🌀 Initialize Pre-Emission Entity Prehension (NEXUS Entity Memory Training - Nov 16, 2025)
         if PRE_EMISSION_PREHENSION_AVAILABLE:
             try:
@@ -367,6 +465,40 @@ class ConversationalOrganismWrapper:
         else:
             self.session_manager = None
 
+        # 🌀 Initialize Symbiotic LLM Entity Extractor (Phase 1 LLM Independence - Nov 18, 2025)
+        if SYMBIOTIC_EXTRACTOR_AVAILABLE and Config.LOCAL_LLM_ENABLED:
+            try:
+                # Initialize LocalLLMBridge for symbiotic learning
+                self.local_llm_bridge = LocalLLMBridge()
+
+                # Initialize symbiotic extractor with bootstrap mode
+                self.symbiotic_extractor = SymbioticLLMEntityExtractor(
+                    local_llm_bridge=self.local_llm_bridge,
+                    learning_mode=getattr(Config, 'SYMBIOTIC_LEARNING_MODE', 'bootstrap'),
+                    cache_dir="persona_layer/state/llm_learning_cache"
+                )
+                print(f"   ✅ Symbiotic LLM extractor ready (Phase 1: {self.symbiotic_extractor.learning_mode} mode, {self.symbiotic_extractor.consultation_rates[self.symbiotic_extractor.learning_mode]*100:.0f}% LLM)")
+            except Exception as e:
+                print(f"   ⚠️  Symbiotic LLM extractor unavailable: {e}")
+                self.symbiotic_extractor = None
+                self.local_llm_bridge = None
+        else:
+            self.symbiotic_extractor = None
+            self.local_llm_bridge = None
+
+        # 🌀 Initialize Entity Neighbor Prehension (Phase 3B Pattern Learning - Nov 18, 2025)
+        if ENTITY_NEIGHBOR_PREHENSION_AVAILABLE:
+            try:
+                # Pass entity-organ tracker for pattern learning
+                tracker = self.entity_organ_tracker if hasattr(self, 'entity_organ_tracker') else None
+                self.entity_neighbor_prehension = EntityNeighborPrehension(entity_tracker=tracker)
+                print(f"   ✅ Entity neighbor prehension ready (Phase 3B: 5-organ, 31D actualization)")
+            except Exception as e:
+                print(f"   ⚠️  Entity neighbor prehension unavailable: {e}")
+                self.entity_neighbor_prehension = None
+        else:
+            self.entity_neighbor_prehension = None
+
         # Initialize emission generation (if available)
         if EMISSION_AVAILABLE:
             try:
@@ -383,7 +515,7 @@ class ConversationalOrganismWrapper:
                 felt_guided_llm = None
                 if Config.FELT_GUIDED_LLM_ENABLED and Config.LOCAL_LLM_ENABLED:
                     try:
-                        from persona_layer.local_llm_bridge import LocalLLMBridge
+                        # LocalLLMBridge already imported at module level (line 88)
                         from persona_layer.llm_felt_guidance import FeltGuidedLLMGenerator
 
                         # Initialize LLM bridge for felt guidance
@@ -630,6 +762,21 @@ class ConversationalOrganismWrapper:
         else:
             self.entity_differentiator = None
 
+        # 🌀 Initialize Entity Extractors (Nov 18, 2025 - Fix entity timing for NEXUS)
+        if ENTITY_EXTRACTION_AVAILABLE:
+            try:
+                print("   Loading Entity Extractors (extract entities BEFORE Phase 2)...")
+                self._memory_intent_detector = MemoryIntentDetector()
+                self._entity_extractor = EntityExtractor()
+                print(f"   ✅ Entity Extractors ready (NEXUS will receive entities during V0)")
+            except Exception as e:
+                print(f"   ⚠️  Entity extractors initialization failed: {e}")
+                self._memory_intent_detector = None
+                self._entity_extractor = None
+        else:
+            self._memory_intent_detector = None
+            self._entity_extractor = None
+
         # 🌀 Initialize TSK Recorder (Transductive Summary Kernel - November 16, 2025)
         if TSK_RECORDER_AVAILABLE:
             try:
@@ -665,6 +812,20 @@ class ConversationalOrganismWrapper:
             self.satisfaction_fingerprinter = None
             self.lyapunov_gate = None
             self.satisfaction_history = []
+
+        # 🌀 Initialize LLM Bridge Components (Phase 1-2 - November 18, 2025)
+        if LLM_BRIDGE_AVAILABLE:
+            self.feedback_handler = ConversationFeedbackHandler()
+            self.turn_history = TurnHistoryManager(
+                max_turns_per_session=5,
+                session_timeout_minutes=30
+            )
+            self.last_emission_data = {}  # Store last emission per session for feedback
+            print("   🌀 LLM Bridge enabled (feedback loop + turn history)")
+        else:
+            self.feedback_handler = None
+            self.turn_history = None
+            self.last_emission_data = {}
 
         print("="*70)
         print("✅ 11-organ conversational organism initialized (Phase 2 COMPLETE!)\n")
@@ -879,6 +1040,151 @@ class ConversationalOrganismWrapper:
         # 🕐 TEMPORAL AWARENESS: Add time/date context - November 15, 2025
         context['temporal'] = self._create_temporal_context()
 
+        # 🌀 LLM BRIDGE: Assess feedback from previous turn - November 18, 2025 (Phase 1)
+        if self.feedback_handler and self.last_emission_data:
+            # Get session_id from context or generate one
+            session_id = context.get('conversation_id', 'default_session')
+
+            # Check if we have previous emission for this session
+            if session_id in self.last_emission_data:
+                last_data = self.last_emission_data[session_id]
+
+                try:
+                    # Assess satisfaction from user's current response
+                    feedback = self.feedback_handler.assess_satisfaction(
+                        user_response=text,
+                        organism_emission=last_data['emission'],
+                        context=context
+                    )
+
+                    # Update learning patterns (Hebbian, Pattern Learner, Organ Confidence)
+                    update_results = self.feedback_handler.update_patterns(
+                        feedback=feedback,
+                        emission_data=last_data['metadata'],
+                        hebbian_memory=self.hebbian_memory if hasattr(self, 'hebbian_memory') else None,
+                        pattern_learner=self.pattern_learner if hasattr(self, 'pattern_learner') else None,
+                        organ_confidence_tracker=self.organ_confidence_tracker if hasattr(self, 'organ_confidence_tracker') else None
+                    )
+
+                    # Store feedback in context for potential use
+                    context['feedback'] = {
+                        'estimated_satisfaction': feedback.estimated_satisfaction,
+                        'confidence': feedback.confidence,
+                        'update_results': update_results
+                    }
+                except Exception as e:
+                    print(f"⚠️  Feedback assessment failed: {e}")
+
+        # ═══════════════════════════════════════════════════════════════════
+        # 🌀 Nov 18, 2025: EXTRACT ENTITIES **BEFORE** PHASE 2
+        # Critical: NEXUS needs entities DURING V0 convergence cycles
+        # ═══════════════════════════════════════════════════════════════════
+
+        if self._memory_intent_detector and self._entity_extractor:
+            try:
+                # Detect memory intent - returns tuple (is_memory, intent_type, confidence, metadata)
+                is_memory_related, intent_type, confidence, metadata = self._memory_intent_detector.detect(text)
+
+                # Extract entities if memory-related
+                current_turn_entities = []
+                if is_memory_related:
+                    # EntityExtractor.extract() expects: (text, intent_type, context, felt_state)
+                    # Returns: Dict with 'mentioned_names', 'user_name', 'family_members', etc.
+                    extraction_result = self._entity_extractor.extract(
+                        text,
+                        intent_type,
+                        metadata,  # Context dict from MemoryIntentDetector
+                        felt_state=None  # Will be None at this point (pre-processing)
+                    )
+
+                    # Convert extraction_result format to current_turn_entities format
+                    # extraction_result has keys like: 'user_name', 'mentioned_names', 'family_members'
+                    # We need format: [{'entity_value': 'Xeno', 'entity_type': 'person', ...}]
+
+                    # Extract user_name
+                    if 'user_name' in extraction_result:
+                        current_turn_entities.append({
+                            'entity_value': extraction_result['user_name'],
+                            'entity_type': 'person',
+                            'relationship': 'self',
+                            'source': 'self_introduction'
+                        })
+
+                    # Extract mentioned_names
+                    if 'mentioned_names' in extraction_result:
+                        for name in extraction_result['mentioned_names']:
+                            current_turn_entities.append({
+                                'entity_value': name,
+                                'entity_type': 'person',
+                                'relationship': extraction_result.get('relationship_context', 'mentioned'),
+                                'source': 'others_introduction'
+                            })
+
+                    # Extract family_members (from organ_prehension fallback)
+                    if 'family_members' in extraction_result:
+                        for member in extraction_result['family_members']:
+                            current_turn_entities.append({
+                                'entity_value': member['name'],
+                                'entity_type': 'person',
+                                'relationship': member.get('relation', 'family'),
+                                'source': 'relationship_statement'
+                            })
+
+                    # Extract friends (from organ_prehension fallback)
+                    if 'friends' in extraction_result:
+                        for friend in extraction_result['friends']:
+                            current_turn_entities.append({
+                                'entity_value': friend['name'],
+                                'entity_type': 'person',
+                                'relationship': 'friend',
+                                'source': 'relationship_statement'
+                            })
+
+                # Populate entity_prehension (NEXUS-compatible format)
+                if current_turn_entities:
+                    mentioned_entities = [
+                        {
+                            'name': entity['entity_value'],
+                            'type': entity.get('entity_type', 'person'),
+                            'relationship': entity.get('relationship'),
+                            'source': entity.get('source', 'explicit')
+                        }
+                        for entity in current_turn_entities
+                    ]
+
+                    context['entity_prehension'] = {
+                        'entity_memory_available': True,
+                        'mentioned_entities': mentioned_entities,
+                        'user_name': context.get('username', username if username else 'User')
+                    }
+                else:
+                    context['entity_prehension'] = {
+                        'entity_memory_available': False,
+                        'mentioned_entities': [],
+                        'user_name': context.get('username', username if username else 'User')
+                    }
+
+                # Store for entity-organ tracking
+                context['current_turn_entities'] = current_turn_entities
+
+            except Exception as e:
+                print(f"   ⚠️  Entity extraction failed: {e}")
+                # Fallback to empty entity prehension
+                context['entity_prehension'] = {
+                    'entity_memory_available': False,
+                    'mentioned_entities': [],
+                    'user_name': context.get('username', username if username else 'User')
+                }
+                context['current_turn_entities'] = []
+        else:
+            # Entity extractors not available
+            context['entity_prehension'] = {
+                'entity_memory_available': False,
+                'mentioned_entities': [],
+                'user_name': context.get('username', username if username else 'User')
+            }
+            context['current_turn_entities'] = []
+
         # 🌀 PHASE 1.6: Entity differentiation (detect if user asking about DAE) - November 14, 2025
         entity_ref = 'ambiguous'
         entity_confidence = 0.0
@@ -916,6 +1222,111 @@ class ConversationalOrganismWrapper:
             if self.emission_generator and hasattr(self.emission_generator, 'set_exploration_context'):
                 self.emission_generator.set_exploration_context(regime=regime.value if isinstance(regime, SatisfactionRegime) else regime)
 
+        # 🌀 Nov 18, 2025: EXTRACT ENTITIES FIRST (before prehension, before Phase 2)
+        # This ensures newly mentioned entities are available during V0 convergence
+        newly_extracted_entities = {}  # Track entities extracted THIS turn
+
+        # 🔍 DEBUG: Trace entity extraction flow
+        print(f"   🔍 ENTITY EXTRACTION DEBUG:")
+        print(f"      user_id = {user_id}")
+        print(f"      superject_learner exists = {self.superject_learner is not None}")
+
+        if user_id and self.superject_learner:
+            print(f"      ✅ Entering entity extraction block...")
+            try:
+                # Get current user profile
+                user_profile = self.superject_learner.get_or_create_profile(user_id)
+                print(f"      ✅ User profile loaded: {user_profile is not None}")
+                current_entities = user_profile.entities if user_profile else {}
+                print(f"      📊 Current entities: {len(current_entities)} categories")
+
+                # 🌀 PHASE 1 SYMBIOTIC MODE (Nov 18, 2025): Use symbiotic extractor if available
+                if hasattr(self, 'symbiotic_extractor') and self.symbiotic_extractor and Config.ENTITY_EXTRACTION_MODE == "symbiotic":
+                    print(f"      🌀 Phase 1 Symbiotic Mode: {self.symbiotic_extractor.learning_mode} ({self.symbiotic_extractor.consultation_rates[self.symbiotic_extractor.learning_mode]*100:.0f}% LLM)")
+
+                    # Extract entities using symbiotic extractor (OLLAMA teacher)
+                    extraction_result = self.symbiotic_extractor.extract_entities_llm(
+                        text=text,
+                        current_entities=current_entities
+                    )
+
+                    # Also run pattern extraction for comparison (if enabled)
+                    if Config.PATTERN_LLM_COMPARISON_ENABLED and hasattr(self, 'entity_neighbor_prehension') and self.entity_neighbor_prehension:
+                        try:
+                            # Extract entities using Phase 3B neighbor prehension (no word_occasions needed for comparison)
+                            pattern_result_list = self.entity_neighbor_prehension.extract_entities(text, return_word_occasions=False)
+
+                            # Convert Phase 3B list format to Dict format for comparison
+                            # Phase 3B returns: [{'entity_value': 'Emma', 'entity_type': 'Person', ...}]
+                            # Comparison expects: {'relationships': [{'name': 'Emma', ...}], 'places': [...]}
+                            pattern_result_dict = {'relationships': [], 'places': [], 'emotions': [], 'mentioned_names': []}
+                            for ent in pattern_result_list:
+                                entity_type = ent.get('entity_type', '').lower()
+                                entity_value = ent.get('entity_value', '')
+
+                                if entity_type == 'person':
+                                    pattern_result_dict['relationships'].append({'name': entity_value, 'type': 'Person'})
+                                    pattern_result_dict['mentioned_names'].append(entity_value)
+                                elif entity_type == 'place':
+                                    pattern_result_dict['places'].append({'name': entity_value, 'type': 'Place'})
+                                elif entity_type == 'emotion':
+                                    pattern_result_dict['emotions'].append({'name': entity_value, 'type': 'Emotion'})
+                                else:
+                                    # Unknown type, add as mentioned name
+                                    pattern_result_dict['mentioned_names'].append(entity_value)
+
+                            # Compare pattern vs OLLAMA extraction
+                            comparison = self.symbiotic_extractor.compare_extraction_methods(
+                                pattern_entities=pattern_result_dict,
+                                llm_entities=extraction_result
+                            )
+                            print(f"      📊 Pattern-OLLAMA F1: {comparison.get('f1_score', 0):.2f} (P:{len(pattern_result_list)} vs L:{comparison.get('llm_count', 0)})")
+                        except Exception as e:
+                            print(f"      ⚠️  Pattern comparison failed: {e}")
+
+                    # Use OLLAMA entities (Phase 1)
+                    new_entities = extraction_result
+                    print(f"      ✅ Symbiotic extraction complete")
+
+                else:
+                    # Fallback to direct LLM extraction (current behavior)
+                    print(f"      🧠 Calling LLM extraction for: '{text[:60]}...'")
+                    new_entities = self.superject_learner.extract_entities_llm(
+                        user_input=text,
+                        current_entities=current_entities
+                    )
+
+                print(f"      ✅ Entity extraction returned: {new_entities is not None}")
+                print(f"      📊 new_entities = {new_entities}")  # Show full content
+                if new_entities:
+                    print(f"      📊 New entities keys: {list(new_entities.keys())}")
+                    for key, value in new_entities.items():
+                        if value:
+                            print(f"         - {key}: {len(value) if isinstance(value, list) else '1 item'}")
+                        else:
+                            print(f"         - {key}: (empty)")
+
+                # Store newly extracted entities IMMEDIATELY
+                if new_entities and user_profile:
+                    print(f"      💾 Storing {len(new_entities)} entity categories...")
+                    newly_extracted_entities = new_entities  # 🚨 CRITICAL: Track what was JUST extracted
+                    user_profile.store_entities(new_entities)
+                    self.superject_learner.save_profile(user_profile)
+
+                    # Show extraction feedback
+                    if 'memories' in new_entities:
+                        num_memories = len(new_entities['memories'])
+                        print(f"      📝 Extracted {num_memories} new memories")
+                else:
+                    print(f"      ⚠️  No new entities to store (new_entities empty or profile missing)")
+
+            except Exception as e:
+                print(f"      ⚠️  Entity extraction failed: {e}")
+                import traceback
+                traceback.print_exc()
+        else:
+            print(f"      ❌ Skipping extraction (user_id={bool(user_id)}, learner={self.superject_learner is not None})")
+
         # 🌀 PRE-EMISSION ENTITY PREHENSION: Retrieve entity memory BEFORE organ activation (Nov 16, 2025)
         # This is the KEY innovation: entity context is available during organ processing,
         # enabling Entity Memory Nexus (EMN) formation and relational continuity.
@@ -926,6 +1337,42 @@ class ConversationalOrganismWrapper:
                     user_input=text,
                     user_id=user_id
                 )
+
+                # 🚨 CRITICAL FIX (Nov 18, 2025): If entities were JUST extracted this turn, mark memory as available
+                # This handles "I am Xeno" scenarios where the name is being introduced
+                if newly_extracted_entities:
+                    # Force entity_memory_available = True when entities were extracted THIS turn
+                    entity_prehension_result['entity_memory_available'] = True
+
+                    # Add newly extracted entities to mentioned_entities (they're implicitly mentioned by extraction)
+                    newly_mentioned = []
+
+                    # Check for user_name in various possible formats
+                    if 'user_name' in newly_extracted_entities and newly_extracted_entities['user_name']:
+                        newly_mentioned.append({
+                            'name': newly_extracted_entities['user_name'],
+                            'type': 'user_self',
+                            'context': 'User identity (just introduced)',
+                            'source': 'fresh_extraction'
+                        })
+
+                    # Check for any relationships/family members/manual entities
+                    for key in ['relationships', 'family_members', 'manual_entities', 'memories']:
+                        if key in newly_extracted_entities and newly_extracted_entities[key]:
+                            for entity in newly_extracted_entities[key]:
+                                if isinstance(entity, dict) and 'name' in entity:
+                                    newly_mentioned.append({
+                                        'name': entity['name'],
+                                        'type': entity.get('type', 'person'),
+                                        'context': f"Just mentioned ({key})",
+                                        'source': 'fresh_extraction'
+                                    })
+
+                    # Merge with existing mentioned entities
+                    existing_mentioned = entity_prehension_result.get('mentioned_entities', [])
+                    entity_prehension_result['mentioned_entities'] = existing_mentioned + newly_mentioned
+
+                    print(f"   🚨 FRESH ENTITIES: {len(newly_mentioned)} entities just extracted, marking memory available")
 
                 # Store in context for organ enrichment
                 context['entity_prehension'] = entity_prehension_result
@@ -996,31 +1443,74 @@ class ConversationalOrganismWrapper:
             # PHASE 1 PATH: Single-cycle processing (backward compatible)
             result = self._process_single_cycle(text, context, enable_tsk_recording, user_satisfaction)
 
-        # 🌀 Nov 14, 2025: Open-ended entity extraction (LLM-based, not hardcoded)
-        if user_id and self.superject_learner:
+        # 🌀 WEEK 3, DAYS 3-4: Delayed Feedback Learning (November 19, 2025)
+        # 🌀 WEEK 3, DAY 5: Three-Layer Quality Modulation (November 19, 2025)
+        # 🚨 MOVED HERE (Nov 19, 2025): Learning must happen for BOTH Phase 1 & Phase 2
+        # Previously in _process_single_cycle(), but training uses Phase 2 path
+        # Extract data from result dict for learning
+        organ_results = result.get('organ_results', {})
+        emission_text = result.get('emission_text', None)
+
+        if organ_results:  # Learning happens for both processing paths
+            print(f"   🔍 DEBUG LEARNING: organ_results available, entering learning block")
+            print(f"   🔍 DEBUG LEARNING: user_satisfaction = {user_satisfaction}")
+            print(f"   🔍 DEBUG LEARNING: emission_text = {emission_text}")
             try:
-                # Get current user profile
-                user_profile = self.superject_learner.get_or_create_profile(user_id)
-                current_entities = user_profile.entities if user_profile else {}
+                # Get current turn number from context (default to 0 if not provided)
+                current_turn_number = context.get('turn_number', 0) if context else 0
 
-                # Extract entities using LLM (open-ended discovery)
-                new_entities = self.superject_learner.extract_entities_llm(
-                    user_input=text,
-                    current_entities=current_entities
-                )
+                # Track satisfaction for fingerprinting (need 3+ for pattern detection)
+                if user_satisfaction is not None:
+                    self.satisfaction_history.append(user_satisfaction)
+                    # Keep only recent history (last 10 turns)
+                    if len(self.satisfaction_history) > 10:
+                        self.satisfaction_history = self.satisfaction_history[-10:]
 
-                # Store newly extracted entities
-                if new_entities and user_profile:
-                    user_profile.store_entities(new_entities)
-                    self.superject_learner.save_profile(user_profile)
+                # STEP 1: Record outcome for PREVIOUS turn (if exists)
+                # Turn N satisfaction → update Turn N-1 phrase quality
+                # 🌀 NOW WITH THREE-LAYER QUALITY BOOST!
+                if self.previous_turn_data and user_satisfaction is not None:
+                    self._record_emission_outcome(
+                        nexus_signature=self.previous_turn_data['signature'],
+                        emitted_phrase_text=self.previous_turn_data['phrase'],
+                        user_satisfaction=user_satisfaction,
+                        current_turn=self.previous_turn_data['turn'],
+                        organ_results=organ_results  # ← For Lyapunov stability calculation
+                    )
 
-                    # Show extraction feedback
-                    if 'memories' in new_entities:
-                        num_memories = len(new_entities['memories'])
-                        print(f"      📝 Extracted {num_memories} new memories")
+                # STEP 2: Extract nexus signature from CURRENT turn's organ_results
+                # This will be used to update quality when we see NEXT turn's satisfaction
+                current_signature = None
+                if self.emission_generator and hasattr(self.emission_generator, '_extract_nexus_signature_from_organs'):
+                    current_signature = self.emission_generator._extract_nexus_signature_from_organs(organ_results)
+                    if current_signature:
+                        print(f"   🌀 Signature extracted for learning: {current_signature.nexus_type}")
+                    else:
+                        print(f"   ⚠️  Signature extraction returned None (organ_results keys: {list(organ_results.keys()) if organ_results else 'None'})")
+
+                # STEP 3: Store CURRENT turn data for next iteration
+                # (Will be updated when we process Turn N+1)
+                if current_signature:
+                    # Use dummy phrase if no emission (entity-memory training doesn't generate emissions)
+                    # Pattern learner needs phrase text for logging, but actual learning uses signature
+                    phrase_for_learning = emission_text if emission_text else f"<felt_state_{current_signature.nexus_type}>"
+                    self.previous_turn_data = {
+                        'signature': current_signature,
+                        'phrase': phrase_for_learning,
+                        'turn': current_turn_number
+                    }
+                    print(f"   🌀 Previous turn data stored (turn {current_turn_number}, phrase: {phrase_for_learning[:50]}...)")
+                else:
+                    # No signature extracted → clear previous_turn_data
+                    # (Don't learn from turns without valid signatures)
+                    self.previous_turn_data = None
+                    print(f"   ⚠️  Previous turn data cleared (no valid signature)")
 
             except Exception as e:
-                print(f"      ⚠️  Entity extraction failed: {e}")
+                # Debug: Print exception details
+                print(f"   ❌ Learning feedback exception: {e}")
+                import traceback
+                traceback.print_exc()
 
         # 🌀 PHASE 1 FOUNDATION: Record turn to user superject (Nov 14, 2025)
         if user_id and self.superject_learner:
@@ -1181,6 +1671,150 @@ class ConversationalOrganismWrapper:
                 print(f"   ✅ DEBUG EntityTracker: update() completed successfully")
             except Exception as e:
                 print(f"⚠️  Entity-organ tracking update failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # 🌀 PHASE 3B: Epoch Learning Tracker Updates (November 18, 2025)
+        # 5 new trackers for neighbor prehension intelligence and LLM independence
+
+        # Tracker 1: Word-level organ activation patterns
+        if self.word_occasion_tracker and context and 'word_occasions' in context:
+            try:
+                word_occasions = context['word_occasions']
+                self.word_occasion_tracker.update(word_occasions)
+
+                # Optional: Log pattern growth
+                stats = self.word_occasion_tracker.get_statistics()
+                if stats['total_updates'] % 100 == 0:  # Every 100 updates
+                    print(f"   📊 Word patterns: {stats['total_word_patterns']} words, "
+                          f"{stats['reliable_patterns']} reliable")
+
+            except Exception as e:
+                print(f"⚠️  Word occasion tracker update failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # Tracker 2: Multi-cycle convergence optimization
+        if self.cycle_convergence_tracker and result.get('felt_states'):
+            try:
+                felt_states = result['felt_states']
+
+                # Build context for cycle pattern learning
+                cycle_context = {
+                    'polyvagal_state': felt_states.get('eo_polyvagal_state', 'mixed'),
+                    'urgency': felt_states.get('ndam_urgency_level', 0.0)
+                }
+
+                self.cycle_convergence_tracker.update_convergence_complete(
+                    cycles_used=felt_states.get('convergence_cycles', 1),
+                    converged=felt_states.get('kairos_detected', False),
+                    context=cycle_context
+                )
+
+                # Optional: Log optimal cycle count
+                stats = self.cycle_convergence_tracker.get_statistics()
+                if stats.get('global', {}).get('total_attempts', 0) % 50 == 0:  # Every 50 attempts
+                    mean_cycles = stats.get('global', {}).get('mean_cycles_to_kairos', 0.0)
+                    print(f"   📊 Cycle optimization: mean {mean_cycles:.2f} cycles to kairos")
+
+            except Exception as e:
+                print(f"⚠️  Cycle convergence tracker update failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # Tracker 3: 4-gate cascade quality monitoring
+        if self.gate_cascade_quality_tracker and context and 'word_occasions' in context:
+            try:
+                # Extract gate_results from entity dicts in word_occasions
+                word_occasions = context['word_occasions']
+                for word_occ in word_occasions:
+                    if word_occ.is_entity() and hasattr(word_occ, 'intersection_score'):
+                        # Create gate_results dict from word_occasion attributes
+                        gate_results = {
+                            'gate_1_intersection': {
+                                'passed': word_occ.intersection_score >= 1.5 if hasattr(word_occ, 'intersection_score') else False,
+                                'score': getattr(word_occ, 'intersection_score', 0.0)
+                            },
+                            'gate_2_coherence': {
+                                'passed': word_occ.coherence_score >= 0.4 if hasattr(word_occ, 'coherence_score') else False,
+                                'score': getattr(word_occ, 'coherence_score', 0.0)
+                            },
+                            'gate_3_satisfaction': {
+                                'passed': 0.45 <= word_occ.satisfaction_score <= 0.85 if hasattr(word_occ, 'satisfaction_score') else False,
+                                'score': getattr(word_occ, 'satisfaction_score', 0.0)
+                            },
+                            'gate_4_felt_energy': {
+                                'passed': word_occ.felt_energy <= 0.7 if hasattr(word_occ, 'felt_energy') else False,
+                                'score': getattr(word_occ, 'felt_energy', 1.0)
+                            }
+                        }
+
+                        # Update each gate
+                        for gate_name, gate_data in gate_results.items():
+                            self.gate_cascade_quality_tracker.update_gate(
+                                gate_name=gate_name,
+                                passed=gate_data.get('passed', False),
+                                input_context=context
+                            )
+
+                # Optional: Log bottleneck detection
+                stats = self.gate_cascade_quality_tracker.get_statistics()
+                bottleneck = stats.get('bottleneck_gate')
+                if bottleneck and stats['total_attempts'] % 50 == 0:  # Every 50 attempts
+                    gate_stats = stats['gate_statistics'].get(bottleneck, {})
+                    print(f"   📊 Gate bottleneck: {bottleneck} "
+                          f"({gate_stats.get('pass_rate', 0.0):.1%} pass rate)")
+
+            except Exception as e:
+                print(f"⚠️  Gate cascade quality tracker update failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # Tracker 4: NEXUS vs LLM decision tracking (CRITICAL for LLM independence)
+        if self.nexus_vs_llm_tracker and context and 'nexus_extraction_used' in context:
+            try:
+                decision = 'nexus' if context['nexus_extraction_used'] else 'llm'
+
+                self.nexus_vs_llm_tracker.update(
+                    nexus_confidence=context.get('nexus_confidence', 0.0),
+                    nexus_entities=context.get('nexus_entities', []),
+                    llm_entities=context.get('llm_entities', []),
+                    decision=decision,
+                    user_satisfaction=user_satisfaction if user_satisfaction else 0.5,
+                    processing_time_ms=context.get('extraction_time_ms', 0.0)
+                )
+
+                # Optional: Log progress toward 80% NEXUS usage
+                stats = self.nexus_vs_llm_tracker.get_statistics()
+                total_decisions = stats.get('usage', {}).get('total_decisions', 0)
+                if total_decisions > 0 and total_decisions % 50 == 0:  # Every 50 decisions
+                    progress = self.nexus_vs_llm_tracker.get_progress_toward_target()
+                    print(f"   📊 NEXUS usage: {progress['current_nexus_rate']:.1%} "
+                          f"(target: {progress['target_nexus_rate']:.0%}, "
+                          f"{progress['progress_percentage']:.0f}% complete)")
+
+            except Exception as e:
+                print(f"⚠️  NEXUS vs LLM tracker update failed: {e}")
+                import traceback
+                traceback.print_exc()
+
+        # Tracker 5: Neighbor word → organ boost learning
+        if self.neighbor_word_context_tracker and context and 'word_occasions' in context:
+            try:
+                word_occasions = context['word_occasions']
+
+                # Update neighbor context patterns for each entity word
+                for word_occ in word_occasions:
+                    self.neighbor_word_context_tracker.update(word_occ)
+
+                # Optional: Log top learned patterns
+                stats = self.neighbor_word_context_tracker.get_statistics()
+                if stats['total_updates'] % 100 == 0:  # Every 100 updates
+                    print(f"   📊 Neighbor patterns: {stats['total_neighbor_patterns']} pairs, "
+                          f"{stats['reliable_patterns']} reliable")
+
+            except Exception as e:
+                print(f"⚠️  Neighbor word context tracker update failed: {e}")
                 import traceback
                 traceback.print_exc()
 
@@ -1472,6 +2106,16 @@ class ConversationalOrganismWrapper:
                     # 🕐 Nov 15, 2025: Extract temporal context from context dict
                     temporal_context = context.get('temporal') if context else None
 
+                    # 🌀 LLM BRIDGE: Get turn history for multi-turn context - November 18, 2025 (Phase 2)
+                    memory_context = None
+                    if self.turn_history:
+                        session_id = context.get('conversation_id', 'default_session')
+                        memory_context = self.turn_history.get_context_string(
+                            session_id=session_id,
+                            num_turns=3,  # Last 3 turns
+                            include_metadata=False  # Just conversation, not felt-states
+                        )
+
                     emitted_phrases = self.emission_generator.generate_emissions(
                         nexuses=nexuses,
                         num_emissions=num_emissions,
@@ -1480,7 +2124,7 @@ class ConversationalOrganismWrapper:
                         organ_results=organ_results,  # 🌀 For felt-guided LLM
                         v0_energy=final_energy,  # 🌀 For felt-guided LLM
                         satisfaction=satisfaction_final,  # 🌀 For felt-guided LLM
-                        memory_context=None,  # 🌀 TODO: Pass from dae_interactive if hybrid enabled
+                        memory_context=memory_context,  # 🌀 LLM BRIDGE: Turn history context (Phase 2 - Nov 18, 2025)
                         entity_context_string=entity_context_string,  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
                         memory_intent=memory_intent,  # 🌀 PHASE 1.8++ CRITICAL FIX (Nov 14, 2025)
                         temporal_context=temporal_context  # 🕐 TEMPORAL (Nov 15, 2025)
@@ -1758,64 +2402,10 @@ class ConversationalOrganismWrapper:
                 'context': context
             }
 
-        # 🌀 WEEK 3, DAYS 3-4: Delayed Feedback Learning (November 17, 2025)
-        # 🌀 WEEK 3, DAY 5: Three-Layer Quality Modulation (November 17, 2025)
-        # Record emission outcome for PREVIOUS turn using CURRENT satisfaction
-        # Then store CURRENT turn data for next iteration
-        if emission_text:  # Only if emission was generated
-            try:
-                # Get current turn number from context (default to 0 if not provided)
-                current_turn_number = context.get('turn_number', 0) if context else 0
-
-                # Track satisfaction for fingerprinting (need 3+ for pattern detection)
-                if user_satisfaction is not None:
-                    self.satisfaction_history.append(user_satisfaction)
-                    # Keep only recent history (last 10 turns)
-                    if len(self.satisfaction_history) > 10:
-                        self.satisfaction_history = self.satisfaction_history[-10:]
-
-                # STEP 1: Record outcome for PREVIOUS turn (if exists)
-                # Turn N satisfaction → update Turn N-1 phrase quality
-                # 🌀 NOW WITH THREE-LAYER QUALITY BOOST!
-                if self.previous_turn_data and user_satisfaction is not None:
-                    self._record_emission_outcome(
-                        nexus_signature=self.previous_turn_data['signature'],
-                        emitted_phrase_text=self.previous_turn_data['phrase'],
-                        user_satisfaction=user_satisfaction,
-                        current_turn=self.previous_turn_data['turn'],
-                        organ_results=organ_results  # ← For Lyapunov stability calculation
-                    )
-
-                # STEP 2: Extract nexus signature from CURRENT turn's organ_results
-                # This will be used to update quality when we see NEXT turn's satisfaction
-                current_signature = None
-                if self.emission_generator and hasattr(self.emission_generator, '_extract_nexus_signature_from_organs'):
-                    current_signature = self.emission_generator._extract_nexus_signature_from_organs(organ_results)
-                    if current_signature:
-                        print(f"   🌀 Signature extracted for learning: {current_signature.nexus_type}")
-                    else:
-                        print(f"   ⚠️  Signature extraction returned None (organ_results keys: {list(organ_results.keys()) if organ_results else 'None'})")
-
-                # STEP 3: Store CURRENT turn data for next iteration
-                # (Will be updated when we process Turn N+1)
-                if current_signature:
-                    self.previous_turn_data = {
-                        'signature': current_signature,
-                        'phrase': emission_text,
-                        'turn': current_turn_number
-                    }
-                    print(f"   🌀 Previous turn data stored (turn {current_turn_number})")
-                else:
-                    # No signature extracted → clear previous_turn_data
-                    # (Don't learn from turns without valid signatures)
-                    self.previous_turn_data = None
-                    print(f"   ⚠️  Previous turn data cleared (no valid signature)")
-
-            except Exception as e:
-                # Debug: Print exception details
-                print(f"   ❌ Learning feedback exception: {e}")
-                import traceback
-                traceback.print_exc()
+        # 🚨 REMOVED (Nov 19, 2025): Learning block moved to process_text() line ~1445
+        # This method (_process_single_cycle) is only used for Phase 1 (backward compat)
+        # Training uses Phase 2 (_multi_cycle_convergence), so learning here never executed
+        # Learning must happen AFTER routing decision where both paths rejoin
 
         return {
             'mode': 'processing_complete',
@@ -1829,8 +2419,121 @@ class ConversationalOrganismWrapper:
             'emission_nexus_count': emission_nexus_count,
             # 🌀 Zone info (Phase 1.5c: Zone 5 tracking)
             'zone': zone_name,
-            'zone_id': zone_id
+            'zone_id': zone_id,
+            # 🚨 Nov 18, 2025: Return entity prehension result for testing/validation
+            'entity_prehension': entity_prehension_result if entity_prehension_result else {}
         }
+
+    def process_text_with_phase3b_context(
+        self,
+        text: str,
+        user_id: Optional[str] = None,
+        username: Optional[str] = None,
+        **kwargs
+    ) -> Dict[str, Any]:
+        """
+        Process text with automatic Phase 3B context extraction.
+
+        This is a convenience wrapper around process_text() that automatically:
+        1. Extracts entities with word_occasions using EntityNeighborPrehension
+        2. Builds Phase 3B context (word_occasions, nexus_entities, gate_results)
+        3. Calls process_text() with the extended context
+
+        This ensures all 5 Phase 3B epoch learning trackers receive proper context data:
+        - WordOccasionTracker: word-level organ activation patterns
+        - CycleConvergenceTracker: multi-cycle convergence optimization
+        - GateCascadeQualityTracker: 4-gate cascade quality monitoring
+        - NexusVsLLMDecisionTracker: NEXUS vs LLM decision tracking
+        - NeighborWordContextTracker: neighbor word → organ boost learning
+
+        Args:
+            text: Input text to process
+            user_id: Optional user ID for context
+            username: Optional username for context
+            **kwargs: Additional arguments passed to process_text()
+                     (enable_phase2, enable_tsk_recording, user_satisfaction, etc.)
+
+        Returns:
+            Same dict as process_text(), with extended context passed to trackers
+
+        Example:
+            >>> result = wrapper.process_text_with_phase3b_context(
+            ...     "My daughter Emma is worried",
+            ...     user_id="epoch_1_training",
+            ...     username="training_user",
+            ...     enable_phase2=True,
+            ...     enable_tsk_recording=True,
+            ...     user_satisfaction=0.8
+            ... )
+        """
+        # Get or create context
+        context = kwargs.get('context', {})
+
+        # Phase 3B: Extract entities with word_occasions
+        if hasattr(self, 'entity_neighbor_prehension') and self.entity_neighbor_prehension:
+            try:
+                import time
+
+                # Extract entities with word_occasions (Phase 3B)
+                nexus_start = time.time()
+                extraction_result = self.entity_neighbor_prehension.extract_entities(
+                    text,
+                    return_word_occasions=True
+                )
+
+                # Unpack result (could be tuple or just list)
+                if isinstance(extraction_result, tuple) and len(extraction_result) == 2:
+                    nexus_entities, word_occasions = extraction_result
+                else:
+                    # Backward compatibility: no word_occasions returned
+                    nexus_entities = extraction_result
+                    word_occasions = []
+
+                nexus_time_ms = (time.time() - nexus_start) * 1000.0
+
+                # Compute NEXUS confidence (max across all entities)
+                nexus_confidence = max(
+                    [e.get('confidence_score', 0.0) for e in nexus_entities],
+                    default=0.0
+                )
+
+                # Extend context with Phase 3B data
+                context['word_occasions'] = word_occasions
+                context['nexus_entities'] = nexus_entities
+                context['nexus_confidence'] = nexus_confidence
+                context['extraction_time_ms'] = nexus_time_ms
+                context['nexus_extraction_used'] = nexus_confidence >= 0.7
+
+            except Exception as e:
+                print(f"⚠️  Phase 3B context extension failed: {e}")
+                import traceback
+                traceback.print_exc()
+                # Continue with empty Phase 3B context
+                context['word_occasions'] = []
+                context['nexus_entities'] = []
+                context['nexus_extraction_used'] = False
+        else:
+            # No entity_neighbor_prehension available, use empty context
+            context['word_occasions'] = []
+            context['nexus_entities'] = []
+            context['nexus_extraction_used'] = False
+
+        # Add user context if provided
+        if user_id:
+            context['user_id'] = user_id
+        if username:
+            context['username'] = username
+
+        # Call original process_text with extended context
+        # 🌀 Phase 3B Fix #4 (Nov 18, 2025): Pass user_id/username as separate parameters
+        # These must be passed BOTH in context dict AND as parameters for entity extraction
+        kwargs['context'] = context
+        return self.process_text(
+            text,
+            user_id=user_id,
+            username=username,
+            **kwargs
+        )
 
     def _create_text_occasions(self, text: str, context: Optional[Dict] = None) -> List[TextOccasion]:
         """
@@ -2996,6 +3699,48 @@ class ConversationalOrganismWrapper:
                 self.transductive_monitor.record_occasion(tsk_record, user_hash)
             except Exception as e:
                 pass  # Silently continue if transductive monitoring fails
+
+        # 🌀 LLM BRIDGE: Store current emission for next-turn feedback - November 18, 2025 (Phase 1)
+        if self.feedback_handler and emission_text:
+            session_id = context.get('conversation_id', 'default_session')
+
+            # Store emission data for feedback assessment on next turn
+            self.last_emission_data[session_id] = {
+                'emission': emission_text,
+                'metadata': {
+                    'emission_confidence': emission_confidence,
+                    'emission_path': emission_path,
+                    'active_organs': list(organ_results.keys()) if organ_results else [],
+                    'felt_state': {
+                        'polyvagal_state': felt_states.get('polyvagal_state'),
+                        'urgency': felt_states.get('satisfaction_final'),
+                        'zone': felt_states.get('zone_id')
+                    },
+                    'nexus_signature': felt_states.get('nexus_signature'),
+                    'turn': context.get('turn_number', 0)
+                }
+            }
+
+        # 🌀 LLM BRIDGE: Add current turn to history - November 18, 2025 (Phase 2)
+        if self.turn_history and emission_text:
+            session_id = context.get('conversation_id', 'default_session')
+
+            try:
+                self.turn_history.add_turn(
+                    session_id=session_id,
+                    user_input=text,
+                    organism_emission=emission_text,
+                    emission_metadata={
+                        'emission_confidence': emission_confidence,
+                        'emission_path': emission_path,
+                        'polyvagal_state': felt_states.get('polyvagal_state'),
+                        'urgency': felt_states.get('satisfaction_final'),
+                        'zone': felt_states.get('zone_id'),
+                        'satisfaction': felt_states.get('satisfaction_final')
+                    }
+                )
+            except Exception as e:
+                print(f"⚠️  Turn history recording failed: {e}")
 
         return {
             'mode': 'processing_complete',
